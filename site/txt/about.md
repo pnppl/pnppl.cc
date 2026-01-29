@@ -5,7 +5,7 @@ I've been a prodigious note-taker for years. Being able to carry my notes with m
 
 I also write stuff that I don't refer to but is hopefully valuable in other ways: fiction, essays, code, etc. And since I'm at it anyway, I might as well post art I make that doesn't fit in a text file.
 
-I hope that sharing my commonplace publicly will encourage me to write more, more intentionally, for a wider audience. It would be especially nice if it made me actually document my tech projects so I don't have to re-figure them out every time I come back to them after a long time. I said I was a prodigious note-taker, not a good one.
+I hope that sharing my commonplace publicly will encourage me to write more, more intentionally, for a wider audience. It would be especially nice if it made me actually document my tech projects so I don't have to re-figure them out whenever I come back to them after a long time. I said I was a prodigious note-taker, not a good one.
 
 
 # Copyleft
@@ -41,7 +41,7 @@ A major goal I have is for the site to be usable as plain HTML. The sites that h
 
 With legacy compatibility covered, we can use stylesheets to make the site pretty on a modern browser, since CSS doesn't make them slow to a crawl or execute arbitrary code. Now, I *hate* web design, and I find CSS particularly frustrating, so I've relied on the stylesheet that xlog came with as a starting point. It uses a big framework and is much larger than I'd like at 200K (uncompressed — was originally 4x the size, compressed), but it handles dark mode, responsiveness, etc., which all sounds exhausting.
 
-I selected [[https://github.com/emad-elsaid/xlog|xlog]] as the best static site generator for my requirements: everything I cared about still worked with Javascript disabled and it supported must-have features: backlinks and mentions. (The way mentions work is that when the name of a post is used in another post, it's automatically turned into a link. Backlinks are a section at the foot of a post that list all the other posts that link to it.) If I'm going hypertext, I want all the benefits, but I also don't want to spend a lot of time fussing over the website when it's the words that really matter. And given the wide variety of subjects, it would be nice to have some ability to discover posts. 
+I selected [[https://github.com/emad-elsaid/xlog|xlog]] as the best static site generator for my requirements: everything I cared about still worked with Javascript disabled and it supported must-have features: backlinks and mentions. (The way mentions work is that when the name of a post is used in another post, it's automatically turned into a link. Backlink support adds a section at the foot of a post that lists all the other posts that link to it.) If I'm going hypertext, I want all the benefits, but I also don't want to spend a lot of time fussing over the website when it's the words that really matter. And given the wide variety of subjects, it would be nice to have some ability to discover posts. 
 
 For mentions, the underline is broken with dashes to de-emphasize it and so you can distinguish it from a manual link. External links are followed by a % sign, because it kind of looks like an X and also kind of like the little external link symbol a bunch of sites use. I wanted to keep it ASCII when possible, as well as webfont-free. HTML entities are fair game though, provided they work in Mosaic, which is where the section (&sect;) and not (&not; — returns you to the table of contents) come from that appear when you hover a heading. 
 

@@ -20,7 +20,7 @@ The reason things have deteriorated so badly is not complicated: there are peopl
 
 But of course, we don't need any admission of motive. Their actions speak loudly enough. Why else would you ban medication that saves trans people's lives, if not to kill them? How much more obvious could their intentions possibly be? It's cold-blooded murder. It's no different than if they were to ban insulin: not *all* the diabetics would die, but it is not exactly hard to connect the causal dots. And that's only the tip of the iceberg when it comes to cruel, illegal, and exterminationist policy. They have two apparent policy priorities: 1) to make the world as hostile as possible to trans people, with an emphasis on children who can't fight back and on causing psychological devastation; 2) to erase trans people from society by banning and covering up our identities, language, and history. These two prongs meet to create what I think of as their worst crime: they aren't just erasing history and killing our loved ones, they're banning the future. They want to rob us of hope for a better tomorrow and ensure that the next generation of trans people has to start over from scratch.[^14]
 
-Yes, trans people will always exist. But how many of them? What will their lives be like, and how long will they be? Will they even have the words to describe themselves?
+Yes, trans people will always exist. But how many of them? What will their lives be like, and how long will they be? Will they even have the language to describe themselves?
 
 You don't have to call it a genocide. It's just a word. You can call it pre-genocide, incitement, red flags, or whatever you want. But you cannot deny that our society has been swept by a powerful campaign to crush trans people like bugs.
 
