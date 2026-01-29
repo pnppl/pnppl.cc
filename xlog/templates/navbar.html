@@ -1,46 +1,35 @@
+<p>
 <nav class="navbar mb-5 pt-5" role="navigation" aria-label="main navigation">
-  <div class="container is-max-desktop px-3" dir="auto">
+  <div class="container px-3" dir="auto">
   <div class="navbar-brand">
-    <a class="icon-text navbar-item" href="/">
-      <span class="icon is-large"><img alt="logo" src="/public/logo.png"/></span>
-      <span class="has-text-weight-bold">{{.config.Sitename}}</span>
-    </a>
-
-    <a role="button"
-       class="navbar-burger"
-       aria-label="menu"
-       aria-expanded="false"
-       onclick="this.classList.toggle('is-active');document.getElementById('navbarMenu').classList.toggle('is-active')">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
+    <a class="icon-text navbar-item" href="/" accesskey="h">
+      <span class="icon is-small"><img alt="logo" src="/public/logo.gif" loading="lazy"></span>
+      <span><u class="accel">H</u>ome</span>
     </a>
   </div>
 
   <div id="navbarMenu" class="navbar-menu">
     <div class="navbar-start">
       {{- range $i, $a := links .page -}}
+      <li class="compat-hidden"></li>
       <a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="navbar-item icon-text">
-        {{ with .Icon }}
-        <span class="icon">
-          {{ if isFontAwesome . }}<i class="{{.}}"></i> {{ else }} {{.}} {{ end }}
-        </span>
-        {{ end }}
         <span>{{.Name}}</span>
       </a>
       {{- end }}
     </div>
-
     <div class="navbar-end">
-      <div class="navbar-item">
+<!--      <div class="navbar-item"> -->
 
         {{- with .page -}}
         {{- widgets "search" . -}}
         {{- end -}}
-
-      </div>
+        <li class="compat-hidden"></li>
+		<a href="/+/feed.rss" class="navbar-item icon-text">
+			<span id="RSS">RSS</span><span> Feed</span>
+		</a>
+<!--      </div> -->
     </div>
   </div>
   </div>
 </nav>
+</p>

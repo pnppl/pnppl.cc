@@ -14,6 +14,7 @@ type pageLinkParser struct{}
 
 func (*pageLinkParser) Trigger() []byte {
 	// ' ' indicates any white spaces and a line head
+//	return []byte{' ', '*', '_', '~', '(', '!', '@', '&', '|', ';', '?'}
 	return []byte{' ', '*', '_', '~', '('}
 }
 

@@ -25,10 +25,10 @@ func (s *dateRenderer) render(w util.BufWriter, source []byte, n ast.Node, enter
 		return ast.WalkContinue, nil
 	}
 
-	path := fmt.Sprintf(`/+/date/%s`, node.time.Format("2-1-2006"))
+	path := fmt.Sprintf(`/+/date/%s`, node.time.Format("2006-01-02"))
 	RegisterBuildPage(path, true)
 
-	fmt.Fprintf(w, ` <a href="%s" class="tag"><span class="icon"><i class="fa-regular fa-clock"></i></span><span>%s<span></a> `, path, node.time.Format("2 January 2006"))
+	fmt.Fprintf(w, ` <a href="%s" class="tag" id="%s" name="%s"><span class="icon"><i class="fa-regular fa-clock"></i></span><span>%s<span></a> `, path, node.time.Format("2006-01-02"), node.time.Format("2006-01-02"), node.time.Format("January 2, 2006"))
 
 	return ast.WalkContinue, nil
 }

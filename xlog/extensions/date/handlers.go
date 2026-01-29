@@ -13,7 +13,7 @@ var templates embed.FS
 
 func dateHandler(r Request) Output {
 	dateV := r.PathValue("date")
-	date, err := time.Parse("2-1-2006", dateV)
+	date, err := time.Parse("2006-01-02", dateV)
 	if err != nil {
 		return BadRequest(err.Error())
 	}
@@ -31,7 +31,8 @@ func dateHandler(r Request) Output {
 	})
 
 	return Render("date", Locals{
-		"page":  DynamicPage{NameVal: date.Format("2 January 2006")},
+//		"page":  DynamicPage{NameVal: date.Format("January 2, 2006")},
+		"page":  DynamicPage{NameVal: date.Format("2006-01-02")},
 		"pages": pages,
 	})
 }

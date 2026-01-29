@@ -1,27 +1,5 @@
 {{ template "header" . }}
-<style>
-.calendar{
-    td,th {
-        width: calc(100%/7);
-    }
-    td{
-        height: 8em;
-        overflow: hidden;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    a .page{
-        font-size: 0.7em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        line-clamp: 1;
-        -webkit-box-orient: vertical;
-    }
- }
-</style>
-
+<tt>
 {{range .calendar}}
 <h1>{{.Year}}</h1>
 {{range .Months}}
@@ -29,13 +7,13 @@
 <table class="calendar table is-bordered is-fullwidth is-hoverable">
   <thead>
     <tr>
-      <th>Sun</th>
-      <th>Mon</th>
-      <th>Tue</th>
-      <th>Wed</th>
-      <th>Thu</th>
-      <th>Fri</th>
-      <th>Sat</th>
+      <th>Su</th>
+      <th>Mo</th>
+      <th>Tu</th>
+      <th>We</th>
+      <th>Th</th>
+      <th>Fr</th>
+      <th>Sa</th>
     </tr>
   </thead>
   <tbody>
@@ -46,21 +24,20 @@
         {{if .}}
 
         {{ if .Pages }}
-        <a href="/+/date/{{printf "%d-%d-%d" .Date.Day .Date.Month .Date.Year}}">
-          <span class="tag">{{.Date.Day}}</span>
+        <a href="/+/date/{{printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day}}">
+          <span class="tag">{{printf "%02d" .Date.Day}}</span>
         </a>
         {{else}}
-        <span class="tag">{{.Date.Day}}</span>
+        <span class="tag">{{printf "%02d" .Date.Day}}</span>
         {{end}}
 
         {{ if .Pages }}
         <aside class="menu" dir="auto">
           <div class="menu-list" dir="auto">
-
+			{{$date := printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day}}
             {{range .Pages}}
-            <a href="/{{.Name}}" dir="auto">
+            <a href="/{{.Name}}#{{$date}}" dir="auto">
               <span class="page">
-                {{ emoji . }}
                 {{ $props := properties . }}
                 {{ with $props.title }} {{ .Value }} {{ else }} {{ .Name }} {{ end }}
               </span>
@@ -70,7 +47,8 @@
           </div>
         </aside>
         {{end}}
-
+		{{else}}
+		&nbsp;&nbsp;
         {{end}}
       </td>
       {{end}}
@@ -84,5 +62,5 @@
   There are no posts that contains dates yet...
 </div>
 {{end}}
-
+</tt>
 {{ template "footer" . }}

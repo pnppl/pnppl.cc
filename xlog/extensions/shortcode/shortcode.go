@@ -25,10 +25,11 @@ func container(cls string, content Markdown) template.HTML {
 }
 
 var shortcodes = map[string]ShortCode{
-	"info":    {Render: func(c Markdown) template.HTML { return container("is-info", c) }},
-	"success": {Render: func(c Markdown) template.HTML { return container("is-success", c) }},
-	"warning": {Render: func(c Markdown) template.HTML { return container("is-warning", c) }},
-	"alert":   {Render: func(c Markdown) template.HTML { return container("is-danger", c) }},
+//	"info":    {Render: func(c Markdown) template.HTML { return container("is-info", c) }},
+//	"success": {Render: func(c Markdown) template.HTML { return container("is-success", c) }},
+//	"warning": {Render: func(c Markdown) template.HTML { return container("is-warning", c) }},
+	"!!":   {Render: func(c Markdown) template.HTML { return container("is-danger", c) }},
+	"!!!":   {Render: func(c Markdown) template.HTML { return container("is-danger", c) }},
 }
 
 func RegisterShortCode(name string, shortcode ShortCode) {

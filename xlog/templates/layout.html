@@ -4,7 +4,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="icon" href="/public/logo.png">
+    <link rel="icon" href="/public/favicon.ico">
     <link rel="stylesheet" href="/public/style.css">
     <title>
       {{ $props := properties .page }}
@@ -32,15 +32,14 @@
     <div class="container is-max-desktop px-3 pb-5" dir="auto">
 
       {{- if ne .config.Index .page.Name -}}
-      <div dir="auto" class="title is-1 has-text-weight-bold" style="view-transition-name: page-title;">
+      <div dir="auto" class="title is-1" style="view-transition-name: page-title;">
         {{- with .page -}}
-          {{ with $props.title }}
-            {{- emoji . }}
-            {{ .Value }}
-          {{ else }}
-            {{ with dir .Name }}<p class="subtitle">{{.}}</p>{{ end }}
-            {{- emoji . }} {{ base .Name }}
-          {{ end }}
+            {{ with base .Name }}
+			<center><h1>{{ . }}</h1></center>
+			{{ end }}
+          	{{ with $props.title }}
+            <p class="subtitle">{{ .Value }}</p>
+          	{{ end }}
         {{- end -}}
       </div>
       {{- end -}}
@@ -48,6 +47,20 @@
       <div class="content pb-5">
       {{- end -}}
       {{ define "footer" }}
+      <!-- my footer -->
+      <hr>
+      <center>
+        <p>
+        {{ with properties .page }}
+          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{.title.Value}}">Send f<u class="accel">e</u>edback...</a>
+        {{ end }}
+        <p>
+          <a id="badge" href="about">
+            <img id="badge-default" src="/public/badges/nano-88x31.gif" alt="about" loading="lazy">
+          </a>
+        </p>
+      </center>
+      <!-- --------- -->
       </div>
     </div>
 

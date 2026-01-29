@@ -7,11 +7,13 @@ import (
 	"github.com/alecthomas/chroma/v2/styles"
 	"github.com/emad-elsaid/xlog/markdown"
 	"github.com/emad-elsaid/xlog/markdown/ast"
-	"github.com/emad-elsaid/xlog/markdown/emoji"
+//	"github.com/emad-elsaid/xlog/markdown/emoji"
 	"github.com/emad-elsaid/xlog/markdown/extension"
 	"github.com/emad-elsaid/xlog/markdown/highlighting"
 	"github.com/emad-elsaid/xlog/markdown/parser"
 	"github.com/emad-elsaid/xlog/markdown/renderer/html"
+//	"go.abhg.dev/goldmark/wikilink"
+	"github.com/pnppl/wikilink"
 )
 
 // The instance of markdown renderer. this is what takes the page content and
@@ -29,8 +31,9 @@ var MarkdownConverter = sync.OnceValue(func() markdown.Markdown {
 					chroma_html.WithLineNumbers(true),
 				),
 			),
-			extension.Typographer,
-			emoji.Emoji,
+//			extension.Typographer,
+//			emoji.Emoji,
+			&wikilink.Extender{},
 		),
 
 		markdown.WithParserOptions(

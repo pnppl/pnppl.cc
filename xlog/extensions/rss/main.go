@@ -31,7 +31,7 @@ func (RSS) Name() string { return "rss" }
 func (RSS) Init() {
 	RegisterWidget(WidgetHead, 0, metaTag)
 	RegisterBuildPage("/+/feed.rss", false)
-	RegisterLink(links)
+//	RegisterLink(links)
 	Get(`/+/feed.rss`, feed)
 }
 

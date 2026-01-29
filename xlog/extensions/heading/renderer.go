@@ -41,7 +41,7 @@ func (s *headingRenderer) render(w util.BufWriter, source []byte, node ast.Node,
 	} else {
 
 		if id, ok := node.AttributeString("id"); ok {
-			w.WriteString(fmt.Sprintf(` <a class="show-on-parent-hover is-hidden has-text-grey" href="#%s">¶</a>`, id))
+			w.WriteString(fmt.Sprintf(` <a class="show-on-parent-hover is-hidden has-text-grey" href="#TOC">&not;</a> <a name="%s" class="show-on-parent-hover is-hidden has-text-grey" href="#%s">&sect;</a>`, id, id))
 		}
 
 		_, _ = w.WriteString("</h")

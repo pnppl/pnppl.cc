@@ -17,8 +17,9 @@ require (
 	github.com/emad-elsaid/types v0.0.4
 	github.com/gorilla/websocket v1.5.1
 	github.com/hashicorp/golang-lru/v2 v2.0.7
+	github.com/pnppl/wikilink v0.6.0
 	github.com/rjeczalik/notify v0.9.3
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	gitlab.com/greyxor/slogor v1.5.2
 	golang.org/x/sync v0.6.0
 	gopkg.in/yaml.v3 v3.0.1
@@ -46,3 +47,5 @@ require (
 	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
 )
+
+replace github.com/pnppl/wikilink => ./markdown/wikilink

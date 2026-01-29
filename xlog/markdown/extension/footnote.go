@@ -312,11 +312,11 @@ type FootnoteOption interface {
 func NewFootnoteConfig() FootnoteConfig {
 	return FootnoteConfig{
 		Config:        html.NewConfig(),
-		LinkTitle:     []byte(""),
-		BacklinkTitle: []byte(""),
+		LinkTitle:     []byte("[see footnote]"),
+		BacklinkTitle: []byte("[back to reference]"),
 		LinkClass:     []byte("footnote-ref"),
 		BacklinkClass: []byte("footnote-backref"),
-		BacklinkHTML:  []byte("&#x21a9;&#xfe0e;"),
+		BacklinkHTML:  []byte("<-|"),
 	}
 }
 
@@ -530,7 +530,21 @@ func (r *FootnoteHTMLRenderer) renderFootnoteLink(
 	if entering {
 		n := node.(*ast.FootnoteLink)
 		is := strconv.Itoa(n.Index)
-		_, _ = w.WriteString(`<sup id="`)
+//		_, _ = w.WriteString(`<sup id="`)
+//		_, _ = w.Write(r.idPrefix(node))
+//		_, _ = w.WriteString(`fnref`)
+//		if n.RefIndex > 0 {
+//			_, _ = w.WriteString(fmt.Sprintf("%v", n.RefIndex))
+//		}
+//		_ = w.WriteByte(':')
+//		_, _ = w.WriteString(is)
+//		_, _ = w.WriteString(`"><a href="#`)
+		_, _ = w.WriteString(`<sup><a href="#`)
+		_, _ = w.Write(r.idPrefix(node))
+		_, _ = w.WriteString(`fn:`)
+		_, _ = w.WriteString(is)
+// mosaic compat ---
+		_, _ = w.WriteString(`" name="`)
 		_, _ = w.Write(r.idPrefix(node))
 		_, _ = w.WriteString(`fnref`)
 		if n.RefIndex > 0 {
@@ -538,10 +552,7 @@ func (r *FootnoteHTMLRenderer) renderFootnoteLink(
 		}
 		_ = w.WriteByte(':')
 		_, _ = w.WriteString(is)
-		_, _ = w.WriteString(`"><a href="#`)
-		_, _ = w.Write(r.idPrefix(node))
-		_, _ = w.WriteString(`fn:`)
-		_, _ = w.WriteString(is)
+// ---
 		_, _ = w.WriteString(`" class="`)
 		_, _ = w.Write(applyFootnoteTemplate(r.FootnoteConfig.LinkClass,
 			n.Index, n.RefCount))
@@ -570,6 +581,16 @@ func (r *FootnoteHTMLRenderer) renderFootnoteBacklink(
 		}
 		_ = w.WriteByte(':')
 		_, _ = w.WriteString(is)
+// mosaic compat ---
+		_, _ = w.WriteString(`" name="`)
+		_, _ = w.Write(r.idPrefix(node))
+		_, _ = w.WriteString(`fn`)
+		if n.RefIndex > 0 {
+			_, _ = w.WriteString(fmt.Sprintf("%v", n.RefIndex))
+		}
+		_ = w.WriteByte(':')
+		_, _ = w.WriteString(is)
+// ---
 		_, _ = w.WriteString(`" class="`)
 		_, _ = w.Write(applyFootnoteTemplate(r.FootnoteConfig.BacklinkClass, n.Index, n.RefCount))
 		if len(r.FootnoteConfig.BacklinkTitle) > 0 {
@@ -611,11 +632,13 @@ func (r *FootnoteHTMLRenderer) renderFootnoteList(
 			html.RenderAttributes(w, node, html.GlobalAttributeFilter)
 		}
 		_ = w.WriteByte('>')
-		if r.Config.XHTML {
-			_, _ = w.WriteString("\n<hr />\n")
-		} else {
-			_, _ = w.WriteString("\n<hr>\n")
-		}
+_, _ = w.WriteString(`<h1 id="Footnotes">Footnotes <a class="show-on-parent-hover is-hidden has-text-grey" href="#TOC">&not;</a> <a name="Footnotes" class="show-on-parent-hover is-hidden has-text-grey" href="#Footnotes">&sect;</a></h1>`)
+//		if r.Config.XHTML {
+//			_, _ = w.WriteString("\n<hr />\n")
+//		} else {
+//			_, _ = w.WriteString("\n<hr>\n")
+//		}
+//_, _ = w.WriteString(`<p id="Footnotes">Footnotes:</p>`)
 		_, _ = w.WriteString("<ol>\n")
 	} else {
 		_, _ = w.WriteString("</ol>\n")

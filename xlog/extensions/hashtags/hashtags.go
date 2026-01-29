@@ -263,6 +263,17 @@ func (h *HashTag) Parse(parent ast.Node, block text.Reader, pc parser.Context) a
 	if i > len(line) || i == 1 {
 		return nil
 	}
+
+// no hashtags that are all digits
+	for ui, c := range line[1:i] {
+		if c < '0' || c > '9' {
+			break
+		}
+		if ui == len(line[1:i]) - 1 {
+			return nil
+		}
+	}
+
 	block.Advance(i)
 	tag := line[1:i]
 	return &HashTag{
@@ -290,7 +301,7 @@ func renderHashtag(writer util.BufWriter, source []byte, n ast.Node, entering bo
 	}
 
 	tag := n.(*HashTag)
-	fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag"><span class="icon"><i class="fa-solid fa-tag"></i></span><span>%s</span></a>`, tag.value, tag.value)
+	fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s"><span>#%s</span></a>`, tag.value, tag.value, tag.value, tag.value)
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", tag.value), true)
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", strings.ToLower(string(tag.value))), true)
 	return ast.WalkContinue, nil

@@ -40,7 +40,7 @@ func parseListItem(line []byte) ([6]int, listItemType) {
 	ret[1] = i
 	ret[2] = i
 	var typ listItemType
-	if i < l && (line[i] == '-' || line[i] == '*' || line[i] == '+') {
+	if i < l && (line[i] == '-') {
 		i++
 		ret[3] = i
 		typ = bulletList
@@ -122,7 +122,7 @@ func NewListParser() BlockParser {
 }
 
 func (b *listParser) Trigger() []byte {
-	return []byte{'-', '+', '*', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+	return []byte{'-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 }
 
 func (b *listParser) Open(parent ast.Node, reader text.Reader, pc Context) (ast.Node, State) {

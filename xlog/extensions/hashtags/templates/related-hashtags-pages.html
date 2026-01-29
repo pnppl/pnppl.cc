@@ -1,4 +1,4 @@
 {{ if .pages }}
-<h1> See Also </h1>
-{{ template "pages" .pages }}
+<h1 id="see-also"> See Also <a class="show-on-parent-hover is-hidden has-text-grey" href="#TOC">&not;</a> <a name="see-also" class="show-on-parent-hover is-hidden has-text-grey" href="#see-also">&sect;</a></h1>
+{{ template "tags_pages" .pages }}
 {{ end }}

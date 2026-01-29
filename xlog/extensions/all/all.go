@@ -1,40 +1,74 @@
 package all
 
 import (
-	_ "github.com/emad-elsaid/xlog/extensions/activitypub"
-	_ "github.com/emad-elsaid/xlog/extensions/autolink"
-	_ "github.com/emad-elsaid/xlog/extensions/autolink_pages"
-	_ "github.com/emad-elsaid/xlog/extensions/blocks"
-	_ "github.com/emad-elsaid/xlog/extensions/custom_widget"
-	_ "github.com/emad-elsaid/xlog/extensions/date"
-	_ "github.com/emad-elsaid/xlog/extensions/disqus"
-	_ "github.com/emad-elsaid/xlog/extensions/editor"
-	_ "github.com/emad-elsaid/xlog/extensions/embed"
-	_ "github.com/emad-elsaid/xlog/extensions/file_operations"
-	_ "github.com/emad-elsaid/xlog/extensions/frontmatter"
-	_ "github.com/emad-elsaid/xlog/extensions/github"
-	_ "github.com/emad-elsaid/xlog/extensions/gpg"
-	_ "github.com/emad-elsaid/xlog/extensions/hashtags"
-	_ "github.com/emad-elsaid/xlog/extensions/heading"
-	_ "github.com/emad-elsaid/xlog/extensions/hotreload"
-	_ "github.com/emad-elsaid/xlog/extensions/html"
-	_ "github.com/emad-elsaid/xlog/extensions/images"
-	_ "github.com/emad-elsaid/xlog/extensions/link_preview"
-	_ "github.com/emad-elsaid/xlog/extensions/manifest"
-	_ "github.com/emad-elsaid/xlog/extensions/mathjax"
-	_ "github.com/emad-elsaid/xlog/extensions/mermaid"
-	_ "github.com/emad-elsaid/xlog/extensions/opengraph"
-	_ "github.com/emad-elsaid/xlog/extensions/pandoc"
-	_ "github.com/emad-elsaid/xlog/extensions/photos"
-	_ "github.com/emad-elsaid/xlog/extensions/recent"
-	_ "github.com/emad-elsaid/xlog/extensions/rss"
-	_ "github.com/emad-elsaid/xlog/extensions/rtl"
-	_ "github.com/emad-elsaid/xlog/extensions/search"
-	_ "github.com/emad-elsaid/xlog/extensions/shortcode"
-	_ "github.com/emad-elsaid/xlog/extensions/sitemap"
-	_ "github.com/emad-elsaid/xlog/extensions/sql_table"
-	_ "github.com/emad-elsaid/xlog/extensions/star"
-	_ "github.com/emad-elsaid/xlog/extensions/toc"
-	_ "github.com/emad-elsaid/xlog/extensions/todo"
-	_ "github.com/emad-elsaid/xlog/extensions/upload_file"
+	"embed"
+	"html/template"
+	"slices"
+	"strings"
+
+	_ "embed"
+
+	. "github.com/emad-elsaid/xlog"
 )
+
+//go:embed templates
+var templates embed.FS
+
+func init() {
+	RegisterExtension(All{})
+}
+
+type All struct{}
+
+func (All) Name() string { return "all" }
+func (All) Init() {
+	Get(`/+/all`, allHandler)
+	RegisterBuildPage("/+/all", true)
+	RegisterTemplate(templates, "templates")
+	RegisterLink(func(Page) []Command { return []Command{links{}} })
+}
+
+func allHandler(r Request) Output {
+	rp := Pages(r.Context())
+	slices.SortFunc(rp, func(a, b Page) int {
+//		if modtime := b.ModTime().Compare(a.ModTime()); modtime != 0 {
+//			return modtime
+//		}
+		nameA := a.Name()
+		nameB := b.Name()
+
+		content := a.Content()
+		lines := strings.Split(string(content), "\n")
+		firstLine := strings.TrimSpace(lines[0])
+		normalizedNameA := strings.Replace(strings.Replace(firstLine, "# ", "", 1), " #", "", 1)
+
+		content = b.Content()
+		lines = strings.Split(string(content), "\n")
+		firstLine = strings.TrimSpace(lines[0])
+		normalizedNameB := strings.Replace(strings.Replace(firstLine, "# ", "", 1), " #", "", 1)
+
+		if len([]byte(normalizedNameA)) > 0 {
+			nameA = normalizedNameA
+		}
+		if len([]byte(normalizedNameB)) > 0 {
+			nameB = normalizedNameB
+		}
+		return strings.Compare(strings.ToLower(nameA), strings.ToLower(nameB))
+//		return strings.Compare(a.Name(), b.Name())
+	})
+
+	return Render("all", Locals{
+		"page":  DynamicPage{NameVal: "All"},
+		"pages": rp,
+	})
+}
+
+type links struct{}
+
+func (l links) Icon() string { return "fa-solid fa-clock-rotate-left" }
+func (l links) Name() string { return "All" }
+func (l links) Attrs() map[template.HTMLAttr]any {
+	return map[template.HTMLAttr]any{
+		"href": "/+/all",
+	}
+}
