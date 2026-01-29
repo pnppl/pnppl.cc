@@ -1,0 +1,61 @@
+{{- with commands .page }}
+<div class="modal" id="commands-modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-card box">
+    <div class="field">
+      <div class="control">
+        <input class="input" type="search" placeholder="Search... (press Ctrl+K to hide)" autofocus/>
+      </div>
+    </div>
+    <aside class="menu p-1" style="max-height: 30em; overflow-y: auto;">
+      <ul class="menu-list">
+        {{- range . -}}
+        <li>
+          <a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="icon-text">
+            <span class="icon"><i class="{{.Icon}}"></i></span>
+            <span>{{.Name}}</span></a>
+        </li>
+        {{- end -}}
+      </ul>
+    </aside>
+  </div>
+
+</div>
+
+<script type="application/javascript">
+ (function() {
+     const commands = () => document.getElementById('commands-modal');
+
+     // clicking any link in the commands list executes the command
+     commands().querySelectorAll('a').forEach( ele => ele.addEventListener('click', evt => commands().classList.remove("is-active")));
+
+     // Pressing Ctrl+K shows the commands list
+     document.addEventListener('keydown', e => {
+         if ( e.key === 'k' && ( e.metaKey || e.ctrlKey ) ) {
+             e.preventDefault();
+             commands().classList.toggle("is-active");
+             if(commands().classList.contains("is-active")){
+                 commands().getElementsByClassName("input")[0].focus();
+             }
+         }
+     });
+
+     // Typing in the search field filter the commands
+     commands().querySelector('input[type=search]').addEventListener('keyup', e => {
+         const keyword = e.target.value.toLowerCase();
+         const lis = commands().querySelectorAll("li");
+
+         for(var i=0; i < lis.length; i++){
+             const li = lis[i];
+             if( li.textContent.toLowerCase().includes(keyword) ) {
+                 li.classList.remove("is-hidden");
+             } else {
+                 li.classList.add("is-hidden");
+             }
+         }
+     });
+ })()
+</script>
+
+{{ end }}

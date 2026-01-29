@@ -1,0 +1,57 @@
+{{- define "header" -}}
+<!DOCTYPE html>
+<html lang="en" {{with .csrf}}hx-headers='{"X-CSRF-Token":"{{.}}"}'{{end}} {{with $.config.Theme}}data-theme="{{.}}"{{end}}>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="icon" href="/public/logo.png">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>
+      {{ $props := properties .page }}
+      {{- with .page -}}
+        {{- if ne .Name $.config.Index -}}
+        {{ emoji . }}
+        {{ with $props.title }} {{ .Value }} {{ else }} {{ .Name }} {{ end }}
+        |
+      {{ end -}}
+      {{- end -}}
+      {{.config.Sitename}}
+    </title>
+    {{- with .page }} {{ widgets "head" . }} {{ end }}
+
+    {{- with .page -}}
+    {{- if ne .Name $.config.Index -}}
+    {{ with emoji . }}{{ template "emoji-favicon" . }}{{ end }}
+    {{- end -}}
+    {{- end -}}
+  </head>
+  <body>
+    {{- template "commands" . -}}
+    {{- template "navbar" . -}}
+
+    <div class="container is-max-desktop px-3 pb-5" dir="auto">
+
+      {{- if ne .config.Index .page.Name -}}
+      <div dir="auto" class="title is-1 has-text-weight-bold" style="view-transition-name: page-title;">
+        {{- with .page -}}
+          {{ with $props.title }}
+            {{- emoji . }}
+            {{ .Value }}
+          {{ else }}
+            {{ with dir .Name }}<p class="subtitle">{{.}}</p>{{ end }}
+            {{- emoji . }} {{ base .Name }}
+          {{ end }}
+        {{- end -}}
+      </div>
+      {{- end -}}
+
+      <div class="content pb-5">
+      {{- end -}}
+      {{ define "footer" }}
+      </div>
+    </div>
+
+    {{ scripts }}
+  </body>
+</html>
+{{- end -}}

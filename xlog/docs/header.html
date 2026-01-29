@@ -1,0 +1,142 @@
+<style>
+ .navbar {
+     --bulma-navbar-background-color: rgba(255, 255, 255, 0);
+     backdrop-filter: blur(10px);
+ }
+</style>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+     let allowedPaths = ['/', '/index']
+     if(!allowedPaths.includes(document.location.pathname)){
+         return
+     }
+
+     // Create and inject canvas
+     const canvas = document.createElement('canvas');
+     const ctx = canvas.getContext('2d');
+     document.body.prepend(canvas);
+
+     // Set canvas size
+     function resizeCanvas() {
+         canvas.width = window.innerWidth;
+         canvas.height = 500;
+     }
+     resizeCanvas();
+     window.addEventListener('resize', resizeCanvas);
+
+     // Style canvas
+     canvas.style.position = 'absolute';
+     canvas.style.top = '0';
+     canvas.style.left = '0';
+     canvas.style.zIndex = '-1';
+
+     // Function to generate green and orange colors
+     function getPastelColor() {
+         const isGreen = Math.random() < 0.5;
+         if (isGreen) {
+             // Generate pastel green shades
+             const r = 140 + Math.floor(Math.random() * 30);  // Lower red for green
+             const g = 180 + Math.floor(Math.random() * 75);  // Higher green
+             const b = 140 + Math.floor(Math.random() * 30);  // Lower blue for green
+             return [r, g, b];
+         } else {
+             // Generate pastel orange shades
+             const r = 255 - Math.floor(Math.random() * 30);  // High red for orange
+             const g = 170 + Math.floor(Math.random() * 40);  // Medium-high green for orange
+             const b = 120 + Math.floor(Math.random() * 30);  // Low blue for orange
+             return [r, g, b];
+         }
+     }
+
+     class Leaf {
+         constructor() {
+             this.x = Math.random() * canvas.width;
+             this.y = Math.random() * canvas.height;
+             this.size = 20 + Math.random() * 40;
+             this.dx = (Math.random() - 0.5) * 2;
+             this.dy = (Math.random() - 0.5) * 2;
+             this.color = getPastelColor();
+             this.rotation = Math.random() * Math.PI * 2;
+             this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+         }
+
+         update() {
+             this.x += this.dx;
+             this.y += this.dy;
+             this.rotation += this.rotationSpeed;
+
+             if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
+             if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
+         }
+
+         draw() {
+             ctx.save();
+             ctx.translate(this.x, this.y);
+             ctx.rotate(this.rotation);
+
+             // Create gradient
+             const [r, g, b] = this.color;
+             const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
+             gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.6)`);
+             gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+             ctx.fillStyle = gradient;
+
+             // Draw leaf shape with a single path
+             ctx.beginPath();
+             // Start at the bottom (stem)
+             ctx.moveTo(0, this.size/2);
+
+             // Right side of leaf
+             ctx.bezierCurveTo(
+                 this.size * 0.5, this.size * 0.3,  // control point 1
+                 this.size * 0.5, -this.size * 0.3, // control point 2
+                 0, -this.size/2                    // end point (tip)
+             );
+
+             // Left side of leaf
+             ctx.bezierCurveTo(
+                 -this.size * 0.5, -this.size * 0.3, // control point 1
+                 -this.size * 0.5, this.size * 0.3,  // control point 2
+                 0, this.size/2                      // end point (back to stem)
+             );
+
+             ctx.fill();
+
+             // Draw central vein
+             ctx.beginPath();
+             ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.4)`;
+             ctx.lineWidth = 1;
+             ctx.moveTo(0, this.size/2);
+             ctx.lineTo(0, -this.size/2);
+             ctx.stroke();
+
+             ctx.restore();
+         }
+     }
+
+     // Create leaves
+     const leaves = Array.from({ length: 30 }, () => new Leaf());
+
+     // Animation loop
+     function animate() {
+         const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+         gradient.addColorStop(0, 'rgba(255, 255, 255, 0)');
+         gradient.addColorStop(1, 'rgba(255, 255, 255, 1)');
+
+         ctx.fillStyle = 'white';
+         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+         leaves.forEach(leaf => {
+             leaf.update();
+             leaf.draw();
+         });
+
+         ctx.fillStyle = gradient;
+         ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+         requestAnimationFrame(animate);
+     }
+
+     animate();
+ });
+</script>

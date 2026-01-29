@@ -1,0 +1,14 @@
+{{ template "header" . }}
+
+<div class="view content pb-6" dir="auto">
+
+  {{ range $tag, $pages := .tags }}
+  <h1>
+    <a href="/+/tag/{{$tag}}" class="is-capitalized"> {{$tag}} </a>
+  </h1>
+  {{ template "pages" $pages }}
+  {{ end }}
+
+</div>
+
+{{ template "footer" . }}
