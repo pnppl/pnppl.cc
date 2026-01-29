@@ -1,4 +1,4 @@
-Combined repo for my personal website.
+Combined repo for my personal website <https://www.pnppl.cc>.
 
 - `xlog/` is from <https://github.com/emad-elsaid/xlog> and is MIT licensed.
 - `xlog/markdown/wikilink/` is from <https://github.com/abhinav/goldmark-wikilink> and is BSD-3 licensed.

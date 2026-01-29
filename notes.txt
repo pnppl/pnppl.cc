@@ -54,6 +54,15 @@ todo:
 - wikilink resolver: _html byte. ?
 - recent sorts by modified. all sorts by title alpha; maybe rename. we also want a tab to sort by filename aka creation time
 - why the hell are we getting different results based on source directory? is it just order of processing?
+- we're technically live!
+	- unable to access site over http. who is at fault, the host or the DNS?
+		- at least ssl Just Werks i guess. wish i could just do http only
+	- not sure how to get rid of leading www
+	- i think we can blame the host for the trailing slash
+		- also for not returning directory listings. i want those
+	- need to add host trigger to deploy script or setup the webhook shit if we're gonna keep using this approach
+	- make index, about, etc
+	- set it up on my phone, import more stuff
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
@@ -139,6 +148,7 @@ low priority/done:
 - x <ul> only generated with -, not * or +
 	- this might cause problems. i think it's the only change i've made to markdown handling that is a break not an extension
 - x #1 is a hashtag. should not be
+- email button is messed up on mobile
 
 blog meta (first post is Free Real Estate):
 > "best viewed with victor mono" (because autodownloading fonts is dickish)
