@@ -35,7 +35,7 @@ Note: I will from here on refer to Vos with neutral pronouns, not as a judgment 
 ### The calibrator
 The first shot of the film is of Vos inserting a needle-tipped probe into the skull of the first victim, ie, Vos's own skull. We later learn that this is a device for calibrating the connection between the host body and the assassin possessing it. Vos looks into the mirror while slowly turning up the dial on the device. The victim's face moves through a variety of emotions, ultimately sobbing in despair, then moves back to a forced calm. (This performance by Gabrielle Graham is fantastic, by the way. It's unsettling to see such realistic emotional lability with no apparent external source.)
 
-![[img/calibrator.jpg]]
+![[/img/calibrator.jpg]]
 
 I think this device is one of the most intriguing things about the movie's universe, despite the fact that it undercuts the "perfect crime" nature of Vos's job — a minor plot hole we can easily overlook. The calibrator seemingly must be used in front of a mirror. It appears to stimulate a range of strong emotions in order to anchor the possessor in the host body, but the fact that it requires a mirror indicates that this anchoring process is about self-identification. Mirrors encourage us to consider the connection between the mind and body, the internal and external selves. By experiencing these emotions while watching them play across the host's face, Vos mentally connects the host's body with their own: I feel this; they feel this; therefore they = me.
 
@@ -46,7 +46,7 @@ Later, when Vos is assigned to possess Colin Tate, we're told (foreshadowing!) t
 
 I say "supposed incompatibility" because the film gives us reason to suspect the "incompatibility" is actually an *excess* of compatibility. Vos's employers do not want them to become too attached to their life in the host. As things spiral out of control in the denouement, it's unclear where Vos ends and Colin begins. Vos even tells him, or themselves, that the murders were acts of his own agency: *You're the one in control.* Maybe the whole thing is just a power struggle, and Vos said this to try to manipulate him into killing himself, but we are shown tons of visuals of the two of them blurring together.
 
-![[img/mask.jpg]]
+![[/img/mask.jpg]]
 
 Colin and Vos have a lot in common. They are both abused and exploited by incredibly invasive employers. They both work soul-killing jobs: Colin spies on ~~Amazon~~ Zoothroo users and harvests data about the most boring things in the scene; Vos gives up their identity and murders people, regularly experiencing suffering that includes committing suicide. They are both directly overseen for the entirety of their time on the clock. Colin's job even incorporates VR for no apparent reason, meaning his consciousness is transferred to a new perspective, akin to her possessions. (Hilariously, he even has a virtual desk and monitor inside the VR environment.) Colin's job is voyeuristic, while Vos's takes voyeur to a whole new level. Both of them have an inappropriately close connection with their employer: Colin's is his horrible father-in-law, Vos's plays therapist and demands to know Vos's thoughts in addition to ordering and overseeing contract kills. When Vos is told to start a fight with Colin's father-in-law, the rage on display could have come from either one of them: *You think you can step on me? I'm a giant!* The cover story that Colin had a breakdown under all the stress might not have been far off the mark.
 
@@ -55,7 +55,7 @@ Perhaps militating against this reading is the fact that Vos has a breakdown at 
 ### Depersonalization, sex, and masculinity
 The couple being spied on by ~~Amazon~~ Zoothroo is not the first significant sex scene. After Vos's first assignment is complete, they request time off to try to reconnect with their family. (Vos's boss is not happy about this, reminding Vos that they separated and that Vos decided it was better that way.) Vos approaches this like another assignment: they practice greeting their family with no apparent emotion, then seem to fake the emotions when the time comes. Their real life is just another role to play, motions to go through. Very pre-transition trans. Later, they initiate sex with their husband by laying their head on his arm like a puppy. Cut to fucking: Vos is just lying there in the missionary position, clearly feeling nothing, absolutely dead inside. It's only when they remember plunging a knife into their victim's body that they feel anything. At first, it seems like Vos is haunted by it... but then, they get aroused and bite their husband.
 
-![[img/dead-inside.jpg]]
+![[/img/dead-inside.jpg]]
 
 What to make of this? Clearly Vos is no longer turned on by PIV with this man; what they really crave is violence. And notably, the form that violence takes is stabbing, the type most heavily freighted with psychosexual baggage: sticking something into the victim. This is a frequent trope in horror: women who are dispatched by repeated stabbing with a knife, echoing the violent insertion of a phallus. Recall too that Vos went out of their way to select a knife as the murder weapon.
 
@@ -65,13 +65,13 @@ We get further evidence of this when Vos possesses Colin. One of the first thing
 
 What's really interesting is what happens when Vos and Ava fuck. Ava is on top in a distinctly dominant role: she puts her fingers in Vos/Colin's mouth, then wraps one hand around their neck and puts the other over their mouth. Vos grabs her hands and forces them behind her back, then sits up and flips them around so Ava is on her back. It's only at this point that Vos/Colin really seems to get into it. This is also when some "synchronization" issues begin to crop up: we see flickers of Vos's actual face; Vos/Colin looks uncomfortable; we see Colin screaming internally; Colin/Vos sits up. Then, Colin's body changes into Vos's, slim and breasted, except with a large penis. They continue thrusting it a little. With some reticence, they continue fucking. Closeups of an open eye are overlaid. Cut to Vos/Colin sitting alone with their head down in a pose suggestion exhaustion or dejection; they check in with their boss and say they are in perfect sync with the host.
 
-![[img/dickgirl.jpg]]
+![[/img/dickgirl.jpg]]
 
 This is the closest we get to an explicit trans moment in the film, but it is very explicit. Vos is embodied in their mind's eye as a woman with a large penis, rather like a fetishistic depiction of a trans woman. I imagine this is a polarizing scene for transfem viewers. It seems to use our bodies as a symbol of confusion or ambiguity. However, that symbol literalizes what Vos/Colin is experiencing; I suspect whether it's offensive comes down to whether you feel it was done for shock value or not, which I don't really think it was.
 
 Just like the voyeuristic VR scene, sex has clearly triggered some sort of disconnect. And like the VR scene, it's not entirely clear why. One obvious explanation is that Vos is experiencing severe gender dysphoria leading to dissociation, but I don't think that quite fits. Vos seems numb and disconnected, yes, but that's how they always are; they literally *are* diconnected; it isn't their body. It's Colin whose face we see screaming in horror, presumably because he's powerless to stop this intruder from fucking his fiancee. Vos continues thrusting their cock, slightly, while they look down at themselves in detached wonder. And most significantly, the scene mirrors the earlier "dead inside" scene between Vos and their husband. Vos/Colin firmly rejects the submissive position that they occupied in the earlier sex scene and reverses it. This does not read as method acting to me: if they liked that role, they could have just kept it going; how they had sex had no relevance to the mission. Presumably Ava and Colin have had sex before and she knows what he likes; it's Vos who wants to be dominant.[^3]
 
-![[img/dom.jpg]]
+![[/img/dom.jpg]]
 
 Sex in _Possessor_ seems to function like the opposite of the calibrator. The powerful emotions and bodily sensations it generates provide an opportunity for the host's identity to break through and assert itself. Whether this is because it creates gender dysphoria in the possessor or because it connects strongly to the host's psyche, it's clear that _Possessor_ sees sexuality as fundamental to self-conception, even moreso than strong emotion alone.
 
@@ -91,13 +91,13 @@ Vos's boss is the voice of the patriarchy. She encourages Vos to sever ties with
 
 And of course, there's the finale. We learn that Vos's boss has possessed their child to ensure the mission is finished, and likely to ensure that Vos no longer has a family to steal their attention. In the end, it's Vos who annihilates their own child, screaming with the same hatred displayed during the earlier fight at the party. I speculated that that rage might have been genuinely Colin's; in this case, it is unambiguous that it genuinely belongs to Vos. This type of rage is about as male as it gets. It's unstable men who are prone to annihilate their family and themselves.
 
-![[img/annihilation.jpg]]
+![[/img/annihilation.jpg]]
 
 In the final analysis, Vos's boss was right. She may have maneuvered them into the revelation, but the revelation was sincere. Vos's true feelings are that they despise their family and everything it represents. Empathy, domesticity, womanhood: Tasya Vos is not meant for these things. Their truth is unrestrained power and pounding blood. Their toxic masculinity is in service of a power structure that doesn't actually care about them — but since when is that new? Masculinity exists to turn men into weapons that protect male power.
 
 Testosterone could have saved him.
 
-![[img/tragic.jpg]]
+![[/img/tragic.jpg]]
 [^1]: In this, and all my writing, I don't intend to speak for others or imply what I say is true of all trans people. Far from it; we are as diverse as any people group. I'm speaking from my own perspective, and generalize only because I think there are a non-negligible number of other trans people who have a similar perspective. Without the ability to assume some degree of shared experience, we wouldn't have the term "transgender" in the first place.
 [^2]: I would consider erotic horror another sister genre to body horror. Besides heavy overlap in both Cronenbergs' films, see Julia Ducournau (_Raw_, _Titane_), Clive Barker's _Hellraiser_ series, _Possession_ (1981), _From Beyond_ (1986), _Under the Skin_ (2013), _The Substance_ (2024), and the entire "monsterfucker" genre. No really, see them, they're all good! Except for maybe the monsterfucker stuff. Do **not** watch _La Bête_ (1975) unless you are really into simulated bigfoot rape and unsimulated horse sex. I should have turned it off when it opened with what felt like an hour of close-ups of horse cock. I watched it so you don't have to. It's amazing what you can find at your local library.
 [^3]: I realize I'm playing a little fast and loose with my sex terminology here. They're not exactly doing anything kinky. The change in position seems like a pretty vanilla exchange of power; normal give-and-take, not a clear dominant and submissive. But they shot the scene this way for a reason. They gave us close-ups of Ava's hand around Colin's throat and Colin's hands holding hers behind her back for a reason. I think that reason was to emphasize the shifting power in the scenario.
