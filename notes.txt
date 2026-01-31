@@ -6,7 +6,6 @@ make sure to delete public/htmx.min.js assuming you don't figure out how to keep
 there are useless fonts to delete in /assets but they've been wiped from the css so they won't load, just remember to put the css back
 
 todo: 
-- figure out a good way to include original md files in /txt
 - search
 - css tweaks
 	- reduce vertical space
@@ -21,6 +20,7 @@ todo:
 - rss is a little wonky. the heading buttons render but don't function in most readers
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
 		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
+	- domain, hence links (and also sitemap) are broken rn due to lack of www lol
 - tracked down shortcode bug - modified frontmatter ext with nil trigger
 	- this breaks shortcode ext. by deleting the node at the end with RemoveChild()
 		- this is somewhat alarming. i clearly do not understand how this shit works
@@ -31,54 +31,41 @@ todo:
 	- normal fenced code blocks work fine, i guess since that's handled by the markdown module
 	- this is all somewhat vexing. shortcodes aren't very important but i have one usecase, spoiler/trigger warning. if i don't delete the node in frontmatter (non-hash) everything basically works out --- the problem with not deleting it in frontmatter_hash is it won't render as an h1, but that doesn't apply to non-h1-files. but if i do this, then i'll have to further complicate my ridiculous preprocessing: only duplicate the line if it does not begin with #. and there will still be edge cases, eg a shortcode whose content begins with a hash sign
 	- probably best to just leave them turned off if i can't clean up my frontmatter situation
-- the changes i made to autolink_pages.go to link based on first line are seemingly incompatible with unicode. it just hangs if a document has an emdash
-	- i changed it to use bufio and it seemingly worked the same.
-	- at some point i had it processing pages successfully, but the emdashes came out garbled.
-		- i think this was when i was messing with the parser code. it was some kind of bytewise problem. i told it to treat everything non-alphanumeric as ones to consume and continue.
-			- anyway, i don't think the parser needs to be changed.
-	- the most obvious culprit seemed to be my use of strings fucking the unicode up
-		- but then again, it had the same behavior when i added a bunch of triggers to the parser
-		- in fact, i have no idea how to approach debugging this thing, so when an error doesn't generate obvious output i'm stumped
-			- i tried putting in print statements and whatnot and didn't get anywhere before
-				- maybe time to at least figure out why that won't work, or find some other way to effectively debug
-	- what i would really like is to replace the frontmatter extensions with one simple one that sets the metadata based on my parameters, then have autolink_pages refer back to that metadata.
+- what i would really like is to replace the frontmatter extensions with one simple one that sets the metadata based on my parameters, then have autolink_pages refer back to that metadata.
 	- i don't understand the way this program works well enough. is the metadata in a global state, or is it being passed around all over the place, or what am I mmissing?
 	- we've semi-successfully changed what metadata is "set" (?) in the frontmatter ext - the info makes it to the template, anyway.
 		- so how do I retrieve it from inside autolink_pages, instead of reinventing the wheel and somehow breaking emdash in the process? 
 		- I should just be able to type some shit like "metadata[title]" and retrieve it, right? RIGHT???
-	- solving the unicode bug and also the shortcode/ugly fish preprocessing bugs all seem connected
 		- we should not be generating the firstline-title more than once. and we should not have to fuck with the text files first
 			- and we should be doing it in one shot, without changing the page at all in the process, so other extensions can make the title H1 and etc. 
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
-- !!!! Figured it out (?sorta). Usage.md and blank.md were both getting autolinked to using their blank title. removing them fixed the issue. still need to fix that though
+- blank titles cause issues
 - wikilink resolver: _html byte. ?
-- recent sorts by modified. all sorts by title alpha; maybe rename. we also want a tab to sort by filename aka creation time
-- why the hell are we getting different results based on source directory? is it just order of processing?
 - we're technically live!
 	- unable to access site over http. who is at fault, the host or the DNS?
+		- i think host
 		- at least ssl Just Werks i guess. wish i could just do http only
 	- not sure how to get rid of leading www
+		- think i have to put ipv4 and v6 records in the domain name. not worth bothering rn since i'm leaving the host
 	- i think we can blame the host for the trailing slash
-		- also for not returning directory listings. i want those
-	- need to add host trigger to deploy script or setup the webhook shit if we're gonna keep using this approach
-	- make index, about, etc
-	- set it up on my phone, import more stuff
+	- also for not returning directory listings. i want those
+- set it up on my phone, import more stuff
 
 low priority/done:
-- x tweak title display, not that important, shows filename rn, kinda nice actually
-	- this has been changed with the frontmatter hack, but it would actually be nice to put the filename back somewhere
-		- put it back at top, centered
+- tweak title display, not that important, shows filename rn, kinda nice actually
+	- swap filename and firstline/title?
 - x get autolink_pages to stop autolinking pages to themselves
 	- solved with a shell kludge after html already generated; can't figure out how to do it from inside the extension
 - x wikilink syntax
 	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
+	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
 - ! links should be inserted without protocol where possible (protocol-relative link) for http/https compat
 - x fix emoji bullshit
 	- emoji markdown support removed
 	- unicode glyphs replaced with ascii for extlink, footnote
 	- navbar glyphs replaced with degenerate hidden <li></li> in template to make NCSA render bullets for us
 - x disabled typography renderer (... -> …, "" -> “”, etc) because it dumps a bunch of &quot; type shit in ncsa. but it's kind of ugly not having it and is counter to the goal of: low tech input, high tech output. so could consider turning it back on.
-- mosaic folder links issue is resolved by using xlog's built-in server, so that tiny python one must be the problem
+	- no, leave it off. think of how annoying it is pasting "smart quotes" into an SMS
 - x fix date format
 	- calendar links to pages by all date mentions. it would be nice to have one restricted to creation/modification as well
 		- of course i had hoped to just generate an alphabetical list of filenames to the same effect.  recent, but everything
@@ -88,11 +75,11 @@ low priority/done:
 - mosaic compat
 	- x anchors don't work -- is that my fault or did mosaic not support them?
 		- in html 2.0 you can't navigate to an element by id, you have to have <a name="id">
-	- links are kind of fucky, think this is a server issue
 - x make sure dark mode works since we have this giant fucking css framework. consider minifying that also. or throwing it away
-- consider how to handle modification times. if we want this to be more wiki/garden and less write-once blog, modification is important. and i know how useful surfacing by modified is. but our modification times will, right now, be based entirely on filesystem metadata. it's not ideal and i'm not sure how xlog handles that but i don't see a better option right now. we don't want to use frontmatter since we have no good way to automate updating it.
+- x consider how to handle modification times. if we want this to be more wiki/garden and less write-once blog, modification is important. and i know how useful surfacing by modified is. but our modification times will, right now, be based entirely on filesystem metadata. it's not ideal and i'm not sure how xlog handles that but i don't see a better option right now. we don't want to use frontmatter since we have no good way to automate updating it.
+	- it's fine, leave it alone
 - index doesn't show on tag page
-- setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
+- x setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
 - ! aliasing for mentions?
 - x a lot of stuff is going to be really useless if i can't get it to print the first line insted of filename
@@ -126,6 +113,7 @@ low priority/done:
 			- it's like we have photoshop or the like open, plus a pop-up for the TOC, and a toolbar with our buttons
 - x mobile should wrap now
 - reduced title to 70 chars, which is max for gopher. filename still doesn't display quite right.
+	- floating it to the right on list pages is stupid and should be changed
 - x All Posts page - alpha sorted by filename, show filename and firstline. also link to src
 	- recents already seems to include all posts
 	- also sort by firstline
@@ -136,8 +124,8 @@ low priority/done:
 	- i guess i can probably keep using my crusty tags! :)
 	- issue was the doctype got moved outside the header decl in the layout.html template
 - TOC is working but might want to move it outside view area
+	- no, leave position alone. however we need text to be better at not running into it
 	- x no visual indication of current position
-		- ignore for now, only solution so far is sticky headings, who cares
 	- Backlinks, See Also added with shell kludge
 - replace branding - logo, name, favicon
 	- tent. name: pnppl's commonplace
@@ -148,32 +136,9 @@ low priority/done:
 - x <ul> only generated with -, not * or +
 	- this might cause problems. i think it's the only change i've made to markdown handling that is a break not an extension
 - x #1 is a hashtag. should not be
-- email button is messed up on mobile
-
-blog meta (first post is Free Real Estate):
-> "best viewed with victor mono" (because autodownloading fonts is dickish)
-> links: normally underlined. external have % appended. automatic links have a broken underline
-> "if you want to learn more about me, personally, read what I post on this website. (also see #personal)"
-brief description of changes from xlog
-	- remove javashit
-		- remove all dynamic aspects, which did not work in testing anyway
-	- shrink css as much as possible while working on it as little as possible
-		- 200KB is still an abomination but it used to be almost a meg
-			- long term would like to eliminate 95% of this, but i hate working on css and it looks nice
-	- move inline styles to stylesheet
-	- improve semantics with anchors for tags and dates
-	- various tweaks intended to improve compatibility, with ncsa mosaic 2.7 as target
-		- reduce dependence on unicode glyphs and html entities
-		- http (no ssl/tls) support
-		- instead of using deprecated tags, prefer to improve html semantics; make no effort at consistent display
-			- rely on whatever modern css to make it pretty in modern browsers
-		- unparseable modern tags are fine as long as they're ignored; if they spit garbage they are removed
-	- various minor structural changes to adapt to desired workflow
-		- all filenames are unique identifiers (datetime codes)
-		- titles are first line of file instead of filename (no frontmatter); autolink on this basis
-		- manual links must use filename. filename never changes. so titles can be changed without breaking a link
-	- wikilink syntax because md link syntax is fucking deranged
-
+- x email button is messed up on mobile
+- html output has a lot of pointless whitespace
+- page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
 
 longterm notions
 - replace css with something much smaller and more compatible

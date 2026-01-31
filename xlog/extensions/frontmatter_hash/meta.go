@@ -145,7 +145,7 @@ func (b *metaParser) Close(node gast.Node, reader text.Reader, pc parser.Context
 	}
 // truncate to 70 characters (+12 for titlePre)
 //	can't figure out how to get actual filename... 23 chars in '  [2000-02-20_23-59-00]'
-	lineLength := 70 + len(titlePre) - 23
+	lineLength := 70 + len(titlePre) //- 23
 	ellipse := []byte("...")
 	if buf.Len() > lineLength {
 		buf.Truncate(lineLength - len(ellipse))
