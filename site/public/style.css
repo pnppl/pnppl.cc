@@ -4192,6 +4192,12 @@ code, tt {
     	local('Victor Mono Medium'), local('VictorMono-Medium'),
     	url('/public/font/VictorMono-Medium.woff2') format('woff2');
   }
+  @font-face {
+    font-family: 'Victor Mono Medium Italic';
+    src:
+    	local('Victor Mono Medium Italic'), local('VictorMono-MediumItalic'),
+    	url('/public/font/VictorMono-MediumItalic.woff2') format('woff2');
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .title {
