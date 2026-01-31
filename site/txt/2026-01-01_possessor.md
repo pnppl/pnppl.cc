@@ -16,7 +16,7 @@ One final thing to note is the prevalence of graphic sex, especially "deviant" s
 
 
 ## _Possessor_ (2020)
-!! This section contains spoilers. You should watch the film before reading it.
+!! This section contains spoilers. You should watch the film before reading it. Also, nudity.
 
 Brandon Cronenberg's films are brilliant, yet they do not receive anywhere near the level of acclaim they deserve. His work is perhaps overshadowed by that of his father, to which it owes an obvious debt. It feels as though he spent his whole life marinating in Cronenberg the elder's work, letting it suffuse every pore, then burst onto the film scene in a blaze of originality. So far, his films are consistently excellent, where his father's are of more mixed quality, hitting both incredible highs and forgettable lows. Brandon takes David's skin-crawling surrealism and shapes it into razor-sharp, absolutely unsparing hard science fiction. You could say I'm a fan. If you are unfamiliar with his work and have ten minutes to spare, check out his short film _[[https://archive.org/details/please-speak-continuously-and-describe-your-experiences-as-they-come-to-you-2019_202403|Please Speak Continuously and Describe Your Experiences as They Come to You]]_.
 

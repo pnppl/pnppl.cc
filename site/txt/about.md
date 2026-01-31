@@ -1,4 +1,7 @@
 # About pnppl.cc
+> She started keeping a journal — had been, in fact, secretly doing so for some time: the furtive act of a deranged person.
+— [[https://annas-archive.li/search?q=valis|PKD]]
+
 Welcome to my [[https://en.wikipedia.org/wiki/Commonplace_book|commonplace]]. It's also, perhaps, my digital garden? I won't be offended if you just call it my blog.
 
 I've been a prodigious note-taker for years. Being able to carry my notes with me and search them digitally means I can actually refer back to them, and often do. It recently occurred to me that some of these notes (when tidied up a bit) might be of interest to other people. I call this site a commonplace because it's an attempt to translate that existing practice into a public form.
