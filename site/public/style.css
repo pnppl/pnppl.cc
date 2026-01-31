@@ -4367,6 +4367,8 @@ time.has-text-grey {
 /* footer */
 #email {
 	float: left;
+	display: flex;
+	align-items: center;
 	height: 31px !important;
 }
 /* "dynamic" badge */
