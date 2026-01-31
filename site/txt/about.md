@@ -24,7 +24,7 @@ This site really looks much better in [[https://rubjo.github.io/victor-mono/|Vic
 
 I could force it on you, but I find that rude. I block remote fonts in my browser: they're usually hosted on Google's CDN, so they call home; they're a multi-megabyte blob you have to download just to read some text; and they don't respect your preference of default font. So, please install it. I promise you'll like it.
 
-Unfortunately, if you're on an Android phone, I think you have to be rooted to install a font and it's a big pain in the ass.
+Unfortunately, if you're on an Android phone, I think you have to be rooted to install a font and it's a big pain in the ass. So, I do try to load it on mobile with a media query. You'll just have to block it if you hate it.
 
 
 # We have to go deeper: technical details, etc. #
