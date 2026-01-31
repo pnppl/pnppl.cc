@@ -4188,12 +4188,14 @@ code, tt {
 @media screen and (max-width: 768px) and (pointer: coarse) {
   @font-face {
     font-family: 'Victor Mono Medium';
+    font-style: normal;
     src:
     	local('Victor Mono Medium'), local('VictorMono-Medium'),
     	url('/public/font/VictorMono-Medium.woff2') format('woff2');
   }
   @font-face {
-    font-family: 'Victor Mono Medium Italic';
+    font-family: 'Victor Mono Medium';
+    font-style: italic;
     src:
     	local('Victor Mono Medium Italic'), local('VictorMono-MediumItalic'),
     	url('/public/font/VictorMono-MediumItalic.woff2') format('woff2');
