@@ -21,6 +21,7 @@ todo:
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
 		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
 	- x domain, hence links (and also sitemap) are broken rn due to lack of www lol
+	- certain formatting is not rendering for some reason, like italics
 - tracked down shortcode bug - modified frontmatter ext with nil trigger
 	- this breaks shortcode ext. by deleting the node at the end with RemoveChild()
 		- this is somewhat alarming. i clearly do not understand how this shit works
@@ -32,7 +33,7 @@ todo:
 	- this is all somewhat vexing. shortcodes aren't very important but i have one usecase, spoiler/trigger warning. if i don't delete the node in frontmatter (non-hash) everything basically works out --- the problem with not deleting it in frontmatter_hash is it won't render as an h1, but that doesn't apply to non-h1-files. but if i do this, then i'll have to further complicate my ridiculous preprocessing: only duplicate the line if it does not begin with #. and there will still be edge cases, eg a shortcode whose content begins with a hash sign
 	- probably best to just leave them turned off if i can't clean up my frontmatter situation
 - what i would really like is to replace the frontmatter extensions with one simple one that sets the metadata based on my parameters, then have autolink_pages refer back to that metadata.
-	- i don't understand the way this program works well enough. is the metadata in a global state, or is it being passed around all over the place, or what am I mmissing?
+	- i don't understand the way this program works well enough. is the metadata in a global state, or is it being passed around all over the place, or what am I missing?
 	- we've semi-successfully changed what metadata is "set" (?) in the frontmatter ext - the info makes it to the template, anyway.
 		- so how do I retrieve it from inside autolink_pages, instead of reinventing the wheel and somehow breaking emdash in the process? 
 		- I should just be able to type some shit like "metadata[title]" and retrieve it, right? RIGHT???
@@ -52,7 +53,6 @@ todo:
 		- configure mail (wait for support)
 		- remove git webhook/delete statichost.eu
 - set it up on my phone, import more stuff
-- recents is all fucked up, thought i fixed that
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
@@ -142,6 +142,7 @@ low priority/done:
 - x email button is messed up on mobile
 - html output has a lot of pointless whitespace
 - page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
+- x recents is all fucked up, thought i fixed that
 
 longterm notions
 - replace css with something much smaller and more compatible
