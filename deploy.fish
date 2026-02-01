@@ -6,5 +6,7 @@ end
 git pull &&
 rm -rf site/public/ &&
 fish build.fish &&
+chmod -R 755 site/ &&
 git add . && git commit -m "$msg" && git push &&
+lftp -e "set ftp:ssl-force yes; set ftp:ssl-protect-data yes; set ftp:ssl-protect-list yes; mirror -R site/ /" -u pnppl,$FTP_PASSWORD w10.host &&
 echo "! DEPLOY OK !"

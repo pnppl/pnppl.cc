@@ -50,6 +50,7 @@ todo:
 	- i think we can blame the host for the trailing slash
 	- also for not returning directory listings. i want those
 - set it up on my phone, import more stuff
+- recents is all fucked up, thought i fixed that
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
