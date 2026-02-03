@@ -31,7 +31,7 @@ More fundamentally, what could possibly be more invasive than forcing someone to
 [^1]: I do not give a shit whether you agree with my word choice. Take it as a given, like my use of "gender ideology".
 [^2]: In practice, fascists *frequently* enforce their gender ideology via rape. Arguably, sexual violence is their gender ideology's defining feature.
 [^3]: For example, they justify harming trans people on the basis that allowing bodily autonomy would constitute a greater, more grievous harm: the end of the family unit, loss of white reproductive capacity, conjectured future regret, blasphemy against god...
-[^4]: https://www.npr.org/2025/12/04/nx-s1-5630490/prison-doj-safety-memo-changes-trans-lgbtq-inmates
-[^5]: https://en.wikipedia.org/wiki/V-coding
+[^4]: [[//www.npr.org/2025/12/04/nx-s1-5630490/prison-doj-safety-memo-changes-trans-lgbtq-inmates]]
+[^5]: [[//en.wikipedia.org/wiki/V-coding]]
 [^6]: This is absolutely a form of sexual harassment and I wish more people would identify it as such. Just imagine a cisgender boy being repeatedly called "she" because people think he's too swishy, or a cisgender girl who's always referred to as "Mike" because they think she's too butch. Most people would recognize this as obvious sexual harassment: singling someone out due to perceptions of their sex characteristics and making their life miserable. But when the victim is transgender, basic moral intuition goes out the window. Even nonhumans who are "misgendered" receive more dignity than this, and they don't even know what a pronoun is.
 [^7]: Most sexual abuse is committed by people close to the victim. "Corrective rape" is a real phenomenon. These things are connected.

@@ -53,6 +53,19 @@ todo:
 		- configure mail (wait for support)
 		- remove git webhook/delete statichost.eu
 - set it up on my phone, import more stuff
+- changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
+	- when opened as file:// in ffx the domain disappears?
+		- works fine with python server
+	- would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
+		- is this actually a stupid idea? most sites won't serve http
+		- definitely don't strip http:// since some sites only serve that and we want to specify
+		- ideally i would specify when appropriate and relativize when not but then i can't just paste links
+			- speaking of, I assumed autolink ext wouldn't pick up bare protocol-relative links, but maybe i should test that assumption. then i still have to remove the protocol but don't have to add [[]]
+	- if we can output /post.html instead of /post/index.html then we could actually use the wikilinks more like real wikilinks - no leading /
+		- of course we could also modify the extension to fit the current setup
+	- we are still seeing https:// in `<meta property="og:url"` tags -- opengraph ext
+		- also these seem broken. there is no domain. i think i need to specify `basename` or something?
+	- also still present in sitemap.xml, rss feed
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
@@ -62,7 +75,6 @@ low priority/done:
 - x wikilink syntax
 	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
 	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
-- ! links should be inserted without protocol where possible (protocol-relative link) for http/https compat
 - x fix emoji bullshit
 	- emoji markdown support removed
 	- unicode glyphs replaced with ascii for extlink, footnote
