@@ -22,4 +22,5 @@ git commit -m "$msg" &&
 git push &&
 lftp -e "set ftp:skey-force; mirror -R site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
 #lftp -e "set ftp:skey-force; set ftp:ssl-protect-data yes; set ftp:ssl-protect-list yes; mirror -R site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
-echo "! DEPLOY OK !"
+echo "! DEPLOY OK !" ||
+echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "

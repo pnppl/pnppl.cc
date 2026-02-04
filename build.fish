@@ -8,4 +8,5 @@ cd site &&
 fish $pwd/clean_autolinks.fish &&
 cd $pwd &&
 fish finish_toc.fish &&
-echo "! BUILD OK !"
+echo "! BUILD OK !" ||
+echo " !! ~~~~~~~ BUILD FAILED! ~~~~~~ !! "
