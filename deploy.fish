@@ -14,7 +14,7 @@ git stash -u &&
 git pull &&
 fish set_mtimes.fish &&
 #metastore -a -m -f meta.store &&
-git stash pop &&
+git stash pop -q &&
 #metastore -s -m -f meta.store &&
 fish save_mtimes.fish &&
 git add . &&
