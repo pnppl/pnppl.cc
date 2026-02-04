@@ -66,6 +66,23 @@ todo:
 	- we are still seeing https:// in `<meta property="og:url"` tags -- opengraph ext
 		- also these seem broken. there is no domain. i think i need to specify `basename` or something?
 	- also still present in sitemap.xml, rss feed
+- syncing, metadata, and mobile fuckery
+	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
+		- right now i have it store the metadata before we commit, pull, and push. we apply it only when we setup the repo with gitup
+			- this is not adequate. if i make a new post on one device, then pull the repo on the other, the new post will have metadata set to when i pulled it. metadata will gradually drift apart between them
+			- i can't just apply the metadata willy-nilly: after a pull, it will potentially be stale
+			- there is probably a way to work around this shit with git. then again it isn't really designed for this
+				- git pull will wipe out local changes that haven't been commited. if you committed, they get merged
+					- i'm assuming conflicting files like meta.store will be a pain in the ass
+			- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
+				- probably some gaping hole in this but whatever
+	- i cannot create a symlink on any of the storage accessible to markor. god dammit
+		- i could link it the other direction but i can't find any way to make git follow the link, so it would just upload a pointer
+		- after much gnashing of teeth I decided we have to use rsync
+			- we can run a cron job in the background that regularly pulls the repo and rsyncs site/txt/ to the markor folder
+			- then when we deploy (manually for now), we can rsync the markor directory back. already added this step to deploy.fish
+			- the modtime thing is an issue here since we will be rsyncing only newer versions with --update
+
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
