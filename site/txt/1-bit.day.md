@@ -1,5 +1,5 @@
 # 1-bit.day #
-#pixel-art
+#pixel-art #visual-art
 
 I make 1-bit (black and white) 16x16 art here:
 https://1-bit.day/pnppl
