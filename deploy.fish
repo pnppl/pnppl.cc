@@ -5,6 +5,8 @@ if set -q _flag_commit
 end
 rm -rf site/public/ &&
 fish build.fish &&
+for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
+for file in (path filter -t file (fdfind . site/)); chmod 644 $file; end
 git add . && git commit -m "$msg" &&
 git pull &&
 git push &&
