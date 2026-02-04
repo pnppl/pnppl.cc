@@ -76,6 +76,8 @@ todo:
 					- i'm assuming conflicting files like meta.store will be a pain in the ass
 			- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
 				- probably some gaping hole in this but whatever
+				- it's kind of a disaster. might as well keep saving it and restore on first clone, but really would be better off just saving modtime
+				- also my git commands are not right somehow. something about unstaged changes
 	- i cannot create a symlink on any of the storage accessible to markor. god dammit
 		- i could link it the other direction but i can't find any way to make git follow the link, so it would just upload a pointer
 		- after much gnashing of teeth I decided we have to use rsync

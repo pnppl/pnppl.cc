@@ -9,13 +9,14 @@ end
 rm -rf site/public/ &&
 fish build.fish &&
 for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
-for file in (path filter -t file (fdfind . site/)); chmod 644 $file; end
-git add . &&
-git stash &&
+for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
+git stash -u &&
 git pull &&
-metastore -a -m -f meta.store &&
+fish set_mtimes.fish &&
+#metastore -a -m -f meta.store &&
 git stash pop &&
-metastore -s -m -f meta.store &&
+#metastore -s -m -f meta.store &&
+fish save_mtimes.fish &&
 git add . &&
 git commit -m "$msg" &&
 git push &&
