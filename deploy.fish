@@ -8,8 +8,6 @@ if set -q _flag_mobile
 end
 rm -rf site/public/ &&
 fish build.fish &&
-for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
-for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
 git stash -u &&
 git pull &&
 fish set_mtimes.fish &&
@@ -20,6 +18,8 @@ fish save_mtimes.fish &&
 git add . &&
 git commit -m "$msg" &&
 git push &&
+for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
+for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
 lftp -e "set ftp:skey-force; mirror -R site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
 #lftp -e "set ftp:skey-force; set ftp:ssl-protect-data yes; set ftp:ssl-protect-list yes; mirror -R site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
 echo "! DEPLOY OK !" ||
