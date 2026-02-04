@@ -84,7 +84,7 @@ todo:
 			- we can run a cron job in the background that regularly pulls the repo and rsyncs site/txt/ to the markor folder
 			- then when we deploy (manually for now), we can rsync the markor directory back. already added this step to deploy.fish
 			- the modtime thing is an issue here since we will be rsyncing only newer versions with --update
-
+- indented paragraphs should not be put in code blocks, wtf
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
