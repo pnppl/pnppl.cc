@@ -6,8 +6,12 @@ end
 if set -q _flag_mobile
 	rsync -avh --progress --update "$_flag_mobile" site/txt/
 end
+
 rm -rf site/public/ &&
 rm -rf site/.pagefind/ &&
+rm -f site/txt/_txt.zip &&
+rm -f site/img/1bitday/_1bitday.zip &&
+
 fish build.fish &&
 git stash -u &&
 git pull &&
@@ -15,9 +19,12 @@ fish set_mtimes.fish &&
 git stash pop -q &&
 fish save_mtimes.fish &&
 npx pagefind --site "site/" --output-subdir ".pagefind/" --force-language "en" &&
+zip -r site/txt/_txt.zip site/txt/
+zip -r site/img/1bitday/_1bitday.zip site/img/1bitday/
 git add . &&
 git commit -m "$msg" &&
 git push &&
+
 for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
 for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
 lftp -e "set ftp:skey-force; mirror -R --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
