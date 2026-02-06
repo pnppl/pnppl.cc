@@ -7,11 +7,7 @@ if set -q _flag_mobile
 	rsync -avh --progress --update "$_flag_mobile" site/txt/
 end
 
-rm -rf site/public/ &&
 rm -rf site/.pagefind/ &&
-#rm -f site/txt/!txt.zip &&
-#rm -f site/img/1bitday/!1bitday.zip &&
-
 fish build.fish &&
 git stash -u &&
 git pull &&

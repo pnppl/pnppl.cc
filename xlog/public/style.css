@@ -2641,7 +2641,7 @@ table th {
     align-items: flex-start;
     color: inherit;
     display: inline-flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     gap: var(--bulma-icon-text-spacing);
     line-height: var(--bulma-icon-dimensions)
     /*vertical-align: top*/
@@ -3828,7 +3828,7 @@ a.navbar-item:active {
     .navbar-menu {
         background-color: var(--bulma-navbar-background-color);
 /*        box-shadow: 0 .5em 1em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.1); */
-        padding: .5rem 0
+        /* padding: .5rem 0 */
     }
 }
 
@@ -3842,9 +3842,9 @@ a.navbar-item:active {
         display: flex
     }
 
-    .navbar {
+    /*.navbar {
         min-height: var(--bulma-navbar-height)
-    }
+    }*/
 
     .navbar-item {
         align-items: center;
@@ -3891,7 +3891,7 @@ a.navbar-item:active {
 
 .columns.is-mobile>.column.is-narrow {
     flex: none;
-    width: unset
+    width: unset;
 }
 
 .columns.is-mobile>.column.is-1 {
@@ -3928,7 +3928,8 @@ print {
 }
 
 .columns.is-mobile {
-    display: flex
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (min-width: 769px),
@@ -4051,7 +4052,7 @@ print {
 
 .view {
     counter-reset: h1;
-    margin-top: -2em;
+    margin-top: -1em;
 }
 
 .view pre:has(>code) {
@@ -4065,13 +4066,17 @@ print {
     view-transition-name: banner-image
 }
 
-.view h1 {
+.view h1, .view h2 {
     border-bottom: var(--bulma-hr-height) solid var(--bulma-hr-background-color);
     padding-bottom: .5em
 }
 
-.view h1:before {
+.view h1:before, .view h2:before {
     color: var(--bulma-grey-light)
+}
+
+/*.view h1:nth-of-type(1) {
+	margin-top: 2em !important;
 }
 
 .view h2 {
@@ -4081,7 +4086,7 @@ print {
 
 .view h2:before {
     color: var(--bulma-grey-light)
-}
+}*/
 
 .view a[href^=http]::after {
     display: inline-block;
@@ -4112,14 +4117,14 @@ print {
     counter-reset: h2;
     font-size: 1em;
     font-weight: bold;
-    margin: 3em 0 2em 0 !important
+    margin: 2em 0 1em 0 !important
 }
 
 .view h2 {
     counter-reset: h3;
     font-size: 1em;
     font-weight: bold;
-    margin: 3em 0 2em 0 !important
+    margin: 2em 0 1em 0 !important
 }
 
 .view h1:before {
