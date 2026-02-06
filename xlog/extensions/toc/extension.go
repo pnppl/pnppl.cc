@@ -32,7 +32,7 @@ func tocWidget(p xlog.Page) template.HTML {
 		return ""
 	}
 
-	tree, err := Inspect(doc, src, MaxDepth(3))
+	tree, err := Inspect(doc, src, MaxDepth(3), Compact(true))
 	if err != nil {
 		return ""
 	}
