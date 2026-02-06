@@ -7,7 +7,7 @@ import (
 	"github.com/emad-elsaid/xlog"
 	// All official extensions
 	// the flag to disable them seemingly does nothing...
-	//_ "github.com/emad-elsaid/xlog/extensions/all"
+	_ "github.com/emad-elsaid/xlog/extensions/all"
 	_ "github.com/emad-elsaid/xlog/extensions/autolink_pages"
 	_ "github.com/emad-elsaid/xlog/extensions/custom_widget"
 	_ "github.com/emad-elsaid/xlog/extensions/date"
@@ -30,7 +30,7 @@ import (
 // hideously lazy hack -- upload_file is actually frontmatter_hash
 	_ "github.com/emad-elsaid/xlog/extensions/upload_file"
 // disqus = all/alpha
-	_ "github.com/emad-elsaid/xlog/extensions/disqus"
+//	_ "github.com/emad-elsaid/xlog/extensions/disqus"
 //	_ "github.com/emad-elsaid/xlog/extensions/search"
 )
 

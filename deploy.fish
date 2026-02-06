@@ -13,7 +13,7 @@ git pull &&
 fish set_mtimes.fish &&
 #metastore -a -m -f meta.store &&
 git stash pop -q &&
-#metastore -s -m -f meta.store &&
+metastore -s -m -f meta.store &&
 fish save_mtimes.fish &&
 git add . &&
 git commit -m "$msg" &&

@@ -1,10 +1,3 @@
-don't think i need the thing in _assets, it doesn't seem to be touched by the build
-
-make sure to delete public/htmx.min.js assuming you don't figure out how to keep it from being included
--> commented out the only inclusion that should be happening but it seems it always copies everything from public/
-
-there are useless fonts to delete in /assets but they've been wiped from the css so they won't load, just remember to put the css back
-
 todo: 
 - search
 - css tweaks
@@ -52,7 +45,6 @@ todo:
 		- add web1.0hosting button
 		- configure mail (wait for support)
 		- remove git webhook/delete statichost.eu
-- set it up on my phone, import more stuff
 - changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
 	- when opened as file:// in ffx the domain disappears?
 		- works fine with python server
@@ -77,7 +69,8 @@ todo:
 			- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
 				- probably some gaping hole in this but whatever
 				- it's kind of a disaster. might as well keep saving it and restore on first clone, but really would be better off just saving modtime
-				- also my git commands are not right somehow. something about unstaged changes
+				- also my git commands are not right somehow. something about unstaged changes (suppressed with -q)
+				- actually kinda seems to be working fine now
 	- i cannot create a symlink on any of the storage accessible to markor. god dammit
 		- i could link it the other direction but i can't find any way to make git follow the link, so it would just upload a pointer
 		- after much gnashing of teeth I decided we have to use rsync
