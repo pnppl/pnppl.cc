@@ -18,7 +18,7 @@ git pull &&
 fish set_mtimes.fish &&
 git stash pop -q &&
 fish save_mtimes.fish &&
-npx pagefind --site "site/" --output-subdir ".pagefind/" --force-language "en" &&
+pagefind --site "site/" --output-subdir ".pagefind/" --force-language "en" &&
 zip -r site/txt/!txt.zip site/txt/
 zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/
 git add . &&
