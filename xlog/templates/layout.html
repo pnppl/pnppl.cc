@@ -34,11 +34,11 @@
       {{- if ne .config.Index .page.Name -}}
       <div dir="auto" class="title is-1" style="view-transition-name: page-title;">
         {{- with .page -}}
-            {{ with base .Name }}
-			<center><h1>{{ . }}</h1></center>
+            {{ with $props.title }}
+			<center><h1>{{ .Value }}</h1>
 			{{ end }}
-          	{{ with $props.title }}
-            <p class="subtitle">{{ .Value }}</p>
+          	{{ with  base .Name }}
+            <p class="subtitle">{{ . }}</p></center>
           	{{ end }}
         {{- end -}}
       </div>
