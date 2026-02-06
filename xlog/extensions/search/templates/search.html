@@ -1,10 +1,17 @@
 {{- template "header" . }}
-<link href="/+/search/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/+/search/pagefind/pagefind-ui.js"></script>
+<link href="/.pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/.pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", pageSize: 25, showSubResults: true, showImages: false, excerptLength: 30, resetStyles: false, autofocus: true });
+        new PagefindUI({ element: "#search",
+        	pageSize: 25,
+        	showSubResults: true,
+        	showImages: false,
+        	excerptLength: 30,
+        	resetStyles: false,
+        	autofocus: true
+    	 });
     });
 </script>
 {{- template "footer" . }}
