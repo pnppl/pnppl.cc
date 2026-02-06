@@ -4468,3 +4468,7 @@ a.footnote-ref:target {
 	font-weight: normal;
 	text-align: center;
 }
+
+time {
+	font-weight: bold;
+}

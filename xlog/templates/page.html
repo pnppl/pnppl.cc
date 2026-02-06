@@ -7,7 +7,6 @@
   <div class="column">
     {{ if not .page.ModTime.IsZero }}
     <span class="icon-text">
-      <span class="icon"> <i class="fa-solid fa-clock"></i> </span>
       {{ $t := .page.ModTime }}
       <time datetime="{{$t}}">{{ printf "Modified: %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
     </span>
