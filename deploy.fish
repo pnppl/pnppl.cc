@@ -9,8 +9,8 @@ end
 
 rm -rf site/public/ &&
 rm -rf site/.pagefind/ &&
-rm -f site/txt/_txt.zip &&
-rm -f site/img/1bitday/_1bitday.zip &&
+rm -f site/txt/!txt.zip &&
+rm -f site/img/1bitday/!1bitday.zip &&
 
 fish build.fish &&
 git stash -u &&
@@ -19,8 +19,8 @@ fish set_mtimes.fish &&
 git stash pop -q &&
 fish save_mtimes.fish &&
 npx pagefind --site "site/" --output-subdir ".pagefind/" --force-language "en" &&
-zip -r site/txt/_txt.zip site/txt/
-zip -r site/img/1bitday/_1bitday.zip site/img/1bitday/
+zip -r site/txt/!txt.zip site/txt/
+zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/
 git add . &&
 git commit -m "$msg" &&
 git push &&
