@@ -4095,7 +4095,7 @@ print {
     margin: 0 .4em
 }
 
-.view a[href^=//]::after {
+.view a[href^='//']::after {
     display: inline-block;
     content: "%";
     font-weight: 900;
