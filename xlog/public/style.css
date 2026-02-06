@@ -4091,7 +4091,14 @@ print {
     display: inline-block;
     content: "%";
     font-weight: 900;
+    font-size: .6em;
+    margin: 0 .4em
+}
 
+.view a[href^=//]::after {
+    display: inline-block;
+    content: "%";
+    font-weight: 900;
     font-size: .6em;
     margin: 0 .4em
 }
@@ -4185,7 +4192,7 @@ code, tt {
 	font-family: Victor Mono Medium, monospace
 }
 
-@media screen and (max-width: 768px) and (pointer: coarse) {
+@media screen and (max-width: 769px) and (pointer: coarse) {
   @font-face {
     font-family: 'Victor Mono Medium';
     font-style: normal;
