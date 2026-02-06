@@ -78,6 +78,9 @@ todo:
 			- then when we deploy (manually for now), we can rsync the markor directory back. already added this step to deploy.fish
 			- the modtime thing is an issue here since we will be rsyncing only newer versions with --update
 - indented paragraphs should not be put in code blocks, wtf
+- git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
+- commented out the calendar addon since it's kind of useless rn
+
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
