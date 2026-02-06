@@ -4449,6 +4449,7 @@ body:has(h1:nth-of-type(14)) {
 
 .accel {
 	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
 }
 
 p:has(a:target), h1:target, h2:target, h3:target, h4:target, h5:target, h6:target, li:target {
