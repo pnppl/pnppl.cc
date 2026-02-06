@@ -7,14 +7,14 @@ if set -q _flag_mobile
 	rsync -avh --progress --update "$_flag_mobile" site/txt/
 end
 rm -rf site/public/ &&
+rm -rf site/+/search/ &&
 fish build.fish &&
 git stash -u &&
 git pull &&
 fish set_mtimes.fish &&
-#metastore -a -m -f meta.store &&
 git stash pop -q &&
-metastore -s -m -f meta.store &&
 fish save_mtimes.fish &&
+npx pagefind --site "site/" --output-path "site/+/search/pagefind/" --force-language "en" &&
 git add . &&
 git commit -m "$msg" &&
 git push &&
