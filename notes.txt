@@ -1,7 +1,6 @@
 todo: 
-- search
 - css tweaks
-	- reduce vertical space
+	- x reduce vertical space
 	- nicer ul styling
 - display tags for item next to links to it?
 - filenames in date format should be treated as containing that date - added to calendar, etc.
@@ -10,11 +9,14 @@ todo:
 	- i think we need to create a new node that contains the text of the old one, then insert it after the current node. somehow
 - next/prev post buttons
 	- would be relatively easy to hack in with more shell but would rather avoid more of that
-- rss is a little wonky. the heading buttons render but don't function in most readers
+- ! rss is a little wonky. the heading buttons render but don't function in most readers
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
 		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
 	- x domain, hence links (and also sitemap) are broken rn due to lack of www lol
-	- certain formatting is not rendering for some reason, like italics
+	- certain formatting is not rendering for some reason, like italics, hr
+	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
+		- would also like to set up an email subscription option, probably some rss-to-email service i can use
+		- then there's also masto, bsky, etc. stuff people actually use. meh
 - tracked down shortcode bug - modified frontmatter ext with nil trigger
 	- this breaks shortcode ext. by deleting the node at the end with RemoveChild()
 		- this is somewhat alarming. i clearly do not understand how this shit works
@@ -38,13 +40,13 @@ todo:
 - we're technically live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
 		- only downside: can only upload over ftp
-		- SSL cert issue - contacted support
+		- ! SSL cert issue - contacted support... contact again
 		- pages still always show the trailing /
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
-		- add PHP features? Likes counter? try to make a gallery for 1bitday gifs? need a link to it at least
-		- add web1.0hosting button
+		- add PHP features? Likes counter? try to make a gallery for 1bitday gifs?
+		- add web1.0hosting button?
 		- configure mail (wait for support)
-		- remove git webhook/delete statichost.eu
+		- x remove git webhook/delete statichost.eu
 - changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
 	- when opened as file:// in ffx the domain disappears?
 		- works fine with python server
@@ -82,8 +84,14 @@ todo:
 	- we clearly need to just exclude the stuff xlog builds from git
 	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 
 - commented out the calendar addon since it's kind of useless rn
-- ! figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this. if we have to make them executable for the host then let's add in a chmod -x step after
-
+- x figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this.
+	- if we have to make them executable for the host then let's add in a chmod -x step after
+		- did this, seems ok
+- the backslash in my shruggie did not make it to the published html >:(
+	- i don't even know where to begin with this. something somewhere along the way probably needs me to escape it by doubling it
+	- the typographer markdown extension triggers on \. but i have this disabled. it does "smart quotes" etc.
+	- shell pipelining is an obvious culprit but i don't think any of my kludges would have done anything
+	- somehow, somewhere, a string is not being properly quoted.
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
@@ -173,6 +181,8 @@ low priority/done:
 - html output has a lot of pointless whitespace
 - page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
 - x recents is all fucked up, thought i fixed that
+- x search
+	- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
 
 longterm notions
 - replace css with something much smaller and more compatible
