@@ -1,6 +1,7 @@
 package wikilink
 
-import "path/filepath"
+//import "path/filepath"
+import "strings"
 
 // DefaultResolver is a minimal wikilink resolver that resolves wikilinks
 // relative to the source page.
@@ -33,18 +34,21 @@ type Resolver interface {
 }
 
 //var _html = []byte(".html")
-var _html = []byte("")
+var _slash = []byte("/")
 
 type defaultResolver struct{}
 
 func (defaultResolver) ResolveWikilink(n *Node) ([]byte, error) {
-	dest := make([]byte, len(n.Target)+len(_html)+len(_hash)+len(n.Fragment))
+	dest := make([]byte, len(n.Target)+len(_slash)+len(_hash)+len(n.Fragment))
 	var i int
 	if len(n.Target) > 0 {
-		i += copy(dest, n.Target)
-		if filepath.Ext(string(n.Target)) == "" {
-			i += copy(dest[i:], _html)
+		if n.Target[0] != '/' && strings.Contains(string(n.Target), "://") == false {
+			i += copy(dest, _slash)
 		}
+		i += copy(dest[i:], n.Target)
+//		if filepath.Ext(string(n.Target)) == "" {
+//			i += copy(dest[i:], _html)
+//		}
 	}
 	if len(n.Fragment) > 0 {
 		i += copy(dest[i:], _hash)

@@ -12,17 +12,17 @@ rm -rf site/.pagefind/ &&
 rm -rf site/txt/!txt.zip &&
 rm -rf site/img/1bitday/!1bitday.zip &&
 fish build.fish &&
+git stash -u &&
+git pull &&
+fish set_mtimes.fish &&
+git stash pop -q &&
+fish save_mtimes.fish &&
 git add *.* &&
 git add xlog/ &&
 git add site/txt/ &&
 git add site/img/ &&
 git add site/humans.txt &&
 git add site/favicon.ico &&
-git stash &&
-git pull &&
-fish set_mtimes.fish &&
-git stash pop -q &&
-fish save_mtimes.fish &&
 git commit -m "$msg" &&
 git push &&
 

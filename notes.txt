@@ -36,7 +36,6 @@ todo:
 			- and we should be doing it in one shot, without changing the page at all in the process, so other extensions can make the title H1 and etc. 
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
 - blank titles cause issues
-- wikilink resolver: _html byte. ?
 - we're technically live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
 		- only downside: can only upload over ftp
@@ -55,8 +54,9 @@ todo:
 		- definitely don't strip http:// since some sites only serve that and we want to specify
 		- ideally i would specify when appropriate and relativize when not but then i can't just paste links
 			- speaking of, I assumed autolink ext wouldn't pick up bare protocol-relative links, but maybe i should test that assumption. then i still have to remove the protocol but don't have to add [[]]
-	- if we can output /post.html instead of /post/index.html then we could actually use the wikilinks more like real wikilinks - no leading /
-		- of course we could also modify the extension to fit the current setup
+	- x if we can output /post.html instead of /post/index.html then we could actually use the wikilinks more like real wikilinks - no leading /
+		- x of course we could also modify the extension to fit the current setup
+			- i had already modified it to the directory approach lol. modified again to add leading slash when needed
 	- we are still seeing https:// in `<meta property="og:url"` tags -- opengraph ext
 		- also these seem broken. there is no domain. i think i need to specify `basename` or something?
 	- also still present in sitemap.xml, rss feed
