@@ -26,10 +26,10 @@ zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/ -x \*.zip
 git commit -m "$msg" &&
 git push &&
 
-chmod -R 775 * &&
+chmod -R 755 site/ &&
 #for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
 #for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
 lftp -e "set ftp:skey-force; mirror -R --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
-chmod -R -x * &&
+for file in (path filter -t file (fdfind . site/)); chmod -x $file; end &&
 echo "! DEPLOY OK !" ||
 echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
