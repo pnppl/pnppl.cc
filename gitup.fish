@@ -7,4 +7,13 @@ echo ".*" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
 echo "w10hosting_default" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
-echo "!*.zip" >> .git/info/exclude
+echo "!*.zip" >> .git/info/exclude &&
+echo >> .git/info/exclude &&
+echo "site/+/" >> .git/info/exclude &&
+echo >> .git/info/exclude &&
+echo "site/sitemap.xml" >> .git/info/exclude &&
+echo >> .git/info/exclude &&
+echo "site/public" >> .git/info/exclude &&
+echo >> .git/info/exclude &&
+echo "site/202*" >> .git/info/exclude &&
+echo >> .git/info/exclude

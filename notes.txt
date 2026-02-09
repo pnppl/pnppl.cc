@@ -79,7 +79,10 @@ todo:
 			- the modtime thing is an issue here since we will be rsyncing only newer versions with --update
 - indented paragraphs should not be put in code blocks, wtf
 - git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
+	- we clearly need to just exclude the stuff xlog builds from git
+	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 
 - commented out the calendar addon since it's kind of useless rn
+- ! figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this. if we have to make them executable for the host then let's add in a chmod -x step after
 
 
 low priority/done:
