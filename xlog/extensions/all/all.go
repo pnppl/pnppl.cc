@@ -70,5 +70,13 @@ func (l links) Name() string { return "All" }
 func (l links) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{
 		"href": "/+/all",
+		"accesskey": "a",
+	}
+}
+func (l links) Label() map[string]string {
+		return map[string]string {
+			"labelStart": "",
+			"labelAccel": "A",
+			"labelEnd": "ll",
 	}
 }

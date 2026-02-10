@@ -222,6 +222,14 @@ func (l link) Name() string { return "Hashtags" }
 func (l link) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{
 		"href": "/+/tags",
+		"accesskey": "g",
+	}
+}
+func (l link) Label() map[string]string {
+		return map[string]string {
+			"labelStart": "Hashta",
+			"labelAccel": "g",
+			"labelEnd": "s",
 	}
 }
 

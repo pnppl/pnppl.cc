@@ -13,7 +13,9 @@
       {{- range $i, $a := links .page -}}
       <li class="compat-hidden"></li>
       <a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="navbar-item icon-text">
-        <span>{{.Name}}</span>
+      	{{- with .Label -}}
+        <span>{{.labelStart}}<u class="accel">{{.labelAccel}}</u>{{.labelEnd}}</span>
+        {{- end }}
       </a>
       {{- end }}
     </div>
@@ -24,8 +26,8 @@
         {{- widgets "search" . -}}
         {{- end -}}
         <li class="compat-hidden"></li>
-		<a href="/+/feed.rss" class="navbar-item icon-text">
-			<span id="RSS">RSS</span><span> Feed</span>
+		<a href="/+/feed.rss" class="navbar-item icon-text" accesskey="f">
+			<span id="RSS">RSS</span><span> <u class="accel">F</u>eed</span>
 		</a>
 <!--      </div> -->
     </div>

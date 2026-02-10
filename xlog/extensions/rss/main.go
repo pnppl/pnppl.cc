@@ -44,6 +44,13 @@ func (rssLink) Attrs() map[template.HTMLAttr]any {
 		"href": "/+/feed.rss",
 	}
 }
+func (rssLink) Label() map[string]string {
+		return map[string]string {
+			"labelStart": "RSS ",
+			"labelAccel": "F",
+			"labelEnd": "eed",
+	}
+}
 
 func links(p Page) []Command {
 	return []Command{rssLink{}}

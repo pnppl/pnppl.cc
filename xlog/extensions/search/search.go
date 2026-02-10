@@ -31,8 +31,16 @@ type links struct{}
 func (l links) Icon() string { return "" }
 func (l links) Name() string { return "Search" }
 func (l links) Attrs() map[template.HTMLAttr]any {
-	return map[template.HTMLAttr]any{
+	return map[template.HTMLAttr]any {
 		"href": "/+/search",
+		"accesskey": "s",
+	}
+}
+func (l links) Label() map[string]string {
+	return map[string]string {
+		"labelStart": "",
+		"labelAccel": "S",
+		"labelEnd": "earch",
 	}
 }
 

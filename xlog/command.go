@@ -14,6 +14,8 @@ type Command interface {
 	Name() string
 	// Attrs a map of attributes to their values
 	Attrs() map[template.HTMLAttr]any
+	// additional items for nav accelerators
+	Label() map[string]string
 }
 
 var commands = []func(Page) []Command{}
