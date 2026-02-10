@@ -52,7 +52,7 @@
       <center>
         <p>
         {{ with properties .page }}
-          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{.title.Value}}">Send f<u class="accel">e</u>edback...</a>
+          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{.title.Value -}}">Send f<u class="accel">e</u>edback...</a>
         {{ end }}
         <p>
           <a id="badge" href="/about">

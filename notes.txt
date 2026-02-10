@@ -92,6 +92,7 @@ todo:
 	- the typographer markdown extension triggers on \. but i have this disabled. it does "smart quotes" etc.
 	- shell pipelining is an obvious culprit but i don't think any of my kludges would have done anything
 	- somehow, somewhere, a string is not being properly quoted.
+- i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
