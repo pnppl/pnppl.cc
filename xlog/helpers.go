@@ -8,6 +8,7 @@ import (
 	"slices"
 	"strings"
 	"time"
+	"strconv"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -29,6 +30,9 @@ var helpers = template.FuncMap{
 	"base":           path.Base,
 	"dir":            dir,
 	"raw":            raw,
+	"trim":           trim,
+    "accesskey":      accesskey,
+    "resetaccess":    resetaccess,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -199,4 +203,28 @@ func dir(s string) string {
 // raw a helper to output input string as safe HTML
 func raw(i string) template.HTML {
 	return template.HTML(i)
+}
+
+// remove last character (fix for trailing newline issue)
+func trim(i string) string {
+	return i[:len(i)-1]
+}
+
+// global var helpers so we can count headings
+var counter = 1
+func accesskey() string {
+	var returni string = ""
+	if counter < 11 {
+		if counter == 10 {
+			returni = "0"
+		} else {
+			returni = strconv.Itoa(counter)
+		}
+		counter = counter + 1
+	}
+	return returni
+}
+func resetaccess() string {
+	counter = 1
+	return ""
 }
