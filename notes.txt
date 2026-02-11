@@ -93,6 +93,11 @@ todo:
 	- shell pipelining is an obvious culprit but i don't think any of my kludges would have done anything
 	- somehow, somewhere, a string is not being properly quoted.
 - i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
+	- tragically this does not seem to include the newline that is making its way to the email subject
+	- i think it's just for whitespace in the template, not the variable we're inserting, hence the problem
+	- maybe we can get rid of all that damn whitespace mosaic displays in the page title
+- due to the hacky way i added the missing sections to the toc, we get no toc if the document has no headings, even if we have backlinks/see also
+	- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
 
 low priority/done:
 - tweak title display, not that important, shows filename rn, kinda nice actually
