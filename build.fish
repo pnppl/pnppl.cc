@@ -2,7 +2,7 @@ rm -rf site/public/ &&
 fish prep_title.fish &&
 set pwd (pwd) &&
 cd xlog/cmd/xlog &&
-go run xlog.go -source $pwd/tmp -build $pwd/site -sitename pnppl.cc -rss.domain pnppl.cc -sitemap.domain pnppl.cc &&
+go run xlog.go -source $pwd/tmp -build $pwd/site -sitename pnppl.cc -rss.domain pnppl.cc -sitemap.domain pnppl.cc -og.domain pnppl.cc &&
 cd $pwd &&
 rm -rf tmp &&
 cd site &&

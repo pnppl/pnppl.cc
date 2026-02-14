@@ -16,6 +16,7 @@ import (
 var domain string
 var description string
 var limit int
+const rfc822 = "Mon, 02 Jan 2006 15:04:05 -0700"
 
 func init() {
 	flag.StringVar(&domain, "rss.domain", "", "RSS domain name to be used for RSS feed. without HTTPS://")
@@ -63,6 +64,7 @@ func metaTag(p Page) template.HTML {
 
 type rss struct {
 	Version string  `xml:"version,attr"`
+	Xmlns string	`xml:"xmlns:atom,attr"`
 	Channel Channel `xml:"channel"`
 }
 
@@ -71,29 +73,50 @@ type Channel struct {
 	Link        string `xml:"link"`
 	Language    string `xml:"language"`
 	Description string `xml:"description"`
+	Copyright	string `xml:"copyright"`
+	WebMaster	string `xml:"webMaster"`
+	AtomLink	AtomLink `xml:"atom:link"`
 	Items       []Item `xml:"item"`
 }
 
+type AtomLink struct {
+	Href		string `xml:"href,attr"`
+	Rel			string `xml:"rel,attr"`
+	Type		string `xml:"type,attr"`
+}
+
 type Item struct {
-	Title       string    `xml:"title"`
-	Description string    `xml:"description"`
-	PubDate     time.Time `xml:"pubDate"`
-	GUID        string    `xml:"guid"`
-	Link        string    `xml:"link"`
+	Title       string `xml:"title"`
+	Description string `xml:"description"`
+	PubDate     string `xml:"pubDate"`
+	GUID        string `xml:"guid"`
+	Link        string `xml:"link"`
 }
 
 func feed(r Request) Output {
 	f := rss{
 		Version: "2.0",
+		Xmlns:   "http://www.w3.org/2005/Atom",
 		Channel: Channel{
 			Title: Config.Sitename,
 			Link: (&url.URL{
-				Scheme: "https",
+				Scheme: "http",
 				Host:   domain,
 				Path:   "/+/feed.rss",
 			}).String(),
 			Description: description,
+			Copyright:	"Copyleft: All Wrongs Reversed (CC BY-SA 4.0)",
+			WebMaster:	"feedback@pnppl.cc (pnppl)",
 			Language:    "en-US",
+			AtomLink: AtomLink{
+				Href:	(&url.URL{
+							Scheme: "http",
+							Host:   domain,
+							Path:   "/+/feed.rss",
+						}).String(),
+				Rel:	"self",
+				Type:	"application/rss+xml",
+			},
 			Items:       []Item{},
 		},
 	}
@@ -112,16 +135,22 @@ func feed(r Request) Output {
 	}
 
 	for _, p := range pages {
+		properties := Properties(p)
 		f.Channel.Items = append(f.Channel.Items, Item{
-			Title:       p.Name(),
-			Description: string(p.Render()),
-			PubDate:     p.ModTime(),
-			GUID:        p.Name(),
-			Link: (&url.URL{
-				Scheme: "https",
-				Host:   domain,
-				Path:   "/" + p.Name(),
-			}).String(),
+			Title:			properties["title"].Value().(string),
+			Description:	string(p.Render()),
+			PubDate:		timeFromName(p.Name(), p.ModTime()),
+//			LastBuildDate:	p.ModTime().Format(rfc822),
+			GUID:			(&url.URL{
+								Scheme: "http",
+								Host:   domain,
+								Path:   "/" + p.Name(),
+							}).String(),
+			Link:			(&url.URL{
+								Scheme: "http",
+								Host:   domain,
+								Path:   "/" + p.Name(),
+							}).String(),
 		})
 	}
 
@@ -131,4 +160,18 @@ func feed(r Request) Output {
 	}
 
 	return PlainText(xml.Header + string(buff))
+}
+
+// This made more sense when I thought lastBuildDate was an item property, but it's a channel property
+// still, might as well stick with this for now
+func timeFromName(name string, mtime time.Time) string {
+	location, _ := time.LoadLocation("America/New_York")
+	parsedTime, err := time.ParseInLocation("2006-01-02_15-04-05", name, location)
+	if err != nil {
+		parsedTime, err = time.Parse("2006-01-02", name)
+			if err != nil {
+				parsedTime = mtime
+			}
+	}
+	return parsedTime.Format(rfc822)
 }

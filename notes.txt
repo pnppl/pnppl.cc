@@ -39,7 +39,6 @@ todo:
 - we're technically live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
 		- only downside: can only upload over ftp
-		- ! SSL cert issue - contacted support... contact again
 		- pages still always show the trailing /
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
 		- add PHP features? Likes counter? try to make a gallery for 1bitday gifs?
@@ -53,12 +52,12 @@ todo:
 		- is this actually a stupid idea? most sites won't serve http
 		- definitely don't strip http:// since some sites only serve that and we want to specify
 		- ideally i would specify when appropriate and relativize when not but then i can't just paste links
-			- speaking of, I assumed autolink ext wouldn't pick up bare protocol-relative links, but maybe i should test that assumption. then i still have to remove the protocol but don't have to add [[]]
 	- x if we can output /post.html instead of /post/index.html then we could actually use the wikilinks more like real wikilinks - no leading /
 		- x of course we could also modify the extension to fit the current setup
 			- i had already modified it to the directory approach lol. modified again to add leading slash when needed
 	- we are still seeing https:// in `<meta property="og:url"` tags -- opengraph ext
-		- also these seem broken. there is no domain. i think i need to specify `basename` or something?
+		- x also these seem broken. there is no domain. i think i need to specify `basename` or something?
+			- should be fixed, had to pass build option
 	- also still present in sitemap.xml, rss feed
 - syncing, metadata, and mobile fuckery
 	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
@@ -147,10 +146,15 @@ low priority/done:
 		- tested all and added several working ('!', '?' ..)
 			- removed these because they don't actually work?
 - got a lot done, need to tidy and merge
-	- added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
+	- x added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
 		- ffx: alt-shift-key
 		- x want to add for the rest of the navbar but it's spit out on a template. Calendar, Recent, Hashtags. no need for rss accelerator
 		- x shortcuts to the first 10 headings would be cool but not worth much effort
+			- implemented this but it relies on global state and is buggy
+				- i can't pass the number around the template because they only take one arg and it calls itself recursively
+				- i would rather put the accesskeys in the headings themselves instead of the toc, but i don't know how to do this
+					- if i did figure this out, i think i could have key=1 cycle through the first h1 and all its children, key=2 the second h1 and children, etc.
+					- kind of hard to troubleshoot because it behaves differently with the local server than the deployed one
 	- pushed theme in a win9x direction, hopefully not too overbearing. gives it a lot of personality
 		- the charm of it is how the 9x elements seem apart from the content
 			- we want to style navigation elements this way, and content its own way, closer to the sleek OOTB design
@@ -182,7 +186,7 @@ low priority/done:
 	- this might cause problems. i think it's the only change i've made to markdown handling that is a break not an extension
 - x #1 is a hashtag. should not be
 - x email button is messed up on mobile
-- html output has a lot of pointless whitespace
+- html output has a lot of pointless whitespace - add hyphens to templates
 - page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
 - x recents is all fucked up, thought i fixed that
 - x search
