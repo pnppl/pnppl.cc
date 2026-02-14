@@ -13,7 +13,8 @@ todo:
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
 		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
 	- x domain, hence links (and also sitemap) are broken rn due to lack of www lol
-	- certain formatting is not rendering for some reason, like italics, hr
+	- x certain formatting is not rendering for some reason, like italics, hr
+		- this is my reader's fault
 	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
 		- would also like to set up an email subscription option, probably some rss-to-email service i can use
 		- then there's also masto, bsky, etc. stuff people actually use. meh
@@ -59,6 +60,7 @@ todo:
 		- x also these seem broken. there is no domain. i think i need to specify `basename` or something?
 			- should be fixed, had to pass build option
 	- also still present in sitemap.xml, rss feed
+		- set up rss to just use http for everything. a protocol is required and i figure everything that supports ssl will auto promote
 - syncing, metadata, and mobile fuckery
 	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
 		- right now i have it store the metadata before we commit, pull, and push. we apply it only when we setup the repo with gitup
@@ -97,8 +99,8 @@ todo:
 	- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
 
 low priority/done:
-- tweak title display, not that important, shows filename rn, kinda nice actually
-	- swap filename and firstline/title?
+- x tweak title display, not that important, shows filename rn, kinda nice actually
+	- x swap filename and firstline/title?
 - x get autolink_pages to stop autolinking pages to themselves
 	- solved with a shell kludge after html already generated; can't figure out how to do it from inside the extension
 - x wikilink syntax
@@ -131,7 +133,7 @@ low priority/done:
 	- i THINK the frontmatter extension does everything i want, except that it parses ---\ntitle: \n--- instead of the first line
 		- i could just use my shell script to change the first line to this format, but then my hacky autolink_pages solution will fail
 		- getting close. but two major issues:
-			- ! if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
+			- if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
 				- solved with some ugly hacks:
 					1. frontmatter extension is split in two, one triggers on 'nil' ("anything", but apparently not really) and the other on '#'
 					2. files are just preprocessed with shell to duplicate first line and remove leading/trailing h1 hash
@@ -145,7 +147,7 @@ low priority/done:
 	- the trigger is an issue. setting it to nil, or ' ', is unsuccessful, and several characters (#, $, %) cause a hang
 		- tested all and added several working ('!', '?' ..)
 			- removed these because they don't actually work?
-- got a lot done, need to tidy and merge
+- x got a lot done, need to tidy and merge
 	- x added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
 		- ffx: alt-shift-key
 		- x want to add for the rest of the navbar but it's spit out on a template. Calendar, Recent, Hashtags. no need for rss accelerator
