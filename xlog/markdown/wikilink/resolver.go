@@ -42,7 +42,7 @@ func (defaultResolver) ResolveWikilink(n *Node) ([]byte, error) {
 	dest := make([]byte, len(n.Target)+len(_slash)+len(_hash)+len(n.Fragment))
 	var i int
 	if len(n.Target) > 0 {
-		if n.Target[0] != '/' && n.Target[0] != '#' && strings.Contains(string(n.Target), "://") == false {
+		if n.Target[0] != '/' && n.Target[0] != '#' && string(n.Target[:7]) != "mailto:" && strings.Contains(string(n.Target), "://") == false {
 			i += copy(dest, _slash)
 		}
 		i += copy(dest[i:], n.Target)
