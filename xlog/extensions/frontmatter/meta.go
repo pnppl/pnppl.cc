@@ -5,7 +5,7 @@
 package frontmatter
 
 import (
-	"bytes"
+	"strings"
 	"fmt"
 
 	"github.com/emad-elsaid/xlog/markdown"
@@ -103,9 +103,7 @@ func isSeparator(line []byte) bool {
 }
 
 func (b *metaParser) Trigger() []byte {
-//	return []byte{'-'}
 	return nil
-//return []byte{'#'}
 }
 
 func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Context) (gast.Node, parser.State) {
@@ -113,65 +111,27 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
 	if linenum != 0 {
 		return nil, parser.NoChildren
 	}
-_, seg := reader.PeekLine()
-node := gast.NewTextBlock()
-node.Lines().Append(seg)
-//	line, _ := reader.PeekLine()
-//	if isSeparator(line) {
-//		return gast.NewTextBlock(), parser.NoChildren
-		return node, parser.NoChildren
-//	}
-//	return nil, parser.NoChildren
+
+	line, _ := reader.PeekLine()
+    title := strings.TrimSpace(string(line))
+    title = strings.TrimLeft(title, "# ")
+    title = strings.TrimRight(title, " #")
+    if len(title) > 70 {
+		title = title[:67] + "..."
+    }
+    d := &data{
+        Map: map[string]any{"title": title},
+        Items: yaml.MapSlice{{Key: "title", Value: title}},
+    }
+    pc.Set(contextKey, d)
+    return nil, parser.NoChildren
 }
 
 func (b *metaParser) Continue(node gast.Node, reader text.Reader, pc parser.Context) parser.State {
-//	line, segment := reader.PeekLine()
-//	if isSeparator(line) && !util.IsBlank(line) {
-//		reader.Advance(segment.Len())
-		return parser.Close
-//	}
-//	node.Lines().Append(segment)
-//	return parser.Continue | parser.NoChildren
+	return parser.Close
 }
 
 func (b *metaParser) Close(node gast.Node, reader text.Reader, pc parser.Context) {
-	lines := node.Lines()
-	titlePre := []byte("title: |\n   ")
-	var buf bytes.Buffer
-	buf.Write(titlePre)
-	for i := 0; i < lines.Len(); i++ {
-		segment := lines.At(i)
-		buf.Write(segment.Value(reader.Source()))
-	}
-// truncate to 70 characters (+12 for titlePre)
-//	can't figure out how to get actual filename... 23 chars in '  [2000-02-20_23-59-00]'
-	lineLength := 70 + len(titlePre) //- 23
-	ellipse := []byte("...")
-	if buf.Len() > lineLength {
-		buf.Truncate(lineLength - len(ellipse))
-		buf.Write(ellipse)
-	}
-	d := &data{}
-	d.Node = node
-	meta := map[string]any{}
-	if err := yaml.Unmarshal(buf.Bytes(), &meta); err != nil {
-		d.Error = err
-	} else {
-		d.Map = meta
-	}
-
-	metaMapSlice := yaml.MapSlice{}
-	if err := yaml.Unmarshal(buf.Bytes(), &metaMapSlice); err != nil {
-		d.Error = err
-	} else {
-		d.Items = metaMapSlice
-	}
-
-	pc.Set(contextKey, d)
-
-	if d.Error == nil {
-		node.Parent().RemoveChild(node.Parent(), node)
-	}
 }
 
 func (b *metaParser) CanInterruptParagraph() bool {

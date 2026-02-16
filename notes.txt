@@ -9,15 +9,16 @@ todo:
 	- i think we need to create a new node that contains the text of the old one, then insert it after the current node. somehow
 - next/prev post buttons
 	- would be relatively easy to hack in with more shell but would rather avoid more of that
-- ! rss is a little wonky. the heading buttons render but don't function in most readers
+- x rss is a little wonky. the heading buttons render but don't function in most readers
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
 		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
 	- x domain, hence links (and also sitemap) are broken rn due to lack of www lol
 	- x certain formatting is not rendering for some reason, like italics, hr
 		- this is my reader's fault
 	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
-		- would also like to set up an email subscription option, probably some rss-to-email service i can use
+		- x would also like to set up an email subscription option, probably some rss-to-email service i can use
 		- then there's also masto, bsky, etc. stuff people actually use. meh
+	- reasonably happy with where it's at now, only thing that really irritates me is pages linking to themselves
 - tracked down shortcode bug - modified frontmatter ext with nil trigger
 	- this breaks shortcode ext. by deleting the node at the end with RemoveChild()
 		- this is somewhat alarming. i clearly do not understand how this shit works
