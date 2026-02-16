@@ -38,8 +38,8 @@ todo:
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
 		- add PHP features? Likes counter? try to make a gallery for 1bitday gifs?
 		- add web1.0hosting button?
-		- configure mail (wait for support)
 		- x remove git webhook/delete statichost.eu
+		- .md files always try to download. this seems to be controlled by the headers sent by the server. might be worth asking support/the forum about this
 - changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
 	- when opened as file:// in ffx the domain disappears?
 		- works fine with python server

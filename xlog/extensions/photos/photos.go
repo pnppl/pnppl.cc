@@ -44,6 +44,7 @@ func (Photos) Name() string { return "photos" }
 func (Photos) Init() {
 	shortcode.RegisterShortCode("photos", shortcode.ShortCode{Render: photosShortcode("photos")})
 	shortcode.RegisterShortCode("photos-grid", shortcode.ShortCode{Render: photosShortcode("photos-grid")})
+	shortcode.RegisterShortCode("1bitday", shortcode.ShortCode{Render: photosShortcode("1bitday")})
 	xlog.RegisterTemplate(templates, "templates")
 	xlog.RegisterProperty(properties)
 	xlog.Get(`/+/photos/thumbnail/{path...}`, resizeHandler)
@@ -136,7 +137,8 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 		}
 
 		slices.SortFunc(photos, func(i, j *Photo) int {
-			return j.Time.Compare(i.Time)
+//			return j.Time.Compare(i.Time)
+			return strings.Compare(i.Name(), j.Name())
 		})
 
 		return xlog.Partial(tpl, xlog.Locals{
@@ -172,6 +174,9 @@ func resizeHandler(r xlog.Request) xlog.Output {
 		dim := bounds.Max
 
 		width := 700
+		if strings.Contains(string(photo_path), "1bitday") {
+			width = 64
+		}
 		height := int(float32(width) / float32(dim.X) * float32(dim.Y))
 
 		dst := image.NewRGBA(image.Rect(0, 0, width, height))

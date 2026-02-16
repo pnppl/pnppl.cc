@@ -4,6 +4,7 @@ import (
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/parser"
 	"github.com/emad-elsaid/xlog/markdown/text"
+	"github.com/pnppl/wikilink"
 )
 
 type columnizeImagesParagraph struct{}
@@ -42,8 +43,13 @@ func containsOnlyImages(n *ast.Paragraph) bool {
 	}
 
 	for c := n.FirstChild(); c != nil; c = c.NextSibling() {
-		if c.Kind() != ast.KindImage && c.Kind() != ast.KindText {
+		if c.Kind() != ast.KindImage && c.Kind() != ast.KindText && c.Kind() != wikilink.Kind {
 			return false
+		} else if wl, ok := c.(*wikilink.Node); ok {
+		// if node is type wikilink, we only columnize if it's an image (Embed is true)
+			if wl.Embed == false {
+				return false
+			}
 		} else if t, ok := c.(*ast.Text); ok && !t.SoftLineBreak() {
 			return false
 		}

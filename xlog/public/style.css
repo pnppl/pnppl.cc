@@ -4482,6 +4482,6 @@ time {
 #search * {
 	border-radius: 0 !important;
 	@media (prefers-color-scheme: dark) {
-		color: var(--bulma-title-color) !important
+		color: var(--bulma-title-color) !important;
 	}
 }

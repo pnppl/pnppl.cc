@@ -1,12 +1,11 @@
 # 1-bit.day #
 #pixel-art #visual-art
 
-I make 1-bit (black and white) 16x16 art here:
-https://1-bit.day/pnppl
+!1bitday /img/1bitday
 
-You can get it as actual 16x16 bitmaps (gifs) here: [[/img/1bitday]]
+You can grab these all at once here: [[/img/1bitday/!1bitday.zip]]
 
-Here's the Python script I made to do the conversion:
+I make them on [[https://1-bit.day/pnppl|1-bit.day]]. Here's the Python script I made to do the conversion:
 ```python
 #!/usr/bin/env python3
 # turns 1024x1024 pixel art from 1-bit.day into actual size

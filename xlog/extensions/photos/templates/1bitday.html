@@ -1,0 +1,5 @@
+{{ range .photos }}
+<a href="{{ .Original }}" class="is-inline-block" style="text-decoration:none">
+  <img src="{{ .Thumbnail }}" loading="lazy" alt="{{ .Name }}" title="{{ .Name }}" width="64" height="64">
+</a>
+{{ end }}
