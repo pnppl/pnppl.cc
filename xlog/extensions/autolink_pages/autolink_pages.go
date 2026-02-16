@@ -45,12 +45,14 @@ func UpdatePagesList(Page) (err error) {
 		content := p.Content()
 		lines := strings.Split(string(content), "\n")
 		firstLine := strings.TrimSpace(lines[0])
+		firstLine = strings.TrimPrefix(firstLine, "# ")
+		firstLine = strings.TrimSuffix(firstLine, " #")
 //----------------------------------------- //
 		return &NormalizedPage{
 			page:           p,
 //			normalizedName: path.Base(strings.ToLower(p.Name())),
 //			we might want to write a regex to strip out more than just h1
-			normalizedName: strings.Replace(strings.Replace(strings.ToLower(firstLine), "# ", "", 1), " #", "", 1),
+			normalizedName: strings.ToLower(firstLine),
 //			it would be nice to be able to make use of both firstline and filename, ie:
 //			normalizedFileName: path.Base(strings.ToLower(p.Name())),
 //			but i don't understand this program or language well enough to do that yet

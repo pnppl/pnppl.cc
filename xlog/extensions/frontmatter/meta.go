@@ -114,8 +114,8 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
 
 	line, _ := reader.PeekLine()
     title := strings.TrimSpace(string(line))
-    title = strings.TrimLeft(title, "# ")
-    title = strings.TrimRight(title, " #")
+    title = strings.TrimPrefix(title, "# ")
+    title = strings.TrimSuffix(title, " #")
     if len(title) > 70 {
 		title = title[:67] + "..."
     }

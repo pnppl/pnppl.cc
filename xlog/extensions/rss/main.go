@@ -138,7 +138,7 @@ func feed(r Request) Output {
 		properties := Properties(p)
 		title := properties["title"].Value().(string)
 		f.Channel.Items = append(f.Channel.Items, Item{
-			Title:			title[:len(title)-1],
+			Title:			title,
 			Description:	string(p.Render()),
 			PubDate:		timeFromName(p.Name(), p.ModTime()),
 //			LastBuildDate:	p.ModTime().Format(rfc822),

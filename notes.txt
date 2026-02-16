@@ -2,6 +2,7 @@ todo:
 - css tweaks
 	- x reduce vertical space
 	- nicer ul styling
+	- menu takes up too much space on mobile
 - display tags for item next to links to it?
 - filenames in date format should be treated as containing that date - added to calendar, etc.
 	- date format should have date-only and time-also formats, and we need to select one to rule them all
