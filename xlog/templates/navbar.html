@@ -7,7 +7,6 @@
       <span><u class="accel">H</u>ome</span>
     </a>
   </div>
-
   <div id="navbarMenu" class="navbar-menu">
     <div class="navbar-start">
       {{- range $i, $a := links .page -}}
@@ -15,13 +14,12 @@
       <a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="navbar-item icon-text">
       	{{- with .Label -}}
         <span>{{.labelStart}}<u class="accel">{{.labelAccel}}</u>{{.labelEnd}}</span>
-        {{- end }}
+        {{- end -}}
       </a>
-      {{- end }}
+      {{- end -}}
     </div>
     <div class="navbar-end">
 <!--      <div class="navbar-item"> -->
-
         {{- with .page -}}
         {{- widgets "search" . -}}
         {{- end -}}
