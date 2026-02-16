@@ -7,8 +7,8 @@ go run xlog.go -source $pwd/site/txt -build $pwd/site -sitename pnppl.cc -rss.do
 #cd $pwd &&
 #rm -rf tmp &&
 #cd site &&
-cd $pwd/site
-fish $pwd/clean_autolinks.fish &&
+#cd $pwd/site
+#fish $pwd/clean_autolinks.fish &&
 cd $pwd &&
 fish finish_toc.fish &&
 echo "! BUILD OK !" ||

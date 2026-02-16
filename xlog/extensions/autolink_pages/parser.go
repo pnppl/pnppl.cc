@@ -18,6 +18,20 @@ func (*pageLinkParser) Trigger() []byte {
 	return []byte{' ', '*', '_', '~', '('}
 }
 
+// getCurrentPageTitle extracts the normalized title from the document source
+func getCurrentPageTitle(source []byte) string {
+	lines := strings.SplitN(string(source), "\n", 2)
+	if len(lines) == 0 {
+		return ""
+	}
+	firstLine := strings.TrimSpace(lines[0])
+	firstLine = strings.TrimPrefix(firstLine, "# ")
+	firstLine = strings.TrimSuffix(firstLine, " #")
+	return strings.ToLower(firstLine)
+}
+
+
+
 func (s *pageLinkParser) Parse(parent ast.Node, block text.Reader, pc parser.Context) ast.Node {
 	if pc.IsInLinkLabel() {
 		return nil
@@ -46,8 +60,16 @@ func (s *pageLinkParser) Parse(parent ast.Node, block text.Reader, pc parser.Con
 	var m int
 	normalizedLine := strings.ToLower(string(line))
 
+	// Get current page title to avoid self-linking
+	currentPageTitle := getCurrentPageTitle(block.Source())
+
 	for _, p := range autolinkPages {
 		if len(line) < len(p.normalizedName) {
+			continue
+		}
+
+		// Skip if this would link to the current page
+		if p.normalizedName == currentPageTitle {
 			continue
 		}
 

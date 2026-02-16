@@ -43,7 +43,7 @@ func UpdatePagesList(Page) (err error) {
 	ps := MapPage(context.Background(), func(p Page) *NormalizedPage {
 //------- chatbot helped, be suspicious --- //
 		content := p.Content()
-		lines := strings.Split(string(content), "\n")
+		lines := strings.SplitN(string(content), "\n", 2)
 		firstLine := strings.TrimSpace(lines[0])
 		firstLine = strings.TrimPrefix(firstLine, "# ")
 		firstLine = strings.TrimSuffix(firstLine, " #")
