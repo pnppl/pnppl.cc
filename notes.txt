@@ -165,6 +165,7 @@ low priority/done:
 - x recents is all fucked up, thought i fixed that
 - x search
 	- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
+	- ! fix dark mode styling
 - x get rid of shell preprocessing
 	- resorted to AI but finally got this dealt with
 - x the backslash in my shruggie did not make it to the published html >:(
