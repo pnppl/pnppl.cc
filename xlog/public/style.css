@@ -4559,6 +4559,7 @@ time {
 	/*display: block;*/
 	margin-right: 2ch;
 }
+.chroma { tab-size: 4; }
 .chroma code { display: inline-block; }
 code { counter-reset: lineNo; }
 .line::before {
