@@ -28,7 +28,8 @@ var MarkdownConverter = sync.OnceValue(func() markdown.Markdown {
 			highlighting.NewHighlighting(
 				highlighting.WithCustomStyle(styles.Get(Config.CodeStyle)),
 				highlighting.WithFormatOptions(
-					chroma_html.WithLineNumbers(true),
+//					chroma_html.WithLineNumbers(true),
+					chroma_html.WithClasses(true),
 				),
 			),
 //			extension.Typographer,
