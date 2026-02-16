@@ -7,21 +7,18 @@
     <link rel="icon" href="/public/favicon.ico">
     <link rel="stylesheet" href="/public/style.css">
     <title>
-      {{ $props := properties .page }}
+      {{- $props := properties .page -}}
       {{- with .page -}}
-        {{- if ne .Name $.config.Index -}}
-        {{ emoji . }}
-        {{ with $props.title }} {{ .Value }} {{ else }} {{ .Name }} {{ end }}
-        |
-      {{ end -}}
-      {{- end -}}
-      {{.config.Sitename}}
+        {{- with $props.title -}}
+        	{{ .Value }}
+    	{{- else -}}
+    		{{ .Name }}
+        {{- end }} | {{ end -}}
+      {{- .config.Sitename -}}
     </title>
-    {{- with .page }} {{ widgets "head" . }} {{ end }}
-
+    {{- with .page -}} {{ widgets "head" . }} {{- end -}}
     {{- with .page -}}
     {{- if ne .Name $.config.Index -}}
-    {{ with emoji . }}{{ template "emoji-favicon" . }}{{ end }}
     {{- end -}}
     {{- end -}}
   </head>
@@ -34,25 +31,25 @@
       {{- if ne .config.Index .page.Name -}}
       <div dir="auto" class="title is-1" style="view-transition-name: page-title;">
         {{- with .page -}}
-            {{ with $props.title }}
+            {{- with $props.title -}}
 			<center><h1>{{ .Value }}</h1>
-			{{ end }}
-          	{{ with  base .Name }}
+			{{- end -}}
+          	{{- with  base .Name -}}
             <p class="subtitle">{{ . }}</p></center>
-          	{{ end }}
+          	{{- end -}}
         {{- end -}}
       </div>
       {{- end -}}
 
       <div class="content pb-5">
       {{- end -}}
-      {{ define "footer" }}
+      {{- define "footer" -}}
       <!-- my footer -->
       <hr>
       <center>
         <p>
         {{- with properties .page -}}
-          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{- .title.Value -}}">S<u class="accel">e</u>nd feedback...</a>
+          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{ .title.Value }}">S<u class="accel">e</u>nd feedback...</a>
         {{- end -}}
         <p>
           <a id="badge" href="/about">
@@ -63,8 +60,7 @@
       <!-- --------- -->
       </div>
     </div>
-
-    {{ scripts }}
+    {{- scripts -}}
   </body>
 </html>
 {{- end -}}
