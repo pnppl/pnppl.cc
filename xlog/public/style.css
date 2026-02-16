@@ -4175,22 +4175,23 @@ print {
 
 .view input[type=checkbox]:focus {
     outline: 2px solid currentColor;
-    outline-offset: 2px
+    outline-offset: 2px;
 }
 
 *:hover>.show-on-parent-hover {
-    display: inline !important
+    display: inline !important;
 }
 
 
 /* manually added: */
 
 * {
-	font-family: Victor Mono Medium, serif
+	font-family: Victor Mono Medium, serif;
 }
 
-code, tt {
-	font-family: Victor Mono Medium, monospace
+code *, tt {
+	font-family: Victor Mono Medium, monospace, monospace;
+	font-variant-numeric: tabular-nums;
 }
 
 @media screen and (max-width: 769px) and (pointer: coarse) {
@@ -4373,7 +4374,7 @@ summary::marker {
 	border-width: 0 1px 1px 0;
 	border-style: solid;
 	padding: 0px 5px;
-	font-family: Victor Mono Medium, monospace;
+	font-family: Victor Mono Medium, monospace, monospace;
 	font-weight: bolder;
 }
 div.content {
@@ -4569,7 +4570,6 @@ code { counter-reset: lineNo; }
 	margin-right: 2ch;
 	margin-left: 1ch;
 	color: grey;
-	font-variant-numeric: tabular-nums;
 }
 /* zebra stripes */
 .line:nth-child(even) {

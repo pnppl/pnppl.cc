@@ -20,7 +20,7 @@ todo:
 		- i think it's now officially Good Enough but could use some polish
 			- jump back from footnote doesn't work
 			- TOC?
-			- codeblocks
+			- x codeblocks
 - x tracked down shortcode bug - modified frontmatter ext with nil trigger
 - have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
@@ -45,7 +45,7 @@ todo:
 		- x also these seem broken. there is no domain. i think i need to specify `basename` or something?
 			- should be fixed, had to pass build option
 	- also still present in sitemap.xml, rss feed
-		- set up rss to just use http for everything. a protocol is required and i figure everything that supports ssl will auto promote
+		- x set up rss to just use http for everything. a protocol is required and i figure everything that supports ssl will auto promote
 - syncing, metadata, and mobile fuckery
 	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
 		- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
@@ -68,7 +68,7 @@ todo:
 		- did this, seems ok
 - i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
 	- maybe we can get rid of all that damn whitespace mosaic displays in the page title
-- codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
+- x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
 
 
 low priority/done:
