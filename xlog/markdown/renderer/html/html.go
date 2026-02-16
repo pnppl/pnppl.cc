@@ -910,10 +910,10 @@ func (d *defaultWriter) Write(writer util.BufWriter, source []byte) {
 			}
 			i = next - 1
 		}
-		if c == '\\' {
-			escaped = true
-			continue
-		}
+//		if c == '\\' {
+//			escaped = true
+//			continue
+//		}
 		escaped = false
 	}
 	d.RawWrite(writer, source[n:])
