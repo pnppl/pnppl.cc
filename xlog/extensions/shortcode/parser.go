@@ -8,12 +8,13 @@ import (
 	"github.com/emad-elsaid/xlog/markdown/text"
 )
 
-const trigger = '/'
+const trigger = '!'
 
 type shortCodeParser struct{}
 
 func (s *shortCodeParser) Trigger() []byte {
 	return []byte{trigger}
+//	return []byte{'/', '!'}
 }
 
 func (s *shortCodeParser) Open(parent ast.Node, reader text.Reader, pc parser.Context) (ast.Node, parser.State) {

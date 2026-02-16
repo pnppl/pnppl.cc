@@ -21,7 +21,7 @@ import (
 	_ "github.com/emad-elsaid/xlog/extensions/photos"
 	_ "github.com/emad-elsaid/xlog/extensions/recent"
 	_ "github.com/emad-elsaid/xlog/extensions/rss"
-//	_ "github.com/emad-elsaid/xlog/extensions/shortcode"
+	_ "github.com/emad-elsaid/xlog/extensions/shortcode"
 // does urlset call home?
 // unclear, but probably irrelevant -- only used by search engines
 	_ "github.com/emad-elsaid/xlog/extensions/sitemap"
@@ -29,8 +29,6 @@ import (
 	_ "github.com/emad-elsaid/xlog/extensions/frontmatter"
 // hideously lazy hack -- upload_file is actually frontmatter_hash
 	_ "github.com/emad-elsaid/xlog/extensions/upload_file"
-// disqus = all/alpha
-//	_ "github.com/emad-elsaid/xlog/extensions/disqus"
 	_ "github.com/emad-elsaid/xlog/extensions/search"
 )
 

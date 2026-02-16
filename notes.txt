@@ -5,13 +5,12 @@ todo:
 - display tags for item next to links to it?
 - filenames in date format should be treated as containing that date - added to calendar, etc.
 	- date format should have date-only and time-also formats, and we need to select one to rule them all
-- trying to get rid of shell preprocessing
-	- i think we need to create a new node that contains the text of the old one, then insert it after the current node. somehow
+- get rid of shell postprocessing
 - next/prev post buttons
 	- would be relatively easy to hack in with more shell but would rather avoid more of that
 - x rss is a little wonky. the heading buttons render but don't function in most readers
 	- if i can ditch the shell preprocessing i can easily serve the plaintext version instead by changing p.Render() to p.Content()
-		- we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
+		- ! we currently clean up redundant autolinks with a shell postprocess... hence the RSS feed is littered with them when using p.Render()
 	- x domain, hence links (and also sitemap) are broken rn due to lack of www lol
 	- x certain formatting is not rendering for some reason, like italics, hr
 		- this is my reader's fault
@@ -29,13 +28,7 @@ todo:
 	- normal fenced code blocks work fine, i guess since that's handled by the markdown module
 	- this is all somewhat vexing. shortcodes aren't very important but i have one usecase, spoiler/trigger warning. if i don't delete the node in frontmatter (non-hash) everything basically works out --- the problem with not deleting it in frontmatter_hash is it won't render as an h1, but that doesn't apply to non-h1-files. but if i do this, then i'll have to further complicate my ridiculous preprocessing: only duplicate the line if it does not begin with #. and there will still be edge cases, eg a shortcode whose content begins with a hash sign
 	- probably best to just leave them turned off if i can't clean up my frontmatter situation
-- what i would really like is to replace the frontmatter extensions with one simple one that sets the metadata based on my parameters, then have autolink_pages refer back to that metadata.
-	- i don't understand the way this program works well enough. is the metadata in a global state, or is it being passed around all over the place, or what am I missing?
-	- we've semi-successfully changed what metadata is "set" (?) in the frontmatter ext - the info makes it to the template, anyway.
-		- so how do I retrieve it from inside autolink_pages, instead of reinventing the wheel and somehow breaking emdash in the process? 
-		- I should just be able to type some shit like "metadata[title]" and retrieve it, right? RIGHT???
-		- we should not be generating the firstline-title more than once. and we should not have to fuck with the text files first
-			- and we should be doing it in one shot, without changing the page at all in the process, so other extensions can make the title H1 and etc. 
+- have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
 - blank titles cause issues
 - we're technically live!
@@ -64,17 +57,10 @@ todo:
 		- set up rss to just use http for everything. a protocol is required and i figure everything that supports ssl will auto promote
 - syncing, metadata, and mobile fuckery
 	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
-		- right now i have it store the metadata before we commit, pull, and push. we apply it only when we setup the repo with gitup
-			- this is not adequate. if i make a new post on one device, then pull the repo on the other, the new post will have metadata set to when i pulled it. metadata will gradually drift apart between them
-			- i can't just apply the metadata willy-nilly: after a pull, it will potentially be stale
-			- there is probably a way to work around this shit with git. then again it isn't really designed for this
-				- git pull will wipe out local changes that haven't been commited. if you committed, they get merged
-					- i'm assuming conflicting files like meta.store will be a pain in the ass
-			- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
-				- probably some gaping hole in this but whatever
-				- it's kind of a disaster. might as well keep saving it and restore on first clone, but really would be better off just saving modtime
-				- also my git commands are not right somehow. something about unstaged changes (suppressed with -q)
-				- actually kinda seems to be working fine now
+		- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
+			- probably some gaping hole in this but whatever
+			- actually kinda seems to be working fine now
+			- only problem is a failed deploy can get it out of sync and i have to notice and manually put the metadata back
 	- i cannot create a symlink on any of the storage accessible to markor. god dammit
 		- i could link it the other direction but i can't find any way to make git follow the link, so it would just upload a pointer
 		- after much gnashing of teeth I decided we have to use rsync
@@ -111,6 +97,7 @@ low priority/done:
 	- emoji markdown support removed
 	- unicode glyphs replaced with ascii for extlink, footnote
 	- navbar glyphs replaced with degenerate hidden <li></li> in template to make NCSA render bullets for us
+	- should get rid of all the fontawesome/icon stuff
 - x disabled typography renderer (... -> …, "" -> “”, etc) because it dumps a bunch of &quot; type shit in ncsa. but it's kind of ugly not having it and is counter to the goal of: low tech input, high tech output. so could consider turning it back on.
 	- no, leave it off. think of how annoying it is pasting "smart quotes" into an SMS
 - x fix date format
@@ -123,9 +110,8 @@ low priority/done:
 	- x anchors don't work -- is that my fault or did mosaic not support them?
 		- in html 2.0 you can't navigate to an element by id, you have to have <a name="id">
 - x make sure dark mode works since we have this giant fucking css framework. consider minifying that also. or throwing it away
-- x consider how to handle modification times. if we want this to be more wiki/garden and less write-once blog, modification is important. and i know how useful surfacing by modified is. but our modification times will, right now, be based entirely on filesystem metadata. it's not ideal and i'm not sure how xlog handles that but i don't see a better option right now. we don't want to use frontmatter since we have no good way to automate updating it.
-	- it's fine, leave it alone
-- index doesn't show on tag page
+- x index doesn't show on tag page
+	- it's fine
 - x setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
 - ! aliasing for mentions?
@@ -143,26 +129,25 @@ low priority/done:
 			- the line does not get rendered normally. the parser consumes it. it's metadata after all
 				- fixed i think, had to comment out node removal
 					- undid this as part of my ugly h1 solve
-- x autlink_pages fails on all sorts of stuff i wouldn't expect, basically any leading punctuation
+- x autolink_pages fails on all sorts of stuff i wouldn't expect, basically any leading punctuation
 	- i strip leading and trailing h1 from the normalized name but i figured the rest could be left intact. apparently not?
 	- the trigger is an issue. setting it to nil, or ' ', is unsuccessful, and several characters (#, $, %) cause a hang
 		- tested all and added several working ('!', '?' ..)
 			- removed these because they don't actually work?
-- x got a lot done, need to tidy and merge
-	- x added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
-		- ffx: alt-shift-key
-		- x want to add for the rest of the navbar but it's spit out on a template. Calendar, Recent, Hashtags. no need for rss accelerator
-		- x shortcuts to the first 10 headings would be cool but not worth much effort
-			- implemented this but it relies on global state and is buggy
-				- i can't pass the number around the template because they only take one arg and it calls itself recursively
-				- i would rather put the accesskeys in the headings themselves instead of the toc, but i don't know how to do this
-					- if i did figure this out, i think i could have key=1 cycle through the first h1 and all its children, key=2 the second h1 and children, etc.
-					- kind of hard to troubleshoot because it behaves differently with the local server than the deployed one
-	- pushed theme in a win9x direction, hopefully not too overbearing. gives it a lot of personality
-		- the charm of it is how the 9x elements seem apart from the content
-			- we want to style navigation elements this way, and content its own way, closer to the sleek OOTB design
-			- the theme not being unified is its strength. 9x programs always did whatever they wanted anyway
-			- it's like we have photoshop or the like open, plus a pop-up for the TOC, and a toolbar with our buttons
+- x added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
+	- ffx: alt-shift-key
+	- x want to add for the rest of the navbar but it's spit out on a template. Calendar, Recent, Hashtags. no need for rss accelerator
+	- x shortcuts to the first 10 headings would be cool but not worth much effort
+		- ! implemented this but it relies on global state and is buggy
+			- i can't pass the number around the template because they only take one arg and it calls itself recursively
+			- i would rather put the accesskeys in the headings themselves instead of the toc, but i don't know how to do this
+				- if i did figure this out, i think i could have key=1 cycle through the first h1 and all its children, key=2 the second h1 and children, etc.
+				- kind of hard to troubleshoot because it behaves differently with the local server than the deployed one
+- x pushed theme in a win9x direction, hopefully not too overbearing. gives it a lot of personality
+	- the charm of it is how the 9x elements seem apart from the content
+		- we want to style navigation elements this way, and content its own way, closer to the sleek OOTB design
+		- the theme not being unified is its strength. 9x programs always did whatever they wanted anyway
+		- it's like we have photoshop or the like open, plus a pop-up for the TOC, and a toolbar with our buttons
 - x mobile should wrap now
 - reduced title to 70 chars, which is max for gopher. filename still doesn't display quite right.
 	- floating it to the right on list pages is stupid and should be changed
@@ -178,7 +163,7 @@ low priority/done:
 - TOC is working but might want to move it outside view area
 	- no, leave position alone. however we need text to be better at not running into it
 	- x no visual indication of current position
-	- Backlinks, See Also added with shell kludge
+	- ! Backlinks, See Also added with shell kludge
 - replace branding - logo, name, favicon
 	- tent. name: pnppl's commonplace
 		- kinda long compared to just pnppl.cc
@@ -190,10 +175,13 @@ low priority/done:
 - x #1 is a hashtag. should not be
 - x email button is messed up on mobile
 - html output has a lot of pointless whitespace - add hyphens to templates
-- page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
+- x page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
+	- removed from git tracking
 - x recents is all fucked up, thought i fixed that
 - x search
 	- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
+- x get rid of shell preprocessing
+	- resorted to AI but finally got this dealt with
 
 longterm notions
 - replace css with something much smaller and more compatible

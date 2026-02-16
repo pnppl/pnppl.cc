@@ -1,6 +1,11 @@
 test
 test
 
+!! test
+
+test!!
+testing!! hello
+hello !!test
 # h1
 
 # h1 2
