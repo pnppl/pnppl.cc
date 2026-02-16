@@ -30,6 +30,8 @@ import (
 // hideously lazy hack -- upload_file is actually frontmatter_hash
 	_ "github.com/emad-elsaid/xlog/extensions/upload_file"
 	_ "github.com/emad-elsaid/xlog/extensions/search"
+//	disqus = 1bitday
+	_ "github.com/emad-elsaid/xlog/extensions/disqus"
 )
 
 func main() {

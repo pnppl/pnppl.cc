@@ -1,0 +1,5 @@
+{{ range .photos }}
+<a href="/img/1bitday/{{ .Name }}.gif" class="is-inline-block" style="text-decoration:none">
+  <img src="/img/1bitday/{{ .Name }}.gif" loading="lazy" alt="{{ .Name }}" title="{{ .Name }}" width="64" height="64" style="image-rendering:pixelated">
+</a>
+{{ end }}

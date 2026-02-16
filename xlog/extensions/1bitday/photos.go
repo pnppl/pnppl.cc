@@ -1,15 +1,10 @@
 package photos
 
 import (
-	"bytes"
-	"crypto/sha256"
 	"embed"
-	"fmt"
 	"html/template"
-	"image"
-	_ "image/gif"
+//	_ "image/gif"
 	_ "image/jpeg"
-	"image/png"
 	_ "image/png"
 	"io/fs"
 	"os"
@@ -24,8 +19,6 @@ import (
 	"github.com/emad-elsaid/types"
 	"github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/extensions/shortcode"
-	"github.com/rwcarlsen/goexif/exif"
-	"golang.org/x/image/draw"
 	_ "golang.org/x/image/webp"
 )
 
@@ -42,24 +35,16 @@ type Photos struct{}
 
 func (Photos) Name() string { return "photos" }
 func (Photos) Init() {
-	shortcode.RegisterShortCode("photos", shortcode.ShortCode{Render: photosShortcode("photos")})
-	shortcode.RegisterShortCode("photos-grid", shortcode.ShortCode{Render: photosShortcode("photos-grid")})
+	shortcode.RegisterShortCode("1bitday", shortcode.ShortCode{Render: photosShortcode("1bitday")})
 	xlog.RegisterTemplate(templates, "templates")
-	xlog.RegisterProperty(properties)
-	xlog.Get(`/+/photos/thumbnail/{path...}`, resizeHandler)
-	xlog.Get(`/+/photos/photo/{path...}`, photoHandler)
 }
 
 type Photo struct {
-	Thumbnail string
-	Page      string
 	Original  string
-	Exif      *exif.Exif
-	Time      time.Time
 }
 
 func (p *Photo) Name() string {
-	base := path.Base(p.Thumbnail)
+	base := path.Base(p.Original)
 	ext := path.Ext(base)
 	return base[:len(base)-len(ext)]
 }
@@ -76,10 +61,10 @@ func (p *Photo) Render() template.HTML {
 }
 
 func NewPhoto(path string) (*Photo, error) {
-	stat, err := os.Stat(path)
-	if err != nil {
-		return nil, err
-	}
+//	stat, err := os.Stat(path)
+//	if err != nil {
+//		return nil, err
+//	}
 
 	f, err := os.Open(path)
 	if err != nil {
@@ -87,22 +72,8 @@ func NewPhoto(path string) (*Photo, error) {
 	}
 	defer f.Close()
 
-	exifData, _ := exif.Decode(f)
-	t := stat.ModTime()
-
-	if exifData != nil {
-		shootingTime, err := exifData.DateTime()
-		if err == nil {
-			t = shootingTime
-		}
-	}
-
 	return &Photo{
-		Thumbnail: "/+/photos/thumbnail/" + path,
-		Page:      "/+/photos/photo/" + path,
 		Original:  path,
-		Exif:      exifData,
-		Time:      t,
 	}, nil
 }
 
@@ -123,8 +94,6 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 					return err
 				}
 
-				xlog.RegisterBuildPage(photo.Thumbnail, false)
-				xlog.RegisterBuildPage(photo.Page, true)
 				photos = append(photos, photo)
 			}
 
@@ -136,8 +105,8 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 		}
 
 		slices.SortFunc(photos, func(i, j *Photo) int {
-			return j.Time.Compare(i.Time)
-//			return strings.Compare(i.Name(), j.Name())
+//			return j.Time.Compare(i.Time)
+			return strings.Compare(i.Name(), j.Name())
 		})
 
 		return xlog.Partial(tpl, xlog.Locals{
@@ -147,53 +116,9 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 }
 
 func resizeHandler(r xlog.Request) xlog.Output {
-	photo_path := r.PathValue("path")
-
-	const cacheDir = ".cache"
-	os.Mkdir(cacheDir, 0700)
-
-	cacheFile := path.Join(cacheDir, fmt.Sprintf("photo-%x", sha256.Sum256([]byte(photo_path))))
-	cache, err := os.ReadFile(cacheFile)
-	if err == nil {
-		return func(w xlog.Response, r xlog.Request) {
-			w.Write(cache)
-		}
-	}
-
-	return func(w xlog.Response, r xlog.Request) {
-		inputImage, err := os.Open(photo_path)
-		if err != nil {
-			fmt.Fprint(w, err.Error())
-			return
-		}
-		defer inputImage.Close()
-
-		src, _, _ := image.Decode(inputImage)
-		bounds := src.Bounds()
-		dim := bounds.Max
-
-		width := 700
-		height := int(float32(width) / float32(dim.X) * float32(dim.Y))
-
-		dst := image.NewRGBA(image.Rect(0, 0, width, height))
-		draw.NearestNeighbor.Scale(dst, dst.Rect, src, bounds, draw.Over, nil)
-
-		var out bytes.Buffer
-
-		png.Encode(&out, dst)
-		os.WriteFile(cacheFile, out.Bytes(), 0700)
-		w.Write(out.Bytes())
-	}
+	return func(w xlog.Response, r xlog.Request) { }
 }
 
 func photoHandler(r xlog.Request) xlog.Output {
-	photo_path := r.PathValue("path")
-	photo, err := NewPhoto(photo_path)
-	if err != nil {
-		return xlog.InternalServerError(err)
-	}
-
-	return xlog.Render("page", xlog.Locals{
-		"page": photo,
-	})
+	return func(w xlog.Response, r xlog.Request) { }
 }

@@ -1,4 +1,5 @@
 rm -rf site/public/ &&
+rm -rf site/+/ &&
 #fish prep_title.fish &&
 set pwd (pwd) &&
 cd xlog/cmd/xlog &&

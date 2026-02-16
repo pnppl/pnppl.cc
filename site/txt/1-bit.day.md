@@ -1,7 +1,7 @@
 # 1-bit.day #
 #pixel-art #visual-art
 
-!1bitday /img/1bitday
+!1bitday ../img/1bitday
 
 You can grab these all at once here: [[/img/1bitday/!1bitday.zip]]
 
