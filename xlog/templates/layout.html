@@ -30,14 +30,16 @@
 
       {{- if ne .config.Index .page.Name -}}
       <div dir="auto" class="title is-1" style="view-transition-name: page-title;">
+      <center>
         {{- with .page -}}
             {{- with $props.title -}}
-			<center><h1>{{ .Value }}</h1>
+			<h1>{{ .Value }}</h1>
 			{{- end -}}
           	{{- with  base .Name -}}
-            <p class="subtitle">{{ . }}</p></center>
+            <h2 class="subtitle">{{ . }}</h2>
           	{{- end -}}
         {{- end -}}
+      </center>
       </div>
       {{- end -}}
 
@@ -51,6 +53,7 @@
         {{- with properties .page -}}
           <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{ .title.Value }}">S<u class="accel">e</u>nd feedback...</a>
         {{- end -}}
+        </p>
         <p>
           <a id="badge" href="/about">
             <img id="badge-default" src="/public/badges/nano-88x31.gif" alt="about" loading="lazy">

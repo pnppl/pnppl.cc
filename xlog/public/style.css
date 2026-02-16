@@ -4470,9 +4470,12 @@ a.footnote-ref:target {
 }
 
 .subtitle {
-	font-style: normal;
+	font-style: normal !important;
 	font-weight: normal;
 	text-align: center;
+	font-size: 110% !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 time {
