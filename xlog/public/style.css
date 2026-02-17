@@ -1830,11 +1830,11 @@ h2 {
     padding: 0
 }
 
-h1,
+/*h1,
 h2 {
     font-size: 100%;
     font-weight: normal
-}
+}*/
 
 ul {
     list-style: none
@@ -2440,7 +2440,7 @@ table th {
 .content h1,
 .content h2 {
     color: var(--bulma-content-heading-color);
-    font-weight: var(--bulma-content-heading-weight);
+/*    font-weight: var(--bulma-content-heading-weight); */
     line-height: var(--bulma-content-heading-line-height)
 }
 
@@ -4116,14 +4116,12 @@ print {
 .view h1 {
     counter-reset: h2;
     font-size: 1em;
-    font-weight: bold;
     margin: 2em 0 1em 0 !important
 }
 
 .view h2 {
     counter-reset: h3;
     font-size: 1em;
-    font-weight: bold;
     margin: 2em 0 1em 0 !important
 }
 
@@ -4215,15 +4213,26 @@ code *, tt {
 }
 
 h1, h2, h3, h4, h5, h6, .title {
-	font-style: italic !important
+	font-style: italic !important;
 }
-
+h1, h2 {
+	font-weight: normal !important;
+}
+h3, h4, h5, h6 {
+	font-weight: bold;
+}
+h1 em, h2 emm, h3 em, h4 em, h5 em, h6 em {
+	font-style: normal !important;
+}
+strong {
+	font-weight: bolder !important;
+}
 .title {
-	font-size: 150% !important
+	font-size: 150% !important;
+	font-weight: bold !important;
 }
 h1 {
 	font-size: 125% !important;
-/*	text-style: bold !important */
 }
 h2 {
 	font-size: 125% !important
