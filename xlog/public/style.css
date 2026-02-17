@@ -3743,12 +3743,12 @@ button.tag:active,
     width: 100%
 }
 
-.navbar-brand {
+/*.navbar-brand {
     align-items: stretch;
     display: flex;
     flex-shrink: 0;
     min-height: var(--bulma-navbar-height)
-}
+}*/
 
 /*
 .navbar-burger {
