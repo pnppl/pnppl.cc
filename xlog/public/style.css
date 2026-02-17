@@ -2135,7 +2135,7 @@ table th {
     cursor: not-allowed
 }
 
-
+/*
 .modal,
 .modal-background {
     bottom: 0;
@@ -2144,7 +2144,7 @@ table th {
     right: 0;
     top: 0
 }
-
+*/
 .menu-list a,
 .menu-list button {
     appearance: none;
@@ -3506,7 +3506,7 @@ button.tag:active,
 .message-body pre code {
     background-color: var(--bulma-message-body-pre-code-background-color)
 }
-
+/*
 .modal {
     --bulma-modal-z: 40;
     --bulma-modal-background-background-color: hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.86);
@@ -3552,7 +3552,7 @@ button.tag:active,
     position: relative;
     width: 100%
 }
-
+*/
 @media screen and (min-width: 769px) {
     .modal-card {
         margin: 0 auto;
@@ -3560,7 +3560,7 @@ button.tag:active,
         width: var(--bulma-modal-content-width)
     }
 }
-
+/*
 .modal-card {
     display: flex;
     flex-direction: column;
@@ -3601,7 +3601,7 @@ button.tag:active,
     overflow: auto;
     padding: var(--bulma-modal-card-body-padding)
 }
-
+*/
 :root {
     --bulma-navbar-height: 3.25rem
 }
@@ -3820,16 +3820,30 @@ a.navbar-item:active {
         display: block
     }
 
-    .navbar-brand .navbar-item {
+    /*.navbar-brand .navbar-item {
         align-items: center;
         display: flex
-    }
+    }*/
 
     .navbar-menu {
         background-color: var(--bulma-navbar-background-color);
 /*        box-shadow: 0 .5em 1em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.1); */
         /* padding: .5rem 0 */
     }
+	#navbarMenu {
+		display: flex !important;
+		flex-wrap: wrap;
+	}
+	.navbar-item {
+		/* set this to 20% if I add more items */
+		flex-basis: 30%;
+		min-width: 30%;
+		align-content: center;
+		flex-grow: 1 !important;
+	}
+	.navbar-item > .icon {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -3848,12 +3862,12 @@ a.navbar-item:active {
 
     .navbar-item {
         align-items: center;
-        display: flex
+        display: flex;
     }
 
     .navbar-menu {
         flex-grow: 1;
-        flex-shrink: 0
+        flex-shrink: 0;
     }
 
     .navbar-start {
@@ -4367,13 +4381,14 @@ summary::marker {
 .navbar-menu,
 .navbar-start,
 .navbar-item {
-    flex-grow: 1 !important;
+    flex-grow: 1;
 }
 .navbar-item {
 	justify-content: center !important;
+	white-space: nowrap;
 }
 .navbar-end {
-	flex-grow: 0 !important;
+	flex-grow: 0;
 }
 #RSS {
 	color: white;
