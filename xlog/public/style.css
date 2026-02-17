@@ -4192,7 +4192,7 @@ code *, tt {
 	font-variant-numeric: tabular-nums;
 }
 
-@media screen and (max-width: 769px) and (pointer: coarse) {
+@media screen and (max-width: 767px) and (pointer: coarse) {
   @font-face {
     font-family: 'Victor Mono Medium';
     font-style: normal;
@@ -4221,7 +4221,7 @@ h1, h2 {
 h3, h4, h5, h6 {
 	font-weight: bold;
 }
-h1 em, h2 emm, h3 em, h4 em, h5 em, h6 em {
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 	font-style: normal !important;
 }
 strong {
