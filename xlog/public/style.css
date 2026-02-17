@@ -3844,6 +3844,9 @@ a.navbar-item:active {
 	.navbar-item > .icon {
 		display: none;
 	}
+	#table-of-contents-list {
+		margin-left: 0 !important;
+	}
 }
 
 @media screen and (min-width: 1024px) {
