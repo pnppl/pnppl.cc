@@ -16,6 +16,13 @@ type Calendar struct{}
 
 func (Calendar) Icon() string { return "fa-regular fa-calendar-days" }
 func (Calendar) Name() string { return "Calendar" }
+func (Calendar) Label() map[string]string {
+	return map[string]string {
+		"labelStart": "",
+		"labelAccel": "C",
+		"labelEnd": "alendar",
+	}
+}
 func (Calendar) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{
 		"href": "/+/calendar",

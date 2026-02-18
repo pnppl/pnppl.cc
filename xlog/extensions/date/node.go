@@ -12,6 +12,7 @@ var KindDate = ast.NewNodeKind("Date")
 type DateNode struct {
 	ast.BaseInline
 	time time.Time
+	drawTag bool
 }
 
 func (d *DateNode) Dump(source []byte, level int) {

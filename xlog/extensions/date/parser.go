@@ -4,6 +4,7 @@ import (
 	"time"
 	"unicode"
 
+	"github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/parser"
 	"github.com/emad-elsaid/xlog/markdown/text"
@@ -12,6 +13,12 @@ import (
 type dateParser struct{}
 
 func (s *dateParser) Trigger() []byte {
+	return []byte{' '}
+}
+
+type dateFilenameParser struct{}
+
+func (s *dateFilenameParser) Trigger() []byte {
 	return []byte{' '}
 }
 
@@ -60,6 +67,25 @@ var (
 	}
 )
 
+var filenameProcessedKey = parser.NewContextKey()
+func (s *dateFilenameParser) Parse(parent ast.Node, reader text.Reader, pc parser.Context) ast.Node {
+    if pc.Get(filenameProcessedKey) == nil {
+        pc.Set(filenameProcessedKey, true)
+        if filename, ok := pc.Get(xlog.PageFilenameKey).(string); ok {
+			if len(filename) >= 10 {
+				t, err := time.Parse("2006-01-02", filename[:10])
+				if err == nil {
+					return &DateNode{
+						time: t,
+						drawTag: false,
+					}
+				}
+			}
+		}
+    }
+	return nil
+}
+
 func (s *dateParser) Parse(parent ast.Node, reader text.Reader, pc parser.Context) ast.Node {
 	l, _ := reader.PeekLine()
 	if len(l) < 2 {
@@ -103,6 +129,7 @@ func (s *dateParser) Parse(parent ast.Node, reader text.Reader, pc parser.Contex
 			reader.Advance(advance)
 			return &DateNode{
 				time: t,
+				drawTag: true,
 			}
 		}
 	}

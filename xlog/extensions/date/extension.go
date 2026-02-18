@@ -25,6 +25,9 @@ func (Date) Init() {
 	MarkdownConverter().Parser().AddOptions(parser.WithInlineParsers(
 		util.Prioritized(&dateParser{}, 999),
 	))
+	MarkdownConverter().Parser().AddOptions(parser.WithInlineParsers(
+		util.Prioritized(&dateFilenameParser{}, 999),
+	))
 	MarkdownConverter().Renderer().AddOptions(renderer.WithNodeRenderers(
 		util.Prioritized(&dateRenderer{}, 0),
 	))

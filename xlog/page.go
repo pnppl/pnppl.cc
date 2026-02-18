@@ -10,6 +10,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/emad-elsaid/xlog/markdown/parser"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/text"
 )
@@ -141,12 +142,19 @@ func (p *page) ModTime() time.Time {
 	return s.ModTime()
 }
 
+var PageFilenameKey = parser.NewContextKey()
 func (p *page) AST() (source []byte, tree ast.Node) {
 	lastModified := p.lastUpdate
 	content := p.preProcessedContent()
 
 	if p.ast == nil || p.lastUpdate != lastModified {
-		p.ast = MarkdownConverter().Parser().Parse(text.NewReader([]byte(content)))
+//		p.ast = MarkdownConverter().Parser().Parse(text.NewReader([]byte(content)))
+		ctx := parser.NewContext()
+		ctx.Set(PageFilenameKey, p.FileName())
+		p.ast = MarkdownConverter().Parser().Parse(
+			text.NewReader([]byte(content)),
+			parser.WithContext(ctx),
+		)
 	}
 
 	return []byte(content), p.ast

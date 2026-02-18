@@ -8,6 +8,7 @@ import (
 	"strings"
 	"fmt"
 
+	"github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
 	east "github.com/emad-elsaid/xlog/markdown/extension/ast"
@@ -213,7 +214,10 @@ func newTransformer(opts ...transformerOption) parser.ASTTransformer {
 }
 
 func (a *astTransformer) Transform(node *gast.Document, reader text.Reader, pc parser.Context) {
-	dtmp := pc.Get(contextKey)
+	if filename := pc.Get(xlog.PageFilenameKey); filename != nil {
+        node.AddMeta("filename", filename)
+    }
+    dtmp := pc.Get(contextKey)
 	if dtmp == nil {
 		return
 	}

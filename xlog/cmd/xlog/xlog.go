@@ -10,7 +10,7 @@ import (
 	_ "github.com/emad-elsaid/xlog/extensions/all"
 	_ "github.com/emad-elsaid/xlog/extensions/autolink_pages"
 	_ "github.com/emad-elsaid/xlog/extensions/custom_widget"
-//	_ "github.com/emad-elsaid/xlog/extensions/date"
+	_ "github.com/emad-elsaid/xlog/extensions/date"
 	_ "github.com/emad-elsaid/xlog/extensions/embed"
 	_ "github.com/emad-elsaid/xlog/extensions/hashtags"
 	_ "github.com/emad-elsaid/xlog/extensions/heading"

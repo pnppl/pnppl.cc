@@ -22,7 +22,7 @@ var templates embed.FS
 type NormalizedPage struct {
 	page           Page
 	normalizedName string
-	normalizedFileName string
+//	normalizedFileName string
 }
 
 type fileInfoByNameLength []*NormalizedPage
@@ -41,25 +41,16 @@ func UpdatePagesList(Page) (err error) {
 	defer autolinkPage_lck.Unlock()
 
 	ps := MapPage(context.Background(), func(p Page) *NormalizedPage {
-//------- chatbot helped, be suspicious --- //
 		content := p.Content()
 		lines := strings.SplitN(string(content), "\n", 2)
 		firstLine := strings.TrimSpace(lines[0])
 		firstLine = strings.TrimPrefix(firstLine, "# ")
 		firstLine = strings.TrimSuffix(firstLine, " #")
-//----------------------------------------- //
 		return &NormalizedPage{
 			page:           p,
-//			normalizedName: path.Base(strings.ToLower(p.Name())),
+//			normalizedFileName: path.Base(strings.ToLower(p.Name())),
 //			we might want to write a regex to strip out more than just h1
 			normalizedName: strings.ToLower(firstLine),
-//			it would be nice to be able to make use of both firstline and filename, ie:
-//			normalizedFileName: path.Base(strings.ToLower(p.Name())),
-//			but i don't understand this program or language well enough to do that yet
-//			we also really want it to disambiguate by distance, ie, siblings preferred, then children, nieces, etc
-//			in the meantime links by filename work perfectly fine in normal markdown, which is how i would want to write them anyway
-//			like, we want to insert the equivalent of <a href=filename>firstline</a>, so that links are descriptive but also unbreakable
-//			but i'm not sure how to make that process less painful. my clients are subpotimal so far.
 		}
 	})
 	sort.Sort(fileInfoByNameLength(ps))

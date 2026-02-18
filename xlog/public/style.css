@@ -2301,9 +2301,9 @@ a.navbar-item:active {
     flex-wrap: wrap;
   }
   .navbar-item {
-    /* set this to 20% if I add more items */
-    flex-basis: 30%;
-    min-width: 30%;
+    /* set this to 30% if I remove items */
+    flex-basis: 20%;
+/*     min-width: 30%; */
     align-content: center;
     flex-grow: 1 !important;
   }
@@ -2837,7 +2837,7 @@ body:has(h1:nth-of-type(4)) {
   --badge: url("/public/badges/invalid-html.gif");
 }
 body:has(h1:nth-of-type(5)) {
-  --badge: url("/public/badges/invalid-css-red.gif");
+  --badge: url("/public/badges/invalid-xcss-red.gif");
 }
 body:has(h1:nth-of-type(6)) {
   --badge: url("/public/badges/she-her.gif");
