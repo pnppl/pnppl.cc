@@ -2563,10 +2563,10 @@ a.navbar-item:active {
 .view a[href^="mailto\:"]::after {
   content: "@";
   font-weight: 100;
-  font-size: 0.7em;
+  font-size: 0.6em;
   margin: 0 0 0 0.4em;
   position: relative;
-  bottom: 0.05em;
+  bottom: 0.1em;
   font-family: sans-serif;
   font-style: oblique;
 }
