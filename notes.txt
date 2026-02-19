@@ -4,6 +4,13 @@ todo:
 	- nicer ul styling
 	- x menu takes up too much space on mobile
 		- couldn't get the home icon to behave so I just hide it on mobile
+		- in offpunk `view full` it takes up an entire page <_>
+	- the robot was remarkably successful at decimating the stylesheet without causing regressions, however:
+		- i just found one! it pruned the spoiler css. it probably didn't test a page with a spoiler on it. it wasn't all that smart
+		- it is still gigantic, and i've foolishly littered it with !important which will come back to bite me
+		- ultimately it's probably better to prune too much and force me to deal with stuff directly; eventually we want to get down to a few hundred lines and i want to actually know how it works, make decisions about things, etc., and make it simple
+	- calendar is a disaster
+	- heading buttons run into text on mobile
 - display tags for item next to links to it?
 - filenames in date format should be treated as containing that date - added to calendar, etc.
 	- date format should have date-only and time-also formats, and we need to select one to rule them all

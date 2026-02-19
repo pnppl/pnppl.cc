@@ -2560,7 +2560,17 @@ a.navbar-item:active {
   position: relative;
   bottom: 0.1em;
 }
-.view a[href*="youtube"]::after {
+.view a[href^="mailto\:"]::after {
+  content: "@";
+  font-weight: 100;
+  font-size: 0.7em;
+  margin: 0 0 0 0.4em;
+  position: relative;
+  bottom: 0.05em;
+  font-family: sans-serif;
+  font-style: oblique;
+}
+.view a[href*="youtube.com"]::after {
 /*  display: inline-block; */
   content: "|>";
 }
