@@ -29,7 +29,7 @@
 <br>
       </span>
 {{ $t := .ModTime }}
-<time class="has-text-grey is-size-7" dir="auto" datetime="{{$t}}">{{ printf "mod. %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
+<time class="has-text-grey is-size-7" dir="auto" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
     </a>
 </li>
     {{- end -}}

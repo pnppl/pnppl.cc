@@ -33,6 +33,8 @@ var helpers = template.FuncMap{
 	"trim":           trim,
     "accesskey":      accesskey,
     "resetaccess":    resetaccess,
+//    "UTCoffset":      UTCoffset,
+	"datetime":       datetime,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -110,6 +112,18 @@ func ago(t time.Time) string {
 	o.WriteString("ago")
 
 	return o.String()
+}
+
+func UTCoffset(t time.Time) string {
+	// offset in seconds
+	_, offset := t.Zone()
+	hours := offset / 3600
+	minutes := (offset % 3600) / 60
+	return fmt.Sprintf("%+03d%02d", hours, minutes)
+}
+// return datetime formatted for html <time> datetime attr
+func datetime(t time.Time) string {
+	return fmt.Sprintf("%04d-%02d-%02d %02d:%02d:%02d%05s", t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute(), t.Second(), UTCoffset(t))
 }
 
 var js = []string{}
