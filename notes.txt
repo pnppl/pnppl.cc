@@ -27,7 +27,8 @@ todo:
 		- x would also like to set up an email subscription option, probably some rss-to-email service i can use
 		- then there's also masto, bsky, etc. stuff people actually use. meh
 		- i think it's now officially Good Enough but could use some polish
-			- jump back from footnote doesn't work
+			- x jump back from footnote doesn't work
+				- i only had name=, not id, and my reader's html renderer is not so forgiving
 			- TOC?
 			- x codeblocks
 - x tracked down shortcode bug - modified frontmatter ext with nil trigger
