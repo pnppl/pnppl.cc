@@ -26,7 +26,7 @@
     {{- template "commands" . -}}
     {{- template "navbar" . -}}
 
-    <div class="container is-max-desktop px-3 pb-5" dir="auto">
+    <div class="container is-max-desktop px-3 pb-5" dir="auto" id="main">
 
       {{- if ne .config.Index .page.Name -}}
       <div dir="auto" class="title is-1" style="view-transition-name: page-title;">

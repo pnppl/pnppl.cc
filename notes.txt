@@ -69,7 +69,9 @@ todo:
 	- if we have to make them executable for the host then let's add in a chmod -x step after
 		- did this, seems ok
 - i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
-	- maybe we can get rid of all that damn whitespace mosaic displays in the page title
+	- x maybe we can get rid of all that damn whitespace mosaic displays in the page title
+	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
+		- maybe we should just put everything through a linter when we build
 - x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
 
 
@@ -178,7 +180,14 @@ low priority/done:
 	- this was surprisingly easy to track down. just grepped for '\\\\' and commented out lines 913-916 of markdown/renderer/html/html.go
 		- remains to be seen whether this will have any dire consequences
 			- i certainly don't plan to manually escape shit on this site but who knows what might get passed to the parser by other stuff
-
+- x improved terrible offpunk support by adding (unused) #main and #article ids to game python-readability
+- x improved external link annotation rendering so it won't break to a newline and leave the link behind
+	- had to put link text in <span>s in order to avoid underlining the % which seemed really ugly. seems fine aside from tag clutter
+	- x might be worth adding other annotation types. wikipedia? youtube? gwern has a nice approach but also extremely cluttered and uses svgs
+		- added: wikipedia, youtube, pdf
+	- the % is probably stupid bc i would think everything that actually supports the css selector will support utf8
+		- actually lots of systems with utf8 support don't have font support
+	- you know we could automatically insert archive links. might be nice
 
 longterm notions
 - replace css with something much smaller and more compatible

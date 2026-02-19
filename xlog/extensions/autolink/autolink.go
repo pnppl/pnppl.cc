@@ -45,13 +45,14 @@ func render(w util.BufWriter, source []byte, node ast.Node, entering bool) (ast.
 		_, _ = w.WriteString("mailto:")
 	}
 	_, _ = w.Write(util.EscapeHTML(util.URLEscape(url, false)))
-	if n.Attributes() != nil {
-		_ = w.WriteByte('"')
-		_ = w.WriteByte('>')
-	} else {
+//	if n.Attributes() != nil {
+//		_ = w.WriteByte('"')
+//		_ = w.WriteByte('>')
+//	} else {
 		_, _ = w.WriteString(`">`)
-	}
+//	}
+	_, _ = w.WriteString(`<span class="link-text">`)
 	_, _ = w.Write(util.EscapeHTML(label))
-	_, _ = w.WriteString(`</a>`)
+	_, _ = w.WriteString(`</span></a>`)
 	return ast.WalkContinue, nil
 }

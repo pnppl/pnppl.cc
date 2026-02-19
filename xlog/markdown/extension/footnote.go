@@ -530,15 +530,6 @@ func (r *FootnoteHTMLRenderer) renderFootnoteLink(
 	if entering {
 		n := node.(*ast.FootnoteLink)
 		is := strconv.Itoa(n.Index)
-//		_, _ = w.WriteString(`<sup id="`)
-//		_, _ = w.Write(r.idPrefix(node))
-//		_, _ = w.WriteString(`fnref`)
-//		if n.RefIndex > 0 {
-//			_, _ = w.WriteString(fmt.Sprintf("%v", n.RefIndex))
-//		}
-//		_ = w.WriteByte(':')
-//		_, _ = w.WriteString(is)
-//		_, _ = w.WriteString(`"><a href="#`)
 		_, _ = w.WriteString(`<sup><a href="#`)
 		_, _ = w.Write(r.idPrefix(node))
 		_, _ = w.WriteString(`fn:`)
@@ -553,6 +544,15 @@ func (r *FootnoteHTMLRenderer) renderFootnoteLink(
 		_ = w.WriteByte(':')
 		_, _ = w.WriteString(is)
 // ---
+		_, _ = w.WriteString(`" id="`)
+		_, _ = w.Write(r.idPrefix(node))
+		_, _ = w.WriteString(`fnref`)
+		if n.RefIndex > 0 {
+			_, _ = w.WriteString(fmt.Sprintf("%v", n.RefIndex))
+		}
+		_ = w.WriteByte(':')
+		_, _ = w.WriteString(is)
+//		_, _ = w.WriteString(`"><a href="#`)
 		_, _ = w.WriteString(`" class="`)
 		_, _ = w.Write(applyFootnoteTemplate(r.FootnoteConfig.LinkClass,
 			n.Index, n.RefCount))

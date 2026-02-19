@@ -519,8 +519,9 @@ func (r *Renderer) renderAutoLink(
 	} else {
 		_, _ = w.WriteString(`">`)
 	}
+	_, _ = w.WriteString(`<span class="link-text">`)
 	_, _ = w.Write(util.EscapeHTML(label))
-	_, _ = w.WriteString(`</a>`)
+	_, _ = w.WriteString(`</span></a>`)
 	return ast.WalkContinue, nil
 }
 
@@ -594,8 +595,9 @@ func (r *Renderer) renderLink(w util.BufWriter, source []byte, node ast.Node, en
 			RenderAttributes(w, n, LinkAttributeFilter)
 		}
 		_ = w.WriteByte('>')
+		_, _ = w.WriteString(`<span class="link-text">`)
 	} else {
-		_, _ = w.WriteString("</a>")
+		_, _ = w.WriteString("</span></a>")
 	}
 	return ast.WalkContinue, nil
 }

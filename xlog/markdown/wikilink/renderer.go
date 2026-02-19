@@ -95,7 +95,7 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 		r.hasDest.Store(n, struct{}{})
 		_, _ = w.WriteString(`<a href="`)
 		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
-		_, _ = w.WriteString(`">`)
+		_, _ = w.WriteString(`"><span class="link-text">`)
 		return ast.WalkContinue, nil
 	}
 
@@ -118,7 +118,7 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 
 func (r *Renderer) exit(w util.BufWriter, n *Node) {
 	if _, ok := r.hasDest.LoadAndDelete(n); ok {
-		_, _ = w.WriteString("</a>")
+		_, _ = w.WriteString("</span></a>")
 	}
 }
 
