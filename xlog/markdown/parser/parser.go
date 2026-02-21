@@ -1177,7 +1177,7 @@ func (p *parser) parseBlock(block text.BlockReader, parent ast.Node, pc Context)
 			}
 			isSpace := util.IsSpace(c) && c != '\r' && c != '\n'
 			isPunct := util.IsPunct(c)
-			if (isPunct && !escaped) || isSpace && !(escaped && p.escapedSpace) || i == 0 || c == 0xE2 {
+			if (isPunct && !escaped) || isSpace && !(escaped && p.escapedSpace) || i == 0 || c == 0xE2 || c == 0xC2 || c == 0xC3 {
 				parserChar := c
 				if isSpace || (i == 0 && !isPunct) {
 					parserChar = ' '

@@ -3266,9 +3266,24 @@ img.onebitday {
 	view-transition-name: page-title;
 }
 /* ridiculous unicode-to-ascii-to-unicode hack */
-.emdash::after { content: "\2014"; }
-.endash::after { content: "\2013"; }
-.ellipsis::after { content: "\2026"; }
+.mdash::after { content: "\2014"; }
+.ndash::after { content: "\2013"; }
+.hellip::after { content: "\2026"; }
+.lsquo::after { content: "\2018"; }
+.rsquo::after { content: "\2019"; }
+.ldquo::after { content: "\201C"; }
+.rdquo::after { content: "\201D"; }
+.laquo::after { content: "\00AB"; }
+.raquo::after { content: "\00BB"; }
+.iquest::after { content: "\00BF"; }
+.iexcl::after { content: "\00A1"; }
+.ne::after { content: "\2260"; }
+.asymp::after { content: "\2248"; }
+.ge::after { content: "\2265"; }
+.le::after { content: "\2264"; }
+.ntilde::after{ content: "\00F1"; }
+.Ntilde::after { content: "\00D1"; }
+
 .calendar td {
 /*	width: 14%; */
 }

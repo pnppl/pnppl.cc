@@ -1,8 +1,8 @@
 package extension
 
 import (
-//	"unicode"
-
+//	"unicode/utf8"
+	"fmt"
 	"github.com/emad-elsaid/xlog/markdown"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/parser"
@@ -64,6 +64,27 @@ const (
 // Typographer extension.
 type TypographerConfig struct {
 	Substitutions [][]byte
+}
+
+func subMap() map[string]string {
+	return map[string]string { "ndash": "--",
+		"mdash": "---",
+		"hellip": "...",
+		"lsquo": "'",
+		"rsquo": "'",
+		"ldquo": "\"",
+		"rdquo": "\"",
+		"laquo": "<<",
+		"raquo": ">>",
+		"iquest": "?",
+		"iexcl": "!",
+		"ne": "!=",
+		"asymp": "~=",
+		"ge": ">=",
+		"le": "<=",
+		"ntilde": "n",
+		"Ntilde": "N",
+	}
 }
 
 func newDefaultSubstitutions() [][]byte {
@@ -161,38 +182,77 @@ func NewTypographerParser(opts ...TypographerOption) parser.InlineParser {
 
 func (s *typographerParser) Trigger() []byte {
 //	return []byte{'\'', '"', '-', '.', ',', '<', '>', '*', '['}
-	return []byte{0xE2, ' '}
+	entityByte := []byte(" ")
+	for name, _ := range subMap() {
+		entity, ok := util.LookUpHTML5EntityByName(name)
+		if ok {
+			char := entity.Characters[0]
+			entityByte = append(entityByte, char)
+//			fmt.Printf("%d   ", entity.Characters)
+		}
+	}
+//	return []byte{0xE2, 0xC2, ' '}
+	return entityByte
+}
+
+func spanner(name string, sub string) []byte {
+	return []byte(fmt.Sprintf("%s%s%s%s%s", `<span class="`, name, `"></span><span class="is-hidden">`, sub, `</span>`))
 }
 
 func (s *typographerParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
 	line, _ := block.PeekLine()
 	c := line[0]
-	if len(line) > 2 {
-		if c == 0xE2 && line[1] == 0x80 {
-			if s.Substitutions[EmDash] != nil && line[2] == 0x94 { // ---
-				node := gast.NewString(s.Substitutions[EmDash])
-				node.SetCode(true)
-//				node.SetRaw(true)
-				block.Advance(3)
-				return node
-			}
-			if s.Substitutions[EnDash] != nil && line[2] == 0x93 { // ---
-				node := gast.NewString(s.Substitutions[EnDash])
-				node.SetCode(true)
-//				node.SetRaw(true)
-				block.Advance(3)
-				return node
-			}
-			if s.Substitutions[Ellipsis] != nil && line[2] == 0xA6 { // ...
-				node := gast.NewString(s.Substitutions[Ellipsis])
-				node.SetCode(true)
-//				node.SetRaw(true)
-				block.Advance(3)
-				return node
-			}
-			return nil
+	if len(line) > 1 {
+		for name, sub := range subMap() {
+			entity, ok := util.LookUpHTML5EntityByName(name)
+				if ok {
+					bytes := entity.Characters
+					if c == bytes[0] && line[1] == bytes[1] {
+						if len(bytes) == 2 {
+							node := gast.NewString(spanner(name, sub))
+							node.SetCode(true)
+							block.Advance(2)
+							return node
+						}
+						if len(line) > 2 {
+							if line[2] == bytes[2] {
+								node := gast.NewString(spanner(name, sub))
+								node.SetCode(true)
+								block.Advance(3)
+								return node
+							}
+						}
+					}
+				}
 		}
 	}
+	return nil
+}
+//		if c == 0xE2 && line[1] == 0x80 {
+//			if s.Substitutions[EmDash] != nil && line[2] == 0x94 { // ---
+//				node := gast.NewString(s.Substitutions[EmDash])
+//				node.SetCode(true)
+////				node.SetRaw(true)
+//				block.Advance(3)
+//				return node
+//			}
+//			if s.Substitutions[EnDash] != nil && line[2] == 0x93 { // ---
+//				node := gast.NewString(s.Substitutions[EnDash])
+//				node.SetCode(true)
+////				node.SetRaw(true)
+//				block.Advance(3)
+//				return node
+//			}
+//			if s.Substitutions[Ellipsis] != nil && line[2] == 0xA6 { // ...
+//				node := gast.NewString(s.Substitutions[Ellipsis])
+//				node.SetCode(true)
+////				node.SetRaw(true)
+//				block.Advance(3)
+//				return node
+//			}
+//			return nil
+//		}
+//	}
 //	if len(line) > 1 {
 //		if c == '<' {
 //			if s.Substitutions[LeftAngleQuote] != nil && line[1] == '<' { // <<
@@ -329,8 +389,8 @@ func (s *typographerParser) Parse(parent gast.Node, block text.Reader, pc parser
 //			}
 //		}
 //	}
-	return nil
-}
+//	return nil
+//}
 
 func (s *typographerParser) CloseBlock(parent gast.Node, pc parser.Context) {
 	getUnclosedCounter(pc).Reset()
