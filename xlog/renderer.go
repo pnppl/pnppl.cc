@@ -32,7 +32,7 @@ var MarkdownConverter = sync.OnceValue(func() markdown.Markdown {
 					chroma_html.WithClasses(true),
 				),
 			),
-//			extension.Typographer,
+			extension.Typographer,
 //			emoji.Emoji,
 			&wikilink.Extender{},
 		),

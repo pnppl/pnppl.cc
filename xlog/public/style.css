@@ -3253,3 +3253,7 @@ img.onebitday {
 #pagetitle {
 	view-transition-name: page-title;
 }
+/* ridiculous unicode-to-ascii-to-unicode hack */
+.emdash::after { content: "\2014"; }
+.endash::after { content: "\2013"; }
+.ellipsis::after { content: "\2026"; }

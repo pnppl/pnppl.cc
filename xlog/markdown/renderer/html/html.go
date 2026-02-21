@@ -819,22 +819,40 @@ func (d *defaultWriter) SecureWrite(writer util.BufWriter, source []byte) {
 }
 
 func (d *defaultWriter) RawWrite(writer util.BufWriter, source []byte) {
-	n := 0
-	l := len(source)
-	for i := 0; i < l; i++ {
-		v := util.EscapeHTMLByte(source[i])
-		if v != nil {
-			_, _ = writer.Write(source[i-n : i])
-			n = 0
-			_, _ = writer.Write(v)
-			continue
+// AI unicode to decimal entity version ---
+	for i := 0; i < len(source); {
+		b := source[i]
+		if b < utf8.RuneSelf {
+			if v := util.EscapeHTMLByte(b); v != nil {
+				_, _ = writer.Write(v)
+			} else {
+				_ = writer.WriteByte(b)
+			}
+			i++
+		} else {
+			r, size := utf8.DecodeRune(source[i:])
+			_, _ = fmt.Fprintf(writer, "&#%d;", r)
+			i += size
 		}
-		n++
-	}
-	if n != 0 {
-		_, _ = writer.Write(source[l-n:])
 	}
 }
+// original version ---
+//	n := 0
+//	l := len(source)
+//	for i := 0; i < l; i++ {
+//		v := util.EscapeHTMLByte(source[i])
+//		if v != nil {
+//			_, _ = writer.Write(source[i-n : i])
+//			n = 0
+//			_, _ = writer.Write(v)
+//			continue
+//		}
+//		n++
+//	}
+//	if n != 0 {
+//		_, _ = writer.Write(source[l-n:])
+//	}
+//}
 
 func (d *defaultWriter) Write(writer util.BufWriter, source []byte) {
 	escaped := false

@@ -196,6 +196,18 @@ low priority/done:
 	- the % is probably stupid bc i would think everything that actually supports the css selector will support utf8
 		- actually lots of systems with utf8 support don't have font support
 	- you know we could automatically insert archive links. might be nice
+- converted typographer extension into ridiculous hack to maintain writing in utf8 without compromising ascii compatibility
+	- we convert em, en, … into ascii equivalent inside a span next to an empty span
+	- css hides ascii span and adds unicode version back to the empty span
+	- i thought this would be more elegant but:
+		1) you can't replace contents outside pseudo-class except with an image 
+		2) you can't hide an element and keep its ::after visible without even worse hacks
+	- i'd like to make this better and support more things i actually use. lets me keep writing in utf8 while improving compatibility
+- we now output all non-ascii characters as decimal html entities
+	- probably won't substantially improve legacy rendering, especially since they probably use a win codepage/iso-whatever, but...
+		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
+		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
+			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
 
 longterm notions
 - replace css with something much smaller and more compatible
