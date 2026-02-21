@@ -2686,6 +2686,18 @@ tt {
 			local("VictorMono-MediumItalic"),
 			url(/public/font/VictorMono-MediumItalic.woff2) format("woff2");
 	}
+	table.calendar {
+		margin: auto;
+	}
+	.calendar .menu {
+		display: none;
+	}
+	.calendar a > .tag {
+		color: var(--bulma-code);
+	}
+	.calendar td {
+		padding: 0.5em 0.25em !important;
+	}
 }
 h1,
 h2,
@@ -3257,3 +3269,9 @@ img.onebitday {
 .emdash::after { content: "\2014"; }
 .endash::after { content: "\2013"; }
 .ellipsis::after { content: "\2026"; }
+.calendar td {
+/*	width: 14%; */
+}
+table.calendar {
+	width: 100%;
+}
