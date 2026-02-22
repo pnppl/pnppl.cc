@@ -29,8 +29,6 @@
 	--bulma-control-padding-vertical: calc(0.5em - 1px);
 	--bulma-control-padding-horizontal: calc(0.75em - 1px);
 	--bulma-control-size: var(--bulma-size-normal);
-}
-:root {
 	--bulma-scheme-h: 221;
 	--bulma-scheme-s: 14%;
 	--bulma-soft-l: 90%;
@@ -562,6 +560,29 @@
 	--bulma-code-background: var(--bulma-background);
 	--bulma-pre: var(--bulma-text);
 	--bulma-pre-background: var(--bulma-background);
+		--bulma-body-background-color: var(--bulma-scheme-main);
+	--bulma-body-size: 1em;
+	--bulma-body-min-width: 300px;
+	--bulma-body-rendering: optimizeLegibility;
+	--bulma-body-overflow-x: hidden;
+	--bulma-body-overflow-y: scroll;
+	--bulma-body-color: var(--bulma-text);
+	--bulma-body-font-size: 1em;
+	--bulma-body-weight: var(--bulma-weight-normal);
+	--bulma-body-line-height: 1.5;
+	--bulma-code-padding: 0.25em 0.5em 0.25em;
+	--bulma-code-weight: normal;
+	--bulma-code-size: 0.875em;
+	--bulma-hr-background-color: var(--bulma-background);
+	--bulma-hr-height: 2px;
+	--bulma-hr-margin: 1.5rem 0;
+	--bulma-strong-color: var(--bulma-text-strong);
+	--bulma-strong-weight: var(--bulma-weight-semibold);
+	--bulma-pre-font-size: 0.875em;
+	--bulma-pre-padding: 1.25rem 1.5rem;
+	--bulma-pre-code-font-size: 1em;
+	--bulma-navbar-height: 3.25rem;
+	--bulma-column-gap: 0.75rem;
 }
 @media (prefers-color-scheme: light) {
 	:root {
@@ -1128,29 +1149,6 @@ td:not([align]),
 th:not([align]) {
 	text-align: inherit;
 }
-:root {
-	--bulma-body-background-color: var(--bulma-scheme-main);
-	--bulma-body-size: 1em;
-	--bulma-body-min-width: 300px;
-	--bulma-body-rendering: optimizeLegibility;
-	--bulma-body-overflow-x: hidden;
-	--bulma-body-overflow-y: scroll;
-	--bulma-body-color: var(--bulma-text);
-	--bulma-body-font-size: 1em;
-	--bulma-body-weight: var(--bulma-weight-normal);
-	--bulma-body-line-height: 1.5;
-	--bulma-code-padding: 0.25em 0.5em 0.25em;
-	--bulma-code-weight: normal;
-	--bulma-code-size: 0.875em;
-	--bulma-hr-background-color: var(--bulma-background);
-	--bulma-hr-height: 2px;
-	--bulma-hr-margin: 1.5rem 0;
-	--bulma-strong-color: var(--bulma-text-strong);
-	--bulma-strong-weight: var(--bulma-weight-semibold);
-	--bulma-pre-font-size: 0.875em;
-	--bulma-pre-padding: 1.25rem 1.5rem;
-	--bulma-pre-code-font-size: 1em;
-}
 html {
 	background-color: var(--bulma-body-background-color);
 	font-size: var(--bulma-body-size);
@@ -1283,7 +1281,6 @@ table th {
 }
 .message:not(:last-child),
 .card:not(:last-child),
-.file:not(:last-child),
 .title:not(:last-child),
 .tags:not(:last-child),
 .table:not(:last-child),
@@ -1292,8 +1289,6 @@ table th {
 .block:not(:last-child) {
 	margin-bottom: var(--bulma-block-spacing);
 }
-.file-name,
-.input,
 
 /* ==========================================================================
 	 7. Components
@@ -1321,21 +1316,16 @@ table th {
 	transition-duration: var(--bulma-duration);
 	transition-property: background-color, border-color, box-shadow, color;
 }
-.file-name:focus,
 .input:focus,
 .button:focus,
-.file-name:focus-visible,
 .input:focus-visible,
 .button:focus-visible,
-.file-name:focus-within,
 .input:focus-within,
 .button:focus-within,
-.file-name:active,
 .input:active,
 .button:active {
 	outline: none;
 }
-[disabled].file-name,
 [disabled].input,
 [disabled].button {
 	cursor: not-allowed;
@@ -1351,7 +1341,6 @@ table th {
 	margin: 0;
 	padding: 0;
 }
-.file,
 .button {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -2050,9 +2039,6 @@ button.tag:active,
 	color: var(--bulma-text-weak);
 	cursor: not-allowed;
 }
-.file.is-small {
-	font-size: var(--bulma-size-small);
-}
 
 /* Menu */
 .menu {
@@ -2196,11 +2182,6 @@ button.tag:active,
 }
 .message-body pre code {
 	background-color: var(--bulma-message-body-pre-code-background-color);
-}
-@media screen and (min-width: 769px) {
-}
-:root {
-	--bulma-navbar-height: 3.25rem;
 }
 
 /* ==========================================================================
@@ -2375,9 +2356,6 @@ a.navbar-item:active {
 	.container > .navbar .navbar-menu {
 		margin-inline-end: -0.75rem;
 	}
-}
-:root {
-	--bulma-column-gap: 0.75rem;
 }
 .column {
 	display: block;
@@ -2874,6 +2852,7 @@ div.content {
 	word-break: break-word !important;
 	word-wrap: break-word !important;
 }
+/* i use this */
 .filename-right {
 	float: right;
 }
