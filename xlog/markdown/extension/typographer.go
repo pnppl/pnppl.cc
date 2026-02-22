@@ -74,16 +74,16 @@ func subMap() map[string]string {
 		"rsquo": "'",
 		"ldquo": "\"",
 		"rdquo": "\"",
-		"laquo": "<<",
-		"raquo": ">>",
-		"iquest": "?",
-		"iexcl": "!",
+//		"laquo": "<<",
+//		"raquo": ">>",
+//		"iquest": "?",
+//		"iexcl": "!",
 		"ne": "!=",
 		"asymp": "~=",
 		"ge": ">=",
 		"le": "<=",
-		"ntilde": "n",
-		"Ntilde": "N",
+//		"ntilde": "n",
+//		"Ntilde": "N",
 	}
 }
 
