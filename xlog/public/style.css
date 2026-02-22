@@ -33,8 +33,6 @@
 :root {
 	--bulma-scheme-h: 221;
 	--bulma-scheme-s: 14%;
-	--bulma-light-l: 90%;
-	--bulma-dark-l: 20%;
 	--bulma-soft-l: 90%;
 	--bulma-bold-l: 20%;
 	--bulma-soft-invert-l: 20%;
@@ -52,7 +50,6 @@
 	--bulma-border-weak-l: 93%;
 	--bulma-border-l: 86%;
 	--bulma-text-weak-l: 48%;
-	--bulma-text-l: 29%;
 	--bulma-text-strong-l: 21%;
 	--bulma-scheme-invert-ter-l: 14%;
 	--bulma-scheme-invert-bis-l: 7%;
@@ -541,20 +538,10 @@
 		var(--bulma-text-s),
 		var(--bulma-text-weak-l)
 	);
-	--bulma-text: hsl(
-		var(--bulma-text-h),
-		var(--bulma-text-s),
-		var(--bulma-text-l)
-	);
 	--bulma-text-strong: hsl(
 		var(--bulma-text-h),
 		var(--bulma-text-s),
 		var(--bulma-text-strong-l)
-	);
-	--bulma-link: hsl(
-		var(--bulma-link-h),
-		var(--bulma-link-s),
-		var(--bulma-link-l)
 	);
 	--bulma-link-text: hsl(
 		var(--bulma-link-h),
@@ -580,8 +567,6 @@
 	:root {
 		--bulma-scheme-h: 221;
 		--bulma-scheme-s: 14%;
-		--bulma-light-l: 90%;
-		--bulma-dark-l: 20%;
 		--bulma-soft-l: 90%;
 		--bulma-bold-l: 20%;
 		--bulma-soft-invert-l: 20%;
@@ -599,7 +584,6 @@
 		--bulma-border-weak-l: 93%;
 		--bulma-border-l: 86%;
 		--bulma-text-weak-l: 48%;
-		--bulma-text-l: 29%;
 		--bulma-text-strong-l: 21%;
 		--bulma-scheme-invert-ter-l: 14%;
 		--bulma-scheme-invert-bis-l: 7%;
@@ -3006,9 +2990,9 @@ time {
 	content: counter(lineNo);
 	text-align: right;
 	min-width: 3ch;
-    padding-right: 2ch;
-    margin-left: 1ch;
-    color: grey;
+	padding-right: 2ch;
+	margin-left: 1ch;
+	color: grey;
 }
 .chroma {
 	tab-size: 4;
@@ -3016,6 +3000,7 @@ time {
 pre.chroma {
 	display: inline-block;
 	max-width: 100%;
+	margin-right: 100%;
 
 	border-radius: 0;
 	border-style: dotted solid;
@@ -3065,6 +3050,9 @@ code {
 	color: #666666;
 }
 /* Line */ .chroma .line {
+/* counterintuitively this screws up tabs, but it at least fixes zebra stripes on ffx4
+	that makes one (1) thing that renders properly */
+	display: block;
 	display: flex;
 }
 /* KeywordDeclaration */ .chroma .kd {
@@ -3217,7 +3205,7 @@ code {
 	}
 }
 
-/* ========== 11.	misc =========== */
+/* ========== 11. misc =========== */
 a.onebitday {
 	text-decoration: none;
 }
