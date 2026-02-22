@@ -2,19 +2,19 @@
 <link href="/.pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/.pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
-<script>
-<!--
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search",
-        	pageSize: 25,
-        	showSubResults: true,
-        	showImages: false,
-        	excerptLength: 30,
-        	resetStyles: false,
-        	autofocus: true
-    	 });
-    });
--->
+<!-- need comment to make it through template for mosaic compat, and need it to not be JS-escaped -->
+{{ printf "<script> <!-- " | raw }}
+	window.addEventListener('DOMContentLoaded', (event) => {
+		new PagefindUI({ element: "#search",
+			pageSize: 25,
+			showSubResults: true,
+			showImages: false,
+			excerptLength: 30,
+			resetStyles: false,
+			autofocus: true
+		});
+	});
+{{ printf "-->" | raw }}
 </script>
 <br>
 <p>Search requires Javascript and WebAssembly. You can also <a href="/txt/!txt.zip">download all posts</a> and search them outside your browser.</p>
