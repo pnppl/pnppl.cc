@@ -193,29 +193,6 @@
 }
 
 /* ======================
-	Dark Mode Overrides
-	====================== */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bulma-link-on-scheme-l: 73%;
-		--bulma-danger-on-scheme-l: 70%;
-		--bulma-scheme-main-l: 0%;
-		--bulma-background-l: 14%;
-		--bulma-border-l: 24%;
-		--bulma-text-weak-l: 53%;
-		--bulma-text-l: 71%;
-		--bulma-text-strong-l: 93%;
-		--bulma-hover-background-l-delta: 5%;
-		--bulma-active-background-l-delta: 10%;
-		--bulma-hover-border-l-delta: 10%;
-		--bulma-active-border-l-delta: 20%;
-	}
-	a:visited {
-		color: violet !important;
-	}
-}
-
-/* ======================
 	Base/Reset Styles
 	=================== */
 html,
@@ -310,7 +287,7 @@ a {
 	transition-duration: var(--bulma-duration);
 	transition-property: background-color, border-color, color;
 }
-a:visited {
+a:visited, .menu-list a:visited {
 	color: purple;
 }
 a strong {
@@ -1705,7 +1682,6 @@ h6 {
 		background-color: #c0c0c0;
 		float: right;
 		max-width: 33%;
-		position: block;
 		padding: 0.25em;
 		margin: -0.25em 0em 1em 1em;
 		ol {
@@ -1725,13 +1701,12 @@ h6 {
 				width: auto;
 			}
 		}
-		a,
-		a:visited {
+		a {
 			color: hsl(
 				var(--bulma-menu-item-h),
 				var(--bulma-menu-item-s),
 				var(--bulma-menu-item-color-l)
-			) !important;
+			);
 		}
 		::marker {
 			color: black;
@@ -1801,7 +1776,6 @@ a.show-on-parent-hover:visited {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		line-clamp: 1;
-		color: purple;
 	}
 }
 table.calendar {
@@ -2302,4 +2276,27 @@ img.onebitday {
 }
 pre.indented {
 	all: inherit;
+}
+
+/* ======================
+	Dark Mode Overrides
+	====================== */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bulma-link-on-scheme-l: 73%;
+		--bulma-danger-on-scheme-l: 70%;
+		--bulma-scheme-main-l: 0%;
+		--bulma-background-l: 14%;
+		--bulma-border-l: 24%;
+		--bulma-text-weak-l: 53%;
+		--bulma-text-l: 71%;
+		--bulma-text-strong-l: 93%;
+		--bulma-hover-background-l-delta: 5%;
+		--bulma-active-background-l-delta: 10%;
+		--bulma-hover-border-l-delta: 10%;
+		--bulma-active-border-l-delta: 20%;
+	}
+	a:visited, .menu-list a:visited {
+		color: violet;
+	}
 }
