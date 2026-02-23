@@ -1,26 +1,3 @@
-/*
- * pnppl.cc Stylesheet
- * Minimized from Bulma CSS Framework by exe.dev Shelley
- *
- * Table of Contents:
- *	 1. CSS Custom Properties (:root variables)
- *	 2. Dark Mode Overrides
- *	 3. Base/Reset Styles
- *	 4. Typography (Titles, Subtitles)
- *	 5. Layout (Container, Columns)
- *	 6. Navigation (Navbar)
- *	 7. Components (Buttons, Tags, Menu, Icons)
- *	 8. Content Styling
- *	 9. Utilities (Spacing, Visibility, Helpers)
- *	 10. Code Highlighting (Chroma)
- *	 11. misc
- */
-
-/* ==========================================================================
-	 1. CSS Custom Properties
-	 Bulma theming variables for colors, spacing, typography, etc.
-	 ========================================================================== */
-
 :root {
 	--bulma-control-radius: var(--bulma-radius);
 	--bulma-control-border-width: 1px;
@@ -31,27 +8,15 @@
 	--bulma-control-size: var(--bulma-size-normal);
 	--bulma-scheme-h: 221;
 	--bulma-scheme-s: 14%;
-	--bulma-soft-l: 90%;
-	--bulma-bold-l: 20%;
-	--bulma-soft-invert-l: 20%;
-	--bulma-bold-invert-l: 90%;
 	--bulma-hover-background-l-delta: -5%;
 	--bulma-active-background-l-delta: -10%;
 	--bulma-hover-border-l-delta: -10%;
 	--bulma-active-border-l-delta: -20%;
-	--bulma-hover-color-l-delta: -5%;
-	--bulma-active-color-l-delta: -10%;
 	--bulma-scheme-main-l: 100%;
-	--bulma-scheme-main-bis-l: 98%;
-	--bulma-scheme-main-ter-l: 96%;
 	--bulma-background-l: 96%;
-	--bulma-border-weak-l: 93%;
 	--bulma-border-l: 86%;
 	--bulma-text-weak-l: 48%;
 	--bulma-text-strong-l: 21%;
-	--bulma-scheme-invert-ter-l: 14%;
-	--bulma-scheme-invert-bis-l: 7%;
-	--bulma-scheme-invert-l: 4%;
 	--bulma-size-small: 0.75rem;
 	--bulma-size-normal: 1rem;
 	--bulma-size-medium: 1.25rem;
@@ -65,24 +30,8 @@
 	--bulma-radius-small: 0.25rem;
 	--bulma-radius: 0.375rem;
 	--bulma-radius-medium: 0.5em;
-	--bulma-radius-large: 0.75rem;
 	--bulma-radius-rounded: 9999px;
-	--bulma-white-h: 221deg;
-	--bulma-white-s: 14%;
-	--bulma-white-l: 100%;
-	--bulma-white-on-scheme-l: 35%;
-	--bulma-black-h: 221deg;
-	--bulma-black-s: 14%;
-	--bulma-black-l: 4%;
-	--bulma-black-on-scheme-l: 4%;
-	--bulma-light-h: 221deg;
-	--bulma-light-s: 14%;
-	--bulma-light-l: 96%;
-	--bulma-light-on-scheme-l: 36%;
-	--bulma-dark-h: 221deg;
-	--bulma-dark-s: 14%;
 	--bulma-dark-l: 21%;
-	--bulma-dark-on-scheme-l: 21%;
 	--bulma-text: hsla(
 		var(--bulma-text-h),
 		var(--bulma-text-s),
@@ -92,161 +41,11 @@
 	--bulma-text-h: 221deg;
 	--bulma-text-s: 14%;
 	--bulma-text-l: 29%;
-	--bulma-text-00-l: 0%;
-	--bulma-text-05-l: 4%;
-	--bulma-text-10-l: 9%;
-	--bulma-text-15-l: 14%;
-	--bulma-text-20-l: 19%;
-	--bulma-text-25-l: 24%;
-	--bulma-text-30-l: 29%;
-	--bulma-text-35-l: 34%;
-	--bulma-text-40-l: 39%;
-	--bulma-text-45-l: 44%;
-	--bulma-text-50-l: 49%;
-	--bulma-text-55-l: 54%;
-	--bulma-text-60-l: 59%;
-	--bulma-text-65-l: 64%;
 	--bulma-text-70-l: 69%;
-	--bulma-text-75-l: 74%;
-	--bulma-text-80-l: 79%;
-	--bulma-text-85-l: 84%;
-	--bulma-text-90-l: 89%;
-	--bulma-text-95-l: 94%;
-	--bulma-text-100-l: 100%;
-	--bulma-text-00-invert-l: var(--bulma-text-60-l);
-	--bulma-text-05-invert-l: var(--bulma-text-60-l);
-	--bulma-text-10-invert-l: var(--bulma-text-70-l);
-	--bulma-text-15-invert-l: var(--bulma-text-75-l);
-	--bulma-text-20-invert-l: var(--bulma-text-85-l);
-	--bulma-text-25-invert-l: var(--bulma-text-95-l);
-	--bulma-text-30-invert-l: var(--bulma-text-100-l);
-	--bulma-text-35-invert-l: var(--bulma-text-100-l);
-	--bulma-text-40-invert-l: var(--bulma-text-100-l);
-	--bulma-text-45-invert-l: var(--bulma-text-100-l);
-	--bulma-text-50-invert-l: var(--bulma-text-100-l);
-	--bulma-text-55-invert-l: var(--bulma-text-100-l);
-	--bulma-text-60-invert-l: var(--bulma-text-05-l);
-	--bulma-text-65-invert-l: var(--bulma-text-05-l);
-	--bulma-text-70-invert-l: var(--bulma-text-10-l);
-	--bulma-text-75-invert-l: var(--bulma-text-15-l);
-	--bulma-text-80-invert-l: var(--bulma-text-15-l);
-	--bulma-text-85-invert-l: var(--bulma-text-20-l);
-	--bulma-text-90-invert-l: var(--bulma-text-20-l);
-	--bulma-text-95-invert-l: var(--bulma-text-25-l);
-	--bulma-text-100-invert-l: var(--bulma-text-30-l);
-	--bulma-text-invert-l: var(--bulma-text-100-l);
-	--bulma-text-light-l: var(--bulma-text-90-l);
-	--bulma-text-light-invert-l: var(--bulma-text-20-l);
-	--bulma-text-dark-l: var(--bulma-text-10-l);
 	--bulma-text-dark-invert-l: var(--bulma-text-70-l);
-	--bulma-text-on-scheme-l: 29%;
-	--bulma-primary-h: 171deg;
-	--bulma-primary-s: 100%;
-	--bulma-primary-l: 41%;
-	--bulma-primary-00-l: 1%;
-	--bulma-primary-05-l: 6%;
-	--bulma-primary-10-l: 11%;
-	--bulma-primary-15-l: 16%;
-	--bulma-primary-20-l: 21%;
-	--bulma-primary-25-l: 26%;
-	--bulma-primary-30-l: 31%;
-	--bulma-primary-35-l: 36%;
-	--bulma-primary-40-l: 41%;
-	--bulma-primary-45-l: 46%;
-	--bulma-primary-50-l: 51%;
-	--bulma-primary-55-l: 56%;
-	--bulma-primary-60-l: 61%;
-	--bulma-primary-65-l: 66%;
-	--bulma-primary-70-l: 71%;
-	--bulma-primary-75-l: 76%;
-	--bulma-primary-80-l: 81%;
-	--bulma-primary-85-l: 86%;
-	--bulma-primary-90-l: 91%;
-	--bulma-primary-95-l: 96%;
-	--bulma-primary-100-l: 100%;
-	--bulma-primary-00-invert-l: var(--bulma-primary-30-l);
-	--bulma-primary-05-invert-l: var(--bulma-primary-40-l);
-	--bulma-primary-10-invert-l: var(--bulma-primary-50-l);
-	--bulma-primary-15-invert-l: var(--bulma-primary-100-l);
-	--bulma-primary-20-invert-l: var(--bulma-primary-100-l);
-	--bulma-primary-25-invert-l: var(--bulma-primary-100-l);
-	--bulma-primary-30-invert-l: var(--bulma-primary-00-l);
-	--bulma-primary-35-invert-l: var(--bulma-primary-00-l);
-	--bulma-primary-40-invert-l: var(--bulma-primary-05-l);
-	--bulma-primary-45-invert-l: var(--bulma-primary-05-l);
-	--bulma-primary-50-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-55-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-60-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-65-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-70-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-75-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-80-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-85-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-90-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-95-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-100-invert-l: var(--bulma-primary-15-l);
-	--bulma-primary-invert-l: var(--bulma-primary-05-l);
-	--bulma-primary-light-l: var(--bulma-primary-90-l);
-	--bulma-primary-light-invert-l: var(--bulma-primary-10-l);
-	--bulma-primary-dark-l: var(--bulma-primary-10-l);
-	--bulma-primary-dark-invert-l: var(--bulma-primary-50-l);
-	--bulma-primary-on-scheme-l: 21%;
-	--bulma-link: hsla(
-		var(--bulma-link-h),
-		var(--bulma-link-s),
-		var(--bulma-link-l),
-		1
-	);
 	--bulma-link-h: 233deg;
 	--bulma-link-s: 100%;
 	--bulma-link-l: 63%;
-	--bulma-link-00-l: 0%;
-	--bulma-link-05-l: 3%;
-	--bulma-link-10-l: 8%;
-	--bulma-link-15-l: 13%;
-	--bulma-link-20-l: 18%;
-	--bulma-link-25-l: 23%;
-	--bulma-link-30-l: 28%;
-	--bulma-link-35-l: 33%;
-	--bulma-link-40-l: 38%;
-	--bulma-link-45-l: 43%;
-	--bulma-link-50-l: 48%;
-	--bulma-link-55-l: 53%;
-	--bulma-link-60-l: 58%;
-	--bulma-link-65-l: 63%;
-	--bulma-link-70-l: 68%;
-	--bulma-link-75-l: 73%;
-	--bulma-link-80-l: 78%;
-	--bulma-link-85-l: 83%;
-	--bulma-link-90-l: 88%;
-	--bulma-link-95-l: 93%;
-	--bulma-link-100-l: 100%;
-	--bulma-link-00-invert-l: var(--bulma-link-75-l);
-	--bulma-link-05-invert-l: var(--bulma-link-75-l);
-	--bulma-link-10-invert-l: var(--bulma-link-75-l);
-	--bulma-link-15-invert-l: var(--bulma-link-80-l);
-	--bulma-link-20-invert-l: var(--bulma-link-80-l);
-	--bulma-link-25-invert-l: var(--bulma-link-85-l);
-	--bulma-link-30-invert-l: var(--bulma-link-90-l);
-	--bulma-link-35-invert-l: var(--bulma-link-90-l);
-	--bulma-link-40-invert-l: var(--bulma-link-95-l);
-	--bulma-link-45-invert-l: var(--bulma-link-100-l);
-	--bulma-link-50-invert-l: var(--bulma-link-100-l);
-	--bulma-link-55-invert-l: var(--bulma-link-100-l);
-	--bulma-link-60-invert-l: var(--bulma-link-100-l);
-	--bulma-link-65-invert-l: var(--bulma-link-100-l);
-	--bulma-link-70-invert-l: var(--bulma-link-100-l);
-	--bulma-link-75-invert-l: var(--bulma-link-10-l);
-	--bulma-link-80-invert-l: var(--bulma-link-20-l);
-	--bulma-link-85-invert-l: var(--bulma-link-25-l);
-	--bulma-link-90-invert-l: var(--bulma-link-35-l);
-	--bulma-link-95-invert-l: var(--bulma-link-40-l);
-	--bulma-link-100-invert-l: var(--bulma-link-50-l);
-	--bulma-link-invert-l: var(--bulma-link-100-l);
-	--bulma-link-light-l: var(--bulma-link-90-l);
-	--bulma-link-light-invert-l: var(--bulma-link-35-l);
-	--bulma-link-dark-l: var(--bulma-link-10-l);
-	--bulma-link-dark-invert-l: var(--bulma-link-75-l);
 	--bulma-link-on-scheme-l: 58%;
 	--bulma-info: hsla(
 		var(--bulma-info-h),
@@ -257,48 +56,7 @@
 	--bulma-info-h: 198deg;
 	--bulma-info-s: 100%;
 	--bulma-info-l: 70%;
-	--bulma-info-00-l: 0%;
-	--bulma-info-05-l: 5%;
 	--bulma-info-10-l: 10%;
-	--bulma-info-15-l: 15%;
-	--bulma-info-20-l: 20%;
-	--bulma-info-25-l: 25%;
-	--bulma-info-30-l: 30%;
-	--bulma-info-35-l: 35%;
-	--bulma-info-40-l: 40%;
-	--bulma-info-45-l: 45%;
-	--bulma-info-50-l: 50%;
-	--bulma-info-55-l: 55%;
-	--bulma-info-60-l: 60%;
-	--bulma-info-65-l: 65%;
-	--bulma-info-70-l: 70%;
-	--bulma-info-75-l: 75%;
-	--bulma-info-80-l: 80%;
-	--bulma-info-85-l: 85%;
-	--bulma-info-90-l: 90%;
-	--bulma-info-95-l: 95%;
-	--bulma-info-100-l: 100%;
-	--bulma-info-00-invert-l: var(--bulma-info-45-l);
-	--bulma-info-05-invert-l: var(--bulma-info-50-l);
-	--bulma-info-10-invert-l: var(--bulma-info-60-l);
-	--bulma-info-15-invert-l: var(--bulma-info-80-l);
-	--bulma-info-20-invert-l: var(--bulma-info-95-l);
-	--bulma-info-25-invert-l: var(--bulma-info-100-l);
-	--bulma-info-30-invert-l: var(--bulma-info-100-l);
-	--bulma-info-35-invert-l: var(--bulma-info-100-l);
-	--bulma-info-40-invert-l: var(--bulma-info-100-l);
-	--bulma-info-45-invert-l: var(--bulma-info-00-l);
-	--bulma-info-50-invert-l: var(--bulma-info-05-l);
-	--bulma-info-55-invert-l: var(--bulma-info-05-l);
-	--bulma-info-60-invert-l: var(--bulma-info-10-l);
-	--bulma-info-65-invert-l: var(--bulma-info-10-l);
-	--bulma-info-70-invert-l: var(--bulma-info-10-l);
-	--bulma-info-75-invert-l: var(--bulma-info-10-l);
-	--bulma-info-80-invert-l: var(--bulma-info-15-l);
-	--bulma-info-85-invert-l: var(--bulma-info-15-l);
-	--bulma-info-90-invert-l: var(--bulma-info-15-l);
-	--bulma-info-95-invert-l: var(--bulma-info-20-l);
-	--bulma-info-100-invert-l: var(--bulma-info-20-l);
 	--bulma-info-invert-l: var(--bulma-info-10-l);
 	--bulma-info-invert: hsla(
 		var(--bulma-info-h),
@@ -306,11 +64,6 @@
 		var(--bulma-info-invert-l),
 		1
 	);
-	--bulma-info-light-l: var(--bulma-info-90-l);
-	--bulma-info-light-invert-l: var(--bulma-info-15-l);
-	--bulma-info-dark-l: var(--bulma-info-10-l);
-	--bulma-info-dark-invert-l: var(--bulma-info-60-l);
-	--bulma-info-on-scheme-l: 25%;
 	--bulma-success: hsla(
 		var(--bulma-success-h),
 		var(--bulma-success-s),
@@ -320,48 +73,7 @@
 	--bulma-success-h: 153deg;
 	--bulma-success-s: 53%;
 	--bulma-success-l: 53%;
-	--bulma-success-00-l: 0%;
-	--bulma-success-05-l: 3%;
 	--bulma-success-10-l: 8%;
-	--bulma-success-15-l: 13%;
-	--bulma-success-20-l: 18%;
-	--bulma-success-25-l: 23%;
-	--bulma-success-30-l: 28%;
-	--bulma-success-35-l: 33%;
-	--bulma-success-40-l: 38%;
-	--bulma-success-45-l: 43%;
-	--bulma-success-50-l: 48%;
-	--bulma-success-55-l: 53%;
-	--bulma-success-60-l: 58%;
-	--bulma-success-65-l: 63%;
-	--bulma-success-70-l: 68%;
-	--bulma-success-75-l: 73%;
-	--bulma-success-80-l: 78%;
-	--bulma-success-85-l: 83%;
-	--bulma-success-90-l: 88%;
-	--bulma-success-95-l: 93%;
-	--bulma-success-100-l: 100%;
-	--bulma-success-00-invert-l: var(--bulma-success-45-l);
-	--bulma-success-05-invert-l: var(--bulma-success-45-l);
-	--bulma-success-10-invert-l: var(--bulma-success-55-l);
-	--bulma-success-15-invert-l: var(--bulma-success-75-l);
-	--bulma-success-20-invert-l: var(--bulma-success-90-l);
-	--bulma-success-25-invert-l: var(--bulma-success-100-l);
-	--bulma-success-30-invert-l: var(--bulma-success-100-l);
-	--bulma-success-35-invert-l: var(--bulma-success-100-l);
-	--bulma-success-40-invert-l: var(--bulma-success-100-l);
-	--bulma-success-45-invert-l: var(--bulma-success-05-l);
-	--bulma-success-50-invert-l: var(--bulma-success-05-l);
-	--bulma-success-55-invert-l: var(--bulma-success-10-l);
-	--bulma-success-60-invert-l: var(--bulma-success-10-l);
-	--bulma-success-65-invert-l: var(--bulma-success-10-l);
-	--bulma-success-70-invert-l: var(--bulma-success-10-l);
-	--bulma-success-75-invert-l: var(--bulma-success-15-l);
-	--bulma-success-80-invert-l: var(--bulma-success-15-l);
-	--bulma-success-85-invert-l: var(--bulma-success-15-l);
-	--bulma-success-90-invert-l: var(--bulma-success-20-l);
-	--bulma-success-95-invert-l: var(--bulma-success-20-l);
-	--bulma-success-100-invert-l: var(--bulma-success-20-l);
 	--bulma-success-invert-l: var(--bulma-success-10-l);
 	--bulma-success-invert: hsla(
 		var(--bulma-success-h),
@@ -369,11 +81,6 @@
 		var(--bulma-success-invert-l),
 		1
 	);
-	--bulma-success-light-l: var(--bulma-success-90-l);
-	--bulma-success-light-invert-l: var(--bulma-success-20-l);
-	--bulma-success-dark-l: var(--bulma-success-10-l);
-	--bulma-success-dark-invert-l: var(--bulma-success-55-l);
-	--bulma-success-on-scheme-l: 23%;
 	--bulma-warning: hsla(
 		var(--bulma-warning-h),
 		var(--bulma-warning-s),
@@ -383,48 +90,7 @@
 	--bulma-warning-h: 42deg;
 	--bulma-warning-s: 100%;
 	--bulma-warning-l: 53%;
-	--bulma-warning-00-l: 0%;
-	--bulma-warning-05-l: 3%;
 	--bulma-warning-10-l: 8%;
-	--bulma-warning-15-l: 13%;
-	--bulma-warning-20-l: 18%;
-	--bulma-warning-25-l: 23%;
-	--bulma-warning-30-l: 28%;
-	--bulma-warning-35-l: 33%;
-	--bulma-warning-40-l: 38%;
-	--bulma-warning-45-l: 43%;
-	--bulma-warning-50-l: 48%;
-	--bulma-warning-55-l: 53%;
-	--bulma-warning-60-l: 58%;
-	--bulma-warning-65-l: 63%;
-	--bulma-warning-70-l: 68%;
-	--bulma-warning-75-l: 73%;
-	--bulma-warning-80-l: 78%;
-	--bulma-warning-85-l: 83%;
-	--bulma-warning-90-l: 88%;
-	--bulma-warning-95-l: 93%;
-	--bulma-warning-100-l: 100%;
-	--bulma-warning-00-invert-l: var(--bulma-warning-40-l);
-	--bulma-warning-05-invert-l: var(--bulma-warning-45-l);
-	--bulma-warning-10-invert-l: var(--bulma-warning-50-l);
-	--bulma-warning-15-invert-l: var(--bulma-warning-70-l);
-	--bulma-warning-20-invert-l: var(--bulma-warning-100-l);
-	--bulma-warning-25-invert-l: var(--bulma-warning-100-l);
-	--bulma-warning-30-invert-l: var(--bulma-warning-100-l);
-	--bulma-warning-35-invert-l: var(--bulma-warning-100-l);
-	--bulma-warning-40-invert-l: var(--bulma-warning-00-l);
-	--bulma-warning-45-invert-l: var(--bulma-warning-05-l);
-	--bulma-warning-50-invert-l: var(--bulma-warning-10-l);
-	--bulma-warning-55-invert-l: var(--bulma-warning-10-l);
-	--bulma-warning-60-invert-l: var(--bulma-warning-10-l);
-	--bulma-warning-65-invert-l: var(--bulma-warning-10-l);
-	--bulma-warning-70-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-75-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-80-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-85-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-90-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-95-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-100-invert-l: var(--bulma-warning-20-l);
 	--bulma-warning-invert-l: var(--bulma-warning-10-l);
 	--bulma-warning-invert: hsla(
 		var(--bulma-warning-h),
@@ -432,11 +98,6 @@
 		var(--bulma-warning-invert-l),
 		1
 	);
-	--bulma-warning-light-l: var(--bulma-warning-90-l);
-	--bulma-warning-light-invert-l: var(--bulma-warning-15-l);
-	--bulma-warning-dark-l: var(--bulma-warning-10-l);
-	--bulma-warning-dark-invert-l: var(--bulma-warning-50-l);
-	--bulma-warning-on-scheme-l: 23%;
 	--bulma-danger: hsla(
 		var(--bulma-danger-h),
 		var(--bulma-danger-s),
@@ -446,48 +107,7 @@
 	--bulma-danger-h: 348deg;
 	--bulma-danger-s: 100%;
 	--bulma-danger-l: 70%;
-	--bulma-danger-00-l: 0%;
 	--bulma-danger-05-l: 5%;
-	--bulma-danger-10-l: 10%;
-	--bulma-danger-15-l: 15%;
-	--bulma-danger-20-l: 20%;
-	--bulma-danger-25-l: 25%;
-	--bulma-danger-30-l: 30%;
-	--bulma-danger-35-l: 35%;
-	--bulma-danger-40-l: 40%;
-	--bulma-danger-45-l: 45%;
-	--bulma-danger-50-l: 50%;
-	--bulma-danger-55-l: 55%;
-	--bulma-danger-60-l: 60%;
-	--bulma-danger-65-l: 65%;
-	--bulma-danger-70-l: 70%;
-	--bulma-danger-75-l: 75%;
-	--bulma-danger-80-l: 80%;
-	--bulma-danger-85-l: 85%;
-	--bulma-danger-90-l: 90%;
-	--bulma-danger-95-l: 95%;
-	--bulma-danger-100-l: 100%;
-	--bulma-danger-00-invert-l: var(--bulma-danger-65-l);
-	--bulma-danger-05-invert-l: var(--bulma-danger-70-l);
-	--bulma-danger-10-invert-l: var(--bulma-danger-75-l);
-	--bulma-danger-15-invert-l: var(--bulma-danger-80-l);
-	--bulma-danger-20-invert-l: var(--bulma-danger-85-l);
-	--bulma-danger-25-invert-l: var(--bulma-danger-90-l);
-	--bulma-danger-30-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-35-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-40-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-45-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-50-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-55-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-60-invert-l: var(--bulma-danger-100-l);
-	--bulma-danger-65-invert-l: var(--bulma-danger-00-l);
-	--bulma-danger-70-invert-l: var(--bulma-danger-05-l);
-	--bulma-danger-75-invert-l: var(--bulma-danger-10-l);
-	--bulma-danger-80-invert-l: var(--bulma-danger-15-l);
-	--bulma-danger-85-invert-l: var(--bulma-danger-20-l);
-	--bulma-danger-90-invert-l: var(--bulma-danger-25-l);
-	--bulma-danger-95-invert-l: var(--bulma-danger-25-l);
-	--bulma-danger-100-invert-l: var(--bulma-danger-30-l);
 	--bulma-danger-invert-l: var(--bulma-danger-05-l);
 	--bulma-danger-invert: hsla(
 		var(--bulma-danger-h),
@@ -495,26 +115,13 @@
 		var(--bulma-danger-invert-l),
 		1
 	);
-	--bulma-danger-light-l: var(--bulma-danger-90-l);
-	--bulma-danger-light-invert-l: var(--bulma-danger-25-l);
-	--bulma-danger-dark-l: var(--bulma-danger-10-l);
-	--bulma-danger-dark-invert-l: var(--bulma-danger-75-l);
 	--bulma-danger-on-scheme-l: 40%;
 	--bulma-grey-light: hsl(221, 14%, 71%);
-	--bulma-shadow-h: 221deg;
-	--bulma-shadow-s: 14%;
-	--bulma-shadow-l: 4%;
 	--bulma-size-3: 2rem;
-	--bulma-size-5: 1.25rem;
 	--bulma-scheme-main: hsl(
 		var(--bulma-scheme-h),
 		var(--bulma-scheme-s),
 		var(--bulma-scheme-main-l)
-	);
-	--bulma-scheme-main-ter: hsl(
-		var(--bulma-scheme-h),
-		var(--bulma-scheme-s),
-		var(--bulma-scheme-main-ter-l)
 	);
 	--bulma-background: hsl(
 		var(--bulma-scheme-h),
@@ -560,7 +167,7 @@
 	--bulma-code-background: var(--bulma-background);
 	--bulma-pre: var(--bulma-text);
 	--bulma-pre-background: var(--bulma-background);
-		--bulma-body-background-color: var(--bulma-scheme-main);
+	--bulma-body-background-color: var(--bulma-scheme-main);
 	--bulma-body-size: 1em;
 	--bulma-body-min-width: 300px;
 	--bulma-body-rendering: optimizeLegibility;
@@ -584,512 +191,16 @@
 	--bulma-navbar-height: 3.25rem;
 	--bulma-column-gap: 0.75rem;
 }
-@media (prefers-color-scheme: light) {
-	:root {
-		--bulma-scheme-h: 221;
-		--bulma-scheme-s: 14%;
-		--bulma-soft-l: 90%;
-		--bulma-bold-l: 20%;
-		--bulma-soft-invert-l: 20%;
-		--bulma-bold-invert-l: 90%;
-		--bulma-hover-background-l-delta: -5%;
-		--bulma-active-background-l-delta: -10%;
-		--bulma-hover-border-l-delta: -10%;
-		--bulma-active-border-l-delta: -20%;
-		--bulma-hover-color-l-delta: -5%;
-		--bulma-active-color-l-delta: -10%;
-		--bulma-scheme-main-l: 100%;
-		--bulma-scheme-main-bis-l: 98%;
-		--bulma-scheme-main-ter-l: 96%;
-		--bulma-background-l: 96%;
-		--bulma-border-weak-l: 93%;
-		--bulma-border-l: 86%;
-		--bulma-text-weak-l: 48%;
-		--bulma-text-strong-l: 21%;
-		--bulma-scheme-invert-ter-l: 14%;
-		--bulma-scheme-invert-bis-l: 7%;
-		--bulma-scheme-invert-l: 4%;
-		--bulma-size-small: 0.75rem;
-		--bulma-size-normal: 1rem;
-		--bulma-size-medium: 1.25rem;
-		--bulma-size-large: 1.5rem;
-		--bulma-weight-normal: 400;
-		--bulma-weight-medium: 500;
-		--bulma-weight-semibold: 600;
-		--bulma-weight-extrabold: 800;
-		--bulma-block-spacing: 1.5rem;
-		--bulma-duration: 294ms;
-		--bulma-radius-small: 0.25rem;
-		--bulma-radius: 0.375rem;
-		--bulma-radius-medium: 0.5em;
-		--bulma-radius-large: 0.75rem;
-		--bulma-radius-rounded: 9999px;
-		--bulma-white-h: 221deg;
-		--bulma-white-s: 14%;
-		--bulma-white-l: 100%;
-		--bulma-white-on-scheme-l: 35%;
-		--bulma-black-h: 221deg;
-		--bulma-black-s: 14%;
-		--bulma-black-l: 4%;
-		--bulma-black-on-scheme-l: 4%;
-		--bulma-light-h: 221deg;
-		--bulma-light-s: 14%;
-		--bulma-light-l: 96%;
-		--bulma-light-on-scheme-l: 36%;
-		--bulma-dark-h: 221deg;
-		--bulma-dark-s: 14%;
-		--bulma-dark-l: 21%;
-		--bulma-dark-on-scheme-l: 21%;
-		--bulma-text: hsla(
-			var(--bulma-text-h),
-			var(--bulma-text-s),
-			var(--bulma-text-l),
-			1
-		);
-		--bulma-text-h: 221deg;
-		--bulma-text-s: 14%;
-		--bulma-text-l: 29%;
-		--bulma-text-00-l: 0%;
-		--bulma-text-05-l: 4%;
-		--bulma-text-10-l: 9%;
-		--bulma-text-15-l: 14%;
-		--bulma-text-20-l: 19%;
-		--bulma-text-25-l: 24%;
-		--bulma-text-30-l: 29%;
-		--bulma-text-35-l: 34%;
-		--bulma-text-40-l: 39%;
-		--bulma-text-45-l: 44%;
-		--bulma-text-50-l: 49%;
-		--bulma-text-55-l: 54%;
-		--bulma-text-60-l: 59%;
-		--bulma-text-65-l: 64%;
-		--bulma-text-70-l: 69%;
-		--bulma-text-75-l: 74%;
-		--bulma-text-80-l: 79%;
-		--bulma-text-85-l: 84%;
-		--bulma-text-90-l: 89%;
-		--bulma-text-95-l: 94%;
-		--bulma-text-100-l: 100%;
-		--bulma-text-00-invert-l: var(--bulma-text-60-l);
-		--bulma-text-05-invert-l: var(--bulma-text-60-l);
-		--bulma-text-10-invert-l: var(--bulma-text-70-l);
-		--bulma-text-15-invert-l: var(--bulma-text-75-l);
-		--bulma-text-20-invert-l: var(--bulma-text-85-l);
-		--bulma-text-25-invert-l: var(--bulma-text-95-l);
-		--bulma-text-30-invert-l: var(--bulma-text-100-l);
-		--bulma-text-35-invert-l: var(--bulma-text-100-l);
-		--bulma-text-40-invert-l: var(--bulma-text-100-l);
-		--bulma-text-45-invert-l: var(--bulma-text-100-l);
-		--bulma-text-50-invert-l: var(--bulma-text-100-l);
-		--bulma-text-55-invert-l: var(--bulma-text-100-l);
-		--bulma-text-60-invert-l: var(--bulma-text-05-l);
-		--bulma-text-65-invert-l: var(--bulma-text-05-l);
-		--bulma-text-70-invert-l: var(--bulma-text-10-l);
-		--bulma-text-75-invert-l: var(--bulma-text-15-l);
-		--bulma-text-80-invert-l: var(--bulma-text-15-l);
-		--bulma-text-85-invert-l: var(--bulma-text-20-l);
-		--bulma-text-90-invert-l: var(--bulma-text-20-l);
-		--bulma-text-95-invert-l: var(--bulma-text-25-l);
-		--bulma-text-100-invert-l: var(--bulma-text-30-l);
-		--bulma-text-invert-l: var(--bulma-text-100-l);
-		--bulma-text-light-l: var(--bulma-text-90-l);
-		--bulma-text-light-invert-l: var(--bulma-text-20-l);
-		--bulma-text-dark-l: var(--bulma-text-10-l);
-		--bulma-text-dark-invert-l: var(--bulma-text-70-l);
-		--bulma-text-on-scheme-l: 29%;
-		--bulma-primary-h: 171deg;
-		--bulma-primary-s: 100%;
-		--bulma-primary-l: 41%;
-		--bulma-primary-00-l: 1%;
-		--bulma-primary-05-l: 6%;
-		--bulma-primary-10-l: 11%;
-		--bulma-primary-15-l: 16%;
-		--bulma-primary-20-l: 21%;
-		--bulma-primary-25-l: 26%;
-		--bulma-primary-30-l: 31%;
-		--bulma-primary-35-l: 36%;
-		--bulma-primary-40-l: 41%;
-		--bulma-primary-45-l: 46%;
-		--bulma-primary-50-l: 51%;
-		--bulma-primary-55-l: 56%;
-		--bulma-primary-60-l: 61%;
-		--bulma-primary-65-l: 66%;
-		--bulma-primary-70-l: 71%;
-		--bulma-primary-75-l: 76%;
-		--bulma-primary-80-l: 81%;
-		--bulma-primary-85-l: 86%;
-		--bulma-primary-90-l: 91%;
-		--bulma-primary-95-l: 96%;
-		--bulma-primary-100-l: 100%;
-		--bulma-primary-00-invert-l: var(--bulma-primary-30-l);
-		--bulma-primary-05-invert-l: var(--bulma-primary-40-l);
-		--bulma-primary-10-invert-l: var(--bulma-primary-50-l);
-		--bulma-primary-15-invert-l: var(--bulma-primary-100-l);
-		--bulma-primary-20-invert-l: var(--bulma-primary-100-l);
-		--bulma-primary-25-invert-l: var(--bulma-primary-100-l);
-		--bulma-primary-30-invert-l: var(--bulma-primary-00-l);
-		--bulma-primary-35-invert-l: var(--bulma-primary-00-l);
-		--bulma-primary-40-invert-l: var(--bulma-primary-05-l);
-		--bulma-primary-45-invert-l: var(--bulma-primary-05-l);
-		--bulma-primary-50-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-55-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-60-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-65-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-70-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-75-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-80-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-85-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-90-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-95-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-100-invert-l: var(--bulma-primary-15-l);
-		--bulma-primary-invert-l: var(--bulma-primary-05-l);
-		--bulma-primary-light-l: var(--bulma-primary-90-l);
-		--bulma-primary-light-invert-l: var(--bulma-primary-10-l);
-		--bulma-primary-dark-l: var(--bulma-primary-10-l);
-		--bulma-primary-dark-invert-l: var(--bulma-primary-50-l);
-		--bulma-primary-on-scheme-l: 21%;
-		--bulma-link: hsla(
-			var(--bulma-link-h),
-			var(--bulma-link-s),
-			var(--bulma-link-l),
-			1
-		);
-		--bulma-link-h: 233deg;
-		--bulma-link-s: 100%;
-		--bulma-link-l: 63%;
-		--bulma-link-00-l: 0%;
-		--bulma-link-05-l: 3%;
-		--bulma-link-10-l: 8%;
-		--bulma-link-15-l: 13%;
-		--bulma-link-20-l: 18%;
-		--bulma-link-25-l: 23%;
-		--bulma-link-30-l: 28%;
-		--bulma-link-35-l: 33%;
-		--bulma-link-40-l: 38%;
-		--bulma-link-45-l: 43%;
-		--bulma-link-50-l: 48%;
-		--bulma-link-55-l: 53%;
-		--bulma-link-60-l: 58%;
-		--bulma-link-65-l: 63%;
-		--bulma-link-70-l: 68%;
-		--bulma-link-75-l: 73%;
-		--bulma-link-80-l: 78%;
-		--bulma-link-85-l: 83%;
-		--bulma-link-90-l: 88%;
-		--bulma-link-95-l: 93%;
-		--bulma-link-100-l: 100%;
-		--bulma-link-00-invert-l: var(--bulma-link-75-l);
-		--bulma-link-05-invert-l: var(--bulma-link-75-l);
-		--bulma-link-10-invert-l: var(--bulma-link-75-l);
-		--bulma-link-15-invert-l: var(--bulma-link-80-l);
-		--bulma-link-20-invert-l: var(--bulma-link-80-l);
-		--bulma-link-25-invert-l: var(--bulma-link-85-l);
-		--bulma-link-30-invert-l: var(--bulma-link-90-l);
-		--bulma-link-35-invert-l: var(--bulma-link-90-l);
-		--bulma-link-40-invert-l: var(--bulma-link-95-l);
-		--bulma-link-45-invert-l: var(--bulma-link-100-l);
-		--bulma-link-50-invert-l: var(--bulma-link-100-l);
-		--bulma-link-55-invert-l: var(--bulma-link-100-l);
-		--bulma-link-60-invert-l: var(--bulma-link-100-l);
-		--bulma-link-65-invert-l: var(--bulma-link-100-l);
-		--bulma-link-70-invert-l: var(--bulma-link-100-l);
-		--bulma-link-75-invert-l: var(--bulma-link-10-l);
-		--bulma-link-80-invert-l: var(--bulma-link-20-l);
-		--bulma-link-85-invert-l: var(--bulma-link-25-l);
-		--bulma-link-90-invert-l: var(--bulma-link-35-l);
-		--bulma-link-95-invert-l: var(--bulma-link-40-l);
-		--bulma-link-100-invert-l: var(--bulma-link-50-l);
-		--bulma-link-invert-l: var(--bulma-link-100-l);
-		--bulma-link-light-l: var(--bulma-link-90-l);
-		--bulma-link-light-invert-l: var(--bulma-link-35-l);
-		--bulma-link-dark-l: var(--bulma-link-10-l);
-		--bulma-link-dark-invert-l: var(--bulma-link-75-l);
-		--bulma-link-on-scheme-l: 58%;
-		--bulma-info: hsla(
-			var(--bulma-info-h),
-			var(--bulma-info-s),
-			var(--bulma-info-l),
-			1
-		);
-		--bulma-info-h: 198deg;
-		--bulma-info-s: 100%;
-		--bulma-info-l: 70%;
-		--bulma-info-00-l: 0%;
-		--bulma-info-05-l: 5%;
-		--bulma-info-10-l: 10%;
-		--bulma-info-15-l: 15%;
-		--bulma-info-20-l: 20%;
-		--bulma-info-25-l: 25%;
-		--bulma-info-30-l: 30%;
-		--bulma-info-35-l: 35%;
-		--bulma-info-40-l: 40%;
-		--bulma-info-45-l: 45%;
-		--bulma-info-50-l: 50%;
-		--bulma-info-55-l: 55%;
-		--bulma-info-60-l: 60%;
-		--bulma-info-65-l: 65%;
-		--bulma-info-70-l: 70%;
-		--bulma-info-75-l: 75%;
-		--bulma-info-80-l: 80%;
-		--bulma-info-85-l: 85%;
-		--bulma-info-90-l: 90%;
-		--bulma-info-95-l: 95%;
-		--bulma-info-100-l: 100%;
-		--bulma-info-00-invert-l: var(--bulma-info-45-l);
-		--bulma-info-05-invert-l: var(--bulma-info-50-l);
-		--bulma-info-10-invert-l: var(--bulma-info-60-l);
-		--bulma-info-15-invert-l: var(--bulma-info-80-l);
-		--bulma-info-20-invert-l: var(--bulma-info-95-l);
-		--bulma-info-25-invert-l: var(--bulma-info-100-l);
-		--bulma-info-30-invert-l: var(--bulma-info-100-l);
-		--bulma-info-35-invert-l: var(--bulma-info-100-l);
-		--bulma-info-40-invert-l: var(--bulma-info-100-l);
-		--bulma-info-45-invert-l: var(--bulma-info-00-l);
-		--bulma-info-50-invert-l: var(--bulma-info-05-l);
-		--bulma-info-55-invert-l: var(--bulma-info-05-l);
-		--bulma-info-60-invert-l: var(--bulma-info-10-l);
-		--bulma-info-65-invert-l: var(--bulma-info-10-l);
-		--bulma-info-70-invert-l: var(--bulma-info-10-l);
-		--bulma-info-75-invert-l: var(--bulma-info-10-l);
-		--bulma-info-80-invert-l: var(--bulma-info-15-l);
-		--bulma-info-85-invert-l: var(--bulma-info-15-l);
-		--bulma-info-90-invert-l: var(--bulma-info-15-l);
-		--bulma-info-95-invert-l: var(--bulma-info-20-l);
-		--bulma-info-100-invert-l: var(--bulma-info-20-l);
-		--bulma-info-invert-l: var(--bulma-info-10-l);
-		--bulma-info-invert: hsla(
-			var(--bulma-info-h),
-			var(--bulma-info-s),
-			var(--bulma-info-invert-l),
-			1
-		);
-		--bulma-info-light-l: var(--bulma-info-90-l);
-		--bulma-info-light-invert-l: var(--bulma-info-15-l);
-		--bulma-info-dark-l: var(--bulma-info-10-l);
-		--bulma-info-dark-invert-l: var(--bulma-info-60-l);
-		--bulma-info-on-scheme-l: 25%;
-		--bulma-success: hsla(
-			var(--bulma-success-h),
-			var(--bulma-success-s),
-			var(--bulma-success-l),
-			1
-		);
-		--bulma-success-h: 153deg;
-		--bulma-success-s: 53%;
-		--bulma-success-l: 53%;
-		--bulma-success-00-l: 0%;
-		--bulma-success-05-l: 3%;
-		--bulma-success-10-l: 8%;
-		--bulma-success-15-l: 13%;
-		--bulma-success-20-l: 18%;
-		--bulma-success-25-l: 23%;
-		--bulma-success-30-l: 28%;
-		--bulma-success-35-l: 33%;
-		--bulma-success-40-l: 38%;
-		--bulma-success-45-l: 43%;
-		--bulma-success-50-l: 48%;
-		--bulma-success-55-l: 53%;
-		--bulma-success-60-l: 58%;
-		--bulma-success-65-l: 63%;
-		--bulma-success-70-l: 68%;
-		--bulma-success-75-l: 73%;
-		--bulma-success-80-l: 78%;
-		--bulma-success-85-l: 83%;
-		--bulma-success-90-l: 88%;
-		--bulma-success-95-l: 93%;
-		--bulma-success-100-l: 100%;
-		--bulma-success-00-invert-l: var(--bulma-success-45-l);
-		--bulma-success-05-invert-l: var(--bulma-success-45-l);
-		--bulma-success-10-invert-l: var(--bulma-success-55-l);
-		--bulma-success-15-invert-l: var(--bulma-success-75-l);
-		--bulma-success-20-invert-l: var(--bulma-success-90-l);
-		--bulma-success-25-invert-l: var(--bulma-success-100-l);
-		--bulma-success-30-invert-l: var(--bulma-success-100-l);
-		--bulma-success-35-invert-l: var(--bulma-success-100-l);
-		--bulma-success-40-invert-l: var(--bulma-success-100-l);
-		--bulma-success-45-invert-l: var(--bulma-success-05-l);
-		--bulma-success-50-invert-l: var(--bulma-success-05-l);
-		--bulma-success-55-invert-l: var(--bulma-success-10-l);
-		--bulma-success-60-invert-l: var(--bulma-success-10-l);
-		--bulma-success-65-invert-l: var(--bulma-success-10-l);
-		--bulma-success-70-invert-l: var(--bulma-success-10-l);
-		--bulma-success-75-invert-l: var(--bulma-success-15-l);
-		--bulma-success-80-invert-l: var(--bulma-success-15-l);
-		--bulma-success-85-invert-l: var(--bulma-success-15-l);
-		--bulma-success-90-invert-l: var(--bulma-success-20-l);
-		--bulma-success-95-invert-l: var(--bulma-success-20-l);
-		--bulma-success-100-invert-l: var(--bulma-success-20-l);
-		--bulma-success-invert-l: var(--bulma-success-10-l);
-		--bulma-success-invert: hsla(
-			var(--bulma-success-h),
-			var(--bulma-success-s),
-			var(--bulma-success-invert-l),
-			1
-		);
-		--bulma-success-light-l: var(--bulma-success-90-l);
-		--bulma-success-light-invert-l: var(--bulma-success-20-l);
-		--bulma-success-dark-l: var(--bulma-success-10-l);
-		--bulma-success-dark-invert-l: var(--bulma-success-55-l);
-		--bulma-success-on-scheme-l: 23%;
-		--bulma-warning: hsla(
-			var(--bulma-warning-h),
-			var(--bulma-warning-s),
-			var(--bulma-warning-l),
-			1
-		);
-		--bulma-warning-h: 42deg;
-		--bulma-warning-s: 100%;
-		--bulma-warning-l: 53%;
-		--bulma-warning-00-l: 0%;
-		--bulma-warning-05-l: 3%;
-		--bulma-warning-10-l: 8%;
-		--bulma-warning-15-l: 13%;
-		--bulma-warning-20-l: 18%;
-		--bulma-warning-25-l: 23%;
-		--bulma-warning-30-l: 28%;
-		--bulma-warning-35-l: 33%;
-		--bulma-warning-40-l: 38%;
-		--bulma-warning-45-l: 43%;
-		--bulma-warning-50-l: 48%;
-		--bulma-warning-55-l: 53%;
-		--bulma-warning-60-l: 58%;
-		--bulma-warning-65-l: 63%;
-		--bulma-warning-70-l: 68%;
-		--bulma-warning-75-l: 73%;
-		--bulma-warning-80-l: 78%;
-		--bulma-warning-85-l: 83%;
-		--bulma-warning-90-l: 88%;
-		--bulma-warning-95-l: 93%;
-		--bulma-warning-100-l: 100%;
-		--bulma-warning-00-invert-l: var(--bulma-warning-40-l);
-		--bulma-warning-05-invert-l: var(--bulma-warning-45-l);
-		--bulma-warning-10-invert-l: var(--bulma-warning-50-l);
-		--bulma-warning-15-invert-l: var(--bulma-warning-70-l);
-		--bulma-warning-20-invert-l: var(--bulma-warning-100-l);
-		--bulma-warning-25-invert-l: var(--bulma-warning-100-l);
-		--bulma-warning-30-invert-l: var(--bulma-warning-100-l);
-		--bulma-warning-35-invert-l: var(--bulma-warning-100-l);
-		--bulma-warning-40-invert-l: var(--bulma-warning-00-l);
-		--bulma-warning-45-invert-l: var(--bulma-warning-05-l);
-		--bulma-warning-50-invert-l: var(--bulma-warning-10-l);
-		--bulma-warning-55-invert-l: var(--bulma-warning-10-l);
-		--bulma-warning-60-invert-l: var(--bulma-warning-10-l);
-		--bulma-warning-65-invert-l: var(--bulma-warning-10-l);
-		--bulma-warning-70-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-75-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-80-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-85-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-90-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-95-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-100-invert-l: var(--bulma-warning-20-l);
-		--bulma-warning-invert-l: var(--bulma-warning-10-l);
-		--bulma-warning-invert: hsla(
-			var(--bulma-warning-h),
-			var(--bulma-warning-s),
-			var(--bulma-warning-invert-l),
-			1
-		);
-		--bulma-warning-light-l: var(--bulma-warning-90-l);
-		--bulma-warning-light-invert-l: var(--bulma-warning-15-l);
-		--bulma-warning-dark-l: var(--bulma-warning-10-l);
-		--bulma-warning-dark-invert-l: var(--bulma-warning-50-l);
-		--bulma-warning-on-scheme-l: 23%;
-		--bulma-danger: hsla(
-			var(--bulma-danger-h),
-			var(--bulma-danger-s),
-			var(--bulma-danger-l),
-			1
-		);
-		--bulma-danger-h: 348deg;
-		--bulma-danger-s: 100%;
-		--bulma-danger-l: 70%;
-		--bulma-danger-00-l: 0%;
-		--bulma-danger-05-l: 5%;
-		--bulma-danger-10-l: 10%;
-		--bulma-danger-15-l: 15%;
-		--bulma-danger-20-l: 20%;
-		--bulma-danger-25-l: 25%;
-		--bulma-danger-30-l: 30%;
-		--bulma-danger-35-l: 35%;
-		--bulma-danger-40-l: 40%;
-		--bulma-danger-45-l: 45%;
-		--bulma-danger-50-l: 50%;
-		--bulma-danger-55-l: 55%;
-		--bulma-danger-60-l: 60%;
-		--bulma-danger-65-l: 65%;
-		--bulma-danger-70-l: 70%;
-		--bulma-danger-75-l: 75%;
-		--bulma-danger-80-l: 80%;
-		--bulma-danger-85-l: 85%;
-		--bulma-danger-90-l: 90%;
-		--bulma-danger-95-l: 95%;
-		--bulma-danger-100-l: 100%;
-		--bulma-danger-00-invert-l: var(--bulma-danger-65-l);
-		--bulma-danger-05-invert-l: var(--bulma-danger-70-l);
-		--bulma-danger-10-invert-l: var(--bulma-danger-75-l);
-		--bulma-danger-15-invert-l: var(--bulma-danger-80-l);
-		--bulma-danger-20-invert-l: var(--bulma-danger-85-l);
-		--bulma-danger-25-invert-l: var(--bulma-danger-90-l);
-		--bulma-danger-30-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-35-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-40-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-45-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-50-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-55-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-60-invert-l: var(--bulma-danger-100-l);
-		--bulma-danger-65-invert-l: var(--bulma-danger-00-l);
-		--bulma-danger-70-invert-l: var(--bulma-danger-05-l);
-		--bulma-danger-75-invert-l: var(--bulma-danger-10-l);
-		--bulma-danger-80-invert-l: var(--bulma-danger-15-l);
-		--bulma-danger-85-invert-l: var(--bulma-danger-20-l);
-		--bulma-danger-90-invert-l: var(--bulma-danger-25-l);
-		--bulma-danger-95-invert-l: var(--bulma-danger-25-l);
-		--bulma-danger-100-invert-l: var(--bulma-danger-30-l);
-		--bulma-danger-invert-l: var(--bulma-danger-05-l);
-		--bulma-danger-invert: hsla(
-			var(--bulma-danger-h),
-			var(--bulma-danger-s),
-			var(--bulma-danger-invert-l),
-			1
-		);
-		--bulma-danger-light-l: var(--bulma-danger-90-l);
-		--bulma-danger-light-invert-l: var(--bulma-danger-25-l);
-		--bulma-danger-dark-l: var(--bulma-danger-10-l);
-		--bulma-danger-dark-invert-l: var(--bulma-danger-75-l);
-		--bulma-danger-on-scheme-l: 40%;
-		--bulma-grey-light: hsl(221, 14%, 71%);
-		--bulma-shadow-h: 221deg;
-		--bulma-shadow-s: 14%;
-		--bulma-shadow-l: 4%;
-		--bulma-size-3: 2rem;
-		--bulma-size-5: 1.25rem;
-	}
-	a:visited {
-		color: purple !important;
-	}
-}
+
+/* ======================
+	Dark Mode Overrides
+	====================== */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bulma-white-on-scheme-l: 100%;
-		--bulma-black-on-scheme-l: 0%;
-		--bulma-light-on-scheme-l: 96%;
-		--bulma-dark-on-scheme-l: 56%;
-		--bulma-text-on-scheme-l: 54%;
-		--bulma-primary-on-scheme-l: 41%;
 		--bulma-link-on-scheme-l: 73%;
-		--bulma-info-on-scheme-l: 70%;
-		--bulma-success-on-scheme-l: 53%;
-		--bulma-warning-on-scheme-l: 53%;
 		--bulma-danger-on-scheme-l: 70%;
 		--bulma-scheme-main-l: 0%;
-		--bulma-scheme-main-bis-l: 11%;
-		--bulma-scheme-main-ter-l: 13%;
-		--bulma-soft-l: 20%;
-		--bulma-bold-l: 90%;
-		--bulma-soft-invert-l: 90%;
-		--bulma-bold-invert-l: 20%;
 		--bulma-background-l: 14%;
-		--bulma-border-weak-l: 21%;
 		--bulma-border-l: 24%;
 		--bulma-text-weak-l: 53%;
 		--bulma-text-l: 71%;
@@ -1098,16 +209,15 @@
 		--bulma-active-background-l-delta: 10%;
 		--bulma-hover-border-l-delta: 10%;
 		--bulma-active-border-l-delta: 20%;
-		--bulma-hover-color-l-delta: 5%;
-		--bulma-active-color-l-delta: 10%;
-		--bulma-shadow-h: 0deg;
-		--bulma-shadow-s: 0%;
-		--bulma-shadow-l: 100%;
 	}
 	a:visited {
 		color: violet !important;
 	}
-} /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+}
+
+/* ======================
+	Base/Reset Styles
+	=================== */
 html,
 body,
 p,
@@ -1275,10 +385,6 @@ table th:not([align]) {
 table th {
 	color: var(--bulma-text-strong);
 }
-@keyframes spinAround {
-}
-@keyframes pulsate {
-}
 .message:not(:last-child),
 .card:not(:last-child),
 .title:not(:last-child),
@@ -1289,12 +395,6 @@ table th {
 .block:not(:last-child) {
 	margin-bottom: var(--bulma-block-spacing);
 }
-
-/* ==========================================================================
-	 7. Components
-	 Buttons, tags, menu, icons, and other UI elements
-	 ========================================================================== */
-
 .button {
 	align-items: center;
 	appearance: none;
@@ -1469,7 +569,10 @@ table th {
 	--bulma-button-border-width: 0px;
 	--bulma-button-color-l: var(--bulma-info-invert-l);
 }
-.button.is-info:focus-visible {
+.button.is-info:focus-visible,
+.button.is-success:focus-visible,
+.button.is-warning:focus-visible,
+.button.is-danger:focus-visible {
 	--bulma-button-border-width: 1px;
 }
 .button.is-info[disabled] {
@@ -1485,9 +588,6 @@ table th {
 	--bulma-button-border-width: 0px;
 	--bulma-button-color-l: var(--bulma-success-invert-l);
 }
-.button.is-success:focus-visible {
-	--bulma-button-border-width: 1px;
-}
 .button.is-success[disabled] {
 	background-color: var(--bulma-success);
 	border-color: var(--bulma-success);
@@ -1501,9 +601,6 @@ table th {
 	--bulma-button-border-width: 0px;
 	--bulma-button-color-l: var(--bulma-warning-invert-l);
 }
-.button.is-warning:focus-visible {
-	--bulma-button-border-width: 1px;
-}
 .button.is-warning[disabled] {
 	background-color: var(--bulma-warning);
 	border-color: var(--bulma-warning);
@@ -1516,9 +613,6 @@ table th {
 	--bulma-button-border-l: var(--bulma-danger-l);
 	--bulma-button-border-width: 0px;
 	--bulma-button-color-l: var(--bulma-danger-invert-l);
-}
-.button.is-danger:focus-visible {
-	--bulma-button-border-width: 1px;
 }
 .button.is-danger[disabled] {
 	background-color: var(--bulma-danger);
@@ -1549,12 +643,6 @@ table th {
 	gap: 0.75rem;
 	justify-content: flex-start;
 }
-
-/* ==========================================================================
-	 8. Content Styling
-	 Rich text content area (prose, lists, blockquotes, tables, code)
-	 ========================================================================== */
-
 .content {
 	--bulma-content-heading-color: var(--bulma-text-strong);
 	--bulma-content-heading-line-height: 1.125;
@@ -1662,10 +750,13 @@ table th {
 		--bulma-content-table-body-last-row-cell-border-bottom-width
 	);
 }
-.content.is-small {
+.content.is-small,
+.menu.is-small,
+.message.is-small {
 	font-size: var(--bulma-size-small);
 }
-.content.is-large {
+.content.is-large,
+.menu.is-large {
 	font-size: var(--bulma-size-large);
 }
 .delete::before,
@@ -1687,13 +778,7 @@ table th {
 	height: 50%;
 	width: 2px;
 }
-.delete:hover,
-.delete:focus {
-}
-.delete:active {
-}
-.delete.is-small {
-}
+
 .icon,
 .icon-text {
 	--bulma-icon-dimensions: 1.5rem;
@@ -1701,8 +786,6 @@ table th {
 	--bulma-icon-dimensions-large: 3rem;
 	--bulma-icon-text-spacing: 0.25em;
 }
-
-/* Icons */
 .icon {
 	align-items: center;
 	display: inline-flex;
@@ -1725,7 +808,12 @@ table th {
 	gap: var(--bulma-icon-text-spacing);
 	line-height: var(--bulma-icon-dimensions);
 }
-.icon-text .icon {
+.icon-text .icon,
+
+/* ============
+	 Navigation
+	 ========== */
+.navbar-item {
 	flex-grow: 0;
 	flex-shrink: 0;
 }
@@ -1737,11 +825,11 @@ div.icon-text {
 	height: auto;
 	width: 100%;
 }
-.image img.is-rounded {
+.image img.is-rounded,
+.tag.is-rounded {
 	border-radius: var(--bulma-radius-rounded);
 }
-@keyframes moveIndeterminate {
-}
+
 .table td,
 .table th {
 	background-color: var(--bulma-table-cell-background-color);
@@ -1753,28 +841,32 @@ div.icon-text {
 	vertical-align: top;
 }
 .table td.is-info,
-.table th.is-info {
+.table th.is-info,
+.table tr.is-info {
 	--bulma-table-color: var(--bulma-info-invert);
 	--bulma-table-cell-heading-color: var(--bulma-info-invert);
 	--bulma-table-cell-background-color: var(--bulma-info);
 	--bulma-table-cell-border-color: var(--bulma-info);
 }
 .table td.is-success,
-.table th.is-success {
+.table th.is-success,
+.table tr.is-success {
 	--bulma-table-color: var(--bulma-success-invert);
 	--bulma-table-cell-heading-color: var(--bulma-success-invert);
 	--bulma-table-cell-background-color: var(--bulma-success);
 	--bulma-table-cell-border-color: var(--bulma-success);
 }
 .table td.is-warning,
-.table th.is-warning {
+.table th.is-warning,
+.table tr.is-warning {
 	--bulma-table-color: var(--bulma-warning-invert);
 	--bulma-table-cell-heading-color: var(--bulma-warning-invert);
 	--bulma-table-cell-background-color: var(--bulma-warning);
 	--bulma-table-cell-border-color: var(--bulma-warning);
 }
 .table td.is-danger,
-.table th.is-danger {
+.table th.is-danger,
+.table tr.is-danger {
 	--bulma-table-color: var(--bulma-danger-invert);
 	--bulma-table-cell-heading-color: var(--bulma-danger-invert);
 	--bulma-table-cell-background-color: var(--bulma-danger);
@@ -1790,30 +882,6 @@ div.icon-text {
 }
 .table th:not([align]) {
 	text-align: var(--bulma-table-cell-text-align);
-}
-.table tr.is-info {
-	--bulma-table-color: var(--bulma-info-invert);
-	--bulma-table-cell-heading-color: var(--bulma-info-invert);
-	--bulma-table-cell-background-color: var(--bulma-info);
-	--bulma-table-cell-border-color: var(--bulma-info);
-}
-.table tr.is-success {
-	--bulma-table-color: var(--bulma-success-invert);
-	--bulma-table-cell-heading-color: var(--bulma-success-invert);
-	--bulma-table-cell-background-color: var(--bulma-success);
-	--bulma-table-cell-border-color: var(--bulma-success);
-}
-.table tr.is-warning {
-	--bulma-table-color: var(--bulma-warning-invert);
-	--bulma-table-cell-heading-color: var(--bulma-warning-invert);
-	--bulma-table-cell-background-color: var(--bulma-warning);
-	--bulma-table-cell-border-color: var(--bulma-warning);
-}
-.table tr.is-danger {
-	--bulma-table-color: var(--bulma-danger-invert);
-	--bulma-table-cell-heading-color: var(--bulma-danger-invert);
-	--bulma-table-cell-background-color: var(--bulma-danger);
-	--bulma-table-cell-border-color: var(--bulma-danger);
 }
 .table thead {
 	background-color: var(--bulma-table-head-background-color);
@@ -1918,9 +986,6 @@ div.icon-text {
 	margin-inline-start: -0.375em;
 	margin-inline-end: -0.375em;
 }
-.tag.is-rounded {
-	border-radius: var(--bulma-radius-rounded);
-}
 a.tag,
 button.tag,
 .tag.is-hoverable {
@@ -1936,12 +1001,6 @@ button.tag:active,
 .tag.is-hoverable:active {
 	--bulma-tag-background-l-delta: var(--bulma-tag-active-background-l-delta);
 }
-
-/* ==========================================================================
-	 4. Typography
-	 Titles, subtitles, and text sizing classes
-	 ========================================================================== */
-
 .title {
 	--bulma-title-color: var(--bulma-text-strong);
 	--bulma-title-size: var(--bulma-size-3);
@@ -1984,22 +1043,13 @@ button.tag:active,
 .title.is-1 {
 	font-size: 3rem;
 }
-.input::-moz-placeholder {
-	color: var(--bulma-input-placeholder-color);
-}
-.input::-webkit-input-placeholder {
-	color: var(--bulma-input-placeholder-color);
-}
-.input:-moz-placeholder {
-	color: var(--bulma-input-placeholder-color);
-}
+.input::-moz-placeholder,
+.input::-webkit-input-placeholder,
+.input:-moz-placeholder,
 .input:-ms-input-placeholder {
 	color: var(--bulma-input-placeholder-color);
 }
-.input:hover {
-}
-.input:active {
-}
+
 .input:focus,
 .input:focus-within {
 	border-color: hsl(
@@ -2015,15 +1065,9 @@ button.tag:active,
 			var(--bulma-input-focus-shadow-alpha)
 		);
 }
-[disabled].input::-moz-placeholder {
-	color: var(--bulma-input-disabled-placeholder-color);
-}
-[disabled].input::-webkit-input-placeholder {
-	color: var(--bulma-input-disabled-placeholder-color);
-}
-[disabled].input:-moz-placeholder {
-	color: var(--bulma-input-disabled-placeholder-color);
-}
+[disabled].input::-moz-placeholder,
+[disabled].input::-webkit-input-placeholder,
+[disabled].input:-moz-placeholder,
 [disabled].input:-ms-input-placeholder {
 	color: var(--bulma-input-disabled-placeholder-color);
 }
@@ -2039,8 +1083,6 @@ button.tag:active,
 	color: var(--bulma-text-weak);
 	cursor: not-allowed;
 }
-
-/* Menu */
 .menu {
 	--bulma-menu-item-h: var(--bulma-scheme-h);
 	--bulma-menu-item-s: var(--bulma-scheme-s);
@@ -2060,16 +1102,8 @@ button.tag:active,
 	--bulma-menu-nested-list-margin: 0.75em;
 	--bulma-menu-nested-list-padding-left: 0.75em;
 }
-
-/* Menu */
 .menu {
 	font-size: var(--bulma-size-normal);
-}
-.menu.is-small {
-	font-size: var(--bulma-size-small);
-}
-.menu.is-large {
-	font-size: var(--bulma-size-large);
 }
 .menu-list {
 	line-height: var(--bulma-menu-list-line-height);
@@ -2113,34 +1147,30 @@ button.tag:active,
 	padding-inline-start: var(--bulma-menu-nested-list-padding-left);
 }
 .message {
-		--bulma-message-border-l-delta: -20%;
-		--bulma-message-radius: var(--bulma-radius);
-		--bulma-message-header-weight: var(--bulma-weight-semibold);
-		--bulma-message-header-padding: 1em 1.25em;
-		--bulma-message-header-radius: var(--bulma-radius);
-		--bulma-message-body-border-width: 0 0 0 4px;
-		--bulma-message-body-color: var(--bulma-text);
-		--bulma-message-body-padding: 1.25em 1.5em;
-		--bulma-message-body-radius: var(--bulma-radius-small);
-		--bulma-message-body-pre-code-background-color: transparent;
-		--bulma-message-header-body-border-width: 0;
-		--bulma-message-h: var(--bulma-scheme-h);
-		--bulma-message-s: var(--bulma-scheme-s);
-		--bulma-message-background-l: var(--bulma-background-l);
-		--bulma-message-border-l: var(--bulma-border-l);
-		--bulma-message-border-style: solid;
-		--bulma-message-border-width: 0.25em;
-		--bulma-message-color-l: var(--bulma-text-l);
-		--bulma-message-header-background-l: var(--bulma-dark-l);
-		--bulma-message-header-color-l: var(--bulma-text-dark-invert-l)
+	--bulma-message-border-l-delta: -20%;
+	--bulma-message-radius: var(--bulma-radius);
+	--bulma-message-body-padding: 1.25em 1.5em;
+	--bulma-message-body-radius: var(--bulma-radius-small);
+	--bulma-message-body-pre-code-background-color: transparent;
+	--bulma-message-h: var(--bulma-scheme-h);
+	--bulma-message-s: var(--bulma-scheme-s);
+	--bulma-message-background-l: var(--bulma-background-l);
+	--bulma-message-border-l: var(--bulma-border-l);
+	--bulma-message-border-style: solid;
+	--bulma-message-border-width: 0.25em;
+	--bulma-message-color-l: var(--bulma-text-l);
+	--bulma-message-header-background-l: var(--bulma-dark-l);
+	--bulma-message-header-color-l: var(--bulma-text-dark-invert-l);
 }
-
 .message {
-		border-radius: var(--bulma-message-radius);
-		color: hsl(var(--bulma-message-h), var(--bulma-message-s), var(--bulma-message-color-l));
-		font-size: var(--bulma-size-normal)
+	border-radius: var(--bulma-message-radius);
+	color: hsl(
+		var(--bulma-message-h),
+		var(--bulma-message-s),
+		var(--bulma-message-color-l)
+	);
+	font-size: var(--bulma-size-normal);
 }
-
 .message strong {
 	color: currentColor;
 }
@@ -2149,23 +1179,30 @@ button.tag:active,
 	text-decoration: underline;
 }
 .message.is-danger {
-		--bulma-message-h: var(--bulma-danger-h);
-		--bulma-message-s: var(--bulma-danger-s);
-		--bulma-message-border-l: calc(var(--bulma-danger-l) + var(--bulma-message-border-l-delta));
-		--bulma-message-color-l: var(--bulma-danger-on-scheme-l);
-		--bulma-message-header-background-l: var(--bulma-danger-l);
-		--bulma-message-header-color-l: var(--bulma-danger-invert-l)
-}
-.message.is-small {
-	font-size: var(--bulma-size-small);
+	--bulma-message-h: var(--bulma-danger-h);
+	--bulma-message-s: var(--bulma-danger-s);
+	--bulma-message-border-l: calc(
+		var(--bulma-danger-l) + var(--bulma-message-border-l-delta)
+	);
+	--bulma-message-color-l: var(--bulma-danger-on-scheme-l);
+	--bulma-message-header-background-l: var(--bulma-danger-l);
+	--bulma-message-header-color-l: var(--bulma-danger-invert-l);
 }
 .message-body {
-		background-color: hsl(var(--bulma-message-h), var(--bulma-message-s), var(--bulma-message-background-l));
-		border-inline-start-color: hsl(var(--bulma-message-h), var(--bulma-message-s), var(--bulma-message-border-l));
-		border-inline-start-style: var(--bulma-message-border-style);
-		border-inline-start-width: var(--bulma-message-border-width);
-		border-radius: var(--bulma-message-body-radius);
-		padding: var(--bulma-message-body-padding)
+	background-color: hsl(
+		var(--bulma-message-h),
+		var(--bulma-message-s),
+		var(--bulma-message-background-l)
+	);
+	border-inline-start-color: hsl(
+		var(--bulma-message-h),
+		var(--bulma-message-s),
+		var(--bulma-message-border-l)
+	);
+	border-inline-start-style: var(--bulma-message-border-style);
+	border-inline-start-width: var(--bulma-message-border-width);
+	border-radius: var(--bulma-message-body-radius);
+	padding: var(--bulma-message-body-padding);
 }
 .message-body code,
 .message-body pre {
@@ -2183,12 +1220,6 @@ button.tag:active,
 .message-body pre code {
 	background-color: var(--bulma-message-body-pre-code-background-color);
 }
-
-/* ==========================================================================
-	 6. Navigation
-	 Navbar component and related elements
-	 ========================================================================== */
-
 .navbar {
 	--bulma-navbar-h: var(--bulma-scheme-h);
 	--bulma-navbar-s: var(--bulma-scheme-s);
@@ -2205,8 +1236,6 @@ button.tag:active,
 	);
 	--bulma-navbar-item-color-l: var(--bulma-text-l);
 	--bulma-navbar-item-img-max-height: 1.75rem;
-	--bulma-navbar-dropdown-border-l: var(--bulma-border-l);
-	--bulma-navbar-dropdown-item-background-l: var(--bulma-scheme-main-l);
 }
 .navbar {
 	background-color: var(--bulma-navbar-background-color);
@@ -2242,6 +1271,9 @@ button.tag:active,
 	--bulma-navbar-item-background-l: var(--bulma-danger-l);
 	--bulma-navbar-item-color-l: var(--bulma-danger-invert-l);
 }
+/* ==============================
+	 Layout (Container, Columns)
+	 ============================ */
 .navbar > .container {
 	align-items: stretch;
 	display: flex;
@@ -2292,10 +1324,6 @@ a.navbar-item:active {
 	);
 	--bulma-navbar-item-background-a: 1;
 }
-.navbar-item {
-	flex-grow: 0;
-	flex-shrink: 0;
-}
 .navbar-item img {
 	max-height: var(--bulma-navbar-item-img-max-height);
 }
@@ -2311,9 +1339,7 @@ a.navbar-item:active {
 		flex-wrap: wrap;
 	}
 	.navbar-item {
-		/* set this to 30% if I remove items */
 		flex-basis: 20%;
-/*		 min-width: 30%; */
 		align-content: center;
 		flex-grow: 1 !important;
 	}
@@ -2382,6 +1408,7 @@ a.navbar-item:active {
 		width: calc(8.3333333333% - var(--bulma-column-gap) / 2);
 	}
 }
+
 .columns {
 	margin-inline-start: calc(-1 * var(--bulma-column-gap));
 	margin-inline-end: calc(-1 * var(--bulma-column-gap));
@@ -2402,12 +1429,6 @@ a.navbar-item:active {
 		display: flex;
 	}
 }
-
-/* ==========================================================================
-	 5. Layout
-	 Container, columns, and grid system
-	 ========================================================================== */
-
 .container {
 	flex-grow: 1;
 	margin: 0 auto;
@@ -2429,10 +1450,7 @@ a.navbar-item:active {
 		max-width: 1344px;
 	}
 }
-@media screen and (min-width: 1024px) {
-}
-:root {
-}
+
 .has-text-grey {
 	color: #69748c !important;
 }
@@ -2441,12 +1459,6 @@ a.navbar-item:active {
 	content: " ";
 	display: table;
 }
-
-/* ==========================================================================
-	 9. Utilities
-	 Spacing, visibility, display, and helper classes
-	 ========================================================================== */
-
 .mb-5 {
 	margin-bottom: 1.5rem !important;
 }
@@ -2463,13 +1475,13 @@ a.navbar-item:active {
 .is-size-7 {
 	font-size: 0.75rem !important;
 }
-
-/* Visibility */
 .is-hidden {
 	display: none !important;
 }
 
-/* Display */
+/* ===========
+	 Utilities
+	 ========== */
 .is-block {
 	display: block !important;
 }
@@ -2479,19 +1491,10 @@ a.navbar-item:active {
 .navbar-item {
 	border-radius: var(--bulma-radius);
 }
-
-/* ==========================================================================
-	 11. Site-Specific Styles
-	 Custom styles for pnppl.cc elements
-	 ========================================================================== */
-
 .view {
 	counter-reset: h1;
 	margin-top: -1em;
 }
-/*.view pre:has(> code) { */
-/*	border-radius: 0.5em; */
-/*} */
 .view p > img:only-child {
 	display: block;
 	margin-right: auto;
@@ -2513,8 +1516,8 @@ a.navbar-item:active {
 .link-text {
 	text-decoration-line: underline;
 }
-.view a[href^="http"]::after, .view a[href^="//"]::after {
-/*	display: inline-block; */
+.view a[href^="http"]::after,
+.view a[href^="//"]::after {
 	content: "%";
 	font-weight: 900;
 	font-size: 0.6em;
@@ -2522,7 +1525,7 @@ a.navbar-item:active {
 	position: relative;
 	bottom: 0.1em;
 }
-.view a[href^="mailto\:"]::after {
+.view a[href^="mailto:"]::after {
 	content: "@";
 	font-weight: 100;
 	font-size: 0.6em;
@@ -2533,16 +1536,13 @@ a.navbar-item:active {
 	font-style: oblique;
 }
 .view a[href*="youtube.com"]::after {
-/*	display: inline-block; */
 	content: "|>";
 }
 .view a[href*="wikipedia.org"]::after {
-/*	display: inline-block; */
 	content: "W";
 	font-family: serif;
 }
 .view a[href$="pdf"]::after {
-/*	display: inline-block; */
 	content: "PDF";
 	font-family: inherit;
 	letter-spacing: 0.5px;
@@ -2629,7 +1629,6 @@ tt {
 	@font-face {
 		font-family: "Victor Mono Medium";
 		font-style: normal;
-		/* single-storey 'a', slashed zero, slashed 7 */
 		font-feature-settings: "ss01", "ss03", "ss06";
 		font-display: swap;
 		src:
@@ -2640,25 +1639,12 @@ tt {
 	@font-face {
 		font-family: "Victor Mono Medium";
 		font-style: italic;
-		/* single-storey 'a', slashed zero, slashed 7 */
 		font-feature-settings: "ss01", "ss03", "ss06";
 		font-display: swap;
 		src:
 			local("Victor Mono Medium Italic"),
 			local("VictorMono-MediumItalic"),
 			url(/public/font/VictorMono-MediumItalic.woff2) format("woff2");
-	}
-	table.calendar {
-		margin: auto;
-	}
-	.calendar .menu {
-		display: none;
-	}
-	.calendar a > .tag {
-		color: var(--bulma-code);
-	}
-	.calendar td {
-		padding: 0.5em 0.25em !important;
 	}
 }
 h1,
@@ -2695,21 +1681,15 @@ strong {
 	font-size: 150% !important;
 	font-weight: bold !important;
 }
-h1 {
-	font-size: 125% !important;
-}
+h1,
 h2 {
 	font-size: 125% !important;
 }
-h3 {
-	font-size: 110% !important;
-}
+h3,
 h4 {
 	font-size: 110% !important;
 }
-h5 {
-	font-size: 100% !important;
-}
+h5,
 h6 {
 	font-size: 100% !important;
 }
@@ -2736,7 +1716,6 @@ h6 {
 				border-width: 2px;
 				border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 				border-style: solid;
-				/*				background-color: #C0C0C0 !important; */
 				color: hsl(
 					var(--bulma-menu-item-h),
 					var(--bulma-menu-item-s),
@@ -2753,7 +1732,6 @@ h6 {
 				var(--bulma-menu-item-s),
 				var(--bulma-menu-item-color-l)
 			) !important;
-			/*			color: black !important; */
 		}
 		::marker {
 			color: black;
@@ -2806,11 +1784,47 @@ a.show-on-parent-hover:visited {
 .compat-hidden {
 	list-style: none !important;
 }
+/* Calendar desktop styles */
+.calendar {
+	td,
+	th {
+		width: calc(100% / 7);
+	}
+	td {
+		height: 8em;
+		overflow: hidden;
+		padding: 0 !important;
+		margin: 0;
+	}
+	a .page {
+		font-size: 0.7em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-clamp: 1;
+		color: purple;
+	}
+}
+table.calendar {
+	width: 100%;
+}
 @media (max-width: 767px) {
 	#table-of-contents-list {
 		float: none !important;
 		margin: 0;
 		max-width: 100% !important;
+	}
+	table.calendar {
+		margin: auto;
+	}
+	.calendar .menu {
+		display: none;
+	}
+	.calendar a > .tag {
+		color: var(--bulma-code);
+	}
+	.calendar td {
+		height: auto;
+		padding: 0.5em 0.25em !important;
 	}
 }
 h1.hashtag-name-noinc::before {
@@ -2852,11 +1866,9 @@ div.content {
 	word-break: break-word !important;
 	word-wrap: break-word !important;
 }
-/* i use this */
 .filename-right {
 	float: right;
 }
-/* weekdays */
 thead th {
 	padding-left: 10px !important;
 	word-break: keep-all !important;
@@ -2865,52 +1877,50 @@ time.has-text-grey {
 	display: block !important;
 	clear: both !important;
 }
-/* footer */
 #email {
 	float: left;
 	display: flex;
 	align-items: center;
 	height: 31px !important;
 }
-/* "dynamic" badge */
 body:has(h1:nth-of-type(2)) {
-	--badge: url("/public/badges/victor-8831-wide.gif");
+	--badge: url(/public/badges/victor-8831-wide.gif);
 }
 body:has(h1:nth-of-type(3)) {
-	--badge: url("/public/badges/copyleft.gif");
+	--badge: url(/public/badges/copyleft.gif);
 }
 body:has(h1:nth-of-type(4)) {
-	--badge: url("/public/badges/invalid-html.gif");
+	--badge: url(/public/badges/invalid-html.gif);
 }
 body:has(h1:nth-of-type(5)) {
-	--badge: url("/public/badges/invalid-xcss-red.gif");
+	--badge: url(/public/badges/invalid-xcss-red.gif);
 }
 body:has(h1:nth-of-type(6)) {
-	--badge: url("/public/badges/she-her.gif");
+	--badge: url(/public/badges/she-her.gif);
 }
 body:has(h1:nth-of-type(7)) {
-	--badge: url("/public/badges/bgdc-ga-j.gif");
+	--badge: url(/public/badges/bgdc-ga-j.gif);
 }
 body:has(h1:nth-of-type(8)) {
-	--badge: url("/public/badges/bgdc-tr-j.gif");
+	--badge: url(/public/badges/bgdc-tr-j.gif);
 }
 body:has(h1:nth-of-type(9)) {
-	--badge: url("/public/badges/bgdc-bi-j.gif");
+	--badge: url(/public/badges/bgdc-bi-j.gif);
 }
 body:has(h1:nth-of-type(10)) {
-	--badge: url("/public/badges/bgdc-gq-j.gif");
+	--badge: url(/public/badges/bgdc-gq-j.gif);
 }
 body:has(h1:nth-of-type(11)) {
-	--badge: url("/public/badges/fish-anim.gif");
+	--badge: url(/public/badges/fish-anim.gif);
 }
 body:has(h1:nth-of-type(12)) {
-	--badge: url("/public/badges/lain.gif");
+	--badge: url(/public/badges/lain.gif);
 }
 body:has(h1:nth-of-type(13)) {
-	--badge: url("/public/badges/gravity-wells.gif");
+	--badge: url(/public/badges/gravity-wells.gif);
 }
 body:has(h1:nth-of-type(14)) {
-	--badge: url("/public/badges/my-anarchy-now.gif");
+	--badge: url(/public/badges/my-anarchy-now.gif);
 }
 #badge {
 	content: var(--badge, url("/public/badges/nano-88x31.gif")) / "about";
@@ -2954,12 +1964,6 @@ time {
 		color: var(--bulma-title-color) !important;
 	}
 }
-
-/* ==========================================================================
-	 10. Code Highlighting (Chroma)
-	 Syntax highlighting for code blocks
-	 dracula style for dark, dracula-based greenbar for light
-	 ========================================================================== */
 .line {
 	counter-increment: lineNo;
 	width: 100%;
@@ -2973,14 +1977,18 @@ time {
 	margin-left: 1ch;
 	color: grey;
 }
+
+/* =============================================================
+	 Code Highlighting
+	 dark: dracula theme, light: 'greenbar' adapted from dracula
+	 =========================================================== */
 .chroma {
 	tab-size: 4;
 }
 pre.chroma {
 	display: inline-block;
 	max-width: 100%;
-	margin-right: 100%;
-
+	margin-right: inherit;
 	border-radius: 0;
 	border-style: dotted solid;
 	border-width: 2px 1px;
@@ -2993,34 +2001,38 @@ pre.chroma {
 code {
 	counter-reset: lineNo;
 }
-
-/* Greenbar */
 .chroma {
 	color: #1a1a1a;
 	background-color: white;
 	-webkit-text-size-adjust: none;
 }
-/* LineLink */ .chroma .lnlinks {
+/* LineLink */
+.chroma .lnlinks {
 	outline: none;
 	text-decoration: none;
 	color: inherit;
 }
-/* LineTableTD */ .chroma .lntd {
+/* LineTableTD */
+.chroma .lntd {
 	vertical-align: top;
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
-/* LineTable */ .chroma .lntable {
+/* LineTable */
+.chroma .lntable {
 	border-spacing: 0;
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
-/* LineHighlight */ .chroma .hl {
+/* LineHighlight */
+.chroma .hl {
 	background-color: #b8e6b8;
 }
-/* LineNumbers */ .chroma .ln, .chroma .lnt {
+/* LineNumbers */
+.chroma .ln,
+.chroma .lnt {
 	white-space: pre;
 	-webkit-user-select: none;
 	user-select: none;
@@ -3028,163 +2040,219 @@ code {
 	padding: 0 0.4em 0 0.4em;
 	color: #666666;
 }
-/* Line */ .chroma .line {
-/* counterintuitively this screws up tabs, but it at least fixes zebra stripes on ffx4
-	that makes one (1) thing that renders properly */
+/* Line */
+.chroma .line {
 	display: block;
 	display: flex;
 }
-/* KeywordDeclaration */ .chroma .kd {
-	color: #0066cc;
-	font-weight: bold;
-}
-/* Keyword */
-.chroma .k, .chroma .kc, .chroma .kn, .chroma .kp, .chroma .kr {
-	color: #c41a7f;
-	font-weight: bold;
-}
+/* KeywordDeclaration */
+.chroma .kd,
 /* KeywordType */ .chroma .kt {
 	color: #0066cc;
 	font-weight: bold;
 }
-/* NameAttribute */ .chroma .na {
-	color: #007a00;
-}
-/* NameClass */ .chroma .nc {
-	color: #007a00;
-	font-weight: bold;
-}
-/* NameLabel */ .chroma .nl {
-	color: #0066cc;
-}
-/* NameTag */ .chroma .nt {
+/* Keyword */
+.chroma .k,
+.chroma .kc,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+/* NameTag */ .chroma .nt,
+/* OperatorWord */ .chroma .ow {
 	color: #c41a7f;
 	font-weight: bold;
 }
-/* NameBuiltin */ .chroma .nb, .chroma .bp {
+/* NameAttribute */
+.chroma .na {
+	color: #007a00;
+}
+/* NameClass */
+.chroma .nc,
+/* NameFunction */ .chroma .nf,
+.chroma .fm {
+	color: #007a00;
+	font-weight: bold;
+}
+/* NameLabel */
+.chroma .nl {
+	color: #0066cc;
+}
+/* NameBuiltin */
+.chroma .nb,
+.chroma .bp {
 	color: #0066cc;
 }
 /* NameVariable */
-.chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi
-.chroma .vm {
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi .chroma .vm {
 	color: #005577;
 }
-/* NameFunction */ .chroma .nf, .chroma .fm {
-	color: #007a00;
-	font-weight: bold;
-}
-/* LiteralString */
-.chroma .sd, .chroma .s2, .chroma .se, .chroma .sh,
-.chroma .si, .chroma .sx, .chroma .sr, .chroma .s1,
-.chroma .ss, .chroma .dl, .chroma .sc, .chroma .sb,
-.chroma .sa, .chroma .s {
+.chroma .sd,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .sr,
+.chroma .s1,
+.chroma .ss,
+.chroma .dl,
+.chroma .sc,
+.chroma .sb,
+.chroma .sa,
+.chroma .s {
 	color: #c43e00;
 }
-/* LiteralNumber */
-.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh,
-.chroma .mi, .chroma .il, .chroma .mo {
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+/* LiteralNumber */ .chroma .mi,
+.chroma .il,
+.chroma .mo {
 	color: #7b1fa2;
 }
-/* Operator */ .chroma .o {
+/* Operator */
+.chroma .o {
 	color: #c41a7f;
 }
-/* Operator */ .chroma .ow {
-	color: #c41a7f;
-	font-weight: bold;
-}
-/* Comment */
-.chroma .c1, .chroma .cs, .chroma .cm, .chroma .ch, .chroma .c {
+.chroma .c1,
+.chroma .cs,
+.chroma .cm,
+.chroma .ch,
+.chroma .c {
 	color: #5c6370;
 	font-style: italic;
 }
-/* Comment */ .chroma .cp, .chroma .cpf {
+.chroma .cp,
+.chroma .cpf {
 	color: #c41a7f;
 	font-style: italic;
 }
-/* GenericDeleted */ .chroma .gd {
+/* GenericDeleted */
+.chroma .gd {
 	color: #b31d28;
 }
-/* GenericEmph */ .chroma .ge {
+/* GenericEmph */
+.chroma .ge,
+.chroma .gl {
 	text-decoration: underline;
 }
-/* GenericHeading */ .chroma .gh {
+.chroma .gh {
 	font-weight: bold;
 }
-/* GenericInserted */ .chroma .gi {
+/* GenericInserted */
+.chroma .gi {
 	color: #22863a;
 	font-weight: bold;
 }
-/* GenericOutput */ .chroma .go {
+.chroma .go {
 	color: #5c6370;
 }
-/* GenericSubheading */ .chroma .gu {
+.chroma .gu {
 	font-weight: bold;
 }
-/* GenericUnderline */ .chroma .gl {
-	text-decoration: underline;
-}
-/* zebra stripes */
 .line:nth-child(even) {
 	background-color: #d4f5d4;
 }
-
-/* Dracula */
 @media (prefers-color-scheme: dark) {
 	.chroma {
 		color: #f8f8f2;
 		background-color: #282a36;
 	}
-	.chroma .hl { background-color: #3d3f4a; }
-	.chroma .lnt, .chroma .ln { color: #7f7f7f; }
+	.chroma .hl {
+		background-color: #3d3f4a;
+	}
+	.chroma .lnt,
+	.chroma .ln {
+		color: #7f7f7f;
+	}
 	pre.chroma {
 		border-radius: 0.5em;
 		border-style: none;
 		box-shadow: none;
 	}
-	/* Keywords & Operators */
-	.chroma .k, .chroma .kc, .chroma .kn,
-	.chroma .kp, .chroma .kr, .chroma .o,
-	.chroma .ow, .chroma .nt, .chroma .cp,
-	.chroma .cpf { color: #ff79c6; font-weight: normal; }
-
-	/* Types & Variables (cyan) */
-	.chroma .kd, .chroma .kt, .chroma .nb,
-	.chroma .bp, .chroma .nv, .chroma .vc,
-	.chroma .vg, .chroma .vi, .chroma .vm,
-	.chroma .nl { color: #8be9fd; }
-
-	/* Functions & Classes (green) */
-	.chroma .na, .chroma .nc, .chroma .nf,
-	.chroma .fm { color: #50fa7b; font-weight: normal; }
-
-	/* Strings (yellow) */
-	.chroma .s, .chroma .sa, .chroma .sb,
-	.chroma .sc, .chroma .dl, .chroma .sd,
-	.chroma .s2, .chroma .se, .chroma .sh,
-	.chroma .si, .chroma .sx, .chroma .sr,
-	.chroma .s1, .chroma .ss { color: #f1fa8c; }
-
-	/* Numbers (purple) */
-	.chroma .m, .chroma .mb, .chroma .mf,
-	.chroma .mh, .chroma .mi, .chroma .il,
-	.chroma .mo { color: #bd93f9; }
-
-	/* Comments */
-	.chroma .c, .chroma .ch, .chroma .cm,
-	.chroma .c1, .chroma .cs { color: #6272a4; }
-
-	/* Generic */
-	.chroma .gd { color: #ff5555; }
-	.chroma .gi { color: #50fa7b; }
-	.chroma .go { color: #44475a; }
-
-	/* zebra stripes */
+	.chroma .k,
+	.chroma .kc,
+	.chroma .kn,
+	.chroma .kp,
+	.chroma .kr,
+	.chroma .o,
+	.chroma .ow,
+	.chroma .nt,
+	.chroma .cp,
+	.chroma .cpf {
+		color: #ff79c6;
+		font-weight: normal;
+	}
+	.chroma .kd,
+	.chroma .kt,
+	.chroma .nb,
+	.chroma .bp,
+	.chroma .nv,
+	.chroma .vc,
+	.chroma .vg,
+	.chroma .vi,
+	.chroma .vm,
+	.chroma .nl {
+		color: #8be9fd;
+	}
+	.chroma .na,
+	.chroma .nc,
+	.chroma .nf,
+	.chroma .fm {
+		color: #50fa7b;
+		font-weight: normal;
+	}
+	/* LiteralString */
+	.chroma .s,
+	.chroma .sa,
+	.chroma .sb,
+	.chroma .sc,
+	.chroma .dl,
+	.chroma .sd,
+	.chroma .s2,
+	.chroma .se,
+	.chroma .sh,
+	.chroma .si,
+	.chroma .sx,
+	.chroma .sr,
+	.chroma .s1,
+	.chroma .ss {
+		color: #f1fa8c;
+	}
+	.chroma .m,
+	.chroma .mb,
+	.chroma .mf,
+	.chroma .mh,
+	.chroma .mi,
+	.chroma .il,
+	.chroma .mo {
+		color: #bd93f9;
+	}
+	/* Comment */
+	.chroma .c,
+	.chroma .ch,
+	.chroma .cm,
+	.chroma .c1,
+	.chroma .cs {
+		color: #6272a4;
+	}
+	.chroma .gd {
+		color: #ff5555;
+	}
+	.chroma .gi {
+		color: #50fa7b;
+	}
+	.chroma .go {
+		color: #44475a;
+	}
 	.line:nth-child(even) {
 		background-color: rgba(0, 0, 0, 0.15);
 	}
 }
-
-/* ========== 11. misc =========== */
 a.onebitday {
 	text-decoration: none;
 }
@@ -3193,37 +2261,44 @@ img.onebitday {
 	image-rendering: pixelated;
 	border: 4px solid black;
 }
-/* this id was an offpunk hack; realized i can move these mysterious inline styles here */
 #article {
 	view-transition-name: page-content;
 }
 #pagetitle {
 	view-transition-name: page-title;
 }
-/* ridiculous unicode-to-ascii-to-unicode hack */
-.mdash::after { content: "\2014"; }
-.ndash::after { content: "\2013"; }
-.hellip::after { content: "\2026"; }
-.lsquo::after { content: "\2018"; }
-.rsquo::after { content: "\2019"; }
-.ldquo::after { content: "\201C"; }
-.rdquo::after { content: "\201D"; }
-/*.laquo::after { content: "\00AB"; } */
-/*.raquo::after { content: "\00BB"; } */
-/*.iquest::after { content: "\00BF"; } */
-/*.iexcl::after { content: "\00A1"; } */
-.ne::after { content: "\2260"; }
-.asymp::after { content: "\2248"; }
-.ge::after { content: "\2265"; }
-.le::after { content: "\2264"; }
-/*.ntilde::after{ content: "\00F1"; } */
-/*.Ntilde::after { content: "\00D1"; } */
-
-.calendar td {
-/*	width: 14%; */
+.mdash::after {
+	content: "—";
 }
-table.calendar {
-	width: 100%;
+.ndash::after {
+	content: "–";
+}
+.hellip::after {
+	content: "…";
+}
+.lsquo::after {
+	content: "‘";
+}
+.rsquo::after {
+	content: "’";
+}
+.ldquo::after {
+	content: "“";
+}
+.rdquo::after {
+	content: "”";
+}
+.ne::after {
+	content: "≠";
+}
+.asymp::after {
+	content: "≈";
+}
+.ge::after {
+	content: "≥";
+}
+.le::after {
+	content: "≤";
 }
 pre.indented {
 	all: inherit;
