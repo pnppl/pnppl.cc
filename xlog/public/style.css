@@ -935,7 +935,7 @@ a.navbar-item:active {
    Utilities
    ========================================================================== */
 .has-text-grey {
-	color: #69748c !important;
+	color: #69748c;
 }
 .is-clearfix::after {
 	clear: both;
@@ -943,26 +943,26 @@ a.navbar-item:active {
 	display: table;
 }
 .mb-5 {
-	margin-bottom: 1.5rem !important;
+	margin-bottom: 1.5rem;
 }
 .px-3 {
-	padding-left: 0.75rem !important;
-	padding-right: 0.75rem !important;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
 }
 .pb-5 {
-	padding-bottom: 1.5rem !important;
+	padding-bottom: 1.5rem;
 }
 .is-size-7 {
-	font-size: 0.75rem !important;
+	font-size: 0.75rem;
 }
 .is-hidden {
-	display: none !important;
+	display: none;
 }
 .is-block {
-	display: block !important;
+	display: block;
 }
 .compat-hidden {
-	list-style: none !important;
+	list-style: none;
 }
 .autolink {
 	text-decoration-line: underline;
@@ -1154,11 +1154,14 @@ a.show-on-parent-hover:active,
 a.show-on-parent-hover:focus {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 }
-a.navbar-item:visited,
-a.show-on-parent-hover:visited {
+a.navbar-item:visited {
 	color: black;
 }
+a.show-on-parent-hover:visited {
+	color: #69748c;
+}
 a.show-on-parent-hover {
+	color: #69748c;
 	font-style: normal;
 	padding: 0 5px 2px 5px;
 }
