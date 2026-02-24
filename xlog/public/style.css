@@ -818,7 +818,6 @@ h1.hashtag-name-noinc::before {
 	list-style: none;
 }
 .view input[type="checkbox"] {
-	-webkit-appearance: none;
 	appearance: none;
 	background-color: transparent;
 	margin: 0 0.3em 0 0;
@@ -1087,7 +1086,6 @@ img.onebitday {
 	color: #1a1a1a;
 	background-color: white;
 	tab-size: 4;
-	-webkit-text-size-adjust: none;
 }
 pre.chroma {
 	display: inline-block;
@@ -1147,7 +1145,6 @@ pre.chroma {
 .chroma .ln,
 .chroma .lnt {
 	white-space: pre;
-	-webkit-user-select: none;
 	user-select: none;
 	margin-right: 0.4em;
 	padding: 0 0.4em 0 0.4em;

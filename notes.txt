@@ -216,7 +216,7 @@ low priority/done:
 		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
-- i would like to test the site on a legacy mobile device. many of them, rally. the tungsten would be a convenient first. so far:
+- i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first. so far:
 	- LibreWolf 147 / Firefox ESR 140 / IronFox (mobile) 147
 		- Fine obviously
 	- NCSA Mosaic 2.7b6, appimage
