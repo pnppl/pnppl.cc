@@ -216,9 +216,36 @@ low priority/done:
 		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
+- i would like to test the site on a legacy mobile device. many of them, rally. the tungsten would be a convenient first. so far:
+	- LibreWolf 147 / Firefox ESR 140 / IronFox (mobile) 147
+		- Fine obviously
+	- NCSA Mosaic 2.7b6, appimage
+		- HTML only obviously. fine
+	- Firefox 4.0, native
+		- Actually looks pretty damn good with the compat hacks
+		- > You went from "unstyled fallback only" to "looks great in 2010-era browsers" with 12 lines of CSS. That's a pretty good stopping point.
+	- Offpunk
+		- many pages don't render without forcing 'full'
+			- 'full' renders logo taking entire page
+			- navigation with the feed is the best option
+		- footnote <sup>s don't render
+			- sometimes footnotes don't either
+		- see also, etc., don't render
+		- big differences between 2.7.1 from repo and latest git
+	- Lynx, Elinks, Links2
+		- pretty much works great
+	- Netscape 7.2, wine
+		- Pretty janky and there's no convenient way to disable CSS but a surprising amount of stuff renders about right. Kinda just looks stretched out
+	- Netscape 4.0, wine
+		- absolute clusterfuck until you disable CSS globally in the preferences
+	- Wine's iexplore
+		- Everything is basically perfect except the TOC items are missing the white background
+		- > But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
 
 longterm notions
 - replace css with something much smaller and more compatible
 - support other delivery formats like epub
+	- i should be able to do this relatively easily with pandoc. i think i need to render p.Content() to files then feed those to it
 - visual graph
 - other protocols like gopher
+
