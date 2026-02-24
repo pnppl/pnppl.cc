@@ -501,6 +501,8 @@ a.tag:active {
 .menu-list a,
 .menu-list button {
 	appearance: none;
+	/* compat: white fallback before var() for pre-custom-property browsers */
+	background-color: white;
 	background-color: hsl(221, 14%, calc(var(--scheme-main-l) + var(--menu-item-background-l-delta)));
 	border: none;
 	border-radius: var(--radius-small);
@@ -581,6 +583,8 @@ nav.navbar {
 }
 .navbar > .container {
 	align-items: stretch;
+	/* compat: inline-block fallback before flex for pre-flexbox browsers */
+	text-align: center;
 	display: flex;
 	min-height: var(--navbar-height);
 	width: 100%;
@@ -593,13 +597,21 @@ nav.navbar {
 }
 .navbar-item {
 	color: var(--text);
-	display: block;
+	/* compat: inline-block rather than block so items flow
+	   horizontally in pre-flexbox browsers (flex overrides either way) */
+	display: inline-block;
+	vertical-align: middle;
 	flex-grow: 1;
 	justify-content: center;
 	line-height: 1.5;
 	padding: 0.5rem 0.75rem;
 	position: relative;
 	white-space: nowrap;
+}
+.navbar-item .icon {
+	/* compat: hide navbar icons in pre-flex browsers */
+	display: none;
+	display: var(--compat, inline-flex);
 }
 .navbar-item .icon:only-child {
 	margin-left: -0.25rem;
@@ -691,6 +703,7 @@ a.navbar-item {
 	display: block;
 }
 .compat-hidden {
+	display: inline;
 	list-style: none;
 }
 .autolink {
@@ -914,7 +927,9 @@ a.show-on-parent-hover {
 #table-of-contents-list ol {
 	list-style: decimal;
 	margin-top: 0.25em;
-	padding-left: 0.25em;
+	/* compat: 2em room for list markers; var() restores 0.25em in modern browsers */
+	padding-left: 2em;
+	padding-left: var(--compat, 0.25em);
 }
 #table-of-contents-list ol a {
 	border: 2px solid;
@@ -971,6 +986,9 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 }
 #email {
 	float: left;
+	/* compat: padding + line-height fallback for vertical centering before flex */
+	padding: 0 0.75rem;
+	line-height: 31px;
 	display: flex;
 	align-items: center;
 	height: 31px;
@@ -1009,6 +1027,8 @@ time.has-text-grey {
 /* Calendar */
 .calendar td,
 .calendar th {
+	/* compat: fixed percentage before calc() for pre-calc browsers */
+	width: 14.2857%;
 	width: calc(100% / 7);
 }
 table.calendar td {
