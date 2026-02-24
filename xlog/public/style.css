@@ -2,73 +2,32 @@
    Variables
    ========================================================================== */
 :root {
-	--scheme-h: 221;
-	--scheme-s: 14%;
-	--hover-background-l-delta: -5%;
-	--active-background-l-delta: -10%;
-	--hover-border-l-delta: -10%;
-	--active-border-l-delta: -20%;
+	/* Lightness values that change in dark mode */
 	--scheme-main-l: 100%;
 	--background-l: 96%;
 	--border-l: 86%;
-	--text-weak-l: 48%;
+	--text-l: 29%;
 	--text-strong-l: 21%;
+	--link-on-scheme-l: 58%;
+	--danger-on-scheme-l: 40%;
+	--hover-background-l-delta: -5%;
+	--active-background-l-delta: -10%;
+
+
+	/* Computed colors (depend on lightness values above) */
+	--scheme-main: hsl(221, 14%, var(--scheme-main-l));
+	--background: hsl(221, 14%, var(--background-l));
+	--border: hsl(221, 14%, var(--border-l));
+	--text: hsl(221, 14%, var(--text-l));
+	--text-strong: hsl(221, 14%, var(--text-strong-l));
+	--code: hsl(348, 100%, var(--danger-on-scheme-l));
+
+	/* Constants */
 	--size-small: 0.75rem;
 	--size-normal: 1rem;
 	--duration: 294ms;
 	--radius-small: 0.25rem;
 	--radius: 0.375rem;
-	--text: hsl(
-		var(--text-h),
-		var(--text-s),
-		var(--text-l)
-	);
-	--text-h: 221deg;
-	--text-s: 14%;
-	--text-l: 29%;
-	--link-h: 233deg;
-	--link-s: 100%;
-	--link-on-scheme-l: 58%;
-	--danger: hsl(
-		var(--danger-h),
-		var(--danger-s),
-		var(--danger-l)
-	);
-	--danger-h: 348deg;
-	--danger-s: 100%;
-	--danger-l: 70%;
-	--danger-invert-l: 5%;
-	--danger-invert: hsl(
-		var(--danger-h),
-		var(--danger-s),
-		var(--danger-invert-l)
-	);
-	--danger-on-scheme-l: 40%;
-	--scheme-main: hsl(
-		var(--scheme-h),
-		var(--scheme-s),
-		var(--scheme-main-l)
-	);
-	--background: hsl(
-		var(--scheme-h),
-		var(--scheme-s),
-		var(--background-l)
-	);
-	--border: hsl(
-		var(--scheme-h),
-		var(--scheme-s),
-		var(--border-l)
-	);
-	--text-strong: hsl(
-		var(--text-h),
-		var(--text-s),
-		var(--text-strong-l)
-	);
-	--code: hsl(
-		var(--danger-h),
-		var(--danger-s),
-		var(--danger-on-scheme-l)
-	);
 	--hr-height: 2px;
 	--navbar-height: 3.25rem;
 	--column-gap: 0.75rem;
@@ -120,12 +79,6 @@ table {
 td,
 th {
 	padding: 0;
-}
-article,
-aside,
-header,
-section {
-	display: block;
 }
 body {
 	color: var(--text);
@@ -189,10 +142,6 @@ strong {
 time {
 	font-weight: bold;
 }
-span {
-	font-style: inherit;
-	font-weight: inherit;
-}
 .title {
 	word-break: break-word;
 	color: var(--text-strong);
@@ -235,30 +184,15 @@ button {
 }
 a:focus-visible,
 button:focus-visible {
-	outline-color: hsl(
-		var(--link-h),
-		var(--link-s),
-		63%
-	);
+	outline: 2px solid hsl(233, 100%, 63%);
 	outline-offset: 1px;
-	outline-style: solid;
-	outline-width: 2px;
-}
-a:focus-visible:active,
-button:focus-visible:active {
-	outline-width: 1px;
 }
 a:active,
 button:active {
 	outline-width: 1px;
 }
 a {
-	color: hsl(
-		var(--link-h),
-		var(--link-s),
-		var(--link-on-scheme-l)
-	);
-	cursor: pointer;
+	color: hsl(233, 100%, var(--link-on-scheme-l));
 	text-decoration: underline;
 	transition-duration: var(--duration);
 	transition-property: background-color, border-color, color;
@@ -345,7 +279,6 @@ summary::marker {
 
 /* Block spacing ----------------------------------------------------------- */
 .message:not(:last-child),
-.card:not(:last-child),
 .title:not(:last-child),
 .table:not(:last-child),
 .content:not(:last-child),
@@ -353,88 +286,29 @@ summary::marker {
 	margin-bottom: 1.5rem;
 }
 
-/* Input & Button shared --------------------------------------------------- */
+/* Input ------------------------------------------------------------------- */
 .input:focus,
-.button:focus,
 .input:focus-visible,
-.button:focus-visible,
 .input:focus-within,
-.button:focus-within,
-.input:active,
-.button:active {
+.input:active {
 	outline: none;
-}
-[disabled].input,
-[disabled].button {
-	cursor: not-allowed;
-}
-.is-small.input {
-	border-radius: var(--radius-small);
-	font-size: var(--size-small);
 }
 
 /* Button ------------------------------------------------------------------ */
+/* Base layout only; visual style (bg, border, color) set by Win95 Chrome */
 .button {
-	--button-border-width: 1px;
-	--button-padding-horizontal: 1em;
-	--button-h: var(--scheme-h);
-	--button-s: var(--scheme-s);
-	--button-background-l: var(--scheme-main-l);
-	--button-background-l-delta: 0%;
-	--button-color-l: var(--text-strong-l);
-	--button-border-l: var(--border-l);
-	--button-border-l-delta: 0%;
 	align-items: center;
 	appearance: none;
-	background-color: hsl(
-		var(--button-h),
-		var(--button-s),
-		calc(
-			var(--button-background-l) + var(--button-background-l-delta)
-		)
-	);
-	border-color: hsl(
-		var(--button-h),
-		var(--button-s),
-		calc(var(--button-border-l) + var(--button-border-l-delta))
-	);
-	border-radius: var(--radius);
-	border-style: solid;
-	border-width: var(--button-border-width);
-	box-shadow: none;
-	color: hsl(
-		var(--button-h),
-		var(--button-s),
-		var(--button-color-l)
-	);
 	cursor: pointer;
 	display: inline-flex;
 	font-size: var(--size-normal);
 	font-weight: 500;
-	height: auto;
 	justify-content: center;
 	line-height: 1.5;
-	padding-bottom: calc(
-		0.5em - var(--button-border-width)
-	);
-	padding-left: calc(
-		var(--button-padding-horizontal) - var(--button-border-width)
-	);
-	padding-right: calc(
-		var(--button-padding-horizontal) - var(--button-border-width)
-	);
-	padding-top: calc(
-		0.5em - var(--button-border-width)
-	);
+	padding: calc(0.5em - 1px) calc(1em - 1px);
 	position: relative;
-	text-align: center;
-	transition-duration: var(--duration);
-	transition-property: background-color, border-color, box-shadow, color;
 	user-select: none;
 	white-space: nowrap;
-}
-.button strong {
-	color: inherit;
 }
 .button .icon,
 .button .icon.is-small {
@@ -442,63 +316,18 @@ summary::marker {
 	width: 1.5em;
 }
 .button .icon:first-child:not(:last-child) {
-	margin-inline-start: calc(-0.5 * var(--button-padding-horizontal));
-	margin-inline-end: calc(var(--button-padding-horizontal) * 0.25);
+	margin-inline-start: -0.5em;
+	margin-inline-end: 0.25em;
 }
 .button .icon:last-child:not(:first-child) {
-	margin-inline-start: calc(var(--button-padding-horizontal) * 0.25);
-	margin-inline-end: calc(-0.5 * var(--button-padding-horizontal));
+	margin-inline-start: 0.25em;
+	margin-inline-end: -0.5em;
 }
 .button .icon:first-child:last-child {
-	margin-inline-start: calc(-0.5 * var(--button-padding-horizontal));
-	margin-inline-end: calc(-0.5 * var(--button-padding-horizontal));
-}
-.button:hover {
-	--button-background-l-delta: var(
-		--hover-background-l-delta
-	);
-	--button-border-l-delta: var(--hover-border-l-delta);
-}
-.button:focus-visible {
-	--button-border-width: 1px;
-	border-color: hsl(
-		var(--link-h),
-		var(--link-s),
-		63%
-	);
-	box-shadow: none;
-}
-.button:active {
-	--button-background-l-delta: var(
-		--active-background-l-delta
-	);
-	--button-border-l-delta: var(--active-border-l-delta);
-}
-.button[disabled] {
-	background-color: var(--scheme-main);
-	border-color: var(--border);
-	box-shadow: none;
-	opacity: 0.5;
-}
-.button.is-danger {
-	--button-h: var(--danger-h);
-	--button-s: var(--danger-s);
-	--button-background-l: var(--danger-l);
-	--button-border-l: var(--danger-l);
-	--button-border-width: 0px;
-	--button-color-l: var(--danger-invert-l);
-}
-.button.is-danger:focus-visible {
-	--button-border-width: 1px;
-}
-.button.is-danger[disabled] {
-	background-color: var(--danger);
-	border-color: var(--danger);
-	box-shadow: none;
+	margin-inline: -0.5em;
 }
 .button.is-small {
 	font-size: var(--size-small);
-	border-radius: var(--radius-small);
 }
 .buttons {
 	align-items: center;
@@ -628,21 +457,7 @@ div.icon-text {
 /* Table ------------------------------------------------------------------- */
 .table td,
 .table th {
-	background-color: var(--table-cell-background-color);
-	border-color: var(--table-cell-border-color);
-	color: var(--table-color);
 	vertical-align: top;
-}
-.table td.is-danger,
-.table th.is-danger,
-.table tr.is-danger {
-	--table-color: var(--danger-invert);
-	--table-cell-heading-color: var(--danger-invert);
-	--table-cell-background-color: var(--danger);
-	--table-cell-border-color: var(--danger);
-}
-.table th {
-	color: var(--table-cell-heading-color);
 }
 .table tbody tr:last-child td,
 .table tbody tr:last-child th {
@@ -651,19 +466,11 @@ div.icon-text {
 
 /* Tag --------------------------------------------------------------------- */
 .tag {
-	--tag-h: var(--scheme-h);
-	--tag-s: var(--scheme-s);
-	--tag-background-l: var(--background-l);
 	--tag-background-l-delta: 0%;
-	--tag-color-l: var(--text-l);
 	align-items: center;
-	background-color: hsl(
-		var(--tag-h),
-		var(--tag-s),
-		calc(var(--tag-background-l) + var(--tag-background-l-delta))
-	);
+	background-color: hsl(221, 14%, calc(var(--background-l) + var(--tag-background-l-delta)));
 	border-radius: var(--radius);
-	color: hsl(var(--tag-h), var(--tag-s), var(--tag-color-l));
+	color: var(--text);
 	display: inline-flex;
 	font-size: var(--size-small);
 	height: 2em;
@@ -672,12 +479,6 @@ div.icon-text {
 	padding-left: 0.75em;
 	padding-right: 0.75em;
 	white-space: nowrap;
-}
-.tag.is-danger {
-	--tag-h: var(--danger-h);
-	--tag-s: var(--danger-s);
-	--tag-background-l: var(--danger-l);
-	--tag-color-l: var(--danger-invert-l);
 }
 a.tag {
 	cursor: pointer;
@@ -691,10 +492,7 @@ a.tag:active {
 
 /* Menu -------------------------------------------------------------------- */
 .menu {
-	--menu-item-h: var(--scheme-h);
-	--menu-item-s: var(--scheme-s);
 	--menu-item-background-l-delta: 0%;
-	--menu-item-color-l: var(--text-l);
 	font-size: var(--size-normal);
 }
 .menu-list {
@@ -703,21 +501,10 @@ a.tag:active {
 .menu-list a,
 .menu-list button {
 	appearance: none;
-	background-color: hsl(
-		var(--menu-item-h),
-		var(--menu-item-s),
-		calc(
-			var(--scheme-main-l) +
-				var(--menu-item-background-l-delta)
-		)
-	);
+	background-color: hsl(221, 14%, calc(var(--scheme-main-l) + var(--menu-item-background-l-delta)));
 	border: none;
 	border-radius: var(--radius-small);
-	color: hsl(
-		var(--menu-item-h),
-		var(--menu-item-s),
-		var(--menu-item-color-l)
-	);
+	color: var(--text);
 	display: block;
 	font-family: inherit;
 	font-size: 1em;
@@ -728,15 +515,11 @@ a.tag:active {
 }
 .menu-list a:hover,
 .menu-list button:hover {
-	--menu-item-background-l-delta: var(
-		--hover-background-l-delta
-	);
+	--menu-item-background-l-delta: var(--hover-background-l-delta);
 }
 .menu-list a:active,
 .menu-list button:active {
-	--menu-item-background-l-delta: var(
-		--active-background-l-delta
-	);
+	--menu-item-background-l-delta: var(--active-background-l-delta);
 }
 .menu-list li ul {
 	border-inline-start: 1px solid var(--border);
@@ -746,18 +529,14 @@ a.tag:active {
 
 /* Message ----------------------------------------------------------------- */
 .message {
-	--message-h: var(--scheme-h);
-	--message-s: var(--scheme-s);
+	--message-h: 221;
+	--message-s: 14%;
 	--message-border-l: var(--border-l);
 	--message-color-l: var(--text-l);
 	--message-header-background-l: 21%;
 	--message-header-color-l: 69%;
 	border-radius: var(--radius);
-	color: hsl(
-		var(--message-h),
-		var(--message-s),
-		var(--message-color-l)
-	);
+	color: hsl(var(--message-h), var(--message-s), var(--message-color-l));
 	font-size: var(--size-normal);
 }
 .message strong {
@@ -768,41 +547,23 @@ a.tag:active {
 	text-decoration: underline;
 }
 .message.is-danger {
-	--message-h: var(--danger-h);
-	--message-s: var(--danger-s);
-	--message-border-l: calc(var(--danger-l) - 20%);
+	--message-h: 348;
+	--message-s: 100%;
+	--message-border-l: 50%;
 	--message-color-l: var(--danger-on-scheme-l);
-	--message-header-background-l: var(--danger-l);
-	--message-header-color-l: var(--danger-invert-l);
+	--message-header-background-l: 70%;
+	--message-header-color-l: 5%;
 }
 .message-body {
-	background-color: hsl(
-		var(--message-h),
-		var(--message-s),
-		var(--background-l)
-	);
-	border-inline-start-color: hsl(
-		var(--message-h),
-		var(--message-s),
-		var(--message-border-l)
-	);
-	border-inline-start-style: solid;
-	border-inline-start-width: 0.25em;
+	background-color: hsl(var(--message-h), var(--message-s), var(--background-l));
+	border-inline-start: 0.25em solid hsl(var(--message-h), var(--message-s), var(--message-border-l));
 	border-radius: var(--radius-small);
 	padding: 1.25em 1.5em;
 }
 .message-body code,
 .message-body pre {
-	background-color: hsl(
-		var(--message-h),
-		var(--message-s),
-		var(--message-header-color-l)
-	);
-	color: hsl(
-		var(--message-h),
-		var(--message-s),
-		var(--message-header-background-l)
-	);
+	background-color: hsl(var(--message-h), var(--message-s), var(--message-header-color-l));
+	color: hsl(var(--message-h), var(--message-s), var(--message-header-background-l));
 }
 .message-body pre code {
 	background-color: transparent;
@@ -813,8 +574,6 @@ nav.navbar {
 	padding-top: 0.75em;
 }
 .navbar {
-	--navbar-item-background-a: 0;
-	--navbar-item-background-l-delta: 0%;
 	background-color: var(--scheme-main);
 	min-height: var(--navbar-height);
 	position: relative;
@@ -833,59 +592,29 @@ nav.navbar {
 	min-height: var(--navbar-height);
 }
 .navbar-item {
-	border-radius: var(--radius);
-	color: hsl(
-		var(--scheme-h),
-		var(--scheme-s),
-		var(--text-l)
-	);
+	color: var(--text);
 	display: block;
+	flex-grow: 1;
+	justify-content: center;
 	line-height: 1.5;
 	padding: 0.5rem 0.75rem;
 	position: relative;
+	white-space: nowrap;
 }
 .navbar-item .icon:only-child {
 	margin-left: -0.25rem;
 	margin-right: -0.25rem;
 }
 a.navbar-item {
-	background-color: hsla(
-		var(--scheme-h),
-		var(--scheme-s),
-		calc(
-			var(--scheme-main-l) +
-				var(--navbar-item-background-l-delta)
-		),
-		var(--navbar-item-background-a)
-	);
 	cursor: pointer;
-}
-a.navbar-item:focus,
-a.navbar-item:focus-within,
-a.navbar-item:hover {
-	--navbar-item-background-l-delta: var(
-		--hover-background-l-delta
-	);
-	--navbar-item-background-a: 1;
-}
-a.navbar-item:active {
-	--navbar-item-background-l-delta: var(
-		--active-background-l-delta
-	);
-	--navbar-item-background-a: 1;
 }
 .navbar-item img {
 	max-height: 1.75rem;
 }
 .navbar,
 .navbar-menu,
-.navbar-start,
-.navbar-item {
+.navbar-start {
 	flex-grow: 1;
-}
-.navbar-item {
-	justify-content: center;
-	white-space: nowrap;
 }
 .navbar-end {
 	flex-grow: 0;
@@ -1040,21 +769,21 @@ h1.hashtag-name-noinc::before {
 	text-decoration-line: none;
 }
 .view a[href^="http"]::after,
+.view a[href^="//"]::after,
+.view a[href^="mailto:"]::after {
+	font-size: 0.6em;
+	margin-left: 0.4em;
+	position: relative;
+	bottom: 0.1em;
+}
+.view a[href^="http"]::after,
 .view a[href^="//"]::after {
 	content: "%";
 	font-weight: 900;
-	font-size: 0.6em;
-	margin: 0 0 0 0.4em;
-	position: relative;
-	bottom: 0.1em;
 }
 .view a[href^="mailto:"]::after {
 	content: "@";
 	font-weight: 100;
-	font-size: 0.6em;
-	margin: 0 0 0 0.4em;
-	position: relative;
-	bottom: 0.1em;
 	font-family: sans-serif;
 	font-style: oblique;
 }
@@ -1118,11 +847,7 @@ h4:target,
 h5:target,
 h6:target,
 li:target {
-	background-color: hsl(
-		var(--scheme-h),
-		var(--scheme-s),
-		calc(var(--background-l) + var(--hover-background-l-delta))
-	);
+	background-color: hsl(221, 14%, calc(var(--background-l) + var(--hover-background-l-delta)));
 	background-clip: content-box;
 }
 a.footnote-ref:target {
@@ -1138,9 +863,8 @@ a.button,
 a.button.is-small,
 a.show-on-parent-hover {
 	text-decoration: none;
-	border-width: 2px;
+	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
-	border-style: solid;
 	background-color: #c0c0c0;
 	color: black;
 	border-radius: 0;
@@ -1179,9 +903,8 @@ a.show-on-parent-hover {
 	text-decoration: none;
 }
 #table-of-contents-list {
-	border-width: 2px;
+	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
-	border-style: solid;
 	background-color: #c0c0c0;
 	float: right;
 	max-width: 33%;
@@ -1194,23 +917,14 @@ a.show-on-parent-hover {
 	padding-left: 0.25em;
 }
 #table-of-contents-list ol a {
-	border-width: 2px;
+	border: 2px solid;
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
-	border-style: solid;
-	color: hsl(
-		var(--menu-item-h),
-		var(--menu-item-s),
-		var(--menu-item-color-l)
-	);
+	color: var(--text);
 	border-radius: 0;
 	width: auto;
 }
 #table-of-contents-list a {
-	color: hsl(
-		var(--menu-item-h),
-		var(--menu-item-s),
-		var(--menu-item-color-l)
-	);
+	color: var(--text);
 }
 #table-of-contents-list ::marker {
 	color: black;
@@ -1303,6 +1017,9 @@ table.calendar td {
 	padding: 0;
 	margin: 0;
 }
+table.calendar td a:focus-visible {
+	outline-offset: -2px;
+}
 .calendar a .page {
 	font-size: 0.7em;
 	overflow: hidden;
@@ -1344,7 +1061,7 @@ img.onebitday {
 .le::after     { content: "\2264"; }
 
 /* ==========================================================================
-   Code Highlighting (light: greenbar, dark: dracula; see dark mode below)
+   Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
    ========================================================================== */
 .chroma {
 	color: #1a1a1a;
@@ -1680,13 +1397,12 @@ pre.chroma {
 		--scheme-main-l: 0%;
 		--background-l: 14%;
 		--border-l: 24%;
-		--text-weak-l: 53%;
+
 		--text-l: 71%;
 		--text-strong-l: 93%;
 		--hover-background-l-delta: 5%;
 		--active-background-l-delta: 10%;
-		--hover-border-l-delta: 10%;
-		--active-border-l-delta: 20%;
+
 	}
 	a:visited,
 	.menu-list a:visited {
