@@ -1,0 +1,127 @@
+Bulma
+-----
+  .box
+    tmpl/commands.html
+  .card-content
+    ext/photos/templates/photos.html
+  .card-image
+    ext/photos/templates/photos.html
+  .cell
+    tmpl/pages-grid.html
+  .control
+    tmpl/commands.html
+  .dropdown
+    tmpl/page.html
+  .dropdown-content
+    tmpl/page.html
+  .dropdown-menu
+    tmpl/page.html
+  .dropdown-trigger
+    tmpl/page.html
+  .field
+    tmpl/commands.html
+  .grid
+    xlog/public/chroma_styles.html
+    tmpl/pages-grid.html
+  .is-active
+    tmpl/commands.html
+  .is-bordered
+    ext/date/templates/calendar.html
+  .is-col-min-10
+    tmpl/pages-grid.html
+  .is-fullwidth
+    ext/date/templates/calendar.html
+  .is-hidden-touch
+    ext/toc/templates/toc.html
+  .is-hoverable
+    ext/date/templates/calendar.html
+    tmpl/page.html
+  .is-info
+    ext/date/templates/calendar.html
+    ext/shortcode/shortcode.go
+  .is-inline-block
+    ext/photos/templates/photos-grid.html
+  .is-pulled-left
+    ext/date/templates/date_pages.html
+    ext/hashtags/templates/tag_pages.html
+    ext/hashtags/templates/tags.html
+    ext/hashtags/templates/tags_pages.html
+    ext/recent/templates/recent_pages.html
+    tmpl/pages.html
+  .is-right
+    tmpl/page.html
+  .is-rounded
+    ext/autolink_pages/renderer.go
+  .is-success
+    ext/autolink_pages/renderer.go
+    ext/shortcode/shortcode.go
+  .is-warning
+    ext/shortcode/shortcode.go
+  .mb-3
+    tmpl/pages-grid.html
+  .modal
+    tmpl/commands.html
+  .modal-background
+    tmpl/commands.html
+  .modal-card
+    tmpl/commands.html
+  .mr-3
+    ext/date/templates/date_pages.html
+    ext/hashtags/templates/tag_pages.html
+    ext/hashtags/templates/tags.html
+    ext/hashtags/templates/tags_pages.html
+    ext/recent/templates/recent_pages.html
+    tmpl/pages.html
+  .notification
+    ext/date/templates/calendar.html
+    tmpl/pages-grid.html
+  .p-1
+    tmpl/commands.html
+  .pb-6
+    ext/hashtags/templates/tags.html
+
+Font Awesome
+------------
+  .fa-clock
+    ext/date/renderer.go
+  .fa-ellipsis
+    tmpl/page.html
+  .fa-info
+    tmpl/page.html
+  .fa-regular
+    ext/date/renderer.go
+  .fa-solid
+    tmpl/page.html
+
+Goldmark
+--------
+  .footnotes
+    md/extension/footnote.go
+  .language-
+    md/highlighting/highlighting.go
+    md/renderer/html/html.go
+
+Chroma
+------
+  .nx
+    xlog/public/preview-chroma-light.html
+  .p
+    xlog/public/preview-chroma-light.html
+
+Demo / non-production
+---------------------
+  .count-particles
+    xlog/docs/header-particles.html
+  .input-container
+    md/wikilink/demo/static/index.html
+  .output-container
+    md/wikilink/demo/static/index.html
+  .preview
+    xlog/public/chroma_styles.html
+
+Inactive extension
+------------------
+  .emoji
+    md/emoji/emoji.go
+
+Total: 49 classes referenced in source but missing from CSS

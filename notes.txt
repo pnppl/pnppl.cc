@@ -9,8 +9,8 @@ todo:
 		- i just found one! it pruned the spoiler css. it probably didn't test a page with a spoiler on it. it wasn't all that smart
 		- it is still gigantic, and i've foolishly littered it with !important which will come back to bite me
 		- ultimately it's probably better to prune too much and force me to deal with stuff directly; eventually we want to get down to a few hundred lines and i want to actually know how it works, make decisions about things, etc., and make it simple
-	- calendar is a disaster
-		- improved some
+	- x calendar is a disaster
+		- not perfect but much better now
 	- heading buttons run into text on mobile
 - display tags for item next to links to it?
 - x filenames in date format should be treated as containing that date - added to calendar, etc.
@@ -86,7 +86,7 @@ todo:
 	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
 		- maybe we should just put everything through a linter when we build
 - x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
-
+- calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
