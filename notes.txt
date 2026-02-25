@@ -5,13 +5,13 @@ todo:
 	- x menu takes up too much space on mobile
 		- couldn't get the home icon to behave so I just hide it on mobile
 			- in offpunk `view full` it takes up an entire page <_>
-	- the robot was remarkably successful at decimating the stylesheet without causing regressions, however:
-		- i just found one! it pruned the spoiler css. it probably didn't test a page with a spoiler on it. it wasn't all that smart
-		- it is still gigantic, and i've foolishly littered it with !important which will come back to bite me
-		- ultimately it's probably better to prune too much and force me to deal with stuff directly; eventually we want to get down to a few hundred lines and i want to actually know how it works, make decisions about things, etc., and make it simple
 	- x calendar is a disaster
 		- not perfect but much better now
 	- heading buttons run into text on mobile
+	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
+		- can also indent the following text with eg h2 ~ p: margin-left
+	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
+		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
 - display tags for item next to links to it?
 - x filenames in date format should be treated as containing that date - added to calendar, etc.
 	- date format should have date-only and time-also formats, and we need to select one to rule them all
@@ -75,6 +75,7 @@ todo:
 	- best workaround seems to be wrapping the text in <pre style="white-space: pre-wrap">. making class 'indented' to remove the other pre styling
 		- this still doesn't really work for eg mosaic, offpunk. i guess it's relatively rare so maybe just find-replace \t -> 4x nbsp
 			- maybe a preprocessor would help. the bare md files will still be fucked though
+	- apparently this also means i can't start a list indented. goddammit
 - git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
 	- we clearly need to just exclude the stuff xlog builds from git
 	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 

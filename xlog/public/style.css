@@ -756,7 +756,7 @@ h1.hashtag-name-noinc::before {
 .view a {
 	text-decoration-line: none;
 }
-.autolink {
+a.autolink {
 	text-decoration-line: underline;
 	text-decoration-style: dashed;
 }
