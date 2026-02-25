@@ -931,7 +931,7 @@ a.show-on-parent-hover {
 body:has(h1:nth-of-type(2))  { --badge: url(/public/badges/victor-8831-wide.gif); }
 body:has(h1:nth-of-type(3))  { --badge: url(/public/badges/copyleft.gif); }
 body:has(h1:nth-of-type(4))  { --badge: url(/public/badges/invalid-html.gif); }
-body:has(h1:nth-of-type(5))  { --badge: url(/public/badges/invalid-xcss-red.gif); }
+body:has(h1:nth-of-type(5))  { --badge: url(/public/badges/invalid-css-red.gif); }
 body:has(h1:nth-of-type(6))  { --badge: url(/public/badges/she-her.gif); }
 body:has(h1:nth-of-type(7))  { --badge: url(/public/badges/bgdc-ga-j.gif); }
 body:has(h1:nth-of-type(8))  { --badge: url(/public/badges/bgdc-tr-j.gif); }

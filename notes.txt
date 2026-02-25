@@ -4,7 +4,7 @@ todo:
 	- nicer ul styling
 	- x menu takes up too much space on mobile
 		- couldn't get the home icon to behave so I just hide it on mobile
-		- in offpunk `view full` it takes up an entire page <_>
+			- in offpunk `view full` it takes up an entire page <_>
 	- the robot was remarkably successful at decimating the stylesheet without causing regressions, however:
 		- i just found one! it pruned the spoiler css. it probably didn't test a page with a spoiler on it. it wasn't all that smart
 		- it is still gigantic, and i've foolishly littered it with !important which will come back to bite me
@@ -243,9 +243,11 @@ low priority/done:
 		- > But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
 
 longterm notions
-- replace css with something much smaller and more compatible
 - support other delivery formats like epub
 	- i should be able to do this relatively easily with pandoc. i think i need to render p.Content() to files then feed those to it
 - visual graph
 - other protocols like gopher
 
+
+> **Just accept the L.** You're three levels deep into progressive enhancement for a browser from 1993 that probably has single-digit active users. The ✓ works everywhere that matters. The Mosaic checkbox was a fun idea but maybe this is where you draw the line.
+> Mosaic users who encounter a mystery empty box next to some garbled UTF-8 bytes are probably used to it by now.
