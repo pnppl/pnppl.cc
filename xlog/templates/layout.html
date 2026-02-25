@@ -1,69 +1,63 @@
 {{- define "header" -}}
 <!DOCTYPE html>
 <html lang="en" {{with .csrf}}hx-headers='{"X-CSRF-Token":"{{.}}"}'{{end}} {{with $.config.Theme}}data-theme="{{.}}"{{end}}>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="icon" href="/public/favicon.ico">
-    <link rel="stylesheet" href="/public/style-min.css">
-    <title>
-      {{- $props := properties .page -}}
-      {{- with .page -}}
-        {{- with $props.title -}}
-        	{{ .Value }}
-    	{{- else -}}
-    		{{ .Name }}
-        {{- end }} | {{ end -}}
-      {{- .config.Sitename -}}
-    </title>
-    {{- with .page -}} {{ widgets "head" . }} {{- end -}}
-    {{- with .page -}}
-    {{- if ne .Name $.config.Index -}}
-    {{- end -}}
-    {{- end -}}
-  </head>
-  <body>
-    {{- template "commands" . -}}
-    {{- template "navbar" . -}}
-
-    <div class="container is-max-desktop px-3 pb-5" dir="auto" id="main">
-
-      {{- if ne .config.Index .page.Name -}}
-      <div dir="auto" class="title is-1" id="pagetitle">
-      <center>
-        {{- with .page -}}
-            {{- with $props.title -}}
-			<h1>{{ .Value }}</h1>
-			{{- end -}}
-          	{{- with  base .Name -}}
-            <h2 class="subtitle">{{ . }}</h2>
-          	{{- end -}}
-        {{- end -}}
-      </center>
-      </div>
-      {{- end -}}
-
-      <div class="content pb-5">
-      {{- end -}}
-      {{- define "footer" -}}
-      <!-- my footer -->
-      <hr>
-      <center>
-        <p>
-        {{- with properties .page -}}
-          <a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject={{ .title.Value }}">S<u class="accel">e</u>nd feedback...</a>
-        {{- end -}}
-        </p>
-        <p>
-          <a id="badge" href="/about">
-            <img id="badge-img" src="/public/badges/nano-88x31.gif" width="88" height="31" alt="about" loading="lazy">
-          </a>
-        </p>
-      </center>
-      <!-- --------- -->
-      </div>
-    </div>
-    {{- scripts -}}
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="icon" href="/public/favicon.ico">
+		<link rel="stylesheet" href="/public/style-min.css">
+		<title>
+		{{- $props := properties .page -}}
+		{{- with .page -}}
+			{{- with $props.title -}}
+				{{ .Value }}
+			{{- else -}}
+				{{ .Name }}
+			{{- end }} | {{ end -}}
+		{{- .config.Sitename -}}
+		</title>
+		{{- with .page -}}
+			{{ widgets "head" . }}
+		{{- end -}}
+	</head>
+	<body>
+	{{- template "navbar" . -}}
+		<div class="container is-max-desktop px-3 pb-5" dir="auto" id="main">
+			<div dir="auto" class="title is-1" id="pagetitle">
+				<center>
+				{{- with .page -}}
+					{{- with $props.title -}}
+						<h1>{{ .Value }}</h1>
+					{{- end -}}
+					{{- with base .Name -}}
+						<h2 class="subtitle">{{ . }}</h2>
+					{{- end -}}
+				{{- end -}}
+				</center>
+			</div>
+			<div class="content pb-5">
+{{- end -}}
+{{- define "footer" -}}
+				<hr>
+				<center>
+					<p>
+						<a class="navbar-item" id="email" accesskey="e" href="mailto:feedback@pnppl.cc?subject=
+						{{- with properties .page -}}
+							{{- .title.Value -}}
+						{{- else -}}
+							{{- base .page.Name -}}
+						{{- end -}}
+						">S<u class="accel">e</u>nd feedback...</a>
+					</p>
+					<p>
+						<a id="badge" href="/about">
+							<img id="badge-img" src="/public/badges/nano-88x31.gif" width="88" height="31" alt="about" loading="lazy">
+						</a>
+					</p>
+				</center>
+			</div>
+		</div>
+	{{- scripts -}}
+	</body>
 </html>
 {{- end -}}
