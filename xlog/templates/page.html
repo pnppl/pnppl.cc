@@ -1,61 +1,58 @@
 {{- template "header" . -}}
-{{- $props := properties .page -}}
-{{- with $props -}}
+{{- $props := properties .page }}
+{{ with $props }}
 {{- end -}}
-
 <div class="columns content is-mobile">
-  <div class="column">
-    {{- if not .page.ModTime.IsZero -}}
-    <span class="icon-text">
-      {{- $t := .page.ModTime -}}
-      <time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
-    </span>
-    {{- end -}}
-  </div>
-  <div class="column is-narrow">
-    <div class="buttons">
-	  {{- $page := printf "%s" .page.Name -}}
-      {{- with $props -}}
-      <a class="button is-small" href="/txt/{{$page}}.md" title="Markdown source" accesskey="x">
-        <span class="icon">
-          <i class="fa-solid fa-info">t<u class="accel">x</u>t</i>
-        </span>
-      </a>
-      {{- end -}}
+	<div class="column">
+		{{- if not .page.ModTime.IsZero }}
+		<span class="icon-text">
+			{{- $t := .page.ModTime }}
+			<time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
+		</span>
+		{{- end }}
+	</div>
+	<div class="column is-narrow">
+		<div class="buttons">
+		{{- $page := printf "%s" .page.Name }}
+			{{- with $props }}
+			<a class="button is-small" href="/txt/{{$page}}.md" title="Markdown source" accesskey="x">
+				<span class="icon">
+					<em>t<u class="accel">x</u>t</em>
+				</span>
+			</a>
+			{{- end -}}
+			{{- with quick_commands .page -}}
+			<div class="dropdown is-right is-hoverable">
+				<div class="dropdown-trigger">
+					<button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+						<span class="icon">
+							<i class="fa-solid fa-ellipsis"></i>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown-menu" id="dropdown-menu" role="menu">
+					<div class="dropdown-content">
 
-      {{- with quick_commands .page -}}
-      <div class="dropdown is-right is-hoverable">
-        <div class="dropdown-trigger">
-          <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu">
-            <span class="icon">
-              <i class="fa-solid fa-ellipsis"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-          <div class="dropdown-content">
+						{{- range . -}}
+						<a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="dropdown-item">
+							<span class="icon"><i class="{{.Icon}}"></i></span>
+							<span>{{.Name}}</span>
+						</a>
+						{{- end -}}
 
-            {{- range . -}}
-            <a {{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{end}} class="dropdown-item">
-              <span class="icon"><i class="{{.Icon}}"></i></span>
-              <span>{{.Name}}</span>
-            </a>
-            {{- end -}}
-
-          </div>
-        </div>
-      </div>
-      {{- end -}}
-
-    </div>
-  </div>
+					</div>
+				</div>
+			</div>
+			{{- end }}
+		</div>
+	</div>
 </div>
 <div class="view" id="article">
-  {{- with .page -}}
-    {{- widgets "before_view" . -}}
-    {{- .Render -}}
-    {{- widgets "after_view" . -}}
-  {{- end -}}
+	{{- with .page -}}
+		{{ widgets "before_view" . }}
+		{{ .Render }}
+		{{ widgets "after_view" . }}
+	{{- end -}}
 </div>
 
 {{- template "footer" . -}}

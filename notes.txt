@@ -183,7 +183,7 @@ low priority/done:
 - x recents is all fucked up, thought i fixed that
 - x search
 	- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
-	- ! fix dark mode styling
+	- x fix dark mode styling
 - x get rid of shell preprocessing
 	- resorted to AI but finally got this dealt with
 - x the backslash in my shruggie did not make it to the published html >:(
@@ -201,8 +201,8 @@ low priority/done:
 		- added: wikipedia, youtube, pdf
 	- the % is probably stupid bc i would think everything that actually supports the css selector will support utf8
 		- actually lots of systems with utf8 support don't have font support
-	- you know we could automatically insert archive links. might be nice
-- converted typographer extension into ridiculous hack to maintain writing in utf8 without compromising ascii compatibility
+	- ! you know we could automatically insert archive links. might be nice
+- x converted typographer extension into ridiculous hack to maintain writing in utf8 without compromising ascii compatibility
 	- we convert em, en, … into ascii equivalent inside a span next to an empty span
 	- css hides ascii span and adds unicode version back to the empty span
 	- i thought this would be more elegant but:
@@ -212,36 +212,12 @@ low priority/done:
 		- improved this and made it a little more programmatic but still a lot of manual bullshit involved. current list:
 			- — – … ‘’“” ≈ ≠ ≥ ≤
 	- this does mean our RSS rendering will have ~=, !=, etc
-- we now output all non-ascii characters as decimal html entities
+- x we now output all non-ascii characters as decimal html entities
 	- probably won't substantially improve legacy rendering, especially since they probably use a win codepage/iso-whatever, but...
 		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
-- i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first. so far:
-	- LibreWolf 147 / Firefox ESR 140 / IronFox (mobile) 147
-		- Fine obviously
-	- NCSA Mosaic 2.7b6, appimage
-		- HTML only obviously. fine
-	- Firefox 4.0, native
-		- Actually looks pretty damn good with the compat hacks
-		- > You went from "unstyled fallback only" to "looks great in 2010-era browsers" with 12 lines of CSS. That's a pretty good stopping point.
-	- Offpunk
-		- many pages don't render without forcing 'full'
-			- 'full' renders logo taking entire page
-			- navigation with the feed is the best option
-		- footnote <sup>s don't render
-			- sometimes footnotes don't either
-		- see also, etc., don't render
-		- big differences between 2.7.1 from repo and latest git
-	- Lynx, Elinks, Links2
-		- pretty much works great
-	- Netscape 7.2, wine
-		- Pretty janky and there's no convenient way to disable CSS but a surprising amount of stuff renders about right. Kinda just looks stretched out
-	- Netscape 4.0, wine
-		- absolute clusterfuck until you disable CSS globally in the preferences
-	- Wine's iexplore
-		- Everything is basically perfect except the TOC items are missing the white background
-		- > But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
+- i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first.
 
 longterm notions
 - support other delivery formats like epub
@@ -249,6 +225,7 @@ longterm notions
 - visual graph
 - other protocols like gopher
 
-
+> You went from "unstyled fallback only" to "looks great in 2010-era browsers" with 12 lines of CSS. That's a pretty good stopping point.
+> But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
 > **Just accept the L.** You're three levels deep into progressive enhancement for a browser from 1993 that probably has single-digit active users. The ✓ works everywhere that matters. The Mosaic checkbox was a fun idea but maybe this is where you draw the line.
 > Mosaic users who encounter a mystery empty box next to some garbled UTF-8 bytes are probably used to it by now.

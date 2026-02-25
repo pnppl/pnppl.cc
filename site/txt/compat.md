@@ -27,9 +27,9 @@ https://offpunk.net/
 Many pages don't render at all without forcing 'view full', which also has some issues:
 - Logo takes up an entire page
 - Footnote links in the text body don't render
-- See also, etc., sections don't render; the footnotes section also doesn't render reliably
+- See Also, etc., sections don't render; the footnotes section also doesn't render reliably
 
-Your best best is probably to type 'feed' and use that for navigation.
+Your best bet is probably to type 'feed' and use that for navigation.
 
 I tried both 2.7.1 from the repo and the latest git version as of 2026-02. They behave quite differently. Installed depends also make a big difference (see these with 'version').
 

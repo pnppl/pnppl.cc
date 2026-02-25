@@ -1,28 +1,37 @@
 {{ define "toc-item" }}
 <li>
-  <a href="#{{ printf "%s" .ID}}" accesskey="{{ accesskey }}">{{ printf "%s" .Title | raw }}</a>
-  {{ with .Items }}
-  <ol class="menu-list">
-    {{ range . }}
-    {{ template "toc-item" . }}
-    {{ end }}
-  </ol>
-  {{ end }}
+	<a href="#{{ printf "%s" .ID}}" accesskey="{{ accesskey }}">{{ printf "%s" .Title | raw }}</a>
+	{{- with .Items }}
+	<ol class="menu-list">
+		{{- range . }}
+		{{ template "toc-item" . }}
+		{{ end -}}
+	</ol>
+	{{- end }}
 </li>
-{{ end }}
+{{- end -}}
 
-{{ with .tree.Items }}
+{{- with .tree.Items -}}
 {{- resetaccess -}}
 <aside class="menu is-hidden-touch table-of-contents">
-  <div id="table-of-contents-list">
-    <details open><summary><center><p class="menu-label" id="TOC"><a name="TOC" href="#TOC" accesskey="l"><i>Tab<u class="accel">l</u>e of Contents:</i></a></p></center></summary>
-    <ol class="menu-list">
-      {{ range . }}
-      {{ template "toc-item" . }}
-      {{ end }}
-    </ol>
-    </details>
-  </div>
+	<div id="table-of-contents-list">
+		<details open>
+			<summary>
+				<center>
+					<p class="menu-label" id="TOC">
+						<a name="TOC" href="#TOC" accesskey="l">
+							<i>Tab<u class="accel">l</u>e of Contents:</i>
+						</a>
+					</p>
+				</center>
+			</summary>
+			<ol class="menu-list">
+				{{- range . }}
+				{{- template "toc-item" . }}
+				{{ end -}}
+			</ol>
+		</details>
+	</div>
 </aside>
 <br class="is-hidden">
-{{ end }}
+{{- end -}}
