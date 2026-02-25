@@ -1,4 +1,4 @@
-Gender Ideology
+# Gender Ideology
 #essay #politics
 
 "Gender ideology" is how members of the anti-trans movement refer to social acceptance of trans people and to associated ideas and practices. Like all buzzwords bandied by fascists, it has no particular meaning: it can be expanded to encompass all the things they don't like. Hence, it is also a conspiracy theory: Bad Things are not just Bad, they are also components of a larger Big Bad Miasma, echoing Nazi rhetoric.

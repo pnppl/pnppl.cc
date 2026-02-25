@@ -1,4 +1,4 @@
-Trans Genocide
+# Trans Genocide
 #essay #politics
 
 Are trans people experiencing a genocide? Well, I hope we've learned from Gaza that when people start splitting hairs about whether events *technically* constitute genocide, something has gone terribly wrong. It does not at all reassure me that when I share my perfectly rational concerns,[^1] what seemingly bothers people most is my choice of words.

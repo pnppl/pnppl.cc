@@ -125,7 +125,12 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
         Items: yaml.MapSlice{{Key: "title", Value: title}},
     }
     pc.Set(contextKey, d)
-    return nil, parser.NoChildren
+// this makes spaces rather significant! we only remove the node if it's an h1
+// this is so we can make pages documenting hashtags more easily or start a note with a hashtag for some other reason
+    if title[0] == '#' {
+		return nil, parser.NoChildren
+    }
+    return parent, parser.NoChildren
 }
 
 func (b *metaParser) Continue(node gast.Node, reader text.Reader, pc parser.Context) parser.State {
@@ -133,6 +138,7 @@ func (b *metaParser) Continue(node gast.Node, reader text.Reader, pc parser.Cont
 }
 
 func (b *metaParser) Close(node gast.Node, reader text.Reader, pc parser.Context) {
+	node.Parent().RemoveChild(node.Parent(), node)
 }
 
 func (b *metaParser) CanInterruptParagraph() bool {

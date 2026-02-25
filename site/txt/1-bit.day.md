@@ -1,4 +1,4 @@
-1-bit.day
+# 1-bit.day
 #pixel-art #visual-art
 
 !1bitday ../img/1bitday
