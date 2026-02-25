@@ -11,6 +11,7 @@ end
 rm -rf site/.pagefind/ &&
 rm -rf site/txt/!txt.zip &&
 rm -rf site/img/1bitday/!1bitday.zip &&
+rm -rf site/img/comics/!comics.zip &&
 fish build.fish &&
 git stash -u &&
 git pull &&
@@ -29,6 +30,7 @@ git push &&
 pagefind --site "site/" --output-subdir ".pagefind/" --force-language "en" &&
 zip -r site/txt/!txt.zip site/txt/ &&
 zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/ &&
+zip -r site/img/comics/!comics.zip site/img/comics/ &&
 chmod -R 755 site/ &&
 #for file in (path filter -t dir (fdfind . site/)); chmod 755 $file; end
 #for file in (path filter -t file (fdfind . site/)); chmod 655 $file; end
