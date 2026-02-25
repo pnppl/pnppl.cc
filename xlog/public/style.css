@@ -1057,7 +1057,17 @@ table.calendar {
 	padding-left: 10px;
 	word-break: keep-all;
 }
-
+/* day number color intensity based on number of entries */
+.calendar td:has(.menu-list > a:nth-child(1)) span.tag {
+  background-color: thistle;
+  color: black;
+}
+.calendar td:has(.menu-list > a:nth-child(2)) span.tag {
+  background-color: plum;
+}
+.calendar td:has(.menu-list > a:nth-child(3)) span.tag {
+  background-color: orchid;
+}
 /* Onebitday */
 a.onebitday {
 	text-decoration: none;
@@ -1400,10 +1410,12 @@ pre.chroma {
 		margin: auto;
 	}
 	.calendar .menu {
-		display: none;
+		visibility: hidden;
+		height: 0;
+		width: 0;
 	}
-	.calendar a > .tag {
-		color: var(--code);
+	.calendar td > .tag {
+		color: darkgray;
 	}
 	table.calendar td {
 		height: auto;
