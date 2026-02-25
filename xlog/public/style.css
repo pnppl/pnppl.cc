@@ -472,6 +472,10 @@ a.tag:hover {
 a.tag:active {
 	--tag-background-l-delta: var(--active-background-l-delta);
 }
+/* add some extra space between leading tags and text if i forget to put a newline */
+#article p:nth-of-type(1) > .tag {
+	margin: auto 1em 1em auto;
+}
 
 /* Menu -------------------------------------------------------------------- */
 .menu {
