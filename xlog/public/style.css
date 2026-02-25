@@ -1421,7 +1421,7 @@ pre.chroma {
 	/* Dracula syntax theme */
 	.chroma {
 		color: #f8f8f2;
-		background-color: #282a36;
+		background-color: #202020;
 	}
 	.chroma .hl {
 		background-color: #3d3f4a;
@@ -1446,7 +1446,6 @@ pre.chroma {
 	.chroma .cp,
 	.chroma .cpf {
 		color: #ff79c6;
-		font-weight: normal;
 	}
 	.chroma .kd,
 	.chroma .kt,
@@ -1465,7 +1464,6 @@ pre.chroma {
 	.chroma .nf,
 	.chroma .fm {
 		color: #50fa7b;
-		font-weight: normal;
 	}
 	.chroma .s,
 	.chroma .sa,
@@ -1509,6 +1507,6 @@ pre.chroma {
 		color: #44475a;
 	}
 	.line:nth-child(even) {
-		background-color: rgba(0, 0, 0, 0.15);
+		background-color: rgba(0, 0, 0, 0.20);
 	}
 }
