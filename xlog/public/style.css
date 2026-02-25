@@ -180,13 +180,12 @@ a,
 button {
 	cursor: pointer;
 }
-a:focus-visible,
-button:focus-visible {
+:focus-visible {
 	outline: 2px solid darkturquoise;
 	outline-offset: 1px;
+	z-index: 1;
 }
-a:active,
-button:active {
+:active {
 	outline-width: 1px;
 }
 a {
@@ -865,12 +864,9 @@ a.show-on-parent-hover {
 	border-radius: 0;
 	text-align: center;
 }
-a.navbar-item:focus,
 a.navbar-item:active,
 a.button:active,
-a.button:focus,
-a.show-on-parent-hover:active,
-a.show-on-parent-hover:focus {
+a.show-on-parent-hover:active {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 }
 a.navbar-item:visited {
@@ -945,12 +941,25 @@ body:has(h1:nth-of-type(11)) { --badge: url(/public/badges/fish-anim.gif); }
 body:has(h1:nth-of-type(12)) { --badge: url(/public/badges/lain.gif); }
 body:has(h1:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells.gif); }
 body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); }
-#badge {
+#badge-img {
 	content: var(--badge, url("/public/badges/nano-88x31.gif")) / "about";
-	float: right;
 	/* fallback: pixelated is standard, crisp-edges for Safari */
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
+}
+/* Wrapper lets us draw "indented" border over the image */
+#badge {
+	float: right;
+	position: relative;
+	line-height: 0;
+}
+#badge:active::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border: 2px solid;
+	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+	pointer-events: none;
 }
 #RSS {
 	color: white;
