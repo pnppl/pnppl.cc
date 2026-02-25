@@ -759,6 +759,10 @@ h1.hashtag-name-noinc::before {
 a.autolink {
 	text-decoration-line: underline;
 	text-decoration-style: dashed;
+	color: mediumblue;
+}
+a.autolink:visited {
+	color: indigo;
 }
 .link-text {
 	text-decoration-line: underline;
@@ -1427,6 +1431,12 @@ pre.chroma {
 	a:visited,
 	.menu-list a:visited {
 		color: violet;
+	}
+	a.autolink {
+		color: lightblue;
+	}
+	a.autolink:visited {
+		color: thistle;
 	}
 	#search input {
 		color: black;
