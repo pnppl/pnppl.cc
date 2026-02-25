@@ -181,7 +181,7 @@ button {
 	cursor: pointer;
 }
 :focus-visible {
-	outline: 2px solid darkturquoise;
+	outline: 2px solid lightseagreen;
 	outline-offset: 1px;
 	z-index: 1;
 }
