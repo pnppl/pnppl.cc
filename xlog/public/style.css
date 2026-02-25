@@ -930,8 +930,14 @@ a.show-on-parent-hover {
 /* "dynamic" badge */
 body:has(h1:nth-of-type(2))  { --badge: url(/public/badges/victor-8831-wide.gif); }
 body:has(h1:nth-of-type(3))  { --badge: url(/public/badges/copyleft.gif); }
-body:has(h1:nth-of-type(4))  { --badge: url(/public/badges/invalid-html.gif); }
-body:has(h1:nth-of-type(5))  { --badge: url(/public/badges/invalid-css-red.gif); }
+body:has(h1:nth-of-type(4))  {
+	--badge: url(/public/badges/invalid-html.gif);
+	--badge-press: none;
+}
+body:has(h1:nth-of-type(5))  {
+	--badge: url(/public/badges/invalid-css-red.gif);
+	--badge-press: none;
+}
 body:has(h1:nth-of-type(6))  { --badge: url(/public/badges/she-her.gif); }
 body:has(h1:nth-of-type(7))  { --badge: url(/public/badges/bgdc-ga-j.gif); }
 body:has(h1:nth-of-type(8))  { --badge: url(/public/badges/bgdc-tr-j.gif); }
@@ -954,7 +960,7 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	line-height: 0;
 }
 #badge:active::after {
-	content: "";
+	content: var(--badge-press, "");
 	position: absolute;
 	inset: 0;
 	border: 2px solid;
