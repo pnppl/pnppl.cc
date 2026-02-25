@@ -13,7 +13,6 @@
 	--hover-background-l-delta: -5%;
 	--active-background-l-delta: -10%;
 
-
 	/* Computed colors (depend on lightness values above) */
 	--scheme-main: hsl(221, 14%, var(--scheme-main-l));
 	--background: hsl(221, 14%, var(--background-l));
@@ -691,13 +690,6 @@ a.navbar-item {
 	display: inline;
 	list-style: none;
 }
-.autolink {
-	text-decoration-line: underline;
-	text-decoration-style: dashed;
-}
-.link-text {
-	text-decoration-line: underline;
-}
 .accel {
 	text-decoration-line: underline;
 	text-decoration-thickness: 2px;
@@ -764,6 +756,13 @@ h1.hashtag-name-noinc::before {
 /* Link decorators */
 .view a {
 	text-decoration-line: none;
+}
+.autolink {
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+}
+.link-text {
+	text-decoration-line: underline;
 }
 .view a[href^="http"]::after,
 .view a[href^="//"]::after,
