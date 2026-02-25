@@ -1415,7 +1415,7 @@ pre.chroma {
 		width: 0;
 	}
 	.calendar td > .tag {
-		color: darkgray;
+		color: gray;
 	}
 	table.calendar td {
 		height: auto;
