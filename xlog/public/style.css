@@ -878,10 +878,10 @@ a.navbar-item:visited {
 	color: black;
 }
 a.show-on-parent-hover:visited {
-	color: #69748c;
+	color: black;
 }
 a.show-on-parent-hover {
-	color: #69748c;
+	color: black;
 	font-style: normal;
 	padding: 0 5px 2px 5px;
 }
