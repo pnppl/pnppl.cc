@@ -1040,6 +1040,8 @@ table.calendar {
 /* Onebitday */
 a.onebitday {
 	text-decoration: none;
+	display: inline-block;
+	line-height: 0;
 }
 img.onebitday {
 	/* fallback: crisp-edges for Safari, pixelated is standard */
