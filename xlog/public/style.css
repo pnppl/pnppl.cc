@@ -938,7 +938,10 @@ body:has(h1:nth-of-type(5))  {
 	--badge: url(/public/badges/invalid-css-red.gif);
 	--badge-press: none;
 }
-body:has(h1:nth-of-type(6))  { --badge: url(/public/badges/she-her.gif); }
+body:has(h1:nth-of-type(6))  {
+	--badge: url(/public/badges/she-her.gif);
+	--badge-press: "";
+}
 body:has(h1:nth-of-type(7))  { --badge: url(/public/badges/bgdc-ga-j.gif); }
 body:has(h1:nth-of-type(8))  { --badge: url(/public/badges/bgdc-tr-j.gif); }
 body:has(h1:nth-of-type(9))  { --badge: url(/public/badges/bgdc-bi-j.gif); }
