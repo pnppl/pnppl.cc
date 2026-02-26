@@ -1,6 +1,6 @@
 {{- define "header" -}}
 <!DOCTYPE html>
-<html lang="en" {{with .csrf}}hx-headers='{"X-CSRF-Token":"{{.}}"}'{{end}} {{with $.config.Theme}}data-theme="{{.}}"{{end}}>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -48,7 +48,7 @@
 				{{- else -}}
 					{{- base .page.Name -}}
 				{{- end -}}
-				"><span>S<u class="accel">e</u>nd feedback...</a></span>
+				"><span>S<u class="accel">e</u>nd feedback...</span></a>
 			</p>
 			<p>
 				<a id="badge" href="/about">

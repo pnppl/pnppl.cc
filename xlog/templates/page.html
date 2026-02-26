@@ -7,7 +7,7 @@
 		{{- if not .page.ModTime.IsZero }}
 		<span class="icon-text">
 			{{- $t := .page.ModTime }}
-			<time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @ %02d:%02d:%02d (%s)" $t.Year $t.Month $t.Day $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
+			<time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)"  $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
 		</span>
 		{{- end }}
 	</div>
@@ -15,7 +15,7 @@
 		<div class="buttons">
 		{{- $page := printf "%s" .page.Name }}
 			{{- with $props }}
-			<a class="button is-small" href="/txt/{{$page}}.md" title="Markdown source" accesskey="x">
+			<a class="button is-small" href="/txt/{{$page}}.md" title="Markdown source" accesskey="x" name="main">
 				<span class="icon">
 					<em>t<u class="accel">x</u>t</em>
 				</span>
@@ -47,7 +47,7 @@
 		</div>
 	</div>
 </div>
-<div class="view" id="article">
+<div class="view" id="article" role="article">
 	{{- with .page -}}
 		{{ widgets "before_view" . }}
 		{{ .Render }}

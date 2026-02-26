@@ -55,12 +55,12 @@ func opengraphTags(p Page) template.HTML {
 	firstParagraph := rawText(src, tree, descriptionLength)
 
 	ogTags := fmt.Sprintf(`
-    <meta property="og:site_name" content="%s" />
-    <meta property="og:title" content="%s" />
-    <meta property="og:description" content="%s" />
-    <meta property="og:image" content="%s" />
-    <meta property="og:url" content="%s" />
-    <meta property="og:type" content="website" />
+		<meta property="og:site_name" content="%s" />
+		<meta property="og:title" content="%s" />
+		<meta property="og:description" content="%s" />
+		<meta property="og:image" content="%s" />
+		<meta property="og:url" content="%s" />
+		<meta property="og:type" content="website" />
 `,
 		escape(Config.Sitename),
 		escape(title),
@@ -69,7 +69,8 @@ func opengraphTags(p Page) template.HTML {
 		escape(URL),
 	)
 
-	twitterTags := fmt.Sprintf(`
+// Fuck xitter
+/*	twitterTags := fmt.Sprintf(`
     <meta name="twitter:title" content="%s" />
     <meta name="twitter:description" content="%s" />
     <meta name="twitter:image" content="%s" />
@@ -85,14 +86,12 @@ func opengraphTags(p Page) template.HTML {
 		escape(twitterUsername),
 		escape(title),
 	)
-
-	metaTags := fmt.Sprintf(`
-    <meta name="description" content="%s">
-`,
+*/
+	metaTags := fmt.Sprintf(`		<meta name="description" content="%s">`,
 		escape(firstParagraph),
 	)
 
-	return template.HTML(ogTags + twitterTags + metaTags)
+	return template.HTML(ogTags + metaTags)
 }
 
 func rawText(source []byte, n ast.Node, limit int) string {
