@@ -39,7 +39,17 @@ func opengraphTags(p Page) template.HTML {
 		name = Config.Sitename
 	}
 
-	title := Properties(p)["title"].Value().(string)
+	props := Properties(p)
+	var title string
+	if v, ok := props["title"]; ok && v != nil {
+		if s, ok := v.Value().(string); ok {
+			title = s
+		} else {
+			title = name
+		}
+	} else {
+		title = name
+	}
 
 	var u url.URL
 	u.Scheme = "https"
@@ -52,6 +62,8 @@ func opengraphTags(p Page) template.HTML {
 	src, tree := p.AST()
 	if imageAST, ok := FindInAST[*ast.Image](tree); ok && imageAST != nil {
 		image = "https://" + domain + string(imageAST.Destination)
+	} else {
+		image = "https://" + domain + "/public/logo.gif"
 	}
 
 	firstParagraph := escape(rawText(src, tree, descriptionLength))
@@ -60,12 +72,12 @@ func opengraphTags(p Page) template.HTML {
 	firstParagraph = strings.ReplaceAll(firstParagraph, "\\'", "&apos;")
 
 	ogTags := fmt.Sprintf(`
-		<meta property="og:site_name" content="%s" />
-		<meta property="og:title" content="%s" />
-		<meta property="og:description" content="%s" />
-		<meta property="og:image" content="%s" />
-		<meta property="og:url" content="%s" />
-		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="%s">
+		<meta property="og:title" content="%s">
+		<meta property="og:description" content="%s">
+		<meta property="og:image" content="%s">
+		<meta property="og:url" content="%s">
+		<meta property="og:type" content="website">
 `,
 		escape(Config.Sitename),
 		escape(title),
