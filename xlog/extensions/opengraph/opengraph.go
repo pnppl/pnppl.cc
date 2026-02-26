@@ -34,15 +34,17 @@ func (Opengraph) Init() {
 func opengraphTags(p Page) template.HTML {
 	escape := template.JSEscapeString
 
-	title := p.Name()
+	name := p.Name()
 	if p.Name() == Config.Index {
-		title = Config.Sitename
+		name = Config.Sitename
 	}
+
+	title := Properties(p)["title"].Value().(string)
 
 	var u url.URL
 	u.Scheme = "https"
 	u.Host = domain
-	u.Path = "/" + title
+	u.Path = "/" + name
 
 	URL := u.String()
 
@@ -52,7 +54,10 @@ func opengraphTags(p Page) template.HTML {
 		image = "https://" + domain + string(imageAST.Destination)
 	}
 
-	firstParagraph := rawText(src, tree, descriptionLength)
+	firstParagraph := escape(rawText(src, tree, descriptionLength))
+//	The escape fails miserably
+	firstParagraph = strings.ReplaceAll(firstParagraph, "\\\"", "&quot;")
+	firstParagraph = strings.ReplaceAll(firstParagraph, "\\'", "&apos;")
 
 	ogTags := fmt.Sprintf(`
 		<meta property="og:site_name" content="%s" />
@@ -64,7 +69,7 @@ func opengraphTags(p Page) template.HTML {
 `,
 		escape(Config.Sitename),
 		escape(title),
-		escape(firstParagraph),
+		firstParagraph,
 		escape(image),
 		escape(URL),
 	)
@@ -88,7 +93,7 @@ func opengraphTags(p Page) template.HTML {
 	)
 */
 	metaTags := fmt.Sprintf(`		<meta name="description" content="%s">`,
-		escape(firstParagraph),
+		firstParagraph,
 	)
 
 	return template.HTML(ogTags + metaTags)
