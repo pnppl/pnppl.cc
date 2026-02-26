@@ -66,8 +66,8 @@ html {
 	text-size-adjust: 100%;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 table {
@@ -269,7 +269,6 @@ summary::marker {
 /* ==========================================================================
    Components
    ========================================================================== */
-
 /* Block spacing ----------------------------------------------------------- */
 .message:not(:last-child),
 .title:not(:last-child),
@@ -661,7 +660,7 @@ a.navbar-item {
 .has-text-grey {
 	color: #69748c;
 }
-.is-clearfix::after {
+.is-clearfix:after {
 	clear: both;
 	content: " ";
 	display: table;
@@ -748,7 +747,7 @@ a.navbar-item {
 	counter-increment: h2;
 	content: counter(h1) "." counter(h2) ". ";
 }
-h1.hashtag-name-noinc::before {
+h1.hashtag-name-noinc:before {
 	content: "";
 }
 
@@ -767,33 +766,33 @@ a.autolink:visited {
 .link-text {
 	text-decoration-line: underline;
 }
-.view a[href^="http"]::after,
-.view a[href^="//"]::after,
-.view a[href^="mailto:"]::after {
+.view a[href^="http"]:after,
+.view a[href^="//"]:after,
+.view a[href^="mailto:"]:after {
 	font-size: 0.6em;
 	margin-left: 0.4em;
 	position: relative;
 	bottom: 0.1em;
 }
-.view a[href^="http"]::after,
-.view a[href^="//"]::after {
+.view a[href^="http"]:after,
+.view a[href^="//"]:after {
 	content: "%";
 	font-weight: 900;
 }
-.view a[href^="mailto:"]::after {
+.view a[href^="mailto:"]:after {
 	content: "@";
 	font-weight: 100;
 	font-family: sans-serif;
 	font-style: oblique;
 }
-.view a[href*="youtube.com"]::after {
+.view a[href*="youtube.com"]:after {
 	content: "|>";
 }
-.view a[href*="wikipedia.org"]::after {
+.view a[href*="wikipedia.org"]:after {
 	content: "W";
 	font-family: serif;
 }
-.view a[href$="pdf"]::after {
+.view a[href$="pdf"]:after {
 	content: "PDF";
 	font-family: inherit;
 	letter-spacing: 0.5px;
@@ -817,7 +816,7 @@ a.autolink:visited {
 	display: inline-grid;
 	place-content: center;
 }
-.view input[type="checkbox"]::before {
+.view input[type="checkbox"]:before {
 	content: "";
 	width: 0.65em;
 	height: 0.65em;
@@ -828,7 +827,7 @@ a.autolink:visited {
 	box-shadow: inset 1em 1em #888;
 	background-color: CanvasText;
 }
-.view input[type="checkbox"]:checked::before {
+.view input[type="checkbox"]:checked:before {
 	transform: scale(1);
 }
 .view input[type="checkbox"]:focus {
@@ -927,6 +926,18 @@ a.show-on-parent-hover {
 	color: black;
 }
 
+/* Accessibility button */
+#skip-nav {
+  position:absolute;
+  left:-9999px;
+  top:0;
+  z-index:100
+}
+#skip-nav:focus {
+  left:4px;
+  top:4px
+}
+
 /* ==========================================================================
    Site Chrome (badge, footer, view-transitions)
    ========================================================================== */
@@ -966,10 +977,13 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	position: relative;
 	line-height: 0;
 }
-#badge:active::after {
+#badge:active:after {
 	content: var(--badge-press, "");
 	position: absolute;
-	inset: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	border: 2px solid;
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	pointer-events: none;
@@ -1084,17 +1098,17 @@ img.onebitday {
 /* ==========================================================================
    Typographic Entities
    ========================================================================== */
-.mdash::after  { content: "\2014"; }
-.ndash::after  { content: "\2013"; }
-.hellip::after { content: "\2026"; }
-.lsquo::after  { content: "\2018"; }
-.rsquo::after  { content: "\2019"; }
-.ldquo::after  { content: "\201C"; }
-.rdquo::after  { content: "\201D"; }
-.ne::after     { content: "\2260"; }
-.asymp::after  { content: "\2248"; }
-.ge::after     { content: "\2265"; }
-.le::after     { content: "\2264"; }
+.mdash:after  { content: "\2014"; }
+.ndash:after  { content: "\2013"; }
+.hellip:after { content: "\2026"; }
+.lsquo:after  { content: "\2018"; }
+.rsquo:after  { content: "\2019"; }
+.ldquo:after  { content: "\201C"; }
+.rdquo:after  { content: "\201D"; }
+.ne:after     { content: "\2260"; }
+.asymp:after  { content: "\2248"; }
+.ge:after     { content: "\2265"; }
+.le:after     { content: "\2264"; }
 
 /* ==========================================================================
    Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
@@ -1122,7 +1136,7 @@ pre.chroma {
 	width: 100%;
 	margin-right: 2ch;
 }
-.line::before {
+.line:before {
 	content: counter(lineNo);
 	text-align: right;
 	min-width: 3ch;

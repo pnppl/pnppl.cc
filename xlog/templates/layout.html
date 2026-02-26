@@ -21,8 +21,9 @@
 		{{- end }}
 	</head>
 <body>
+<a href="#main" accesskey="k" class="button" id="skip-nav">S<u class="accel">k</u>ip to content</a>
 {{ template "navbar" . }}
-<div class="container is-max-desktop px-3 pb-5" dir="auto" id="main">
+<div class="container is-max-desktop px-3 pb-5" role="main" id="main" dir="auto">
 	<div dir="auto" class="title is-1" id="pagetitle">
 		<center>
 		{{- with .page -}}
