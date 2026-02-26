@@ -181,12 +181,12 @@ button {
 	cursor: pointer;
 }
 :focus-visible {
-	outline: 2px solid lightseagreen;
+	outline: medium solid lightseagreen;
 	outline-offset: 1px;
 	z-index: 1;
 }
 :active {
-	outline-width: 1px;
+	outline-width: thin;
 }
 a {
 	color: hsl(233, 100%, var(--link-on-scheme-l));
@@ -831,7 +831,7 @@ a.autolink:visited {
 	transform: scale(1);
 }
 .view input[type="checkbox"]:focus {
-	outline: 2px solid currentColor;
+	outline: medium solid currentColor;
 	outline-offset: 2px;
 }
 
