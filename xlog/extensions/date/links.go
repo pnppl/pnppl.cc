@@ -26,5 +26,6 @@ func (Calendar) Label() map[string]string {
 func (Calendar) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{
 		"href": "/+/calendar",
+		"accesskey": "c",
 	}
 }
