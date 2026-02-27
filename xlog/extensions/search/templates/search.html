@@ -17,7 +17,7 @@
 				if (result.meta.image.startsWith("/public/badges/")) {
 					result.meta.image = null;
 				}
-				for (let i = 0; i < result.sub_results.length; i++) {
+				{{ printf "for (let i = 0; i < result.sub_results.length; i++) {" | raw }}
 					result.sub_results[i]["title"] = result.sub_results[i]["title"].replace(" ¬ §", "");
 				}
 				return result;
