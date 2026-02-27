@@ -1042,7 +1042,12 @@ time.has-text-grey {
 #search a:visited {
 	color: purple;
 }
+/* annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear {
+  display: none;
+}
+/* hide note about offline search if js search is in use */
+#search:has(.pagefind-ui__results) ~ p {
   display: none;
 }
 
