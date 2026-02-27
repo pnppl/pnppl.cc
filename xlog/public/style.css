@@ -1042,6 +1042,9 @@ time.has-text-grey {
 #search a:visited {
 	color: purple;
 }
+.pagefind-ui__search-clear {
+  display: none;
+}
 
 /* Calendar */
 .calendar td,
