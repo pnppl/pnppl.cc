@@ -89,6 +89,7 @@ todo:
 - x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
 - calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
 - hashtag sorting is odd, look into that
+- ! why the fuck aren't backlinks working?
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually

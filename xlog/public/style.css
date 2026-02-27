@@ -784,6 +784,7 @@ a.autolink:visited {
 	font-weight: 100;
 	font-family: sans-serif;
 	font-style: oblique;
+	bottom: 0.2em;
 }
 .view a[href*="youtube.com"]:after {
 	content: "|>";
