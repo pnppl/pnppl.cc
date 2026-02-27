@@ -1042,7 +1042,7 @@ time.has-text-grey {
 	border-radius: 0;
 	color: inherit;
 }
-/* annoying, gets in the way of tabbing */
+/* clear button. annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear {
 	display: none;
 }
@@ -1050,11 +1050,34 @@ time.has-text-grey {
 #search:has(.pagefind-ui__results) ~ p {
 	display: none;
 }
+/* img placeholder still shows with no image */
 .pagefind-ui__result-thumb {
 	display: none;
 }
 .pagefind-ui__result-thumb:has(img) {
 	display: initial;
+}
+/* ---- spacing ----  */
+.pagefind-ui ol {
+	margin: 0 0.25em;
+}
+.pagefind-ui li {
+	/* calc for 2px border */
+	padding: calc(0.25em - 2px) 0.25em 0.5em !important;
+}
+.pagefind-ui li:first-of-type {
+	padding-top: 0.5em !important;
+}
+/* "n results for x" */
+.pagefind-ui__message {
+	padding: 0 0 1em !important;
+	margin: 0 0.5em !important;
+}
+.pagefind-ui__result-nested {
+	padding-bottom: 0.5em;
+}
+.pagefind-ui__result-nested:last-of-type {
+	padding-bottom: 0;
 }
 
 /* Calendar */
