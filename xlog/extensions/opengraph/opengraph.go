@@ -54,7 +54,7 @@ func opengraphTags(p Page) template.HTML {
 	var u url.URL
 	u.Scheme = "https"
 	u.Host = domain
-	u.Path = "/" + name
+	u.Path = "/" + name + "/"
 
 	URL := u.String()
 
