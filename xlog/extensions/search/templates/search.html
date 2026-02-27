@@ -3,15 +3,25 @@
 <script src="/.pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <!-- need comment to make it through template for mosaic compat, and need it to not be JS-escaped -->
-{{ printf "<script> <!-- " | raw }}
+{{ printf "<script> <!--" | raw }}
 	window.addEventListener('DOMContentLoaded', (event) => {
-		new PagefindUI({ element: "#search",
+		new PagefindUI({
+			element: "#search",
 			pageSize: 25,
 			showSubResults: true,
-			showImages: false,
+			showImages: true,
 			excerptLength: 30,
 			resetStyles: false,
-			autofocus: true
+			autofocus: true,
+		    processResult: function (result) {
+				if (result.meta.image.startsWith("/public/badges/")) {
+					result.meta.image = null;
+				}
+				for (let i = 0; i < result.sub_results.length; i++) {
+					result.sub_results[i]["title"] = result.sub_results[i]["title"].replace(" ¬ §", "")
+				}
+				return result;
+		    }
 		});
 	});
 {{ printf "//-->" | raw }}

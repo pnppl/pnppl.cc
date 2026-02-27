@@ -188,12 +188,14 @@ button {
 :active {
 	outline-width: thin;
 }
-a {
+a,
+#search a {
 	color: hsl(233, 100%, var(--link-on-scheme-l));
 	text-decoration: underline;
 }
 a:visited,
-.menu-list a:visited {
+.menu-list a:visited,
+#search a:visited {
 	color: purple;
 }
 a strong {
@@ -929,14 +931,14 @@ a.show-on-parent-hover {
 
 /* Accessibility button */
 #skip-nav {
-  position:absolute;
-  left:-9999px;
-  top:0;
-  z-index:100
+	position:absolute;
+	left:-9999px;
+	top:0;
+	z-index:100
 }
 #skip-nav:focus {
-  left:4px;
-  top:4px
+	left:4px;
+	top:4px
 }
 
 /* ==========================================================================
@@ -1033,22 +1035,26 @@ time.has-text-grey {
 /* pagefind search */
 #search mark {
 	background-color: pink;
+	outline: thin pink solid;
 	color: black;
 }
 #search * {
 	border-radius: 0;
 	color: inherit;
 }
-#search a:visited {
-	color: purple;
-}
 /* annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear {
-  display: none;
+	display: none;
 }
 /* hide note about offline search if js search is in use */
 #search:has(.pagefind-ui__results) ~ p {
-  display: none;
+	display: none;
+}
+.pagefind-ui__result-thumb {
+	display: none;
+}
+.pagefind-ui__result-thumb:has(img) {
+	display: initial;
 }
 
 /* Calendar */
@@ -1082,14 +1088,14 @@ table.calendar {
 }
 /* day number color intensity based on number of entries */
 .calendar td:has(.menu-list > a:nth-child(1)) span.tag {
-  background-color: thistle;
-  color: black;
+	background-color: thistle;
+	color: black;
 }
 .calendar td:has(.menu-list > a:nth-child(2)) span.tag {
-  background-color: plum;
+	background-color: plum;
 }
 .calendar td:has(.menu-list > a:nth-child(3)) span.tag {
-  background-color: orchid;
+	background-color: orchid;
 }
 /* Onebitday */
 a.onebitday {
@@ -1464,7 +1470,8 @@ pre.chroma {
 
 	}
 	a:visited,
-	.menu-list a:visited {
+	.menu-list a:visited,
+	#search a:visited {
 		color: violet;
 	}
 	a.autolink {
@@ -1476,10 +1483,6 @@ pre.chroma {
 	#search input {
 		color: black;
 	}
-	#search a:visited {
-		color: violet;
-	}
-
 	/* Dracula syntax theme */
 	.chroma {
 		color: #f8f8f2;
