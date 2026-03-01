@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫁</text></svg>">
+		<link rel="stylesheet" href="./rrr.css">
+		<title>maRRRshmallow breath counter</title>
+		<meta property="og:site_name" content="pnppl.cc">
+		<meta property="og:title" content="maRRRshmallow breath counter">
+		<meta property="og:description" content="Resting respiratory rate measurement tool">
+		<meta property="og:image" content="https://pnppl.cc/public/logo.gif">
+		<meta property="og:url" content="https://pnppl.cc/app/rrr/">
+		<meta property="og:type" content="website">
+		<meta name="description" content="Resting respiratory rate measurement tool">
+	</head>
+<body>
+<main>
+	<h1>maRRRshmallow breath counter</h1>
+	<script src="rrr.js"></script>
+	<button type="button" id="breath">🫁</button>
+	<div id="status">
+		<label for="prog">
+			<div>
+				<span id="seconds">30</span>
+				<span> seconds left</span>
+				<span id="hellip"><span>
+			</div>
+		</label>
+		<progress id="prog" value="0" max="30"></progress>
+		<div id="breaths-label">
+			<span id="breaths">0</span> breaths
+		</div>
+	</div>
+	<div id="info">
+		<p id="guide">Tap/click for every <em>full</em> breath (in+out)</p>
+		<div id="results" style="display:none">
+			<p id="result-string"></p>
+			<button type="button" id="copy">Copy to clipboard<span id="check" style="display:none"> ✔️</span></button>
+		</div>
+	</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+:root {
+	color-scheme: light dark;
+	background-color: light-dark(thistle, black);
+	text-align: center;
+}
+main {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+#breath {
+	font-size: min(70vw, 50vh);
+	background: 0;
+	border: 0;
+	transition: all 0.5s ease;
+}
+#breath:active {
+	border-radius: 50%;
+	opacity: 20%;
+	background-color: light-dark(pink, #282828);
+/*  firefox mobile renders this all fucked up and slow */
+	@media screen and (min-width: 767px) {
+		text-shadow: 0 0 10px light-dark(black, white);
+	}
+}
+#status, #info {
+	font-size: 1.4em;
+}
+#prog {
+	height: 1em;
+	width: min(80%, 15em);
+	background-color: lightskyblue;
+	border-color: light-dark(midnightblue, royalblue);
+	border-radius: 15px;
+	border-width: 2px;
+}
+#copy {
+	font-size: 1em;
+	padding: 7px 20px;
+	margin: 0;
+}
+h1 {
+	margin: 0;
+	line-height: 1em;
+}
+#result-string {
+	font-size: 1.2em;
+	margin: 0.25em 0 0.5em;
+}
