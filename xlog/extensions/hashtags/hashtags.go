@@ -309,7 +309,7 @@ func renderHashtag(writer util.BufWriter, source []byte, n ast.Node, entering bo
 	}
 
 	tag := n.(*HashTag)
-	fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s">#%s</a>`, tag.value, tag.value, tag.value, tag.value)
+	fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s" data-pagefind-meta="tag-%s:%s">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", tag.value), true)
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", strings.ToLower(string(tag.value))), true)
 	return ast.WalkContinue, nil

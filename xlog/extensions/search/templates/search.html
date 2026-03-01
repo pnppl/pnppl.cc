@@ -20,6 +20,13 @@
 				{{ printf "for (let i = 0; i < result.sub_results.length; i++) {" | raw }}
 					result.sub_results[i]["title"] = result.sub_results[i]["title"].replace(" ¬ §", "");
 				}
+				result.meta.tags = [];
+				for (var key in result.meta) {
+					if (key.startsWith("tag-")) {
+						{{ printf "result.meta.tags.push(` ${result.meta[key]}`);" | raw }}
+						delete result.meta[key];
+					}
+				}
 				return result;
 		    }
 		});

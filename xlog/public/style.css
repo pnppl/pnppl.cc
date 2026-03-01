@@ -454,7 +454,6 @@ div.icon-text {
 	align-items: center;
 	background-color: hsl(221, 14%, calc(var(--background-l) + var(--tag-background-l-delta)));
 	border-radius: var(--radius);
-	color: var(--text);
 	display: inline-flex;
 	font-size: var(--size-small);
 	height: 2em;
@@ -1041,6 +1040,7 @@ time.has-text-grey {
 #search * {
 	border-radius: 0;
 	color: inherit;
+	--pagefind-ui-border: var(--border);
 }
 /* clear button. annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear {
@@ -1049,13 +1049,6 @@ time.has-text-grey {
 /* hide note about offline search if js search is in use */
 #search:has(.pagefind-ui__results) ~ p {
 	display: none;
-}
-/* img placeholder still shows with no image */
-.pagefind-ui__result-thumb {
-	display: none;
-}
-.pagefind-ui__result-thumb:has(img) {
-	display: initial;
 }
 /* ---- spacing ----  */
 .pagefind-ui ol {
@@ -1078,6 +1071,26 @@ time.has-text-grey {
 }
 .pagefind-ui__result-nested:last-of-type {
 	padding-bottom: 0;
+}
+.pagefind-ui__result-tags {
+	margin: 0 0 0 auto !important;
+}
+/* basically a copy-paste of the .tag styles. annoying but i have to override
+   the pagefind styles and it doesn't seem worth it to split to a new file */
+li.pagefind-ui__result-tag {
+	text-align: center;
+	background-color:hsl(221,14%,calc(var(--background-l) + 0%)) !important;
+	border-radius:var(--radius) !important;
+	padding-left: 0.75em !important;
+	padding-right: 0.75em !important;
+}
+/* img placeholder still shows with no image */
+.pagefind-ui__result-thumb {
+	display: none;
+}
+.pagefind-ui__result-thumb:has(img) {
+	display: initial;
+	max-width: calc(160px * var(--pagefind-ui-scale)) !important;
 }
 
 /* Calendar */
@@ -1504,8 +1517,13 @@ pre.chroma {
 		color: thistle;
 	}
 	#search input {
-		color: black;
+		background-color: black;
+		color: var(--text);
 	}
+	#search form::before {
+		background-color: white;
+	}
+
 	/* Dracula syntax theme */
 	.chroma {
 		color: #f8f8f2;
