@@ -35,9 +35,6 @@ func opengraphTags(p Page) template.HTML {
 	escape := template.JSEscapeString
 
 	name := p.Name()
-	if p.Name() == Config.Index {
-		name = Config.Sitename
-	}
 
 	props := Properties(p)
 	var title string
@@ -55,6 +52,10 @@ func opengraphTags(p Page) template.HTML {
 	u.Scheme = "https"
 	u.Host = domain
 	u.Path = "/" + name + "/"
+
+	if p.Name() == Config.Index {
+		u.Path = "/"
+	}
 
 	URL := u.String()
 
