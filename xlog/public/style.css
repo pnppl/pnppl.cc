@@ -1184,6 +1184,8 @@ table.calendar td a:focus-visible {
 /*	padding-left: 10px; */
 	word-break: keep-all;
 	text-align: center;
+	background-color: purple;
+	color: white;
 }
 /* day number color intensity based on number of entries */
 .calendar td:has(.menu-list > a:nth-child(1)) span.tag {
@@ -1614,7 +1616,10 @@ pre.chroma {
 	#search form::before {
 		background-color: white;
 	}
-
+	/* calendar weekdays */
+	.content .calendar thead th {
+		border-color: black;
+	}
 	/* Dracula syntax theme */
 	.chroma {
 		color: #f8f8f2;
