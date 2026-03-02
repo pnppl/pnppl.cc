@@ -213,7 +213,6 @@ button {
 }
 code {
 	background-color: var(--background);
-	border-radius: 0.5em;
 	color: var(--code);
 	counter-reset: lineNo;
 	font-size: 0.875em;
@@ -454,6 +453,7 @@ div.icon-text {
 	align-items: center;
 	background-color: hsl(221, 14%, calc(var(--background-l) + var(--tag-background-l-delta)));
 	border-radius: var(--radius);
+	color: var(--text);
 	display: inline-flex;
 	font-size: var(--size-small);
 	height: 2em;
