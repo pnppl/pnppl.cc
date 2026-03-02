@@ -94,6 +94,8 @@ todo:
 - calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
 - hashtag sorting is odd, look into that
 - ! why the fuck aren't backlinks working?
+	- i think it's because the wikilink extension makes its own type of nodes
+	- images ext (auto-columnizer) doesn't work with wikilink syntax either
 - ! stop dicking around with the software and post your shit up there
 
 low priority/done:
