@@ -16,11 +16,13 @@ function getIcon() {
 	}
 	return "❤️";
 }
+
 function getBpmString() {
 	let bpm: number = breaths * 2;
 	return bpm.toString().padStart(2, "0");
 }
 
+// results with date and time, formatted with pipe separators for markdown table
 function getResultString() {
 	let month: string = dt.getMonth().toString().padStart(2, "0");
 	let day: string = dt.getDate().toString().padStart(2, "0");
@@ -32,7 +34,8 @@ function getResultString() {
 function end() {
 	clearInterval(breathTimer);
 	progress = null;
-	document.getElementById('result-string').innerHTML = `${getIcon()} ${breaths * 2} breaths per minute`;
+	document.getElementById('hellip').style.display = 'none';
+	document.getElementById('result-string').innerHTML = `${getIcon()} ${getBpmString()} breaths per minute`;
 	document.getElementById('results').style.display = 'initial';
 	setTimeout(() => {
 		debounceEnd = false;
@@ -42,55 +45,47 @@ function end() {
 function tick() {
 	progress -= 1;
 	document.getElementById('seconds').innerHTML = progress.toString(10);
-	let progressInverse: number = Math.abs(progress - 30)
-	document.getElementById('prog').setAttribute('value', progressInverse.toString());
+	let progressInverse: string = Math.abs(progress - 30).toString()
+	document.getElementById('prog').setAttribute('value', progressInverse);
 	if (progress === 0) {
 		end();
 	}
 }
 
 function start() {
-	progress = 30;
-	breaths = 0;
-	clearInterval(breathTimer);
-	debounceEnd = true;
-	dt.setTime(Date.now());
-	document.getElementById('seconds').innerHTML = '30';
-	document.getElementById('prog').setAttribute('value', '0');
-	document.getElementById('guide').style.display = 'none';
-	document.getElementById('results').style.display = 'none';
-	document.getElementById('check').style.display = 'none';
-	breathTimer = setInterval(tick, 1000);
+	if (progress === null && !debounceEnd) {
+		progress = 30;
+		breaths = 0;
+		clearInterval(breathTimer);
+		debounceEnd = true;
+		dt.setTime(Date.now());
+		document.getElementById('seconds').innerHTML = '30';
+		document.getElementById('hellip').style.display = 'initial';
+		document.getElementById('prog').setAttribute('value', '0');
+		document.getElementById('guide').style.display = 'none';
+		document.getElementById('results').style.display = 'none';
+		document.getElementById('check').style.display = 'none';
+		breathTimer = setInterval(tick, 1000);
+	}
 }
 
 function breathe() {
-	if (progress != null) {
+	if (!debounceTouch && progress != null) {
 		breaths += 1;
 		document.getElementById('breaths').innerHTML = breaths.toString();
+		debounceTouch = true;
+		setTimeout(() => {
+			debounceTouch = false;
+		}, debounceTouchMs);
 	}
-}
-
-function press() {
-	if (progress === null && !debounceEnd) {
-		start();
-	}
-	breathe();
 }
 
 function setup() {
 	document.getElementById('breath').addEventListener('pointerup', () => {
-		if (!debounceTouch) {
-			press();
-			debounceTouch = true;
-			setTimeout(() => {
-				debounceTouch = false;
-			}, debounceTouchMs)
-		}
+		breathe();
 	});
 	document.getElementById('breath').addEventListener('pointerdown', () => {
-		if (progress === null && !debounceEnd) {
-			start();
-		}
+		start();
 	});
 	document.getElementById('copy').addEventListener('click', () => {
 		navigator.clipboard.writeText(getResultString());
@@ -98,7 +93,7 @@ function setup() {
 	});
 }
 
-
+// do the thing
 window.onload = function() {
 	setup();
 };

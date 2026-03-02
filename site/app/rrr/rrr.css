@@ -14,6 +14,7 @@ main {
 	background: 0;
 	border: 0;
 	transition: all 0.5s ease;
+	font-family: Twemoji Mozilla, Noto Color Emoji;
 }
 #breath:active {
 	border-radius: 50%;
@@ -47,4 +48,7 @@ h1 {
 #result-string {
 	font-size: 1.2em;
 	margin: 0.25em 0 0.5em;
+}
+#hellip, #check {
+	position: absolute;
 }
