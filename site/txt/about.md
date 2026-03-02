@@ -17,11 +17,13 @@ I would love to get an email from you! [[mailto:feedback@pnppl.cc|feedback@pnppl
 
 
 # Copyleft
-This site is licensed [[//creativecommons.org/licenses/by-sa/4.0/|CC BY-SA 4.0,]] with the attribution requirement waived.
+This site's content is licensed [[https://creativecommons.org/licenses/by-sa/4.0/|CC BY-SA 4.0,]] with the attribution requirement waived, unless otherwise specified.
 
 Intellectual property is a fake idea; unfortunately, we live in a world where it reigns supreme. Copyleft gives us a tool to turn copyright against itself. It means that you can do whatever you want with the content of this site, as long as you extend the same right to others.
 
-I'm not wild about this specific license. It's irritating that it requires notice of attribution and derivatives. I don't care what you do with my work as long as you don't [[//en.wikipedia.org/wiki/Enclosure|enclose]] it. Still, CC BY-SA 4.0 seems to be on strong legal footing and is compatible with (and can even be converted into) the GPLv3. If the license causes issues for you, let me know and I'll probably be happy to do a public domain declaration.
+I'm not wild about this specific license. I don't care what you do with my work as long as you don't [[https://en.wikipedia.org/wiki/Enclosure|enclose]] it. Still, CC BY-SA 4.0 seems to be on strong legal footing and is compatible with (and can even be converted into) the [[https://www.gnu.org/licenses/gpl-3.0.en.html|GPLv3]]. If the license causes issues for you, let me know and I'll probably be happy to do a public domain declaration.
+
+Code that I share here is [[https://www.gnu.org/licenses/agpl-3.0.en.html|AGPLv3]] if unspecified. The code used to build the site is covered by other licenses.
 
 
 # Install Victor Mono
@@ -39,7 +41,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 # We have to go deeper: technical details, etc. #
 My goal is to have to change as little as possible about my existing approach to writing: plaintext, formatted in whatever way feels right, written in my notes app or shell. I'd like for the software to adapt to me, not the other way around. My one concession is Markdown. I don't really like it, but it's cornered the market, and it's close enough that I'm willing to bend a little. Extensions make it much less painful — particularly Wikilink syntax support. The text files that pnppl.cc is built from are the One True Commonplace, with the website providing some extra features that are nice to have but not required. You can access the original text file for a post with the _txt_ button in the top right corner.
 
-You can also access them through [[//git.gay/pnppl/pnppl.cc/|the]] [[//codeberg.org/pnppl/pnppl.cc|git]] [[//github.com/pnppl/pnppl.cc|repo,]] which handily doubles as a version history and complete source of the site. If you just want to grab all the posts in plaintext, that's at [[/txt/!txt.zip]].
+You can also access them through [[https://git.gay/pnppl/pnppl.cc/|the]] [[https://codeberg.org/pnppl/pnppl.cc|git]] [[https://github.com/pnppl/pnppl.cc|repo,]] which handily doubles as a version history and complete source of the site. If you just want to grab all the posts in plaintext, that's at [[/txt/!txt.zip]].
 
 pnppl.cc does not use any Javascript except for the Search page. It's a necessary compromise. If you want to search without enabling js, you can grab the text files and search them locally. This is easily accomplished in the shell, eg `grep -i "search term" *.md`. I like [[//github.com/BurntSushi/ripgrep|ripgrep.]]
 
