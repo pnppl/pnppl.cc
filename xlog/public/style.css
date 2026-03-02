@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Variables
-   ========================================================================== */
+	 Variables
+	 ========================================================================== */
 :root {
 	/* Lightness values that change in dark mode */
 	--scheme-main-l: 100%;
@@ -32,8 +32,8 @@
 }
 
 /* ==========================================================================
-   Reset
-   ========================================================================== */
+	 Reset
+	 ========================================================================== */
 html,
 body,
 p,
@@ -86,8 +86,8 @@ body {
 }
 
 /* ==========================================================================
-   Typography
-   ========================================================================== */
+	 Typography
+	 ========================================================================== */
 * {
 	font-family:
 		Victor Mono Medium,
@@ -174,8 +174,8 @@ time {
 	padding: 0;
 }
 /* ==========================================================================
-   Base Elements
-   ========================================================================== */
+	 Base Elements
+	 ========================================================================== */
 a,
 button {
 	cursor: pointer;
@@ -269,8 +269,8 @@ summary::marker {
 }
 
 /* ==========================================================================
-   Components
-   ========================================================================== */
+	 Components
+	 ========================================================================== */
 /* Block spacing ----------------------------------------------------------- */
 .message:not(:last-child),
 .title:not(:last-child),
@@ -581,7 +581,7 @@ nav.navbar {
 .navbar-item {
 	color: var(--text);
 	/* compat: inline-block rather than block so items flow
-	   horizontally in pre-flexbox browsers (flex overrides either way) */
+		 horizontally in pre-flexbox browsers (flex overrides either way) */
 	display: inline-block;
 	vertical-align: middle;
 	flex-grow: 1;
@@ -616,8 +616,8 @@ a.navbar-item {
 }
 
 /* ==========================================================================
-   Layout
-   ========================================================================== */
+	 Layout
+	 ========================================================================== */
 .column {
 	display: block;
 	flex-basis: 0;
@@ -656,8 +656,8 @@ a.navbar-item {
 }
 
 /* ==========================================================================
-   Utilities
-   ========================================================================== */
+	 Utilities
+	 ========================================================================== */
 .has-text-grey {
 	color: #69748c;
 }
@@ -699,8 +699,8 @@ a.navbar-item {
 }
 
 /* ==========================================================================
-   View (article content)
-   ========================================================================== */
+	 View (article content)
+	 ========================================================================== */
 @view-transition {
 	navigation: auto;
 }
@@ -854,9 +854,9 @@ a.footnote-ref:target {
 }
 
 /* ==========================================================================
-   Win95 Chrome
-   Raised/sunken border style on interactive elements and TOC.
-   ========================================================================== */
+	 Win95 Chrome
+	 Raised/sunken border style on interactive elements and TOC.
+	 ========================================================================== */
 a.navbar-item,
 a.button,
 a.button.is-small,
@@ -941,27 +941,27 @@ a.show-on-parent-hover {
 }
 
 /* ==========================================================================
-   Site Chrome (badge, footer, view-transitions)
-   ========================================================================== */
+	 Site Chrome (badge, footer, view-transitions)
+	 ========================================================================== */
 
 /* "dynamic" badge */
-body:has(h1:nth-of-type(2))  { --badge: url(/public/badges/victor-8831-wide.gif); }
-body:has(h1:nth-of-type(3))  { --badge: url(/public/badges/copyleft.gif); }
-body:has(h1:nth-of-type(4))  {
+body:has(h1:nth-of-type(2))	{ --badge: url(/public/badges/victor-8831-wide.gif); }
+body:has(h1:nth-of-type(3))	{ --badge: url(/public/badges/copyleft.gif); }
+body:has(h1:nth-of-type(4))	{
 	--badge: url(/public/badges/invalid-html.gif);
 	--badge-press: none;
 }
-body:has(h1:nth-of-type(5))  {
+body:has(h1:nth-of-type(5))	{
 	--badge: url(/public/badges/invalid-css-red.gif);
 	--badge-press: none;
 }
-body:has(h1:nth-of-type(6))  {
+body:has(h1:nth-of-type(6))	{
 	--badge: url(/public/badges/she-her.gif);
 	--badge-press: "";
 }
-body:has(h1:nth-of-type(7))  { --badge: url(/public/badges/bgdc-ga-j.gif); }
-body:has(h1:nth-of-type(8))  { --badge: url(/public/badges/bgdc-tr-j.gif); }
-body:has(h1:nth-of-type(9))  { --badge: url(/public/badges/bgdc-bi-j.gif); }
+body:has(h1:nth-of-type(7))	{ --badge: url(/public/badges/bgdc-ga-j.gif); }
+body:has(h1:nth-of-type(8))	{ --badge: url(/public/badges/bgdc-tr-j.gif); }
+body:has(h1:nth-of-type(9))	{ --badge: url(/public/badges/bgdc-bi-j.gif); }
 body:has(h1:nth-of-type(10)) { --badge: url(/public/badges/bgdc-gq-j.gif); }
 body:has(h1:nth-of-type(11)) { --badge: url(/public/badges/fish-anim.gif); }
 body:has(h1:nth-of-type(12)) { --badge: url(/public/badges/lain.gif); }
@@ -1028,8 +1028,8 @@ time.has-text-grey {
 }
 
 /* ==========================================================================
-   Page-Specific (search, calendar, onebitday)
-   ========================================================================== */
+	 Page-Specific (search, calendar, onebitday)
+	 ========================================================================== */
 
 /* pagefind search */
 #search mark {
@@ -1042,6 +1042,9 @@ time.has-text-grey {
 	color: inherit;
 	--pagefind-ui-border: var(--border);
 }
+.pagefind-ui__search-input {
+	outline-offset: -1px;
+}
 /* clear button. annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear {
 	display: none;
@@ -1050,7 +1053,7 @@ time.has-text-grey {
 #search:has(.pagefind-ui__results) ~ p {
 	display: none;
 }
-/* ---- spacing ----  */
+/* ---- spacing ----	*/
 .pagefind-ui ol {
 	margin: 0 0.25em;
 }
@@ -1076,7 +1079,7 @@ time.has-text-grey {
 	margin: 0 0 0 auto !important;
 }
 /* basically a copy-paste of the .tag styles. annoying but i have to override
-   the pagefind styles and it doesn't seem worth it to split to a new file */
+	 the pagefind styles and it doesn't seem worth it to split to a new file */
 li.pagefind-ui__result-tag {
 	text-align: center;
 	background-color:hsl(221,14%,calc(var(--background-l) + 0%)) !important;
@@ -1091,6 +1094,42 @@ li.pagefind-ui__result-tag {
 .pagefind-ui__result-thumb:has(img) {
 	display: initial;
 	max-width: calc(160px * var(--pagefind-ui-scale)) !important;
+}
+/* filters */
+.pagefind-ui__drawer {
+	flex-direction: row-reverse !important;
+	gap: 0.5em !important;
+}
+.pagefind-ui__filter-block {
+	border: 0 !important;
+	padding: 0 !important;
+}
+.pagefind-ui__filter-panel {
+	position: absolute;
+	margin: 0.3em 0 0 0 !important;
+	background-color: light-dark(white, black);
+	padding: 0.5em;
+	border: 2px solid var(--border);
+}
+.pagefind-ui__filter-panel:has(.pagefind-ui__filter-block:open) {
+	position: static;
+	height: 100%;
+}
+.pagefind-ui__filter-name {
+	outline-offset: 8px;
+}
+.pagefind-ui__filter-label {
+	line-height: 1em;
+}
+.pagefind-ui__filter-group {
+	padding-top: 1em !important;
+	margin-top: 0.5em !important;
+	border-top: 1px solid var(--border) !important;
+}
+@media screen and (max-width: 767px) {
+	.pagefind-ui__filter-panel {
+		position: static;
+	}
 }
 
 /* Calendar */
@@ -1147,23 +1186,23 @@ img.onebitday {
 }
 
 /* ==========================================================================
-   Typographic Entities
-   ========================================================================== */
-.mdash:after  { content: "\2014"; }
-.ndash:after  { content: "\2013"; }
+	 Typographic Entities
+	 ========================================================================== */
+.mdash:after	{ content: "\2014"; }
+.ndash:after	{ content: "\2013"; }
 .hellip:after { content: "\2026"; }
-.lsquo:after  { content: "\2018"; }
-.rsquo:after  { content: "\2019"; }
-.ldquo:after  { content: "\201C"; }
-.rdquo:after  { content: "\201D"; }
-.ne:after     { content: "\2260"; }
-.asymp:after  { content: "\2248"; }
-.ge:after     { content: "\2265"; }
-.le:after     { content: "\2264"; }
+.lsquo:after	{ content: "\2018"; }
+.rsquo:after	{ content: "\2019"; }
+.ldquo:after	{ content: "\201C"; }
+.rdquo:after	{ content: "\201D"; }
+.ne:after		 { content: "\2260"; }
+.asymp:after	{ content: "\2248"; }
+.ge:after		 { content: "\2265"; }
+.le:after		 { content: "\2264"; }
 
 /* ==========================================================================
-   Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
-   ========================================================================== */
+	 Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
+	 ========================================================================== */
 .chroma {
 	color: #1a1a1a;
 	background-color: white;
@@ -1355,8 +1394,8 @@ pre.chroma {
 }
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+	 Media Queries
+	 ========================================================================== */
 @media screen and (min-width: 769px), print {
 	.column.is-narrow {
 		flex: none;
@@ -1489,8 +1528,8 @@ pre.chroma {
 }
 
 /* ==========================================================================
-   Dark Mode
-   ========================================================================== */
+	 Dark Mode
+	 ========================================================================== */
 @media (prefers-color-scheme: dark) {
 	:root {
 		--link-on-scheme-l: 73%;
