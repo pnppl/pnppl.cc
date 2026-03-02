@@ -41,9 +41,10 @@ todo:
 		- only downside: can only upload over ftp
 		- pages still always show the trailing /
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
-		- add PHP features? Likes counter? try to make a gallery for 1bitday gifs?
+		- add PHP features? Likes counter?
 		- add web1.0hosting button?
-		- .md files always try to download. this seems to be controlled by the headers sent by the server. might be worth asking support/the forum about this
+		- .md files always try to download. this seems to be controlled by the headers sent by the server
+			- contacted support, ignored
 - changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
 	- would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
 		- is this actually a stupid idea? most sites won't serve http
@@ -82,6 +83,9 @@ todo:
 - x figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this.
 	- if we have to make them executable for the host then let's add in a chmod -x step after
 		- did this, seems ok
+	- messing around on ftp, we actually have normal chmod and -x doesn't seem to break anything
+		- was i just confused because i was somehow accidentally removing x from directories? can we skip all this bullshit and do 644?
+		- unfortunately .md stil has Content-Type: application/octet-stream 
 - i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
 	- x maybe we can get rid of all that damn whitespace mosaic displays in the page title
 	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
@@ -90,6 +94,7 @@ todo:
 - calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
 - hashtag sorting is odd, look into that
 - ! why the fuck aren't backlinks working?
+- ! stop dicking around with the software and post your shit up there
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
