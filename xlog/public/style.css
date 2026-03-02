@@ -294,6 +294,7 @@ summary::marker {
 	position: relative;
 	user-select: none;
 	white-space: nowrap;
+	outline-offset: 0;
 }
 .button .icon,
 .button .icon.is-small {
@@ -980,6 +981,7 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	float: right;
 	position: relative;
 	line-height: 0;
+	outline-offset: 0;
 }
 #badge:active:after {
 	content: var(--badge-press, "");
@@ -991,7 +993,6 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	border: 2px solid;
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	pointer-events: none;
-	outline-offset: 0;
 }
 #RSS {
 	color: white;
