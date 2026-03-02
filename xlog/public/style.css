@@ -27,7 +27,7 @@
 	--radius-small: 0.25rem;
 	--radius: 0.375rem;
 	--hr-height: 2px;
-	--navbar-height: 3.25rem;
+	--navbar-height: 3rem;
 	--column-gap: 0.75rem;
 }
 
@@ -390,7 +390,7 @@ summary::marker {
 .content table td,
 .content table th {
 	border: 1px solid var(--border);
-	border-width: 0 0 1px;
+	border-width: 1px;
 	padding: 0.5em 0.75em;
 	vertical-align: top;
 }
@@ -402,12 +402,12 @@ summary::marker {
 }
 .content table thead td,
 .content table thead th {
-	border-width: 0 0 2px;
-	color: var(--text-strong);
+/*	border-width: 0 0 2px; */
+/*	color: var(--text-strong); */
 }
 .content table tbody tr:last-child td,
 .content table tbody tr:last-child th {
-	border-bottom-width: 0;
+/*	border-bottom-width: 0; */
 }
 div.content {
 	overflow-wrap: anywhere;
@@ -442,10 +442,10 @@ div.icon-text {
 .table th {
 	vertical-align: top;
 }
-.table tbody tr:last-child td,
-.table tbody tr:last-child th {
-	border-bottom-width: 0;
-}
+/*.table tbody tr:last-child td, */
+/*.table tbody tr:last-child th { */
+/*	border-bottom-width: 0; */
+/*} */
 
 /* Tag --------------------------------------------------------------------- */
 .tag {
@@ -590,6 +590,7 @@ nav.navbar {
 	padding: 0.5rem 0.75rem;
 	position: relative;
 	white-space: nowrap;
+	min-height: var(--navbar-height);
 }
 .navbar-item .icon {
 	/* compat: hide navbar icons in pre-flex browsers */
@@ -1163,13 +1164,15 @@ table.calendar td a:focus-visible {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-table.calendar {
+.content table.calendar {
 	width: 100%;
+	margin-bottom: 5em;
 }
 /* weekdays */
-.calendar thead th {
-	padding-left: 10px;
+.content .calendar thead th {
+/*	padding-left: 10px; */
 	word-break: keep-all;
+	text-align: center;
 }
 /* day number color intensity based on number of entries */
 .calendar td:has(.menu-list > a:nth-child(1)) span.tag {
@@ -1182,6 +1185,16 @@ table.calendar {
 .calendar td:has(.menu-list > a:nth-child(3)) span.tag {
 	background-color: orchid;
 }
+/* hide blank rows */
+.calendar tbody tr:not(:has(.tag)) {
+	display: none;
+}
+.calendar .tag {
+	position: relative;
+	top: -2px;
+	border-radius: 0;
+}
+
 /* Onebitday */
 a.onebitday {
 	text-decoration: none;
@@ -1490,6 +1503,7 @@ pre.chroma {
 	}
 }
 
+/* mobile */
 @media screen and (max-width: 767px) and (pointer: coarse) {
 	@font-face {
 		font-family: "Victor Mono Medium";
@@ -1514,6 +1528,7 @@ pre.chroma {
 	}
 }
 
+/* mobile or just skinny */
 @media (max-width: 767px) {
 	#table-of-contents-list {
 		float: none;
@@ -1534,6 +1549,22 @@ pre.chroma {
 	table.calendar td {
 		height: auto;
 		padding: 0.5em 0.25em;
+	}
+	.calendar .tag {
+		position: static;
+		width: 100%;
+	}
+	.calendar span.tag {
+		background-color: transparent;
+	}
+	.calendar td:has(.menu-list>a:nth-child(1)) {
+		background-color: thistle;
+	}
+	.calendar td:has(.menu-list>a:nth-child(2)) {
+		background-color: plum;
+	}
+	.calendar td:has(.menu-list>a:nth-child(3)) {
+		background-color: orchid;
 	}
 }
 
