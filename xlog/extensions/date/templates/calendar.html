@@ -1,10 +1,10 @@
 {{ template "header" . }}
 <tt>
 {{range .calendar}}
-<h1>{{.Year}}</h1>
+{{ $year := .Year }}
 {{range .Months}}
-<h2>{{.Name}}</h2>
-<table class="calendar table is-bordered is-fullwidth is-hoverable">
+<h1 class="calendar-head">{{ .Name }} {{ $year }} </h2>
+<table class="calendar table">
   <thead>
     <tr>
       <th>Su</th>

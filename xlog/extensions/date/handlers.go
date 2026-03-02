@@ -99,7 +99,20 @@ func organizeCalendar(pairs []pair) []Year {
 		var yearData Year
 		yearData.Year = year
 
-		for month, pairs := range months {
+	// ------------- AI
+	// Sort months in descending order (December first)
+		monthKeys := make([]time.Month, 0, len(months))
+		for month := range months {
+			monthKeys = append(monthKeys, month)
+		}
+		slices.SortFunc(monthKeys, func(a, b time.Month) int {
+			return int(b) - int(a)
+		})
+
+		for _, month := range monthKeys {
+			pairs := months[month]
+	// AI --------------
+//		for month, pairs := range months {
 			var monthData Month
 			monthData.Name = month.String()
 

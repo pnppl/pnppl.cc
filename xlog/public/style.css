@@ -1150,6 +1150,12 @@ li.pagefind-ui__result-tag {
 	width: 14.2857%;
 	width: calc(100% / 7);
 }
+.calendar-head {
+	font-size: 150%;
+	font-style: normal;
+	text-align: center;
+	padding-top: 0.25em;
+}
 table.calendar td {
 	height: 8em;
 	overflow: hidden;
@@ -1159,14 +1165,19 @@ table.calendar td {
 table.calendar td a:focus-visible {
 	outline-offset: -2px;
 }
+.calendar .menu-list a {
+	padding: 0.5em;
+}
 .calendar a .page {
-	font-size: 0.7em;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	font-size: 0.75em;
+/*	overflow: hidden; */
+/*	text-overflow: ellipsis; */
+	display: inline-block;
+	font-style: italic;
 }
 .content table.calendar {
 	width: 100%;
-	margin-bottom: 5em;
+	margin-bottom: 5%;
 }
 /* weekdays */
 .content .calendar thead th {
