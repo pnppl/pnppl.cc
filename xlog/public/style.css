@@ -1040,6 +1040,7 @@ time.has-text-grey {
 #search * {
 	border-radius: 0;
 	color: inherit;
+	background-color: inherit;
 	--pagefind-ui-border: var(--border);
 }
 .pagefind-ui__search-input {
@@ -1069,6 +1070,12 @@ time.has-text-grey {
 	padding: 0 0 1em !important;
 	margin: 0 0.5em !important;
 }
+.pagefind-ui__result {
+	gap: 1em !important;
+}
+.pagefind-ui__result:last-of-type {
+	padding-bottom: 0.75em !important;
+}
 .pagefind-ui__result-nested {
 	padding-bottom: 0.5em;
 }
@@ -1077,6 +1084,8 @@ time.has-text-grey {
 }
 .pagefind-ui__result-tags {
 	margin: 0 0 0 auto !important;
+	position: relative;
+	top: 0.25em;
 }
 /* basically a copy-paste of the .tag styles. annoying but i have to override
 	 the pagefind styles and it doesn't seem worth it to split to a new file */
@@ -1123,6 +1132,7 @@ li.pagefind-ui__result-tag {
 }
 .pagefind-ui__filter-group {
 	padding-top: 1em !important;
+	padding-bottom: 0.25em !important;
 	margin-top: 0.5em !important;
 	border-top: 1px solid var(--border) !important;
 }
