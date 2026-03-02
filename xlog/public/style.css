@@ -590,6 +590,7 @@ nav.navbar {
 	padding: 0.5rem 0.75rem;
 	position: relative;
 	white-space: nowrap;
+	outline-offset: 0;
 }
 .navbar-item .icon {
 	/* compat: hide navbar icons in pre-flex browsers */
@@ -990,6 +991,7 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	border: 2px solid;
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	pointer-events: none;
+	outline-offset: 0;
 }
 #RSS {
 	color: white;
@@ -1202,10 +1204,17 @@ table.calendar td a:focus-visible {
 .calendar tbody tr:not(:has(.tag)) {
 	display: none;
 }
+/* day numbers */
 .calendar .tag {
 	position: relative;
 	top: -2px;
 	border-radius: 0;
+}
+.calendar a:has(.tag):focus {
+	outline: 0;
+	border-width: 2px 3px 4px 0;
+	border-style: solid;
+	border-color: lightseagreen;
 }
 
 /* Onebitday */
