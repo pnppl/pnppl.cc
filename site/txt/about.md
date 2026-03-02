@@ -17,7 +17,7 @@ I would love to get an email from you! [[mailto:feedback@pnppl.cc|feedback@pnppl
 
 
 # Copyleft
-This site's content is licensed [[https://creativecommons.org/licenses/by-sa/4.0/|CC BY-SA 4.0,]] with the attribution requirement waived, unless otherwise specified.
+This site's content is licensed [[https://creativecommons.org/licenses/by-sa/4.0/|CC BY-SA 4.0]] ([[/public/CC_BY-SA_4.0.txt|license text]]), with the attribution requirement waived, unless otherwise specified.
 
 Intellectual property is a fake idea; unfortunately, we live in a world where it reigns supreme. Copyleft gives us a tool to turn copyright against itself. It means that you can do whatever you want with the content of this site, as long as you extend the same right to others.
 
