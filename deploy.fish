@@ -42,4 +42,4 @@ if set -q _flag_mobile
 	crond &
 end
 
-return exitval
+return $exitval
