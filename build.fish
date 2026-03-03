@@ -12,6 +12,11 @@ go run xlog.go -source $pwd/site/txt -build $pwd/site -sitename pnppl.cc -rss.do
 #cd $pwd/site
 #fish $pwd/clean_autolinks.fish &&
 cd $pwd &&
-fish finish_toc.fish &&
-echo "! BUILD OK !" && return 0 ||
-echo " !! ~~~~~~~ BUILD FAILED! ~~~~~~ !! " && return 1
+fish finish_toc.fish
+
+if test $status -ne 0
+	echo " !! ~~~~~~~ BUILD FAILED! ~~~~~~ !! "
+	return 1
+end
+echo "! BUILD OK !"
+return 0

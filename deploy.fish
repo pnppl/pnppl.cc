@@ -35,11 +35,9 @@ zip -r site/img/comics/!comics.zip site/img/comics/ &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
-echo "! DEPLOY OK !" && set exitval 0 ||
-echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! " && set exitval 1
+echo "! DEPLOY OK !" ||
+echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
 
 if set -q _flag_mobile
 	crond &
 end
-
-return $exitval
