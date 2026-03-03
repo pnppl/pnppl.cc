@@ -8,12 +8,13 @@ import (
 	"sort"
 	"strings"
 	"sync"
-
+//	"fmt"
 	_ "embed"
 
 	. "github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	east "github.com/emad-elsaid/xlog/markdown/extension/ast"
+	"github.com/pnppl/wikilink"
 )
 
 //go:embed templates
@@ -113,6 +114,22 @@ func containLinkTo(n ast.Node, p Page) bool {
 			base := path.Base(p.Name())
 			if dst == base {
 				return true
+			}
+		}
+	}
+	if wl, ok := n.(*wikilink.Node); ok {
+		if ! wl.Embed {
+			dst := string(wl.Target) + string(wl.Fragment)
+			if strings.HasPrefix(dst, "/") {
+				path := strings.TrimPrefix(dst, "/")
+				if string(path) == p.Name() {
+					return true
+				}
+			} else {
+				base := path.Base(p.Name())
+				if dst == base {
+					return true
+				}
 			}
 		}
 	}

@@ -1,42 +1,22 @@
 todo: 
 - css tweaks
-	- x reduce vertical space
 	- nicer ul styling
-	- x menu takes up too much space on mobile
-		- couldn't get the home icon to behave so I just hide it on mobile
-			- in offpunk `view full` it takes up an entire page <_>
-	- x calendar is a disaster
-		- not perfect but much better now
+	- couldn't get the home icon to behave so I just hide it on mobile
+		- in offpunk `view full` it takes up an entire page <_>
 	- heading buttons run into text on mobile
 	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
 		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
 - display tags for item next to links to it?
-- x filenames in date format should be treated as containing that date - added to calendar, etc.
-	- date format should have date-only and time-also formats, and we need to select one to rule them all
-		- actually just yyyy-mm-dd is fine
-	- pretty janky but i got filenames working
 - get rid of shell postprocessing
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
 			- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
 - next/prev post buttons
 	- would be relatively easy to hack in with more shell but would rather avoid more of that
-- rss is a little wonky. the heading buttons render but don't function in most readers
-	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
-		- x would also like to set up an email subscription option, probably some rss-to-email service i can use
-		- then there's also masto, bsky, etc. stuff people actually use. meh
-		- i think it's now officially Good Enough but could use some polish
-			- x jump back from footnote doesn't work
-				- i only had name=, not id, and my reader's html renderer is not so forgiving
-			- TOC?
-			- x codeblocks
-- x tracked down shortcode bug - modified frontmatter ext with nil trigger
-- have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
-- chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
-- blank titles cause issues
-- we're technically live!
+- masto, bsky, etc?
+- we're live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
 		- only downside: can only upload over ftp
 		- pages still always show the trailing /
@@ -44,26 +24,16 @@ todo:
 		- add PHP features? Likes counter?
 		- add web1.0hosting button?
 		- .md files always try to download. this seems to be controlled by the headers sent by the server
-			- contacted support, ignored
-- changed links in /txt to protocol-relative ones. ought to work but can't properly test until deploy
-	- would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
-		- is this actually a stupid idea? most sites won't serve http
-		- definitely don't strip http:// since some sites only serve that and we want to specify
-		- ideally i would specify when appropriate and relativize when not but then i can't just paste links
-	- x if we can output /post.html instead of /post/index.html then we could actually use the wikilinks more like real wikilinks - no leading /
-		- x of course we could also modify the extension to fit the current setup
-			- i had already modified it to the directory approach lol. modified again to add leading slash when needed
-	- we are still seeing https:// in `<meta property="og:url"` tags -- opengraph ext
-		- x also these seem broken. there is no domain. i think i need to specify `basename` or something?
-			- should be fixed, had to pass build option
-	- also still present in sitemap.xml, rss feed
-		- x set up rss to just use http for everything. a protocol is required and i figure everything that supports ssl will auto promote
+			- heard back from support! it's... text/html now.
+			- added some attrs to the link that don't seem to accomplish anything
+- would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
+	- is this actually a stupid idea? most sites won't serve http
+	- definitely don't strip http:// since some sites only serve that and we want to specify
+	- ideally i would specify when appropriate and relativize when not but then i can't just paste links
 - syncing, metadata, and mobile fuckery
-	- git does not store any metadata. idk why I thought it did. every clone changes the modtime. we can work around this annoyance with metastore
-		- ok, i made a stab at this, using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
-			- probably some gaping hole in this but whatever
-			- actually kinda seems to be working fine now
-			- only problem is a failed deploy can get it out of sync and i have to notice and manually put the metadata back
+	- git does not store any metadata
+		- using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
+			- problem: a failed deploy can get it out of sync and i have to notice and manually put the metadata back
 	- i cannot create a symlink on any of the storage accessible to markor. god dammit
 		- i could link it the other direction but i can't find any way to make git follow the link, so it would just upload a pointer
 		- after much gnashing of teeth I decided we have to use rsync
@@ -77,26 +47,9 @@ todo:
 		- this still doesn't really work for eg mosaic, offpunk. i guess it's relatively rare so maybe just find-replace \t -> 4x nbsp
 			- maybe a preprocessor would help. the bare md files will still be fucked though
 	- apparently this also means i can't start a list indented. goddammit
-- git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
-	- we clearly need to just exclude the stuff xlog builds from git
-	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 
-- x figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this.
-	- if we have to make them executable for the host then let's add in a chmod -x step after
-		- did this, seems ok
-	- messing around on ftp, we actually have normal chmod and -x doesn't seem to break anything
-		- was i just confused because i was somehow accidentally removing x from directories? can we skip all this bullshit and do 644?
-		- unfortunately .md stil has Content-Type: application/octet-stream 
-- i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
-	- x maybe we can get rid of all that damn whitespace mosaic displays in the page title
-	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
-		- maybe we should just put everything through a linter when we build
-- x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
-- calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
 - hashtag sorting is odd, look into that
-- ! why the fuck aren't backlinks working?
-	- i think it's because the wikilink extension makes its own type of nodes
-	- images ext (auto-columnizer) doesn't work with wikilink syntax either
 - ! stop dicking around with the software and post your shit up there
+
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
@@ -121,9 +74,7 @@ low priority/done:
 - mosaic compat
 	- x anchors don't work -- is that my fault or did mosaic not support them?
 		- in html 2.0 you can't navigate to an element by id, you have to have <a name="id">
-- x make sure dark mode works since we have this giant fucking css framework. consider minifying that also. or throwing it away
-- x index doesn't show on tag page
-	- it's fine
+	- why did <center> stop working?
 - x setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
 - ! aliasing for mentions?
@@ -226,7 +177,40 @@ low priority/done:
 		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
+- i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
+	- x maybe we can get rid of all that damn whitespace mosaic displays in the page title
+	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
+		- maybe we should just put everything through a linter when we build
 - i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first.
+- x why the fuck aren't backlinks working?
+	- it's because the wikilink extension makes its own type of nodes
+- x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
+- x calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
+	- resorted to AI but it's not really complicated, just functional sort syntax i don't understand
+- x filenames in date format should be treated as containing that date - added to calendar, etc.
+	- date format should have date-only and time-also formats, and we need to select one to rule them all
+		- actually just yyyy-mm-dd is fine
+	- pretty janky but i got filenames working
+- rss is a little wonky
+	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
+		- i think it's now officially Good Enough but could use some polish
+			- x jump back from footnote doesn't work
+				- i only had name=, not id, and my reader's html renderer is not so forgiving
+			- TOC?
+- x tracked down shortcode bug - modified frontmatter ext with nil trigger
+- have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
+- chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
+- blank titles cause issues
+- git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
+	- we clearly need to just exclude the stuff xlog builds from git
+	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 
+- x figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this.
+	- if we have to make them executable for the host then let's add in a chmod -x step after
+		- did this, seems ok
+	- messing around on ftp, we actually have normal chmod and -x doesn't seem to break anything
+		- was i just confused because i was somehow accidentally removing x from directories? can we skip all this bullshit and do 644?
+			- apparently so
+
 
 longterm notions
 - support other delivery formats like epub
