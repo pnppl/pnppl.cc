@@ -119,7 +119,7 @@ func containLinkTo(n ast.Node, p Page) bool {
 	}
 	if wl, ok := n.(*wikilink.Node); ok {
 		if ! wl.Embed {
-			dst := string(wl.Target) + string(wl.Fragment)
+			dst := string(wl.Target)
 			if strings.HasPrefix(dst, "/") {
 				path := strings.TrimPrefix(dst, "/")
 				if string(path) == p.Name() {
