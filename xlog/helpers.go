@@ -36,6 +36,7 @@ var helpers = template.FuncMap{
     "resetaccess":    resetaccess,
 //    "UTCoffset":      UTCoffset,
 	"datetime":       datetime,
+	"dateInName":     dateInName,
 	"next":           next,
 	"prev":           prev,
 }
@@ -127,6 +128,10 @@ func UTCoffset(t time.Time) string {
 // return datetime formatted for html <time> datetime attr
 func datetime(t time.Time) string {
 	return fmt.Sprintf("%04d-%02d-%02d %02d:%02d:%02d%05s", t.Year(), t.Month(), t.Day(), t.Hour(), t.Minute(), t.Second(), UTCoffset(t))
+}
+// check if date is taken from filename (otherwise is from post text)
+func dateInName(name string, date string) bool {
+	return strings.Contains(name, date)
 }
 
 var js = []string{}

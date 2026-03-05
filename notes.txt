@@ -190,6 +190,7 @@ low priority/done:
 	- date format should have date-only and time-also formats, and we need to select one to rule them all
 		- actually just yyyy-mm-dd is fine
 	- pretty janky but i got filenames working
+	- we should distinguish between types of calendar entry
 - rss is a little wonky
 	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
 		- i think it's now officially Good Enough but could use some polish

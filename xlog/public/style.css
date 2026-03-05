@@ -459,6 +459,8 @@ div.icon-text {
 	padding-left: 0.75em;
 	padding-right: 0.75em;
 	white-space: nowrap;
+	position: relative;
+	top: -1px;
 }
 a.tag {
 	cursor: pointer;
