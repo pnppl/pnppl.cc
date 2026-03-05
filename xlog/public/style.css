@@ -1004,12 +1004,25 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 }
 #email {
 	float: left;
+}
+#email-wrapper {
+	margin-bottom: 0;
+}
+.footer-button {
 	/* compat: padding + line-height fallback for vertical centering before flex */
 	padding: 0 0.75rem;
 	line-height: 31px;
 	display: flex;
 	align-items: center;
 	height: 31px;
+	flex-grow: 0;
+}
+#next-prev {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1em;
+	gap: 1em;
+	width: min-content;
 }
 .filename-right {
 	float: right;
@@ -1585,6 +1598,13 @@ pre.chroma {
 	}
 	.pagefind-ui__filter-panel {
 		position: static;
+	}
+	#email-wrapper {
+		margin-bottom: 1em;
+		width: min-content;
+	}
+	#email, #badge {
+		float: none;
 	}
 }
 

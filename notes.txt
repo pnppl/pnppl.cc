@@ -13,8 +13,7 @@ todo:
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
 			- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
-- next/prev post buttons
-	- would be relatively easy to hack in with more shell but would rather avoid more of that
+- x next/prev post buttons
 - masto, bsky, etc?
 - we're live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!

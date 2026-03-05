@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 	"strconv"
+	"context"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -35,6 +36,8 @@ var helpers = template.FuncMap{
     "resetaccess":    resetaccess,
 //    "UTCoffset":      UTCoffset,
 	"datetime":       datetime,
+	"next":           next,
+	"prev":           prev,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -241,4 +244,28 @@ func accesskey() string {
 func resetaccess() string {
 	counter = 1
 	return ""
+}
+
+func sibling(currPage Page, prev bool) string {
+	allPages := Pages(context.Background());
+	var pageNames []string
+	for p, _ := range allPages {
+		pageNames = append(pageNames, allPages[p].Name())
+	}
+	slices.Sort(pageNames)
+
+	idx := slices.Index(pageNames, currPage.Name())
+	if prev && idx > 1 {
+		return pageNames[idx - 1]
+	}
+	if !prev && idx < len(pageNames) - 1 && idx >= 0 {
+		return pageNames[idx + 1]
+	}
+	return ""
+}
+func prev(currPage Page) string {
+	return sibling(currPage, true)
+}
+func next(currPage Page) string {
+	return sibling(currPage, false)
 }
