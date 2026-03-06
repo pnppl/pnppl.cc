@@ -11,15 +11,18 @@ If you visit my site on something really cool, please send me a picture!
 # LibreWolf 147, Firefox ESR 140 (Linux) & IronFox 147, Fennec 147 (Android)
 These are the baseline modern (CSS-enabled) browsers I use. They should be fully supported.
 
+
 # NCSA Mosaic 2.7b6, ~1996 (AppImage)
 https://github.com/AppImageCommunity/NCSA-Mosaic-AppImage
 
 This is the HTML-only browser I regularly test with. It originally came out in 1996, but this version has some more recent patches.
 
+
 # Firefox 4.0, 2011-03 (Linux)
 https://ftp.mozilla.org/pub/firefox/releases/4.0/linux-x86_64/en-US/
 
 Supporting this is not a priority, but it actually renders pretty well thanks to a few compatibility hacks in the CSS.
+
 
 # Offpunk
 https://offpunk.net/
@@ -33,18 +36,22 @@ Your best bet is probably to type 'feed' and use that for navigation.
 
 I tried both 2.7.1 from the repo and the latest git version as of 2026-02. They behave quite differently. Installed depends also make a big difference (see these with 'version').
 
+
 # Links2, Lynx, ELinks, w3m
 Seems to pretty much work perfectly.
+
 
 # Netscape 4.03, 1997-06 (Wine)
 https://winworldpc.com/product/netscape-navigator/40x
 
 Absolute clusterfuck until you disable CSS globally in the preferences ("Advanced" section), then it works fine.
 
+
 # Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
 Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Some elements run off the right side of the screen.
+
 
 # Internet Explorer (Wine) #
 https://winworldpc.com/product/internet-explorer/
@@ -62,6 +69,13 @@ Refuses to install.
 Basically works fine except for some minor issues. Not bad for a browser that nobody is actually meant to use.
 
 Clearly I should try these on Windows.
+
+
+# Dillo, Dillo+
+CSS rendering is mostly like Firefox 4, but it has some of the same issues as Netscape 7.2, with content not properly fitting to the width of the browser.
+
+Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`.) The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.
+
 
 # Modern Chromium browsers
 Ought to work fine but I don't check very often.

@@ -495,7 +495,7 @@ a.tag:active {
 	margin: 0;
 	padding: 0.5em 0.75em;
 	text-align: left;
-	width: 100%;
+/*	width: 100%; */
 }
 .menu-list a:hover,
 .menu-list button:hover {
@@ -566,6 +566,7 @@ nav.navbar {
 .navbar > .container {
 	align-items: stretch;
 	/* compat: inline-block fallback before flex for pre-flexbox browsers */
+/*	display: inline-block; */
 	text-align: center;
 	display: flex;
 	min-height: var(--navbar-height);
@@ -884,6 +885,7 @@ a.show-on-parent-hover:visited {
 a.show-on-parent-hover {
 	font-style: normal;
 	padding: 0 5px 2px 5px;
+	font-weight: bold;
 }
 .menu-label {
 	background-color: purple;

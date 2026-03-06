@@ -22,9 +22,8 @@ todo:
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
 		- add PHP features? Likes counter?
 		- add web1.0hosting button?
-		- .md files always try to download. this seems to be controlled by the headers sent by the server
-			- heard back from support! it's... text/html now.
-			- added some attrs to the link that don't seem to accomplish anything
+		- x .md files always try to download. this seems to be controlled by the headers sent by the server
+			- support to the rescue!
 - would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
 	- is this actually a stupid idea? most sites won't serve http
 	- definitely don't strip http:// since some sites only serve that and we want to specify
