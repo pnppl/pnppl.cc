@@ -8,12 +8,13 @@ todo:
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
 		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
+- x next/prev post buttons
+	- should probably make these fit nicer
 - display tags for item next to links to it?
 - get rid of shell postprocessing
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
 			- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
-- x next/prev post buttons
 - masto, bsky, etc?
 - we're live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
@@ -189,7 +190,7 @@ low priority/done:
 	- date format should have date-only and time-also formats, and we need to select one to rule them all
 		- actually just yyyy-mm-dd is fine
 	- pretty janky but i got filenames working
-	- we should distinguish between types of calendar entry
+	- ! we should distinguish between types of calendar entry
 - rss is a little wonky
 	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
 		- i think it's now officially Good Enough but could use some polish
@@ -209,13 +210,19 @@ low priority/done:
 	- messing around on ftp, we actually have normal chmod and -x doesn't seem to break anything
 		- was i just confused because i was somehow accidentally removing x from directories? can we skip all this bullshit and do 644?
 			- apparently so
-
+- might be nice to add IDs and fragments so that backlinks point to the actual link
+- index on search engines, add to indie/small web directories, make friends, etc.
 
 longterm notions
 - support other delivery formats like epub
-	- i should be able to do this relatively easily with pandoc. i think i need to render p.Content() to files then feed those to it
+	- i should be able to do this relatively easily with pandoc. i think i need to render p.Render() to files then feed those to it
+		- our use of headings is a problem. pandoc inserts a chapter break at each h1. not only do many documents have many h1s, many have zero h1s
+		- there's an option to bump the heading level, which resolves the breaks option, but then we lose sections entirely
+		- we probably need to preprocess the markdown to add h1s with a class attached, then use a lua filter to skip incrementing that class
+			- this would be extremely annoying and violate my goal of not fucking with the files
 - visual graph
 - other protocols like gopher
+	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
 
 > You went from "unstyled fallback only" to "looks great in 2010-era browsers" with 12 lines of CSS. That's a pretty good stopping point.
 > But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
