@@ -139,8 +139,8 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 		}
 
 		slices.SortFunc(photos, func(i, j *Photo) int {
-			return j.Time.Compare(i.Time)
-//			return strings.Compare(i.Name(), j.Name())
+//			return j.Time.Compare(i.Time)
+			return strings.Compare(j.Name(), i.Name())
 		})
 
 		return xlog.Partial(tpl, xlog.Locals{
