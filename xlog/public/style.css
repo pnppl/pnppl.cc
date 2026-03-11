@@ -869,7 +869,7 @@ a.show-on-parent-hover {
 	text-decoration: none;
 	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
-	background-color: #c0c0c0;
+	background-color: silver;
 	color: black;
 	border-radius: 0;
 	text-align: center;
@@ -895,6 +895,9 @@ a.show-on-parent-hover:visited {
 .navbar-item.active {
 	background-color: #e8e8e8;
 }
+a.navbar-item.active:active {
+	background-color: silver;
+}
 a.show-on-parent-hover {
 	font-style: normal;
 	padding: 0 5px 2px 5px;
@@ -915,7 +918,7 @@ a.show-on-parent-hover {
 #table-of-contents-list {
 	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
-	background-color: #c0c0c0;
+	background-color: silver;
 	float: right;
 	width: 33%;
 	padding: 0.25em;
