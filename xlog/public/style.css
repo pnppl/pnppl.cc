@@ -619,6 +619,16 @@ a.navbar-item {
 	min-height: var(--navbar-height);
 }
 
+/* Photos */
+.photos {
+	text-align: center;
+}
+.photo {
+	max-height: 80vh;
+	max-width: 90%;
+	margin: 0.5em;
+}
+
 /* ==========================================================================
 	 Layout
 	 ========================================================================== */

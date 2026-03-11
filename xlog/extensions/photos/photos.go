@@ -8,8 +8,8 @@ import (
 	"html/template"
 	"image"
 	_ "image/gif"
-	_ "image/jpeg"
-	"image/png"
+	"image/jpeg"
+//	"image/png"
 	_ "image/png"
 	"io/fs"
 	"os"
@@ -45,14 +45,14 @@ func (Photos) Init() {
 	shortcode.RegisterShortCode("photos", shortcode.ShortCode{Render: photosShortcode("photos")})
 	shortcode.RegisterShortCode("photos-grid", shortcode.ShortCode{Render: photosShortcode("photos-grid")})
 	xlog.RegisterTemplate(templates, "templates")
-	xlog.RegisterProperty(properties)
-	xlog.Get(`/+/photos/thumbnail/{path...}`, resizeHandler)
-	xlog.Get(`/+/photos/photo/{path...}`, photoHandler)
+//	xlog.RegisterProperty(properties)
+	xlog.Get(`/+/thumb/{path...}`, resizeHandler)
+//	xlog.Get(`/+/photos/photo/{path...}`, photoHandler)
 }
 
 type Photo struct {
 	Thumbnail string
-	Page      string
+//	Page      string
 	Original  string
 	Exif      *exif.Exif
 	Time      time.Time
@@ -96,10 +96,13 @@ func NewPhoto(path string) (*Photo, error) {
 			t = shootingTime
 		}
 	}
-
+	folders := strings.Split(filepath.Dir(path), "/")
+	folder := folders[len(folders)-1]
+	name := folder + "/" + filepath.Base(path)
+//	name = name[:len(name)-len(filepath.Ext(path))]
 	return &Photo{
-		Thumbnail: "/+/photos/thumbnail/" + path,
-		Page:      "/+/photos/photo/" + path,
+		Thumbnail: "/+/thumb/" + name + ".jpg",
+//		Page:      "/+/photos/photo/" + name,
 		Original:  path,
 		Exif:      exifData,
 		Time:      t,
@@ -124,7 +127,7 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 				}
 
 				xlog.RegisterBuildPage(photo.Thumbnail, false)
-				xlog.RegisterBuildPage(photo.Page, true)
+//				xlog.RegisterBuildPage(photo.Page, true)
 				photos = append(photos, photo)
 			}
 
@@ -147,18 +150,18 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 }
 
 func resizeHandler(r xlog.Request) xlog.Output {
-	photo_path := r.PathValue("path")
-
+	photo_path := "../img/photos/" + r.PathValue("path")
+	photo_path = photo_path[:len(photo_path)-len(path.Ext(photo_path))]
 	const cacheDir = ".cache"
 	os.Mkdir(cacheDir, 0700)
 
 	cacheFile := path.Join(cacheDir, fmt.Sprintf("photo-%x", sha256.Sum256([]byte(photo_path))))
-	cache, err := os.ReadFile(cacheFile)
-	if err == nil {
-		return func(w xlog.Response, r xlog.Request) {
-			w.Write(cache)
-		}
-	}
+//	cache, err := os.ReadFile(cacheFile)
+//	if err == nil {
+//		return func(w xlog.Response, r xlog.Request) {
+//			w.Write(cache)
+//		}
+//	}
 
 	return func(w xlog.Response, r xlog.Request) {
 		inputImage, err := os.Open(photo_path)
@@ -179,21 +182,24 @@ func resizeHandler(r xlog.Request) xlog.Output {
 		draw.NearestNeighbor.Scale(dst, dst.Rect, src, bounds, draw.Over, nil)
 
 		var out bytes.Buffer
-
-		png.Encode(&out, dst)
+		err = jpeg.Encode(&out, dst, &jpeg.Options{Quality: 75})
+		if err != nil {
+			fmt.Printf("jpeg encoding error")
+		}
+//		png.Encode(&out, dst)
 		os.WriteFile(cacheFile, out.Bytes(), 0700)
 		w.Write(out.Bytes())
 	}
 }
 
-func photoHandler(r xlog.Request) xlog.Output {
-	photo_path := r.PathValue("path")
-	photo, err := NewPhoto(photo_path)
-	if err != nil {
-		return xlog.InternalServerError(err)
-	}
-
-	return xlog.Render("page", xlog.Locals{
-		"page": photo,
-	})
-}
+//func photoHandler(r xlog.Request) xlog.Output {
+//	photo_path := r.PathValue("path")
+//	photo, err := NewPhoto(photo_path)
+//	if err != nil {
+//		return xlog.InternalServerError(err)
+//	}
+//
+//	return xlog.Render("page", xlog.Locals{
+//		"page": photo,
+//	})
+//}

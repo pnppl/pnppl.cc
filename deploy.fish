@@ -12,6 +12,7 @@ rm -rf site/.pagefind/ &&
 rm -rf site/txt/!txt.zip &&
 rm -rf site/img/1bitday/!1bitday.zip &&
 rm -rf site/img/comics/!comics.zip &&
+rm -rf site/img/photos/!photos.zip &&
 fish build.fish &&
 git stash -u &&
 git pull &&
@@ -32,6 +33,7 @@ pagefind --site "site/" --output-subdir ".pagefind/" --root-selector "#main" --e
 zip -r site/txt/!txt.zip site/txt/ &&
 zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/ &&
 zip -r site/img/comics/!comics.zip site/img/comics/ &&
+zip -r site/img/photos/!photos.zip site/img/photos/ &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
