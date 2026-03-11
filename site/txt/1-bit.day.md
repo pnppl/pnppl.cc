@@ -3,7 +3,7 @@
 
 !1bitday ../img/1bitday
 
-You can grab these all at once here: [[/img/1bitday/!1bitday.zip]]
+You can grab these all at once here: [[../img/1bitday/!1bitday.zip]]
 
 I make them on [[https://1-bit.day/pnppl|1-bit.day]]. Here's the Python script I wrote to do the conversion:
 ```python

@@ -2,7 +2,7 @@
 #meta
 
 > She started keeping a journal — had been, in fact, secretly doing so for some time: the furtive act of a deranged person.
-— [[//annas-archive.li/search?q=valis|PKD]]
+— [[//annas-archive.gl/search?q=valis|PKD]]
 
 # Welcome!
 Welcome to my [[//en.wikipedia.org/wiki/Commonplace_book|commonplace.]] It's also, perhaps, my digital garden? I won't be offended if you just call it my blog.

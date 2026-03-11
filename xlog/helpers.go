@@ -39,6 +39,8 @@ var helpers = template.FuncMap{
 	"dateInName":     dateInName,
 	"next":           next,
 	"prev":           prev,
+	"active":         active,
+	"activeStr":         activeStr,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -273,4 +275,19 @@ func prev(currPage Page) string {
 }
 func next(currPage Page) string {
 	return sibling(currPage, false)
+}
+func active(currPage Page, label map[string]string) bool {
+	labelStr := label["labelStart"] + label["labelAccel"] + label["labelEnd"]
+	if currPage.Name() == labelStr || currPage.Name() == "/+/" + labelStr {
+		return true
+	}
+	return false
+}
+func activeStr(currPage Page, label string) bool {
+	labelMap := map[string]string{
+		"labelStart": label,
+		"labelAccel": "",
+		"labelEnd": "",
+	}
+	return active(currPage, labelMap)
 }

@@ -56,7 +56,7 @@ html {
 	font-size: 1em;
 	min-width: 300px;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 	text-rendering: optimizeLegibility;
 /*	some webkit bullshit */
 	text-size-adjust: 100%;
@@ -89,7 +89,9 @@ body {
 		Victor Mono Medium,
 		serif;
 }
+code,
 code *,
+pre.chroma,
 tt {
 	font-family:
 		Victor Mono Medium,
@@ -563,15 +565,15 @@ nav.navbar {
 	position: relative;
 	z-index: 30;
 }
-.navbar > .container {
-	align-items: stretch;
+/*.navbar > .container { */
+/*	align-items: stretch; */
 	/* compat: inline-block fallback before flex for pre-flexbox browsers */
 /*	display: inline-block; */
-	text-align: center;
-	display: flex;
-	min-height: var(--navbar-height);
-	width: 100%;
-}
+/*	text-align: center; */
+/*	display: flex; */
+/*	min-height: var(--navbar-height); */
+/*	width: 100%; */
+/*} */
 .navbar-brand {
 	align-items: stretch;
 	display: flex;
@@ -874,13 +876,24 @@ a.show-on-parent-hover {
 }
 a.navbar-item:active,
 a.button:active,
-a.show-on-parent-hover:active {
+a.show-on-parent-hover:active,
+a.navbar-item.active {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 }
 a.navbar-item:visited,
 a.show-on-parent-hover,
 a.show-on-parent-hover:visited {
 	color: black;
+}
+/*  taskbar look  */
+/*#navbarMenu {
+  background-color: silver;
+  gap: 2px;
+  padding: 2px;
+}*/
+/* buttons that lead to current page ("stuck down") */
+.navbar-item.active {
+	background-color: #e8e8e8;
 }
 a.show-on-parent-hover {
 	font-style: normal;
