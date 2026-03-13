@@ -21,6 +21,21 @@ todo:
 		- only downside: can only upload over ftp
 		- pages still always show the trailing /
 			- i guess i can live with this since it is technically a directory. i wish it were just .html. maybe try to change that later
+				- contemplating this. it has many upsides and the only real downside is the extra 4 characters. 3 if i do .htm
+				- the upsides: every link is root-relative, so i can write relative links
+					- right now i can either write eg /img/img.jpg, which will work fine when deployed, but not locally, or I can write ../img/img.jpg, which works but is super ugly and annoying. with .htmls i could just write img/img.jpg and it would work no matter where i'm reading from
+				- one downside is that the root dir will be cluttered to hell, as it is now. i would ideally like to have posts in /c/ or something but that would eliminate the benefits of root-relativity unless i move everything else in there as well
+					- if everything were in a subfolder you could easily browse the html files as a directory listing. easy to wget
+				- something else to consider is nesting assets with posts. the only thing i currently do this for is /app/. it's annoying because it defeats the separation between files that are rebuilt by xlog and ones that are only changed manually, but it creates a clean hierarchy. i could do this for pages like /1-bit.day/, /fs-ir/, etc, but i don't want to
+				- things i would have to update:
+					- all the relative links in my posts
+					- the wikilink resolver
+					- the 404 part of build.go, uses hardcoded leading dir
+						- actually we could just eliminate this logic all together, rename the source error404.md, and update the ignoredpath list
+					- wherever the fuck xlog builds the pages. i actually can't find it. it ought to be a call to RegisterBuildPage(..., true) but... i guess it isn't?
+					- photos extension
+					- build/deploy scripts
+					- ......? prob a million things i haven't thought of where i made some assumption about a path. autolink_pages?
 		- add PHP features? Likes counter?
 		- add web1.0hosting button?
 		- x .md files always try to download. this seems to be controlled by the headers sent by the server
@@ -212,6 +227,9 @@ low priority/done:
 			- apparently so
 - might be nice to add IDs and fragments so that backlinks point to the actual link
 - index on search engines, add to indie/small web directories, make friends, etc.
+- x 404
+	- i could make this into an extension and spit out every error with a template. seems kind of pointless though. not sure it would even be supported by the host. the only other error i've encountered is 403 from fucking up permissions
+- optimize performance, it's getting kinda fuckin slow. look into photo thumbnailing and the ridiculous next/prev helper functions (we should just find these once and store them as values in the page struct)
 
 longterm notions
 - support other delivery formats like epub
