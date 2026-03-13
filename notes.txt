@@ -128,7 +128,7 @@ low priority/done:
 	- ! Backlinks, See Also added with shell kludge
 - replace branding - logo, name, favicon
 	- tent. name: pnppl's commonplace
-		- kinda long compared to just pnppl.cc
+		- kinda long compared to just pnppl.cc 
 	- tent. logo/favicon: fluffy dandelion formed from network graph (nodes and lines)
 		- hand draw with supernote and encode as gif 
 		- just threw up my 1-bit.day avatar for now
