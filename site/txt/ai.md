@@ -1,4 +1,4 @@
-# AI policy
+# AI Policy
 #meta
 
 # Text
