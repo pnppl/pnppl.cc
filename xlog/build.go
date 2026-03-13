@@ -69,12 +69,13 @@ func build(dest string) error {
 	// Copy 404 page from dest/404/index.html to /dest/404.html
 	if in, err := os.Open(path.Join(dest, Config.NotFoundPage, "index.html")); err == nil {
 		defer in.Close()
-		out, err := os.Create(path.Join(dest, "404.html"))
+		out, err := os.Create(path.Join(dest, "error404.html"))
 		if err != nil {
-			slog.Error("Failed to open dest/404.html", "error", err)
+			slog.Error("Failed to open dest/error404.html", "error", err)
 		}
 		defer out.Close()
 		io.Copy(out, in)
+		defer os.RemoveAll(path.Join(dest, Config.NotFoundPage))
 	}
 
 	extension_page_enclosed.Range(func(route string, _ bool) bool {

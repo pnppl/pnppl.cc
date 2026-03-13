@@ -14,6 +14,7 @@ import (
 // ignored
 var ignoredPaths = []*regexp.Regexp{
 	regexp.MustCompile(`^\.`), // Ignore any hidden directory
+	regexp.MustCompile(`^404$`),
 }
 
 // IgnorePath Register a pattern to be ignored when walking directories.

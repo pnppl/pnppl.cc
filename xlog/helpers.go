@@ -257,7 +257,9 @@ func sibling(currPage Page, prev bool) string {
 	allPages := Pages(context.Background());
 	var pageNames []string
 	for p, _ := range allPages {
-		pageNames = append(pageNames, allPages[p].Name())
+		if !IsIgnoredPath(allPages[p].Name()) {
+			pageNames = append(pageNames, allPages[p].Name())
+		}
 	}
 	slices.Sort(pageNames)
 

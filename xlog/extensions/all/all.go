@@ -29,7 +29,12 @@ func (All) Init() {
 }
 
 func allHandler(r Request) Output {
-	rp := Pages(r.Context())
+	rp := slices.Clone(Pages(r.Context()))
+
+	rp = slices.DeleteFunc(rp, func(a Page) bool {
+		return IsIgnoredPath(a.Name())
+	})
+
 	slices.SortFunc(rp, func(a, b Page) int {
 //		if modtime := b.ModTime().Compare(a.ModTime()); modtime != 0 {
 //			return modtime

@@ -42,6 +42,9 @@ func UpdatePagesList(Page) (err error) {
 	defer autolinkPage_lck.Unlock()
 
 	ps := MapPage(context.Background(), func(p Page) *NormalizedPage {
+		if IsIgnoredPath(p.Name()) {
+			return nil
+		}
 		content := p.Content()
 		lines := strings.SplitN(string(content), "\n", 2)
 		firstLine := strings.TrimSpace(lines[0])

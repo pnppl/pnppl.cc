@@ -1069,7 +1069,7 @@ time.has-text-grey {
 }
 
 /* ==========================================================================
-	 Page-Specific (search, calendar, onebitday)
+	 Page-Specific (search, calendar, onebitday, 404)
 	 ========================================================================== */
 
 /* pagefind search */
@@ -1265,6 +1265,20 @@ img.onebitday {
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
 	border: 4px solid black;
+}
+
+/* 404 */
+.four04 {
+	text-align: center;
+	font-size: 1.25em;
+	font-style: italic;
+}
+body:has(.four04) #pagetitle h1 {
+	font-style: normal;
+}
+body:has(.four04) .subtitle,
+body:has(.four04) .content.columns {
+	display: none;
 }
 
 /* ==========================================================================
