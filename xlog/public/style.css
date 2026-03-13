@@ -1635,6 +1635,7 @@ pre.chroma {
 	}
 	#email, #badge {
 		float: none;
+		display: inline-block;
 	}
 }
 
@@ -1653,6 +1654,9 @@ pre.chroma {
 		--hover-bg-l-delta: 5%;
 		--active-bg-l-delta: 10%;
 
+	}
+	.table-of-contents li::marker {
+		color: black;
 	}
 	/* links */
 	a:visited,
