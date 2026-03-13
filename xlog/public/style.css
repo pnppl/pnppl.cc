@@ -1635,6 +1635,8 @@ pre.chroma {
 	}
 	#email, #badge {
 		float: none;
+	}
+	#badge {
 		display: inline-block;
 	}
 }
