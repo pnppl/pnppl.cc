@@ -1599,10 +1599,18 @@ pre.chroma {
 			local("VictorMono-MediumItalic"),
 			url(/public/font/VictorMono-MediumItalic.woff2) format("woff2");
 	}
-	/* fix for mobile flickering - held press (eg, while scrolling) registers as active then hover */
+	/* --- fixes --- */
+	/* background flickering - held press (eg, while scrolling) registers as active then hover */
 	/* needs !important because darkmode overrides are further down... */
 	:root {
 		--hover-bg-l-delta: var(--active-bg-l-delta) !important;
+	}
+	/* inconsistent button behavior due to touch - canceled long-press sets hover state */
+	a.navbar-item:hover,
+	a.button:hover,
+	a.show-on-parent-hover:hover,
+	#badge:hover:after {
+		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	}
 }
 
