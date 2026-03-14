@@ -230,14 +230,20 @@ low priority/done:
 - x 404
 	- i could make this into an extension and spit out every error with a template. seems kind of pointless though. not sure it would even be supported by the host. the only other error i've encountered is 403 from fucking up permissions
 - optimize performance, it's getting kinda fuckin slow. look into photo thumbnailing and the ridiculous next/prev helper functions (we should just find these once and store them as values in the page struct)
+- deploy/build script needs a complete overhaul
+	- mtimes and mobile sync are totally fucked
+	- now that i stopped committing xlog build artifacts the order of operations is nonsensical
+	- spaghetti
 
 longterm notions
 - support other delivery formats like epub
 	- i should be able to do this relatively easily with pandoc. i think i need to render p.Render() to files then feed those to it
 		- our use of headings is a problem. pandoc inserts a chapter break at each h1. not only do many documents have many h1s, many have zero h1s
-		- there's an option to bump the heading level, which resolves the breaks option, but then we lose sections entirely
+		- there's an option to bump the heading level, which resolves the breaks issue, but then we lose sections entirely
 		- we probably need to preprocess the markdown to add h1s with a class attached, then use a lua filter to skip incrementing that class
 			- this would be extremely annoying and violate my goal of not fucking with the files
+				- fuck it we'll do it live (more fish)
+				- links between documents don't work. but in fact i'm not sure they ever would? i don't have any software that actually renders the links to test... but in a markdown context i'm not sure if the .md would be needed. wikilinks are nonstandard anyway. problem for another time
 - visual graph
 - other protocols like gopher
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated

@@ -20,6 +20,7 @@ fish set_mtimes.fish &&
 git stash pop -q &&
 fish save_mtimes.fish &&
 git add *.* &&
+git add epub/ &&
 git add xlog/ &&
 git add site/txt/ &&
 git add site/img/ &&
@@ -34,6 +35,7 @@ zip -r site/txt/!txt.zip site/txt/ &&
 zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/ &&
 zip -r site/img/comics/!comics.zip site/img/comics/ &&
 zip -r site/img/photos/!photos.zip site/img/photos/ &&
+fish epub/epub.fish
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&

@@ -5,3 +5,5 @@ Please pardon our dust.
 You might like to read [[/about|the about page]].
 
 If you don't use RSS, you can [[mailto:add@rssby.email?subject=sub&body=http%3A%2F%2Fpnppl.cc|subscribe]] with [[//rssby.email/|RSS by email.]]
+
+You can read on an e-reader with [[/txt/!pnppl.epub|the epub version.]]
