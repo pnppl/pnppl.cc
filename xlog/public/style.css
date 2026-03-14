@@ -1599,6 +1599,11 @@ pre.chroma {
 			local("VictorMono-MediumItalic"),
 			url(/public/font/VictorMono-MediumItalic.woff2) format("woff2");
 	}
+	/* fix for mobile flickering - held press (eg, while scrolling) registers as active then hover */
+	/* needs !important because darkmode overrides are further down... */
+	:root {
+		--hover-bg-l-delta: var(--active-bg-l-delta) !important;
+	}
 }
 
 /* mobile or just skinny */
@@ -1665,7 +1670,7 @@ pre.chroma {
 		--main-l: 0%;
 		--bg-l: 14%;
 		--border-l: 24%;
-		--text-l: 71%;
+		--text-l: 82%;
 		--text-strong-l: 93%;
 		--hover-bg-l-delta: 5%;
 		--active-bg-l-delta: 10%;
