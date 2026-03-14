@@ -1606,11 +1606,22 @@ pre.chroma {
 		--hover-bg-l-delta: var(--active-bg-l-delta) !important;
 	}
 	/* inconsistent button behavior due to touch - canceled long-press sets hover state */
+	/* with this fix it behaves like holding Lmouse then dragging away before release */
 	a.navbar-item:hover,
 	a.button:hover,
 	a.show-on-parent-hover:hover,
 	#badge:hover:after {
 		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+	}
+	#badge:hover:after {
+		content: var(--badge-press, "");
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border: 2px solid;
+		pointer-events: none;
 	}
 }
 
