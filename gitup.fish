@@ -7,9 +7,9 @@ echo ".*" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
 echo "w10hosting_default" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
-echo "!*.zip" >> .git/info/exclude &&
+echo "!*.*" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
-echo "\!*.zip" >> .git/info/exclude &&
+echo "\!*.*" >> .git/info/exclude &&
 echo >> .git/info/exclude &&
 echo "site/+/" >> .git/info/exclude &&
 echo >> .git/info/exclude &&

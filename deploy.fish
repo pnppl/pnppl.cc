@@ -31,7 +31,7 @@ git commit -m "$msg" &&
 git push &&
 
 pagefind --site "site/" --output-subdir ".pagefind/" --root-selector "#main" --exclude-selectors "aside, .button, .buttons, .menu, #backlinks, #badge, #email, #footnotes, #see-also" --include-characters "#" --glob "*/*.{html}" --force-language "en" &&
-zip -r site/txt/!txt.zip site/txt/ &&
+zip -r site/txt/!txt.zip site/txt/ -i \*.md &&
 zip -r site/img/1bitday/!1bitday.zip site/img/1bitday/ &&
 zip -r site/img/comics/!comics.zip site/img/comics/ &&
 zip -r site/img/photos/!photos.zip site/img/photos/ &&
