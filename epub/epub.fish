@@ -5,15 +5,18 @@ mkdir $scratch_dir &&
 for file in site/txt/20*.md
 #	if ! contains (path basename -E $file) $excluded
 		set title (string trim (head -1 $file))
-		set -l filename $scratch_dir/$(path basename $file)
+		set date (string sub -e 10 (path basename $file))
+		set filename $scratch_dir/$(path basename $file)
 		# has no title, create one
 		if test (string sub -l 2 $title) != "# "
 			set title (string shorten -m 70 $title)
 			echo "# $title {.level1}" >> $filename &&
+			echo -e "<span class=\"date\">$date</span>\n" >> $filename &&
 			cat $file >> $filename
 		# has title, don't duplicate it
 		else
 			echo "$title {.level1}" >> $filename &&
+			echo -e "<span class=\"date\">$date</span>\n" >> $filename &&
 			tail -n +2 $file >> $filename
 		end
 		# my shruggie!! (this is just \ -> \\)
