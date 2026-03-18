@@ -26,7 +26,7 @@ for file in site/txt/20*.md
 		sed -i -E "s/\[\^/\[\^$(path basename -E $file)-/g" $filename
 #	end
 end
-set markdown_features markdown-smart+ascii_identifiers+space_in_atx_header+backtick_code_blocks+fenced_code_attributes+pipe_tables+strikeout+footnotes+lists_without_preceding_blankline+hard_line_breaks+autolink_bare_uris+wikilinks_title_after_pipe+header_attributes
+set markdown_features markdown-smart+ascii_identifiers+space_in_atx_header+backtick_code_blocks+fenced_code_attributes+pipe_tables+strikeout+footnotes+lists_without_preceding_blankline+hard_line_breaks+autolink_bare_uris+wikilinks_title_before_pipe+header_attributes
 pandoc -o site/txt/!pnppl.epub -f $markdown_features --toc --reference-location=section --metadata title="pnppl.cc" --epub-metadata="epub/epub.xml" --epub-title-page=false --css="epub/epub.css" --lua-filter="epub/chapters.lua" --resource-path=site/txt $scratch_dir/*.md &&
 echo "! epub success !" || echo "!!----- EPUB FUCKED UP -----!!"
 rm -rf $scratch_dir
