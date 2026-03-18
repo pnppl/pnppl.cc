@@ -5,7 +5,7 @@
 
 You can grab these all at once here: [[../img/1bitday/!1bitday.zip]]
 
-I make them on [[https://1-bit.day/pnppl|1-bit.day]]. Here's the Python script I wrote to do the conversion:
+I make them on [[1-bit.day|https://1-bit.day/pnppl]]. Here's the Python script I wrote to do the conversion:
 ```python
 #!/usr/bin/env python3
 # turns 1024x1024 pixel art from 1-bit.day into actual size

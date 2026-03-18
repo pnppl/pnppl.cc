@@ -632,7 +632,7 @@ func (r *FootnoteHTMLRenderer) renderFootnoteList(
 			html.RenderAttributes(w, node, html.GlobalAttributeFilter)
 		}
 		_ = w.WriteByte('>')
-_, _ = w.WriteString(`<h1 id="Footnotes">Footnotes <a class="show-on-parent-hover is-hidden has-text-grey" href="#TOC">&not;</a> <a name="Footnotes" class="show-on-parent-hover is-hidden has-text-grey" href="#Footnotes">&sect;</a></h1>`)
+_, _ = w.WriteString(`<h1 id="Footnotes">Footnotes <a class="hover-button is-hidden" href="#TOC">&not;</a> <a name="Footnotes" class="hover-button is-hidden" href="#Footnotes">&sect;</a></h1>`)
 //		if r.Config.XHTML {
 //			_, _ = w.WriteString("\n<hr />\n")
 //		} else {

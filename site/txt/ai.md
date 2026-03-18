@@ -2,7 +2,7 @@
 #meta
 
 # Text
-Everything you read here is the 100% un-intermediated product of my own mind, not AI. I typically don't even use a spellcheck. I type emdashes and other exotic punctuation with a [[https://en.wikipedia.org/wiki/Compose_key|compose key]] or by long-pressing my phone keyboard.
+Everything you read here is the 100% un-intermediated product of my own mind, not AI. I typically don't even use a spellcheck. I type emdashes and other exotic punctuation with a [[compose key|https://en.wikipedia.org/wiki/Compose_key]] or by long-pressing my phone keyboard.
 
 # Audiovisual Media
 It's not totally outside the realm of possibility that I would post audio or an image that makes use of the technology, but I would mention it if so. Midjourney, Stable Diffusion, etc., are a lot of fun, but they're something I mess with once in a blue moon. Like Wii Bowling or DDR.

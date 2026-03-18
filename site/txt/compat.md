@@ -23,6 +23,14 @@ https://ftp.mozilla.org/pub/firefox/releases/4.0/linux-x86_64/en-US/
 
 Supporting this is not a priority, but it actually renders pretty well thanks to a few compatibility hacks in the CSS.
 
+# Firefox 12.0, 2012-04 (Windows XP)
+Better than Firefox 4.0. Not perfect, but perfectly adequate.
+
+# Mypal 74.1.1, 2025-07 (Windows XP)
+Based on Firefox 74 from 2020-03.
+
+As far as I can tell everything renders perfectly, and the search even works. And no performance issues (on period-correct hardware).
+
 
 # Offpunk
 https://offpunk.net/
@@ -46,16 +54,16 @@ https://winworldpc.com/product/netscape-navigator/40x
 
 Absolute clusterfuck until you disable CSS globally in the preferences ("Advanced" section), then it works fine.
 
-
 # Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
 Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Some elements run off the right side of the screen.
 
 
-# Internet Explorer (Wine) #
+# Internet Explorer #
 https://winworldpc.com/product/internet-explorer/
 
+## Wine
 ### 1.0 / 4.40.308
 Had to extract the .cab; couldn't install. **Completely** broken. It throws a bunch of errors and opens random links in my default browser, including Spaceship.com where I have my domain name. After freaking out for a while, it opens web1.0hosting.net, the homepage of my wonderful host, which does render mostly fine. Trying to navigate to my site via pnppl.w10.site does the same thing. Eventually it crashes.
 
@@ -69,6 +77,24 @@ Refuses to install.
 Basically works fine except for some minor issues. Not bad for a browser that nobody is actually meant to use.
 
 Clearly I should try these on Windows.
+
+## Windows XP Home SP3 x86
+### 1.5 for Windows NT i386
+Actually behaves pretty much exactly like 1.0 on Wine, only it doesn't spam the URLs it tries to open into another browser.
+
+### 3.0 / 4.70.115
+Refuses to install. Extracting cab does not help.
+
+### 5.51.4807.2300
+Refuses to install. Extracting all cabs and running iexplore.exe succeeds! ...but then it fails to load any sites and soon crashes.
+
+### 7.0.5730.11
+Broken, but actually better than IE 8, which supports enough CSS to fuck it up worse. Everything fits on the screen. A bigger issue is there's no obvious way to disable stylesheets. You can supply your own, for all pages, in `Tools -> Internet Options -> Accessibility`, but a blank one doesn't seem to unset the styles.
+
+On the plus side, the built-in feed reader works great.
+
+### 8.0.6001.18702 (2009)
+Pretty... damn bad. Issues with positioning and button sizing/text alignment. Stuff floats off the screen and over text. Not sure if you'd want to use CSS. Works fine without.
 
 
 # Dillo, Dillo+

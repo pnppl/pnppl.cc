@@ -70,15 +70,17 @@ todo:
 	- also put more fiction up
 	- and go easy on the pictures, bud
 - rss images are broken. solvable with <base>?
+- x wikilink syntax
+	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
+		- markor reads them the other way around. must fix this
+			- i think i did. was actually easy
+	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
 
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
 	- x swap filename and firstline/title?
 - x get autolink_pages to stop autolinking pages to themselves
-- x wikilink syntax
-	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
-	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
 - x fix emoji bullshit
 	- emoji markdown support removed
 	- unicode glyphs replaced with ascii for extlink, footnote
@@ -267,6 +269,8 @@ longterm notions
 		- i could add azw3 or whatever scamazon's format is. throw a bone to the normies. i think it would physically hurt however
 		- palmdoc?????
 			- actually i guess mobi should work on palm and that's less crap. but still. eh.
+				- apparently mobi is an extension of palmdoc!
+					- and azw[1] is mobi?? but... kindle doesn't support it anymore
 - other protocols like gopher
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
 - visual graph

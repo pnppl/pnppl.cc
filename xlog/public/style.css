@@ -673,9 +673,9 @@ a.navbar-item {
 /* ==========================================================================
 	 Utilities
 	 ========================================================================== */
-.has-text-grey {
-	color: #69748c;
-}
+/*.has-text-grey { */
+/*	color: #69748c; */
+/*} */
 .is-clearfix:after {
 	clear: both;
 	content: " ";
@@ -691,9 +691,9 @@ a.navbar-item {
 .pb-5 {
 	padding-bottom: 1.5rem;
 }
-.is-size-7 {
-	font-size: 0.75rem;
-}
+/*.is-size-7 { */
+/*	font-size: 0.75rem; */
+/*} */
 .is-hidden {
 	display: none;
 }
@@ -709,7 +709,7 @@ a.navbar-item {
 	text-decoration-thickness: 2px;
 	text-decoration-skip-ink: none;
 }
-*:hover > .show-on-parent-hover {
+*:hover > .hover-button {
 	display: inline;
 }
 
@@ -875,7 +875,7 @@ a.footnote-ref:target {
 a.navbar-item,
 a.button,
 a.button.is-small,
-a.show-on-parent-hover {
+a.hover-button {
 	text-decoration: none;
 	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
@@ -886,21 +886,21 @@ a.show-on-parent-hover {
 }
 a.navbar-item:active,
 a.button:active,
-a.show-on-parent-hover:active,
+a.hover-button:active,
 a.navbar-item.active {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 }
 a.navbar-item:visited,
-a.show-on-parent-hover,
-a.show-on-parent-hover:visited {
+a.hover-button,
+a.hover-button:visited {
 	color: black;
 }
 /*  taskbar look  */
-/*#navbarMenu {
-  background-color: silver;
-  gap: 2px;
-  padding: 2px;
-}*/
+/* #navbarMenu { */
+/*  background-color: silver; */
+/*  gap: 2px; */
+/*  padding: 2px; */
+/* } */
 /* buttons that lead to current page ("stuck down") */
 .navbar-item.active {
 	background-color: #e8e8e8;
@@ -908,7 +908,7 @@ a.show-on-parent-hover:visited {
 a.navbar-item.active:active {
 	background-color: silver;
 }
-a.show-on-parent-hover {
+a.hover-button {
 	font-style: normal;
 	padding: 0 5px 2px 5px;
 	font-weight: bold;
@@ -1057,9 +1057,11 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 .filename-right {
 	float: right;
 }
-time.has-text-grey {
+time.stamp {
 	display: block;
 	clear: both;
+	font-size: 0.75rem;
+	color: #69748c;
 }
 #article {
 	view-transition-name: page-content;
@@ -1492,7 +1494,7 @@ pre.chroma {
 /* ==========================================================================
 	 Media Queries
 	 ========================================================================== */
-/*@media screen and (min-width: 769px), print { */
+/* @media screen and (min-width: 769px), print { */
 /*	.column.is-narrow { */
 /*		flex: none; */
 /*		width: unset; */
@@ -1609,7 +1611,7 @@ pre.chroma {
 	/* with this fix it behaves like holding Lmouse then dragging away before release */
 	a.navbar-item:hover,
 	a.button:hover,
-	a.show-on-parent-hover:hover {
+	a.hover-button:hover {
 		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	}
 	#badge:hover:after {
