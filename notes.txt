@@ -258,7 +258,8 @@ longterm notions
 		- we probably need to preprocess the markdown to add h1s with a class attached, then use a lua filter to skip incrementing that class
 			- this would be extremely annoying and violate my goal of not fucking with the files
 				- fuck it we'll do it live (more fish)
-				- ! links between documents don't work. but in fact i'm not sure they ever would? i don't have any software that actually renders the links to test... but in a markdown context i'm not sure if the .md would be needed. wikilinks are nonstandard anyway. problem for another time
+				- links between documents don't work. but in fact i'm not sure they ever would? i don't have any software that actually renders the links to test... but in a markdown context i'm not sure if the .md would be needed. wikilinks are nonstandard anyway. problem for another time
+					- works in markor
 				- ! rather large epub due to inclusion of images (possessor screenshots). should at least make them b&w or something
 					- long term if i end up making more comics or illustrated posts i should just put posts with pics in a separate epub
 						- might also make sense to include eg 1-bit.day contents, would need a little extra effort but e-ink <3 1-bit
@@ -273,6 +274,19 @@ longterm notions
 					- and azw[1] is mobi?? but... kindle doesn't support it anymore
 - other protocols like gopher
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
+		- gemtext missing Kinds:
+			- Footnote
+			- Table
+			- ~ TaskCheckBox
+			- wikilink? patched and working but never added the kind i don't think
+			- ? definitionlist/description
+		- other gemini:
+			- ascii downgrade is making it into gemtext (<span>s) even though i commented out typographer
+				- it's because we were using the same AST and i guess my replacements are kind of fucked up, should be done at render time. then we can reuse the old ast
+			- still using html.template which is probably going to be a problem eventually
+			- no proper templates or extension support
+			- link inside blockquote is rendered like: > => which i don't think will work
+			- pagename is filename
 - visual graph
 
 

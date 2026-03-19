@@ -4,7 +4,7 @@
 :root {
 	/* Lightness values that change in dark mode */
 	--main-l: 100%;
-	--bg-l: 96%;
+	--bg-l: 94%;
 	--border-l: 86%;
 	--text-l: 29%;
 	--text-strong-l: 21%;
@@ -215,7 +215,7 @@ code {
 	counter-reset: lineNo;
 	font-size: 0.875em;
 	font-weight: normal;
-	padding: 0.25em 0.5em;
+	padding: 0.2em 0.5em;
 }
 pre {
 	background-color: var(--bg);
