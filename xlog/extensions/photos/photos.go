@@ -74,6 +74,9 @@ func (*Photo) AST() ([]byte, ast.Node)  { return nil, nil }
 func (p *Photo) Render() template.HTML {
 	return xlog.Partial("photo", xlog.Locals{"photo": p})
 }
+func (p *Photo) RenderGem() template.HTML {
+	return xlog.Partial("photo", xlog.Locals{"photo": p})
+}
 
 func NewPhoto(path string) (*Photo, error) {
 	stat, err := os.Stat(path)

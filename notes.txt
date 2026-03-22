@@ -265,6 +265,7 @@ longterm notions
 						- might also make sense to include eg 1-bit.day contents, would need a little extra effort but e-ink <3 1-bit
 				- it's sorted by filename right now (origin date) and the filenames are not in the output anywhere. i like this order but it could be rather mysterious and vexing to strangers
 					- also i just excluded everything without a datestamp when it might make sense to include some meta pages
+				- leading * and ~ aren't making it through on TOS note (* -> li). also the shruggie seems to be italicizing lol
 	- are there any other ones? i can't think of any that matter, besides gemtext/gophermap
 		- the manpage idea is cute but extremely pointless. even more pointless than gemini/gopher
 		- i could add azw3 or whatever scamazon's format is. throw a bone to the normies. i think it would physically hurt however
@@ -275,18 +276,24 @@ longterm notions
 - other protocols like gopher
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
 		- gemtext missing Kinds:
-			- Footnote
+			- x Footnote
+				- suboptimal but implemented. using unicode superscript and just headings at the bottom
+					- not sure if it will work properly with multiple references to the same footnote
+					- would be better to put the footnote under the current <p> like with links
 			- Table
-			- ~ TaskCheckBox
-			- wikilink? patched and working but never added the kind i don't think
-			- ? definitionlist/description
+			- x wikilink? patched and working but never added the kind i don't think
+			- definitionlist
 		- other gemini:
-			- ascii downgrade is making it into gemtext (<span>s) even though i commented out typographer
+			- x ascii downgrade is making it into gemtext (<span>s) even though i commented out typographer
 				- it's because we were using the same AST and i guess my replacements are kind of fucked up, should be done at render time. then we can reuse the old ast
 			- still using html.template which is probably going to be a problem eventually
 			- no proper templates or extension support
+				- added hashtag support. well, rendering it works. the actual pages don't build
+					- might be better to re-parse hashtags into links
+					- they have annoying unconditional preceding linebreaks rn, dumb hack
 			- link inside blockquote is rendered like: > => which i don't think will work
-			- pagename is filename
+				- blockquotes are just kind of fucked up in general
+			- link inside em isn't rendered at all, just "__" (see: possessor)
 - visual graph
 
 

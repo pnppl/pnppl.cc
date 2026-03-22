@@ -57,6 +57,9 @@ func (h *Hashtags) Init() {
 	MarkdownConverter().Parser().AddOptions(parser.WithInlineParsers(
 		util.Prioritized(&HashTag{}, 999),
 	))
+	GemtextConverter().Renderer().AddOptions(renderer.WithNodeRenderers(
+		util.Prioritized(&HashTagGemtext{}, 0),
+	))
 }
 
 func (h *Hashtags) PageChanged(p Page) error {
@@ -303,13 +306,35 @@ func (h *HashTag) Kind() ast.NodeKind {
 	return KindHashTag
 }
 
+type HashTagGemtext struct {
+	*HashTag
+}
+
+func (h *HashTagGemtext) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
+	reg.Register(KindHashTag, renderHashtagGemtext)
+}
+
+// HTML
 func renderHashtag(writer util.BufWriter, source []byte, n ast.Node, entering bool) (ast.WalkStatus, error) {
+	return renderHashtagGeneric(writer, source, n, entering, "html")
+}
+
+func renderHashtagGemtext(writer util.BufWriter, source []byte, n ast.Node, entering bool) (ast.WalkStatus, error) {
+	return renderHashtagGeneric(writer, source, n, entering, "gemtext")
+}
+
+func renderHashtagGeneric(writer util.BufWriter, source []byte, n ast.Node, entering bool, format string) (ast.WalkStatus, error) {
 	if !entering || n.Kind() != KindHashTag {
 		return ast.WalkContinue, nil
 	}
 
 	tag := n.(*HashTag)
-	fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s" data-pagefind-meta="tag-%s:%s" data-pagefind-filter="hashtag[name]">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)
+	switch format {
+		case "html":
+			fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s" data-pagefind-meta="tag-%s:%s" data-pagefind-filter="hashtag[name]">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)
+		case "gemtext":
+			fmt.Fprintf(writer, `%s=> /+/tag/%s #%s`, "\n", tag.value, tag.value)
+	}
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", tag.value), true)
 	RegisterBuildPage(fmt.Sprintf("/+/tag/%s", strings.ToLower(string(tag.value))), true)
 	return ast.WalkContinue, nil

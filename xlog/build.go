@@ -46,6 +46,20 @@ func build(dest string) error {
 		slog.Error("Index Page may not exist, make sure your Index Page exists", "index", Config.Index, "error", err)
 	}
 
+	err = buildRoute(
+		srv,
+		"/"+Config.Index+".gmi",
+		dest,
+		path.Join(dest, "index.gmi"),
+	)
+
+	if err != nil {
+		slog.Error("Index Page may not exist, make sure your Index Page exists", "index", Config.Index, "error", err)
+	}
+
+	// delete redunant /index
+	defer os.RemoveAll(path.Join(dest, Config.Index))
+
 	errs := MapPage(context.Background(), func(p Page) error {
 		err := buildRoute(
 			srv,
@@ -56,6 +70,25 @@ func build(dest string) error {
 
 		if err != nil {
 			return fmt.Errorf("Failed to process page: %s, error: %w", p.Name(), err)
+		}
+
+		return nil
+	})
+
+	if err := errors.Join(errs...); err != nil {
+		slog.Error(err.Error())
+	}
+
+	errs = MapPage(context.Background(), func(p Page) error {
+		// Build gemini version
+		err = buildRoute(
+			srv,
+			"/"+p.Name()+".gmi",
+			path.Join(dest, p.Name()),
+			path.Join(dest, p.Name(), "index.gmi"),
+		)
+		if err != nil {
+			slog.Error("Failed to build gemini page", "page", p.Name(), "error", err)
 		}
 
 		return nil
@@ -90,6 +123,18 @@ func build(dest string) error {
 			slog.Error("Failed to process extension page", "route", route, "error", err)
 		}
 
+		err = buildRoute(
+			srv,
+			route,
+			path.Join(dest, route),
+			path.Join(dest, route, "index.gmi"),
+		)
+
+		if err != nil {
+			slog.Error("Failed to process extension page", "route", route, "error", err)
+		}
+
+
 		return true
 	})
 
@@ -104,6 +149,8 @@ func build(dest string) error {
 		if err != nil {
 			slog.Error("Failed to process extension page", "route", route, "error", err)
 		}
+
+		// ~~~~~~~ add gemini build here too when it's working ~~~~~
 
 		return true
 	})

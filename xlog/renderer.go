@@ -14,6 +14,7 @@ import (
 	"github.com/emad-elsaid/xlog/markdown/renderer/html"
 //	"go.abhg.dev/goldmark/wikilink"
 	"github.com/pnppl/wikilink"
+	"github.com/emad-elsaid/xlog/markdown/gemtext"
 )
 
 // The instance of markdown renderer. this is what takes the page content and
@@ -47,6 +48,34 @@ var MarkdownConverter = sync.OnceValue(func() markdown.Markdown {
 		),
 	)
 })
+
+var GemtextConverter = sync.OnceValue(func() markdown.Markdown {
+	return markdown.New(
+//		markdown.WithExtensions(
+//			extension.GFM,
+//			extension.DefinitionList,
+//			extension.Footnote,
+//			extension.Typographer,
+//			&wikilink.Extender{},
+//		),
+//		markdown.WithParser(MarkdownConverter().Parser()),
+//		markdown.WithParserOptions(
+//			parser.WithAutoHeadingID(),
+//		),
+		markdown.WithRenderer(gemtext.New(
+			gemtext.WithCodeSpan(gemtext.CodeSpanMarkdown),
+			gemtext.WithEmphasis(gemtext.EmphasisMarkdown),
+			gemtext.WithHeadingLink(gemtext.HeadingLinkBelow),
+			gemtext.WithHeadingSpace(gemtext.HeadingSpaceSingle),
+			gemtext.WithHorizontalRule("------------------------------------------------------------------------"),
+//			gemtext.WithLinkReplacers(),
+			gemtext.WithParagraphLink(gemtext.ParagraphLinkCurlyBelow),
+			gemtext.WithStrikethrough(gemtext.StrikethroughUnicode),
+		)),
+	)
+})
+
+
 
 // FindInAST takes an AST node and walks the tree depth first
 // searching for a node of a specific type can be used to find first image,

@@ -40,7 +40,10 @@ var helpers = template.FuncMap{
 	"next":           next,
 	"prev":           prev,
 	"active":         active,
-	"activeStr":         activeStr,
+	"activeStr":      activeStr,
+	"tagIsParent":    tagIsParent,
+	"tagChildren":    tagChildren,
+	"tagParent":      tagParent,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -292,4 +295,22 @@ func activeStr(currPage Page, label string) bool {
 		"labelEnd": "",
 	}
 	return active(currPage, labelMap)
+}
+
+func tagIsParent(tag string) bool {
+	return strings.ContainsAny(tag, "⹀︱")
+}
+func tagChildren(tag string) []string {
+	if (tagIsParent(tag)) {
+		tag := strings.Split(tag, "⹀")
+		return strings.Split(tag[1], "︱")
+	}
+	return []string { tag, }
+}
+func tagParent(tag string) string {
+	if (tagIsParent(tag)) {
+		parent := strings.Split(tag,"⹀")
+		return parent[0]
+	}
+	return tag
 }

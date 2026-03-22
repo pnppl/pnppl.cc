@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 	"time"
-
+	"runtime"
 	"github.com/emad-elsaid/xlog/markdown/parser"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/text"
@@ -30,6 +30,8 @@ type Page interface {
 	Exists() bool
 	// Renders the page content to HTML. it makes sure all preprocessors are called
 	Render() template.HTML
+	// Renders the page content to gemtext
+	RenderGem() template.HTML
 	// Reads the underlying file and returns the content
 	Content() Markdown
 	// Deletes the file and makes sure it triggers the AfterDelete event
@@ -49,10 +51,11 @@ type Page interface {
 type page struct {
 	name string
 
-	l          sync.Mutex
+	l sync.Mutex
 	lastUpdate time.Time
-	ast        ast.Node
-	content    *Markdown
+	ast ast.Node
+	gemAst ast.Node
+	content *Markdown
 }
 
 func (p *page) Name() string {
@@ -76,6 +79,26 @@ func (p *page) Render() template.HTML {
 		return template.HTML(err.Error())
 	}
 
+	return template.HTML(buf.String())
+}
+
+//func (p *page) RenderGem() template.HTML {
+func (p *page) RenderGem() (result template.HTML) {
+	defer func() {
+		if r := recover(); r != nil {
+			// Capture the full stack trace
+			buf := make([]byte, 4096)
+			n := runtime.Stack(buf, false)
+			stackTrace := string(buf[:n])
+			result = template.HTML(fmt.Sprintf("RenderGem panic on page %s: %v. Stacktrace: %s", p.name, r, stackTrace))
+		}
+	}()
+	src, ast := p.AST()
+//	src, ast := p.gemAST()
+	var buf bytes.Buffer
+	if err := GemtextConverter().Renderer().Render(&buf, src, ast); err != nil {
+		return template.HTML(err.Error())
+	}
 	return template.HTML(buf.String())
 }
 
@@ -159,6 +182,23 @@ func (p *page) AST() (source []byte, tree ast.Node) {
 
 	return []byte(content), p.ast
 }
+//func (p *page) gemAST() (source []byte, tree ast.Node) {
+//	lastModified := p.lastUpdate
+////	content := p.preProcessedContent()
+//	content := p.Content()
+//
+//	if p.gemAst == nil || p.lastUpdate != lastModified {
+//		ctx := parser.NewContext()
+//		ctx.Set(PageFilenameKey, p.FileName())
+//		p.gemAst = GemtextConverter().Parser().Parse(
+//			text.NewReader([]byte(content)),
+//			parser.WithContext(ctx),
+//		)
+//	}
+//
+//	return []byte(content), p.gemAst
+//}
+
 
 func (p *page) clearCache() {
 	p.content = nil
@@ -173,10 +213,10 @@ type DynamicPage struct {
 	RenderFn func() template.HTML
 }
 
-func (DynamicPage) FileName() string        { return "" }
-func (DynamicPage) Exists() bool            { return false }
+func (DynamicPage) FileName() string		{ return "" }
+func (DynamicPage) Exists() bool			{ return false }
 func (DynamicPage) Content() Markdown       { return "" }
-func (DynamicPage) Delete() bool            { return false }
+func (DynamicPage) Delete() bool			{ return false }
 func (DynamicPage) Write(Markdown) bool     { return false }
 func (DynamicPage) ModTime() time.Time      { return time.Time{} }
 func (DynamicPage) AST() ([]byte, ast.Node) { return nil, nil }
@@ -186,5 +226,8 @@ func (d DynamicPage) Render() template.HTML {
 		return d.RenderFn()
 	}
 
+	return ""
+}
+func (d DynamicPage) RenderGem() template.HTML {
 	return ""
 }

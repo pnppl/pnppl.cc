@@ -1,0 +1,10 @@
+{{- $props := properties .page -}}
+{{- with .page -}}
+	{{- with $props.title -}}
+	# {{ .Value }}
+	{{- else -}}
+	# {{ .Name }}
+	{{- end -}}
+{{- end }}
+
+{{ .page.RenderGem }}

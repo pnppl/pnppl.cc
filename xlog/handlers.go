@@ -8,6 +8,7 @@ import (
 	"os"
 	"runtime"
 	"time"
+	"strings"
 
 	"github.com/gorilla/csrf"
 	"gitlab.com/greyxor/slogor"
@@ -75,7 +76,12 @@ func rootHandler(r Request) Output {
 // Shows a page. the page name is the path itself. if the page doesn't exist it
 // redirect to edit page otherwise will render it to HTML
 func getPageHandler(r Request) Output {
-	page := NewPage(r.PathValue("page"))
+	path := r.PathValue("page")
+	isGem := strings.HasSuffix(path, ".gmi")
+	if isGem {
+		path = strings.TrimSuffix(path, ".gmi")
+	}
+	page := NewPage(path)
 
 	if page == nil {
 		return NoContent()
@@ -109,6 +115,12 @@ func getPageHandler(r Request) Output {
 				return template.HTML(str)
 			},
 		}
+	}
+
+	if isGem {
+		return Render("page-gmi", Locals{
+			"page": page,
+		})
 	}
 
 	return Render("page", Locals{

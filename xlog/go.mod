@@ -44,6 +44,7 @@ require (
 )
 
 require (
+	git.sr.ht/~kota/fuckery v0.2.0 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
 )
