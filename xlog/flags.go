@@ -18,6 +18,7 @@ type Configuration struct {
 	DisabledExtensions string
 	Readonly           bool // is xlog in readonly mode
 	ServeInsecure      bool // should the server use https for cookie
+	Gmi                bool // build gemtext version
 }
 
 var Config Configuration
@@ -39,4 +40,5 @@ func init() {
 	flag.StringVar(&Config.DisabledExtensions, "disabled-extensions", "", "disable list of extensions by name, comma separated, `all` will disable all extensions")
 	flag.StringVar(&Config.CodeStyle, "codestyle", "dracula", "code highlighting style name from the list supported by https://pkg.go.dev/github.com/alecthomas/chroma/v2/styles")
 	flag.StringVar(&Config.Theme, "theme", "", "bulma theme to use. (light, dark). empty value means system preference is used")
+	flag.BoolVar(&Config.Gmi, "gmi", false, "Build gemtext version")
 }

@@ -46,15 +46,17 @@ func build(dest string) error {
 		slog.Error("Index Page may not exist, make sure your Index Page exists", "index", Config.Index, "error", err)
 	}
 
-	err = buildRoute(
-		srv,
-		"/"+Config.Index+".gmi",
-		dest,
-		path.Join(dest, "index.gmi"),
-	)
+	if Config.Gmi {
+		err = buildRoute(
+			srv,
+			"/"+Config.Index+".gmi",
+			dest,
+			path.Join(dest, "index.gmi"),
+		)
 
-	if err != nil {
-		slog.Error("Index Page may not exist, make sure your Index Page exists", "index", Config.Index, "error", err)
+		if err != nil {
+			slog.Error("Index Page may not exist, make sure your Index Page exists", "index", Config.Index, "error", err)
+		}
 	}
 
 	// delete redunant /index
@@ -79,20 +81,22 @@ func build(dest string) error {
 		slog.Error(err.Error())
 	}
 
-	errs = MapPage(context.Background(), func(p Page) error {
-		// Build gemini version
-		err = buildRoute(
-			srv,
-			"/"+p.Name()+".gmi",
-			path.Join(dest, p.Name()),
-			path.Join(dest, p.Name(), "index.gmi"),
-		)
-		if err != nil {
-			slog.Error("Failed to build gemini page", "page", p.Name(), "error", err)
-		}
+	if Config.Gmi {
+		errs = MapPage(context.Background(), func(p Page) error {
+			// Build gemini version
+			err = buildRoute(
+				srv,
+				"/"+p.Name()+".gmi",
+				path.Join(dest, p.Name()),
+				path.Join(dest, p.Name(), "index.gmi"),
+			)
+			if err != nil {
+				slog.Error("Failed to build gemini page", "page", p.Name(), "error", err)
+			}
 
-		return nil
-	})
+			return nil
+		})
+	}
 
 	if err := errors.Join(errs...); err != nil {
 		slog.Error(err.Error())
@@ -123,17 +127,18 @@ func build(dest string) error {
 			slog.Error("Failed to process extension page", "route", route, "error", err)
 		}
 
-		err = buildRoute(
-			srv,
-			route,
-			path.Join(dest, route),
-			path.Join(dest, route, "index.gmi"),
-		)
+		if Config.Gmi {
+			err = buildRoute(
+				srv,
+				route,
+				path.Join(dest, route),
+				path.Join(dest, route, "index.gmi"),
+			)
 
-		if err != nil {
-			slog.Error("Failed to process extension page", "route", route, "error", err)
+			if err != nil {
+				slog.Error("Failed to process extension page", "route", route, "error", err)
+			}
 		}
-
 
 		return true
 	})

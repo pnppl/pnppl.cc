@@ -39,10 +39,18 @@ zip -r site/img/photos/!photos.zip site/img/photos/ -i $imagetypes &&
 fish epub/epub.fish
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
-lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host &&
-echo "! DEPLOY OK !" ||
-echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
+lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host
+
+if test $status -ne 0
+	echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
+	set return 1
+else
+	echo "! DEPLOY OK !"
+	set return 0
+end
 
 if set -q _flag_mobile
 	crond &
 end
+
+return $return

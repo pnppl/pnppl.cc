@@ -122,7 +122,7 @@ func (r *GemRenderer) renderFootnote(w util.BufWriter, source []byte, node ast.N
 	if node.Kind() == east.KindFootnote {
 		n := node.(*east.Footnote)
 		if entering {
-			fmt.Fprintf(w, "## Footnote #%d \n", n.Index)
+			fmt.Fprintf(w, "## Footnote #%d [fn%d]\n", n.Index, n.Index)
 		}
 	}
 	return ast.WalkContinue, nil
