@@ -33,7 +33,7 @@ if test $status -ne 0
 	set return 1
 else
 	echo "! epub success !"
-	return return 0
+	set return 0
 end
 rm -rf $scratch_dir
 return $return
