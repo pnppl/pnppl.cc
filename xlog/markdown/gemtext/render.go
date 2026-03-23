@@ -81,6 +81,9 @@ func (r *GemRenderer) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
 // links and don't have text. This is used for checking if a heading/paragraph
 // is actually JUST a link.
 func linkOnly(source []byte, node ast.Node) bool {
+	if node.Kind() == ast.KindEmphasis {
+		return false
+	}
 	var hasLink bool = false
 	var hasText bool = false
 	// Check if the paragraph contains ONLY links.

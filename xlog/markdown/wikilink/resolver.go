@@ -45,6 +45,7 @@ func (defaultResolver) ResolveWikilink(n *Node) ([]byte, error) {
 		if n.Target[0] != '/' &&
 		n.Target[0] != '#' &&
 		! strings.Contains(string(n.Target), "mailto:") &&
+		! strings.Contains(string(n.Target), "magnet:") &&
 		! strings.Contains(string(n.Target), "://") &&
 		! strings.HasPrefix(string(n.Target), "./") &&
 		! strings.HasPrefix(string(n.Target), "../") {

@@ -46,6 +46,10 @@ todo:
 	- is this actually a stupid idea? most sites won't serve http
 	- definitely don't strip http:// since some sites only serve that and we want to specify
 	- ideally i would specify when appropriate and relativize when not but then i can't just paste links
+	- decided to change all my protocol-relative links to http
+		- browsers/sites that support https should auto-promote and very little is accessible on any other protocol
+		- now offpunk works properly on links in gmi documents
+			- i can even read "DEFENDING WOMEN FROM GENDER IDEOLOGY EXTREMISM AND RESTORING BIOLOGICAL TRUTH TO THE FEDERAL GOVERNMENT" in glorious plaintext. what a treat.
 - syncing, metadata, and mobile fuckery
 	- git does not store any metadata
 		- using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
@@ -277,9 +281,12 @@ longterm notions
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
 		- gemtext missing Kinds:
 			- x Footnote
-				- suboptimal but implemented. using unicode superscript and just headings at the bottom
+				- suboptimal but implemented
 					- not sure if it will work properly with multiple references to the same footnote
 					- would be better to put the footnote under the current <p> like with links
+					- undid the superscript cleverness bc it makes it impossible to easily jump between the footnote and the reference
+						- changed it to use # instead of ^ because less treats caret as the start of a regex
+						- left the brackets in the footnote so you can do eg: /#1] (so you don't match #11, #12, etc)
 			- Table
 			- x wikilink? patched and working but never added the kind i don't think
 			- definitionlist
@@ -291,9 +298,12 @@ longterm notions
 				- added hashtag support. well, rendering it works. the actual pages don't build
 					- might be better to re-parse hashtags into links
 					- they have annoying unconditional preceding linebreaks rn, dumb hack
-			- link inside blockquote is rendered like: > => which i don't think will work
+			- x link inside blockquote is rendered like: > => which i don't think will work
 				- blockquotes are just kind of fucked up in general
 			- link inside em isn't rendered at all, just "__" (see: possessor)
+				- it renders now, curly braces and all, but then no link. told linkOnly that <em> should never be elided
+					- "// We use the parent node (paragraph or heading) to do the heavy lifting"
+						- so perhaps it's *only* set up to print links when they're the direct child of p or hn
 - visual graph
 
 

@@ -56,22 +56,22 @@ func subMap() map[string]string {
 	}
 }
 
-type typographerDelimiterProcessor struct {
-}
-
-func (p *typographerDelimiterProcessor) IsDelimiter(b byte) bool {
-	return b == '\'' || b == '"'
-}
-
-func (p *typographerDelimiterProcessor) CanOpenCloser(opener, closer *parser.Delimiter) bool {
-	return opener.Char == closer.Char
-}
-
-func (p *typographerDelimiterProcessor) OnMatch(consumes int) gast.Node {
-	return nil
-}
-
-var defaultTypographerDelimiterProcessor = &typographerDelimiterProcessor{}
+//type typographerDelimiterProcessor struct {
+//}
+//
+//func (p *typographerDelimiterProcessor) IsDelimiter(b byte) bool {
+//	return b == '\'' || b == '"'
+//}
+//
+//func (p *typographerDelimiterProcessor) CanOpenCloser(opener, closer *parser.Delimiter) bool {
+//	return opener.Char == closer.Char
+//}
+//
+//func (p *typographerDelimiterProcessor) OnMatch(consumes int) gast.Node {
+//	return nil
+//}
+//
+//var defaultTypographerDelimiterProcessor = &typographerDelimiterProcessor{}
 
 type typographerParser struct {
 }
@@ -103,13 +103,12 @@ func spanner(name string, sub string) string {
 
 func (s *typographerParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
 	line, _ := block.PeekLine()
-	c := line[0]
 	if len(line) > 1 {
 		for name, sub := range subMap() {
 			entity, ok := util.LookUpHTML5EntityByName(name)
 				if ok {
 					bytes := entity.Characters
-					if c == bytes[0] && line[1] == bytes[1] {
+					if line[0] == bytes[0] && line[1] == bytes[1] {
 						if len(bytes) == 2 {
 //							node := gast.NewString(spanner(name, sub))
 //							node.SetCode(true)

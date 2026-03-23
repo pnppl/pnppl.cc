@@ -110,6 +110,8 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 		if !bytes.Equal(label, n.Target) {
 			_, _ = w.WriteString(`" alt="`)
 			_, _ = w.Write(util.EscapeHTML(label))
+			_, _ = w.WriteString(`" title="`)
+			_, _ = w.Write(util.EscapeHTML(label))
 		}
 	}
 	_, _ = w.WriteString(`">`)

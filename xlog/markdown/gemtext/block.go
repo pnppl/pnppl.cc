@@ -95,9 +95,11 @@ func (r *GemRenderer) renderBlockquote(w util.BufWriter, source []byte, node ast
 		text := bytes.TrimSpace(buf.Bytes())
 		lines := bytes.SplitAfter(text, []byte{'\n'})
 		for _, line := range lines {
-			fmt.Fprintf(w, ">")
-			if len(line) > 0 && line[0] != '>' && line[0] != '\n' {
-				fmt.Fprintf(w, " ")
+			if ! (len(line) > 3 && string(line[:3]) == "=> ") {
+				fmt.Fprintf(w, ">")
+				if len(line) > 0 && line[0] != '>' && line[0] != '\n' {
+					fmt.Fprintf(w, " ")
+				}
 			}
 			fmt.Fprintf(w, "%s", line)
 		}

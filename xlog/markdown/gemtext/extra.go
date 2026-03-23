@@ -67,6 +67,8 @@ func (r *GemRenderer) renderFootnoteLink(w util.BufWriter, source []byte, node a
 	if entering && node.Kind() == east.KindFootnoteLink {
 		n := node.(*east.FootnoteLink)
 		number := n.Index
+		// this is pretty but impractical, can't jump back and forth with search
+		/*
 		var sups []string
 		// gotta get each place one at a time
 		for i := number; i > 0; i /= 10 {
@@ -80,10 +82,13 @@ func (r *GemRenderer) renderFootnoteLink(w util.BufWriter, source []byte, node a
 				fmt.Fprintf(w, "\u2060")
 			}
 		}
+		*/
+		fmt.Fprintf(w, "[#%d]", number)
 	}
 	return ast.WalkContinue, nil
 }
 
+/*
 func getSup(num int) []string {
 	var sup string
 	switch num {
@@ -110,6 +115,7 @@ func getSup(num int) []string {
 	}
 	return []string{sup}
 }
+*/
 
 func (r *GemRenderer) renderFootnoteList(w util.BufWriter, source []byte, node ast.Node, entering bool) (ast.WalkStatus, error) {
 	if entering && node.Kind() == east.KindFootnoteList {
@@ -122,7 +128,7 @@ func (r *GemRenderer) renderFootnote(w util.BufWriter, source []byte, node ast.N
 	if node.Kind() == east.KindFootnote {
 		n := node.(*east.Footnote)
 		if entering {
-			fmt.Fprintf(w, "## Footnote #%d [fn%d]\n", n.Index, n.Index)
+			fmt.Fprintf(w, "## [#%d]:\n", n.Index)
 		}
 	}
 	return ast.WalkContinue, nil

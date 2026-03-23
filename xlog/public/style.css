@@ -784,7 +784,8 @@ a.autolink:visited {
 }
 .view a[href^="http"]:after,
 .view a[href^="//"]:after,
-.view a[href^="mailto:"]:after {
+.view a[href^="mailto:"]:after,
+.view a[href^="magnet:"]:after {
 	font-size: 0.6em;
 	margin-left: 0.4em;
 	position: relative;
@@ -793,6 +794,11 @@ a.autolink:visited {
 .view a[href^="http"]:after,
 .view a[href^="//"]:after {
 	content: "%";
+	font-weight: 900;
+}
+.view a[href^="magnet:"]:after {
+	content: "U";
+	font-family: sans-serif;
 	font-weight: 900;
 }
 .view a[href^="mailto:"]:after {
