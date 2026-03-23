@@ -11,6 +11,7 @@ import (
 	"time"
 
 	. "github.com/emad-elsaid/xlog"
+	"github.com/emad-elsaid/xlog/markdown/util"
 )
 
 var domain string
@@ -139,7 +140,7 @@ func feed(r Request) Output {
 		title := properties["title"].Value().(string)
 		f.Channel.Items = append(f.Channel.Items, Item{
 			Title:			title,
-			Description:	string(p.Render()),
+			Description:	string(p.Render()) + "\n\n<br>\n<hr>\n<br>\n" + `<a href="mailto:&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#110;&#112;&#112;&#108;&#46;&#99;&#99;?subject=` + string(util.URLEscape([]byte(title), false)) + `">~> send me an email <~</a>`,
 			PubDate:		timeFromName(p.Name(), p.ModTime()),
 //			LastBuildDate:	p.ModTime().Format(rfc822),
 			GUID:			(&url.URL{
