@@ -137,23 +137,25 @@ func feed(r Request) Output {
 
 	for _, p := range pages {
 		properties := Properties(p)
-		title := properties["title"].Value().(string)
-		f.Channel.Items = append(f.Channel.Items, Item{
-			Title:			title,
-			Description:	string(p.Render()) + "\n\n<br>\n<hr>\n<br>\n" + `<a href="mailto:&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#110;&#112;&#112;&#108;&#46;&#99;&#99;?subject=` + string(util.URLEscape([]byte(title), false)) + `">~> send me an email <~</a>`,
-			PubDate:		timeFromName(p.Name(), p.ModTime()),
-//			LastBuildDate:	p.ModTime().Format(rfc822),
-			GUID:			(&url.URL{
-								Scheme: "http",
-								Host:   domain,
-								Path:   "/" + p.Name(),
-							}).String(),
-			Link:			(&url.URL{
-								Scheme: "http",
-								Host:   domain,
-								Path:   "/" + p.Name(),
-							}).String(),
-		})
+		if ! IsIgnoredPath(p.Name()) {
+			title := properties["title"].Value().(string)
+			f.Channel.Items = append(f.Channel.Items, Item{
+				Title:			title,
+				Description:	string(p.Render()) + "\n\n<br>\n<hr>\n<br>\n" + `<a href="mailto:&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#110;&#112;&#112;&#108;&#46;&#99;&#99;?subject=` + string(util.URLEscape([]byte(title), false)) + `">~> send me an email <~</a>`,
+				PubDate:		timeFromName(p.Name(), p.ModTime()),
+	//			LastBuildDate:	p.ModTime().Format(rfc822),
+				GUID:			(&url.URL{
+									Scheme: "http",
+									Host:   domain,
+									Path:   "/" + p.Name(),
+								}).String(),
+				Link:			(&url.URL{
+									Scheme: "http",
+									Host:   domain,
+									Path:   "/" + p.Name(),
+								}).String(),
+			})
+		}
 	}
 
 	buff, err := xml.MarshalIndent(f, "", "    ")
