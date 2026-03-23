@@ -106,7 +106,7 @@ func feed(r Request) Output {
 			}).String(),
 			Description: description,
 			Copyright:	"Copyleft: All Wrongs Reversed (CC BY-SA 4.0)",
-			WebMaster:	"feedback@pnppl.cc (pnppl)",
+			WebMaster:	"webmaster@pnppl.cc (pnppl)",
 			Language:    "en-US",
 			AtomLink: AtomLink{
 				Href:	(&url.URL{
