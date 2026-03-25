@@ -25,7 +25,7 @@ git add *.* \
 	site/txt/ \
 	site/img/ \
 	site/app/ \
-	site/humans.txt \
+	site/*.txt \
 	site/favicon.ico &&
 git commit -m "$msg" &&
 git push &&

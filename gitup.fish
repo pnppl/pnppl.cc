@@ -21,3 +21,5 @@ echo "site/202*" >> .git/info/exclude &&
 echo >> .git/info/exclude
 echo "site/.cache/" >> .git/info/exclude &&
 echo >> .git/info/exclude
+echo "site/app/index.html" >> .git/info/exclude &&
+echo >> .git/info/exclude

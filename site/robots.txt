@@ -1,0 +1,33 @@
+# thanks to <https://seirdy.one/meta/scrapers-i-block/>
+
+# ads
+
+User-Agent: peer39_crawler/1.0
+Disallow: /
+
+# IP
+
+User-Agent: TurnitinBot
+Disallow: /
+
+User-Agent: AcademicBotRTU
+Disallow: /
+
+User-Agent: SlySearch
+Disallow: /
+
+User-Agent: BLEXBot
+Disallow: /
+
+User-agent: CheckMarkNetwork/1.0 (+https://www.checkmarknetwork.com/spider.html)
+Disallow: /
+
+User-agent: BrandVerity/1.0
+Disallow: /
+
+# stalker
+
+User-agent: PiplBot
+Disallow: /
+
+Sitemap: https://pnppl.cc/sitemap.xml
