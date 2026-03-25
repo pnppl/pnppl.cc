@@ -303,7 +303,7 @@ longterm notions
 			- link inside em isn't rendered at all, just "__" (see: possessor)
 				- it renders now, curly braces and all, but then no link. told linkOnly that <em> should never be elided
 					- "// We use the parent node (paragraph or heading) to do the heavy lifting"
-						- so perhaps it's *only* set up to print links when they're the direct child of p or hn
+						- so perhaps it's *only* set up to print links when they're the direct child of <p> or <hn>
 - visual graph
 
 
