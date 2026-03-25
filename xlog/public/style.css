@@ -676,11 +676,11 @@ a.navbar-item {
 /*.has-text-grey { */
 /*	color: #69748c; */
 /*} */
-.is-clearfix:after {
-	clear: both;
-	content: " ";
-	display: table;
-}
+/*.is-clearfix:after { */
+/*	clear: both; */
+/*	content: " "; */
+/*	display: table; */
+/*} */
 .mb-5 {
 	margin-bottom: 1.5rem;
 }

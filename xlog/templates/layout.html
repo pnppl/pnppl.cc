@@ -47,7 +47,7 @@
 			<nav id="next-prev">
 				{{- $p := .page -}}
 				{{- with prev $p }}
-				<a href="/{{ . }}" accesskey="p" class="navbar-item footer-button" ><span>&lt;--&nbsp;<u class="accel">P</u>rev</span></a>
+				<a href="/{{ . }}" accesskey="p" class="navbar-item footer-button"><span>&lt;--&nbsp;<u class="accel">P</u>rev</span></a>
 					{{- with next $p }}
 					<span class="is-hidden">&nbsp;|&nbsp;</span>
 					{{ end -}}
