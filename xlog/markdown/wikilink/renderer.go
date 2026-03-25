@@ -93,7 +93,7 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 	img := resolveAsImage(n)
 	if !img {
 		r.hasDest.Store(n, struct{}{})
-		_, _ = w.WriteString(`<a href="`)
+		_, _ = w.WriteString(`<a rel="noopener noreferrer" referrerpolicy="no-referrer" href="`)
 		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
 		_, _ = w.WriteString(`"><span class="link-text">`)
 		return ast.WalkContinue, nil

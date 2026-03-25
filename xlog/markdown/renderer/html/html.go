@@ -505,7 +505,7 @@ func (r *Renderer) renderAutoLink(
 	if !entering {
 		return ast.WalkContinue, nil
 	}
-	_, _ = w.WriteString(`<a href="`)
+	_, _ = w.WriteString(`<a rel="noopener noreferrer" referrerpolicy="no-referrer" href="`)
 	url := n.URL(source)
 	label := n.Label(source)
 	if n.AutoLinkType == ast.AutoLinkEmail && !bytes.HasPrefix(bytes.ToLower(url), []byte("mailto:")) {
@@ -581,7 +581,7 @@ func (r *Renderer) renderEmphasis(
 func (r *Renderer) renderLink(w util.BufWriter, source []byte, node ast.Node, entering bool) (ast.WalkStatus, error) {
 	n := node.(*ast.Link)
 	if entering {
-		_, _ = w.WriteString("<a href=\"")
+		_, _ = w.WriteString("<a rel=\"noopener noreferrer\" referrerpolicy=\"no-referrer\" href=\"")
 		if r.Unsafe || !IsDangerousURL(n.Destination) {
 			_, _ = w.Write(util.EscapeHTML(util.URLEscape(n.Destination, true)))
 		}
