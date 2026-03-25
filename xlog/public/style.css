@@ -1333,7 +1333,7 @@ pre.chroma {
 .line:before {
 	content: counter(lineNo);
 	text-align: right;
-	min-width: 3ch;
+	min-width: 4ch;
 	padding-right: 2ch;
 	margin-left: 1ch;
 	color: grey;
