@@ -1,7 +1,7 @@
 <div class="photos">
 	{{ range .photos -}}
 	<a href="{{ .Original }}">
-		<img src="{{ .Thumbnail }}" loading="lazy" class="photo" alt="{{ .Name }}" title="{{ .Name }}">
+		<img src="{{ .Thumbnail }}" class="photo" alt="{{ .Name }}" title="{{ .Name }}">
 	</a>
 	<br>
 	{{- end }}
