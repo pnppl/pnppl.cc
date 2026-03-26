@@ -30,7 +30,7 @@ git add *.* \
 git commit -m "$msg" &&
 git push &&
 
-pagefind --site "site/" --output-subdir ".pagefind/" --root-selector "#main" --exclude-selectors "aside, .button, .buttons, .menu, #backlinks, #badge, #email, #footnotes, #see-also" --include-characters "#" --glob "*/*.{html}" --force-language "en" &&
+pagefind --site "site/" --output-subdir ".pagefind/" --root-selector "#main" --exclude-selectors "aside, .button, .buttons, .menu, .excerpt, #backlinks, #badge, #email, #footnotes, #see-also" --include-characters "#" --glob "*/*.{html}" --force-language "en" &&
 zip -r -FS site/txt/!txt.zip site/txt/ -i \*.md &&
 zip -r -FS site/img/1bitday/!1bitday.zip site/img/1bitday/ -i \*.gif
 set imagetypes '*.gif' '*.jpg' '*.jpeg' '*.png'
