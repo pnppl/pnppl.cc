@@ -252,7 +252,7 @@ low priority/done:
 		- if i change nano then maybe i should pick a different default so /about is the default
 		- could also link anarchy one to an anarchist website, lain one to... lain wikipedia?, etc.
 		- if i do this i could use them in the more traditional promo way. a web1.0hosting one would be good
-
+- the excerpt stuff could be more generalized to make !embed more useful
 
 longterm notions
 - x support other delivery formats like epub
