@@ -34,6 +34,46 @@ func RegisterBuildPage(p string, encloseInDir bool) {
 func build(dest string) error {
 	srv := server()
 
+	errs := MapPage(context.Background(), func(p Page) error {
+		err := buildRoute(
+			srv,
+			"/"+p.Name(),
+			path.Join(dest, p.Name()),
+			path.Join(dest, p.Name(), "index.html"),
+		)
+
+		if err != nil {
+			return fmt.Errorf("Failed to process page: %s, error: %w", p.Name(), err)
+		}
+
+		return nil
+	})
+
+	if err := errors.Join(errs...); err != nil {
+		slog.Error(err.Error())
+	}
+
+	if Config.Gmi {
+		errs = MapPage(context.Background(), func(p Page) error {
+			// Build gemini version
+			err := buildRoute(
+				srv,
+				"/"+p.Name()+".gmi",
+				path.Join(dest, p.Name()),
+				path.Join(dest, p.Name(), "index.gmi"),
+			)
+			if err != nil {
+				slog.Error("Failed to build gemini page", "page", p.Name(), "error", err)
+			}
+
+			return nil
+		})
+	}
+
+	if err := errors.Join(errs...); err != nil {
+		slog.Error(err.Error())
+	}
+
 	// building Index separately
 	err := buildRoute(
 		srv,
@@ -61,46 +101,6 @@ func build(dest string) error {
 
 	// delete redunant /index
 	defer os.RemoveAll(path.Join(dest, Config.Index))
-
-	errs := MapPage(context.Background(), func(p Page) error {
-		err := buildRoute(
-			srv,
-			"/"+p.Name(),
-			path.Join(dest, p.Name()),
-			path.Join(dest, p.Name(), "index.html"),
-		)
-
-		if err != nil {
-			return fmt.Errorf("Failed to process page: %s, error: %w", p.Name(), err)
-		}
-
-		return nil
-	})
-
-	if err := errors.Join(errs...); err != nil {
-		slog.Error(err.Error())
-	}
-
-	if Config.Gmi {
-		errs = MapPage(context.Background(), func(p Page) error {
-			// Build gemini version
-			err = buildRoute(
-				srv,
-				"/"+p.Name()+".gmi",
-				path.Join(dest, p.Name()),
-				path.Join(dest, p.Name(), "index.gmi"),
-			)
-			if err != nil {
-				slog.Error("Failed to build gemini page", "page", p.Name(), "error", err)
-			}
-
-			return nil
-		})
-	}
-
-	if err := errors.Join(errs...); err != nil {
-		slog.Error(err.Error())
-	}
 
 	// If we render 404 page
 	// Copy 404 page from dest/404/index.html to /dest/404.html

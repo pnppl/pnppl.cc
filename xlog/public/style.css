@@ -768,6 +768,7 @@ h1.hashtag-name-noinc:before {
 }
 
 /* Link decorators */
+/* this should be changed to default underlined then opt-in to non-underlined */
 .view a {
 	text-decoration-line: none;
 }
@@ -1077,7 +1078,7 @@ time.stamp {
 }
 
 /* ==========================================================================
-	 Page-Specific (search, calendar, onebitday, 404)
+	 Page-Specific (search, calendar, onebitday, 404, index)
 	 ========================================================================== */
 
 /* pagefind search */
@@ -1287,6 +1288,42 @@ body:has(.four04) #pagetitle h1 {
 body:has(.four04) .subtitle,
 body:has(.four04) .content.columns {
 	display: none;
+}
+
+/* index */
+a.excerpt {
+	text-decoration: underline;
+	font-style: italic;
+}
+h2.excerpt::before {
+	content: "";
+}
+.view h2.excerpt {
+	font-size: initial;
+	font-style: normal;
+	border: none;
+	margin-bottom: 0;
+}
+blockquote.excerpt {
+	background-color: inherit;
+	font-size: 0.8em;
+	margin: 0 14.2ch;
+	counter-reset: h1 h2 h3;
+	border-width: 2px;
+}
+blockquote.excerpt img {
+	max-width: 15%;
+}
+blockquote.excerpt .hover-button {
+	display: none;
+}
+blockquote.excerpt :nth-child(5) {
+	display: inline;
+}
+a.excerpt-more {
+	font-weight: bold;
+	border-bottom: 1px solid;
+	margin-left: 1ch;
 }
 
 /* ==========================================================================

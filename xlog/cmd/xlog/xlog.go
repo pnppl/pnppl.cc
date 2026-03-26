@@ -32,6 +32,8 @@ import (
 	_ "github.com/emad-elsaid/xlog/extensions/search"
 //	disqus = 1bitday
 	_ "github.com/emad-elsaid/xlog/extensions/disqus"
+// github = newest
+	_ "github.com/emad-elsaid/xlog/extensions/github"
 )
 
 func main() {

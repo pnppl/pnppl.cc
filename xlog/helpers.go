@@ -39,11 +39,12 @@ var helpers = template.FuncMap{
 	"dateInName":     dateInName,
 	"next":           next,
 	"prev":           prev,
+//	"newest":         newest,
 	"active":         active,
 	"activeStr":      activeStr,
-	"tagIsParent":    tagIsParent,
-	"tagChildren":    tagChildren,
-	"tagParent":      tagParent,
+//	"tagIsParent":    tagIsParent,
+//	"tagChildren":    tagChildren,
+//	"tagParent":      tagParent,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -256,16 +257,22 @@ func resetaccess() string {
 	return ""
 }
 
-func sibling(currPage Page, prev bool) string {
+var pageNames []string
+func buildSiblingIndex() {
+	// already built
+	if len(pageNames) > 0 {
+		return
+	}
 	allPages := Pages(context.Background());
-	var pageNames []string
 	for p, _ := range allPages {
 		if !IsIgnoredPath(allPages[p].Name()) {
 			pageNames = append(pageNames, allPages[p].Name())
 		}
 	}
 	slices.Sort(pageNames)
-
+}
+func sibling(currPage Page, prev bool) string {
+	buildSiblingIndex()
 	idx := slices.Index(pageNames, currPage.Name())
 	if prev && idx > 1 {
 		return pageNames[idx - 1]
@@ -280,6 +287,14 @@ func prev(currPage Page) string {
 }
 func next(currPage Page) string {
 	return sibling(currPage, false)
+}
+func Newest() string {
+	for i := len(pageNames) - 1; i >= 0; i -- {
+		if strings.HasPrefix(pageNames[i], "20") {
+			return pageNames[i]
+		}
+	}
+	return ""
 }
 func active(currPage Page, label map[string]string) bool {
 	labelStr := label["labelStart"] + label["labelAccel"] + label["labelEnd"]
@@ -296,7 +311,7 @@ func activeStr(currPage Page, label string) bool {
 	}
 	return active(currPage, labelMap)
 }
-
+/*
 func tagIsParent(tag string) bool {
 	return strings.ContainsAny(tag, "⹀︱")
 }
@@ -314,3 +329,4 @@ func tagParent(tag string) string {
 	}
 	return tag
 }
+*/
