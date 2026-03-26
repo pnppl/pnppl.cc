@@ -1307,12 +1307,12 @@ h2.excerpt::before {
 blockquote.excerpt {
 	background-color: inherit;
 	font-size: 0.8em;
-	margin: 0 14.2ch;
+	margin-left: 1em;
 	counter-reset: h1 h2 h3;
 	border-width: 2px;
 }
 blockquote.excerpt img {
-	max-width: 15%;
+	max-height: 30vh;
 }
 blockquote.excerpt .hover-button {
 	display: none;
