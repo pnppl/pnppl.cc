@@ -24,16 +24,18 @@ import (
 //go:embed templates
 var templates embed.FS
 
+var h Hashtags
+
 func init() {
-	h := Hashtags{
-		pages: make(map[Page][]*HashTag),
+	h = Hashtags{
+		pages: make(map[Page][]*Hashtag),
 	}
 
 	RegisterExtension(&h)
 }
 
 type Hashtags struct {
-	pages map[Page][]*HashTag
+	pages map[Page][]*Hashtag
 	mu    sync.Mutex
 }
 
@@ -52,14 +54,16 @@ func (h *Hashtags) Init() {
 	Listen(PageDeleted, h.PageDeleted)
 
 	MarkdownConverter().Renderer().AddOptions(renderer.WithNodeRenderers(
-		util.Prioritized(&HashTag{}, 0),
+		util.Prioritized(&Hashtag{}, 0),
 	))
 	MarkdownConverter().Parser().AddOptions(parser.WithInlineParsers(
-		util.Prioritized(&HashTag{}, 999),
+		util.Prioritized(&Hashtag{}, 999),
 	))
 	GemtextConverter().Renderer().AddOptions(renderer.WithNodeRenderers(
-		util.Prioritized(&HashTagGemtext{}, 0),
+		util.Prioritized(&HashtagGemtext{}, 0),
 	))
+
+	RegisterProperty(properties)
 }
 
 func (h *Hashtags) PageChanged(p Page) error {
@@ -72,7 +76,7 @@ func (h *Hashtags) PageDeleted(p Page) error {
 	return h.PageChanged(p)
 }
 
-func (h *Hashtags) hashtagsFor(p Page) []*HashTag {
+func (h *Hashtags) hashtagsFor(p Page) []*Hashtag {
 	h.mu.Lock()
 	defer h.mu.Unlock()
 
@@ -81,7 +85,7 @@ func (h *Hashtags) hashtagsFor(p Page) []*HashTag {
 	}
 
 	_, tree := p.AST()
-	tags := FindAllInAST[*HashTag](tree)
+	tags := FindAllInAST[*Hashtag](tree)
 	h.pages[p] = tags
 
 	return tags
@@ -94,7 +98,7 @@ func (h *Hashtags) tagsHandler(r Request) Output {
 	EachPage(r.Context(), func(a Page) {
 		set := map[string]bool{}
 		_, tree := a.AST()
-		hashes := FindAllInAST[*HashTag](tree)
+		hashes := FindAllInAST[*Hashtag](tree)
 		for _, v := range hashes {
 			val := strings.ToLower(string(v.value))
 
@@ -155,7 +159,7 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 	}
 
 	_, tree := p.AST()
-	found_hashtags := FindAllInAST[*HashTag](tree)
+	found_hashtags := FindAllInAST[*Hashtag](tree)
 	hashtags := map[unique.Handle[string]]bool{}
 	for _, v := range found_hashtags {
 		hashtags[v.unique] = true
@@ -167,7 +171,7 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 		}
 
 		_, tree := rp.AST()
-		page_hashtags := FindAllInAST[*HashTag](tree)
+		page_hashtags := FindAllInAST[*Hashtag](tree)
 		for _, h := range page_hashtags {
 			if _, ok := hashtags[h.unique]; ok {
 				return rp
@@ -236,21 +240,21 @@ func (l link) Label() map[string]string {
 	}
 }
 
-type HashTag struct {
+type Hashtag struct {
 	ast.BaseInline
 	value  []byte
 	unique unique.Handle[string]
 }
 
-func (h *HashTag) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
-	reg.Register(KindHashTag, renderHashtag)
+func (h *Hashtag) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
+	reg.Register(KindHashtag, renderHashtag)
 }
 
-func (h *HashTag) Trigger() []byte {
+func (h *Hashtag) Trigger() []byte {
 	return []byte{'#'}
 }
 
-func (h *HashTag) Parse(parent ast.Node, block text.Reader, pc parser.Context) ast.Node {
+func (h *Hashtag) Parse(parent ast.Node, block text.Reader, pc parser.Context) ast.Node {
 	l, _ := block.PeekLine()
 	if len(l) < 1 {
 		return nil
@@ -287,31 +291,31 @@ func (h *HashTag) Parse(parent ast.Node, block text.Reader, pc parser.Context) a
 
 	block.Advance(i)
 	tag := line[1:i]
-	return &HashTag{
+	return &Hashtag{
 		value:  []byte(tag),
 		unique: unique.Make(strings.ToLower(tag)),
 	}
 }
 
-func (h *HashTag) Dump(source []byte, level int) {
+func (h *Hashtag) Dump(source []byte, level int) {
 	m := map[string]string{
 		"value": fmt.Sprintf("%#v", h.value),
 	}
 	ast.DumpHelper(h, source, level, m, nil)
 }
 
-var KindHashTag = ast.NewNodeKind("Hashtag")
+var KindHashtag = ast.NewNodeKind("Hashtag")
 
-func (h *HashTag) Kind() ast.NodeKind {
-	return KindHashTag
+func (h *Hashtag) Kind() ast.NodeKind {
+	return KindHashtag
 }
 
-type HashTagGemtext struct {
-	*HashTag
+type HashtagGemtext struct {
+	*Hashtag
 }
 
-func (h *HashTagGemtext) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
-	reg.Register(KindHashTag, renderHashtagGemtext)
+func (h *HashtagGemtext) RegisterFuncs(reg renderer.NodeRendererFuncRegisterer) {
+	reg.Register(KindHashtag, renderHashtagGemtext)
 }
 
 // HTML
@@ -324,11 +328,11 @@ func renderHashtagGemtext(writer util.BufWriter, source []byte, n ast.Node, ente
 }
 
 func renderHashtagGeneric(writer util.BufWriter, source []byte, n ast.Node, entering bool, format string) (ast.WalkStatus, error) {
-	if !entering || n.Kind() != KindHashTag {
+	if !entering || n.Kind() != KindHashtag {
 		return ast.WalkContinue, nil
 	}
 
-	tag := n.(*HashTag)
+	tag := n.(*Hashtag)
 	switch format {
 		case "html":
 			fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="%s" name="%s" data-pagefind-meta="tag-%s:%s" data-pagefind-filter="hashtag[name]">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)

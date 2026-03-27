@@ -1317,6 +1317,7 @@ blockquote.excerpt img {
 blockquote.excerpt .hover-button {
 	display: none;
 }
+/* last item could actually be less than 5... */
 blockquote.excerpt :nth-child(5) {
 	display: inline;
 }

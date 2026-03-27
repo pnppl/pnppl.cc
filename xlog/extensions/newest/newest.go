@@ -40,6 +40,7 @@ func newestShortcode(in xlog.Markdown) template.HTML {
     var result []byte
     var ids []string
 	var content []string
+	// do we actually know if it's safe to break the html up by line?
 	i := 0
 	for line := range strings.Lines(string(p.Render())) {
 		if i == 5 { break }

@@ -4,6 +4,9 @@ todo:
 	- couldn't get the home icon to behave so I just hide it on mobile
 		- in offpunk `view full` it takes up an entire page <_>
 	- heading buttons run into text on mobile
+		- i think i want to get rid of these entirely
+			- the hover shit sucks and the button style is intrusive without it
+			- the &sect should be before the heading and the &not should probably be a caret
 	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
@@ -74,12 +77,11 @@ todo:
 	- also put more fiction up
 	- and go easy on the pictures, bud
 - rss images are broken. solvable with <base>?
-- x wikilink syntax
-	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
-		- markor reads them the other way around. must fix this
-			- i think i did. was actually easy
-	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
-
+- i should really fix the heading semantics
+	- the h1/h2 for title/name should become <h1><span>
+	- all headings inside documents should begin at h2
+	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
+	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
@@ -253,6 +255,12 @@ low priority/done:
 		- could also link anarchy one to an anarchist website, lain one to... lain wikipedia?, etc.
 		- if i do this i could use them in the more traditional promo way. a web1.0hosting one would be good
 - the excerpt stuff could be more generalized to make !embed more useful
+- x wikilink syntax
+	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
+		- markor reads them the other way around. must fix this
+			- i think i did. was actually easy
+	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
+TAGS! {{ range $v := $props.tags.Val }}{{ $v }}<br>{{ end }}
 
 longterm notions
 - x support other delivery formats like epub

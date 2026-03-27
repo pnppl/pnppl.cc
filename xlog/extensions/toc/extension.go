@@ -41,5 +41,9 @@ func tocWidget(p xlog.Page) template.HTML {
 		return ""
 	}
 
+	if xlog.IsIgnoredPath(p.Name()) {
+		return ""
+	}
+
 	return xlog.Partial("toc", xlog.Locals{"tree": tree})
 }

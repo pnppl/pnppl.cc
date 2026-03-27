@@ -1,7 +1,5 @@
 {{- template "header" . -}}
 {{- $props := properties .page }}
-{{ with $props }}
-{{- end -}}
 <div class="columns content">
 	<div class="column">
 		{{- if not .page.ModTime.IsZero }}
