@@ -40,7 +40,7 @@ fish epub/epub.fish &&
 # optimize
 caesiumclt -R --lossless --same-folder-as-input site/+/thumb/ &&
 ect -9 --strict -recurse site/+/thumb/ &&
-for file in site/{txt/!txt.zip,img/{1bitday/!1bitday.zip,comics/!comics.zip,photos/!photos.zip}}
+for file in **/*.{zip,epub}
 	ect -9 --strict -zip $file
 end &&
 chmod -R 755 site/ &&
