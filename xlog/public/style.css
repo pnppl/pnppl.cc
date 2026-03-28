@@ -558,6 +558,7 @@ a.tag:active {
 /* Navbar ------------------------------------------------------------------ */
 nav.navbar {
 	padding-top: 0.75em;
+	margin-bottom: 1.5em;
 }
 .navbar {
 	background-color: var(--main);
@@ -668,6 +669,8 @@ a.navbar-item {
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
 }
 
 /* ==========================================================================
@@ -681,13 +684,13 @@ a.navbar-item {
 /*	content: " "; */
 /*	display: table; */
 /*} */
-.mb-5 {
-	margin-bottom: 1.5rem;
-}
-.px-3 {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
-}
+/*.mb-5 { */
+/*	margin-bottom: 1.5rem; */
+/*} */
+/*.px-3 { */
+/*	padding-left: 0.75rem; */
+/*	padding-right: 0.75rem; */
+/*} */
 .pb-5 {
 	padding-bottom: 1.5rem;
 }
@@ -903,7 +906,7 @@ a.hover-button:visited {
 	color: black;
 }
 /*  taskbar look  */
-/* #navbarMenu { */
+/* .navbar-menu { */
 /*  background-color: silver; */
 /*  gap: 2px; */
 /*  padding: 2px; */
@@ -1580,10 +1583,10 @@ pre.chroma {
 		justify-content: flex-end;
 		margin-inline-start: auto;
 	}
-	.navbar > .container .navbar-brand {
+	.navbar-brand {
 		margin-inline-start: -0.75rem;
 	}
-	.navbar > .container .navbar-menu {
+	.navbar-menu {
 		margin-inline-end: -0.75rem;
 	}
 	.container {
@@ -1604,13 +1607,13 @@ pre.chroma {
 }
 
 @media screen and (max-width: 1023px) {
-	.navbar > .container {
+	.navbar {
 		display: block;
 	}
 	.navbar-menu {
 		background-color: var(--main);
 	}
-	#navbarMenu {
+	.navbar-menu {
 		display: flex;
 		flex-wrap: wrap;
 	}
