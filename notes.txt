@@ -47,6 +47,7 @@ todo:
 					- photos extension
 					- build/deploy scripts
 					- ......? prob a million things i haven't thought of where i made some assumption about a path. autolink_pages?
+					- writing links to images like ../img/ is a problem: when embedded in the index, it causes mosaic to send a request for pnppl.cc/../img/. lol
 		- add PHP features? Likes counter?
 		- add web1.0hosting button?
 		- x .md files always try to download. this seems to be controlled by the headers sent by the server
