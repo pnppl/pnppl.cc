@@ -103,6 +103,12 @@ CSS rendering is mostly like Firefox 4, but it has some of the same issues as Ne
 Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`.) The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.
 
 
+# Netsurf 3.11 (Flatpak)
+Technically it works well; all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
+
+This is tangential, but this version of the browser has a goddamn hamburger menu instead of a menu bar. I am irrationally annoyed by this. I think 3.09 might have a proper interface. Building from source seems like a pain in the ass though.
+
+
 # Modern Chromium browsers
 Ought to work fine but I don't check very often.
 

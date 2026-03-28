@@ -24,7 +24,7 @@ func (Newest) Init() {
 func newestShortcode(in xlog.Markdown) template.HTML {
 	newestName := xlog.Newest()
 	if newestName == "" {
-		return template.HTML(fmt.Sprintf("[placeholder. currently only works when built, not when tested live, due to assumptions about build order and available context]"))
+		return template.HTML(fmt.Sprintf("[Placeholder. Refresh the page.]"))
 	}
 	p := xlog.NewPage(newestName)
 	props := xlog.Properties(p)

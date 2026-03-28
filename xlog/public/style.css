@@ -964,14 +964,18 @@ a.hover-button {
 
 /* Accessibility button */
 #skip-nav {
-	position:absolute;
-	left:-9999px;
-	top:0;
-	z-index:100
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 100
 }
 #skip-nav:focus {
-	left:4px;
-	top:4px
+	position: relative;
+	left: 0;
+	top: 0;
+}
+#skip-nav:focus ~ .navbar-brand {
+	margin-inline-start: 0;
 }
 
 /* ==========================================================================
@@ -1576,12 +1580,10 @@ pre.chroma {
 		justify-content: flex-end;
 		margin-inline-start: auto;
 	}
-	.navbar > .container .navbar-brand,
-	.container > .navbar .navbar-brand {
+	.navbar > .container .navbar-brand {
 		margin-inline-start: -0.75rem;
 	}
-	.navbar > .container .navbar-menu,
-	.container > .navbar .navbar-menu {
+	.navbar > .container .navbar-menu {
 		margin-inline-end: -0.75rem;
 	}
 	.container {

@@ -8,6 +8,9 @@
 				{{ if $isActive -}}
 					{{ $active = " active" -}}
 				{{ end -}}
+				<a href="#main" accesskey="k" class="navbar-item" id="skip-nav">
+					<span>S<u class="accel">k</u>ip to content</span><br>
+				</a>
 				<a class="icon-text navbar-item navbar-end navbar-brand{{ $active }}" href="/" accesskey="h" aria-label="Home">
 					<span class="icon is-small"><img alt="logo" src="/public/logo.gif"></span>
 					<span><u class="accel">H</u>ome</span>

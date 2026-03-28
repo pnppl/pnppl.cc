@@ -1,3 +1,8 @@
+misc:
+https://vivivi.leprd.space/webmastery/pre-css-attributes/
+TAGS! {{ range $v := $props.tags.Val }}{{ $v }}<br>{{ end }}
+
+
 todo: 
 - css tweaks
 	- nicer ul styling
@@ -11,6 +16,7 @@ todo:
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
 		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
+	- switch to a preprocessor so we can eliminate variables easily
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it?
@@ -82,6 +88,7 @@ todo:
 	- all headings inside documents should begin at h2
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
 	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
+
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
@@ -260,7 +267,7 @@ low priority/done:
 		- markor reads them the other way around. must fix this
 			- i think i did. was actually easy
 	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
-TAGS! {{ range $v := $props.tags.Val }}{{ $v }}<br>{{ end }}
+- cleanup notes.txt, getting long...
 
 longterm notions
 - x support other delivery formats like epub
