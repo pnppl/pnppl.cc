@@ -1,21 +1,25 @@
 <nav class="navbar container" role="navigation" aria-label="main navigation">
-	<div class="navbar-menu">
+	<ul class="navbar-menu">
 		{{ $class := "icon-text navbar-item navbar-end navbar-brand" -}}
 		{{ $isActive := activeStr .page "index"  -}}
 		{{ $active := "" -}}
 		{{ if $isActive -}}
 			{{ $active = " active" -}}
 		{{ end -}}
-		<a href="#main" accesskey="k" class="navbar-item" id="skip-nav">
-			<span>S<u class="accel">k</u>ip to content</span><br>
-		</a>
-		<a class="icon-text navbar-item navbar-end navbar-brand{{ $active }}" href="/" accesskey="h" aria-label="Home">
-			<span class="icon is-small"><img alt="logo" src="/public/logo.gif"></span>
-			<span><u class="accel">H</u>ome</span>
-		</a>
+		<li class="navbar-li" id="skip-nav">
+			<a href="#main" accesskey="k" class="navbar-item">
+				<span>S<u class="accel">k</u>ip to content</span><br>
+			</a>
+		</li>
+		<li class="navbar-li navbar-end navbar-brand">
+			<a class="icon-text navbar-item{{ $active }}" href="/" accesskey="h" aria-label="Home">
+				<span class="icon is-small"><img alt="logo" src="/public/logo.gif"></span>
+				<span><u class="accel">H</u>ome</span>
+			</a>
+		</li>
 		{{ $p := .page -}}
 		{{- range $i, $a := links .page }}
-			<li class="compat-hidden"></li>
+		<li class="navbar-li">
 			{{ printf "<a " | raw }}{{ range $k, $v := .Attrs }}{{$k}}="{{$v}}" {{ end -}} {{ printf "class=\"navbar-item icon-text" | raw -}}
 			{{ with .Label -}}
 				{{ $isActive := active $p . -}}
@@ -28,13 +32,15 @@
 				<span>{{.labelStart}}<u class="accel">{{.labelAccel}}</u>{{.labelEnd}}</span>
 			{{ end -}}
 			</a>
+		</li>
 		{{- end -}}
 		{{ with .page }}
 			{{ widgets "search" . }}
 		{{- end -}}
-		<li class="compat-hidden"></li>
-		<a href="/+/feed.rss" class="navbar-item icon-text navbar-end" accesskey="f">
-			<span id="RSS">RSS</span><span> <u class="accel">F</u>eed</span>
-		</a>
-	</div>
+		<li class="navbar-li navbar-end">
+			<a href="/+/feed.rss" class="navbar-item icon-text" accesskey="f">
+				<span id="RSS">RSS</span><span> <u class="accel">F</u>eed</span>
+			</a>
+		</li>
+	</ul>
 </nav>

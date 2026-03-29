@@ -611,8 +611,12 @@ a.navbar-item {
 	max-height: 1.75rem;
 }
 .navbar,
-.navbar-menu,
-.navbar-start {
+.navbar-menu {
+	flex-grow: 1;
+}
+.navbar-li {
+	display: flex;
+	flex-shrink: 1;
 	flex-grow: 1;
 }
 .navbar-end {
@@ -972,12 +976,11 @@ a.hover-button {
 	top: 0;
 	z-index: 100
 }
-#skip-nav:focus {
+#skip-nav:has(.navbar-item:focus) {
 	position: relative;
 	left: 0;
-	top: 0;
 }
-#skip-nav:focus ~ .navbar-brand {
+#skip-nav:has(.navbar-item:focus) ~ .navbar-brand {
 	margin-inline-start: 0;
 }
 
@@ -1562,7 +1565,6 @@ pre.chroma {
 @media screen and (min-width: 1024px) {
 	.navbar,
 	.navbar-menu,
-	.navbar-start,
 	.navbar-end {
 		align-items: stretch;
 		display: flex;
@@ -1575,10 +1577,10 @@ pre.chroma {
 		flex-grow: 1;
 		flex-shrink: 0;
 	}
-	.navbar-start {
-		justify-content: flex-start;
-		margin-inline-end: auto;
-	}
+/*	.navbar-start { */
+/*		justify-content: flex-start; */
+/*		margin-inline-end: auto; */
+/*	} */
 	.navbar-end {
 		justify-content: flex-end;
 		margin-inline-start: auto;
@@ -1617,7 +1619,7 @@ pre.chroma {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.navbar-item {
+	.navbar-li {
 		flex-basis: 21%;
 		align-content: center;
 		flex-grow: 1;
