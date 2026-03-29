@@ -1815,7 +1815,7 @@ pre.chroma {
 		font-size: 1em !important;
 		color: #444;
 		background-color: initial !important;
-		box-shadow: 0 0 0 !important;
+		box-shadow: none !important;
 		line-height: 1.2 !important;
 		font-family: serif !important;
 	}
@@ -1830,7 +1830,9 @@ pre.chroma {
 		word-wrap: break-word !important;
 		white-space: pre-wrap !important;
 		overflow: initial !important;
-		padding: 0 !important;
+	}
+	pre.chroma {
+		padding: 0.5em 0 !important;
 	}
 	.line:before {
 		margin-left: 0;
