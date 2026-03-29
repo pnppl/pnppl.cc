@@ -45,8 +45,7 @@ for file in **/*.{zip,epub}
 end &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
-#lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host
-lftp -e "set ftp:skey-force; mirror -R --parallel=20 site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host
+lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host
 
 if test $status -ne 0
 	echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
