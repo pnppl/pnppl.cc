@@ -90,6 +90,7 @@ todo:
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
 	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
 - fix epub script. gaze at that hideous symlink and despair
+- contact support about whatever the fuck is going on with the img "not a directory" thing. think i uploaded a symlink by mistake??
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually

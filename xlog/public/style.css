@@ -236,11 +236,9 @@ pre.indented {
 	all: inherit;
 }
 hr {
-	background-color: var(--bg);
-	border: none;
-	display: block;
-	height: 2px;
-	margin: 1.5rem 0;
+	border-color: var(--bg);
+	margin: 1.5em auto;
+	width: 90%;
 }
 img {
 	height: auto;
@@ -1350,7 +1348,7 @@ pre.chroma {
 .line:before {
 	content: counter(lineNo);
 	text-align: right;
-	min-width: 4ch;
+	min-width: 5ch;
 	padding-right: 2ch;
 	margin-left: 1ch;
 	color: grey;
@@ -1517,20 +1515,6 @@ pre.chroma {
 /* ==========================================================================
 	 Media Queries
 	 ========================================================================== */
-/* @media screen and (min-width: 769px), print { */
-/*	.column.is-narrow { */
-/*		flex: none; */
-/*		width: unset; */
-/*	} */
-/*	.column.is-1 { */
-/*		flex: none; */
-/*		width: calc(8.3333333333% + var(--column-gap) / 2); */
-/*	} */
-/*	.columns { */
-/*		display: flex; */
-/*	} */
-/*} */
-
 @media screen and (min-width: 1024px) {
 	nav.navbar {
 		padding: 0;
@@ -1809,5 +1793,92 @@ pre.chroma {
 	}
 	.line:nth-child(even) {
 		background-color: rgba(0, 0, 0, 0.20);
+	}
+}
+
+@media print {
+	nav,
+	.button,
+	.menu,
+	#Backlinks,
+	#see-also,
+	#next-prev,
+	#email-wrapper,
+	#badge {
+		display: none;
+	}
+	.container {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	* {
+		font-size: 1em !important;
+		color: #444;
+		background-color: initial !important;
+		box-shadow: 0 0 0 !important;
+		line-height: 1.2 !important;
+		font-family: serif !important;
+	}
+	code,
+	code *,
+	pre.chroma,
+	tt {
+		color: #444;
+		tab-size: 2 !important;
+		font-family: monospace, monospace !important;
+		word-break: break-all !important;
+		word-wrap: break-word !important;
+		white-space: pre-wrap !important;
+		overflow: initial !important;
+		padding: 0 !important;
+	}
+	.line:before {
+		margin-left: 0;
+	}
+	.content h1,
+	.content h2,
+	.content h3,
+	.content h4,
+	.content h5,
+	.content h6 {
+		margin: 1.5em 0 0.5em !important;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+		break-after: avoid-page;
+	}
+	time {
+		font-weight: normal !important;
+	}
+	li,
+	blockquote,
+	figure,
+	img {
+		page-break-inside: avoid;
+		break-inside: avoid-page;
+	}
+	img {
+		max-height: 90vh;
+		max-width: 90vw;
+	}
+	p {
+		hyphens: auto;
+	}
+	a:after {
+		content: "\00a0[URL: " attr(href) "]" !important;
+		font-size: 75% !important;
+		font-weight: normal !important;
+		font-style: normal !important;
+		font-family: sans-serif !important;
+		margin-left: initial !important;
+		bottom: 0.25em !important;
+	}
+	hr {
+		border-top: 2px solid var(--bg);
 	}
 }
