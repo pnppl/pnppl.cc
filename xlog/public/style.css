@@ -556,73 +556,71 @@ a.tag:active {
 }
 
 /* Navbar ------------------------------------------------------------------ */
-nav.navbar {
-	padding-top: 0.75em;
-	margin-bottom: 1.5em;
-}
-.navbar {
-	background-color: var(--main);
-	min-height: var(--navbar-height);
-	position: relative;
-	z-index: 30;
-}
-/*.navbar > .container { */
-/*	align-items: stretch; */
-	/* compat: inline-block fallback before flex for pre-flexbox browsers */
-/*	display: inline-block; */
-/*	text-align: center; */
-/*	display: flex; */
-/*	min-height: var(--navbar-height); */
-/*	width: 100%; */
-/*} */
-.navbar-brand {
-	align-items: stretch;
-	display: flex;
-	flex-shrink: 0;
+.navbar-menu {
+	display: inline;
+	 display: inline-block;
+	  display: flex;
+	text-align: center;
+	width: 100%;
+	margin: 0.75em auto 1.5em;
 	min-height: var(--navbar-height);
 }
 .navbar-item {
 	color: var(--text);
-	/* compat: inline-block rather than block so items flow
-		 horizontally in pre-flexbox browsers (flex overrides either way) */
 	display: inline-block;
-	vertical-align: middle;
+	 display: flex;
 	flex-grow: 1;
+	vertical-align: middle;
 	justify-content: center;
 	line-height: 1.5;
 	padding: 0.5rem 0.75rem;
 	position: relative;
 	white-space: nowrap;
 	outline-offset: 0;
-}
-.navbar-item .icon {
-	/* compat: hide navbar icons in pre-flex browsers */
-	display: none;
-	display: var(--compat, inline-flex);
-}
-.navbar-item .icon:only-child {
-	margin-left: -0.25rem;
-	margin-right: -0.25rem;
-}
-a.navbar-item {
 	cursor: pointer;
 }
-.navbar-item img {
-	max-height: 1.75rem;
+.navbar-item .icon {
+	display: none;
+	display: inline-flex;
 }
-.navbar,
-.navbar-menu {
-	flex-grow: 1;
+.navbar-item img {
+	max-height: 1.75em;
 }
 .navbar-li {
-	display: flex;
-	flex-shrink: 1;
+	display: inherit;
 	flex-grow: 1;
 }
 .navbar-end {
 	flex-grow: 0;
 	min-height: var(--navbar-height);
 }
+/* buttons that lead to current page ("stuck down") */
+.navbar-item.active {
+	background-color: #e8e8e8;
+}
+a.navbar-item.active:active {
+	background-color: silver;
+}
+
+/* Accessibility button */
+#skip-nav {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 100;
+}
+#skip-nav:has(.navbar-item:focus) {
+	position: relative;
+	left: 0;
+}
+
+/*  taskbar look  */
+/* .navbar-menu { */
+/*  background-color: silver; */
+/*  gap: 2px; */
+/*  padding: 2px; */
+/* } */
+
 
 /* Photos */
 .photos {
@@ -669,7 +667,6 @@ a.navbar-item {
 	margin-bottom: 0.75rem;
 }
 .container {
-	flex-grow: 1;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
@@ -707,10 +704,10 @@ a.navbar-item {
 .is-block {
 	display: block;
 }
-.compat-hidden {
-	display: inline;
-	list-style: none;
-}
+/*.compat-hidden { */
+/*	display: inline; */
+/*	list-style: none; */
+/*} */
 .accel {
 	text-decoration-line: underline;
 	text-decoration-thickness: 2px;
@@ -909,19 +906,6 @@ a.hover-button,
 a.hover-button:visited {
 	color: black;
 }
-/*  taskbar look  */
-/* .navbar-menu { */
-/*  background-color: silver; */
-/*  gap: 2px; */
-/*  padding: 2px; */
-/* } */
-/* buttons that lead to current page ("stuck down") */
-.navbar-item.active {
-	background-color: #e8e8e8;
-}
-a.navbar-item.active:active {
-	background-color: silver;
-}
 a.hover-button {
 	font-style: normal;
 	padding: 0 5px 2px 5px;
@@ -956,7 +940,7 @@ a.hover-button {
 	margin-top: 0.25em;
 	/* compat: 2em room for list markers; var() restores 0.25em in modern browsers */
 	padding-left: 2em;
-	padding-left: var(--compat, 0.25em);
+	padding-left: 0.25em;
 }
 #table-of-contents-list ol a {
 	border: 2px solid;
@@ -967,21 +951,6 @@ a.hover-button {
 }
 #table-of-contents-list a {
 	color: var(--text);
-}
-
-/* Accessibility button */
-#skip-nav {
-	position: absolute;
-	left: -9999px;
-	top: 0;
-	z-index: 100
-}
-#skip-nav:has(.navbar-item:focus) {
-	position: relative;
-	left: 0;
-}
-#skip-nav:has(.navbar-item:focus) ~ .navbar-brand {
-	margin-inline-start: 0;
 }
 
 /* ==========================================================================
@@ -1426,7 +1395,7 @@ pre.chroma {
 /* Line; block fallback for browsers without flex */
 .chroma .line {
 	display: block;
-	display: flex;
+	 display: flex;
 }
 /* KeywordDeclaration, KeywordType */
 .chroma .kd,
@@ -1563,33 +1532,11 @@ pre.chroma {
 /*} */
 
 @media screen and (min-width: 1024px) {
-	.navbar,
-	.navbar-menu,
-	.navbar-end {
-		align-items: stretch;
-		display: flex;
+	nav.navbar {
+		padding: 0;
 	}
 	.navbar-item {
 		align-items: center;
-		display: flex;
-	}
-	.navbar-menu {
-		flex-grow: 1;
-		flex-shrink: 0;
-	}
-/*	.navbar-start { */
-/*		justify-content: flex-start; */
-/*		margin-inline-end: auto; */
-/*	} */
-	.navbar-end {
-		justify-content: flex-end;
-		margin-inline-start: auto;
-	}
-	.navbar-brand {
-		margin-inline-start: -0.75rem;
-	}
-	.navbar-menu {
-		margin-inline-end: -0.75rem;
 	}
 	.container {
 		max-width: 960px;
@@ -1609,14 +1556,10 @@ pre.chroma {
 }
 
 @media screen and (max-width: 1023px) {
-	.navbar {
-		display: block;
-	}
+/*	.navbar { */
+/*		display: block; */
+/*	} */
 	.navbar-menu {
-		background-color: var(--main);
-	}
-	.navbar-menu {
-		display: flex;
 		flex-wrap: wrap;
 	}
 	.navbar-li {
