@@ -51,8 +51,39 @@ With legacy [[compatibility|compat]] covered, we can use stylesheets to make the
 
 I selected [[xlog|http://github.com/emad-elsaid/xlog]] as the best static site generator for my requirements: everything I cared about still worked with Javascript disabled and it supported must-have features: backlinks and mentions. (The way mentions work is that when the name of a post is used in another post, it's automatically turned into a link. Backlink support adds a section at the foot of a post that lists all the other posts that link to it.) If I'm going hypertext, I want all the benefits, but I also don't want to spend a lot of time fussing over the website when it's the words that really matter. And given the wide variety of subjects, it would be nice to have some ability to discover posts. 
 
-For mentions, the underline is broken with dashes to de-emphasize it and so you can distinguish it from a manual link. [[External links|http://web1.0hosting.net/]] are followed by a % sign, because it kind of looks like an X and also kind of like the little external link symbol a bunch of sites use. ([[Email,|mailto:comments@pnppl.cc?subject=I read the entire about page!]] [[torrent magnet,|magnet:?xt=urn:btih:3b1de9cb7011350fa152ec47419620aa153e19e7&dn=debian-13.4.0-amd64-netinst.iso]] [[PDF,|https://www.bmj.com/content/bmj/363/bmj.k5094.full.pdf]] [[Wikipedia,|https://en.wikipedia.org/wiki/Emperor_Norton]] and [[YouTube|https://www.youtube.com/watch?v=DKaqaToa4mQ]] links have their own annotations.) I wanted to keep it ASCII when possible, as well as webfont-free.
+For mentions, the underline is broken with dashes to de-emphasize it and so you can distinguish it from a manual link. [[External links|http://web1.0hosting.net/]] are followed by a % sign, because it kind of looks like an X and also kind of like the little external link symbol a bunch of sites use. I wanted to keep it ASCII when possible, as well as webfont-free. ([[Email,|mailto:comments@pnppl.cc?subject=I read the entire about page!]] [[torrent magnet,|magnet:?xt=urn:btih:3b1de9cb7011350fa152ec47419620aa153e19e7&dn=debian-13.4.0-amd64-netinst.iso]] [[PDF,|https://www.bmj.com/content/bmj/363/bmj.k5094.full.pdf]] [[Wikipedia,|https://en.wikipedia.org/wiki/Emperor_Norton]] and [[YouTube|https://www.youtube.com/watch?v=DKaqaToa4mQ]] links have their own annotations.)
 
 Still, I'm not quite willing to give up UTF-8 for my posts. UTF-8 is so good. I'm addicted to the emdash. Sometimes I even use an emoji. I figure a garbled character here and there in the unlikely event that someone actually uses Mosaic or another legacy browser is an acceptable sacrifice, and I've tried to ameliorate the issue by outputting ASCII versions of commonly used characters that degrade cleanly, like the emdash, ≠, etc. With CSS enabled you'll still see the original character.
 
 I also like the idea of making the site available via Gopher for the true low-tech heads. We'll see.
+
+
+# Credits #
+I'd like to extend my heartfelt gratitude to the following people who made pnppl.cc possible:
+- [[Emad Elsaid|https://www.emadelsaid.com/]] for creating [[Xlog|https://github.com/emad-elsaid/xlog]]
+- [[Yusuke Inuzuka|https://github.com/yuin]] for creating [[goldmark|https://github.com/yuin/goldmark]] and other Xlog dependencies
+- [[Abhinav Gupta|https://github.com/abhinav]] for creating [[goldmark-toc|https://github.com/abhinav/goldmark-toc]] and [[goldmark-wikilink|https://github.com/abhinav/goldmark-wikilink]]
+- [[rubjo|https://github.com/rubjo]] for creating [[Victor Mono|https://rubjo.github.io/victor-mono/]]
+- [[Liam Bigelow|https://github.com/bglw]] for creating [[Pagefind|https://pagefind.app/]]
+- [[John MacFarlane|https://johnmacfarlane.net/]] for creating [[Pandoc|https://pandoc.org/]]
+- [[Matteo Paonessa|https://github.com/Lymphatus]] for creating [[Caesium|https://github.com/Lymphatus/caesium-clt]]
+- [[Felix Hanau|https://github.com/fhanau]] for creating [[Efficient Compression Tool|https://github.com/fhanau/Efficient-Compression-Tool]]
+- Everyone else who contributed to the above free and open-source projects and their dependencies
+- [[besties collective|https://besties.house/]] for providing gratis source code hosting and version control at [[git.gay|https://git.gay/]]
+- [[Web 1.0 Hosting|//web1.0hosting.net/]] for providing gratis retro-compatible webhosting and email
+
+I'm also immensely grateful to the people behind the following software instrumental to making this site and maintaining my sanity:
+- [[Debian|https://www.debian.org/]] operating system
+- [[Xfce|https://xfce.org/]] desktop environment
+- [[Chicago95|https://github.com/grassmunk/Chicago95]] desktop theme
+- [[fish|https://fishshell.com/]] command shell
+- [[Termux|https://termux.dev/]] terminal/Linux environment for Android
+- [[nano|https://www.nano-editor.org/]] text editor
+- [[Markor|https://github.com/gsantner/markor]] text editor for Android
+- [[GIMP|https://gimp.org/]] image editor
+- [[Gifsicle|https://www.lcdf.org/gifsicle/]] gif compressor
+- [[flexiGIF|https://create.stephan-brumme.com/flexigif-lossless-gif-lzw-optimization/]] gif optimizer
+- [[Git|https://git-scm.com/]] source control
+- [[lftp|https://github.com/lavv17/lftp]] FTP client
+
+Special thanks also to the people who cultivate, harvest, process, and distribute coffee, tea, cannabis, and carrot juice.
