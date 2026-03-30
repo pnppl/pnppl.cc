@@ -590,7 +590,8 @@ a.tag:active {
 	max-height: 1.75em;
 }
 .navbar-li {
-	display: inherit;
+	display: inline;
+	display: flex;
 	flex-grow: 1;
 }
 .navbar-end {
