@@ -262,6 +262,9 @@ summary::marker {
 	display: none;
 	content: "";
 }
+video {
+	max-width: 100%;
+}
 
 /* ==========================================================================
 	 Components
