@@ -41,6 +41,7 @@ func newestShortcode(in xlog.Markdown) template.HTML {
     var ids []string
 	var content []string
 	// do we actually know if it's safe to break the html up by line?
+	// answer: it is not...
 	i := 0
 	for line := range strings.Lines(string(p.Render())) {
 		if i == 5 { break }
@@ -58,5 +59,10 @@ func newestShortcode(in xlog.Markdown) template.HTML {
 	}
 
 	contents := strings.TrimSpace(strings.Join(content[0:], ""))
+	// hideous quick fix for relative paths issue
+	pathfix := regexp.MustCompile(`src="\.\.`)
+	contents = pathfix.ReplaceAllString(contents, `src="`)
+	pathfix = regexp.MustCompile(`href="\.\.`)
+	contents = pathfix.ReplaceAllString(contents, `href="`)
 	return template.HTML(fmt.Sprintf(`<h2 class="excerpt">Newest post: <a href="%s" class="excerpt">%s</a></h2> <blockquote class="excerpt">%s<a href="%s" class="excerpt-more">...</a></blockquote>`, newestName, title, contents, newestName + id))
 }

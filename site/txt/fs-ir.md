@@ -5,4 +5,4 @@ These were taken with a point-and-shoot (Kodak Easyshare M863) that I modified. 
 
 !photos ../img/photos/fs-ir/
 
-[[/img/photos/!photos.zip]]
+[[../img/photos/!photos.zip]]
