@@ -28,8 +28,7 @@ git add *.* \
 	site/app/ \
 	site/vid/ \
 	site/*.txt \
-	site/favicon.ico \
-	site/human.json &&
+	site/favicon.ico &&
 git commit -m "$msg" &&
 git push &&
 

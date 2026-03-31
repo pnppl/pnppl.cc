@@ -10,7 +10,7 @@ set html map/index.html
 cat $html.1 > $out &&
 # pre AND tt seems to guarantee we get preserved whitespace and monospace text
 echo -n '<pre class="sitemap"><tt class="sitemap">' >> $out &&
-tree --charset=ascii --dirsfirst --noreport --hintro=/dev/null --houtro=/dev/null -ha -H -'' $in |
+tree --charset=ascii --dirsfirst --noreport --hintro=/dev/null --houtro=/dev/null --du -ha -H -'' $in |
 # move size to end
 sd '(\[.+\]).+(<a.+)$' '$2 $1' |
 # remove padding from size
