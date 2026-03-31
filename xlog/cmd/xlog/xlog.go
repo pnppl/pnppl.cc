@@ -15,6 +15,7 @@ import (
 	_ "github.com/emad-elsaid/xlog/extensions/hashtags"
 	_ "github.com/emad-elsaid/xlog/extensions/heading"
 //	_ "github.com/emad-elsaid/xlog/extensions/hotreload"
+//	_ "github.com/emad-elsaid/xlog/extensions/html"
 	_ "github.com/emad-elsaid/xlog/extensions/images"
 	_ "github.com/emad-elsaid/xlog/extensions/opengraph"
 	_ "github.com/emad-elsaid/xlog/extensions/pandoc"

@@ -24,6 +24,8 @@ for file in site/txt/20*.md
 		# fix footnotes without fucking everything up with pandoc's inscrutable --file-scope
 #		sed -i -E "s/\[\^([[:digit:]]+)\]/\[\^$(path basename -E $file)-\1\]/g" $filename
 		sed -i -E "s/\[\^/\[\^$(path basename -E $file)-/g" $filename
+		# remove video embeds. open and close need to be on same line
+		sed -i -E 's/<video.+<\/video>//g' $filename
 #	end
 end
 set markdown_features markdown-smart+ascii_identifiers+space_in_atx_header+backtick_code_blocks+fenced_code_attributes+pipe_tables+strikeout+footnotes+lists_without_preceding_blankline+hard_line_breaks+autolink_bare_uris+wikilinks_title_before_pipe+header_attributes

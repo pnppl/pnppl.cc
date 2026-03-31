@@ -155,7 +155,7 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 func resizeHandler(r xlog.Request) xlog.Output {
 	photo_path := "../img/photos/" + r.PathValue("path")
 	photo_path = photo_path[:len(photo_path)-len(path.Ext(photo_path))]
-	const cacheDir = "../.cache"
+	const cacheDir = "../../.cache"
 	os.Mkdir(cacheDir, 0700)
 
 	cacheFile := path.Join(cacheDir, fmt.Sprintf("photo-%x", sha256.Sum256([]byte(photo_path))))

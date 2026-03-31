@@ -59,7 +59,7 @@ func links(p Page) []Command {
 }
 
 func metaTag(p Page) template.HTML {
-	tag := `<link href="/+/feed.rss" rel="alternate" title="%s" type="application/rss+xml">`
+	tag := `<link rel="alternate" href="/+/feed.rss" title="%s RSS" type="application/rss+xml">`
 	return template.HTML(fmt.Sprintf(tag, template.JSEscapeString(Config.Sitename)))
 }
 

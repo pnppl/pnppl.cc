@@ -274,9 +274,10 @@ func buildSiblingIndex() {
 func sibling(currPage Page, prev bool) string {
 	buildSiblingIndex()
 	idx := slices.Index(pageNames, currPage.Name())
-	if prev && idx > 1 {
+	if prev && idx > 0 {
 		return pageNames[idx - 1]
 	}
+	// next
 	if !prev && idx < len(pageNames) - 1 && idx >= 0 {
 		return pageNames[idx + 1]
 	}

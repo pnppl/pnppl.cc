@@ -1063,6 +1063,9 @@ time.stamp {
 /* ==========================================================================
 	 Page-Specific (search, calendar, onebitday, 404, index)
 	 ========================================================================== */
+.sitemap {
+	background-color: inherit;
+}
 
 /* pagefind search */
 #search * {

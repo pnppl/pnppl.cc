@@ -21,13 +21,15 @@ git stash pop -q &&
 fish save_mtimes.fish &&
 git add *.* \
 	epub/ \
+	map/ \
 	xlog/ \
 	site/txt/ \
 	site/img/ \
 	site/app/ \
 	site/vid/ \
 	site/*.txt \
-	site/favicon.ico &&
+	site/favicon.ico \
+	site/human.json &&
 git commit -m "$msg" &&
 git push &&
 
@@ -44,6 +46,7 @@ ect -9 --strict -recurse site/+/thumb/ &&
 for file in **/*.{zip,epub}
 	ect -9 --strict -zip $file
 end &&
+fish map/sitemap.fish &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host

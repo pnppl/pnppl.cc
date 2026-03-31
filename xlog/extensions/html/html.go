@@ -98,6 +98,10 @@ func (p *page) Exists() bool {
 func (p *page) Render() template.HTML {
 	return template.HTML(p.Content())
 }
+// stub
+func (p *page) RenderGem() template.HTML {
+	return p.Render()
+}
 
 func (p *page) Content() xlog.Markdown {
 	dat, err := os.ReadFile(p.FileName())

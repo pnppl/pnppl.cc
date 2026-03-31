@@ -2,14 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="referrer" content="no-referrer">
 		<meta name="color-scheme" content="light dark">
 		<link rel="icon" href="/public/favicon.ico">
 		<link rel="stylesheet" href="/public/style-min.css">
 		<link rel="license" href="/public/CC_BY-SA_4.0.txt">
-		<link rel="human-json" href="/public/human.json">
+		<link rel="human-json" href="/human.json">
+		{{ with .page -}}
+			{{ widgets "head" . }}
+		{{- end }}
 		<title>
 		{{- $props := properties .page -}}
 		{{- with .page -}}
@@ -20,9 +23,6 @@
 			{{- end }} | {{ end -}}
 		{{- .config.Sitename -}}
 		</title>
-		{{ with .page -}}
-			{{ widgets "head" . }}
-		{{- end }}
 	</head>
 <body>
 {{ template "navbar" . }}
@@ -49,10 +49,10 @@
 				{{- with prev $p }}
 				<a href="/{{ . }}" accesskey="p" class="navbar-item footer-button"><span>&lt;--&nbsp;<u class="accel">P</u>rev</span></a>
 					{{- with next $p }}
-					<span class="is-hidden">&nbsp;|&nbsp;</span>
+					<span class="is-hidden">&nbsp;<a href="/sitemap">|</a>&nbsp;</span>
 					{{ end -}}
 				{{- end -}}
-				{{- with next .page -}}
+				{{- with next $p -}}
 				<a href="/{{ . }}" accesskey="n" class="navbar-item footer-button"><span><u class="accel">N</u>ext&nbsp;--&gt;</span></a>
 				{{- end -}}
 			</nav>
