@@ -57,7 +57,7 @@
 				<a href="/{{ . }}" accesskey="n" class="navbar-item footer-button"><span><u class="accel">N</u>ext&nbsp;--&gt;</span></a>
 				{{- end -}}
 			</nav>
-			<p id="email-badge-wrapper">
+			<p id="email-wrapper">
 				<a class="navbar-item footer-button" id="email" accesskey="e" href="mailto:&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#110;&#112;&#112;&#108;&#46;&#99;&#99;?subject=
 				{{- with properties .page -}}
 					{{- .title.Value -}}
@@ -65,6 +65,9 @@
 					{{- base .page.Name -}}
 				{{- end -}}
 				"><span>S<u class="accel">e</u>nd feedback...</span></a>
+			</p>
+			<!-- p is needed for mosaic -->
+			<p>
 				<a id="badge" href="/about">
 					<img id="badge-img" src="/public/badges/nano-88x31.gif" width="88" height="31" alt="about">
 				</a>

@@ -136,7 +136,7 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 		}
 		_, _ = w.WriteString(`<a href="`)
 		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
-		_, _ = w.WriteString(`">Download ` + ext + `]</a></` + tag + `>`)
+		_, _ = w.WriteString(`">Download ` + ext + `</a>]</` + tag + `>`)
 		return ast.WalkSkipChildren, nil
 	}
 

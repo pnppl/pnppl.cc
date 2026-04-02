@@ -1023,7 +1023,7 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	float: left;
 	margin-bottom: 1em;
 }
-#email-badge-wrapper {
+#email-wrapper {
 	margin-bottom: 0;
 }
 .footer-button {
@@ -1372,7 +1372,7 @@ pre.chroma {
 		margin-bottom: 1em;
 		width: 100%;
 	}
-	#email-badge-wrapper {
+	#email-wrapper {
 		margin-bottom: 1em;
 		width: min-content;
 	}
