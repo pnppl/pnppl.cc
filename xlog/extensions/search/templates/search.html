@@ -1,5 +1,135 @@
 {{- template "header" . }}
 <link href="/.pagefind/pagefind-ui.css" rel="stylesheet">
+<style><!-- /* html comment hides for Mosaic era */
+#search * {
+	border-radius: 0;
+	color: inherit;
+	background-color: inherit;
+	--pagefind-ui-border: var(--border);
+}
+#search mark {
+	background-color: pink;
+	outline: thin pink solid;
+	color: black;
+}
+.pagefind-ui__search-input {
+	outline-offset: -1px;
+}
+
+/* --- hides: --- */
+/* clear button. annoying, gets in the way of tabbing */
+.pagefind-ui__search-clear,
+/* hide note about offline search if js search is in use */
+#search:has(.pagefind-ui__results) ~ p,
+/* hide img placeholder that still shows with no image */
+.pagefind-ui__result-thumb {
+	display: none;
+}
+
+.pagefind-ui__result-thumb:has(img) {
+	display: initial;
+	max-width: calc(160px * var(--pagefind-ui-scale)) !important;
+}
+
+/* ---- spacing ---- */
+.pagefind-ui ol {
+	margin: 0 0.25em;
+}
+.pagefind-ui li {
+	/* calc for 2px border */
+	padding: calc(0.25em - 2px) 0.25em 0.5em !important;
+}
+.pagefind-ui li:first-of-type {
+	padding-top: 0.5em !important;
+}
+/* "n results for x" */
+.pagefind-ui__message {
+	padding: 0 0 1em !important;
+	margin: 0 0.5em !important;
+}
+.pagefind-ui__result {
+	gap: 1em !important;
+}
+.pagefind-ui__result:last-of-type {
+	padding-bottom: 0.75em !important;
+}
+.pagefind-ui__result-nested {
+	padding-bottom: 0.5em;
+}
+.pagefind-ui__result-nested:last-of-type {
+	padding-bottom: 0;
+}
+.pagefind-ui__result-tags {
+	margin: 0 0 0 auto !important;
+	position: relative;
+	top: 0.25em;
+}
+li.pagefind-ui__result-tag {
+	text-align: center;
+	background-color:hsl(221,14%,calc(var(--bg-l) + 0%)) !important;
+	border-radius:0.375rem !important;
+	padding-left: 0.75em !important;
+	padding-right: 0.75em !important;
+}
+
+/* filters */
+.pagefind-ui__drawer {
+	flex-direction: row-reverse !important;
+	gap: 0.5em !important;
+}
+.pagefind-ui__filter-block {
+	border: 0 !important;
+	padding: 0 !important;
+}
+.pagefind-ui__filter-panel {
+	position: absolute;
+	margin: 0.3em 0 0 0 !important;
+	background-color: white;
+	padding: 0.5em;
+	border: 2px solid var(--border);
+}
+.pagefind-ui__filter-panel:has(.pagefind-ui__filter-block:open) {
+	position: static;
+	height: 100%;
+}
+.pagefind-ui__filter-name {
+	outline-offset: 8px;
+}
+.pagefind-ui__filter-label {
+	line-height: 1em;
+}
+.pagefind-ui__filter-group {
+	padding-top: 1em !important;
+	padding-bottom: 0.25em !important;
+	margin-top: 0.5em !important;
+	border-top: 1px solid var(--border) !important;
+}
+.pagefind-ui__filter-value::before {
+	border-color: var(--text-strong) !important;
+	z-index: 10;
+}
+
+/* --- media queries --- */
+/* mobile or just skinny */
+@media (max-width: 767px) {
+	.pagefind-ui__filter-panel {
+		position: static;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	#search a:visited {
+		color: violet;
+	}
+	#search input,
+	.pagefind-ui__filter-panel {
+		background-color: black;
+		color: var(--text);
+	}
+	#search form::before {
+		background-color: white;
+	}
+}
+--></style>
 <script src="/.pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <!-- need comment to make it through template for mosaic compat, and need it to not be JS-escaped -->

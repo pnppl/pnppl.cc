@@ -1,5 +1,41 @@
 # pnppl's commonplace
-
+<style><!--
+a.excerpt {
+	text-decoration: underline;
+	font-style: italic;
+}
+h2.excerpt::before {
+	content: "";
+}
+.view h2.excerpt {
+	font-size: initial;
+	font-style: normal;
+	border: none;
+	margin-bottom: 0;
+}
+blockquote.excerpt {
+	background-color: inherit;
+	font-size: 0.8em;
+	margin-left: 1em;
+	counter-reset: h1 h2 h3;
+	border-width: 2px;
+}
+blockquote.excerpt img {
+	max-height: 30vh;
+}
+blockquote.excerpt .hover-button {
+	display: none;
+}
+/* last item could actually be less than 5... */
+blockquote.excerpt :nth-child(5) {
+	display: inline;
+}
+a.excerpt-more {
+	font-weight: bold;
+	border-bottom: 1px solid;
+	margin-left: 1ch;
+}
+--></style>
 Perpetually under construction. Pardon our dust.
 
 You might like to read [[the about page.|/about]]

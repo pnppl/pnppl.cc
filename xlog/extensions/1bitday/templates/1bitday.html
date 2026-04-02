@@ -1,3 +1,16 @@
+<style><!-- /* compat comment */
+a.onebitday {
+	text-decoration: none;
+	display: inline-block;
+	line-height: 0;
+}
+img.onebitday {
+	/* fallback: crisp-edges for Safari, pixelated is standard */
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+	border: 4px solid black;
+}
+--></style>
 {{ range .photos }}
 <a href="/img/1bitday/{{ .Name }}.gif" class="onebitday">
   <img src="/img/1bitday/{{ .Name }}.gif" class="onebitday" alt="{{ .Name }}" title="{{ .Name }}" width="72" height="72">
