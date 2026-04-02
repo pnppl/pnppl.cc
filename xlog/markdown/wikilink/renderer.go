@@ -129,13 +129,14 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 		if n.ChildCount() == 1 {
 			label := nodeText(src, n.FirstChild())
 			if !bytes.Equal(label, n.Target) {
+				_, _ = w.WriteString(`[` + tag + `: `)
 				_, _ = w.Write(util.EscapeHTML(label))
 				_, _ = w.WriteString(" ")
 			}
 		}
 		_, _ = w.WriteString(`<a href="`)
 		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
-		_, _ = w.WriteString(`">Download the ` + ext + ` ` + tag + `</a></` + tag + `>`)
+		_, _ = w.WriteString(`">Download ` + ext + `]</a></` + tag + `>`)
 		return ast.WalkSkipChildren, nil
 	}
 
