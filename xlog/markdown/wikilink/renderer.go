@@ -6,6 +6,8 @@ import (
 	"io"
 	"path/filepath"
 	"sync"
+	"slices"
+	"strings"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/renderer"
@@ -91,31 +93,71 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 	}
 
 	img := resolveAsImage(n)
-	if !img {
-		r.hasDest.Store(n, struct{}{})
-		_, _ = w.WriteString(`<a rel="noopener noreferrer" referrerpolicy="no-referrer" href="`)
+	if img {
+		_, _ = w.WriteString(`<img src="`)
 		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
-		_, _ = w.WriteString(`"><span class="link-text">`)
-		return ast.WalkContinue, nil
+		// The label portion of the link becomes the alt text
+		// only if it isn't the same as the target.
+		// This way, [[foo.jpg]] does not become alt="foo.jpg",
+		// but [[foo.jpg|bar]] does become alt="bar".
+		if n.ChildCount() == 1 {
+			label := nodeText(src, n.FirstChild())
+			if !bytes.Equal(label, n.Target) {
+				_, _ = w.WriteString(`" alt="`)
+				_, _ = w.Write(util.EscapeHTML(label))
+				_, _ = w.WriteString(`" title="`)
+				_, _ = w.Write(util.EscapeHTML(label))
+			}
+		}
+		_, _ = w.WriteString(`">`)
+		return ast.WalkSkipChildren, nil
 	}
 
-	_, _ = w.WriteString(`<img src="`)
-	_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
-	// The label portion of the link becomes the alt text
-	// only if it isn't the same as the target.
-	// This way, [[foo.jpg]] does not become alt="foo.jpg",
-	// but [[foo.jpg|bar]] does become alt="bar".
-	if n.ChildCount() == 1 {
-		label := nodeText(src, n.FirstChild())
-		if !bytes.Equal(label, n.Target) {
-			_, _ = w.WriteString(`" alt="`)
-			_, _ = w.Write(util.EscapeHTML(label))
-			_, _ = w.WriteString(`" title="`)
-			_, _ = w.Write(util.EscapeHTML(label))
+	vid := resolveAsVideo(n)
+	if vid {
+		ext := filepath.Ext(string(n.Target))
+		ext = ext[1:]
+		_, _ = w.WriteString(`<video controls width="300"><source type="video/` + ext + `" src="`)
+		_, _ = w.Write(util.URLEscape(dest, true))
+		_, _ = w.WriteString(`">`)
+		if n.ChildCount() == 1 {
+			label := nodeText(src, n.FirstChild())
+			if !bytes.Equal(label, n.Target) {
+				_, _ = w.Write(util.EscapeHTML(label))
+				_, _ = w.WriteString(" ")
+			}
 		}
+		_, _ = w.WriteString(`<a href="`)
+		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
+		_, _ = w.WriteString(`">Download the ` + ext + ` video</a></video>`)
+		return ast.WalkSkipChildren, nil
 	}
-	_, _ = w.WriteString(`">`)
-	return ast.WalkSkipChildren, nil
+
+	aud := resolveAsAudio(n)
+	if aud {
+		ext := filepath.Ext(string(n.Target))
+		ext = ext[1:]
+		_, _ = w.WriteString(`<audio controls><source type="audio/` + ext + `" src="`)
+		_, _ = w.Write(util.URLEscape(dest, true))
+		_, _ = w.WriteString(`">`)
+		if n.ChildCount() == 1 {
+			label := nodeText(src, n.FirstChild())
+			if !bytes.Equal(label, n.Target) {
+				_, _ = w.Write(util.EscapeHTML(label))
+				_, _ = w.WriteString(" ")
+			}
+		}
+		_, _ = w.WriteString(`<a href="`)
+		_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
+		_, _ = w.WriteString(`">Download the ` + ext + ` audio</a></audio>`)
+		return ast.WalkSkipChildren, nil
+	}
+
+	r.hasDest.Store(n, struct{}{})
+	_, _ = w.WriteString(`<a rel="noopener noreferrer" referrerpolicy="no-referrer" href="`)
+	_, _ = w.Write(util.URLEscape(dest, true /* resolve references */))
+	_, _ = w.WriteString(`"><span class="link-text">`)
+	return ast.WalkContinue, nil
 }
 
 func (r *Renderer) exit(w util.BufWriter, n *Node) {
@@ -124,21 +166,28 @@ func (r *Renderer) exit(w util.BufWriter, n *Node) {
 	}
 }
 
-// returns true if the wikilink should be resolved to an image node
-func resolveAsImage(n *Node) bool {
+// returns true if the wikilink should be resolved to an image/video/audio node
+func resolveAsObject(n *Node, filetypes []string) bool {
 	if !n.Embed {
 		return false
 	}
 
 	filename := string(n.Target)
-	switch ext := filepath.Ext(filename); ext {
-	// Common image file types taken from
-	// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
-	case ".apng", ".avif", ".gif", ".jpg", ".jpeg", ".jfif", ".pjpeg", ".pjp", ".png", ".svg", ".webp":
+	ext := strings.ToLower(filepath.Ext(filename))
+	if slices.Contains(filetypes, ext) {
 		return true
-	default:
-		return false
 	}
+	return false
+}
+// returns true if the wikilink should be resolved to an image node
+func resolveAsImage(n *Node) bool {
+	return resolveAsObject(n, []string{".apng", ".avif", ".gif", ".jpg", ".jpeg", ".jfif", ".pjpeg", ".pjp", ".png", ".svg", ".webp"})
+}
+func resolveAsVideo(n *Node) bool {
+	return resolveAsObject(n, []string{".webm", ".mp4", ".mkv", ".ogv", ".ogg"})
+}
+func resolveAsAudio(n *Node) bool {
+	return resolveAsObject(n, []string{".mp3", ".flac", ".wav", "m4a", ".oga", ".ogg"})
 }
 
 func nodeText(src []byte, n ast.Node) []byte {
