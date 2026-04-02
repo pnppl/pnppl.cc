@@ -2,7 +2,7 @@ rm -rf site/public/ &&
 rm -rf site/+/ &&
 set pwd (pwd) &&
 minify xlog/public/style.css |
-sed -z 's/[\n\t]//g' >> xlog/public/style-min.css &&
+sed -z 's/[\n\t]//g' > xlog/public/style-min.css &&
 cd xlog/cmd/xlog &&
 go run xlog.go -source $pwd/site/txt -build $pwd/site -sitename pnppl.cc -rss.domain pnppl.cc -sitemap.domain pnppl.cc -og.domain pnppl.cc &&
 cd $pwd &&
