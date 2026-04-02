@@ -12,7 +12,7 @@ type PageDelete struct {
 	page Page
 }
 
-func (PageDelete) Icon() string { return "fa-solid fa-trash" }
+func (PageDelete) Icon() string { return "" }
 func (PageDelete) Name() string { return "Delete" }
 func (f PageDelete) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

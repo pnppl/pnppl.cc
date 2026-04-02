@@ -14,7 +14,7 @@ type PageRename struct {
 	page Page
 }
 
-func (PageRename) Icon() string { return "fa-solid fa-i-cursor" }
+func (PageRename) Icon() string { return "" }
 func (PageRename) Name() string { return "Rename" }
 func (f PageRename) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

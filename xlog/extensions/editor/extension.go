@@ -88,7 +88,7 @@ type editButton struct {
 	page xlog.Page
 }
 
-func (editButton) Icon() string { return "fa-solid fa-pen" }
+func (editButton) Icon() string { return "" }
 func (editButton) Name() string { return "Edit" }
 func (e editButton) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

@@ -51,7 +51,7 @@ func recentHandler(r Request) Output {
 
 type links struct{}
 
-func (l links) Icon() string { return "fa-solid fa-clock-rotate-left" }
+func (l links) Icon() string { return "" }
 func (l links) Name() string { return "Recent" }
 func (l links) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

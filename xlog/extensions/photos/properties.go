@@ -40,7 +40,7 @@ func properties(p xlog.Page) []xlog.Property {
 	t := photo.Time
 	if !t.IsZero() {
 		props = append(props, Property{
-			IconVal: "fa-regular fa-calendar",
+			IconVal: "",
 			NameVal: "capture time",
 			Val:     fmt.Sprintf("%s %d %s %d", t.Weekday(), t.Day(), t.Month(), t.Year()),
 		})
@@ -48,7 +48,7 @@ func properties(p xlog.Page) []xlog.Property {
 
 	if m, err := e.Get(exif.Make); err == nil {
 		props = append(props, Property{
-			IconVal: "fa-solid fa-camera-retro",
+			IconVal: "",
 			NameVal: "camera make",
 			Val:     str(m),
 		})
@@ -56,7 +56,7 @@ func properties(p xlog.Page) []xlog.Property {
 
 	if c, err := e.Get(exif.Model); err == nil {
 		props = append(props, Property{
-			IconVal: "fa-solid fa-camera-retro",
+			IconVal: "",
 			NameVal: "camera model",
 			Val:     str(c),
 		})
@@ -64,7 +64,7 @@ func properties(p xlog.Page) []xlog.Property {
 
 	if m, err := e.Get(exif.LensMake); err == nil {
 		props = append(props, Property{
-			IconVal: "fa-solid fa-camera-retro",
+			IconVal: "",
 			NameVal: "lens make",
 			Val:     str(m),
 		})
@@ -72,7 +72,7 @@ func properties(p xlog.Page) []xlog.Property {
 
 	if m, err := e.Get(exif.LensModel); err == nil {
 		props = append(props, Property{
-			IconVal: "fa-solid fa-camera-retro",
+			IconVal: "",
 			NameVal: "lens model",
 			Val:     str(m),
 		})
@@ -82,7 +82,7 @@ func properties(p xlog.Page) []xlog.Property {
 		nom, denom, err := focal.Rat2(0)
 		if err == nil {
 			props = append(props, Property{
-				IconVal: "fa-solid fa-camera-retro",
+				IconVal: "",
 				NameVal: "focal Length",
 				Val:     fmt.Sprintf("%dmm", nom/denom),
 			})
@@ -93,7 +93,7 @@ func properties(p xlog.Page) []xlog.Property {
 		nom, denom, err := aperture.Rat2(0)
 		if err == nil {
 			props = append(props, Property{
-				IconVal: "fa-solid fa-camera-retro",
+				IconVal: "",
 				NameVal: "aperture",
 				Val:     fmt.Sprintf("f/%.1f", float32(nom)/float32(denom)),
 			})
@@ -102,7 +102,7 @@ func properties(p xlog.Page) []xlog.Property {
 
 	if iso, err := e.Get(exif.ISOSpeedRatings); err == nil {
 		props = append(props, Property{
-			IconVal: "fa-solid fa-camera-retro",
+			IconVal: "",
 			NameVal: "ISO",
 			Val:     iso.String(),
 		})
@@ -112,7 +112,7 @@ func properties(p xlog.Page) []xlog.Property {
 		snom, sdenom, err := shutter.Rat2(0)
 		if err == nil {
 			props = append(props, Property{
-				IconVal: "fa-solid fa-camera-retro",
+				IconVal: "",
 				NameVal: "shutter speed",
 				Val:     fmt.Sprintf("1/%.0fs", math.Pow(2, float64(snom)/float64(sdenom))),
 			})

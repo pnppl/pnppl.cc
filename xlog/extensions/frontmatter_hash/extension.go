@@ -26,7 +26,7 @@ type MetaProperty struct {
 }
 
 func (m MetaProperty) Name() string { return m.NameVal }
-func (m MetaProperty) Icon() string { return "fa-solid fa-table-list" }
+func (m MetaProperty) Icon() string { return "" }
 func (m MetaProperty) Value() any   { return m.Val }
 
 func MetaProperties(p xlog.Page) []xlog.Property {

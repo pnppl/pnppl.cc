@@ -224,7 +224,7 @@ func links(Page) []Command {
 
 type link struct{}
 
-func (l link) Icon() string { return "fa-solid fa-tags" }
+func (l link) Icon() string { return "" }
 func (l link) Name() string { return "Hashtags" }
 func (l link) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

@@ -14,7 +14,7 @@ func links(xlog.Page) []xlog.Command {
 
 type Calendar struct{}
 
-func (Calendar) Icon() string { return "fa-regular fa-calendar-days" }
+func (Calendar) Icon() string { return "" }
 func (Calendar) Name() string { return "Calendar" }
 func (Calendar) Label() map[string]string {
 	return map[string]string {

@@ -39,7 +39,7 @@ func (RSS) Init() {
 
 type rssLink struct{}
 
-func (rssLink) Icon() string { return "fa-solid fa-rss" }
+func (rssLink) Icon() string { return "" }
 func (rssLink) Name() string { return "RSS" }
 func (rssLink) Attrs() map[template.HTMLAttr]any {
 	return map[template.HTMLAttr]any{

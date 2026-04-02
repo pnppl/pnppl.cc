@@ -42,7 +42,7 @@ type starredPage struct {
 
 func (s starredPage) Icon() string {
 	if e := Emoji(s); e == "" {
-		return "fa-solid fa-star"
+		return ""
 	} else {
 		return e
 	}
@@ -86,9 +86,9 @@ type action struct {
 
 func (l action) Icon() string {
 	if l.starred {
-		return "fa-solid fa-star"
+		return ""
 	} else {
-		return "fa-regular fa-star"
+		return ""
 	}
 }
 func (l action) Name() string {
