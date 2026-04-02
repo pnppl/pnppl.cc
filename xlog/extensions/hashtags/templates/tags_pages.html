@@ -1,9 +1,9 @@
-<aside class="menu" dir="auto">
-  <div class="menu-list" dir="auto">
+<aside class="menu">
+  <div class="menu-list">
   <ul>
     {{- range . -}}
 <li>
-    <a href="/{{.Name}}" dir="auto">
+    <a href="/{{.Name}}">
       <span class="is-block">
         {{ $props := properties . -}}
         {{ with $props.title -}}
@@ -15,7 +15,7 @@
 <br>
       </span>
 {{ $t := .ModTime -}}
-<time class="stamp" dir="auto" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)" $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
+<time class="stamp" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)" $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
     </a>
 </li>
     {{- end }}

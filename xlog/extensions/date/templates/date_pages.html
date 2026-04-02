@@ -1,10 +1,10 @@
-<aside class="menu" dir="auto">
-  <div class="menu-list" dir="auto">
+<aside class="menu">
+  <div class="menu-list">
   	{{ $page := printf "%s" .page.Name }}
 <ul>
     {{- range .pages -}}
 <li>
-    <a href="/{{.Name}}#{{$page}}" dir="auto">
+    <a href="/{{.Name}}#{{$page}}">
 {{/*
       {{ with banner . }}
       <img src="{{.}}" class="mr-3 is-pulled-left" style="display: block; border-radius: 0.5em; object-fit: cover; object-position: 0 50%; max-height: 3em; width: 6em;"/>
@@ -21,7 +21,7 @@
 <br>
       </span>
 {{ $t := .ModTime }}
-<time class="stamp" dir="auto" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)" $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
+<time class="stamp" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)" $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
     </a>
 </li>
     {{- end -}}

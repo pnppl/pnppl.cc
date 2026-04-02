@@ -6,9 +6,7 @@ fish set_mtimes.fish &&
 echo '
 .*
 w10hosting_default/
-!*.*
 \!*.*
-.cache/
 xlog/public/style-min.css
 site/.pagefind/
 site/+/

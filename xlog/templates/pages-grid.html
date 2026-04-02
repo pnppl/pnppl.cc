@@ -1,9 +1,9 @@
-<aside class="grid is-col-min-10" dir="auto">
+<aside class="grid is-col-min-10">
 
   {{- range . -}}
-  <div class="cell" dir="auto">
+  <div class="cell">
 
-    <a href="/{{.Name}}" dir="auto">
+    <a href="/{{.Name}}">
       {{ with banner . }}
       <img src="{{.}}" class="mb-3 is-block" style="border-radius: 0.5em; object-fit: cover; object-position: 0 50%; height: 8em; width: 100%;"/>
       {{ else }}
@@ -19,7 +19,7 @@
         {{ base .Name }}
         {{ end }}
       </span>
-      <time class="stamp" dir="auto">{{ ago .ModTime }}</time>
+      <time class="stamp">{{ ago .ModTime }}</time>
     </a>
 
   </div>
