@@ -129,6 +129,12 @@ https://github.com/litehtml/litebrowser-linux
 Mostly there but definitely janky. Navbar is offset to the right, annotations render but float way above text, button text off-center. Still, an impressive showing, and I'd be tempted to try to improve compat if it didn't use that horrid new UI thing where there's no titlebar (gtk4?).
 
 
+# MicroWeb (86Box)
+https://github.com/jhhoward/MicroWeb
+
+Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`). I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
+
+
 # Modern Chromium browsers
 Ought to work fine but I don't check very often.
 
