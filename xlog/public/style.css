@@ -692,9 +692,9 @@ a.navbar-item.active:active {
 /*	padding-left: 0.75em; */
 /*	padding-right: 0.75em; */
 /*} */
-.pb-5 {
-	padding-bottom: 1.5em;
-}
+/*.pb-5 { */
+/*	padding-bottom: 1.5em; */
+/*} */
 /*.is-size-7 { */
 /*	font-size: 0.75em; */
 /*} */
@@ -1021,8 +1021,9 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 }
 #email {
 	float: left;
+	margin-bottom: 1em;
 }
-#email-wrapper {
+#email-badge-wrapper {
 	margin-bottom: 0;
 }
 .footer-button {
@@ -1371,7 +1372,7 @@ pre.chroma {
 		margin-bottom: 1em;
 		width: 100%;
 	}
-	#email-wrapper {
+	#email-badge-wrapper {
 		margin-bottom: 1em;
 		width: min-content;
 	}
