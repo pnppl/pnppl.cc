@@ -57,7 +57,7 @@ Absolute clusterfuck until you disable CSS globally in the preferences ("Advance
 # Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
-Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Some elements run off the right side of the screen.
+Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Some elements run off the right side of the screen. Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
 
 
 # Internet Explorer #
@@ -107,6 +107,26 @@ Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md
 Technically it works well; all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
 
 This is tangential, but this version of the browser has a goddamn hamburger menu instead of a menu bar. I am irrationally annoyed by this. I think 3.09 might have a proper interface. Building from source seems like a pain in the ass though.
+
+
+# Kristall v0.4 (Linux)
+https://kristall.random-projects.net/
+
+Seems to work fine. Text only. Nice browser.
+
+
+# Chawan 0.3.3 (Linux)
+https://chawan.net/
+
+Not too shabby. Buttons are kinda large and imposing, list markers aren't quite aligned, some z-index issues.
+
+Very intuitive for a TUI browser. Good mouse support.
+
+
+# Litebrowser (Linux)
+https://github.com/litehtml/litebrowser-linux
+
+Mostly there but definitely janky. Navbar is offset to the right, annotations render but float way above text, button text off-center. Still, an impressive showing, and I'd be tempted to try to improve compat if it didn't use that horrid new UI thing where there's no titlebar (gtk4?).
 
 
 # Modern Chromium browsers

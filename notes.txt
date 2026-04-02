@@ -20,7 +20,7 @@ todo:
 		- tried this quickly and they didn't behave as expected, scoping issue
 	- x might be worth splitting some page-specific styles out to their own sheets, maybe print, search
 		- or ask support to turn on gzip for css...
-	- besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
+	- x besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it?
