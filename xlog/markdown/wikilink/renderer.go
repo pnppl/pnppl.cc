@@ -116,9 +116,10 @@ func (r *Renderer) enter(w util.BufWriter, n *Node, src []byte) (ast.WalkStatus,
 	vid := resolveAsVideo(n)
 	aud := resolveAsAudio(n)
 	if vid || aud {
-		tag := "video"
-		if aud {
-			tag = "audio"
+		tag := "audio"
+		// .ogg could be either one; video tag can play audio (but not vice-versa?)
+		if vid {
+			tag = "video"
 		}
 		ext := filepath.Ext(string(n.Target))
 		ext = ext[1:]
