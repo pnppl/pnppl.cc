@@ -17,8 +17,10 @@ todo:
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
 		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
 	- switch to a preprocessor so we can eliminate variables easily
-	- might be worth splitting some page-specific styles out to their own sheets, maybe print, search
+		- tried this quickly and they didn't behave as expected, scoping issue
+	- x might be worth splitting some page-specific styles out to their own sheets, maybe print, search
 		- or ask support to turn on gzip for css...
+	- besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it?
