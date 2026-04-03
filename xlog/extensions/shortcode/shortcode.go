@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"html/template"
-
+	"strings"
 	. "github.com/emad-elsaid/xlog"
 )
 
@@ -28,7 +28,12 @@ var shortcodes = map[string]ShortCode{
 //	"info":    {Render: func(c Markdown) template.HTML { return container("is-info", c) }},
 //	"success": {Render: func(c Markdown) template.HTML { return container("is-success", c) }},
 //	"warning": {Render: func(c Markdown) template.HTML { return container("is-warning", c) }},
-	"!":   {Render: func(c Markdown) template.HTML { return template.HTML(fmt.Sprintf(`<article class="message %s"><div class="message-body"><b><span class="is-hidden">!!</span>%s</b></div></article>`, "is-danger", render(c))) }},
+	"!":   {Render: func(c Markdown) template.HTML {
+		text := render(c)
+		text = strings.TrimPrefix(text, "<p>")
+		text = strings.TrimSuffix(text, "</p>\n")
+		excl := `<span class="is-hidden">!!<br><br></span>`
+		return template.HTML(fmt.Sprintf(`<div class="message is-danger"><div class="message-body"><b>%s%s</b></div></div>`, excl, text)) }},
 //	"!!":   {Render: func(c Markdown) template.HTML { return container("is-danger", c) }},
 }
 

@@ -273,11 +273,25 @@ video {
 	 Components
 	 ========================================================================== */
 /* Block spacing ----------------------------------------------------------- */
-.message:not(:last-child),
-.table:not(:last-child),
-.content:not(:last-child),
-.buttons:not(:last-child) {
+/*.message:not(:last-child), */
+/*.table:not(:last-child), */
+/*.content:not(:last-child), */
+/*.buttons:not(:last-child) { */
+/*	margin-bottom: 0.5em; */
+/*} */
+
+.message,
+.table,
+.content,
+.buttons, {
 	margin-bottom: 0.5em;
+}
+
+.message:last-child,
+.table:last-child,
+.content:last-child,
+.buttons:last-child {
+	margin-bottom: 0;
 }
 
 /* Button ------------------------------------------------------------------ */
@@ -286,11 +300,12 @@ video {
 	align-items: center;
 	appearance: none;
 	cursor: pointer;
-	display: inline-flex;
+	display: inline-block;
+	 display: inline-flex;
 	font-size: 1em;
 	font-weight: 500;
 	justify-content: center;
-	line-height: 1.5;
+/*	line-height: 1.5; */
 	padding: calc(0.5em - 1px) calc(1em - 1px);
 	position: relative;
 	user-select: none;
@@ -321,30 +336,48 @@ video {
 .content li + li {
 	margin-top: 0.25em;
 }
-.content p:not(:last-child),
-.content ol:not(:last-child),
-.content ul:not(:last-child),
-.content blockquote:not(:last-child),
-.content pre:not(:last-child),
-.content table:not(:last-child) {
+
+/*.content p:not(:last-child), */
+/*.content ol:not(:last-child), */
+/*.content ul:not(:last-child), */
+/*.content blockquote:not(:last-child), */
+/*.content pre:not(:last-child), */
+/*.content table:not(:last-child) { */
+/*	margin-bottom: 1em; */
+/*} */
+
+
+.content p,
+.content ol,
+.content ul,
+.content pre,
+.content table {
 	margin-bottom: 1em;
+}
+
+.content p:last-child,
+.content ol:last-child,
+.content ul:last-child,
+.content pre:last-child,
+.content table:last-child {
+	margin-bottom: 0;
+}
+
+.content h1 {
+	margin-top: 1.75em;
+}
+.content h2 {
+	margin-top: 1.5em;
+}
+.content h1:first-child,
+.content h2:first-child {
+	margin-top: 0;
 }
 .content h1,
 .content h2 {
 	color: var(--text-strong);
 	line-height: 1.125;
-}
-.content h1 {
 	margin-bottom: 0.5em;
-}
-.content h1:not(:first-child) {
-	margin-top: 1.75em;
-}
-.content h2 {
-	margin-bottom: 0.5em;
-}
-.content h2:not(:first-child) {
-	margin-top: 1.5em;
 }
 .content blockquote {
 	background-color: var(--bg);
@@ -418,7 +451,6 @@ div.content {
 /*	display: inline-flex; */
 /*	flex-shrink: 0; */
 /*	justify-content: center; */
-/*	height: 1.5em; */
 	height: 1.5em;
 }
 /*.icon.is-small { */
@@ -429,7 +461,7 @@ div.content {
 	color: inherit;
 	display: inline-flex;
 	gap: 0.25em;
-	line-height: 1.5em;
+/*	line-height: 1.5em; */
 }
 div.icon-text {
 	display: flex;
@@ -456,7 +488,7 @@ div.icon-text {
 	font-size: 0.75em;
 	height: 2em;
 	justify-content: center;
-	line-height: 1.5;
+/*	line-height: 1.5; */
 	padding-left: 0.75em;
 	padding-right: 0.75em;
 	white-space: nowrap;
@@ -512,7 +544,7 @@ a.tag:active {
 	padding-left: 0.75em;
 }
 
-/* Message ----------------------------------------------------------------- */
+/* Message (shortcode contents) --------------------------------------------- */
 .message {
 	--msg-h: 221;
 	--msg-s: 14%;
@@ -527,8 +559,8 @@ a.tag:active {
 .message strong {
 	color: currentColor;
 }
-.message a:not(.button):not(.tag):not(.dropdown-item) {
-	color: currentColor;
+.message .message-body a {
+/*	color: currentColor; */
 	text-decoration: underline;
 }
 .message.is-danger {
@@ -538,6 +570,7 @@ a.tag:active {
 	--msg-color-l: var(--loud-l);
 	--msg-header-bg-l: 70%;
 	--msg-header-color-l: 5%;
+	font-weight: bold;
 }
 .message-body {
 	background-color: hsl(var(--msg-h), var(--msg-s), var(--bg-l));
@@ -570,7 +603,7 @@ a.tag:active {
 	flex-grow: 1;
 	vertical-align: middle;
 	justify-content: center;
-	line-height: 1.5;
+/*	line-height: 1.5; */
 	padding: 0.5em 0.75em;
 	position: relative;
 	white-space: nowrap;
@@ -656,7 +689,7 @@ a.navbar-item.active:active {
 /*	margin-right: var(--column-gap); */
 /*	margin-top: var(--column-gap); */
 /*	margin: -0.75em; */
-	margin-bottom: 0.75em;
+	margin-bottom: 0.5em;
 /*} */
 /*.columns.is-mobile { */
 	display: flex;
@@ -931,7 +964,7 @@ a.hover-button {
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
 	background-color: silver;
 	float: right;
-	width: 33%;
+	max-width: 33%;
 	padding: 0.25em;
 	margin: 0 0 0.25em 1em;
 }
@@ -941,8 +974,6 @@ a.hover-button {
 #table-of-contents-list ol {
 	list-style: decimal;
 	margin-top: 0.25em;
-	/* compat: 2em room for list markers; var() restores 0.25em in modern browsers */
-	padding-left: 2em;
 	padding-left: 0.25em;
 }
 #table-of-contents-list ol a {
@@ -950,12 +981,14 @@ a.hover-button {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	color: var(--text);
 	border-radius: 0;
-	width: auto;
 }
 #table-of-contents-list a {
 	color: var(--text);
 }
-
+#table-of-contents-list ol,
+#table-of-contents-list .menu-label {
+	margin-bottom: 0;
+}
 /* ==========================================================================
 	 Site Chrome (badge, footer, view-transitions)
 	 ========================================================================== */
@@ -1372,7 +1405,7 @@ pre.chroma {
 		float: none;
 		margin-left: 0;
 		margin-bottom: 1em;
-		width: 100%;
+		max-width: 100%;
 	}
 	#email-wrapper {
 		margin-bottom: 1em;

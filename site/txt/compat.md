@@ -98,7 +98,9 @@ Pretty... damn bad. Issues with positioning and button sizing/text alignment. St
 
 
 # Dillo, Dillo+
-CSS rendering is mostly like Firefox 4. Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`. The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.)
+Pretty good rendering, but TOC gets messed up at small window sizes, and it doesn't seem to want to display anything in bold.
+
+Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`. The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.)
 
 
 # Netsurf 3.11 (Flatpak)
