@@ -586,6 +586,7 @@ a.tag:active {
 }
 .navbar-li {
 	display: inline;
+	display: inline-block;
 	display: flex;
 	flex-grow: 1;
 }
@@ -670,7 +671,7 @@ a.navbar-item.active:active {
 .container {
 	margin: 0 auto;
 	position: relative;
-	width: 100%;
+/*	width: 100%; */
 	padding-left: 0.75em;
 	padding-right: 0.75em;
 }

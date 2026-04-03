@@ -57,7 +57,7 @@ Absolute clusterfuck until you disable CSS globally in the preferences ("Advance
 # Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
-Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Some elements run off the right side of the screen. Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
+Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
 
 
 # Internet Explorer #
@@ -98,9 +98,7 @@ Pretty... damn bad. Issues with positioning and button sizing/text alignment. St
 
 
 # Dillo, Dillo+
-CSS rendering is mostly like Firefox 4, but it has some of the same issues as Netscape 7.2, with content not properly fitting to the width of the browser.
-
-Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`.) The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.
+CSS rendering is mostly like Firefox 4. Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`. The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.)
 
 
 # Netsurf 3.11 (Flatpak)
@@ -132,7 +130,7 @@ Mostly there but definitely janky. Navbar is offset to the right, annotations re
 # MicroWeb (86Box)
 https://github.com/jhhoward/MicroWeb
 
-Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`). I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
+Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`) when encoded as an HTML entity. I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
 
 
 # Modern Chromium browsers
