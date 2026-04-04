@@ -753,9 +753,9 @@ a.navbar-item.active:active {
 	text-decoration: underline 2px;
 	text-decoration-skip-ink: none;
 }
-*:hover > .hover-button {
-	display: inline;
-}
+/**:hover > .hover-button { */
+/*	display: inline; */
+/*} */
 
 /* ==========================================================================
 	 View (article content)
@@ -794,21 +794,30 @@ a.navbar-item.active:active {
 .view h2 {
 	counter-reset: h3;
 }
-.view h1:before,
-.view h2:before {
+a.head-sect,
+a.to-toc {
+	font-style: normal;
+	color: lightblue;
+}
+a.head-sect:visited,
+a.to-toc:visited {
+	color: violet;
+}
+.head-sect:after {
 	color: hsl(221, 14%, 71%);
+	padding-left: 2px;
 }
-.view h1:before {
+h1 .head-sect:after {
 	counter-increment: h1;
-	content: counter(h1) ". ";
+	content: counter(h1) ".";
 }
-.view h2:before {
+h2 .head-sect:after {
 	counter-increment: h2;
-	content: counter(h1) "." counter(h2) ". ";
+	content: counter(h1) "." counter(h2) ".";
 }
-h1.hashtag-name-noinc:before {
-	content: "";
-}
+/*h1.hashtag-name-noinc:before { */
+/*	content: ""; */
+/*} */
 
 /* Link decorators */
 /* if i don't do this my annotations are stubbornly annotated */
@@ -924,8 +933,8 @@ a.footnote-ref:target {
 	 ========================================================================== */
 a.navbar-item,
 a.button,
-a.button.is-small,
-a.hover-button {
+a.button.is-small {
+/*a.hover-button { */
 	text-decoration: none;
 	border: 2px solid;
 	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
@@ -936,20 +945,20 @@ a.hover-button {
 }
 a.navbar-item:active,
 a.button:active,
-a.hover-button:active,
+/*a.hover-button:active, */
 a.navbar-item.active {
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 }
-a.navbar-item:visited,
-a.hover-button,
-a.hover-button:visited {
+a.navbar-item:visited {
+/*a.hover-button, */
+/*a.hover-button:visited { */
 	color: black;
 }
-a.hover-button {
-	font-style: normal;
-	padding: 0 5px 2px 5px;
-	font-weight: bold;
-}
+/*a.hover-button { */
+/*	font-style: normal; */
+/*	padding: 0 5px 2px 5px; */
+/*	font-weight: bold; */
+/*} */
 .menu-label {
 	background-color: purple;
 	padding: 2px 2em;
@@ -1386,8 +1395,8 @@ pre.chroma {
 	/* inconsistent button behavior due to touch - canceled long-press sets hover state */
 	/* with this fix it behaves like holding Lmouse then dragging away before release */
 	a.navbar-item:hover,
-	a.button:hover,
-	a.hover-button:hover {
+	a.button:hover {
+/*	a.hover-button:hover { */
 		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
 	}
 	#badge:hover:after {

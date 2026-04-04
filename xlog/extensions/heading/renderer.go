@@ -38,11 +38,16 @@ func (s *headingRenderer) render(w util.BufWriter, source []byte, node ast.Node,
 			html.RenderAttributes(w, node, html.HeadingAttributeFilter)
 		}
 		_ = w.WriteByte('>')
+		if id, ok := node.AttributeString("id"); ok {
+			w.WriteString(fmt.Sprintf(`<a name="%s" class="head-sect" href="#%s">&sect;</a> `, id, id))
+		}
 	} else {
 
-		if id, ok := node.AttributeString("id"); ok {
-			w.WriteString(fmt.Sprintf(` <a class="hover-button is-hidden" href="#TOC">&not;</a> <a name="%s" class="hover-button is-hidden" href="#%s">&sect;</a>`, id, id))
-		}
+//		if id, ok := node.AttributeString("id"); ok {
+//			w.WriteString(fmt.Sprintf(` <a class="hover-button is-hidden" href="#TOC">&not;</a> <a name="%s" class="hover-button is-hidden" href="#%s">&sect;</a>`, id, id))
+//		}
+
+		w.WriteString(fmt.Sprintf(` <a class="to-toc" href="#TOC">^</a>`))
 
 		_, _ = w.WriteString("</h")
 		_ = w.WriteByte("0123456"[n.Level])
