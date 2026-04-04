@@ -38,12 +38,15 @@ zip -r -FS site/img/1bitday/!1bitday.zip site/img/1bitday/ -i \*.gif
 set imagetypes '*.gif' '*.jpg' '*.jpeg' '*.png'
 zip -r -FS -0 site/img/comics/!comics.zip site/img/comics/ -i $imagetypes  &&
 zip -r -FS -0 site/img/photos/!photos.zip site/img/photos/ -i $imagetypes &&
-fish epub/epub.fish &&
 fish html.fish &&
+for zip in site/**/*.zip
+	zip $zip readme.txt
+end &&
+fish epub/epub.fish &&
 # optimize
 caesiumclt -R --lossless --same-folder-as-input site/+/thumb/ &&
 ect -9 --strict -recurse site/+/thumb/ &&
-for file in **/*.{zip,epub}
+for file in site/**/*.{zip,epub}
 	ect -9 --strict -zip $file
 end &&
 fish map/sitemap.fish &&
