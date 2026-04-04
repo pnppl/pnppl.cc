@@ -54,6 +54,10 @@ https://winworldpc.com/product/netscape-navigator/40x
 
 Absolute clusterfuck until you disable CSS globally in the preferences ("Advanced" section), then it works fine.
 
+My curiosity got the better of me and I started poking at this, thinking it might be tractable now that Netscape 7.2 looks ok. Nope. It looks slightly better, but it's still a lost cause.
+
+There are some very odd alignment and spacing issues, but the most offensive problem is the garish colors. It interprets "inherit" as neon green. I discovered you can defeat this with var(), eg: `color: var(--ns, inherit)`. But then I would still have to set it to plain `inherit` first for browsers that don't understand variables, so this is not satisfactory. There is no way I would ever get this to look even as good as the bare HTML. This is the definition of unsupportable.
+
 # Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 

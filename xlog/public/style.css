@@ -6,8 +6,8 @@
 	--main-l: 100%;
 	--bg-l: 94%;
 	--border-l: 86%;
-	--text-l: 29%;
-	--text-strong-l: 21%;
+	--text-l: 20%;
+	--text-strong-l: 10%;
 	--link-l: 58%;
 	--loud-l: 40%;
 	--hover-bg-l-delta: -5%;
@@ -51,10 +51,11 @@ input {
 	margin: 0;
 }
 html {
+/*	background-color: white; */
 	background-color: var(--main);
 	box-sizing: border-box;
 	font-size: 1em;
-	min-width: 300px;
+/*	min-width: 300px; */
 	overflow-x: hidden;
 	overflow-y: auto;
 	text-rendering: optimizeLegibility;
@@ -75,6 +76,7 @@ th {
 	padding: 0;
 }
 body {
+/*	color: #2E333D; */
 	color: var(--text);
 	font-size: 1em;
 	font-weight: 400;
@@ -635,7 +637,7 @@ a.tag:active {
 }
 /* buttons that lead to current page ("stuck down") */
 .navbar-item.active {
-	background-color: #e8e8e8;
+	background-color: #E8E8E8;
 }
 a.navbar-item.active:active {
 	background-color: silver;
@@ -719,7 +721,7 @@ a.navbar-item.active:active {
 	 Utilities
 	 ========================================================================== */
 /*.has-text-grey { */
-/*	color: #69748c; */
+/*	color: #69748C; */
 /*} */
 /*.is-clearfix:after { */
 /*	clear: both; */
@@ -937,7 +939,7 @@ a.button.is-small {
 /*a.hover-button { */
 	text-decoration: none;
 	border: 2px solid;
-	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
+	border-color: #F0F0F0 #0B0B0B #0B0B0B #F0F0F0;
 	background-color: silver;
 	color: black;
 	border-radius: 0;
@@ -947,7 +949,7 @@ a.navbar-item:active,
 a.button:active,
 /*a.hover-button:active, */
 a.navbar-item.active {
-	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+	border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 }
 a.navbar-item:visited {
 /*a.hover-button, */
@@ -974,7 +976,7 @@ a.navbar-item:visited {
 }
 #table-of-contents-list {
 	border: 2px solid;
-	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
+	border-color: #F0F0F0 #0B0B0B #0B0B0B #F0F0F0;
 	background-color: silver;
 	float: right;
 	max-width: 33%;
@@ -991,7 +993,7 @@ a.navbar-item:visited {
 }
 #table-of-contents-list ol a {
 	border: 2px solid;
-	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+	border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 /*	color: var(--text); */
 	border-radius: 0;
 }
@@ -1050,14 +1052,14 @@ body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	left: 0;
 	right: 0;
 	border: 2px solid;
-	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+	border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 	pointer-events: none;
 }
 #RSS {
 	color: white;
 	text-shadow: black 1px 1px;
-	background-color: #ec8032;
-	border-color: #ec8032 #0b0b0b #0b0b0b #ec8032;
+	background-color: #EC8032;
+	border-color: #EC8032 #0B0B0B #0B0B0B #EC8032;
 	border-width: 0 1px 1px 0;
 	border-style: solid;
 	padding: 0px 5px;
@@ -1097,7 +1099,7 @@ time.stamp {
 	display: block;
 	clear: both;
 	font-size: 0.75em;
-	color: #69748c;
+	color: #69748C;
 }
 #article {
 	view-transition-name: page-content;
@@ -1130,7 +1132,7 @@ time.stamp {
 	 Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
 	 ========================================================================== */
 .chroma {
-	color: #1a1a1a;
+	color: #1A1A1A;
 	background-color: white;
 	tab-size: 4;
 }
@@ -1162,7 +1164,7 @@ pre.chroma {
 }
 /* zebra stripes */
 .line:nth-child(even) {
-	background-color: #d4f5d4;
+	background-color: #D4F5D4;
 }
 /* LineLink */
 .chroma .lnlinks {
@@ -1186,7 +1188,7 @@ pre.chroma {
 }
 /* LineHighlight */
 .chroma .hl {
-	background-color: #b8e6b8;
+	background-color: #B8E6B8;
 }
 /* LineNumbers */
 .chroma .ln,
@@ -1205,7 +1207,7 @@ pre.chroma {
 /* KeywordDeclaration, KeywordType */
 .chroma .kd,
 .chroma .kt {
-	color: #0066cc;
+	color: #0066CC;
 	font-weight: bold;
 }
 /* Keyword, NameTag, OperatorWord */
@@ -1216,18 +1218,18 @@ pre.chroma {
 .chroma .kr,
 .chroma .nt,
 .chroma .ow {
-	color: #c41a7f;
+	color: #C41A7F;
 	font-weight: bold;
 }
 /* NameAttribute */
 .chroma .na {
-	color: #007a00;
+	color: #007A00;
 }
 /* NameClass, NameFunction */
 .chroma .nc,
 .chroma .nf,
 .chroma .fm {
-	color: #007a00;
+	color: #007A00;
 	font-weight: bold;
 }
 
@@ -1236,7 +1238,7 @@ pre.chroma {
 /* NameBuiltin */
 .chroma .nb,
 .chroma .bp {
-	color: #0066cc;
+	color: #0066CC;
 }
 
 /* NameVariable */
@@ -1261,7 +1263,7 @@ pre.chroma {
 .chroma .s1,
 .chroma .ss,
 .chroma .dl {
-	color: #c43e00;
+	color: #C43E00;
 }
 /* LiteralNumber */
 .chroma .m,
@@ -1271,11 +1273,11 @@ pre.chroma {
 .chroma .mi,
 .chroma .il,
 .chroma .mo {
-	color: #7b1fa2;
+	color: #7B1FA2;
 }
 /* Operator */
 .chroma .o {
-	color: #c41a7f;
+	color: #C41A7F;
 }
 /* Comment */
 .chroma .c,
@@ -1283,18 +1285,18 @@ pre.chroma {
 .chroma .cs,
 .chroma .cm,
 .chroma .ch {
-	color: #5c6370;
+	color: #5C6370;
 	font-style: italic;
 }
 /* CommentPreproc */
 .chroma .cp,
 .chroma .cpf {
-	color: #c41a7f;
+	color: #C41A7F;
 	font-style: italic;
 }
 /* GenericDeleted */
 .chroma .gd {
-	color: #b31d28;
+	color: #B31D28;
 }
 /* GenericEmph */
 .chroma .ge,
@@ -1311,12 +1313,12 @@ pre.chroma {
 
 /* GenericInserted */
 .chroma .gi {
-	color: #22863a;
+	color: #22863A;
 	font-weight: bold;
 }
 /* GenericOutput */
 .chroma .go {
-	color: #5c6370;
+	color: #5C6370;
 }
 
 /* ==========================================================================
@@ -1397,7 +1399,7 @@ pre.chroma {
 	a.navbar-item:hover,
 	a.button:hover {
 /*	a.hover-button:hover { */
-		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+		border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 	}
 	#badge:hover:after {
 		content: var(--badge-press, "");
@@ -1407,7 +1409,7 @@ pre.chroma {
 		left: 0;
 		right: 0;
 		border: 2px solid;
-		border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+		border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 		pointer-events: none;
 	}
 }
@@ -1465,15 +1467,15 @@ pre.chroma {
 	}
 	/* Dracula syntax theme */
 	.chroma {
-		color: #f8f8f2;
+		color: #F8F8F2;
 		background-color: #202020;
 	}
 	.chroma .hl {
-		background-color: #3d3f4a;
+		background-color: #3D3F4A;
 	}
 	.chroma .lnt,
 	.chroma .ln {
-		color: #7f7f7f;
+		color: #7F7F7F;
 	}
 	pre.chroma {
 		border-radius: 0.5em;
@@ -1490,7 +1492,7 @@ pre.chroma {
 	.chroma .nt,
 	.chroma .cp,
 	.chroma .cpf {
-		color: #ff79c6;
+		color: #FF79C6;
 	}
 	.chroma .kd,
 	.chroma .kt,
@@ -1502,13 +1504,13 @@ pre.chroma {
 	.chroma .vi,
 	.chroma .vm,
 	.chroma .nl {
-		color: #8be9fd;
+		color: #8BE9FD;
 	}
 	.chroma .na,
 	.chroma .nc,
 	.chroma .nf,
 	.chroma .fm {
-		color: #50fa7b;
+		color: #50FA7B;
 	}
 	.chroma .s,
 	.chroma .sa,
@@ -1524,7 +1526,7 @@ pre.chroma {
 	.chroma .sr,
 	.chroma .s1,
 	.chroma .ss {
-		color: #f1fa8c;
+		color: #F1FA8C;
 	}
 	.chroma .m,
 	.chroma .mb,
@@ -1533,23 +1535,23 @@ pre.chroma {
 	.chroma .mi,
 	.chroma .il,
 	.chroma .mo {
-		color: #bd93f9;
+		color: #BD93F9;
 	}
 	.chroma .c,
 	.chroma .ch,
 	.chroma .cm,
 	.chroma .c1,
 	.chroma .cs {
-		color: #6272a4;
+		color: #6272A4;
 	}
 	.chroma .gd {
-		color: #ff5555;
+		color: #FF5555;
 	}
 	.chroma .gi {
-		color: #50fa7b;
+		color: #50FA7B;
 	}
 	.chroma .go {
-		color: #44475a;
+		color: #44475A;
 	}
 	.line:nth-child(even) {
 		background-color: rgba(0, 0, 0, 0.20);
