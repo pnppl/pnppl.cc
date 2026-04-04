@@ -22,7 +22,7 @@
 	--code: hsl(348, 100%, var(--loud-l));
 
 	/* Constants */
-	--navbar-height: 2.75em;
+/*	--navbar-height: 2.75em; */
 /*	--column-gap: -0.75em; */
 }
 
@@ -494,8 +494,6 @@ div.icon-text {
 	white-space: nowrap;
 	position: relative;
 	top: -1px;
-}
-a.tag {
 	cursor: pointer;
 }
 a.tag:hover {
@@ -521,6 +519,7 @@ a.tag:active {
 	background-color: hsl(221, 14%, calc(var(--main-l) + var(--menu-item-bg-l-delta)));
 	border: none;
 	border-radius: 0.25em;
+	color: black;
 	color: var(--text);
 	display: block;
 	font-family: inherit;
@@ -552,9 +551,7 @@ a.tag:active {
 	--msg-color-l: var(--text-l);
 	--msg-header-bg-l: 21%;
 	--msg-header-color-l: 69%;
-	border-radius: 0.375em;
-	color: hsl(var(--msg-h), var(--msg-s), var(--msg-color-l));
-	font-size: 1em;
+/*	border-radius: 0.375em; */
 }
 .message strong {
 	color: currentColor;
@@ -563,7 +560,7 @@ a.tag:active {
 /*	color: currentColor; */
 	text-decoration: underline;
 }
-.message.is-danger {
+.is-danger .message-body {
 	--msg-h: 348;
 	--msg-s: 100%;
 	--msg-border-l: 50%;
@@ -571,8 +568,14 @@ a.tag:active {
 	--msg-header-bg-l: 70%;
 	--msg-header-color-l: 5%;
 	font-weight: bold;
+/*	compat fallbacks. note specificity */
+	background-color: mistyrose;
+	color: crimson;
+	border-left: 0.25em solid crimson;
 }
-.message-body {
+.message .message-body {
+	color: hsl(var(--msg-h), var(--msg-s), var(--msg-color-l));
+	font-size: 1em;
 	background-color: hsl(var(--msg-h), var(--msg-s), var(--bg-l));
 	border-left: 0.25em solid hsl(var(--msg-h), var(--msg-s), var(--msg-border-l));
 	border-radius: 0.25em;
@@ -588,6 +591,9 @@ a.tag:active {
 }
 
 /* Navbar ------------------------------------------------------------------ */
+.navbar {
+	text-align: center;
+}
 .navbar-menu {
 	display: inline;
 	 display: inline-block;
@@ -595,7 +601,7 @@ a.tag:active {
 	text-align: center;
 	width: 100%;
 	margin: 0 auto;
-	min-height: var(--navbar-height);
+	min-height: 2.75em;
 }
 .navbar-item {
 	display: inline-block;
@@ -625,7 +631,7 @@ a.tag:active {
 }
 .navbar-end {
 	flex-grow: 0;
-	min-height: var(--navbar-height);
+	min-height: 2.75em;
 }
 /* buttons that lead to current page ("stuck down") */
 .navbar-item.active {
@@ -744,8 +750,7 @@ a.navbar-item.active:active {
 /*	list-style: none; */
 /*} */
 .accel {
-	text-decoration-line: underline;
-	text-decoration-thickness: 2px;
+	text-decoration: underline 2px;
 	text-decoration-skip-ink: none;
 }
 *:hover > .hover-button {
@@ -806,20 +811,19 @@ h1.hashtag-name-noinc:before {
 }
 
 /* Link decorators */
-/* this should be changed to default underlined then opt-in to non-underlined */
+/* if i don't do this my annotations are stubbornly annotated */
 .view a {
-	text-decoration-line: none;
+	text-decoration: none;
 }
 a.autolink {
-	text-decoration-line: underline;
-	text-decoration-style: dashed;
+	text-decoration: underline dashed;
 	color: mediumblue;
 }
 a.autolink:visited {
 	color: indigo;
 }
 .link-text {
-	text-decoration-line: underline;
+	text-decoration: underline;
 }
 .view a[href^="http"]:after,
 .view a[href^="//"]:after,
@@ -979,12 +983,12 @@ a.hover-button {
 #table-of-contents-list ol a {
 	border: 2px solid;
 	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
-	color: var(--text);
+/*	color: var(--text); */
 	border-radius: 0;
 }
-#table-of-contents-list a {
-	color: var(--text);
-}
+/*#table-of-contents-list a { */
+/*	color: var(--text); */
+/*} */
 #table-of-contents-list ol,
 #table-of-contents-list .menu-label {
 	margin-bottom: 0;
@@ -1310,7 +1314,7 @@ pre.chroma {
 	 Media Queries
 	 ========================================================================== */
 @media screen and (min-width: 1024px) {
-	nav.navbar {
+	div.navbar {
 		padding: 0;
 	}
 	.navbar-item {
@@ -1547,6 +1551,7 @@ pre.chroma {
 /* LOL DISREGARD THAT I SUCK COCKS. browser still loads print css ffs */
 @media print {
 	nav,
+	.navbar,
 	.button,
 	.menu,
 	#Backlinks,
