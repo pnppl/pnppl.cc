@@ -8,7 +8,6 @@ echo '
 w10hosting_default/
 \!*.*
 xlog/public/style-min.css
-site/.pagefind/
 site/+/
 site/1-bit.day/
 site/about/

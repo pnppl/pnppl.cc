@@ -39,6 +39,7 @@ set imagetypes '*.gif' '*.jpg' '*.jpeg' '*.png'
 zip -r -FS -0 site/img/comics/!comics.zip site/img/comics/ -i $imagetypes  &&
 zip -r -FS -0 site/img/photos/!photos.zip site/img/photos/ -i $imagetypes &&
 fish epub/epub.fish &&
+fish html.fish &&
 # optimize
 caesiumclt -R --lossless --same-folder-as-input site/+/thumb/ &&
 ect -9 --strict -recurse site/+/thumb/ &&

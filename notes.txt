@@ -21,6 +21,7 @@ todo:
 	- x might be worth splitting some page-specific styles out to their own sheets, maybe print, search
 		- or ask support to turn on gzip for css...
 	- x besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
+	- changing width to max-width on the toc solved something but i don't remember what. anyway i forgot it now shrinks in width when it's hidden. annoying. investigate
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it?
