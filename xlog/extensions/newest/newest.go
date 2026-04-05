@@ -64,5 +64,5 @@ func newestShortcode(in xlog.Markdown) template.HTML {
 	contents = pathfix.ReplaceAllString(contents, `src="`)
 	pathfix = regexp.MustCompile(`href="\.\.`)
 	contents = pathfix.ReplaceAllString(contents, `href="`)
-	return template.HTML(fmt.Sprintf(`<h2 class="excerpt">Newest post: <a href="%s" class="excerpt">%s</a></h2> <blockquote class="excerpt">%s<a href="%s" class="excerpt-more">...</a></blockquote>`, newestName, title, contents, newestName + id))
+	return template.HTML(fmt.Sprintf(`<h2 class="excerpt">Newest post: <a href="%s" class="excerpt">%s</a></h2> <blockquote class="excerpt">%s</pre></code><a href="%s" class="excerpt-more">...</a></blockquote>`, newestName, title, contents, newestName + id))
 }

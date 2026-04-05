@@ -8,10 +8,10 @@ todo:
 	- nicer ul styling
 	- couldn't get the home icon to behave so I just hide it on mobile
 		- in offpunk `view full` it takes up an entire page <_>
-	- heading buttons run into text on mobile
-		- i think i want to get rid of these entirely
-			- the hover shit sucks and the button style is intrusive without it
-			- the &sect should be before the heading and the &not should probably be a caret
+	- x heading buttons run into text on mobile
+		- x i think i want to get rid of these entirely
+			- x the hover shit sucks and the button style is intrusive without it
+			- x the &sect should be before the heading and the &not should probably be a caret
 	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
@@ -24,7 +24,7 @@ todo:
 	- changing width to max-width on the toc solved something but i don't remember what. anyway i forgot it now shrinks in width when it's hidden. annoying. investigate
 - x next/prev post buttons
 	- should probably make these fit nicer
-- display tags for item next to links to it?
+- display tags for item next to links to it
 - get rid of shell postprocessing
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
@@ -52,8 +52,8 @@ todo:
 					- photos extension
 					- build/deploy scripts
 					- ......? prob a million things i haven't thought of where i made some assumption about a path. autolink_pages?
-					- writing links to images like ../img/ is a problem: when embedded in the index, it causes mosaic to send a request for pnppl.cc/../img/. lol
-		- add PHP features? Likes counter?
+					- x writing links to images like ../img/ is a problem: when embedded in the index, it causes mosaic to send a request for pnppl.cc/../img/. lol
+		- add likes counter?
 		- add web1.0hosting button?
 		- x .md files always try to download. this seems to be controlled by the headers sent by the server
 			- support to the rescue!
@@ -94,7 +94,6 @@ todo:
 	- all headings inside documents should begin at h2
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
 	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
-- fix epub script. gaze at that hideous symlink and despair
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
