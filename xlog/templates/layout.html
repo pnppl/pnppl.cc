@@ -32,8 +32,7 @@
 		{{- with .page -}}
 			{{- $name := base .Name -}}
 			{{- with $props.title }}
-				<h1>{{ .Value }}</h1>
-				<span class="subtitle">{{ $name }}</span>
+				<h1>{{ .Value }}<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
 			{{- else -}}
 				<h1 class="subtitle">{{ $name }}</h1>
 			{{- end -}}
