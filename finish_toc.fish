@@ -1,12 +1,12 @@
 for file in site/*.html
 	set output
-	if grep "<h1 id=\"Footnotes\">" "$file" &>/dev/null
+	if grep "<h2 id=\"Footnotes\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#Footnotes\">Footnotes<\/a><\/li>"
 	end
-	if grep "<h1 id=\"Backlinks\">" "$file" &>/dev/null
+	if grep "<h2 id=\"Backlinks\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#Backlinks\">Backlinks<\/a><\/li>"
 	end
-	if grep "<h1 id=\"see-also\">" "$file" &>/dev/null
+	if grep "<h2 id=\"see-also\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#see-also\">See Also<\/a><\/li>"
 	end
 	if test -n "$output"
@@ -16,13 +16,13 @@ end
 
 for file in site/*/index.html
 	set output
-	if grep "<h1 id=\"Footnotes\">" "$file" &>/dev/null
+	if grep "<h2 id=\"Footnotes\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#Footnotes\">Footnotes<\/a><\/li>"
 	end
-	if grep "<h1 id=\"Backlinks\">" "$file" &>/dev/null
+	if grep "<h2 id=\"Backlinks\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#Backlinks\">Backlinks<\/a><\/li>"
 	end
-	if grep "<h1 id=\"see-also\">" "$file" &>/dev/null
+	if grep "<h2 id=\"see-also\">" "$file" &>/dev/null
 		set -a output "<li><a href=\"#see-also\">See Also<\/a><\/li>"
 	end
 	if test -n "$output"
