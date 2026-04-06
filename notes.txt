@@ -89,7 +89,7 @@ todo:
 	- also put more fiction up
 	- and go easy on the pictures, bud
 - rss images are broken. solvable with <base>?
-- i should really fix the heading semantics
+- x i should really fix the heading semantics
 	- the h1/h2 for title/name should become <h1><span>
 	- all headings inside documents should begin at h2
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
