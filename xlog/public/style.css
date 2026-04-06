@@ -176,7 +176,7 @@ time {
 	padding: 0;
 }
 span.subtitle {
-	font-size: 90%;
+	font-size: 80%;
 }
 /* ==========================================================================
 	 Base Elements
@@ -1012,12 +1012,16 @@ a.navbar-item:visited {
 /*	color: var(--text); */
 	border-radius: 0;
 }
-/*#table-of-contents-list a { */
-/*	color: var(--text); */
-/*} */
+/* #table-of-contents-list a { */
+/*	 color: var(--text); */
+/* } */
 #table-of-contents-list ol,
 #table-of-contents-list .menu-label {
 	margin-bottom: 0;
+}
+/* hide if only one entry */
+.table-of-contents:not(:has(.menu-list li:nth-child(2))) {
+	display: none;
 }
 /* ==========================================================================
 	 Site Chrome (badge, footer, view-transitions)
@@ -1435,7 +1439,7 @@ pre.chroma {
 		float: none;
 		margin-left: 0;
 		margin-bottom: 1em;
-		max-width: 100%;
+		width: 100%;
 	}
 	#email-wrapper {
 		margin-bottom: 1em;

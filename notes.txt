@@ -65,7 +65,7 @@ todo:
 		- browsers/sites that support https should auto-promote and very little is accessible on any other protocol
 		- now offpunk works properly on links in gmi documents
 			- i can even read "DEFENDING WOMEN FROM GENDER IDEOLOGY EXTREMISM AND RESTORING BIOLOGICAL TRUTH TO THE FEDERAL GOVERNMENT" in glorious plaintext. what a treat.
-- syncing, metadata, and mobile fuckery
+- ! syncing, metadata, and mobile fuckery
 	- git does not store any metadata
 		- using git stash. we stash our changes, pull the repo and apply saved metadata, then pop changes, save new metadata, and commit that
 			- problem: a failed deploy can get it out of sync and i have to notice and manually put the metadata back
@@ -77,6 +77,7 @@ todo:
 			- the modtime thing is an issue here since we will be rsyncing only newer versions with --update
 			- shells with crond running seem to crash eventually :/
 			- deleting/renaming is an enormous pain in the ass. not that i *should* be doing that but i did anyway
+	- ! working on this would be big for QOL, every time the mtimes get changed when i don't want them to it drives me nuts
 - indented paragraphs should not be put in code blocks, wtf
 	- this is commonmark spec apparently. i don't really want to introduce another violation (already changed <li>) but this will be aggravating if i want to post an essay with traditional indentation
 	- best workaround seems to be wrapping the text in <pre style="white-space: pre-wrap">. making class 'indented' to remove the other pre styling
@@ -89,6 +90,7 @@ todo:
 	- also put more fiction up
 	- and go easy on the pictures, bud
 - rss images are broken. solvable with <base>?
+	- actually i think my reader might just be filtering out large images
 - x i should really fix the heading semantics
 	- the h1/h2 for title/name should become <h1><span>
 	- all headings inside documents should begin at h2
