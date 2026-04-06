@@ -4,7 +4,7 @@
 > She started keeping a journal — had been, in fact, secretly doing so for some time: the furtive act of a deranged person.
 — [[PKD|http://annas-archive.gl/search?q=valis]]
 
-# Welcome!
+## Welcome!
 Welcome to my [[commonplace.|http://en.wikipedia.org/wiki/Commonplace_book]] It's also, perhaps, my digital garden? I won't be offended if you just call it my blog.
 
 I've been a prodigious note-taker for years. Being able to carry my notes with me and search them digitally means I can actually refer back to them, and often do. It recently occurred to me that some of these notes (when tidied up a bit) might be of interest to other people. I call this site a commonplace because it's an attempt to translate that existing practice into a public form.
@@ -16,7 +16,7 @@ I hope that sharing my commonplace publicly will encourage me to write more, mor
 I would love to get an email from you! [[comments@pnppl.cc|mailto:comments@pnppl.cc]]
 
 
-# Copyleft
+## Copyleft
 This site's content is licensed [[CC BY-SA 4.0|https://creativecommons.org/licenses/by-sa/4.0/]] ([[license text|/public/CC_BY-SA_4.0.txt]]) with the attribution requirement waived, unless otherwise specified.
 
 Intellectual property is a fake idea; unfortunately, we live in a world where it reigns supreme. Copyleft gives us a tool to turn copyright against itself. It means that you can do whatever you want with the content of this site, as long as you extend the same right to others.
@@ -26,7 +26,7 @@ I'm not wild about this specific license. I don't care what you do with my work 
 Code that I share here is [[AGPLv3|https://www.gnu.org/licenses/agpl-3.0.en.html]] if unspecified. The code used to build the site is covered by other licenses.
 
 
-# Install Victor Mono
+## Install Victor Mono
 This site really looks much better in [[Victor Mono.|http://rubjo.github.io/victor-mono/]] It's my favorite font. Even though it's monospace, it's a pleasure to read.
 
 I could force it on you, but I find that rude. I block remote fonts in my browser: they're usually hosted on Google's CDN, so they call home; they're a multi-megabyte blob you have to download just to read some text; and they don't respect your preference of default font. So, please install it. I promise you'll like it.
@@ -34,11 +34,11 @@ I could force it on you, but I find that rude. I block remote fonts in my browse
 Unfortunately, if you're on an Android phone, I think you have to be rooted to install a font and it's a big pain in the ass. So, I do try to load it on mobile with a media query. You'll just have to block it if you hate it.
 
 
-# Hotkeys
+## Hotkeys
 Buttons with underlined letters can be activated using that letter as the hotkey; [[exactly how depends on the browser.|https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey#:~:text=The%20way%20to%20activate%20the%20accesskey]] On Firefox it's alt-shift-hotkey. You can also navigate through headings with alt-shift-number, but it's currently rather buggy.
 
 
-# We have to go deeper: technical details, etc. #
+## We have to go deeper: technical details, etc.
 My goal is to have to change as little as possible about my existing approach to writing: plaintext, formatted in whatever way feels right, written in my notes app or shell. I'd like for the software to adapt to me, not the other way around. My one concession is Markdown. I don't really like it, but it's cornered the market, and it's close enough that I'm willing to bend a little. Extensions make it much less painful — particularly Wikilink syntax support. The text files that pnppl.cc is built from are the One True Commonplace, with the website providing some extra features that are nice to have but not required. You can access the original text file for a post with the _txt_ button in the top right corner.
 
 You can also access them through [[the|https://git.gay/pnppl/pnppl.cc/]] [[git|https://codeberg.org/pnppl/pnppl.cc]] [[repo|https://github.com/pnppl/pnppl.cc,]] which handily doubles as a version history and complete source of the site. If you just want to grab all the posts in plaintext, that's at [[../txt/!txt.zip|https://github.com/pnppl/pnppl.cc]].
@@ -58,7 +58,7 @@ Still, I'm not quite willing to give up UTF-8 for my posts. UTF-8 is so good. I'
 I also like the idea of making the site available via Gopher for the true low-tech heads. We'll see.
 
 
-# Credits #
+## Credits
 I'd like to extend my heartfelt gratitude to the following people who made pnppl.cc possible:
 - [[Emad Elsaid|https://www.emadelsaid.com/]] for creating [[Xlog|https://github.com/emad-elsaid/xlog]]
 - [[Yusuke Inuzuka|https://github.com/yuin]] for creating [[goldmark|https://github.com/yuin/goldmark]] and other Xlog dependencies

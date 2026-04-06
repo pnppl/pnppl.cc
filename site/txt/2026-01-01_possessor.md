@@ -1,7 +1,7 @@
 # _Possessor_ as Trans Horror #
 #essay #horror #film #trans-reading
 
-# Body horror and gender dysphoria
+## Body horror and gender dysphoria
 Films in the body horror genre are replete with images and themes that resonate with trans viewers.[^1] Gender dysphoria is a very common aspect of trans subjectivity, and perhaps the most salient type is body dysphoria. "Body dysphoria" is, of course, nearly a synonym of "body horror". Not all gender dysphoria rises to the intensity of *horror*, and not all body horror trades on horror at one's own body, but it is unsurprising that there is a high degree of thematic overlap.
 
 Trans readings are most obvious in narratives of gradual degeneration that mirror the experience of unwanted puberty. In _The Fly_ (1986), Jeff Goldblum spends a great deal of time staring in a literal mirror, watching as he is slowly transformed into a monster with each passing day. Early in the process, he tries to shave insectile growths from his face; trans women often compare testosterone-induced body and facial hair to the legs of insects. While there are many possible readings, the puberty reading is an obvious one, even for cis viewers; puberty is a difficult experience for everyone.
@@ -15,7 +15,7 @@ Many works also lend themselves to a trans-hostile reading. They gawk at atypica
 One final thing to note is the prevalence of graphic sex, especially "deviant" sex.[^2] This is often the hardest aspect to interpret because it can serve so many different ends. It can even serve opposing ones simultaneously. Is it intended to shock, titillate? Both? Is it incidental and only "deviant" insofar as the world of the story is unlike our own? Is the film providing a venue for sexual practices that are otherwise suppressed, or contributing to their suppression? Is this really sex, or is it actually rape? The one constant is that body horror can be relied on to showcase sexuality that is rarely depicted elsewhere. This is often relevant to trans people, who are disproportionately queer and probably disproportionately kinky, on top of frequently having a more complex relationship with their sexuality than the cishet average due to dysphoria, trauma, and cissexist expectations.
 
 
-# _Possessor_ (2020)
+## _Possessor_ (2020)
 !! This section contains spoilers. You should watch the film before reading it. Also, nudity.
 
 Brandon Cronenberg's films are brilliant, yet they do not receive anywhere near the level of acclaim they deserve. His work is perhaps overshadowed by that of his father, to which it owes an obvious debt. It feels as though he spent his whole life marinating in Cronenberg the elder's work, letting it suffuse every pore, then burst onto the film scene in a blaze of originality. So far, his films are consistently excellent, where his father's are of more mixed quality, hitting both incredible highs and forgettable lows. Brandon takes David's skin-crawling surrealism and shapes it into razor-sharp, absolutely unsparing hard science fiction. You could say I'm a fan. If you are unfamiliar with his work and have ten minutes to spare, check out his short film _[[Please Speak Continuously and Describe Your Experiences as They Come to You|http://archive.org/details/please-speak-continuously-and-describe-your-experiences-as-they-come-to-you-2019_202403]]_.
@@ -32,7 +32,7 @@ More open to debate is my further reading: that Tasya Vos is a genderqueer or tr
 
 Note: I will from here on refer to Vos with neutral pronouns, not as a judgment call about the character's identity, but to encourage awareness of the ineherent ambiguity and discourage firm conclusions.
 
-## The calibrator
+### The calibrator
 The first shot of the film is of Vos inserting a needle-tipped probe into the skull of the first victim, ie, Vos's own skull. We later learn that this is a device for calibrating the connection between the host body and the assassin possessing it. Vos looks into the mirror while slowly turning up the dial on the device. The victim's face moves through a variety of emotions, ultimately sobbing in despair, then moves back to a forced calm. (This performance by Gabrielle Graham is fantastic, by the way. It's unsettling to see such realistic emotional lability with no apparent external source.)
 
 ![[../img/screenshots/possessor/calibrator.jpg]]
@@ -41,7 +41,7 @@ I think this device is one of the most intriguing things about the movie's unive
 
 The device itself, though: it's a needle you insert that makes you feel more connected to your body. Sound familiar? Needles are a common delivery method for hormones, and strong emotions are often triggered immediately after an injection. It's tempting to read this as the sci-fi equivalent of HRT, but of course, it's being used to help Vos steal someone else's body, not feel more comfortable in their own. Instead of altering the body, it alters the mind. Thus, it might be closer to the *opposite* of HRT: conversion therapy in a box.
 
-## Compatibility
+### Compatibility
 Later, when Vos is assigned to possess Colin Tate, we're told (foreshadowing!) that his body is not very compatible with Vos, and so the mission will only last three to five days and the calibrator must be used at least daily. (Vos seems reticent to do this, probably because it's an unpleasant experience.) How we interpret this supposed incompatibility has significant implications for our understanding of Vos's gender identity. At first blush, one might assume that they are incompatible due to the fact that Colin is a man. And that might be true, but I increasingly suspect it's a red herring. There are all sorts of neurological reasons they might be incompatible, and as we saw in the beginning, the calibrator is still necessary when possessing a body with the same sex characteristics. We just don't have enough context to judge.
 
 I say "supposed incompatibility" because the film gives us reason to suspect the "incompatibility" is actually an *excess* of compatibility. Vos's employers do not want them to become too attached to their life in the host. As things spiral out of control in the denouement, it's unclear where Vos ends and Colin begins. Vos even tells him, or themselves, that the murders were acts of his own agency: *You're the one in control.* Maybe the whole thing is just a power struggle, and Vos said this to try to manipulate him into killing himself, but we are shown tons of visuals of the two of them blurring together.
@@ -52,7 +52,7 @@ Colin and Vos have a lot in common. They are both abused and exploited by incred
 
 Perhaps militating against this reading is the fact that Vos has a breakdown at Colin's job when assigned to spy on a couple having sex. A naked woman lies spread eagle on the bed, then a naked man walks into frame and starts eating her out. Why is this the trigger? Is it because Vos doesn't feel at home in a man's body? Because it reminds them of the body they will return to? Because Colin is turned on by it and reasserts control? Is it an incompatibility in sexual orientation? I'm not sure what to make of it, and it runs counter to some other observations, but it's clearly significant and tells us that sex/gender is central to the story.
 
-## Depersonalization, sex, and masculinity
+### Depersonalization, sex, and masculinity
 The couple being spied on by ~~Amazon~~ Zoothroo is not the first significant sex scene. After Vos's first assignment is complete, they request time off to try to reconnect with their family. (Vos's boss is not happy about this, reminding Vos that they separated and that Vos decided it was better that way.) Vos approaches this like another assignment: they practice greeting their family with no apparent emotion, then seem to fake the emotions when the time comes. Their real life is just another role to play, motions to go through. Very pre-transition trans. Later, they initiate sex with their husband by laying their head on his arm like a puppy. Cut to fucking: Vos is just lying there in the missionary position, clearly feeling nothing, absolutely dead inside. It's only when they remember plunging a knife into their victim's body that they feel anything. At first, it seems like Vos is haunted by it... but then, they get aroused and bite their husband.
 
 ![[../img/screenshots/possessor/dead-inside.jpg]]
@@ -75,14 +75,14 @@ Just like the voyeuristic VR scene, sex has clearly triggered some sort of disco
 
 Sex in _Possessor_ seems to function like the opposite of the calibrator. The powerful emotions and bodily sensations it generates provide an opportunity for the host's identity to break through and assert itself. Whether this is because it creates gender dysphoria in the possessor or because it connects strongly to the host's psyche, it's clear that _Possessor_ sees sexuality as fundamental to self-conception, even moreso than strong emotion alone.
 
-## Suicide
+### Suicide
 This may seem crass, but it feels significant to me that Vos's job centrally involves suicide. This is a topic that trans people are unfortunately quite familiar with. Our high suicide rates are now sufficiently well known that they are used to harass us and encourage us to inflict death on ourselves. As self-harm goes, the ability to kill yourself over and over again has got to take the cake.
 
 Why have they begun having trouble going through with it? The job is clearly fucking them up, alienating them from their own humanity, causing them to experience mental lapses that interfere with their performance, but we never learn exactly why it's started to be a problem now. Is it just how long they've been doing the job? Never in the film do we see them successfully complete suicide. I think it fits with my point about [[compatibility|#compatibility]]: Vos is increasingly unable or unwilling to separate from the host body. Their ghostly, detached existence means there is less and less of them. They crave the taste of real existence that they get from their hosts.
 
 This entire approach to life makes sense as a maladaptive coping mechanism for untreated gender dysphoria. As miserable as Vos's job is, it's an escape from real life. They get to spend time in a body that is not their own, living a life that is not their own. It's the grisly equivalent of spending your life in a drunken stupor watching television. Metaphorically, Vos has already committed suicide. The violence that they inflict on others is nothing compared to what they inflict on themselves.
 
-## Family, gender roles, and stereotypes
+### Family, gender roles, and stereotypes
 There are some other, shallower reasons to read Vos as masculine. First of all, they're a professional murderer. That's statistically very unlikely for a woman. The personal items used to test their reintegration are stereotypically masculine: a butterfly they murdered, their grandfather's pipe. They also do not wear any makeup or other femme accoutrements.
 
 Then there's their relationship with their family. Leaving your spouse to take care of your child alone while you go away to work is a common pattern for men, but much less common for women. Women typically fill the caring role at home while men fuck off. Not to mention that Vos seemingly only popped in to get their rocks off, then ditched, and the sex being bad seems like it sealed the deal on giving up on the family.

@@ -632,7 +632,7 @@ func (r *FootnoteHTMLRenderer) renderFootnoteList(
 			html.RenderAttributes(w, node, html.GlobalAttributeFilter)
 		}
 		_ = w.WriteByte('>')
-		_, _ = w.WriteString(`<h1 id="Footnotes"><a name="Footnotes" class="head-sect" href="#Footnotes">&sect;</a> Footnotes <a class="to-toc" href="#TOC">^</a></h1>`)
+		_, _ = w.WriteString(`<h2 id="Footnotes"><a name="Footnotes" class="head-sect" href="#Footnotes">&sect;</a> Footnotes <a class="to-toc" href="#TOC">^</a></h2>`)
 //		if r.Config.XHTML {
 //			_, _ = w.WriteString("\n<hr />\n")
 //		} else {

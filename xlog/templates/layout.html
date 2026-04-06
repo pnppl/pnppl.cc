@@ -30,11 +30,12 @@
 	<div class="title">
 		<center>
 		{{- with .page -}}
+			{{- $name := base .Name -}}
 			{{- with $props.title }}
-			<h1>{{ .Value }}</h1>
-			{{- end }}
-			{{ with base .Name -}}
-			<h2 class="subtitle">{{ . }}</h2>
+				<h1>{{ .Value }}</h1>
+				<span class="subtitle">{{ $name }}</span>
+			{{- else -}}
+				<h1 class="subtitle">{{ $name }}</h1>
 			{{- end -}}
 		{{- end }}
 		</center>

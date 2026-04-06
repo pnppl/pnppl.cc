@@ -11,12 +11,12 @@ for file in site/txt/20*.md
 		# has no title, create one
 		if test (string sub -l 2 $title) != "# "
 			set title (string shorten -m 70 $title)
-			echo "# $title {.level1}" >> $filename &&
+			echo "# $title" >> $filename &&
 			echo -e "<span class=\"date\">$date</span>\n" >> $filename &&
 			cat $file >> $filename
 		# has title, don't duplicate it
 		else
-			echo "$title {.level1}" >> $filename &&
+			echo "$title" >> $filename &&
 			echo -e "<span class=\"date\">$date</span>\n" >> $filename &&
 			tail -n +2 $file >> $filename
 		end
@@ -25,12 +25,13 @@ for file in site/txt/20*.md
 		# fix footnotes without fucking everything up with pandoc's inscrutable --file-scope
 #		sed -i -E "s/\[\^([[:digit:]]+)\]/\[\^$(path basename -E $file)-\1\]/g" $filename
 		sed -i -E "s/\[\^/\[\^$(path basename -E $file)-/g" $filename
-		# remove A/V embeds. open and close need to be on same line
-		sed -i -E 's/!\[\[.+(mp4|mkv|webm|mp3|wav|flac|ogg|ogv|oga|m4a)\]\]$//g' $filename
+		# remove A/V embeds
+		sed -i -E 's/!\[\[.+(mp4|mkv|webm|mp3|wav|flac|ogg|ogv|oga|m4a)\]\]//g' $filename
 #	end
 end
-set markdown_features markdown-smart+ascii_identifiers+space_in_atx_header+backtick_code_blocks+fenced_code_attributes+pipe_tables+strikeout+footnotes+lists_without_preceding_blankline+hard_line_breaks+autolink_bare_uris+wikilinks_title_before_pipe+header_attributes
-pandoc -o $out -f $markdown_features --toc --reference-location=section --metadata title="pnppl.cc" --epub-metadata="epub/epub.xml" --epub-title-page=false --css="epub/epub.css" --lua-filter="epub/chapters.lua" --resource-path=site/txt $scratch_dir/*.md &&
+set markdown_features markdown-smart+ascii_identifiers+space_in_atx_header+backtick_code_blocks+fenced_code_attributes+pipe_tables+strikeout+footnotes+lists_without_preceding_blankline+hard_line_breaks+autolink_bare_uris+wikilinks_title_before_pipe
+#pandoc -o $out -f $markdown_features --toc --reference-location=section --metadata title="pnppl.cc" --epub-metadata="epub/epub.xml" --epub-title-page=false --css="epub/epub.css" --lua-filter="epub/chapters.lua" --resource-path=site/txt $scratch_dir/*.md &&
+pandoc -o $out -f $markdown_features --toc --reference-location=section --metadata title="pnppl.cc" --epub-metadata="epub/epub.xml" --epub-title-page=true --css="epub/epub.css" --resource-path=site/txt $scratch_dir/*.md &&
 if test $status -ne 0
 	echo "!!----- EPUB FUCKED UP -----!!"
 	set return 1

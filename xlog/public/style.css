@@ -119,20 +119,21 @@ h6 em {
 	font-style: normal;
 }
 h1,
-h2 {
+h2,
+h3 {
 	font-weight: normal;
 	font-size: 125%;
 }
-h3,
-h4 {
-	font-weight: bold;
-	font-size: 110%;
-}
+h4,
 h5,
 h6 {
 	font-weight: bold;
-	font-size: 100%;
+	font-size: 110%;
 }
+/*h6 { */
+/*	font-weight: bold; */
+/*	font-size: 100%; */
+/*} */
 strong {
 	color: var(--text-strong);
 	font-weight: bolder;
@@ -365,18 +366,21 @@ video {
 	margin-bottom: 0;
 }
 
-.content h1 {
+.content h1,
+.content h2 {
 	margin-top: 1.75em;
 }
-.content h2 {
+.content h3 {
 	margin-top: 1.5em;
 }
 .content h1:first-child,
-.content h2:first-child {
+.content h2:first-child,
+.content h3:first-child {
 	margin-top: 0;
 }
 .content h1,
-.content h2 {
+.content h2,
+.content h3 {
 	color: var(--text-strong);
 	line-height: 1.125;
 	margin-bottom: 0.5em;
@@ -766,7 +770,7 @@ a.navbar-item.active:active {
 	navigation: auto;
 }
 .view {
-	counter-reset: h1;
+	counter-reset: h2;
 }
 .view p > img:only-child {
 	display: block;
@@ -782,7 +786,8 @@ a.navbar-item.active:active {
 	width: 100%;
 }
 .view h1,
-.view h2 {
+.view h2,
+.view h3 {
 	border-bottom: 2px solid var(--bg);
 	padding-bottom: 0.5em;
 }
@@ -792,6 +797,7 @@ a.navbar-item.active:active {
 /*} */
 .view h1 {
 	counter-reset: h2;
+	counter-reset: h3;
 }
 .view h2 {
 	counter-reset: h3;
@@ -809,13 +815,13 @@ a.to-toc:visited {
 	color: hsl(221, 14%, 71%);
 	padding-left: 2px;
 }
-h1 .head-sect:after {
-	counter-increment: h1;
-	content: counter(h1) ".";
-}
 h2 .head-sect:after {
 	counter-increment: h2;
-	content: counter(h1) "." counter(h2) ".";
+	content: counter(h2) ".";
+}
+h3 .head-sect:after {
+	counter-increment: h3;
+	content: counter(h2) "." counter(h3) ".";
 }
 /*h1.hashtag-name-noinc:before { */
 /*	content: ""; */
@@ -979,7 +985,7 @@ a.navbar-item:visited {
 	border-color: #F0F0F0 #0B0B0B #0B0B0B #F0F0F0;
 	background-color: silver;
 	float: right;
-	max-width: 33%;
+	width: 33%;
 	padding: 0.25em;
 	margin: 0 0 0.25em 1em;
 }
@@ -990,6 +996,12 @@ a.navbar-item:visited {
 	list-style: decimal;
 	margin-top: 0.25em;
 	padding-left: 0.25em;
+}
+#table-of-contents-list details > ol:has(>li:nth-child(10)) {
+	padding-left: 0.75em;
+}
+#table-of-contents-list details > ol:has(>li:nth-child(100)) {
+	padding-left: 1.25em;
 }
 #table-of-contents-list ol a {
 	border: 2px solid;
@@ -1009,28 +1021,28 @@ a.navbar-item:visited {
 	 ========================================================================== */
 
 /* "dynamic" badge */
-body:has(h1:nth-of-type(2))	{ --badge: url(/public/badges/victor-8831-wide.gif); }
-body:has(h1:nth-of-type(3))	{ --badge: url(/public/badges/copyleft.gif); }
-body:has(h1:nth-of-type(4))	{
+body:has(h2:nth-of-type(2))	{ --badge: url(/public/badges/victor-8831-wide.gif); }
+body:has(h2:nth-of-type(3))	{ --badge: url(/public/badges/copyleft.gif); }
+body:has(h2:nth-of-type(4))	{
 	--badge: url(/public/badges/invalid-html.gif);
 	--badge-press: none;
 }
-body:has(h1:nth-of-type(5))	{
+body:has(h2:nth-of-type(5))	{
 	--badge: url(/public/badges/invalid-css-red.gif);
 	--badge-press: none;
 }
-body:has(h1:nth-of-type(6))	{
+body:has(h2:nth-of-type(6))	{
 	--badge: url(/public/badges/she-her.gif);
 	--badge-press: "";
 }
-body:has(h1:nth-of-type(7))	{ --badge: url(/public/badges/bgdc-ga-j.gif); }
-body:has(h1:nth-of-type(8))	{ --badge: url(/public/badges/bgdc-tr-j.gif); }
-body:has(h1:nth-of-type(9))	{ --badge: url(/public/badges/bgdc-bi-j.gif); }
-body:has(h1:nth-of-type(10)) { --badge: url(/public/badges/bgdc-gq-j.gif); }
-body:has(h1:nth-of-type(11)) { --badge: url(/public/badges/fish-anim.gif); }
-body:has(h1:nth-of-type(12)) { --badge: url(/public/badges/lain.gif); }
-body:has(h1:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells.gif); }
-body:has(h1:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); }
+body:has(h2:nth-of-type(7))	{ --badge: url(/public/badges/bgdc-ga-j.gif); }
+body:has(h2:nth-of-type(8))	{ --badge: url(/public/badges/bgdc-tr-j.gif); }
+body:has(h2:nth-of-type(9))	{ --badge: url(/public/badges/bgdc-bi-j.gif); }
+body:has(h2:nth-of-type(10)) { --badge: url(/public/badges/bgdc-gq-j.gif); }
+body:has(h2:nth-of-type(11)) { --badge: url(/public/badges/fish-anim.gif); }
+body:has(h2:nth-of-type(12)) { --badge: url(/public/badges/lain.gif); }
+body:has(h2:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells.gif); }
+body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); }
 #badge-img {
 	content: var(--badge, url("/public/badges/nano-88x31.gif")) / "about";
 	/* fallback: pixelated is standard, crisp-edges for Safari */
