@@ -7,6 +7,7 @@ echo '
 .*
 w10hosting_default/
 \!*.*
+!/site/app/nagi/!*.htm
 xlog/public/style-min.css
 site/+/
 site/1-bit.day/
