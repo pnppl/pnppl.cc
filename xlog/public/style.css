@@ -1223,24 +1223,54 @@ pre.chroma {
 	display: block;
 	 display: flex;
 }
+
+/* Keyword, NameTag /*
+/*.chroma .k, */
+/*.chroma .kc, */
+/*.chroma .kn, */
+/*.chroma .kp, */
+/*.chroma .kr, */
+/*.chroma .nt, */
+/*.chroma .ow { */
+/*	color: #C41A7F; */
+/*	font-weight: bold; */
+/*} */
+
+/* NameLabel */
+/* NameBuiltin */
+/* Keyword, NameTag */
+/*.chroma .nl, */
+/*.chroma .nb, */
+/*.chroma .bp, */
+/*.chroma .k, */
+/*.chroma .kc, */
+/*.chroma .kn, */
+/*.chroma .kp, */
+/*.chroma .kr, */
+/*.chroma .nt { */
+/*	color: #0066CC; */
+/*} */
+
+/* NameVariable */
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .vm {
+/*	color: #005577; */
+	color: #C43E00;
+}
 /* KeywordDeclaration, KeywordType */
 .chroma .kd,
 .chroma .kt {
-	color: #0066CC;
+/*	color: #0066CC; */
+	color: #C43E00;
 	font-weight: bold;
 }
-/* Keyword, NameTag, OperatorWord */
-.chroma .k,
-.chroma .kc,
-.chroma .kn,
-.chroma .kp,
-.chroma .kr,
-.chroma .nt,
-.chroma .ow {
-	color: #C41A7F;
-	font-weight: bold;
-}
+
+/* namebuiltin */
 /* NameAttribute */
+.chroma .nb,
 .chroma .na {
 	color: #007A00;
 }
@@ -1252,21 +1282,6 @@ pre.chroma {
 	font-weight: bold;
 }
 
-/* NameLabel */
-.chroma .nl,
-/* NameBuiltin */
-.chroma .nb,
-.chroma .bp {
-	color: #0066CC;
-}
-
-/* NameVariable */
-.chroma .nv,
-.chroma .vc,
-.chroma .vg,
-.chroma .vi .chroma .vm {
-	color: #005577;
-}
 /* LiteralString */
 .chroma .s,
 .chroma .sa,
@@ -1282,8 +1297,11 @@ pre.chroma {
 .chroma .s1,
 .chroma .ss,
 .chroma .dl {
-	color: #C43E00;
+/*	color: #C43E00; */
+	color: #0066CC;
+	font-style: italic;
 }
+
 /* LiteralNumber */
 .chroma .m,
 .chroma .mb,
@@ -1292,12 +1310,29 @@ pre.chroma {
 .chroma .mi,
 .chroma .il,
 .chroma .mo {
-	color: #7B1FA2;
-}
-/* Operator */
-.chroma .o {
+/*	color: #7B1FA2; */
 	color: #C41A7F;
 }
+
+/* Operator, operatorword */
+.chroma .o,
+.chroma .ow {
+/*	color: #C41A7F; */
+	color: #7B1FA2;
+}
+/* CommentPreproc */
+.chroma .cp,
+.chroma .cpf {
+/*	color: #C41A7F; */
+	color: #7B1FA2;
+	font-style: italic;
+}
+/* namespacename? */
+.chroma .nn {
+	color: #7B1FA2;
+	font-weight: bold;
+}
+
 /* Comment */
 .chroma .c,
 .chroma .c1,
@@ -1307,12 +1342,11 @@ pre.chroma {
 	color: #5C6370;
 	font-style: italic;
 }
-/* CommentPreproc */
-.chroma .cp,
-.chroma .cpf {
-	color: #C41A7F;
-	font-style: italic;
+/* parens, commas, etc. */
+.chroma .p {
+	color: #5C6370;
 }
+
 /* GenericDeleted */
 .chroma .gd {
 	color: #B31D28;
@@ -1322,14 +1356,12 @@ pre.chroma {
 .chroma .gl {
 	text-decoration: underline;
 }
-
 /* GenericHeading */
 .chroma .gh,
 /* GenericSubheading */
 .chroma .gu {
 	font-weight: bold;
 }
-
 /* GenericInserted */
 .chroma .gi {
 	color: #22863A;
@@ -1484,6 +1516,7 @@ pre.chroma {
 	a.autolink:visited {
 		color: thistle;
 	}
+
 	/* Dracula syntax theme */
 	.chroma {
 		color: #F8F8F2;
@@ -1501,36 +1534,34 @@ pre.chroma {
 		border-style: none;
 		box-shadow: none;
 	}
-	.chroma .k,
-	.chroma .kc,
-	.chroma .kn,
-	.chroma .kp,
-	.chroma .kr,
-	.chroma .o,
-	.chroma .ow,
-	.chroma .nt,
-	.chroma .cp,
-	.chroma .cpf {
-		color: #FF79C6;
-	}
-	.chroma .kd,
-	.chroma .kt,
-	.chroma .nb,
-	.chroma .bp,
+
+/*	.chroma .nl, */
+/*	.chroma .nb, */
+/*	.chroma .bp, */
+/*	.chroma .k, */
+/*	.chroma .kc, */
+/*	.chroma .kn, */
+/*	.chroma .kp, */
+/*	.chroma .kr, */
+/*	.chroma .nt, */
 	.chroma .nv,
 	.chroma .vc,
 	.chroma .vg,
 	.chroma .vi,
 	.chroma .vm,
-	.chroma .nl {
+	.chroma .kd,
+	.chroma .kt {
 		color: #8BE9FD;
 	}
+
+	.chroma .nb,
 	.chroma .na,
 	.chroma .nc,
 	.chroma .nf,
 	.chroma .fm {
 		color: #50FA7B;
 	}
+
 	.chroma .s,
 	.chroma .sa,
 	.chroma .sb,
@@ -1547,6 +1578,7 @@ pre.chroma {
 	.chroma .ss {
 		color: #F1FA8C;
 	}
+
 	.chroma .m,
 	.chroma .mb,
 	.chroma .mf,
@@ -1554,15 +1586,28 @@ pre.chroma {
 	.chroma .mi,
 	.chroma .il,
 	.chroma .mo {
+/*		color: #BD93F9; */
+		color: #FF79C6;
+	}
+
+	.chroma .o,
+	.chroma .ow,
+	.chroma .cp,
+	.chroma .cpf,
+	.chroma .nn {
+/*		color: #FF79C6; */
 		color: #BD93F9;
 	}
+
 	.chroma .c,
 	.chroma .ch,
 	.chroma .cm,
 	.chroma .c1,
-	.chroma .cs {
+	.chroma .cs,
+	.chroma .p {
 		color: #6272A4;
 	}
+
 	.chroma .gd {
 		color: #FF5555;
 	}
