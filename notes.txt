@@ -96,6 +96,7 @@ todo:
 	- all headings inside documents should begin at h2
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
 	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
+- switched off show hidden files in the sitemap because nagi made it >2MB lol
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
