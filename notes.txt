@@ -96,7 +96,18 @@ todo:
 	- all headings inside documents should begin at h2
 	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
 	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
-- switched off show hidden files in the sitemap because nagi made it >2MB lol
+- nagi
+	- switched off show hidden files in the sitemap because nagi made it >2MB lol
+	- terminal browsers don't like iframes. but elinks handes *frames* just fine, so we should switch to that. better support in old browsers as well. however MDN insists it's Extremely Deprecated so it might stop working
+		- instead of <body> you have <frameset>: 
+		<frameset rows="10%,90%" cols="100%">
+			<frame src="pnppl.cc">
+			<frame src="//16bit.com/">
+		</frameset>
+			- this gives 10% of the screen to me and 90% to the other site. all well and good, however, it's annoying that seemingly this is the only way to show anything besides the frame without iframes? so it seems like you would need two files per page, one to hold the frame and one to hold the nav, and the site would be even jankier and make more requests
+			- really hard to find info about old stuff that the web design priests hate. you'd think there would be a way. then again i remember using these and they were always jank as fuck
+			- a lot of sites refuse to load cuz of the security bullshit. kind of thought ksw would have cleaned all those up. maybe there's something i can do on my end
+			- might be worth considering using ye olde ecmascript to up the compat
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
