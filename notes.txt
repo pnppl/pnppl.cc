@@ -29,6 +29,7 @@ todo:
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
 			- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but very annoying
+	- sitemap, epub, and html.fish do not count as postprocessing v_v
 - masto, bsky, etc?
 - we're live!
 	- host issues mostly cleared up by moving to web1.0hosting! we even have directory listings!
@@ -90,12 +91,7 @@ todo:
 	- also put more fiction up
 	- and go easy on the pictures, bud
 - rss images are broken. solvable with <base>?
-	- actually i think my reader might just be filtering out large images
-- x i should really fix the heading semantics
-	- the h1/h2 for title/name should become <h1><span>
-	- all headings inside documents should begin at h2
-	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
-	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
+	- actually i think my reader might just be filtering out large images? investigate
 - nagi
 	- switched off show hidden files in the sitemap because nagi made it >2MB lol
 	- terminal browsers don't like iframes. but elinks handes *frames* just fine, so we should switch to that. better support in old browsers as well. however MDN insists it's Extremely Deprecated so it might stop working
@@ -106,8 +102,17 @@ todo:
 		</frameset>
 			- this gives 10% of the screen to me and 90% to the other site. all well and good, however, it's annoying that seemingly this is the only way to show anything besides the frame without iframes? so it seems like you would need two files per page, one to hold the frame and one to hold the nav, and the site would be even jankier and make more requests
 			- really hard to find info about old stuff that the web design priests hate. you'd think there would be a way. then again i remember using these and they were always jank as fuck
-			- a lot of sites refuse to load cuz of the security bullshit. kind of thought ksw would have cleaned all those up. maybe there's something i can do on my end
-			- might be worth considering using ye olde ecmascript to up the compat
+	- a lot of sites refuse to load cuz of the security bullshit. kind of thought ksw would have cleaned all those up. maybe there's something i can do on my end
+		- okay, filtered all of these out with a curl loop overnight, removes about 20%
+			- with a custom proxy we could obviate this problem AND strip the https...
+				- we could also use one of the many public cors proxies just for these, i think; prepend the proxy url instead of removing it. wouldn't give us http though
+				- i suppose if we did this, we could actually eliminate frames too, just insert our nav into the document
+					- this is beginning to sound suspiciously not static at all
+						- just switch to frameset and rebuild with the smaller dataset for now
+					- we would need some kind of trick to stop modern browsers from bitching about security also
+	- might be worth considering using ye olde ecmascript to up the compat
+		- i don't remember why i thought this would help. because IE doesn't support frames?
+
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
@@ -286,9 +291,11 @@ low priority/done:
 		- markor reads them the other way around. must fix this
 			- i think i did. was actually easy
 	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
-- cleanup notes.txt, getting long...
-
-longterm notions
+- x i should really fix the heading semantics
+	- the h1/h2 for title/name should become <h1><span>
+	- all headings inside documents should begin at h2
+	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
+	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
 - x support other delivery formats like epub
 	- i should be able to do this relatively easily with pandoc. i think i need to render p.Render() to files then feed those to it
 		- our use of headings is a problem. pandoc inserts a chapter break at each h1. not only do many documents have many h1s, many have zero h1s
@@ -311,6 +318,10 @@ longterm notions
 			- actually i guess mobi should work on palm and that's less crap. but still. eh.
 				- apparently mobi is an extension of palmdoc!
 					- and azw[1] is mobi?? but... kindle doesn't support it anymore
+- cleanup notes.txt, getting long...
+
+
+longterm notions
 - other protocols like gopher
 	- got started with gemini and ehhehhhehhhhh. is it really worth it? much more annoying than anticipated
 		- gemtext missing Kinds:

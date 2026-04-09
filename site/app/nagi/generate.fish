@@ -1,4 +1,4 @@
-set in ".smallweb-home.txt"
+set in "smallweb-home-unblocked.txt"
 set out ".p"
 
 set alphabet (string split '' '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')
@@ -23,7 +23,11 @@ function print_html
 	set CURR $argv[2] # STRING
 	set NEXT (base62 $argv[3]) # INT
 	set INDEX (base62 $argv[4]) # INT
-	echo -n "<!--#include file=\"!0.htm\"-->$PREV.htm<!--#include file=\"!1.htm\"-->$CURR\">open</a> | <a href=\"$NEXT.htm\">next</a></h1><iframe src=\"//$CURR<!--#include file=\"!2.htm\"-->$CURR\">$CURR<!--#include file=\"!3.htm\"-->" > "$out/$INDEX.htm"
+#	echo -n "<!--#include file=\"!0.htm\"-->$PREV.htm<!--#include file=\"!1.htm\"-->$CURR\">open</a> | <a href=\"$NEXT.htm\">next</a></h1><iframe src=\"//$CURR<!--#include file=\"!2.htm\"-->$CURR\">$CURR<!--#include file=\"!3.htm\"-->" > "$out/$INDEX.htm"
+	# generate framesets
+	echo -n "<!--#include file=\"!0.htm\"-->$INDEX<!--#include file=\"!1.htm\"-->$CURR<!--#include file=\"!2.htm\"-->$CURR\">$CURR<!--#include file=\"!3.htm\"-->" > "$out/$INDEX.htm"
+	# generate navs
+	echo -n "<!--#include file=\"!4.htm\"-->$PREV<!--#include file=\"!5.htm\"-->$CURR<!--#include file=\"!6.htm\"-->$NEXT<!--#include file=\"!7.htm\"-->" > "$out/_$INDEX.htm"
 end
 
 # randomize
