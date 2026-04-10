@@ -114,7 +114,13 @@ todo:
 		- i don't remember why i thought this would help. because IE doesn't support frames?
 	- it doesn't take that long to scrape all the sites, i might as well grab the most recent posts like on kagi (like i planned to do with wander and wrote about)
 	- if the http_ list is as short as i expect, maybe i could augment it with some other data sources
-
+	- okay so it's in a decent shape rn. but
+		- i should probably re-run all my tests with a spoofed useragent because I just noticed bearblog.dev returns 403 otherwise. probably a lot of other sites do annoying shit like this too due to AI paranoia
+		- would be nice to be able to keep it updated automatically (or build from scratch in one shot). started this. but
+			- it doesn't really make sense to focus in on this until i've sorted out the rss thing, since it's a significant change and we'll want to be running that semi regularly
+			- we should just have a script that runs all of our checks on every url, extracts the most recent post link, and writes it to either http or ssl. time consuming on a full run, but then we can just run it on the diff lines as KSW adds them
+			- can also maintain list of custom additions (and/or blocks)
+			- this way we have easy deltas when a site is added and can do a clean full rebuild without fiddling
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
