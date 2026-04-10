@@ -112,6 +112,8 @@ todo:
 					- we would need some kind of trick to stop modern browsers from bitching about security also
 	- might be worth considering using ye olde ecmascript to up the compat
 		- i don't remember why i thought this would help. because IE doesn't support frames?
+	- it doesn't take that long to scrape all the sites, i might as well grab the most recent posts like on kagi (like i planned to do with wander and wrote about)
+	- if the http_ list is as short as i expect, maybe i could augment it with some other data sources
 
 
 low priority/done:

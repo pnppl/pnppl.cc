@@ -224,6 +224,14 @@ code {
 	font-weight: normal;
 	padding: 0.2em 0.5em;
 }
+/* definition list elements. definition term; definition... definition */
+dt {
+	font-weight: bold;
+	font-size: 105%;
+}
+dd {
+	font-style: italic;
+}
 pre {
 	background-color: var(--bg);
 	color: var(--text);

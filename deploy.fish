@@ -1,4 +1,4 @@
-argparse 'c/commit=?' 'm/mobile=?' -- $argv &&
+argparse 'c/commit=?' 'm/mobile=?' 'n/nomod=?' -- $argv &&
 set msg "deploy.fish $(date --rfc-3339='seconds')" &&
 if set -q _flag_commit
 	set msg $_flag_commit
@@ -18,7 +18,9 @@ git stash -u &&
 git pull &&
 fish set_mtimes.fish &&
 git stash pop -q &&
-fish save_mtimes.fish &&
+if not set -q _flag_nomod
+	fish save_mtimes.fish
+end
 git add *.* \
 	epub/ \
 	map/ \
