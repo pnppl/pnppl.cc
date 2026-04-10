@@ -15,6 +15,7 @@ site/about/
 site/ai/
 site/compat/
 site/fs-ir/
+site/mirrors/
 site/pnppl/
 site/public/
 site/sitemap/
