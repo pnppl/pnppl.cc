@@ -1,4 +1,4 @@
-# Fish greeting & prompt
+# Fish: greeting & prompt
 #code #fish
 
 ```fish

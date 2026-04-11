@@ -1036,8 +1036,10 @@ a.navbar-item:visited {
 	 ========================================================================== */
 
 /* "dynamic" badge */
-body:has(h2:nth-of-type(2))	{ --badge: url(/public/badges/victor-8831-wide.gif); }
-body:has(h2:nth-of-type(3))	{ --badge: url(/public/badges/copyleft.gif); }
+/* static */
+body:has(h2:nth-of-type(2))	{ --badge: url(/public/badges/copyleft.gif); }
+body:has(h2:nth-of-type(3))	{ --badge: url(/public/badges/nano-88x31.gif); }
+/* these don't look like the others and so don't work with the press effect */
 body:has(h2:nth-of-type(4))	{
 	--badge: url(/public/badges/invalid-html.gif);
 	--badge-press: none;
@@ -1046,6 +1048,7 @@ body:has(h2:nth-of-type(5))	{
 	--badge: url(/public/badges/invalid-css-red.gif);
 	--badge-press: none;
 }
+/* reset to re-enable press effect */
 body:has(h2:nth-of-type(6))	{
 	--badge: url(/public/badges/she-her.gif);
 	--badge-press: "";
@@ -1054,12 +1057,21 @@ body:has(h2:nth-of-type(7))	{ --badge: url(/public/badges/bgdc-ga-j.gif); }
 body:has(h2:nth-of-type(8))	{ --badge: url(/public/badges/bgdc-tr-j.gif); }
 body:has(h2:nth-of-type(9))	{ --badge: url(/public/badges/bgdc-bi-j.gif); }
 body:has(h2:nth-of-type(10)) { --badge: url(/public/badges/bgdc-gq-j.gif); }
-body:has(h2:nth-of-type(11)) { --badge: url(/public/badges/fish-anim.gif); }
+/* anim */
+body:has(h2:nth-of-type(11)) { --badge: url(/public/badges/fish.gif); }
 body:has(h2:nth-of-type(12)) { --badge: url(/public/badges/lain.gif); }
 body:has(h2:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells.gif); }
-body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/my-anarchy-now.gif); }
+body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }
+/* static */
+body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); }
+@media (prefers-reduced-motion: reduce) {
+	body:has(h2:nth-of-type(11)) { --badge: url(/public/badges/fish-static.gif); }
+	body:has(h2:nth-of-type(12)) { --badge: url(/public/badges/lain-static.gif); }
+	body:has(h2:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells-static.gif); }
+	body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online-static.gif); }
+}
 #badge-img {
-	content: var(--badge, url("/public/badges/nano-88x31.gif")) / "about";
+	content: var(--badge, url("/public/badges/victor-8831-wide.gif")) / "about";
 	/* fallback: pixelated is standard, crisp-edges for Safari */
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
