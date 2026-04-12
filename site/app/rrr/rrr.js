@@ -19,7 +19,8 @@ function getBpmString() {
 }
 // results with date and time, formatted with pipe separators for markdown table
 function getResultString() {
-    let month = dt.getMonth().toString().padStart(2, "0");
+    // the month is off by one for reasons that are entirely obscure to me
+    let month = (dt.getMonth() + 1).toString().padStart(2, "0");
     let day = dt.getDate().toString().padStart(2, "0");
     let hour = dt.getHours().toString().padStart(2, "0");
     let min = dt.getMinutes().toString().padStart(2, "0");
