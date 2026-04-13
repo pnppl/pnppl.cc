@@ -141,14 +141,15 @@ table.calendar td a:focus-visible {
 				{{ if . -}}
 
 				{{ if .Pages -}}
-				<a href="/+/date/{{printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day}}">
-					<span class="tag">{{ printf "%02d" .Date.Day }}</span>
+				<a href="/+/date/{{printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day}}">{{- noop -}}
+					<span class="tag">{{ printf "%02d" .Date.Day }}</span>{{- noop -}}
 				</a>
 				{{ else -}}
 				<span class="tag">{{printf "%02d" .Date.Day}}</span>
 				{{- end -}}
 
 				{{ if .Pages -}}
+				{{ printf "<style><!--</style>" | raw }}
 				<aside class="menu">
 					<div class="menu-list">
 						{{- $date := printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day }}
@@ -160,12 +161,13 @@ table.calendar td a:focus-visible {
 						{{- end }}
 							<span class="page">
 								{{- $props := properties . -}}
-								{{ with $props.title -}} {{ .Value }} {{- else -}} {{ .Name }} {{- end }}
-							</span>
+								{{ with $props.title -}} {{ .Value }} {{- else -}} {{ .Name }} {{- end -}}
+							</span>{{- noop -}}
 						</a>
 						{{- end }}
 					</div>
 				</aside>
+				{{ printf "<!---->" | raw }}
 				{{- end -}}
 				{{- else -}}
 					&nbsp;&nbsp;

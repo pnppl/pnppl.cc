@@ -633,6 +633,14 @@ a.tag:active {
 	outline-offset: 0;
 	cursor: pointer;
 }
+.navbar-item span,
+.navbar-item u,
+.button em {
+	font-family:
+		Victor Mono Medium,
+		system-ui,
+		sans-serif;
+}
 .navbar-item .icon {
 	display: none;
 	display: inline-flex;
