@@ -8,7 +8,7 @@ echo "const wander = {
 
 	// My favourite websites and pages I recommend to the Wander community.
 	pages: [" > ../wander/wander.js &&
-for url in (bat "$in" | grep '^h')
+for url in (bat "$in" | grep '^h' | sed 's|http://|https://|g')
    echo "		'$url'," >> "$out"
 end &&
 echo "	],

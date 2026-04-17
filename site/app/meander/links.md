@@ -51,7 +51,7 @@ https://marginalia-search.com/
 https://frills.dev/blog/231207-edit-everything/
 
 ### Site root
-https://fuckup.solutions/
+https://fuckup.solutions/index3.html
 https://kvibber.com/
 https://solar.lowtechmagazine.com
 https://fourthievesvinegar.org/
