@@ -1,9 +1,9 @@
 const wander = {
-	// Other Wander consoles that visitors can reach from my console.
 	consoles: [
+		'https://antonio.is/wander/',
+		'https://douglascuthbertson.com/wander/',
+		'https://heckmeck.de/wander/',
 	],
-
-	// My favourite websites and pages I recommend to the Wander community.
 	pages: [
 		'https://blog.polly.computer/untuck_NOW_queen/',
 		'https://aria.dog/barks/every-platform-is-hitler/',
@@ -25,6 +25,7 @@ const wander = {
 		'https://sexabolition.blog/fuck-biological-sex-we-have/',
 		'https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/',
 		'https://c4ss.org/content/61050',
+		'https://collapseos.org/why.html',
 		'https://www.galactanet.com/oneoff/theegg_mod.html',
 		'https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/',
 		'https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/',
@@ -68,9 +69,6 @@ const wander = {
 		'https://velveteen.one/',
 		'https://xn--gckvb8fzb.com/',
 	],
-
-	// Websites and consoles to ignore.  My console will never fetch
-	// consoles or web pages whose URLs match the following patterns.
 	ignore: [
 		'https://*.substack.com/',
 	],

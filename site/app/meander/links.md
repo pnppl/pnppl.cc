@@ -22,6 +22,7 @@ https://kevinboone.me/web-adjacent.html
 https://sexabolition.blog/fuck-biological-sex-we-have/
 https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/
 https://c4ss.org/content/61050
+https://collapseos.org/why.html
 
 ### Fiction
 https://www.galactanet.com/oneoff/theegg_mod.html
