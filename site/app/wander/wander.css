@@ -1,0 +1,47 @@
+* {
+	font-family: "Victor Mono Medium", system-ui, monospace;
+	font-weight: normal;
+}
+:focus-visible {
+	outline: medium solid lightseagreen;
+}
+body,
+section {
+	padding: 0.5em;
+}
+header {
+	padding: 0 0 0.5em;
+}
+button,
+button:disabled,
+input {
+	border: 2px solid;
+	border-color: #f0f0f0 #0b0b0b #0b0b0b #f0f0f0;
+	color: #000;
+	font-family: "Victor Mono Medium", system-ui, monospace;
+	font-weight: normal;
+}
+body,
+button,
+button:disabled,
+button:focus,
+button:hover,
+dialog {
+	background-color: silver;
+}
+button:disabled,
+button:disabled:hover {
+	background-color: #e8e8e8;
+}
+button:active,
+button:disabled,
+input,
+section,
+#wander-iframe {
+	border: 2px solid;
+	border-color: #0b0b0b #f0f0f0 #f0f0f0 #0b0b0b;
+}
+input,
+section {
+	background-color: #fff;
+}

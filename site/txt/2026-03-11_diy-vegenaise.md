@@ -14,8 +14,18 @@ fills a small mason jar nicely. x3 perfectly fills large jar.
 - 3/4-1 cup sunflower, avocado, or canola oil - **NOT OLIVE.**
 
 ## Instructions
-Combine everything but oil. Blend on high with an immersion blender for best results. **Ninja normal blender works, use punctured ziplock to drip oil in without making a mess.** 
+Combine everything but oil. Blend on high.
 
-Add the oil very slowly. Move the immersion blender up and down to incorporate air.
+Add part of oil, blend on high, repeat.
 
 maple syrup will make it less thick + fluffy **allegedly**. stevia, cane sugar, and brown rice syrup recommended by author
+
+## Ingredients (x4)
+- 1 cup (1 can) aquafaba
+- 1 tsp ground mustard
+- 1 tsp sea salt
+- 6 tsp (2 Tbsp) apple cider vinegar
+- 3-4 tsp (1+ Tbsp) sweetener
+- 3-4 cup oil
+
+Fills large mason jar with 3 cups oil, but 4 would be pushing it.

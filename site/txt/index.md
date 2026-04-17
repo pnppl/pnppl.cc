@@ -38,10 +38,19 @@ a.excerpt-more {
 --></style>
 Perpetually under construction. Pardon our dust.
 
-You might like to read [[the about page.|/about]]
+You might like to...
+- read [[the about page|/about]]
+- check out my [[fiction|/+/tag/fiction/]]
+- [[Meander|/app/meander/]] through sites I recommend or explore [[nagi miniweb|/app/nagi/]]
 
-If you don't use RSS, you can [[subscribe|mailto:add@rssby.email?subject=sub&body=http%3A%2F%2Fpnppl.cc]] with [[RSS by email.|http://rssby.email/]]
+You can subscribe...
+- to [[the RSS feed|/+/feed.rss]]
+- by [[sending an email|mailto:add@rssby.email?subject=sub&body=http%3A%2F%2Fpnppl.cc]] to [[RSS by email|http://rssby.email/]]
+- on Mastodon with [[RSS Parrot|https://rss-parrot.net/]]
 
-You can read offline with the [[ebook|/txt/!pnppl.epub]], [[html|/txt/!html.zip]], or [[plain text|/txt/!txt.zip]] version of the site.
+You can read offline with the...
+- [[ebook|/txt/!pnppl.epub]]
+- [[HTML|/txt/!html.zip]]
+- [[plain text|/txt/!txt.zip]]
 
 !newest

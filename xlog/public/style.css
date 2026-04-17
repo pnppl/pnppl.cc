@@ -405,7 +405,11 @@ video {
 .content ol,
 .content ul {
 	margin-left: 2em;
-	margin-top: 1em;
+	margin-top: 0.5em;
+}
+.content p:has(+ ul),
+.content p:has(+ ol) {
+	margin-bottom: 0;
 }
 .content ol {
 	list-style-position: outside;

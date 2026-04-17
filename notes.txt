@@ -121,6 +121,7 @@ todo:
 			- we should just have a script that runs all of our checks on every url, extracts the most recent post link, and writes it to either http or ssl. time consuming on a full run, but then we can just run it on the diff lines as KSW adds them
 			- can also maintain list of custom additions (and/or blocks)
 			- this way we have easy deltas when a site is added and can do a clean full rebuild without fiddling
+	- maybe should add DTD whateverthefuck
 
 low priority/done:
 - x tweak title display, not that important, shows filename rn, kinda nice actually
