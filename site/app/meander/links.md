@@ -23,6 +23,7 @@ https://sexabolition.blog/fuck-biological-sex-we-have/
 https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/
 https://c4ss.org/content/61050
 https://collapseos.org/why.html
+https://www.filfre.net/2011/05/will-crowthers-adventure-part-1/
 
 ### Fiction
 https://www.galactanet.com/oneoff/theegg_mod.html
@@ -60,6 +61,7 @@ https://fourthievesvinegar.org/
 https://www.wendycarlos.com/
 https://www.qwantz.com/
 https://wiki.archiveteam.org/
+https://adelfaure.net/
 
 ### News
 https://unicornriot.ninja/
