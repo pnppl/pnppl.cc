@@ -50,6 +50,7 @@ https://fishshell.com/
 https://annas-archive.gl/
 https://marginalia-search.com/
 https://frills.dev/blog/231207-edit-everything/
+https://littlebitspace.com/resources/
 
 ### Site root
 https://fuckup.solutions/index3.html
@@ -73,6 +74,7 @@ http://mycophobia.org/dcs/index.html
 http://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html
 http://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html
 http://www.prole.info/
+http://vivivi.leprd.space/webmastery/pre-css-attributes/
 
 ### Fiction
 http://www.terrybisson.com/theyre-made-out-of-meat-2/

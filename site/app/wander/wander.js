@@ -3,6 +3,7 @@ const wander = {
 		'https://antonio.is/wander/',
 		'https://douglascuthbertson.com/wander/',
 		'https://heckmeck.de/wander/',
+		'https://exurd.neocities.org/wander/',
 	],
 	pages: [
 		'https://blog.polly.computer/untuck_NOW_queen/',
@@ -43,6 +44,7 @@ const wander = {
 		'https://annas-archive.gl/',
 		'https://marginalia-search.com/',
 		'https://frills.dev/blog/231207-edit-everything/',
+		'https://littlebitspace.com/resources/',
 		'https://fuckup.solutions/index3.html',
 		'https://kvibber.com/',
 		'https://solar.lowtechmagazine.com',
@@ -58,6 +60,7 @@ const wander = {
 		'https://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html',
 		'https://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html',
 		'https://www.prole.info/',
+		'https://vivivi.leprd.space/webmastery/pre-css-attributes/',
 		'https://www.terrybisson.com/theyre-made-out-of-meat-2/',
 		'https://www.quoteunquoterecords.com/qur022.htm',
 		'https://smokepowered.com/',
@@ -71,6 +74,12 @@ const wander = {
 	],
 	ignore: [
 		'https://*.substack.com/',
+		'https://gwern.net/',
+		'https://slatestarcodex.com/',
+		'https://*.astralcodexten.com/',
+		'https://*.lesswrong.com/',
+		'https://*.yudkowsky.net/',
+		'https://x.com/',
 	],
 	referral: 'no',
 	styles: [
