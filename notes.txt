@@ -90,6 +90,7 @@ todo:
 	- it isn't much of a commonplace right now, need to put more informative/reference stuff and Weird Lists
 	- also put more fiction up
 	- and go easy on the pictures, bud
+		- actually dig up your hdd and put some glitch art up
 - rss images are broken. solvable with <base>?
 	- actually i think my reader might just be filtering out large images? investigate
 - nagi

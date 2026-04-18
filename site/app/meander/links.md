@@ -27,11 +27,11 @@ https://www.filfre.net/2011/05/will-crowthers-adventure-part-1/
 
 ### Fiction
 https://www.galactanet.com/oneoff/theegg_mod.html
-https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/
 
 ### Comic
 https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/
 https://kalebhorton.ghost.io/the-d-lbert-project/
+https://www.qwantz.com/
 
 ### Audio/video
 https://www.juliaserano.com/music.html
@@ -39,6 +39,7 @@ https://archive.org/details/MindWebs_201410
 https://kevincraig.us/audio/gogulski/
 https://www.rifters.com/blindsight/vampires.htm
 https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
+https://www.churchofeuthanasia.org/catalog/video.html
 
 ### Game/interactive
 https://xrafstar.monster/games/twine/tails/
@@ -59,12 +60,13 @@ https://kvibber.com/
 https://solar.lowtechmagazine.com
 https://fourthievesvinegar.org/
 https://www.wendycarlos.com/
-https://www.qwantz.com/
 https://wiki.archiveteam.org/
 https://adelfaure.net/
+https://www.vhemt.org/
 
 ### News
 https://unicornriot.ninja/
+https://www.techdirt.com/
 
 
 ## HTTP ##
@@ -76,7 +78,6 @@ http://mycophobia.org/dcs/index.html
 http://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html
 http://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html
 http://www.prole.info/
-http://vivivi.leprd.space/webmastery/pre-css-attributes/
 
 ### Fiction
 http://www.terrybisson.com/theyre-made-out-of-meat-2/
@@ -84,15 +85,16 @@ http://www.terrybisson.com/theyre-made-out-of-meat-2/
 ### Audio/video
 http://www.quoteunquoterecords.com/qur022.htm
 http://smokepowered.com/
+http://handthing.party/
 
 ### Misc. resource
 http://wiby.me
 http://web1.0hosting.net/
 http://temblast.com/android.htm
 http://fileformats.archiveteam.org/
+http://vivivi.leprd.space/webmastery/pre-css-attributes/
 
 ### Site root
 http://petermolnar.net/
 http://velveteen.one/
 http://xn--gckvb8fzb.com/
-
