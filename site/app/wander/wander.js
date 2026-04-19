@@ -77,6 +77,7 @@ const wander = {
 		'https://petermolnar.net/',
 		'https://velveteen.one/',
 		'https://xn--gckvb8fzb.com/',
+		'https://www.floodgap.com/',
 	],
 	ignore: [
 		'https://*.substack.com/',
