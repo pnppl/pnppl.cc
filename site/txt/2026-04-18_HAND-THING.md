@@ -9,6 +9,4 @@ Luckily, I thought to check the preload list about 15 minutes after I placed the
 
 I haven't tested it in old environments yet, thanks to the untimely death of an AC adapter, but I'd like for it to work on anything. Yes, it's a bit of a personal fixation, but it's also in keeping with the web 1.0 nature of [[Shaye Saint John's website|//web.archive.org/web/20170901151201if_/http://shayesaintjohn.net/]]. Pre-HTML5 video embedding is kind of ridiculous, but ffmpeg lets you convert to swf, and it's working on Netscape 7.2. I'd like to eventually add support for other old plugins that might be supported where Flash isn't installed.
 
-It's on Github Pages right now, but it will be moved to Web 1.0 Hosting when they issue an SSL cert. Web 1.0 Hosting is slower for my location, but I think they are less likely to spy on my visitors, and they do not contribute to a monoculture like Github.
-
 Not much else to say about it. If you need me, I'll be [[doing that hand thing|//handthing.party/]].
