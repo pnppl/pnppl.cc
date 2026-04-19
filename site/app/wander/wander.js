@@ -73,7 +73,6 @@ const wander = {
 		'https://temblast.com/android.htm',
 		'https://fileformats.archiveteam.org/',
 		'https://vivivi.leprd.space/webmastery/pre-css-attributes/',
-		'https://twcclassics.com/',
 		'https://petermolnar.net/',
 		'https://velveteen.one/',
 		'https://xn--gckvb8fzb.com/',

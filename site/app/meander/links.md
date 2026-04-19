@@ -93,7 +93,6 @@ http://web1.0hosting.net/
 http://temblast.com/android.htm
 http://fileformats.archiveteam.org/
 http://vivivi.leprd.space/webmastery/pre-css-attributes/
-https://twcclassics.com/
 
 ### Site root
 http://petermolnar.net/
