@@ -149,13 +149,15 @@ div:has(>input[name=math]):before {
 <script><!--// the dark side...
 if (document.querySelector) {
 	// clear out and hide URL field (pre-populated with protocol that prevents submission)
-	document.querySelector('input[type=url]').value='';
-	document.querySelector('div:has(>input[type=url])').style.display="none";
-	document.querySelector('#gbformurl').style.display="none";
+	document.querySelector('input[type=url]').value = '';
+	document.querySelector('div:has(>input[type=url])').style.display = "none";
+	document.querySelector('#gbformurl').style.display = "none";
 	// fix timestamp formatting
 	const timestamps = document.getElementsByClassName('guest-timestamp');
 	for (let stamp of timestamps) {
 		stamp.textContent = stamp.textContent.replaceAll('/', '-');
 	}
+	// label button
+	document.querySelector('input[type=submit]').value = "Write";
 }
 //--></script>
