@@ -670,6 +670,21 @@ a.navbar-item.active:active {
 	background-color: silver;
 }
 
+#RSS {
+	color: white;
+	text-shadow: black 1px 1px;
+	background-color: #EC8032;
+	border-color: #EC8032 #0B0B0B #0B0B0B #EC8032;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	padding: 0px 5px;
+	font-family:
+		Victor Mono Medium,
+		monospace,
+		monospace;
+	font-weight: bolder;
+}
+
 /* Accessibility button */
 #skip-nav {
 	position: absolute;
@@ -1106,20 +1121,6 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 	pointer-events: none;
 }
-#RSS {
-	color: white;
-	text-shadow: black 1px 1px;
-	background-color: #EC8032;
-	border-color: #EC8032 #0B0B0B #0B0B0B #EC8032;
-	border-width: 0 1px 1px 0;
-	border-style: solid;
-	padding: 0px 5px;
-	font-family:
-		Victor Mono Medium,
-		monospace,
-		monospace;
-	font-weight: bolder;
-}
 #email {
 	float: left;
 	margin-bottom: 1em;
@@ -1143,6 +1144,9 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	gap: 1em;
 	width: min-content;
 }
+#established {
+	width: 9ch;
+}
 .filename-right {
 	float: right;
 }
@@ -1158,6 +1162,7 @@ time.stamp {
 .title {
 	view-transition-name: page-title;
 }
+
 
 /* ==========================================================================
 	 Page-Specific (sitemap, calendar, search, onebitday, 404, index) all moved inline
