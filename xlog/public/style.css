@@ -877,6 +877,9 @@ a.autolink {
 a.autolink:visited {
 	color: indigo;
 }
+a.autolink.def {
+	text-decoration-style: wavy;
+}
 .link-text {
 	text-decoration: underline;
 }
