@@ -13,6 +13,7 @@ rm -rf site/.pagefind/ &&
 #	site/img/1bitday/!1bitday.zip \
 #	site/img/comics/!comics.zip \
 #	site/img/photos/!photos.zip &&
+curl https://pnppl.cc/.gb.txt > site/.gb.txt &&
 fish build.fish &&
 git stash -u &&
 git pull &&

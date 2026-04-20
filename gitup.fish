@@ -7,7 +7,8 @@ echo '
 .*
 w10hosting_default/
 \!*.*
-!/site/app/*/!*.htm
+!site/app/*/!*.htm
+!site/.gb.txt
 xlog/public/style-min.css
 site/+/
 site/1-bit.day/
