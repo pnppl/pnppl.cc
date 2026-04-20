@@ -7,7 +7,7 @@ html {
 #article {
 	background-color: white;
 }
-@media(prefers-color-scheme:dark) {	
+@media(prefers-color-scheme:dark) {
 	#article {
 		background-color: transparent;
 	}
@@ -37,7 +37,7 @@ html {
 
 /* --- notebook paper look --- */
 #article {
-	background-image: 
+	background-image:
 		linear-gradient(90deg, transparent calc(2em - 1px), pink 2em, transparent 2em),
 		repeating-linear-gradient(
 			to bottom,
@@ -46,7 +46,7 @@ html {
 			#ccc calc(2em - 1px),
 			#ccc 2em
 		);
-	padding: 2.15em 3em 1.85em;
+	padding: 2.15em 3em calc(1.85em - 1px);
 	border: 1px solid gray;
 	box-shadow: 0 0 5px gray;
 }
