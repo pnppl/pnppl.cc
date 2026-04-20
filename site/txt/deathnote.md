@@ -98,11 +98,12 @@ textarea,
 input[name="name"] {
 	width: 100%;
 }
-textarea,
-input {
+#article textarea,
+#article input {
 	height: 2em;
 	border-radius: 0;
 	border-width: 1px;
+	padding: 0 0.5em;
 }
 .guest-timestamp time {
 	font-weight: normal;
