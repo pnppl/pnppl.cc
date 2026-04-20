@@ -105,6 +105,12 @@ input[name="name"] {
 	border-width: 1px;
 	padding: 0 0.5em;
 }
+#article input[type=submit] {
+	font-family: dntitle;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
 .guest-timestamp time {
 	font-weight: normal;
 }
@@ -117,6 +123,10 @@ form:before {
 	display: block;
 	font-weight: bold;
 	text-align: center;
+	font-family: dntitle;
+	font-size: 2em;
+	padding: 0.5em 0;
+	text-transform: lowercase;
 }
 div:has(>textarea):before {
 	content: "Cause of death";
