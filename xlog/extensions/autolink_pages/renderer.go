@@ -27,8 +27,8 @@ func render(w util.BufWriter, source []byte, node ast.Node, entering bool) (ast.
 		parent := xlog.NewPage(url)
 		props := xlog.Properties(parent)
 		if v, ok := props["tags"]; ok && v != nil {
-			if slices.Contains(v.Value().([]string), "def") {
-				class = class + " def"
+			if slices.Contains(v.Value().([]string), "glossary") {
+				class = class + " glossary"
 				lines := strings.Split(string(parent.Content()), "\n")
 				for _, line := range lines {
 					if len(line) > 0 {
