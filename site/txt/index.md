@@ -40,7 +40,7 @@ Perpetually under construction. Pardon our dust.
 
 You might like to...
 - read [[the about page|/about]]
-- check out my [[fiction|/+/tag/fiction/]]
+- add a name to my [[Death Note|/deathnote/]]
 - [[Meander|/app/meander/]] through sites I recommend or explore [[nagi miniweb|/app/nagi/]]
 
 You can subscribe...

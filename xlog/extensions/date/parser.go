@@ -87,6 +87,12 @@ func (s *dateFilenameParser) Parse(parent ast.Node, reader text.Reader, pc parse
 }
 
 func (s *dateParser) Parse(parent ast.Node, reader text.Reader, pc parser.Context) ast.Node {
+	if filename, ok := pc.Get(xlog.PageFilenameKey).(string); ok {
+		if filename == "deathnote.md" {
+			return nil
+		}
+	}
+
 	l, _ := reader.PeekLine()
 	if len(l) < 2 {
 		return nil
