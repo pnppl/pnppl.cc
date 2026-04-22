@@ -27,7 +27,7 @@ html {
 	text-transform: lowercase;
 }
 .title {
-	font-size: 4em;
+	font-size: 3em;
 	margin: 0.5em 0;
 	line-height: 0.8;
 }
@@ -105,17 +105,21 @@ input[name="name"] {
 	border-width: 1px;
 	padding: 0 0.5em;
 }
+#article input[name=math] {
+	margin-top: 1px;
+}
 #article input[type=submit] {
 	font-family: dntitle;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 2px;
+	display: block;
+	margin: 2em auto 0;
 }
-.guest-timestamp time {
-	font-weight: normal;
+.guest-timestamp {
+	display: none;
 }
-.guest-timestamp:before,
-.guest-timestamp:after {
+.guest-name:after {
 	content: ' — ';
 }
 form:before {
@@ -128,12 +132,15 @@ form:before {
 	padding: 0.5em 0;
 	text-transform: lowercase;
 }
+#gbformname:after {
+	content: ":";
+}
 div:has(>textarea):before {
-	content: "Cause of death";
+	content: "Cause of death:";
 	display: block;
 }
 #gbformurl:after {
-	content: " (posts with URL will not be shown)";
+	content: " (posts with URL will not be shown):";
 }
 .message-error:after {
 	content: " (message = cause of death)";
@@ -144,16 +151,16 @@ div:has(>textarea):before {
 	padding-top: 1.55em;
 }
 div:has(>input[name=math]):before {
-	content: "Pass the shinigami's test... "
+	content: "Pass the shinigami's test: "
 }
 --></style>
 <!-- ~~~~~~ THE ACTUAL POST CONTENT GOES BELOW  ~~~~~~ -->
-**Donald John Trump** — 2026-04-20 — messy post-McDonalds ibogaine overdose
-**Alexander Caedmon Karp** — 2026-05-01  — shot by racist stalker
-**Peter Andreas Thiel** — 2026-07-21 — executed for homosexuality
-**Benjamin Netanyahu** — 2026-09-07 — Israeli missile targeting accident
-**Elon Reeve Musk** — 2026-09-27 — bludgeoned with sink by robot
-**Joanne Rowling** — 2026-11-20 — public bathroom sewage flood
+**Donald John Trump** — messy post-McDonalds ibogaine overdose
+**Alexander Caedmon Karp** — shot by racist stalker
+**Peter Andreas Thiel** — executed for homosexuality
+**Benjamin Netanyahu** — Israeli missile targeting accident
+**Elon Reeve Musk** — bludgeoned with sink by robot
+**Joanne Rowling** — public bathroom sewage flood
 <!-- ~~~~~~ THE ACTUAL POST CONTENT GOES ABOVE ~~~~~~ -->
 <!--#include virtual="/cgi-bin/gb/?$args" -->
 <script><!--// the dark side...
