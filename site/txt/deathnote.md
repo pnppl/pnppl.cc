@@ -1,4 +1,5 @@
 # Digital Death Note
+#project
 <style><!--
 /* --- death note cover look --- */
 html {
@@ -11,6 +12,9 @@ html {
 	#article {
 		background-color: transparent;
 	}
+}
+.established {
+	color: #CBCFD8;
 }
 /* it's ok the coolness allows it */
 @font-face {
@@ -31,7 +35,11 @@ html {
 	margin: 0.5em 0;
 	line-height: 0.8;
 }
-.subtitle {
+.subtitle,
+.columns,
+.tag,
+h2,
+aside {
 	display: none;
 }
 
@@ -58,27 +66,6 @@ html {
 	line-height: 2;
 	font-size: 1em;
 }
-/*
-#article p {
-	font-size: 1em;
-	padding-bottom: 2em;
-}
-*/
-/* we just aren't gonna use these */
-/*
-.view h1,
-.view h2,
-.view h3 {
-	border: 0;
-}
-aside {
-	margin-left: 1em !important;
-}
-aside * {
-	background-color: transparent !important;
-	line-height: 2;
-}
-*/
 
 /* --- guestbook styling --- */
 #gbformmessage,
