@@ -1150,8 +1150,10 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	gap: 1em;
 	width: min-content;
 }
-#established {
+.established {
 	width: 9ch;
+	font-family: cursive, "Victor Mono Medium", serif;
+	font-size: 0.9em;
 }
 .filename-right {
 	float: right;
