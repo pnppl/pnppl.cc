@@ -8,20 +8,15 @@ todo:
 	- nicer ul styling
 	- couldn't get the home icon to behave so I just hide it on mobile
 		- in offpunk `view full` it takes up an entire page <_>
-	- x heading buttons run into text on mobile
-		- x i think i want to get rid of these entirely
-			- x the hover shit sucks and the button style is intrusive without it
-			- x the &sect should be before the heading and the &not should probably be a caret
 	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
 		- can also indent the following text with eg h2 ~ p: margin-left
 	- h3s need to be underlined (and maybe indented too). something like: border-bottom: 1px solid lightgray.
 		- or maybe text-decoration: 1px solid lightgray underline; text-underline-offset: 1ch
 	- switch to a preprocessor so we can eliminate variables easily
 		- tried this quickly and they didn't behave as expected, scoping issue
-	- x might be worth splitting some page-specific styles out to their own sheets, maybe print, search
-		- or ask support to turn on gzip for css...
+	- ask support to turn on gzip for css...
 	- x besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
-	- changing width to max-width on the toc solved something but i don't remember what. anyway i forgot it now shrinks in width when it's hidden. annoying. investigate
+		- had gotten rid of these but they're back in the death note <_< >_>
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it
@@ -56,8 +51,6 @@ todo:
 					- x writing links to images like ../img/ is a problem: when embedded in the index, it causes mosaic to send a request for pnppl.cc/../img/. lol
 		- add likes counter?
 		- add web1.0hosting button?
-		- x .md files always try to download. this seems to be controlled by the headers sent by the server
-			- support to the rescue!
 - would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
 	- is this actually a stupid idea? most sites won't serve http
 	- definitely don't strip http:// since some sites only serve that and we want to specify
@@ -125,43 +118,24 @@ todo:
 	- maybe should add DTD whateverthefuck
 
 low priority/done:
-- x tweak title display, not that important, shows filename rn, kinda nice actually
-	- x swap filename and firstline/title?
-- x get autolink_pages to stop autolinking pages to themselves
-- x fix emoji bullshit
-	- emoji markdown support removed
-	- unicode glyphs replaced with ascii for extlink, footnote
-	- navbar glyphs replaced with degenerate hidden <li></li> in template to make NCSA render bullets for us
-	- should get rid of all the fontawesome/icon stuff
-- x disabled typography renderer (... -> …, "" -> “”, etc) because it dumps a bunch of &quot; type shit in ncsa. but it's kind of ugly not having it and is counter to the goal of: low tech input, high tech output. so could consider turning it back on.
-	- no, leave it off. think of how annoying it is pasting "smart quotes" into an SMS
-- x fix date format
-	- calendar links to pages by all date mentions. it would be nice to have one restricted to creation/modification as well
-		- of course i had hoped to just generate an alphabetical list of filenames to the same effect.  recent, but everything
-		- these should also be anchors if possible. i don't understand why you would insert tags in a page and link to them without including anchors
-		- anchors are now added and working, but i haven't managed to insert links to them on the tag page. calendar page is working
-			- should be fixed now, had to make tag page show yyyy-mm-dd
+- should get rid of all the fontawesome/icon stuff
 - mosaic compat
 	- x anchors don't work -- is that my fault or did mosaic not support them?
 		- in html 2.0 you can't navigate to an element by id, you have to have <a name="id">
 	- why did <center> stop working?
-- x setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
+- setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
 - ! aliasing for mentions?
 - x a lot of stuff is going to be really useless if i can't get it to print the first line insted of filename
-	- related pages: list of dates. calendar entries: list of dates. hashtags: list of dates. we need to figure out how to make what i did with autlink_pages more universal
-	- i THINK the frontmatter extension does everything i want, except that it parses ---\ntitle: \n--- instead of the first line
-		- i could just use my shell script to change the first line to this format, but then my hacky autolink_pages solution will fail
-		- getting close. but two major issues:
-			- if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
-				- solved with some ugly hacks:
-					1. frontmatter extension is split in two, one triggers on 'nil' ("anything", but apparently not really) and the other on '#'
-					2. files are just preprocessed with shell to duplicate first line and remove leading/trailing h1 hash
-						- This breaks at least one file that starts '```' despite use of yaml block literal
-			- the line can't be indented. setting it to accept indented lines causes server to hang. NBD
-			- the line does not get rendered normally. the parser consumes it. it's metadata after all
-				- fixed i think, had to comment out node removal
-					- undid this as part of my ugly h1 solve
+	- if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
+		- solved with some ugly hacks:
+			1. frontmatter extension is split in two, one triggers on 'nil' ("anything", but apparently not really) and the other on '#'
+			2. files are just preprocessed with shell to duplicate first line and remove leading/trailing h1 hash
+				- This breaks at least one file that starts '```' despite use of yaml block literal
+	- the line can't be indented. setting it to accept indented lines causes server to hang. NBD
+	- the line does not get rendered normally. the parser consumes it. it's metadata after all
+		- fixed i think, had to comment out node removal
+			- undid this as part of my ugly h1 solve
 - x autolink_pages fails on all sorts of stuff i wouldn't expect, basically any leading punctuation
 	- i strip leading and trailing h1 from the normalized name but i figured the rest could be left intact. apparently not?
 	- the trigger is an issue. setting it to nil, or ' ', is unsuccessful, and several characters (#, $, %) cause a hang
@@ -169,34 +143,15 @@ low priority/done:
 			- removed these because they don't actually work?
 - x added hotkeys for Toc, Home, Src (accesskey="n") with <u> for active char
 	- ffx: alt-shift-key
-	- x want to add for the rest of the navbar but it's spit out on a template. Calendar, Recent, Hashtags. no need for rss accelerator
 	- x shortcuts to the first 10 headings would be cool but not worth much effort
 		- ! implemented this but it relies on global state and is buggy
 			- i can't pass the number around the template because they only take one arg and it calls itself recursively
 			- i would rather put the accesskeys in the headings themselves instead of the toc, but i don't know how to do this
 				- if i did figure this out, i think i could have key=1 cycle through the first h1 and all its children, key=2 the second h1 and children, etc.
 				- kind of hard to troubleshoot because it behaves differently with the local server than the deployed one
-- x pushed theme in a win9x direction, hopefully not too overbearing. gives it a lot of personality
-	- the charm of it is how the 9x elements seem apart from the content
-		- we want to style navigation elements this way, and content its own way, closer to the sleek OOTB design
-		- the theme not being unified is its strength. 9x programs always did whatever they wanted anyway
-		- it's like we have photoshop or the like open, plus a pop-up for the TOC, and a toolbar with our buttons
-- x mobile should wrap now
 - reduced title to 70 chars, which is max for gopher. filename still doesn't display quite right.
-	- floating it to the right on list pages is stupid and should be changed
-- x All Posts page - alpha sorted by filename, show filename and firstline. also link to src
-	- recents already seems to include all posts
-	- also sort by firstline
-	- sorting by firstline should be done. masquerading as disqus. for filename, idk, might want a separate page. or just link to directory
-- x my site is being rendered in "quirks mode", i assume due to the use of <center>. we don't really need this, it doesn't make bare html look much better. replace with appropriate modern alternative.
-	- actually the doctype decl is not making it through to the final page for some fucking reason
-	- all comments seem to be disappearing. seems to be my fault, it made it through before
-	- i guess i can probably keep using my crusty tags! :)
-	- issue was the doctype got moved outside the header decl in the layout.html template
-- TOC is working but might want to move it outside view area
-	- no, leave position alone. however we need text to be better at not running into it
-	- x no visual indication of current position
-	- ! Backlinks, See Also added with shell kludge
+	- ! floating it to the right on list pages is stupid and should be changed
+- ! Backlinks, See Also added with shell kludge
 - replace branding - logo, name, favicon
 	- tent. name: pnppl's commonplace
 		- kinda long compared to just pnppl.cc 
@@ -205,17 +160,7 @@ low priority/done:
 		- just threw up my 1-bit.day avatar for now
 - x <ul> only generated with -, not * or +
 	- this might cause problems. i think it's the only change i've made to markdown handling that is a break not an extension
-- x #1 is a hashtag. should not be
-- x email button is messed up on mobile
-- html output has a lot of pointless whitespace - add hyphens to templates
-- x page generation is just... nondeterministic. all the pages change slightly for no reason every build. oh well
-	- removed from git tracking
-- x recents is all fucked up, thought i fixed that
-- x search
-	- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
-	- x fix dark mode styling
-- x get rid of shell preprocessing
-	- resorted to AI but finally got this dealt with
+- pagefind was very easy to add. i wish it did not depend on wasm. maybe we can replace it later.
 - x the backslash in my shruggie did not make it to the published html >:(
 	- i don't even know where to begin with this. something somewhere along the way probably needs me to escape it by doubling it
 	- the typographer markdown extension triggers on \. but i have this disabled. it does "smart quotes" etc.
@@ -247,44 +192,19 @@ low priority/done:
 		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
-- i found out what the hyphens in templates mean!!! they suppress leading or trailing whitespace!! yay!!
-	- x maybe we can get rid of all that damn whitespace mosaic displays in the page title
-	 - more useless whitespace can be removed but also the html we output just looks like crap and removing more whitespace indiscriminately won't help
-		- maybe we should just put everything through a linter when we build
+- maybe we should put everything through a linter when we build
 - i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first.
-- x why the fuck aren't backlinks working?
-	- it's because the wikilink extension makes its own type of nodes
-- x codeblock line numbering is a goddamn disaster in html/rss. we should prepend the numbers with css like how we number headings
-- x calendar renders in a weird inconsistent order. feb-26, jan-26, nov-25, dec-25
-	- resorted to AI but it's not really complicated, just functional sort syntax i don't understand
-- x filenames in date format should be treated as containing that date - added to calendar, etc.
-	- date format should have date-only and time-also formats, and we need to select one to rule them all
-		- actually just yyyy-mm-dd is fine
-	- pretty janky but i got filenames working
-	- ! we should distinguish between types of calendar entry
+- ! we should distinguish between types of calendar entry (text mention, filename)
 - rss is a little wonky
-	- really need to prioritize this since i want to promote RSS and make it the default way to follow me
-		- i think it's now officially Good Enough but could use some polish
-			- x jump back from footnote doesn't work
-				- i only had name=, not id, and my reader's html renderer is not so forgiving
-			- TOC?
-- x tracked down shortcode bug - modified frontmatter ext with nil trigger
+	- i think it's now officially Good Enough but could use some polish
+	- TOC?
 - have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
 - blank titles cause issues
 - git history is already fucking massive, probably thanks to xlog rebuilding goddamn everything each time with its nondeterministic builds
 	- we clearly need to just exclude the stuff xlog builds from git
 	- decided to both add them to my gitignore and replace `git add .` with specific locations for now. both approaches are kind of ugly and i don't need both but idk 
-- x figure out wtf is up with permissions. just noticed i have been making them executable to group and other just not owner. i am not happy about this.
-	- if we have to make them executable for the host then let's add in a chmod -x step after
-		- did this, seems ok
-	- messing around on ftp, we actually have normal chmod and -x doesn't seem to break anything
-		- was i just confused because i was somehow accidentally removing x from directories? can we skip all this bullshit and do 644?
-			- apparently so
 - might be nice to add IDs and fragments so that backlinks point to the actual link
-- index on search engines, add to indie/small web directories, make friends, etc.
-- x 404
-	- i could make this into an extension and spit out every error with a template. seems kind of pointless though. not sure it would even be supported by the host. the only other error i've encountered is 403 from fucking up permissions
 - optimize performance, it's getting kinda fuckin slow. look into photo thumbnailing and the ridiculous next/prev helper functions (we should just find these once and store them as values in the page struct)
 - deploy/build script needs a complete overhaul
 	- mtimes and mobile sync are totally fucked
@@ -296,16 +216,6 @@ low priority/done:
 		- could also link anarchy one to an anarchist website, lain one to... lain wikipedia?, etc.
 		- if i do this i could use them in the more traditional promo way. a web1.0hosting one would be good
 - the excerpt stuff could be more generalized to make !embed more useful
-- x wikilink syntax
-	- very hacky but complete. however it would be a huge pain to swap label and destination so links have to be written [[file.html|click here]]
-		- markor reads them the other way around. must fix this
-			- i think i did. was actually easy
-	- rather irritating not to be able to refer to pages by name, but autolinking means you don't have to if you are using the same display text
-- x i should really fix the heading semantics
-	- the h1/h2 for title/name should become <h1><span>
-	- all headings inside documents should begin at h2
-	- i ran into this before with the epub and for some reason i didn't seriously consider it, i guess because it makes h1s seem kinda useless. but it makes sense, and would obviate the epub hack
-	- easy enough to add a # to the heads in the source doc with sed and update the templates. the more annoying thing is updating all the css
 - x support other delivery formats like epub
 	- i should be able to do this relatively easily with pandoc. i think i need to render p.Render() to files then feed those to it
 		- our use of headings is a problem. pandoc inserts a chapter break at each h1. not only do many documents have many h1s, many have zero h1s
@@ -328,7 +238,6 @@ low priority/done:
 			- actually i guess mobi should work on palm and that's less crap. but still. eh.
 				- apparently mobi is an extension of palmdoc!
 					- and azw[1] is mobi?? but... kindle doesn't support it anymore
-- cleanup notes.txt, getting long...
 
 
 longterm notions
