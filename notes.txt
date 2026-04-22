@@ -17,6 +17,8 @@ todo:
 	- ask support to turn on gzip for css...
 	- x besides variables and exotic selectors like :not and :has, biggest problem atm is negative margins. they're hacky and fuck it up on old browsers
 		- had gotten rid of these but they're back in the death note <_< >_>
+	- just noticed my width media queries are based on my shitty laptop resolution of 768 pixels... but that's the height, not width... wtf
+		- seems like it works ok but uh. should be changed to something more normal. 640, 800, 1024...
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it

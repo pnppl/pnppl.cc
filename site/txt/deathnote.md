@@ -54,7 +54,7 @@ aside {
 			#ccc calc(2em - 1px),
 			#ccc 2em
 		);
-	padding: 2.15em 3em calc(1.85em - 1px);
+	padding: 2.15em 1em calc(1.85em - 1px) 3em;
 	border: 1px solid gray;
 	box-shadow: 0 0 5px gray;
 }

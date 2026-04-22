@@ -1,5 +1,5 @@
 # Web Applications #
-#code
+#code #project
 
 - [[maRRRshmallow breath counter|/app/rrr/]]: a simple **JavaScript** tool for measuring my cat's resting respiratory rate.
 - [[nagi miniweb|/app/nagi/]]: minimalist version of [[Kagi Small Web|https://kagi.com/smallweb]]. An experiment in brute force. Does not require JavaScript or CSS; does require frames. **Compatible with links2 and elinks.** [[Writeup here|2026-04-08_nagi]].
