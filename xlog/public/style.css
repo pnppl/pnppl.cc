@@ -881,7 +881,7 @@ a.autolink:visited {
 	color: indigo;
 }
 a.autolink.glossary {
-	text-decoration-style: wavy;
+	text-decoration-style: dotted;
 }
 .link-text {
 	text-decoration: underline;
