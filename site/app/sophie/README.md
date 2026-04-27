@@ -26,7 +26,7 @@
 
 
 # About Sophie
-All assets are from Puzzle Castle, a children's video game based on the picture book of the same name, released as a CD-ROM for PC and Mac in 1996. I did not make them, just altered them. They were dumped with Media Station[^m] and some manual screenshooting. Plz no sue.
+All assets are from Puzzle Castle, a children's video game based on the picture book of the same name, released as a CD-ROM for PC and Mac in 1996. I did not make them, just altered them. They were dumped with Media Station[^m] and some manual screenshooting. Made with love, plz no sue.
 
 Code, such as it is, is AGPLv3.
 
