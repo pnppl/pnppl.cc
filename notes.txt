@@ -19,6 +19,13 @@ todo:
 		- had gotten rid of these but they're back in the death note <_< >_>
 	- just noticed my width media queries are based on my shitty laptop resolution of 768 pixels... but that's the height, not width... wtf
 		- seems like it works ok but uh. should be changed to something more normal. 640, 800, 1024...
+	- add prefers-contrast media queries
+		- low
+			- light: gray background
+			- dark: dark gray background
+		- high
+			- light: black text
+			- dark: white text
 - x next/prev post buttons
 	- should probably make these fit nicer
 - display tags for item next to links to it

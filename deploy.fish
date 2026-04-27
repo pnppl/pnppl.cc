@@ -56,6 +56,7 @@ end &&
 fish map/sitemap.fish &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
+chmod 666 site/.gb.txt &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; exit" -u pnppl,$FTP_PASSWORD w10.host
 
 if test $status -ne 0

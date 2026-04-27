@@ -380,6 +380,7 @@ video {
 	margin-bottom: 0;
 }
 
+h2#Footnotes, /* omg fix this */
 .content h1,
 .content h2 {
 	margin-top: 1.75em;

@@ -108,6 +108,7 @@ input[name="name"] {
 }
 .guest-name:after {
 	content: ' — ';
+	font-weight: normal;
 }
 form:before {
 	content: "Add a name... if you dare...";

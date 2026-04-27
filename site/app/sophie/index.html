@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="no-referrer">
+		<link rel="icon" href="favicon.ico">
+		<meta property="og:site_name" content="pnppl.cc">
+		<meta property="og:title" content="Build-A-Sophie">
+		<meta property="og:description" content="Fan-made character creator for Puzzle Castle (1996)">
+		<meta property="og:image" content="https://pnppl.cc/app/sophie/img/!2base/!2base-!lowered-light.gif">
+		<meta property="og:url" content="https://pnppl.cc/app/sophie">
+		<meta property="og:type" content="website">
+		<meta name="description" content="Fan-made character creator for Puzzle Castle (1996). Listen to MIDIs and dress up Sophie.">
+		<title>Build-A-Sophie | pnppl.cc</title>
+		<style><!--
+		html {
+			cursor: url("shield.cur"), auto;
+			height: 100%;
+			width: 100%;
+			image-rendering: pixelated;
+			background-color: lightskyblue;
+		}
+		body {
+			margin: 0;
+		}
+		input {
+			position: absolute;
+			left: -99999px;
+			top: -99999px;
+		}
+		input:checked + label {
+			display: inline;
+		}
+		a {
+			position: absolute;
+			right: 1px;
+			top: 1px;
+			opacity: 33%;
+		}
+		#character {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			margin: auto;
+		    border-image:  url("border.gif") 7 /  7px / 0 round;
+    		border-width:  7px;
+    		border-style:  solid;
+		}
+		label {
+			display: none;
+			cursor: pointer;
+			cursor: url("sword.cur"), pointer;
+			position: absolute;
+			line-height: 0;
+		}
+
+		/* vvv --- pixel offsets --- vvv */
+		label.body {
+			left: 149px;
+			top: 68px;
+		}
+		label.tights {
+			left: 177px;
+			top: 182px;
+		}
+		label.skirt {
+			left: 165px;
+			top: 152px;
+		}
+		label.hair {
+			left: 171px;
+			top: 83px;
+		}
+		label.hat {
+			left: 154px;
+			top: 48px;
+		}
+		label.shoes-left {
+			left: 156px;
+			top: 213px;
+		}
+		label.shoes-right {
+			left: 185px;
+			top: 211px;
+		}
+		label.necklace {
+			left: 179px;
+			top: 116px;
+		}
+		label.pet {
+			left: 0;
+			top: 53px;
+		}
+		/* ^^^ --- pixel offsets --- ^^^ */
+
+		#bgcolor,
+		label.bgcolor {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		label[for=bgcolor-0].bgcolor { background-color: lightskyblue; }
+		label[for=bgcolor-1].bgcolor { background-color: pink; }
+		label[for=bgcolor-2].bgcolor { background-color: white; }
+		label[for=bgcolor-3].bgcolor { background-color: plum; }
+		label[for=bgcolor-4].bgcolor { background-color: teal; }
+		label[for=bgcolor-5].bgcolor { background-color: black; }
+		audio {
+			position: absolute;
+			width: 100%;
+			height: 20px;
+			bottom: 0;
+			display: none;
+		}
+		#music:checked ~ audio {
+			display: block;
+		}
+		label#turntable {
+			display: block;
+			left: 1px;
+			top: 1px;
+			position: absolute;
+			opacity: 33%;
+		}
+		#music:checked ~ label#turntable {
+			opacity: 100%;
+		}
+
+		/* vvv --- queries --- vvv */
+		@media screen and (max-width: 313px) {
+			#character {
+				border: 0;
+			}
+			audio,
+			object,
+			embed,
+			label#turntable {
+				display: none;
+			}
+		}
+		@media screen and (min-width: 666px) and (min-height: 629px) {
+			#character {
+				transform: scale(2);
+				transform-origin: 50% 0;
+			}
+		}
+		--></style>
+	</head>
+	<body>
+	<h2 style="display:none">This page requires CSS.</h2>
+	<div id="bgcolor">
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-0">
+		<label for="bgcolor-1" class="bgcolor" title="bgcolor"></label>
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-1">
+		<label for="bgcolor-2" class="bgcolor" title="bgcolor"></label>
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-2">
+		<label for="bgcolor-3" class="bgcolor" title="bgcolor"></label>
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-3">
+		<label for="bgcolor-4" class="bgcolor" title="bgcolor"></label>
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-4">
+		<label for="bgcolor-5" class="bgcolor" title="bgcolor"></label>
+		<input type="radio" name="bgcolor" class="bgcolor" id="bgcolor-5" checked>
+		<label for="bgcolor-0" class="bgcolor" title="bgcolor"></label>
+
+	</div>
+	<div id="character">
+		<input type="radio" name="background" class="background" id="background-0">
+		<label for="background-1" class="background" title="background"><img src="img/!1background/!1background-bedroom.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-1">
+		<label for="background-2" class="background" title="background"><img src="img/!1background/!1background-bedroom2.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-2">
+		<label for="background-3" class="background" title="background"><img src="img/!1background/!1background-blankk.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-3">
+		<label for="background-4" class="background" title="background"><img src="img/!1background/!1background-dungeon.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-4">
+		<label for="background-5" class="background" title="background"><img src="img/!1background/!1background-kitchen2.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-5">
+		<label for="background-6" class="background" title="background"><img src="img/!1background/!1background-playpen.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-6">
+		<label for="background-7" class="background" title="background"><img src="img/!1background/!1background-portraits.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-7">
+		<label for="background-8" class="background" title="background"><img src="img/!1background/!1background-portraits2.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-8">
+		<label for="background-9" class="background" title="background"><img src="img/!1background/!1background-portraits3.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-9">
+		<label for="background-10" class="background" title="background"><img src="img/!1background/!1background-tower2.gif" alt="background" width="300" height="300"></label>
+		<input type="radio" name="background" class="background" id="background-10" checked>
+		<label for="background-0" class="background" title="background"><img src="img/!1background/!1background-!hills.gif" alt="background" width="300" height="300"></label>
+
+		<input type="radio" name="body" class="body" id="body-0">
+		<label for="body-1" class="body" title="body"><img src="img/!2body/!2body-lowered-dark.gif" alt="body" width="73" height="174"></label>
+		<input type="radio" name="body" class="body" id="body-1">
+		<label for="body-2" class="body" title="body"><img src="img/!2body/!2body-lowered-med.gif" alt="body" width="73" height="174"></label>
+		<input type="radio" name="body" class="body" id="body-2">
+		<label for="body-3" class="body" title="body"><img src="img/!2body/!2body-raised-dark.gif" alt="body" width="73" height="174"></label>
+		<input type="radio" name="body" class="body" id="body-3">
+		<label for="body-4" class="body" title="body"><img src="img/!2body/!2body-raised-light.gif" alt="body" width="73" height="174"></label>
+		<input type="radio" name="body" class="body" id="body-4">
+		<label for="body-5" class="body" title="body"><img src="img/!2body/!2body-raised-med.gif" alt="body" width="73" height="174"></label>
+		<input type="radio" name="body" class="body" id="body-5" checked>
+		<label for="body-0" class="body" title="body"><img src="img/!2body/!2body-!lowered-light.gif" alt="body" width="73" height="174"></label>
+
+		<input type="radio" name="hair" class="hair" id="hair-0">
+		<label for="hair-1" class="hair" title="hair"><img src="img/!hair/!hair-blonde.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-1">
+		<label for="hair-2" class="hair" title="hair"><img src="img/!hair/!hair-blue-intense.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-2">
+		<label for="hair-3" class="hair" title="hair"><img src="img/!hair/!hair-blue.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-3">
+		<label for="hair-4" class="hair" title="hair"><img src="img/!hair/!hair-brown.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-4">
+		<label for="hair-5" class="hair" title="hair"><img src="img/!hair/!hair-green-intense.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-5">
+		<label for="hair-6" class="hair" title="hair"><img src="img/!hair/!hair-green.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-6">
+		<label for="hair-7" class="hair" title="hair"><img src="img/!hair/!hair-pink-intense.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-7">
+		<label for="hair-8" class="hair" title="hair"><img src="img/!hair/!hair-pink.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-8">
+		<label for="hair-9" class="hair" title="hair"><img src="img/!hair/!hair-purple-intense.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-9">
+		<label for="hair-10" class="hair" title="hair"><img src="img/!hair/!hair-purple.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-10">
+		<label for="hair-11" class="hair" title="hair"><img src="img/!hair/!hair-red-intense.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-11">
+		<label for="hair-12" class="hair" title="hair"><img src="img/!hair/!hair-red.gif" alt="hair" width="39" height="29"></label>
+		<input type="radio" name="hair" class="hair" id="hair-12" checked>
+		<label for="hair-0" class="hair" title="hair"><img src="img/!hair/!hair-!black.gif" alt="hair" width="39" height="29"></label>
+
+		<input type="radio" name="tights" class="tights" id="tights-0">
+		<label for="tights-1" class="tights" title="tights"><img src="img/!tights/!tights-pink-and-green.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-1">
+		<label for="tights-2" class="tights" title="tights"><img src="img/!tights/!tights-pink-and-yellow.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-2">
+		<label for="tights-3" class="tights" title="tights"><img src="img/!tights/!tights-pink-blue-green-flowers.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-3">
+		<label for="tights-4" class="tights" title="tights"><img src="img/!tights/!tights-red-and-green.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-4">
+		<label for="tights-5" class="tights" title="tights"><img src="img/!tights/!tights-red-blue-green-flowers.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-5">
+		<label for="tights-6" class="tights" title="tights"><img src="img/!tights/!tights-yellow-and-green.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-6">
+		<label for="tights-7" class="tights" title="tights"><img src="img/!tights/!tights-yellow-and-pink.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-7">
+		<label for="tights-8" class="tights" title="tights"><img src="img/!tights/!tights-yellow-and-red.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-8">
+		<label for="tights-9" class="tights" title="tights"><img src="img/!tights/!tights-yellow-blue-green-flowers.gif" alt="tights" width="31" height="39"></label>
+		<input type="radio" name="tights" class="tights" id="tights-9" checked>
+		<label for="tights-0" class="tights" title="tights"><img src="img/!tights/!tights-!red-and-yellow.gif" alt="tights" width="31" height="39"></label>
+
+		<input type="radio" name="hat" class="hat" id="hat-0">
+		<label for="hat-1" class="hat" title="hat"><img src="img/hat/hat-crown-blue.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-1">
+		<label for="hat-2" class="hat" title="hat"><img src="img/hat/hat-crown-green.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-2">
+		<label for="hat-3" class="hat" title="hat"><img src="img/hat/hat-crown-heart.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-3">
+		<label for="hat-4" class="hat" title="hat"><img src="img/hat/hat-crown-pink.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-4">
+		<label for="hat-5" class="hat" title="hat"><img src="img/hat/hat-monster-helmet.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-5">
+		<label for="hat-6" class="hat" title="hat"><img src="img/hat/hat-sun-red.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-6">
+		<label for="hat-7" class="hat" title="hat"><img src="img/hat/hat-sun.gif" alt="hat" width="53" height="53"></label>
+		<input type="radio" name="hat" class="hat" id="hat-7" checked>
+		<label for="hat-0" class="hat" title="hat"><img src="img/hat/hat-!none2.gif" alt="hat" width="53" height="53"></label>
+
+		<input type="radio" name="necklace" class="necklace" id="necklace-0">
+		<label for="necklace-1" class="necklace" title="necklace"><img src="img/necklace/necklace-necklace-diamond.gif" alt="necklace" width="25" height="21"></label>
+		<input type="radio" name="necklace" class="necklace" id="necklace-1">
+		<label for="necklace-2" class="necklace" title="necklace"><img src="img/necklace/necklace-necklace-heart.gif" alt="necklace" width="25" height="21"></label>
+		<input type="radio" name="necklace" class="necklace" id="necklace-2">
+		<label for="necklace-3" class="necklace" title="necklace"><img src="img/necklace/necklace-necklace-pink.gif" alt="necklace" width="25" height="21"></label>
+		<input type="radio" name="necklace" class="necklace" id="necklace-3" checked>
+		<label for="necklace-0" class="necklace" title="necklace"><img src="img/necklace/necklace-!none1.gif" alt="necklace" width="25" height="21"></label>
+
+		<input type="radio" name="pet" class="pet" id="pet-0">
+		<label for="pet-1" class="pet" title="pet"><img src="img/pet/pet-armor.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-1">
+		<label for="pet-2" class="pet" title="pet"><img src="img/pet/pet-cat-asleep.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-2">
+		<label for="pet-3" class="pet" title="pet"><img src="img/pet/pet-cat-bath.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-3">
+		<label for="pet-4" class="pet" title="pet"><img src="img/pet/pet-cat-hat.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-4">
+		<label for="pet-5" class="pet" title="pet"><img src="img/pet/pet-dog.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-5">
+		<label for="pet-6" class="pet" title="pet"><img src="img/pet/pet-dragon.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-6">
+		<label for="pet-7" class="pet" title="pet"><img src="img/pet/pet-duck-wheels.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-7">
+		<label for="pet-8" class="pet" title="pet"><img src="img/pet/pet-dung.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-8">
+		<label for="pet-9" class="pet" title="pet"><img src="img/pet/pet-elephant-pink.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-9">
+		<label for="pet-10" class="pet" title="pet"><img src="img/pet/pet-flowers.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-10">
+		<label for="pet-11" class="pet" title="pet"><img src="img/pet/pet-frog-bottle.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-11">
+		<label for="pet-12" class="pet" title="pet"><img src="img/pet/pet-frog.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-12">
+		<label for="pet-13" class="pet" title="pet"><img src="img/pet/pet-mannequin.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-13">
+		<label for="pet-14" class="pet" title="pet"><img src="img/pet/pet-piggy-bank.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-14">
+		<label for="pet-15" class="pet" title="pet"><img src="img/pet/pet-rabbit.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-15">
+		<label for="pet-16" class="pet" title="pet"><img src="img/pet/pet-skeleton.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-16">
+		<label for="pet-17" class="pet" title="pet"><img src="img/pet/pet-snail.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-17">
+		<label for="pet-18" class="pet" title="pet"><img src="img/pet/pet-soldier.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-18">
+		<label for="pet-19" class="pet" title="pet"><img src="img/pet/pet-teddy-shot.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-19">
+		<label for="pet-20" class="pet" title="pet"><img src="img/pet/pet-teddy.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-20">
+		<label for="pet-21" class="pet" title="pet"><img src="img/pet/pet-tubes.gif" alt="pet" width="125" height="247"></label>
+		<input type="radio" name="pet" class="pet" id="pet-21" checked>
+		<label for="pet-0" class="pet" title="pet"><img src="img/pet/pet-!nonee.gif" alt="pet" width="125" height="247"></label>
+
+		<input type="radio" name="shoes-left" class="shoes-left" id="shoes-left-0">
+		<label for="shoes-left-1" class="shoes-left" title="shoes-left"><img src="img/shoes-left/shoes-left-blank2.gif" alt="shoes-left" width="44" height="36"></label>
+		<input type="radio" name="shoes-left" class="shoes-left" id="shoes-left-1">
+		<label for="shoes-left-2" class="shoes-left" title="shoes-left"><img src="img/shoes-left/shoes-left-fast-left.gif" alt="shoes-left" width="44" height="36"></label>
+		<input type="radio" name="shoes-left" class="shoes-left" id="shoes-left-2">
+		<label for="shoes-left-3" class="shoes-left" title="shoes-left"><img src="img/shoes-left/shoes-left-skate-left.gif" alt="shoes-left" width="44" height="36"></label>
+		<input type="radio" name="shoes-left" class="shoes-left" id="shoes-left-3">
+		<label for="shoes-left-4" class="shoes-left" title="shoes-left"><img src="img/shoes-left/shoes-left-untied-left.gif" alt="shoes-left" width="44" height="36"></label>
+		<input type="radio" name="shoes-left" class="shoes-left" id="shoes-left-4" checked>
+		<label for="shoes-left-0" class="shoes-left" title="shoes-left"><img src="img/shoes-left/shoes-left-!shadow-left.gif" alt="shoes-left" width="44" height="36"></label>
+
+		<input type="radio" name="shoes-right" class="shoes-right" id="shoes-right-0">
+		<label for="shoes-right-1" class="shoes-right" title="shoes-right"><img src="img/shoes-right/shoes-right-blank.gif" alt="shoes-right" width="47" height="36"></label>
+		<input type="radio" name="shoes-right" class="shoes-right" id="shoes-right-1">
+		<label for="shoes-right-2" class="shoes-right" title="shoes-right"><img src="img/shoes-right/shoes-right-fast-right.gif" alt="shoes-right" width="47" height="36"></label>
+		<input type="radio" name="shoes-right" class="shoes-right" id="shoes-right-2">
+		<label for="shoes-right-3" class="shoes-right" title="shoes-right"><img src="img/shoes-right/shoes-right-skate-right.gif" alt="shoes-right" width="47" height="36"></label>
+		<input type="radio" name="shoes-right" class="shoes-right" id="shoes-right-3">
+		<label for="shoes-right-4" class="shoes-right" title="shoes-right"><img src="img/shoes-right/shoes-right-untied-right.gif" alt="shoes-right" width="47" height="36"></label>
+		<input type="radio" name="shoes-right" class="shoes-right" id="shoes-right-4" checked>
+		<label for="shoes-right-0" class="shoes-right" title="shoes-right"><img src="img/shoes-right/shoes-right-!shadows-right.gif" alt="shoes-right" width="47" height="36"></label>
+
+		<input type="radio" name="skirt" class="skirt" id="skirt-0">
+		<label for="skirt-1" class="skirt" title="skirt"><img src="img/skirt/skirt-skirt-blue.gif" alt="skirt" width="53" height="30"></label>
+		<input type="radio" name="skirt" class="skirt" id="skirt-1">
+		<label for="skirt-2" class="skirt" title="skirt"><img src="img/skirt/skirt-skirt-green.gif" alt="skirt" width="53" height="30"></label>
+		<input type="radio" name="skirt" class="skirt" id="skirt-2">
+		<label for="skirt-3" class="skirt" title="skirt"><img src="img/skirt/skirt-skirt-pink.gif" alt="skirt" width="53" height="30"></label>
+		<input type="radio" name="skirt" class="skirt" id="skirt-3">
+		<label for="skirt-4" class="skirt" title="skirt"><img src="img/skirt/skirt-skirt-red.gif" alt="skirt" width="53" height="30"></label>
+		<input type="radio" name="skirt" class="skirt" id="skirt-4" checked>
+		<label for="skirt-0" class="skirt" title="skirt"><img src="img/skirt/skirt-!skirt-yellow.gif" alt="skirt" width="53" height="30"></label>
+
+		<input type="radio" name="unused" class="unused" id="unused-0">
+		<label for="unused-0" class="unused" title="unused"><img src="" alt="unused" width="" height=""></label>
+
+		</div>
+		<input type="checkbox" name="music" id="music">
+		<label for="music" id="turntable"><img src="turntable.gif" width="32" height="17" alt="turntable; show/hide music" title="show/hide music"></label>
+		<audio controls autoplay loop playsinline>
+			<source src="music/concat.mp3" type="audio/mpeg">
+			<source src="music/concat.ogg" type="audio/ogg">
+			<source src="music/concat.aac" type="audio/aac">
+			<source src="music/concat.wav" type="audio/wav">
+			<object data="music/concat.swf">
+				<embed src="music/concat.swf">
+				<p><a href="music/concat.mp3">Download background music</a></p>
+			</object>
+		</audio>
+		<a href="/2026-04-26_sophie">?</a>
+	</body>
+</html>
