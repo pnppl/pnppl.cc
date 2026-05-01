@@ -276,7 +276,7 @@ table th:not([align]) {
 table th {
 	color: var(--text-strong);
 }
-summary::marker {
+.table-of-contents summary::marker {
 	display: none;
 	content: "";
 }
