@@ -4,10 +4,10 @@
 Rewatching Death Note in 2026 — nearly 20 years after it was released — makes me feel nostalgic and very, very old. I watched this while it was still airing. It was at the tail end of the miserable Bush years, which are tinted rose in my memory after 10 years of Trump. Obama hadn't yet been elected or failed to make good on his oft-repeated campaign promise to close Gitmo on day one, the first of many experiences that ultimately made me an anarchist. I hadn't gone vegan quite yet (that was in 2008), though I had at least stopped eating meat. I hadn't even transitioned, which really intensifies the feeling that I was a totally different person. I wonder if I'll still love it.
 
 A bit later it got imported and became rather popular, which made me feel cool and ahead of the curve. This was still fairly early days for anime in the West; just knowing how to watch fansubs was 1337. Elitism is the theme that really stands out to me about this show and my personality at the time (and nerd culture in general). I think part of Death Note's appeal was that nerds really believed, like Light, that they were in some way the elect, like knowing how to use IRC made them superior beings who should be in charge of the world. This delusional arrogance is called out by the show right away in Episode 1:
-> Light: [*details his plans to execute everyone bad*] ... I would create a new world of earnest, kind humans.
-> Ryuuk: Then you'd be the only fucked-up person left.
-> Light: Huh? What are you saying? Ryuuk, I'm probably the best, most dilligent honors student in Japan.
-> Ryuuk: ... O_O ...
+> *Light:* [*details his plans to execute everyone bad*] ... I would create a new world of earnest, kind humans.
+> *Ryuuk:* Then you'd be the only fucked-up person left.
+> *Light:* Huh? What are you saying? Ryuuk, I'm probably the best, most dilligent honors student in Japan.
+> *Ryuuk:* ... O_O ...
 
 Looking at it from this angle is retrospectively chilling. It was nerds who cut their teeth on places like 4chan talking about stuff like Death Note who ended up playing a substantial role in the creation of fascism as we know it. Whenever they could, they seized power for themselves; they now run companies with more money than entire countries. They are no less delusional in their arrogance than Light, and far more ambitious when it comes to mass murder.
 
@@ -25,4 +25,5 @@ Actually, I want to go back to #2 for a moment and how much it sucks. Obviously 
 ---
 
 Does Light use fucking *Internet Explorer*?
-![[../img/screenshots/death-note/ie.jpg]]
+
+![[A Kira fansite in what looks like IE on Windows XP, but in greyscale|../img/screenshots/death-note/ie.jpg]]
