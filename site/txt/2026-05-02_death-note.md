@@ -22,3 +22,7 @@ Light has some moral misgivings but overall doesn't seem too broken up about the
 
 Actually, I want to go back to #2 for a moment and how much it sucks. Obviously it's always trash when a series uses sexual assault of a third party solely for the development of the (male) protagonist, but that's actually not why this sucks so bad. It just feels like they're trying really hard to validate Light's perspective that crime is out of control. This is an actual, shocking, violent crime that no other bystanders seemed to care about. In real life, Japan has a low crime rate and it was (and is) falling. It's extremely stupid, 24 hour news/talk radio -brained shit to think violent crime is a big issue, but Light's stupidity is validated in a major way. (He must be watching a lot of copaganda to think people who are imprisoned are ipso facto guilty and got off too easy. Maybe it just comes with having a cop for a dad. He bears a striking resemblance to fascists who fall for racist pseudoscience and obvious grifters but believe they're intellectually superior.)
 
+---
+
+Does Light use fucking *Internet Explorer*?
+![[../img/screenshots/death-note/ie.jpg]]
