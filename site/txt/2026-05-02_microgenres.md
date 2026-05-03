@@ -115,11 +115,11 @@ There is no attempt to be exhaustive here, just list favs.
 - Scanners (1981)
 	- Another kickass David Cronenberg flick. You've probably seen a gif from this of a guy's head exploding. Corny in the best possible way.
 - Videodrome
-	- I mean, obviously. The Cronenbergs just dominte this genre.
+	- I mean, obviously. The Cronenbergs just dominate this genre.
 - Event Horizon (1997)
 	- Fucking awesome. Hellraiser in space. Laurence Fishburne (Morpheus) and Sam Neill (Jurassic Park) are in it. I have faith that one day we will see the cut of the film that was deemed too horrifying to exist and destroyed.
 - Pitch Black (2000)
-	- Origin of Riddick (of the Chronicles, which is delightful in its own way). This is a cheesy paint-by-numbers B-movie executed with aplomb
+	- Origin of Riddick (of the Chronicles, which is delightful in its own way). This is a cheesy paint-by-numbers B-movie executed with aplomb.
 - The Thing (1982)
 
 #### TV
@@ -160,8 +160,10 @@ There is no attempt to be exhaustive here, just list favs.
 	- Really funny sitcom starring Wyatt Cenac. Also canceled on a cliffhanger.
 
 #### Lit
-- "[[They're Made Out of Meat|http://www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
+- "[[A Guide for Working Breeds|https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/]]" and "[[Fandom for Robots|https://www.uncannymagazine.com/article/fandom-for-robots/]]" by Vina Jie-Min Prasad
 - "[[Beyond Lies the Wub|https://gutenberg.org/ebooks/28554]]" by Philip K. Dick
+- "[[The Secret Life of Bots|https://clarkesworldmagazine.com/palmer_09_17/]]" by Suzanne Palmer
+- "[[They're Made Out of Meat|http://www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
 - The Illuminatus! Trilogy by Roberts Shea and Anton Wilson
 	- Canonical Discordian text. Disorienting and delightful.
 - Murderbot series by Martha Wells
