@@ -37,7 +37,7 @@ I haven't read for this genre (yet) because it feels like more of a TV thing. Th
 ## Serial killer/sociopath protagonists ##
 The main appeal of this one is how it makes you want to root for people who are total monsters. The best examples of this microgenre are first-person and let us directly into the bad guy's thoughts through narration.
 
-### Films
+### Film
 - American Psycho
 	- Plenty of first-person narration; villain is unquestionably the protagonist.
 	- Totally kicks ass, hilarious dark comedy about how capitalists are soulless bastards.
@@ -97,7 +97,7 @@ These are far too broad to really qualify for this list, yet they still feel sma
 There is no attempt to be exhaustive here, just list favs.
 
 ### Sci-fi horror
-#### Films
+#### Film
 - Aliens (1986)
 	- Alien 2. I actually liked this way better than Alien.
 - Antiviral (2012)
