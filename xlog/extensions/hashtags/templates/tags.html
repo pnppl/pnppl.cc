@@ -12,12 +12,7 @@
   <ul>
     {{- range $pages -}}
 <li>
-    <a href="/{{.Name}}#{{$tag}}">
-{{/*
-      {{ with banner . }}
-      <img src="{{.}}" class="mr-3 is-pulled-left" style="display: block; border-radius: 0.5em; object-fit: cover; object-position: 0 50%; max-height: 3em; width: 6em;"/>
-      {{ end }}
-*/}}
+    <a href="/{{.Name}}#tag-{{$tag}}">
       <span class="is-block">
         {{ $props := properties . }}
         {{ with $props.title }}

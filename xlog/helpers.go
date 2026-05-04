@@ -46,6 +46,7 @@ var helpers = template.FuncMap{
 //	"tagChildren":    tagChildren,
 //	"tagParent":      tagParent,
 	"noop":           noop,
+	"tagId":          tagId,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -335,3 +336,12 @@ func tagParent(tag string) string {
 
 // for whitespace removal
 func noop() string { return "" }
+
+// #tagname -> #tag-tagname. for reducing ID collisions
+func tagId(tag string) string {
+	if len(tag) < 2 {
+		return ""
+	}
+	nohash := tag[1:len(tag)]
+	return "#tag-" + nohash
+}
