@@ -34,23 +34,23 @@ This one I don't like (plays *English* audio and depends on Telegram) but it has
 
 ---
 
-<pre style="letter-spacing: 0.25ch; display:block; width:fit-content; margin: auto;">
-   \ \\         // /  
-  \\\\\\\\  ////////  
- \ \\\\\\\  /////// / 
-\ \\\     \/     /// /
-\\\\ )___    ___( ////
-\\\\ ,--, \/ ,--, ////
- \\ ( o ,\  /, o ) // 
- (s  `''  /\  '''  s) 
-  `- Z   /||\   S -'  
-   \ \__________/ /   
-    \ \ vv v v / /    
-     \ \_^^^^_/ /     
-      \  _/\_  /      
-       \      /    
-        `----'  <( KEHKEHKEHKEHKEH )
-</pre>
+<center><pre style="letter-spacing: 0.25ch">
+   \ \\         // /                
+  \\\\\\\\  ////////                
+ \ \\\\\\\  /////// /               
+\ \\\     \/     /// /              
+\\\\ )___    ___( ////              
+\\\\ ,--, \/ ,--, ////              
+ \\ ( o ,\  /, o ) //               
+ (s  `''  /\  '''  s)               
+  `- Z   /||\   S -'                
+   \ \__________/ /                 
+    \ \ vv v v / /                  
+     \ \_^^^^_/ /                   
+      \  _/\_  /                    
+       \      /                     
+        `----'  <( KEHKEHKEHKEHKEH )
+</pre></center>
 
 [^sp]: When I first watched/read this, fan translations were all over the place in their spellings. I seem to recall Light's name being written as "Raito". I still think of The Character Known Canonically In English As Ryuk as "Ryuuku"; I've compromised by omitting the trailing vowel.
 [^fig]: Figuratively. It's more like broad darkness. Like, stuff's open and there are people around.
