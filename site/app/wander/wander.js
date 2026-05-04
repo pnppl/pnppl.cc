@@ -38,6 +38,7 @@ const wander = {
 		'https://www.rifters.com/blindsight/vampires.htm',
 		'https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/',
 		'https://www.churchofeuthanasia.org/catalog/video.html',
+		'https://youtuube.neocities.org/youtube_abyss',
 		'https://xrafstar.monster/games/twine/tails/',
 		'https://freegames.org/dys4ia/',
 		'https://gridbeam.xyz/guide',

@@ -16,13 +16,11 @@ You can invent entire species and cultures to generate ethical dilemmas instead 
 	- Yaaaaaawn. Near-future story that takes itself very seriously. I didn't finish it. I think German TV just kinda sucks, honestly.
 - White Dwarf (1995)
 	- Actually a failed pilot reworked into a film. Even though it's about a doctor, I don't remember it being very medically. Actually, I can remember almost nothing about it. I might have fallen asleep.
-- Honorable mention: Childrens Hospital/Medical Police
-	- This doesn't qualify except on the broadest of technicalities, but I have to mention it. It's an absurdist satire of General Hospital. I thought it was hilarious the first time I watched through it, but I tried again and might not have been sufficiently inebriated cuz it wasn't hitting. There are a few running jokes that are really unfunny and drag it down. Medical Police, the high-budget, spy-themed sequel, is better than the original series and you can skip ahead.
 
 ### Lit
 I haven't read for this genre (yet) because it feels like more of a TV thing. There are probably a bunch of hard near-future SF stories that fit, but I bet I'd like them about as much as Charité.
 
-- Vorkosigan series by Lois McMaster Bujold
+- [[Vorkosigan series|https://hell.pl/szymon/Baen/Cryoburn/Novels/Cordelia's%20Honor/index.htm]] by Lois McMaster Bujold
 	- Doesn't fit the bill, but has several medical storylines and is very accessible so the vibe is kinda there. Oh, and it's AWESOME.
 - Blood Music by Greg Bear
 	- Doesn't fit the bill, but it's somewhere in the vicinity. I didn't love it, but it's memorable.
@@ -54,7 +52,7 @@ The main appeal of this one is how it makes you want to root for people who are 
 
 ### TV
 - "The Man Who Was Death", episode 1 of Tales from the Crypt (1989)
-	- Narrated by the villainous protag.
+	- Narrated by the villainous protag. Does not make you sympathetic to him.
 	- Probably lots of other episodes fit too, but this one stands out. Professional executioner becomes a hobbyist after the abolition of the death penalty.
 - Barry (2018)
 	- No narration that I recall, but the villain is definitely the protagonist.
@@ -62,18 +60,18 @@ The main appeal of this one is how it makes you want to root for people who are 
 - Breaking Bad
 	- No narration (well, there are in-universe taped confessions). The villain is definitely the protagonist.
 	- While Walt is a terrible person, I'm not sure this quite fits the theme. The strongest argument for inclusion is that Walt is weirdly easy to root for.
-	- The Better Call Saul spinoff might fit for the same reason. Saul is nowhere near as evil, but you definitely want him to get away with all the cruel/illegal shit he pulls. But this is more of an honorable mention, or we'd have to include a lot more crime shows: Ozark (2017) would be an obvious one, probably The Sopranos which I haven't seen, maybe even Mad Men. There are a lot of shows about bad people who aren't quite monsters.
+		- The Better Call Saul spinoff might fit for the same reason. Saul is nowhere near as evil, but you definitely want him to get away with all the cruel/illegal shit he pulls. But this is more of an honorable mention, or we'd have to include a lot more crime shows: Ozark (2017) would be an obvious one, probably The Sopranos which I haven't seen, maybe even Mad Men. There are a lot of shows about bad people who aren't quite monsters.
 - Death Note (2007)
 	- Plenty of first-person narration; villain is unquestionably the protagonist.
 	- Shonen anime. Currently rewatching, but I loved it 20 years ago. Very dramatic, iconic, and fun.
 	- There are live-action spinoffs. There's really no reason to bother watching them. There's also a Korean stage musical that I haven't seen, but a subtitled cam of it is out there if you really want it.
-- Dexter and spinoffs
+- Dexter (2006) and spinoffs
 	- Plenty of first-person narration; villain is unquestionably the protagonist.
 	- The original series is pure, uncut, borderline-guilty-pleasure popcorn trash, with a wide variation in quality (though I maintain the last episode was Good Actually). This is a show that deserves a coffee table, snacks, and an oversize bong. Fun, funny, and you definitely want the bad guy to win. Plenty of gore.
 	- The obnoxious sex pest character, Masuka, exists solely as a vector for all the worst misogynistic, homophobic, and transphobic "humor" that the '00s were rife with.
 	- The first spinoff, New Blood, is alright but abandons the lighthearted tone and takes itself way too seriously. The prequel, Original Sin, apes the original and is occasionally successful but not especially interesting. The sequel to New Blood, Resurrection, is the first spinoff that was really enjoyable. The motion comics are fucking awful.
 - You (2018)
-	- Includes narration by the villain, but it's actually in second-person IIRC.
+	- Includes narration by the villain, but it's actually in second-person IIRC. Does not make you sympathetic to him.
 	- Walking red flag stalks, manipulates, abuses, and murders women he is obsessed with. Pretty good but idk if I'd watch it again.
 
 ### Lit
@@ -126,8 +124,6 @@ There is no attempt to be exhaustive here, just list favs.
 - Black Mirror
 - Raised By Wolves (2020)
 	- Tragically canceled before the story could conclude (and honestly seemed like it was going nowhere) but has strong horror overtones and one of the coolest pilots I've ever seen.
-- Severance (2022)
-	- Could also be categorized as comedy; is really more a drama. One of the best scifi TV shows I've ever seen. Very original and clever.
 - The X-Files
 
 #### Video Games
@@ -139,7 +135,7 @@ There is no attempt to be exhaustive here, just list favs.
 - Brazil (1985)
 	- Terry Gilliam's wacky take on _1984_. I adore this one; it's my go-to for when people ask me what my favorite movie is.
 - Coneheads (1993)
-	- Goofy aliens vs. US immigration authorities. Nice and underrated.
+	- Goofy aliens vs. US immigration authorities. Underrated, nice film.
 - Dark Star (1974)
 	- John Carpenter's criminally underappreciated film school project. A dark comedy about the crew of a doomed ship who go around blowing up planets for fun.
 - Killer Klowns from Outer Space
@@ -157,13 +153,16 @@ There is no attempt to be exhaustive here, just list favs.
 - Other Space (2015)
 	- Little gem of a sitcom that got 8 episodes before the brand-new streaming service it was on ceased to exist. Ends on a cliffhanger.
 - People of Earth (2016)
-	- Really funny sitcom starring Wyatt Cenac. Also canceled on a cliffhanger.
+	- Really funny and sweet sitcom starring Wyatt Cenac. Also canceled on a cliffhanger.
+- Rick and Morty
+	- Animated. Went to shit eventually, but the first few seasons are some of the best TV there is.
 
 #### Lit
 - "[[A Guide for Working Breeds|https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/]]" and "[[Fandom for Robots|https://www.uncannymagazine.com/article/fandom-for-robots/]]" by Vina Jie-Min Prasad
 - "[[Beyond Lies the Wub|https://gutenberg.org/ebooks/28554]]" by Philip K. Dick
+- "[[Offloaders|//bin.bloerg.net/md/QH4jvTgg9Ag.md]]" by Leah Cypess
 - "[[The Secret Life of Bots|https://clarkesworldmagazine.com/palmer_09_17/]]" by Suzanne Palmer
-- "[[They're Made Out of Meat|http://www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
+- "[[They're Made Out of Meat|//www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
 - The Illuminatus! Trilogy by Roberts Shea and Anton Wilson
 	- Canonical Discordian text. Disorienting and delightful.
 - Murderbot series by Martha Wells

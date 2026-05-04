@@ -40,6 +40,7 @@ https://kevincraig.us/audio/gogulski/
 https://www.rifters.com/blindsight/vampires.htm
 https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
 https://www.churchofeuthanasia.org/catalog/video.html
+https://youtuube.neocities.org/youtube_abyss
 
 ### Game/interactive
 https://xrafstar.monster/games/twine/tails/
