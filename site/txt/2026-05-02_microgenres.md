@@ -160,7 +160,7 @@ There is no attempt to be exhaustive here, just list favs.
 #### Lit
 - "[[A Guide for Working Breeds|https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/]]" and "[[Fandom for Robots|https://www.uncannymagazine.com/article/fandom-for-robots/]]" by Vina Jie-Min Prasad
 - "[[Beyond Lies the Wub|https://gutenberg.org/ebooks/28554]]" by Philip K. Dick
-- "[[Offloaders|//bin.bloerg.net/md/QH4jvTgg9Ag.md]]" by Leah Cypess
+- "[[Offloaders|https://paste.rs/1Q8Zh.md]]" by Leah Cypess
 - "[[The Secret Life of Bots|https://clarkesworldmagazine.com/palmer_09_17/]]" by Suzanne Palmer
 - "[[They're Made Out of Meat|//www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
 - The Illuminatus! Trilogy by Roberts Shea and Anton Wilson

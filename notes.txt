@@ -126,6 +126,9 @@ todo:
 			- this way we have easy deltas when a site is added and can do a clean full rebuild without fiddling
 	- maybe should add DTD whateverthefuck
 - blockquotes and their attributions are shit, why are we putting the source inside the block
+- language of codeblocks specified like ```lang affects highlighting but fails to make it to html
+	- started debugging and didn't get far. n.Language(source) in the md highlight module is always nil
+	- need to fix so i can use ```ascii or ```art or something and make a css class to prettify text art
 
 
 low priority/done:
