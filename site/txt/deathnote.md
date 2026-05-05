@@ -75,6 +75,8 @@ aside {
 }
 #article #guest-messages {
 	padding-bottom: 2em;
+	display: flex;
+	flex-direction: column-reverse;
 }
 #article div:has(>input),
 #article div:has(>textarea) {
