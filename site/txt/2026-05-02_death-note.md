@@ -20,7 +20,9 @@ The beginning feels a bit rushed. Before the first episode is even over, Light h
 
 Light has some moral misgivings but overall doesn't seem too broken up about these. Then the next time we see him he executes 100+ prisoners. I'm starting to think this guy was always kind of a piece of shit! No Faustian bargain here.
 
-Actually, I want to go back to #2 for a moment and how much it sucks. Obviously it's always trash when a series uses sexual assault of a third party solely for the development of the (male) protagonist, but that's actually not why this sucks so bad. It just feels like they're trying really hard to validate Light's perspective that crime is out of control. This is an actual, shocking, violent crime that no other bystanders seemed to care about. In real life, Japan has a low crime rate and it was (and is) falling. It's extremely stupid, 24 hour news/talk radio -brained shit to think violent crime is a big issue, but Light's stupidity is validated in a major way. (He must be watching a lot of copaganda to think people who are imprisoned are ipso facto guilty and got off too easy. Maybe it just comes with having a cop for a dad. He bears a striking resemblance to fascists who fall for racist pseudoscience and obvious grifters but believe they're intellectually superior.)
+Actually, I want to go back to #2 for a moment and how much it sucks. Obviously it's always trash when a series uses sexual assault of a third party solely for the development of the (male) protagonist, but that's actually not why this sucks so bad. It just feels like they're trying really hard to validate Light's perspective that crime is out of control. This is an actual, shocking, violent crime that no other bystanders seemed to care about. In real life, Japan has a low crime rate and it was (and is) falling. It's extremely stupid, 24 hour news/talk radio -brained shit to think violent crime is a big issue, but Light's stupidity is validated in a major way.
+
+He must be watching a lot of copaganda to think people who are imprisoned are ipso facto guilty and got off too easy. Maybe it just comes with having a cop for a dad. He bears a striking resemblance to fascists who fall for racist pseudoscience and obvious grifters but believe they're intellectually superior.
 
 ## Having Fun On-Line
 Does Light use fucking *Internet Explorer*?
@@ -50,5 +52,39 @@ This one I don't like (plays *English* audio and depends on Telegram) but it has
         `----'  <( KEHKEHKEHKEHKEH )
 </pre>
 
+## Rem & Misa
+Well, now there are women on the show, one human named Misa and one shinigami named Rem. Rem is in love with Misa, and it's extra dramatic because when a shinigami falls in love with someone, they're likely to die by abusing their Death Note powers to *extend* the person's life instead of shorten it like they're supposed to. But not by writing their name down in the future, by killing the person who was fated to kill them.
+
+So, I'm not sure how shinigami can *ever* use the Death Note, since by interfering with causality they probably extend people's lives as a random side effect all the time, right? Or they just can't kill murderers? It seems like it's more some kind of heavenly law that punishes them for doing it *on purpose*. So I guess *being in love* is a sin for shinigami? In any case, Rem is a tragic character who's cursed to die for her love. Woo, queer representation!
+
+I might be overselling it a bit here. Shinigami are basically weird zombies and it's hard to tell what love even *is* for them. A previous shinigami who fell in love with Misa did so after just like... watching her all the time through the magic portal to earth. So basically stalking the hell out of her. But, they're shinigami, so I guess that's like, kind of normal for them? They come across like just more of Misa's stalkers.
+
+I... don't really love what they did with Misa. She's a model and a massive Kira groupie. I think she gets better later? It would be nice if the only (human) female character wasn't supposed to be a nutso dum-dum.[^sun] I guess only L and Light get to be supergeniuses. Still, she outwits Light, or at least gets the drop on him.
+
+Her look makes the show feel very 2007. This was the emo era, also reflected strongly in L (are those bags under his eyes or eyeliner?).
+
+![[Misa in a black dress with a corset design, lace arm warmers, chunky necklace, and choker|../img/screenshots/death-note/misa-goth.jpg]]
+
+She has a bunch of goth stuff in her room including a shelf full of emo dolls from Hot Topic.
+
+![[Teddy bear with skull face, vampire in a coffin, pink cyborg bunny with piercings, schoolgirl with stitched lips wearing a skull|../img/screenshots/death-note/misa-toys.jpg]]
+
+She even has the red and black socks.
+
+![[Red and black striped thigh-highs|../img/screenshots/death-note/misa-socks.jpg]]
+
+## Crimes Against Humanity
+I already wasn't entirely happy with Misa, but then they went and did this to her.
+
+![[Misa bound upright, face covered, with bondage straps around her body and a video camera pointed at her |../img/screenshots/death-note/misa-bound.jpg]]
+
+L and the cops tie her upright with leather belts aross her body and tightly between her legs. Then they just... torture her. They leave her like this for weeks! They even watch her when she pees. She doesn't believe she's being held by the the cops, because "there's no way the police would tie me up in such a fetish-like way."
+
+There's no point to any of this abuse that I can discern except to torture her. She's already in a cell; why does she have to be blindfolded and restrained as well? I guess one justification is they don't know how the Kira powers work — but then why not do the same to Light? (This brings up another gripe, actually: why did they decide so quickly that Kira had supernatural powers? Why not some kind of high tech death ray?) Light *is* seemingly handcuffed for weeks, despite also being in a prison cell, but at least he didn't get put in bondage gear.
+
+Supergenius L should know that torture doesn't work. Unless the goal is to make someone suicidal — they successfully did that after only the first three days. It's very Oh Fuck It's 2007 And Bush Is President that the *good guys* are holding people in a black site without charges and sexually torturing them.
+
+
 [^sp]: When I first watched/read this, fan translations were all over the place in their spellings. I seem to recall Light's name being written as "Raito". I still think of The Character Known Canonically In English As Ryuk as "Ryuuku"; I've compromised by omitting the trailing vowel.
 [^fig]: Figuratively. It's more like broad darkness. Like, stuff's open and there are people around.
+[^sun]: ![[This broad is berserk.|../img/screenshots/death-note/sunny-berserk.jpg]]
