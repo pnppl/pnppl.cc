@@ -84,6 +84,17 @@ There's no point to any of this abuse that I can discern except to torture her. 
 
 Supergenius L should know that torture doesn't work. Unless the goal is to make someone suicidal — they successfully did that after only the first three days. It's very Oh Fuck It's 2007 And Bush Is President that the *good guys* are holding people in a black site without charges and sexually torturing them.
 
+# MAXIMUM THE HORMONE
+The second intro is one of the GOATs. Fuck it's so good.
+https://www.youtube.com/watch?v=e6sSMIfG94k
+
+The outro is by the same band — Maximum the Hormone — and it kicks ass too. It explicitly mentions Kira, so I guess they wrote it for the show? They even made a Death Note-themed music video that goes hard as fuck. (I don't think I was alone in searching them up, seeing this video's thumbnail, and thinking they looked like a visual kei band!)
+https://www.youtube.com/watch?v=B_vvv1oPnKY&t=31
+
+I really like that they have the same group do both intro and outro. Death Note actually got me pretty into this band. They have this fun hit music video from the same time that stands out more for its abrupt tonal shifts than anything else.
+https://www.youtube.com/watch?v=mQAYLxAIerE&t=90
+
+These used to be readily available with English subtitles but I'm coming up empty-handed. I probably have them on, like, an iPod hard drive somewhere. They're still great even without knowing what they're saying though; I love how everytime the band shows up they're going fucking apeshit and that one guy looks like he wants to murder the mic.
 
 [^sp]: When I first watched/read this, fan translations were all over the place in their spellings. I seem to recall Light's name being written as "Raito". I still think of The Character Known Canonically In English As Ryuk as "Ryuuku"; I've compromised by omitting the trailing vowel.
 [^fig]: Figuratively. It's more like broad darkness. Like, stuff's open and there are people around.
