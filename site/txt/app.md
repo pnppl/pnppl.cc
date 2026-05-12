@@ -3,7 +3,7 @@
 
 - [[maRRRshmallow breath counter|/app/rrr/]]: JavaScript tool for measuring my cat's resting respiratory rate.
 - [[nagi miniweb|/app/nagi/]]: minimalist version of [[Kagi Small Web|https://kagi.com/smallweb]]. An experiment in brute force. Does not require JavaScript or CSS; does require frames. **Compatible with links2 and elinks.** [[Writeup here|2026-04-08_nagi]].
-- [[Meander|/app/meander]]: nagi, but with my personal recommendations as the dataset. Also available as a [[Wander console|/app/wander]] (MIT).
+- [[Meander|/app/meander]]: nagi, but with my personal recommendations as the dataset. Also available as a [[Wander console|/app/wander]] (requires JS).
 - [[Build-A-Sophie|/app/sophie]]: fan-made CSS-based character creator for _Puzzle Castle_, a children's video game from 1996. Includes bonus jukebox feature. JS-free. [[Writeup here|2026-04-26_sophie]].
 - [[Noliza|/app/noliza]]: a therapy chatbot that never lies. This cutting-edge AI runs entirely in [[Turing-complete|https://github.com/rebane2001/x86CSS]] CSS.
 
