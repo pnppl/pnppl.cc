@@ -27,7 +27,7 @@ blockquote.excerpt .hover-button {
 	display: none;
 }
 /* last item could actually be less than 5... */
-blockquote.excerpt :nth-child(5) {
+blockquote.excerpt :nth-child(5):not(.tag) {
 	display: inline;
 }
 a.excerpt-more {
