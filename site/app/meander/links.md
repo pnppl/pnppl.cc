@@ -78,9 +78,9 @@ http://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1
 http://humaniterations.net/2020/09/06/bad-people/
 http://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html
 http://mycophobia.org/dcs/index.html
+https://notes.highlysuspect.agency/are-we-doing-anything.html
 http://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/
 http://wol.fm/blog/utopian-scholastic.html
-http://www.prole.info/
 
 ### Fiction
 http://www.terrybisson.com/theyre-made-out-of-meat-2/
@@ -101,4 +101,5 @@ http://wiby.me
 http://petermolnar.net/
 http://velveteen.one/
 http://www.floodgap.com/
+http://www.prole.info/
 http://xn--gckvb8fzb.com/

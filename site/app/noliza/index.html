@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="referrer" content="no-referrer">
+	<meta name="color-scheme" content="light dark">
+	<link rel="icon" href="robo.ico">
+	<link rel="license" href="/app/AGPL-3.0.txt">
+	<link rel="human-json" href="/public/human.json">
+	<link rel="alternate" href="/+/feed.rss" title="pnppl.cc RSS" type="application/rss+xml">
+	<meta property="og:site_name" content="pnppl.cc">
+	<meta property="og:title" content="Noliza">
+	<meta property="og:description" content="An AI therapist who always tells the truth.">
+	<meta property="og:image" content="https://pnppl.cc/public/logo.gif">
+	<meta property="og:url" content="https://pnppl.cc/app/noliza">
+	<meta property="og:type" content="website">
+	<meta name="description" content="An AI therapist who always tells the truth.">
+	<title>Noliza | pnppl.cc</title>
+	<style><!--
+	body {
+		width: fit-content;
+		max-width: 90%;
+		margin: auto;
+		font-family: sans-serif;
+		padding: 1%;
+	}
+	#no,
+	#send,
+	#restart,
+	:checked ~ #userin #sendbutton {
+		display: none;
+	}
+	:checked ~ #no,
+	:checked ~ #restart {
+		display: block;
+	}
+	blockquote {
+		border-radius: 0.5em;
+		padding: 0.5em;
+		background-color: light-dark(lightblue, midnightblue);
+		margin-left: 0;
+		width: fit-content;
+	}
+	#chattext {
+		font-size: 1em;
+		max-width: 80%;
+		padding: 0.25em;
+	}
+	#userin {
+		text-align: right;
+	}
+	#sendbutton {
+		color: darkgreen;
+		background-color: lightgreen;
+		padding: 0.25em;
+		border-radius: 0.25em;
+		border: 1px solid green;
+	}
+	:checked ~ #userin #chattext {
+		pointer-events: none;
+		text-align: right;
+		background-color: transparent;
+		border: 0;
+		appearance: none;
+		font-style: italic;
+	}
+	#restart {
+		font-size: 0.9em;
+		color: gray;
+	}
+	#another {
+		text-decoration: underline;
+	}
+	--></style>
+</head>
+<body>
+	<h2 style="display: none">This page requires CSS.</h2>
+	<input type="checkbox" id="send">
+	<blockquote>Hello! I'm Noliza, an AI therapist who always tells the truth. How can I help?</blockquote>
+	<div id="userin">
+		<select id="chattext">
+			<option>Should I text my ex?</option>
+
+			<option>Should I choke myself while I masturbate?</option>
+			<option>Should I become a Nazi?</option>
+			<option>Should I stay up late?</option>
+			<option>Should I kill myself?</option>
+			<option>Should I drink more Fireball?</option>
+			<option>Should I rape someone?</option>
+			<option>Should I watch 90 Day Fiance?</option>
+			<option>Should I do another line?</option>
+			<option>Should I splurge?</option>
+			<option>Should I write my dates in a format that isn't YYYY-MM-DD?</option>
+			<option>Should I get into D&D?</option>
+			<option>Should I lie in bed all day?</option>
+			<option>Should I go live with bears?</option>
+			<option>Should I have an AI write my email?</option>
+			<option>Should I drop out?</option>
+			<option>Should I dabble in cannibalism?</option>
+			<option>Should I join a church?</option>
+			<option>Should I vivisect a rabbit?</option>
+			<option>Should I fuck a horse?</option>
+			<option>Should I shit on the floor?</option>
+			<option>Should I engineer a bioweapon?</option>
+			<option>Should I start smoking?</option>
+			<option>Should I go on a juice cleanse?</option>
+			<option>Should I do a mass shooting?</option>
+			<option>Should I subscribe to Spotify?</option>
+			<option>Should I run for office?</option>
+			<option>Should I buy a restaurant?</option>
+			<option>Should I join ICE?</option>
+			<option>Should I try heroin?</option>
+			<option>Should I eat one more slice?</option>
+			<option>Should I buy a Ring doorbell camera?</option>
+			<option>Should I hunt bald eagles?</option>
+			<option>Should I join the military?</option>
+
+		</select>
+		<label for="send" id="sendbutton">Send</label>
+	</div>
+	<blockquote id="no">No.</blockquote>
+	<p id="restart">Session concluded. <label for="send" id="another">Start another?</label></p>
+</body>
+</html>

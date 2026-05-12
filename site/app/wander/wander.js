@@ -65,9 +65,9 @@ const wander = {
 		'https://humaniterations.net/2020/09/06/bad-people/',
 		'https://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html',
 		'https://mycophobia.org/dcs/index.html',
+		'https://notes.highlysuspect.agency/are-we-doing-anything.html',
 		'https://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/',
 		'https://wol.fm/blog/utopian-scholastic.html',
-		'https://www.prole.info/',
 		'https://www.terrybisson.com/theyre-made-out-of-meat-2/',
 		'https://handthing.party/',
 		'https://smokepowered.com/',
@@ -80,6 +80,7 @@ const wander = {
 		'https://petermolnar.net/',
 		'https://velveteen.one/',
 		'https://www.floodgap.com/',
+		'https://www.prole.info/',
 		'https://xn--gckvb8fzb.com/',
 	],
 	ignore: [
