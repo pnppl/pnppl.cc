@@ -112,6 +112,9 @@ input[name="name"] {
 	content: ' — ';
 	font-weight: normal;
 }
+.guest-name:has(~ .guest-message:empty):after {
+	content: '';
+}
 form:before {
 	content: "Add a name... if you dare...";
 	display: block;
