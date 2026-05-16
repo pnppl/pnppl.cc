@@ -1,3 +1,4 @@
+fish slashpages.fish &&
 rm -rf site/public/ &&
 rm -rf site/+/ &&
 set pwd (pwd) &&

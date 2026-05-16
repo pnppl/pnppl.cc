@@ -21,6 +21,7 @@ site/mirrors/
 site/pnppl/
 site/public/
 site/sitemap/
+site/slashpages/
 site/202*/
 site/app/index.html
 site/sitemap.xml
