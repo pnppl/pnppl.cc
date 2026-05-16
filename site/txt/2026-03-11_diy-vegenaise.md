@@ -1,4 +1,4 @@
-# DIY vegenaise
+# DIY Vegenaise
 #recipe
 
 https://minimalistbaker.com/easy-vegan-mayo-with-aquafaba/
@@ -18,10 +18,10 @@ Combine everything but oil. Blend on high.
 
 Add part of oil, blend on high, repeat.
 
-maple syrup will make it less thick + fluffy **allegedly**. stevia, cane sugar, and brown rice syrup recommended by author
+maple syrup will make it less thick + fluffy **allegedly**. stevia (put in way less, stevia is sweeter), cane sugar (make simple syrup?), and brown rice syrup recommended by author
 
 ## Ingredients (x4)
-- 1 cup (1 can) aquafaba
+- 1 cup aquafaba
 - 1 tsp ground mustard
 - 1 tsp sea salt
 - 6 tsp (2 Tbsp) apple cider vinegar
@@ -29,3 +29,5 @@ maple syrup will make it less thick + fluffy **allegedly**. stevia, cane sugar, 
 - 3-4 cup oil
 
 Fills large mason jar with 3 cups oil, but 4 would be pushing it.
+
+You can make the filling for a chickpea salad sandwich with the chickpeas.
