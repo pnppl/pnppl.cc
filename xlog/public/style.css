@@ -808,9 +808,9 @@ a.navbar-item.active:active {
 /* ==========================================================================
 	 View (article content)
 	 ========================================================================== */
-@view-transition {
-	navigation: auto;
-}
+/*@view-transition { */
+/*	navigation: auto; */
+/*} */
 .view {
 	counter-reset: h2;
 }
@@ -818,7 +818,7 @@ a.navbar-item.active:active {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	view-transition-name: banner-image;
+/*	view-transition-name: banner-image; */
 }
 .view > p:first-of-type img:only-child {
 	border-radius: 0.5em;
@@ -1165,12 +1165,12 @@ time.stamp {
 	font-size: 0.75em;
 	color: #69748C;
 }
-#article {
-	view-transition-name: page-content;
-}
-.title {
-	view-transition-name: page-title;
-}
+/*#article { */
+/*	view-transition-name: page-content; */
+/*} */
+/*.title { */
+/*	view-transition-name: page-title; */
+/*} */
 
 
 /* ==========================================================================
