@@ -16,6 +16,7 @@ var ignoredPaths = []*regexp.Regexp{
 	regexp.MustCompile(`^\.`), // Ignore any hidden directory
 	regexp.MustCompile(`^404$`),
 	regexp.MustCompile(`^index$`),
+	regexp.MustCompile(`^slashpages$`),
 }
 
 // IgnorePath Register a pattern to be ignored when walking directories.

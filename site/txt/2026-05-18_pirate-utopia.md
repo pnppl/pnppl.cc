@@ -10,7 +10,7 @@ It already exists. It's just that it's illegal.
 
 An exemplar here is Anna's Archive, a pirate archivist project with two goals: to back up all of humanity's knowledge and culture and to make it available to anyone in the world. As ambitious as that sounds, they estimate they have already saved a whopping [[16% of the world's books|https://annas-archive.gl/faq]]. Anna's Archive is one of the greatest projects in human history, yet if the people behind it are ever caught they will likely be thrown in a cage for the rest of their lives.
 
-Anna may be the most ambitious and successful so far, but they're far from the first. Vast, stunning [[Libraries|https://en.wikipedia.org/wiki/Oink%27s_Pink_Palace]] of [[Alexandria|https://en.wikipedia.org/wiki/What.CD]] have been built up and burned to the ground repeatedly in internet history, their [[curators hunted by police|https://arstechnica.com/tech-policy/2024/07/report-z-library-admins-on-the-lam-ahead-of-us-extradition-officials-shocked/]], [[sued or prosecuted to death|https://en.wikipedia.org/wiki/Aaron_Swartz]], [[their patrons threatened|https://en.wikipedia.org/wiki/Trade_group_efforts_against_file_sharing#Lawsuits_against_individuals]], [[maps to their locations destroyed|https://transparencyreport.google.com/copyright/overview]].
+Anna may be the most ambitious and successful so far, but they're far from the first. Vast, stunning [[Libraries|https://en.wikipedia.org/wiki/Oink%27s_Pink_Palace]] of [[Alexandria|https://en.wikipedia.org/wiki/What.CD]] have been built up and burned to the ground repeatedly in internet history, their curators [[hunted by police|https://arstechnica.com/tech-policy/2024/07/report-z-library-admins-on-the-lam-ahead-of-us-extradition-officials-shocked/]], [[sued or prosecuted to death|https://en.wikipedia.org/wiki/Aaron_Swartz]], [[their patrons threatened|https://en.wikipedia.org/wiki/Trade_group_efforts_against_file_sharing#Lawsuits_against_individuals]], [[maps to their locations destroyed|https://transparencyreport.google.com/copyright/overview]].
 
 Utopia is a small island in a large sea, beset on all sides by ships of war. As a wise man once said: the future is already here, it's just not evenly distributed.
 
@@ -32,7 +32,7 @@ And wouldn't it be *good* for artists if they could freely make use of existing 
 ![[TRADE OFFER (from Disney): i receive: ability to sue people to death with my $176,000,000,000.00; you receive: ability to sue people to death after making $176,000,000,000.00|../img/memes/disney-trade-small.jpg]]
 
 ## Pie in the Sky
-There's a slice of utopia *right there* for us to take whenever we want it, yet we're told to wait, that it would be improper to reach out and take it before we can get the entire thing, that these ideas might sound nice in *theory*, but in *reality*, people need money and copyright helps them get it; only once we abolish poverty we can think about reforming copyright.
+There's a slice of utopia *right there* for us to take whenever we want it, yet we're told to wait, that it would be improper to reach out and take it before we can get the entire thing, that these ideas might sound nice in *theory*, but in *reality*, people need money and copyright helps them get it; only once we abolish poverty can we think about reforming copyright.
 
 Talk about letting the perfect be the enemy of the good! If we invent a replicator that can infinitely duplicate food, are we supposed to lock it in a safe underground until we can make sure no farmers' lives will be affected in any way?
 
