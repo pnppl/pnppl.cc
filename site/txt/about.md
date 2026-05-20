@@ -58,6 +58,20 @@ Still, I'm not quite willing to give up UTF-8 for my posts. UTF-8 is so good. I'
 I also like the idea of making the site available via Gopher for the true low-tech heads. We'll see.
 
 
+## Memberships
+- <a href="https://512kb.club/"><img src="../img/clubs/512-green-team.gif" alt="512KB CLUB: GREEN TEAM"></a>
+- [[1MB Club|//1mb.club/]]
+- [[PersonalSit.es|https://personalsit.es/]]
+- [[Queer Web Directory|https://zacharykai.net/lists/queer]]
+- [[smallweb.cc|https://smallweb.cc/]]
+&nbsp;
+- [[Feedle|https://feedle.world/]]
+- [[Kagi Smallweb|https://kagi.com/smallweb/]]
+- [[Marginalia|https://marginalia-search.com/]]
+- [[Search My Site|https://searchmysite.net/]]
+- [[Wiby|//wiby.org/]]
+
+
 ## Credits
 I'd like to extend my heartfelt gratitude to the following people who made pnppl.cc possible:
 - [[Emad Elsaid|https://www.emadelsaid.com/]] for creating [[Xlog|https://github.com/emad-elsaid/xlog]]
