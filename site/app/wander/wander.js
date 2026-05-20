@@ -15,6 +15,7 @@ const wander = {
 		'https://collapseos.org/why.html',
 		'https://dmitry.gr/?r=05.Projects&proj=27.%20rePalm',
 		'https://drewdevault.com/2025/09/24/2025-09-24-Cloudflare-and-fascists.html',
+		'https://ellie.clifford.lol/blog/0023-the-sixth-of-may/',
 		'https://freethoughtblogs.com/nataliereed/2012/04/17/the-null-hypothecis/',
 		'https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/',
 		'https://j3s.sh/thought/blogs-rot-wikis-wait.html',
