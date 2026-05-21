@@ -577,6 +577,7 @@ a.tag:active {
 	--msg-header-bg-l: 21%;
 	--msg-header-color-l: 69%;
 /*	border-radius: 0.375em; */
+	margin-bottom: 1em;
 }
 .message strong {
 	color: currentColor;
