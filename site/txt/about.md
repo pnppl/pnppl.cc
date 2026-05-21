@@ -59,17 +59,16 @@ I also like the idea of making the site available via Gopher for the true low-te
 
 
 ## Memberships
-- <a href="https://512kb.club/"><img src="../img/clubs/512-green-team.gif" alt="512KB CLUB: GREEN TEAM"></a>
-- [[1MB Club|//1mb.club/]]
-- [[PersonalSit.es|https://personalsit.es/]]
-- [[Queer Web Directory|https://zacharykai.net/lists/queer]]
-- [[smallweb.cc|https://smallweb.cc/]]
-&nbsp;
-- [[Feedle|https://feedle.world/]]
-- [[Kagi Smallweb|https://kagi.com/smallweb/]]
-- [[Marginalia|https://marginalia-search.com/]]
-- [[Search My Site|https://searchmysite.net/]]
-- [[Wiby|//wiby.org/]]
+<center>
+<a href="https://512kb.club/"><img src="../img/clubs/512.gif" alt="512KB Club: Green Team" width="88" height="31" class="club"></a> <a href="//1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31" class="club"></a> <a href="https://darktheme.club/"><img src="../img/clubs/dark.gif" alt="Darktheme Club" width="88" height="31" class="club"></a> <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31" class="club"></a> <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31" class="club"></a> <a href="https://zacharykai.net/lists/queer"><img src="../img/clubs/zk-queer.gif" alt="Queer Web Directory" width="88" height="31" class="club"></a> <a href="https://smallweb.cc/"><img src="../img/clubs/smallweb.gif" alt="smallweb.cc" width="88" height="31" class="club"></a>
+</center>
+
+<style><!--
+.club {
+	image-rendering: crisp;
+	image-rendering: pixelated;
+}
+--></style>
 
 
 ## Credits
