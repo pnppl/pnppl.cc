@@ -38,6 +38,19 @@ Unfortunately, if you're on an Android phone, I think you have to be rooted to i
 Buttons with underlined letters can be activated using that letter as the hotkey; [[exactly how depends on the browser.|https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey#:~:text=The%20way%20to%20activate%20the%20accesskey]] On Firefox it's alt-shift-hotkey. You can also navigate through headings with alt-shift-number, but it's currently rather buggy.
 
 
+## Memberships
+<center>
+<a href="https://512kb.club/"><img src="../img/clubs/512.gif" alt="512KB Club: Green Team" width="88" height="31" class="club"></a> <a href="//1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31" class="club"></a> <a href="https://darktheme.club/"><img src="../img/clubs/dark.gif" alt="Darktheme Club" width="88" height="31" class="club"></a> <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31" class="club"></a> <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31" class="club"></a> <a href="https://zacharykai.net/lists/queer"><img src="../img/clubs/zk-queer.gif" alt="Queer Web Directory" width="88" height="31" class="club"></a> <a href="https://smallweb.cc/"><img src="../img/clubs/smallweb.gif" alt="smallweb.cc" width="88" height="31" class="club"></a>
+</center>
+
+<style><!--
+.club {
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+--></style>
+
+
 ## We have to go deeper: technical details, etc.
 My goal is to have to change as little as possible about my existing approach to writing: plaintext, formatted in whatever way feels right, written in my notes app or shell. I'd like for the software to adapt to me, not the other way around. My one concession is Markdown. I don't really like it, but it's cornered the market, and it's close enough that I'm willing to bend a little. Extensions make it much less painful — particularly Wikilink syntax support. The text files that pnppl.cc is built from are the One True Commonplace, with the website providing some extra features that are nice to have but not required. You can access the original text file for a post with the _txt_ button in the top right corner.
 
@@ -56,19 +69,6 @@ For mentions, the underline is broken with dashes to de-emphasize it and so you 
 Still, I'm not quite willing to give up UTF-8 for my posts. UTF-8 is so good. I'm addicted to the emdash. Sometimes I even use an emoji. I figure a garbled character here and there in the unlikely event that someone actually uses Mosaic or another legacy browser is an acceptable sacrifice, and I've tried to ameliorate the issue by outputting ASCII versions of commonly used characters that degrade cleanly, like the emdash, ≠, etc. With CSS enabled you'll still see the original character.
 
 I also like the idea of making the site available via Gopher for the true low-tech heads. We'll see.
-
-
-## Memberships
-<center>
-<a href="https://512kb.club/"><img src="../img/clubs/512.gif" alt="512KB Club: Green Team" width="88" height="31" class="club"></a> <a href="//1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31" class="club"></a> <a href="https://darktheme.club/"><img src="../img/clubs/dark.gif" alt="Darktheme Club" width="88" height="31" class="club"></a> <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31" class="club"></a> <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31" class="club"></a> <a href="https://zacharykai.net/lists/queer"><img src="../img/clubs/zk-queer.gif" alt="Queer Web Directory" width="88" height="31" class="club"></a> <a href="https://smallweb.cc/"><img src="../img/clubs/smallweb.gif" alt="smallweb.cc" width="88" height="31" class="club"></a>
-</center>
-
-<style><!--
-.club {
-	image-rendering: crisp;
-	image-rendering: pixelated;
-}
---></style>
 
 
 ## Credits
@@ -96,7 +96,6 @@ I'm also immensely grateful to the people behind the following software instrume
 - [[GIMP|https://gimp.org/]] image editor
 - [[Gifsicle|https://www.lcdf.org/gifsicle/]] gif compressor
 - [[flexiGIF|https://create.stephan-brumme.com/flexigif-lossless-gif-lzw-optimization/]] gif optimizer
-- [[Git|https://git-scm.com/]] source control
 - [[lftp|https://github.com/lavv17/lftp]] FTP client
 
 Special thanks also to the people who cultivate, harvest, process, and distribute coffee, tea, cannabis, and carrot juice.
