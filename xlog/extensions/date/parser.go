@@ -69,9 +69,9 @@ var (
 
 var filenameProcessedKey = parser.NewContextKey()
 func (s *dateFilenameParser) Parse(parent ast.Node, reader text.Reader, pc parser.Context) ast.Node {
-    if pc.Get(filenameProcessedKey) == nil {
-        pc.Set(filenameProcessedKey, true)
-        if filename, ok := pc.Get(xlog.PageFilenameKey).(string); ok {
+	if pc.Get(filenameProcessedKey) == nil {
+		pc.Set(filenameProcessedKey, true)
+		if filename, ok := pc.Get(xlog.PageFilenameKey).(string); ok {
 			if len(filename) >= 10 {
 				t, err := time.Parse("2006-01-02", filename[:10])
 				if err == nil {
@@ -82,7 +82,7 @@ func (s *dateFilenameParser) Parse(parent ast.Node, reader text.Reader, pc parse
 				}
 			}
 		}
-    }
+	}
 	return nil
 }
 

@@ -114,23 +114,23 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
 	}
 
 	line, _ := reader.PeekLine()
-    title := strings.TrimSpace(string(line))
-    title = strings.TrimPrefix(title, "# ")
-    title = strings.TrimSuffix(title, " #")
-    if len(title) > 70 {
+	title := strings.TrimSpace(string(line))
+	title = strings.TrimPrefix(title, "# ")
+	title = strings.TrimSuffix(title, " #")
+	if len(title) > 70 {
 		title = title[:67] + "..."
-    }
-    d := &data{
-        Map: map[string]any{"title": title},
-        Items: yaml.MapSlice{{Key: "title", Value: title}},
-    }
-    pc.Set(contextKey, d)
+	}
+	d := &data{
+		Map: map[string]any{"title": title},
+		Items: yaml.MapSlice{{Key: "title", Value: title}},
+	}
+	pc.Set(contextKey, d)
 // this makes spaces rather significant! we only remove the node if it's an h1
 // this is so we can make pages documenting hashtags more easily or start a note with a hashtag for some other reason
-    if title[0] == '#' {
+	if title[0] == '#' {
 		return nil, parser.NoChildren
-    }
-    return parent, parser.NoChildren
+	}
+	return parent, parser.NoChildren
 }
 
 func (b *metaParser) Continue(node gast.Node, reader text.Reader, pc parser.Context) parser.State {
@@ -221,9 +221,9 @@ func newTransformer(opts ...transformerOption) parser.ASTTransformer {
 
 func (a *astTransformer) Transform(node *gast.Document, reader text.Reader, pc parser.Context) {
 	if filename := pc.Get(xlog.PageFilenameKey); filename != nil {
-        node.AddMeta("filename", filename)
-    }
-    dtmp := pc.Get(contextKey)
+		node.AddMeta("filename", filename)
+	}
+	dtmp := pc.Get(contextKey)
 	if dtmp == nil {
 		return
 	}

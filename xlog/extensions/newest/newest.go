@@ -36,9 +36,9 @@ func newestShortcode(in xlog.Markdown) template.HTML {
 	}
 
 	// get last heading to jump to right spot
-    pattern := regexp.MustCompile(`<h[1-6] id="(?P<id>.+?)">`)
-    var result []byte
-    var ids []string
+	pattern := regexp.MustCompile(`<h[1-6] id="(?P<id>.+?)">`)
+	var result []byte
+	var ids []string
 	var content []string
 	// do we actually know if it's safe to break the html up by line?
 	// answer: it is not...

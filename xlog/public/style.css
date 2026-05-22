@@ -130,10 +130,10 @@ h6 {
 	font-weight: bold;
 	font-size: 110%;
 }
-/*h6 { */
-/*	font-weight: bold; */
-/*	font-size: 100%; */
-/*} */
+/* h6 { */
+/* 	font-weight: bold; */
+/* 	font-size: 100%; */
+/* } */
 strong {
 	color: var(--text-strong);
 	font-weight: bolder;
@@ -232,9 +232,9 @@ dt {
 dt:after {
 	content: ":";
 }
-/*dd { */
-/*	font-style: italic; */
-/*} */
+/* dd { */
+/* 	font-style: italic; */
+/* } */
 pre {
 	background-color: var(--bg);
 	color: var(--text);
@@ -802,16 +802,16 @@ a.navbar-item.active:active {
 	text-decoration: underline 2px;
 	text-decoration-skip-ink: none;
 }
-/**:hover > .hover-button { */
-/*	display: inline; */
-/*} */
+/* *:hover > .hover-button { */
+/* 	display: inline; */
+/* } */
 
 /* ==========================================================================
 	 View (article content)
 	 ========================================================================== */
-/*@view-transition { */
-/*	navigation: auto; */
-/*} */
+/* @view-transition { */
+/* 	navigation: auto; */
+/* } */
 .view {
 	counter-reset: h2;
 }
@@ -866,9 +866,9 @@ h3 .head-sect:after {
 	counter-increment: h3;
 	content: counter(h2) "." counter(h3) ".";
 }
-/*h1.hashtag-name-noinc:before { */
-/*	content: ""; */
-/*} */
+/* h1.hashtag-name-noinc:before { */
+/* 	content: ""; */
+/* } */
 
 /* Link decorators */
 /* if i don't do this my annotations are stubbornly annotated */
@@ -988,7 +988,7 @@ a.footnote-ref:target {
 a.navbar-item,
 a.button,
 a.button.is-small {
-/*a.hover-button { */
+/* a.hover-button { */
 	text-decoration: none;
 	border: 2px solid;
 	border-color: #F0F0F0 #0B0B0B #0B0B0B #F0F0F0;
@@ -999,20 +999,20 @@ a.button.is-small {
 }
 a.navbar-item:active,
 a.button:active,
-/*a.hover-button:active, */
+/* a.hover-button:active, */
 a.navbar-item.active {
 	border-color: #0B0B0B #F0F0F0 #F0F0F0 #0B0B0B;
 }
 a.navbar-item:visited {
-/*a.hover-button, */
-/*a.hover-button:visited { */
+/* a.hover-button, */
+/* a.hover-button:visited { */
 	color: black;
 }
-/*a.hover-button { */
-/*	font-style: normal; */
-/*	padding: 0 5px 2px 5px; */
-/*	font-weight: bold; */
-/*} */
+/* a.hover-button { */
+/* 	font-style: normal; */
+/* 	padding: 0 5px 2px 5px; */
+/* 	font-weight: bold; */
+/* } */
 .menu-label {
 	background-color: purple;
 	padding: 2px 2em;
@@ -1153,9 +1153,7 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	width: min-content;
 }
 .established {
-	width: 9ch;
 	font-family: cursive, "Victor Mono Medium", serif;
-	font-size: 0.9em;
 }
 .filename-right {
 	float: right;
@@ -1166,12 +1164,12 @@ time.stamp {
 	font-size: 0.75em;
 	color: #69748C;
 }
-/*#article { */
-/*	view-transition-name: page-content; */
-/*} */
-/*.title { */
-/*	view-transition-name: page-title; */
-/*} */
+/* #article { */
+/* 	view-transition-name: page-content; */
+/* } */
+/* .title { */
+/* 	view-transition-name: page-title; */
+/* } */
 
 
 /* ==========================================================================
