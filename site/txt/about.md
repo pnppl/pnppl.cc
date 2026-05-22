@@ -17,19 +17,17 @@ I would love to get an email from you! [[comments@pnppl.cc|mailto:comments@pnppl
 
 
 ## Copyleft
-This site's content is licensed [[CC BY-SA 4.0|https://creativecommons.org/licenses/by-sa/4.0/]] ([[license text|/public/CC_BY-SA_4.0.txt]]) with the attribution requirement waived, unless otherwise specified.
-
 Intellectual property is a fake idea; unfortunately, we live in a world where it reigns supreme. Copyleft gives us a tool to turn copyright against itself. It means that you can do whatever you want with the content of this site, as long as you extend the same right to others.
 
-I'm not wild about this specific license. I don't care what you do with my work as long as you don't [[enclose|https://en.wikipedia.org/wiki/Enclosure]] it. Still, CC BY-SA 4.0 seems to be on strong legal footing and is compatible with (and can even be converted into) the [[GPLv3|https://www.gnu.org/licenses/gpl-3.0.en.html]]. If the license causes issues for you, let me know and I'll probably be happy to do a public domain declaration.
+This site's content is licensed [[CC BY-SA 4.0|https://creativecommons.org/licenses/by-sa/4.0/]] ([[license text|../public/CC_BY-SA_4.0.txt]]) with the attribution requirement waived, unless otherwise specified. If this causes issues for you, let me know and I'll probably be happy to do a public domain declaration.
 
-Code that I share here is [[AGPLv3|https://www.gnu.org/licenses/agpl-3.0.en.html]] if unspecified. The code used to build the site is covered by other licenses.
+Code that I share here is [[AGPLv3|https://www.gnu.org/licenses/agpl-3.0.en.html]] ([[license text|../app/AGPL-3.0.txt]]) if unspecified. The code used to build the site is covered by other licenses.
 
 
 ## Install Victor Mono
 This site really looks much better in [[Victor Mono.|http://rubjo.github.io/victor-mono/]] It's my favorite font. Even though it's monospace, it's a pleasure to read.
 
-I could force it on you, but I find that rude. I block remote fonts in my browser: they're usually hosted on Google's CDN, so they call home; they're a multi-megabyte blob you have to download just to read some text; and they don't respect your preference of default font. So, please install it. I promise you'll like it.
+I could force it on you, but I find that rude. I block remote fonts in my browser: they're usually hosted on Google's CDN, so they call home; they're a big blob you have to download just to read some text; and they don't respect your preference of default font. So, please install it. I promise you'll like it.
 
 Unfortunately, if you're on an Android phone, I think you have to be rooted to install a font and it's a big pain in the ass. So, I do try to load it on mobile with a media query. You'll just have to block it if you hate it.
 
@@ -56,7 +54,7 @@ My goal is to have to change as little as possible about my existing approach to
 
 You can also access them through [[the|https://git.gay/pnppl/pnppl.cc/]] [[git|https://codeberg.org/pnppl/pnppl.cc]] [[repo|https://github.com/pnppl/pnppl.cc]], which handily doubles as a version history and complete source of the site. If you just want to grab all the posts in plaintext, that's at [[../txt/!txt.zip]].
 
-pnppl.cc does not use any Javascript except for the Search page. It's a necessary compromise. If you want to search without enabling js, you can grab the text files and search them locally. This is easily accomplished in the shell, eg `grep -i "search term" *.md`. I like [[ripgrep.|http://github.com/BurntSushi/ripgrep]]
+pnppl.cc does not use any Javascript except for the Search page.[^js] It's a necessary compromise. If you want to search without enabling js, you can grab the text files and search them locally. This is easily accomplished in the shell, eg `grep -i "search term" *.md`. I like [[ripgrep.|http://github.com/BurntSushi/ripgrep]]
 
 A major goal I have is for the site to be usable as plain HTML. The sites that have stood the test of time, that still display perfectly and are a pleasure to read, are all plain old HTML. (Usually hosted on URLs like `http://lab.cs.mit.edu/faculty/~johnsmith` and miraculously preserved in their entirety by the Wayback Machine.) As a fan of retrocomputing, I'd also like to be able to access my site on anything with a web browser, and trying to accomplish that level of compatibility is the stuff of web design nightmares... unless it's just plain old HTML. To that end, I've been testing the site in progress on NCSA Mosaic v2.7b6. Sure, it's the last version... but it's the last version of the *first* major browser, and [[I can run it on my computer.|http://github.com/AppImageCommunity/NCSA-Mosaic-AppImage]] I figure if it works in Mosaic, it ought to work in anything. HTML is wonderfully resilient. Pretty much every browser ever made happily displays malformed HTML without issue. Modern browsers still render supposedly obsolete tags just fine, and Mosaic will just ignore tags it doesn't understand.
 
@@ -67,8 +65,6 @@ I selected [[Xlog|http://github.com/emad-elsaid/xlog]] as the best static site g
 For mentions, the underline is broken with dashes to de-emphasize it and so you can distinguish it from a manual link. Links to glossary entries have a dotted underline and you can hover them to see the definition. [[External links|http://web1.0hosting.net/]] are followed by a % sign, because it kind of looks like an X and also kind of like the little external link symbol a bunch of sites use. I wanted to keep it ASCII when possible, as well as webfont-free. ([[Email,|mailto:comments@pnppl.cc?subject=I read the entire about page!]] [[torrent magnet,|magnet:?xt=urn:btih:3b1de9cb7011350fa152ec47419620aa153e19e7&dn=debian-13.4.0-amd64-netinst.iso]] [[PDF,|https://www.bmj.com/content/bmj/363/bmj.k5094.full.pdf]] [[Wikipedia,|https://en.wikipedia.org/wiki/Emperor_Norton]] and [[YouTube|https://www.youtube.com/watch?v=DKaqaToa4mQ]] links have their own annotations.)
 
 Still, I'm not quite willing to give up UTF-8 for my posts. UTF-8 is so good. I'm addicted to the emdash. Sometimes I even use an emoji. I figure a garbled character here and there in the unlikely event that someone actually uses Mosaic or another legacy browser is an acceptable sacrifice, and I've tried to ameliorate the issue by outputting ASCII versions of commonly used characters that degrade cleanly, like the emdash, ≠, etc. With CSS enabled you'll still see the original character.
-
-I also like the idea of making the site available via Gopher for the true low-tech heads. We'll see.
 
 
 ## Credits
@@ -85,7 +81,7 @@ I'd like to extend my heartfelt gratitude to the following people who made pnppl
 - [[besties collective|https://besties.house/]] for providing gratis source code hosting and version control at [[git.gay|https://git.gay/]]
 - [[Web 1.0 Hosting|//web1.0hosting.net/]] for providing gratis retro-compatible webhosting and email
 
-I'm also immensely grateful to the people behind the following software instrumental to making this site and maintaining my sanity:
+I'm also immensely grateful to the people behind the following software instrumental to making this site and maintaining my thin sliver of sanity:
 - [[Debian|https://www.debian.org/]] operating system
 - [[Xfce|https://xfce.org/]] desktop environment
 - [[Chicago95|https://github.com/grassmunk/Chicago95]] desktop theme
@@ -99,3 +95,6 @@ I'm also immensely grateful to the people behind the following software instrume
 - [[lftp|https://github.com/lavv17/lftp]] FTP client
 
 Special thanks also to the people who cultivate, harvest, process, and distribute coffee, tea, cannabis, and carrot juice.
+
+
+[^js]: It's also used on a few other "special" pages.
