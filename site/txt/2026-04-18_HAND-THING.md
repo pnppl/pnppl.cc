@@ -3,6 +3,8 @@
 
 I've just created **[[HANDTHING.PARTY|//handthing.party/]]**, a website with the sole purpose of doing that hand thing.
 
+**Update:** HANDTHING.PARTY has been accepted by the [[Single-Serving Sites|https://singleservingsites.cool/]] directory.
+
 I initially registered handth.ing, which was a very cool domain, but then I discovered the .ing TLD (top-level domain) is on the dread [[HSTS preload list|https://serverfault.com/a/1067232]], meaning it would be impossible to use for unsecured HTTP connections. Or at least, I think it would be... I'm not entirely sure how it all works. It seems like it's enforced by the browser, so old ones ought to be immune, but maybe there's something involved on the TLD's end too. In any case, if I try to access a site with HSTS enabled over HTTP (or HTTPS with an expired cert), my browser gives an error saying "nothing can be done, fuck you"; since HTTP support is important for retro compat, I steer clear of these TLDs.
 
 Luckily, I thought to check the preload list about 15 minutes after I placed the order, and my registrar was willing to refund it. In the end it worked out for the best since DOT PARTY is way more fun and half the price.

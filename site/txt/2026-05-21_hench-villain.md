@@ -1,10 +1,10 @@
 # Hench / Villain
-#lit #review ish
+#lit #review
 
 ## Hench (2020)
 **4/5**
 
-I've been a fan of _Hench_ by Natalie Zina Walschots since before it even came out — not because I know the author, which I don't, but because I won a Goodreads giveaway for an [[ARC|https://en.wikipedia.org/wiki/Advance_copy]]. Here's the brief review I wrote back in 2020:
+I've been a fan of _Hench_ by Natalie Zina Walschots since before it even came out. Not because I know the author — I don't — but because I won a Goodreads giveaway for an [[ARC|https://en.wikipedia.org/wiki/Advance_copy]]. Here's the brief review I wrote back in 2020:
 
 > First time I think I've actually read an ARC cover to cover. I was pleasantly surprised to find it was borderline an anarchist/antifascist wish-fulfilment fantasy, with supers standing in for police/fash/the powerful. Our plucky temp-worker protagonist marshals the forces of statistics, utilitarianism, and doxing to wage war on the establishment.
 >

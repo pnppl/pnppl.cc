@@ -404,7 +404,7 @@ h2#Footnotes, /* omg fix this */
 	background-color: var(--bg);
 	border-left: 5px solid var(--border);
 	padding: 0.75em 1.5em;
-	margin: 0.5em;
+	margin: 1em 0.5em;
 }
 .content ol,
 .content ul {
