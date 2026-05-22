@@ -44,7 +44,7 @@ As a result, it's a lot less fun than the first book. It's much bleaker, sadder;
 
 Still, it's compelling. I didn't get a bunch of horrible chitinous makeouts, but I got something even better: a sex scene! It's unexpectedly... really hot?
 
-> The surfaces of him were hard but not uncomfortable, warm with unexpected give. We had to find the ways in which we fit together, a question unlocking an answer and another question, like a braid or links in a chain. I came for the first time against his thigh, grinding against a plate shaped like a [[https://en.wikipedia.org/wiki/Tassets|tasset]], while he bit down on my shoulder with his [[https://en.wikipedia.org/wiki/Chelicerae|chelicerae]], drawing pinpricks of blood in a starburst. Later, draped over his back, I tried to brush one of his antennae gently, and he wrapped his fingers around mine to make me squeeze harder.
+> The surfaces of him were hard but not uncomfortable, warm with unexpected give. We had to find the ways in which we fit together, a question unlocking an answer and another question, like a braid or links in a chain. I came for the first time against his thigh, grinding against a plate shaped like a [[tasset|https://en.wikipedia.org/wiki/Tassets]], while he bit down on my shoulder with his [[chelicerae|https://en.wikipedia.org/wiki/Chelicerae]], drawing pinpricks of blood in a starburst. Later, draped over his back, I tried to brush one of his antennae gently, and he wrapped his fingers around mine to make me squeeze harder.
 >
 > “Pull,” he whispered, and then whined when I did, arching under me.
 >
