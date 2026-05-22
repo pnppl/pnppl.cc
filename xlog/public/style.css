@@ -884,6 +884,7 @@ a.autolink:visited {
 }
 a.autolink.glossary {
 	text-decoration-style: dotted;
+	cursor: help;
 }
 .link-text {
 	text-decoration: underline;
