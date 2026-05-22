@@ -43,7 +43,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 
 <style><!--
 #club a:after {
-	content: '' !important;
+	content: '';
 }
 #club img {
 	image-rendering: crisp-edges;
