@@ -42,8 +42,8 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 </center>
 
 <style><!--
-#club a {
-	text-wrap: nowrap;
+#club a:after {
+	content: '' !important;
 }
 #club img {
 	image-rendering: crisp-edges;
