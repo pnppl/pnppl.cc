@@ -24,5 +24,6 @@ site/sitemap/
 site/slashpages/
 site/202*/
 site/app/index.html
+site/app/meander/blocked.html
 site/sitemap.xml
 site/*.html' >> .git/info/exclude

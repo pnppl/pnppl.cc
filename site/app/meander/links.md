@@ -17,6 +17,7 @@ https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespr
 https://j3s.sh/thought/blogs-rot-wikis-wait.html
 https://kevinboone.me/web-adjacent.html
 https://maia.crimew.gay/posts/the-emails/
+https://moth.monster/blog/artificial-iconoclasm/
 https://ploum.net/2026-01-05-unteaching_github.html
 https://sexabolition.blog/fuck-biological-sex-we-have/
 https://site.sebasmonia.com/posts/2026-04-09-the-redirection-of-traffic-from-web-to-ai-doesn-t-happen-in-a-vacuum.html
@@ -87,6 +88,7 @@ http://wol.fm/blog/utopian-scholastic.html
 http://www.terrybisson.com/theyre-made-out-of-meat-2/
 
 ### Audio/video
+http://echoesofbluemars.org/
 http://handthing.party/
 http://smokepowered.com/
 http://www.quoteunquoterecords.com/qur022.htm

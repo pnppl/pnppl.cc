@@ -58,6 +58,10 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
 }
+#club a:active img {
+	filter: brightness(98%);
+	transform: translate(1px, 1px) scaleX(0.98) scaleY(0.94);
+}
 --></style>
 
 

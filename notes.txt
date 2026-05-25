@@ -59,7 +59,6 @@ todo:
 					- ......? prob a million things i haven't thought of where i made some assumption about a path. autolink_pages?
 					- x writing links to images like ../img/ is a problem: when embedded in the index, it causes mosaic to send a request for pnppl.cc/../img/. lol
 		- add likes counter?
-		- add web1.0hosting button?
 - would be nice to set it up to automatically strip https - autolink ext, markdown wikilink ext
 	- is this actually a stupid idea? most sites won't serve http
 	- definitely don't strip http:// since some sites only serve that and we want to specify
