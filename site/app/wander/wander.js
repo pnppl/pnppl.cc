@@ -96,6 +96,9 @@ const wander = {
 		'https://x.com/',
 	],
 	referral: 'no',
+	scripts: [
+		'move-about.js',
+	],
 	styles: [
 		'wander.css',
 	]
