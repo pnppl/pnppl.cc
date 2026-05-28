@@ -539,7 +539,7 @@ a.tag:active {
 .menu-list a,
 .menu-list button {
 	appearance: none;
-	/* compat: white fallback before var() for pre-custom-property browsers */
+	/* compat: white fallback before var() for old browsers */
 	background-color: white;
 	background-color: hsl(221, 14%, calc(var(--main-l) + var(--menu-item-bg-l-delta)));
 	border: none;
@@ -554,18 +554,20 @@ a.tag:active {
 	text-align: left;
 /*	width: 100%; */
 }
-.menu-list a:hover,
-.menu-list button:hover {
-	--menu-item-bg-l-delta: var(--hover-bg-l-delta);
+.menu-list a:hover {
+	--menu-item-bg-l-delta:var(--hover-bg-l-delta)
 }
-.menu-list a:active,
-.menu-list button:active {
-	--menu-item-bg-l-delta: var(--active-bg-l-delta);
+.menu-list a:active {
+	--menu-item-bg-l-delta:var(--active-bg-l-delta)
 }
 .menu-list li ul {
 	border-left: 1px solid var(--border);
 	margin: 0.75em;
 	padding-left: 0.75em;
+}
+/* zebra stripes */
+div.menu-list li:nth-child(odd) {
+	--menu-item-bg-l-delta:calc(var(--hover-bg-l-delta) * 0.75)
 }
 
 /* Message (shortcode contents) --------------------------------------------- */
