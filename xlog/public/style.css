@@ -566,9 +566,9 @@ a.tag:active {
 	padding-left: 0.75em;
 }
 /* zebra stripes */
-div.menu-list li:nth-child(odd) {
-	--menu-item-bg-l-delta:calc(var(--hover-bg-l-delta) * 0.6)
-}
+/* div.menu-list li:nth-child(odd) { */
+/*	--menu-item-bg-l-delta:calc(var(--hover-bg-l-delta) * 0.6) */
+/* } */
 
 /* Message (shortcode contents) --------------------------------------------- */
 .message {
