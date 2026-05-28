@@ -10,7 +10,7 @@
 	--text-strong-l: 10%;
 	--link-l: 58%;
 	--loud-l: 40%;
-	--hover-bg-l-delta: -5%;
+	--hover-bg-l-delta: -6%;
 	--active-bg-l-delta: -10%;
 
 	/* Computed colors (depend on lightness values above) */
@@ -567,7 +567,7 @@ a.tag:active {
 }
 /* zebra stripes */
 div.menu-list li:nth-child(odd) {
-	--menu-item-bg-l-delta:calc(var(--hover-bg-l-delta) * 0.75)
+	--menu-item-bg-l-delta:calc(var(--hover-bg-l-delta) * 0.6)
 }
 
 /* Message (shortcode contents) --------------------------------------------- */
@@ -1546,7 +1546,7 @@ pre.chroma {
 		--border-l: 24%;
 		--text-l: 82%;
 		--text-strong-l: 93%;
-		--hover-bg-l-delta: 5%;
+		--hover-bg-l-delta: 7%;
 		--active-bg-l-delta: 10%;
 
 	}
