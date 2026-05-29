@@ -46,7 +46,7 @@ h2 {
 ul {
 	list-style: none;
 }
-button,
+/* button, */
 input {
 	margin: 0;
 }
@@ -181,8 +181,9 @@ span.subtitle {
 /* ==========================================================================
 	 Base Elements
 	 ========================================================================== */
-a,
-button {
+/* a, */
+/* button { */
+a {
 	cursor: pointer;
 }
 :focus-visible {
@@ -206,16 +207,18 @@ a:visited,
 a strong {
 	color: currentColor;
 }
-button {
-	appearance: none;
-	background: none;
-	border: none;
-	color: inherit;
-	font-family: inherit;
-	font-size: 1em;
-	margin: 0;
-	padding: 0;
-}
+
+/* button { */
+/*	appearance: none; */
+/*	background: none; */
+/*	border: none; */
+/*	color: inherit; */
+/*	font-family: inherit; */
+/*	font-size: 1em; */
+/*	margin: 0; */
+/*	padding: 0; */
+/* } */
+
 code {
 	background-color: var(--bg);
 	color: var(--code);
@@ -536,8 +539,10 @@ a.tag:active {
 .menu-list {
 	line-height: 1.25;
 }
-.menu-list a,
-.menu-list button {
+/* .menu-list a, */
+/* .menu-list button { */
+.menu-list > a,
+.menu-list li > a {
 	appearance: none;
 	/* compat: white fallback before var() for old browsers */
 	background-color: white;
@@ -1162,10 +1167,11 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 .filename-right {
 	float: right;
 }
-time.stamp {
+.meta {
 	display: block;
 	clear: both;
 	font-size: 0.75em;
+	font-weight: bold;
 	color: #69748C;
 }
 /* #article { */

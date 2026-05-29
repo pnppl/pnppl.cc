@@ -47,6 +47,7 @@ var helpers = template.FuncMap{
 //	"tagParent":      tagParent,
 	"noop":           noop,
 	"tagId":          tagId,
+	"wday":           wday,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -344,4 +345,9 @@ func tagId(tag string) string {
 	}
 	nohash := tag[1:len(tag)]
 	return "#tag-" + nohash
+}
+
+// Wednesday -> Wed.
+func wday(day string) string {
+	return day[0:3]
 }

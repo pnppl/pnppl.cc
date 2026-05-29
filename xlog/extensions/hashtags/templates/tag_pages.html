@@ -15,9 +15,17 @@
 <span class="filename-right">&nbsp;[{{ .Name }}]</span>
 <br>
       </span>
-{{ $t := .ModTime }}
-<time class="stamp" datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)" $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
-    </a>
+	</a>
+        <div class="meta">
+		{{ $t := .ModTime -}}
+		{{ $weekday := printf "%s" $t.Weekday -}}
+		{{ $day := wday $weekday }}
+		<time datetime="{{ datetime $t }}">{{ printf "mod. %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d (%s)" $t.Hour $t.Minute $day }}</time>
+		<span class="is-hidden"> ~ </span>
+		<span class="filename-right">
+			{{- range $v := $props.tags.Val }}<a class="tag" href="/+/tag/{{ $v }}">#{{ $v }}</a> {{ end -}}
+		</span>
+	</div>
 </li>
     {{- end -}}
 </ul>
