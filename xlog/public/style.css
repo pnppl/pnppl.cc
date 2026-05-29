@@ -1520,7 +1520,7 @@ pre.chroma {
 	}
 }
 
-/* mobile or just skinny */
+/* mobile or just 	skinny */
 @media (max-width: 767px) {
 	#table-of-contents-list {
 		float: none;
@@ -1537,6 +1537,13 @@ pre.chroma {
 	}
 	#badge {
 		display: inline-block;
+	}
+	.meta time {
+		display: none;
+	}
+	.filename-right {
+		float: none;
+		display: inline;
 	}
 }
 

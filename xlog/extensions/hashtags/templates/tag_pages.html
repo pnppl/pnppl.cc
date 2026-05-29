@@ -1,22 +1,22 @@
 <aside class="menu">
-  <div class="menu-list">
-  <ul>
-  	{{ $page := tagId .page.Name }}
-    {{- range .pages -}}
+	<div class="menu-list">
+	<ul>
+	{{ $page := tagId .page.Name }}
+	{{- range .pages -}}
 <li>
-    <a href="/{{.Name}}{{$page}}">
-      <span class="is-block">
-        {{ $props := properties . }}
-        {{ with $props.title }}
-          {{ .Value }}
-        {{ else }}
-          {{ base .Name }}
-        {{ end }}
+	<a href="/{{.Name}}{{$page}}">
+		<span class="is-block">
+		{{ $props := properties . }}
+		{{ with $props.title }}
+			{{ .Value }}
+		{{ else }}
+			{{ base .Name }}
+		{{ end }}
 <span class="filename-right">&nbsp;[{{ .Name }}]</span>
 <br>
-      </span>
+		</span>
 	</a>
-        <div class="meta">
+	<div class="meta">
 		{{ $t := .ModTime -}}
 		{{ $weekday := printf "%s" $t.Weekday -}}
 		{{ $day := wday $weekday }}
@@ -27,7 +27,7 @@
 		</span>
 	</div>
 </li>
-    {{- end -}}
+	{{- end -}}
 </ul>
-  </div>
+	</div>
 </aside>
