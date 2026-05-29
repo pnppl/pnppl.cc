@@ -1538,12 +1538,13 @@ pre.chroma {
 	#badge {
 		display: inline-block;
 	}
-	.meta time {
-		display: none;
-	}
+/*	.meta time { */
+/*		display: none; */
+/*	} */
 	.filename-right {
 		float: none;
 		display: inline;
+		word-break: break-all;
 	}
 }
 
