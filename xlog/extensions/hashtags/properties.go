@@ -2,7 +2,7 @@ package hashtags
 
 import (
 	"fmt"
-
+	"slices"
 	"github.com/emad-elsaid/xlog"
 )
 
@@ -28,6 +28,7 @@ func properties(p xlog.Page) []xlog.Property {
 			for _, v := range(hashtags) {
 				tags = append(tags, string(v.value))
 			}
+			slices.Sort(tags)
 			props = append(props, Prop{
 					NameVal: "tags",
 					Val:	tags,
