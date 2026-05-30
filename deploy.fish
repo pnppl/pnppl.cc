@@ -9,7 +9,7 @@ if set -q _flag_mobile
 end
 
 rm -rf site/.pagefind/ &&
-rm -rf site/sitemap/ &&
+rm -rf site/sitemap/index.html &&
 #	site/txt/!txt.zip \
 #	site/img/1bitday/!1bitday.zip \
 #	site/img/comics/!comics.zip \

@@ -11,6 +11,7 @@
 - [[fs-ir]]
 - [[mirrors]]
 - [[pnppl]]
+- [[sitemap]]
 - [[slashpages]]
 
 ## Site Resources
