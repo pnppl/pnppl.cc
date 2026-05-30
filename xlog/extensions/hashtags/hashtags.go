@@ -335,7 +335,7 @@ func renderHashtagGeneric(writer util.BufWriter, source []byte, n ast.Node, ente
 	tag := n.(*Hashtag)
 	switch format {
 		case "html":
-			fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="tag-%s" name="tag-%s" data-pagefind-meta="tag-%s:%s" data-pagefind-filter="hashtag[name]">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)
+			fmt.Fprintf(writer, `<a href="/+/tag/%s" class="tag" id="tag-%s" name="tag-%s" data-pagefind-meta="tag-%s:%s" data-pagefind-filter="hashtag:%s">#%s</a>`, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value, tag.value)
 		case "gemtext":
 			fmt.Fprintf(writer, `%s=> /+/tag/%s #%s`, "\n", tag.value, tag.value)
 	}
