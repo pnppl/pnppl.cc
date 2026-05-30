@@ -1174,6 +1174,7 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	font-size: 0.75em;
 /*	font-weight: bold; */
 	color: #69748C;
+	padding: 0 0.75em;
 }
 /* #article { */
 /* 	view-transition-name: page-content; */
