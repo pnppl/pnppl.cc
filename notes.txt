@@ -128,6 +128,7 @@ todo:
 - language of codeblocks specified like ```lang affects highlighting but fails to make it to html
 	- started debugging and didn't get far. n.Language(source) in the md highlight module is always nil
 	- need to fix so i can use ```ascii or ```art or something and make a css class to prettify text art
+- 'original content please steal' / 'steal this site!' badge
 
 
 low priority/done:
