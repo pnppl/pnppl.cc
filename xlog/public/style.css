@@ -511,7 +511,7 @@ div.icon-text {
 	align-items: center;
 	background-color: hsl(221, 14%, calc(var(--bg-l) + var(--tag-bg-l-delta)));
 	border-radius: 0.375em;
-/*	color: var(--text); */
+	color: var(--text);
 	display: inline;
 	display: inline-flex;
 	font-size: 0.75em;
@@ -550,8 +550,8 @@ a.tag:active {
 	background-color: hsl(221, 14%, calc(var(--main-l) + var(--menu-item-bg-l-delta)));
 	border: none;
 	border-radius: 0.25em;
-/*	color: black; */
-/*	color: var(--text); */
+	color: black;
+	color: var(--text);
 	display: block;
 	font-family: inherit;
 	font-size: 1em;
@@ -1172,7 +1172,7 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	display: block;
 	clear: both;
 	font-size: 0.75em;
-	font-weight: bold;
+/*	font-weight: bold; */
 	color: #69748C;
 }
 /* #article { */
