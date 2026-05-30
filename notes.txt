@@ -2,7 +2,6 @@ misc:
 https://vivivi.leprd.space/webmastery/pre-css-attributes/
 TAGS! {{ range $v := $props.tags.Val }}{{ $v }}<br>{{ end }}
 
-
 todo: 
 - css tweaks
 	- nicer ul styling
@@ -28,7 +27,8 @@ todo:
 			- dark: white text
 - x next/prev post buttons
 	- should probably make these fit nicer
-- display tags for item next to links to it
+- x display tags for item next to links to it
+	- make it prettier. maybe swap tags and filename?
 - get rid of shell postprocessing
 	- just finish_toc left
 		- we get no toc if the document has no headings, even if we have backlinks/see also
@@ -129,6 +129,8 @@ todo:
 	- started debugging and didn't get far. n.Language(source) in the md highlight module is always nil
 	- need to fix so i can use ```ascii or ```art or something and make a css class to prettify text art
 - 'original content please steal' / 'steal this site!' badge
+- sort See Also by number of tags in common
+- refactor the templates. the whole point of them is not having to copy-paste, and yet...
 
 
 low priority/done:
@@ -224,11 +226,6 @@ low priority/done:
 	- mtimes and mobile sync are totally fucked
 	- now that i stopped committing xlog build artifacts the order of operations is nonsensical
 	- spaghetti
-- i think i could easily change the url the badge points to "dynamically" as well
-	- of course, currently the only badges that this would make sense for are the Victor Mono, Fish, and perhaps nano ones
-		- if i change nano then maybe i should pick a different default so /about is the default
-		- could also link anarchy one to an anarchist website, lain one to... lain wikipedia?, etc.
-		- if i do this i could use them in the more traditional promo way. a web1.0hosting one would be good
 - the excerpt stuff could be more generalized to make !embed more useful
 - x support other delivery formats like epub
 	- i should be able to do this relatively easily with pandoc. i think i need to render p.Render() to files then feed those to it
