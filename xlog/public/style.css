@@ -549,8 +549,8 @@ a.tag:active {
 	background-color: hsl(221, 14%, calc(var(--main-l) + var(--menu-item-bg-l-delta)));
 	border: none;
 	border-radius: 0.25em;
-	color: black;
-	color: var(--text);
+/*	color: black; */
+/*	color: var(--text); */
 	display: block;
 	font-family: inherit;
 	font-size: 1em;
