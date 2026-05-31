@@ -1081,6 +1081,7 @@ a.navbar-item:visited {
 
 /* "dynamic" badge */
 /* static */
+body:has(h2:nth-of-type(1))	{ --badge: url(/public/badges/steal.gif); }
 body:has(h2:nth-of-type(2))	{ --badge: url(/public/badges/copyleft.gif); }
 body:has(h2:nth-of-type(3))	{ --badge: url(/public/badges/nano-88x31.gif); }
 /* these don't look like the others and so don't work with the press effect */

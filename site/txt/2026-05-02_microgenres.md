@@ -84,6 +84,8 @@ The main appeal of this one is how it makes you want to root for people who are 
 - Dexter series by Jeff Lindsay
 	- Mostly first-person narration; villain is unquestionably the protagonist.
 	- I've only read the first few of these. They're nowhere near as memorable as the TV version; honestly, they kind of read like cheap airport books made specifically for visitors to Florida. The most interesting thing is that a few books in we learn that Dexter's Dark Passenger is a literal demon from before the dawn of time. It kind of killed the gritty vibe for me to randomly turn it into fantasy, but the chapter introducing the Dark Passenger was very cool.
+- Dread Empire's Fall series by Walter Jon Williams
+	- Really awesome space opera in a bleak authoritarian setting. The main characters are interesting and complex and generally the good guys... but they're also absolutely ruthless monsters.
 - Lolita by Vladimir Nabokov
 	- Have not read.
 - The Wasp Factory by Iain Banks

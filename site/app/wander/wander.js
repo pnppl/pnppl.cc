@@ -71,6 +71,7 @@ const wander = {
 		'https://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/',
 		'https://wol.fm/blog/utopian-scholastic.html',
 		'https://www.terrybisson.com/theyre-made-out-of-meat-2/',
+		'https://baccyflap.com/mus/ti/',
 		'https://echoesofbluemars.org/',
 		'https://handthing.party/',
 		'https://smokepowered.com/',

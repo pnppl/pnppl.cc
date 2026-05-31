@@ -87,6 +87,9 @@ http://wol.fm/blog/utopian-scholastic.html
 ### Fiction
 http://www.terrybisson.com/theyre-made-out-of-meat-2/
 
+### Comic
+https://baccyflap.com/mus/ti/
+
 ### Audio/video
 http://echoesofbluemars.org/
 http://handthing.party/

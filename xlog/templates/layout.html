@@ -12,7 +12,8 @@
 		<link rel="license" href="/public/CC_BY-SA_4.0.txt">
 		<link rel="human-json" href="/public/human.json">
 		{{ with .page -}}
-			{{ widgets "head" . }}
+		<link rel="alternate" href="/txt/{{ .Name }}.md" title="Markdown source" type="text/markdown">
+		{{ widgets "head" . }}
 		{{- end }}
 		<title>
 		{{- $props := properties .page -}}
