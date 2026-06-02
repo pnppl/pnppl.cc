@@ -1,5 +1,5 @@
 # Beloved microgenres
-#list #sff #horror #lit #tv #film
+#list #sf #horror #lit #tv #film
 
 ## Sci-fi medical drama ##
 Science fiction and medical drama seem like a match made in heaven. The medicine on medical dramas is made-up bullshit anyway, so why not make up some bullshit about aliens and space madness and oxygen deprivation and like... the effects of huffing warp engine fuel? As a bonus, you won't mislead anyone about real illnesses.
