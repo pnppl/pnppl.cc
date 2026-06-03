@@ -42,6 +42,7 @@ echo "	],
 		'https://annas-archive.gl/', // the best site in the universe
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
+		'https://hyperdoc.khinsen.net/',
 		'https://maggieappleton.com',
 		'https://neal.fun/',
 		'https://*.otherstrangeness.com'.
