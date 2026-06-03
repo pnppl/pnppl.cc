@@ -24,6 +24,7 @@ https://www.uncannymagazine.com/article/fandom-for-robots/
 
 ### Game/interaction
 https://destroyed4com4t.itch.io/stealth-redux
+https://neal.fun/
 
 ### Misc. resource
 https://github.com/grassmunk/Chicago95
