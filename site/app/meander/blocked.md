@@ -1,4 +1,4 @@
-# Blocked Meander/Wander URLs
+# Blocked Meander/Wander URLs (http header, popup, etc.)
 
 ## SSL ##
 ### Nonfiction
@@ -37,3 +37,7 @@ https://twcclassics.com/
 ### Nonfiction
 http://crimethinc.com/2019/04/08/against-the-logic-of-the-guillotine-why-the-paris-commune-burned-the-guillotine-and-we-should-too
 http://supercommunity.e-flux.com/texts/the-great-silence/
+
+## No SSL ##
+### Misc. resource
+http://fileformats.archiveteam.org/

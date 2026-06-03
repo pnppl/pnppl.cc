@@ -39,7 +39,8 @@ const wander = {
 		// Fiction
 		'https://www.galactanet.com/oneoff/theegg_mod.html',
 
-		// Comic
+		// Comic/still image
+		'https://hillhouse.neocities.org/cliques/library/',
 		'https://kalebhorton.ghost.io/the-d-lbert-project/',
 		'https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/',
 		'https://www.qwantz.com/',
@@ -104,7 +105,6 @@ const wander = {
 		'https://www.quoteunquoterecords.com/qur022.htm',
 
 		// Misc. resource
-		'https://fileformats.archiveteam.org/',
 		'https://temblast.com/android.htm',
 		'https://vivivi.leprd.space/webmastery/pre-css-attributes/',
 		'https://web1.0hosting.net/',
@@ -132,6 +132,13 @@ const wander = {
 		'https://medium.com/',
 		'https://*.substack.com/',
 
+		// blocked by http headers
+		'https://annas-archive.gl/', // the best site in the universe
+		'https://codeberg.org/',
+		'https://danielmiessler.com/',
+		'https://*.otherstrangeness.com'.
+		'https://thesweetbits.com/',
+
 		// YC, HN, AI, capitalists
 		'https://foundersatwork.posthaven.com/',
 		'https://paulgraham.com/',
@@ -149,6 +156,8 @@ const wander = {
 		// Consoles
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
+		// capitalist slop
+		'https://www.davidtran.me/wander/wander.js',
 	],
 	referral: 'no',
 	scripts: [

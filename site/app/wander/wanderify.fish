@@ -38,6 +38,13 @@ echo "	],
 		'https://medium.com/',
 		'https://*.substack.com/',
 
+		// blocked by http headers
+		'https://annas-archive.gl/', // the best site in the universe
+		'https://codeberg.org/',
+		'https://danielmiessler.com/',
+		'https://*.otherstrangeness.com'.
+		'https://thesweetbits.com/',
+
 		// YC, HN, AI, capitalists
 		'https://foundersatwork.posthaven.com/',
 		'https://paulgraham.com/',
@@ -55,6 +62,8 @@ echo "	],
 		// Consoles
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
+		// capitalist slop
+		'https://www.davidtran.me/wander/wander.js',
 	],
 	referral: 'no',
 	scripts: [

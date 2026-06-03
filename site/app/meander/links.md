@@ -32,7 +32,8 @@ https://www.thedissident.news/every-trans-suicide-is-a-murder/
 ### Fiction
 https://www.galactanet.com/oneoff/theegg_mod.html
 
-### Comic
+### Comic/still image
+https://hillhouse.neocities.org/cliques/library/
 https://kalebhorton.ghost.io/the-d-lbert-project/
 https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/
 https://www.qwantz.com/
@@ -97,7 +98,6 @@ http://smokepowered.com/
 http://www.quoteunquoterecords.com/qur022.htm
 
 ### Misc. resource
-http://fileformats.archiveteam.org/
 http://temblast.com/android.htm
 http://vivivi.leprd.space/webmastery/pre-css-attributes/
 http://web1.0hosting.net/
