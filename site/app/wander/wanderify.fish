@@ -45,7 +45,7 @@ echo "	],
 		'https://hyperdoc.khinsen.net/',
 		'https://maggieappleton.com',
 		'https://neal.fun/',
-		'https://*.otherstrangeness.com'.
+		'https://*.otherstrangeness.com',
 		'https://thesweetbits.com/',
 
 		// YC, HN, AI, capitalists
@@ -66,7 +66,7 @@ echo "	],
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
 		// capitalist slop
-		'https://www.davidtran.me/wander/wander.js',
+		'https://www.davidtran.me/wander/',
 	],
 	referral: 'no',
 	scripts: [
