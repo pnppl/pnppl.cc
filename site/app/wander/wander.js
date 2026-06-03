@@ -120,6 +120,7 @@ const wander = {
 	ignore: [
 		// rationalists, racists, fascists
 		'https://*.astralcodexten.com/',
+		'https://dhh.dk/',
 		'https://gwern.net/',
 		'https://*.lesswrong.com/',
 		'https://slatestarcodex.com/',
@@ -131,8 +132,19 @@ const wander = {
 		'https://medium.com/',
 		'https://*.substack.com/',
 
+		// YC, HN, AI, capitalists
+		'https://foundersatwork.posthaven.com/',
+		'https://paulgraham.com/',
+		'https://*.samaltman.com/',
+		'https://simonwillison.net/',
+		'https://stratechery.com/',
+		'https://*.ycombinator.com',
+
 		// I'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',
+
+		// paywalled; zealot
+		'https://www.wheresyoured.at/',
 
 		// Consoles
 		// sorry Joshes but my name is not Josh
