@@ -1,6 +1,6 @@
 function htmlify
-	set temp "$LC_ALL" &&
-	export LC_ALL=C &&
+#	set temp "$LC_ALL" &&
+#	export LC_ALL=C &&
 	echo -n '' > $argv.html &&
 	for line in (cat $argv.md)
 		if test (string sub -l 2 "$line") = '# '
@@ -15,7 +15,7 @@ function htmlify
 			echo '' >> $argv.html
 		end
 	end
-	export "LC_ALL=$temp"
+#	export "LC_ALL=$temp"
 end
 
 cat links.md | grep '^h' > .links.txt &&

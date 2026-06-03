@@ -5,7 +5,10 @@ const wander = {
 		'https://heckmeck.de/wander/',
 		'https://exurd.neocities.org/wander/',
 	],
+	// More info and alternate browsing mode at <https://pnppl.cc/app/meander>
 	pages: [
+		// SSL
+		// Nonfiction
 		'https://100r.co/site/tools_ecosystem.html',
 		'https://27bslash6.com/overdue.html',
 		'https://aresluna.org/the-hardest-working-font-in-manhattan/',
@@ -32,10 +35,16 @@ const wander = {
 		'https://www.filfre.net/2011/05/will-crowthers-adventure-part-1/',
 		'https://www.fsf.org/blogs/licensing/2026-anthropic-settlement',
 		'https://www.thedissident.news/every-trans-suicide-is-a-murder/',
+
+		// Fiction
 		'https://www.galactanet.com/oneoff/theegg_mod.html',
+
+		// Comic
 		'https://kalebhorton.ghost.io/the-d-lbert-project/',
 		'https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/',
 		'https://www.qwantz.com/',
+
+		// Audio/video
 		'https://archive.org/details/MindWebs_201410',
 		'https://kevincraig.us/audio/gogulski/',
 		'https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/',
@@ -43,8 +52,12 @@ const wander = {
 		'https://www.juliaserano.com/music.html',
 		'https://www.rifters.com/blindsight/vampires.htm',
 		'https://youtuube.neocities.org/youtube_abyss',
+
+		// Game/interactive
 		'https://freegames.org/dys4ia/',
 		'https://xrafstar.monster/games/twine/tails/',
+
+		// Misc. resource
 		'https://annas-archive.gl/',
 		'https://fishshell.com/',
 		'https://frills.dev/blog/231207-edit-everything/',
@@ -52,6 +65,8 @@ const wander = {
 		'https://littlebitspace.com/resources/',
 		'https://marginalia-search.com/',
 		'https://rubjo.github.io/victor-mono/',
+
+		// Site root
 		'https://adelfaure.net/',
 		'https://fourthievesvinegar.org/',
 		'https://fuckup.solutions/index3.html',
@@ -61,8 +76,13 @@ const wander = {
 		'https://www.gothic-charm-school.com/',
 		'https://www.vhemt.org/',
 		'https://www.wendycarlos.com/',
+
+		// News
 		'https://unicornriot.ninja/',
 		'https://www.techdirt.com/',
+
+		// HTTP
+		// Nonfiction
 		'https://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html',
 		'https://humaniterations.net/2020/09/06/bad-people/',
 		'https://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html',
@@ -70,17 +90,27 @@ const wander = {
 		'https://notes.highlysuspect.agency/are-we-doing-anything.html',
 		'https://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/',
 		'https://wol.fm/blog/utopian-scholastic.html',
+
+		// Fiction
 		'https://www.terrybisson.com/theyre-made-out-of-meat-2/',
+
+		// Comic
 		'https://baccyflap.com/mus/ti/',
+
+		// Audio/video
 		'https://echoesofbluemars.org/',
 		'https://handthing.party/',
 		'https://smokepowered.com/',
 		'https://www.quoteunquoterecords.com/qur022.htm',
+
+		// Misc. resource
 		'https://fileformats.archiveteam.org/',
 		'https://temblast.com/android.htm',
 		'https://vivivi.leprd.space/webmastery/pre-css-attributes/',
 		'https://web1.0hosting.net/',
 		'https://wiby.me',
+
+		// Site root
 		'https://petermolnar.net/',
 		'https://velveteen.one/',
 		'https://www.floodgap.com/',
@@ -88,19 +118,33 @@ const wander = {
 		'https://xn--gckvb8fzb.com/',
 	],
 	ignore: [
-		'https://*.substack.com/',
-		'https://gwern.net/',
-		'https://slatestarcodex.com/',
+		// rationalists, racists, fascists
 		'https://*.astralcodexten.com/',
+		'https://gwern.net/',
 		'https://*.lesswrong.com/',
+		'https://slatestarcodex.com/',
+		'https://*.substack.com/',
 		'https://*.yudkowsky.net/',
 		'https://x.com/',
+
+		// garbage silos
+		'https://medium.com/',
+		'https://*.substack.com/',
+
+		// I'm sure she's great but that banner drives me up the fucking wall
+		'https://sachachua.com',
+
+		// Consoles
+		// sorry Joshes but my name is not Josh
+		'https://joshing.you/wander/',
 	],
 	referral: 'no',
 	scripts: [
+		// move 'About' into 'Console' menu
 		'move-about.js',
 	],
 	styles: [
+		// win9x style; display 'Open' on mobile
 		'wander.css',
 	]
 }
