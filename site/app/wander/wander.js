@@ -124,7 +124,6 @@ const wander = {
 		'https://gwern.net/',
 		'https://*.lesswrong.com/',
 		'https://slatestarcodex.com/',
-		'https://*.substack.com/',
 		'https://*.yudkowsky.net/',
 		'https://x.com/',
 
@@ -136,6 +135,7 @@ const wander = {
 		'https://annas-archive.gl/', // the best site in the universe
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
+		'https://*.geek.nz/',
 		'https://hyperdoc.khinsen.net/',
 		'https://maggieappleton.com',
 		'https://neal.fun/',
