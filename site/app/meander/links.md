@@ -77,6 +77,7 @@ https://www.techdirt.com/
 
 ## HTTP ##
 ### Nonfiction
+http://friendo.monster/posts/emojis-are-shit.html
 http://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html
 http://humaniterations.net/2020/09/06/bad-people/
 http://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html

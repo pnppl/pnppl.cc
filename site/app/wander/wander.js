@@ -84,6 +84,7 @@ const wander = {
 
 		// HTTP
 		// Nonfiction
+		'https://friendo.monster/posts/emojis-are-shit.html',
 		'https://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html',
 		'https://humaniterations.net/2020/09/06/bad-people/',
 		'https://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html',
