@@ -38,6 +38,7 @@ https://twcclassics.com/
 ### Nonfiction
 http://crimethinc.com/2019/04/08/against-the-logic-of-the-guillotine-why-the-paris-commune-burned-the-guillotine-and-we-should-too
 http://supercommunity.e-flux.com/texts/the-great-silence/
+http://wol.fm/blog/utopian-scholastic.html
 
 ## No SSL ##
 ### Misc. resource

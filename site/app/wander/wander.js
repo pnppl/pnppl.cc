@@ -90,7 +90,6 @@ const wander = {
 		'https://mycophobia.org/dcs/index.html',
 		'https://notes.highlysuspect.agency/are-we-doing-anything.html',
 		'https://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/',
-		'https://wol.fm/blog/utopian-scholastic.html',
 
 		// Fiction
 		'https://www.terrybisson.com/theyre-made-out-of-meat-2/',
