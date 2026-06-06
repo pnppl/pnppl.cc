@@ -3,7 +3,7 @@
 
 https://minimalistbaker.com/easy-vegan-mayo-with-aquafaba/
 
-fills a small mason jar nicely. x3 perfectly fills large jar.
+Fills a small mason jar nicely. x3 perfectly fills large jar.
 
 ## Ingredients
 - 1/4 cup aquafaba (the liquid/brine in a can of chickpeas)
@@ -14,11 +14,10 @@ fills a small mason jar nicely. x3 perfectly fills large jar.
 - 3/4-1 cup sunflower, avocado, or canola oil - **NOT OLIVE.**
 
 ## Instructions
-Combine everything but oil. Blend on high.
+1. Combine everything but oil. Blend on high.
+2. Add part of oil, blend on high, repeat.
 
-Add part of oil, blend on high, repeat.
-
-maple syrup will make it less thick + fluffy **allegedly**. stevia (put in way less, stevia is sweeter), cane sugar (make simple syrup?), and brown rice syrup recommended by author
+- Maple syrup will make it less thick + fluffy **allegedly**. Stevia (put in way less, stevia is sweeter), cane sugar (make simple syrup?), and brown rice syrup recommended by author.
 
 ## Ingredients (x4)
 - 1 cup aquafaba
