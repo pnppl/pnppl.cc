@@ -10,7 +10,7 @@ fills a small mason jar nicely. x3 perfectly fills large jar.
 - 1/4 tsp ground mustard
 - 1/4 tsp sea salt
 - 1 1/2 tsp apple cider vinegar
-- 1 tsp syrup/sweetener - 2tsp agave is too much and the agave flavor is bad. **1tsp maple syrup is good.** 2tsp + garlic powder + onion powder + dill = ranch veggie dip
+- 1 tsp syrup/sweetener - 2 tsp agave is too much and the agave flavor is bad. **1 tsp maple syrup is good.** 2 tsp + garlic powder + onion powder + dill = ranch veggie dip
 - 3/4-1 cup sunflower, avocado, or canola oil - **NOT OLIVE.**
 
 ## Instructions
