@@ -838,7 +838,8 @@ a.navbar-item.active:active {
 }
 .view h1,
 .view h2,
-.view h3 {
+.view h3,
+.view h4 {
 	border-bottom: 2px solid var(--bg);
 	padding-bottom: 0.5em;
 }
@@ -852,6 +853,9 @@ a.navbar-item.active:active {
 }
 .view h2 {
 	counter-reset: h3;
+}
+.view h3 {
+	counter-reset: h4;
 }
 a.head-sect,
 a.to-toc {
@@ -873,6 +877,10 @@ h2 .head-sect:after {
 h3 .head-sect:after {
 	counter-increment: h3;
 	content: counter(h2) "." counter(h3) ".";
+}
+h4 .head-sect:after {
+	counter-increment: h4;
+	content: counter(h2) "." counter(h3) "." counter(h4) ".";
 }
 /* h1.hashtag-name-noinc:before { */
 /* 	content: ""; */
