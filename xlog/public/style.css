@@ -1209,6 +1209,25 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 .ge:after		 { content: "\2265"; }
 .le:after		 { content: "\2264"; }
 
+/* ugly hack on an ugly hack. this way the text is selectable. should change to a class. or rethink the CSS typography stuff */
+.mdash + .is-hidden,
+.ndash + .is-hidden,
+.hellip + .is-hidden,
+.lsquo + .is-hidden,
+.rsquo + .is-hidden,
+.ldquo + .is-hidden,
+.rdquo + .is-hidden,
+.ne + .is-hidden,
+.asymp + .is-hidden,
+.ge + .is-hidden,
+.le + .is-hidden {
+	display: inline;
+	font-size: 0;
+}
+
+
+
+
 /* ==========================================================================
 	 Code Highlighting (light: 'greenbar' adapted from dracula; dark: dracula)
 	 ========================================================================== */
