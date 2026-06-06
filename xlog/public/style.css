@@ -897,6 +897,10 @@ a.autolink.glossary {
 .link-text {
 	text-decoration: underline;
 }
+.view a:after {
+	/* This is only *supposed* to affect CJK... but it seems to fix the problem of annotations wrapping separately from links */
+	word-break: keep-all;
+}
 .view a[href^="http"]:after,
 .view a[href^="//"]:after,
 .view a[href^="mailto:"]:after,
