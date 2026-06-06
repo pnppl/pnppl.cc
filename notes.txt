@@ -25,6 +25,7 @@ todo:
 		- high
 			- light: black text
 			- dark: white text
+	- i have rules that start with both .content and .view, probably can eliminate one
 - x next/prev post buttons
 	- should probably make these fit nicer
 - x display tags for item next to links to it

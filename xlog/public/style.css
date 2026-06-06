@@ -398,7 +398,10 @@ h2#Footnotes, /* omg fix this */
 }
 .content h1,
 .content h2,
-.content h3 {
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
 	color: var(--text-strong);
 	line-height: 1.125;
 	margin-bottom: 0.5em;
@@ -839,7 +842,9 @@ a.navbar-item.active:active {
 .view h1,
 .view h2,
 .view h3,
-.view h4 {
+.view h4,
+.view h5,
+.view h6 {
 	border-bottom: 2px solid var(--bg);
 	padding-bottom: 0.5em;
 }
