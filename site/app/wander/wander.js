@@ -5,7 +5,7 @@ const wander = {
 		'https://heckmeck.de/wander/',
 		'https://exurd.neocities.org/wander/',
 	],
-	// More info and alternate browsing mode at <https://pnppl.cc/app/meander>
+	// More info and alternate browsing mode at https://pnppl.cc/app/meander
 	pages: [
 		// SSL
 		// Nonfiction
@@ -40,6 +40,7 @@ const wander = {
 		'https://www.galactanet.com/oneoff/theegg_mod.html',
 
 		// Comic/still image
+		'https://anhvn.com/noir/',
 		'https://hillhouse.neocities.org/cliques/library/',
 		'https://kalebhorton.ghost.io/the-d-lbert-project/',
 		'https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/',
@@ -135,6 +136,7 @@ const wander = {
 
 		// blocked by http headers
 		'https://annas-archive.gl/', // the best site in the universe
+		'https://*.bearblog.dev/',
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
 		'https://dbushell.com/',
@@ -152,6 +154,9 @@ const wander = {
 		'https://simonwillison.net/',
 		'https://stratechery.com/',
 		'https://*.ycombinator.com',
+
+		// webgl
+		'https://eightyeightthirty.one/',
 
 		// I'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',

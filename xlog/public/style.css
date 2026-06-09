@@ -1212,15 +1212,16 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 	 ========================================================================== */
 .mdash:after	{ content: "\2014"; }
 .ndash:after	{ content: "\2013"; }
-.hellip:after { content: "\2026"; }
+.hellip:after	{ content: "\2026"; }
 .lsquo:after	{ content: "\2018"; }
 .rsquo:after	{ content: "\2019"; }
 .ldquo:after	{ content: "\201C"; }
 .rdquo:after	{ content: "\201D"; }
-.ne:after		 { content: "\2260"; }
+.ne:after	{ content: "\2260"; }
 .asymp:after	{ content: "\2248"; }
-.ge:after		 { content: "\2265"; }
-.le:after		 { content: "\2264"; }
+.ge:after	{ content: "\2265"; }
+.le:after	{ content: "\2264"; }
+.times:after	{ content: "\00D7"; }
 
 /* ugly hack on an ugly hack. this way the text is selectable. should change to a class. or rethink the CSS typography stuff */
 .mdash + .is-hidden,
@@ -1233,7 +1234,8 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 .ne + .is-hidden,
 .asymp + .is-hidden,
 .ge + .is-hidden,
-.le + .is-hidden {
+.le + .is-hidden,
+.times + .is-hidden {
 	display: inline;
 	font-size: 0;
 }

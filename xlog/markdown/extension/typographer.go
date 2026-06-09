@@ -53,6 +53,7 @@ func subMap() map[string]string {
 		"le": "<=",
 //		"ntilde": "n",
 //		"Ntilde": "N",
+		"times": "x",
 	}
 }
 

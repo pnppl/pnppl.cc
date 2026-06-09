@@ -8,7 +8,7 @@ echo "const wander = {
 		'https://heckmeck.de/wander/',
 		'https://exurd.neocities.org/wander/',
 	],
-	// More info and alternate browsing mode at <https://pnppl.cc/app/meander>
+	// More info and alternate browsing mode at https://pnppl.cc/app/meander
 	pages: [" > ../wander/wander.js &&
 for line in (cat "$in" | tail -n +3)
 	if test (string match -r '^\#' "$line")
@@ -41,6 +41,7 @@ echo "	],
 
 		// blocked by http headers
 		'https://annas-archive.gl/', // the best site in the universe
+		'https://*.bearblog.dev/',
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
 		'https://dbushell.com/',
@@ -58,6 +59,9 @@ echo "	],
 		'https://simonwillison.net/',
 		'https://stratechery.com/',
 		'https://*.ycombinator.com',
+
+		// webgl
+		'https://eightyeightthirty.one/',
 
 		// I'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',
