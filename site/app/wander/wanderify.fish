@@ -24,7 +24,7 @@ end &&
 
 echo "	],
 	ignore: [
-		// rationalists, racists, fascists
+		// rationalists, racists, fascists, transphobes
 		'https://*.astralcodexten.com/',
 		'https://dhh.dk/',
 		'https://gwern.net/',
@@ -32,6 +32,8 @@ echo "	],
 		'https://slatestarcodex.com/',
 		'https://*.yudkowsky.net/',
 		'https://x.com/',
+		'https://xahlee.info/',
+		'https://xahlee.org/',
 
 		// garbage silos
 		'https://medium.com/',
@@ -41,6 +43,7 @@ echo "	],
 		'https://annas-archive.gl/', // the best site in the universe
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
+		'https://dbushell.com/',
 		'https://*.geek.nz/',
 		'https://hyperdoc.khinsen.net/',
 		'https://maggieappleton.com',
@@ -67,6 +70,8 @@ echo "	],
 		'https://joshing.you/wander/',
 		// capitalist slop
 		'https://www.davidtran.me/wander/',
+		// HN shit
+		'https://www.heyhomepage.com/wander/',
 	],
 	referral: 'no',
 	scripts: [
