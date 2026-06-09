@@ -27,6 +27,7 @@ https://destroyed4com4t.itch.io/stealth-redux
 https://neal.fun/
 
 ### Misc. resource
+https://annas-archive.gl/
 https://github.com/grassmunk/Chicago95
 https://kill-the-newsletter.com/
 https://www.myanonamouse.net/inviteapp.php

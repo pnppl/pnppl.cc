@@ -44,16 +44,15 @@ https://archive.org/details/MindWebs_201410
 https://kevincraig.us/audio/gogulski/
 https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
 https://www.churchofeuthanasia.org/catalog/video.html
+https://www.fuckyoutube.lol/youtube_abyss
 https://www.juliaserano.com/music.html
 https://www.rifters.com/blindsight/vampires.htm
-https://youtuube.neocities.org/youtube_abyss
 
 ### Game/interactive
 https://freegames.org/dys4ia/
 https://xrafstar.monster/games/twine/tails/
 
 ### Misc. resource
-https://annas-archive.gl/
 https://fishshell.com/
 https://frills.dev/blog/231207-edit-everything/
 https://gridbeam.xyz/guide
