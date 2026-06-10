@@ -68,6 +68,41 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
+		<details open>
+			<summary>Custom style builder</summary>
+			<input id="body-bg" type="color" value="#696">
+			<input id="main-fg" type="color" value="#030">
+			<input id="input-bg" type="color" value="#bdb">
+			<input id="borders" type="color" value="#363">
+			<input id="grey-bg" type="color" value="#cec">
+			<input id="noscript" type="color" value="#600">
+			<input id="border-width" type="range" min="0" max="5">
+			<input id="backdrop-opacity" type="range" min="0" max="100">
+			<select id="border-style">
+				<option value="solid">Solid</option>
+				<option value="dotted">Dotted</option>
+				<option value="dashed">Dashed</option>
+				<option value="double">Double</option>
+				<option value="groove">Groove</option>
+				<option value="ridge">Ridge</option>
+				<option value="inset">Inset</option>
+				<option value="outset">Outset</option>
+			</select>
+			<select id="font-family">
+				<option value="monospace, monospace">Monospace</option>
+				<option value="sans-serif">Sans-Serif</option>
+				<option value="serif">Serif</option>
+				<option value="cursive, sans-serif">Cursive</option>
+				<option value="fantasy, sans-serif">Fantasy</option>
+				<option value="system-ui, sans-serif">System UI</option>
+			</select>
+			<input id="dark-mode" type="checkbox">
+			<input id="apply-theme" type="checkbox">
+			<input id="save-css" type="button">
+			<div id="iframe-wrap">
+				<iframe id="iframe" loading="lazy" src="demo.html"></iframe>
+			</div>
+		</details>
 		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 
 		<label for="scripts">Scripts

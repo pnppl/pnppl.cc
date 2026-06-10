@@ -1,8 +1,10 @@
+/* --- global --- */
 html {
 	max-width: 80ch;
 	margin: auto;
 	background-color: lightcyan;
 	font-family: sans-serif;
+	overflow-x: clip;
 }
 :focus-visible {
 	outline: medium solid hotpink;
@@ -12,6 +14,7 @@ html {
 	background-color: mediumorchid;
 }
 
+/* --- title --- */
 h1 {
 	background: linear-gradient(to left, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
 	background-clip: text;
@@ -39,6 +42,7 @@ h1:after {
 	left: 2ch;
 }
 
+/* --- about --- */
 #about {
 	width: fit-content;
 	margin: auto;
@@ -46,7 +50,7 @@ h1:after {
 #about summary {
 	text-align: center;
 }
-#about summary::marker {
+summary::marker {
 	color: hotpink;
 }
 li::marker {
@@ -54,12 +58,9 @@ li::marker {
 	color: mediumorchid;
 }
 
-div#message {
-	display: block;
-	margin: 1em;
-}
-
-input,
+/* --- main I/O --- */
+input[type=button],
+input[type=file],
 textarea,
 pre {
 	display: block;
@@ -73,10 +74,17 @@ textarea#styles,
 textarea#scripts {
 	height: 1.75em;
 }
+/* code output */
 pre {
 	overflow: auto;
 }
+/* file load error message */
+div#message {
+	display: block;
+	margin: 1em;
+}
 
+/* --- main buttons --- */
 input[type="button"] {
 	background-color: white;
 	border: 2px outset black;
@@ -100,6 +108,7 @@ input#save {
 	margin: 0 0 0.25em;
 }
 
+/* --- I/O labels --- */
 input#save,
 label,
 .label {
@@ -143,6 +152,26 @@ label summary::marker {
 	content: "";
 }
 
+/* --- color builder --- */
+iframe {
+	width: 100%;
+	min-height: 33vh;
+	box-sizing: border-box;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* wrapper and flexbox needed to make iframe user resizable */
+#iframe-wrap {
+	display: flex;
+	margin: 0.5em 0;
+	padding: 0;
+	resize: both;
+	overflow: hidden;
+}
+
+/* --- queries --- */
 @media screen and (max-width: 700px) {
 	h1 {
 		font-size: 2em;

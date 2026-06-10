@@ -14,6 +14,8 @@ const scripts = document.getElementById("scripts");
 const update = document.getElementById("update");
 const save = document.getElementById("save");
 
+const iframe = document.getElementById('iframe');
+
 var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 
 // whole page drag and drop
@@ -46,6 +48,52 @@ update.addEventListener("click", (e) => {
 save.addEventListener("click", (e) => {
 	exportJS();
 });
+
+// add listeners to all color inputs
+window.onload = function() {
+	const colors = document.querySelectorAll('input[type=color]');
+	colors.forEach(
+		function(color) {
+			color.addEventListener("change", (e) => {updateColor(color)});
+		}
+	);
+};
+
+function updateColor(color) {
+	let id = color.id;
+	let newColor = color.value;
+	let style = document.createElement('style');
+	switch(id){
+		case "body-bg":
+			style.textContent = `body { background: ${newColor}; }`;
+			break;
+		case "main-fg":
+			style.textContent = `body, button, input { color: ${newColor}; }`;
+			break;
+		case "input-bg":
+			// automatically calculate hover/active
+			// need to handle "dark mode" later (getting lighter instead of darker)
+			style.textContent = `
+				button, input, dialog, dialog details[open] { background: ${newColor}; }
+				button:hover { background: hsl(from ${newColor} h s calc(l * 0.88)); }
+				button:active { background: hsl(from ${newColor} h s calc(l * 0.8)); }
+			`;
+			break;
+		case "borders":
+			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newColor}; }`;
+			break;
+		case "grey-bg":
+			style.textContent = `button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${newColor}; }`;
+			break;
+//		this is black with an alpha value. the ffx color picker doesn't seem to support alpha... god it's so bad. change it to a range later
+//		case "backdrop":
+//			style.textContent = `dialog::backdrop { background: rgba(from ${newColor} r g b / 0.6); }`;
+//			break;
+		case "noscript":
+			style.textContent = `noscript { color: ${newColor}; border-color: ${newColor}; }`;
+	}
+	iframe.contentDocument.head.appendChild(style);
+}
 
 // toggle background color
 function setBG(color) {
@@ -128,3 +176,5 @@ function readFields() {
 	wander.styles = styles.value.split("\n").filter(Boolean);
 	wander.scripts = scripts.value.split("\n").filter(Boolean);
 }
+
+

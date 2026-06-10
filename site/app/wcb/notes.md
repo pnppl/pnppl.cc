@@ -1,8 +1,15 @@
-- change ? links to something that works on mobile
 - add simple custom CSS creator
 	- pick 3 colors type thing
 	- click button to save as wander.css
 	- checkbox to enable -> adds wander.css to custom styles list
+	- proof of concept is done!
+		- add labels and prettify
+		- support updating other properties besides color
+		- handle dark mode buttons
+		- capture values so we can export them
+		- make sure it cooperates with the main builder
+		- re-examine approach after you're rested because i think we could eliminate a lot of annoying repetition
+			- low-hanging fruit: merge color test iframe with manual frame testing idea (ie, make links clickable to load into iframe)
 - do some input fixes like add https:// to bare domain names, remove /wander.js from ignore links, etc
 - is there some way we can check the headers automatically or make it easier for users to check manually so people don't add links that can't be framed?
 	- this is apparently difficult even for technically competent people, and i want this to be accessible to people who aren't
