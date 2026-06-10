@@ -6,7 +6,7 @@
 		<meta name="referrer" content="no-referrer">
 		<meta name="theme-color" content="hotpink">
 		<link rel="alternate" href="/+/feed.rss" title="pnppl.cc RSS" type="application/rss+xml">
-		<link rel="icon" href="/img/1bitday/butterfly.gif">
+		<link rel="icon" href="butterfly.ico">
 		<link rel="license" href="/app/AGPL-3.0.txt">
 		<link rel="stylesheet" href="wcb.css">
 		<meta property="og:site_name" content="pnppl.cc">
@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<h1>Wander Console Builder</h1>
-		<details>
+		<details id="about">
 			<summary>About</summary>
 			<ul>
 				<li>Generates wander.js for a <a href="https://codeberg.org/susam/wander">Wander</a> console</li>
@@ -34,23 +34,47 @@
 			</ul>
 		</details>
 
-		<label for="file-input">Open <a href="#!" title="Load an existing Wander console. You can also drag-and-drop.">(?)</a></label>
+		<label for="file-input">Open
+			<details title="Load an existing Wander console. You can also drag-and-drop.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<input type="file" id="file-input">
 		<div id="message"></div>
 
-		<label for="consoles">Consoles <a href="#!" title="Other Wander consoles that visitors can reach from your console.">(?)</a></label>
+		<label for="consoles">Consoles
+			<details title="Other Wander consoles that visitors can reach from your console.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<textarea cols="80" rows="8" id="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
 
-		<label for="pages">Pages <a href="#!" title="Websites and pages you recommend to the Wander community.">(?)</a></label>
+		<label for="pages">Pages
+			<details title="Websites and pages you recommend to the Wander community.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<textarea cols="80" rows="8" id="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
 
-		<label for="ignore">Ignore <a href="#!" title="Websites and consoles to ignore. Your console will *never* load these.">(?)</a></label>
+		<label for="ignore">Ignore
+			<details title="Websites and consoles to ignore. Your console will *never* load these.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<textarea cols="80" rows="8" id="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
 
-		<label for="styles">Styles <a href="#!" title="Custom stylesheets to include. These are loaded after the default styles.">(?)</a></label>
+		<label for="styles">Styles
+			<details title="Custom stylesheets to include. These are loaded after the default styles.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 
-		<label for="scripts">Scripts <a href="#!" title="Custom scripts to include. These are loaded last.">(?)</a></label>
+		<label for="scripts">Scripts
+			<details title="Custom scripts to include. These are loaded last.">
+				<summary>(?)</summary>
+			</details>
+		</label>
 		<textarea cols="80" rows="8" id="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
 
 		<input id="update" type="button" value="Update">

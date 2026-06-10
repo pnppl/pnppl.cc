@@ -1,0 +1,15 @@
+- change ? links to something that works on mobile
+- add simple custom CSS creator
+	- pick 3 colors type thing
+	- click button to save as wander.css
+	- checkbox to enable -> adds wander.css to custom styles list
+- do some input fixes like add https:// to bare domain names, remove /wander.js from ignore links, etc
+- is there some way we can check the headers automatically or make it easier for users to check manually so people don't add links that can't be framed?
+	- this is apparently difficult even for technically competent people, and i want this to be accessible to people who aren't
+	- after beating my head against this before i don't think it can be done without setting up something server side
+		- could try to set a service up on tilde.team
+		- could just turn each URL into a link to https://iframetester.com/?url=https://my-cool.url
+			- bunch of google etc crap on that site
+		- could add a "check framing" mode that goes through tries to load each one in an iframe and user hits yes or no
+- add way to add comments to console entries from within wcb
+- share with susam/wander community
