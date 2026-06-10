@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="build.js" defer></script>
+		<link rel="stylesheet" href="wcb.css">
+	</head>
+	<body>
+		<h1>Wander Console Builder</h1>
+		<details>
+			<summary>About</summary>
+			<ul>
+				<li>Generates wander.js for a <a href="https://codeberg.org/susam/wander">Wander</a> console</li>
+				<li>Import existing wander.js or start from scratch</li>
+				<li>Enter one URL per line</li>
+				<li>Leave blank any sections you don't want to use</li>
+				<li>Save the results to your website alongside the <a href="https://codeberg.org/susam/wander/raw/branch/main/index.html">Wander HTML</a></li>
+				<li>Targets Wander version 0.6.0</li>
+				<li><a href="../AGPL-3.0.txt">AGPLv3</a> &bull; <a href="https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb/">Source</a></li>
+			</ul>
+		</details>
+
+		<label for="file-input">Open <a href="#!" title="Load an existing Wander console. You can also drag-and-drop.">(?)</a></label>
+		<input type="file" id="file-input">
+		<div id="message"></div>
+
+		<label for="consoles">Consoles <a href="#!" title="Other Wander consoles that visitors can reach from your console.">(?)</a></label>
+		<textarea cols="80" rows="8" id="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
+
+		<label for="pages">Pages <a href="#!" title="Websites and pages you recommend to the Wander community.">(?)</a></label>
+		<textarea cols="80" rows="8" id="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
+
+		<label for="ignore">Ignore <a href="#!" title="Websites and consoles to ignore. Your console will *never* load these.">(?)</a></label>
+		<textarea cols="80" rows="8" id="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
+
+		<label for="styles">Styles <a href="#!" title="Custom stylesheets to include. These are loaded after the default styles.">(?)</a></label>
+		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
+
+		<label for="scripts">Scripts <a href="#!" title="Custom scripts to include. These are loaded last.">(?)</a></label>
+		<textarea cols="80" rows="8" id="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
+
+		<input id="update" type="button" value="Update">
+
+		<span class="label">Results <input id="save" type="button" value="Save"></span>
+		<pre id="file-content"></pre>
+	</body>
+</html>

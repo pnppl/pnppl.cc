@@ -124,10 +124,10 @@ const wander = {
 		'https://gwern.net/',
 		'https://*.lesswrong.com/',
 		'https://slatestarcodex.com/',
-		'https://*.yudkowsky.net/',
 		'https://x.com/',
 		'https://xahlee.info/',
 		'https://xahlee.org/',
+		'https://*.yudkowsky.net/',
 
 		// garbage silos
 		'https://medium.com/',
