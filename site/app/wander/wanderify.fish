@@ -77,13 +77,12 @@ echo "	],
 		// HN shit
 		'https://www.heyhomepage.com/wander/',
 	],
-	referral: 'no',
-	scripts: [
-		// move 'About' into 'Console' menu
-		'move-about.js',
-	],
 	styles: [
 		// win9x style; display 'Open' on mobile
 		'wander.css',
+	]
+	scripts: [
+		// move 'About' into 'Console' menu
+		'move-about.js',
 	]
 }" >> "$out"

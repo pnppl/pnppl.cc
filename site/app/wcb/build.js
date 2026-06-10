@@ -14,12 +14,11 @@ const scripts = document.getElementById("scripts");
 const update = document.getElementById("update");
 const save = document.getElementById("save");
 
-var wander = { consoles: [], pages: [], ignore: [], scripts: [], styles: [] };
+var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 
 // whole page drag and drop
 document.addEventListener('dragover', (e) => {
     e.preventDefault();
-    console.log(e);
     setBG('drag');
 });
 document.addEventListener('drop', (e) => {
@@ -83,8 +82,12 @@ function handleFileSelection(event) {
 	const reader = new FileReader();
 	reader.onload = () => {
 		fileContentDisplay.textContent = reader.result;
-		eval(`${reader.result.replace("const ", "")}`);
-		updateFields();
+		try {
+			eval(`${reader.result.replace("const ", "")}`);
+			updateFields();
+		} catch (err) {
+			showMessage("Error parsing wander.js. Probably a missing comma or someting.", "error");
+		}
 //		showMessage("Loaded existing wander.js successfully.");
 	};
 	reader.onerror = () => {
