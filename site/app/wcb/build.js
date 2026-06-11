@@ -12,13 +12,14 @@ const styles = document.getElementById("styles");
 const scripts = document.getElementById("scripts");
 
 const applyTheme = document.getElementById("apply-theme");
-
 const update = document.getElementById("update");
 const save = document.getElementById("save");
+const saveCSS = document.getElementById("save-css");
 
 const iframe = document.getElementById('iframe');
 
 var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+var css = Array(7);
 
 // --- file input listeners
 // whole page drag and drop
@@ -49,7 +50,7 @@ update.addEventListener("click", (e) => {
 	updateFields();
 });
 save.addEventListener("click", (e) => {
-	exportJS();
+	exportBlob("js");
 });
 
 // --- theme builder listeners
@@ -83,6 +84,10 @@ function applyThemeFn(checked) {
 	readFields();
 	updateFields();
 }
+// save theme button
+saveCSS.addEventListener("click", (e) => {
+	exportBlob("css");
+});
 
 // https://stackoverflow.com/a/44134328
 function hslToHex(h, s, l) {
@@ -133,12 +138,17 @@ function updateStyle(tool) {
 	let id = tool.id;
 	let newValue = tool.value;
 	let style = document.createElement('style');
+	let styleStr;
 	switch(id){
 		case "bg-color":
-			style.textContent = `body { background: ${newValue}; }`;
+			styleStr = `body { background: ${newValue}; }`;
+			css[0] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "text-color":
-			style.textContent = `body, button, input { color: ${newValue}; }`;
+			styleStr = `body, button, input { color: ${newValue}; }`;
+			css[1] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "input-color":
 			// automatically calculate hover/active/disabled
@@ -157,15 +167,19 @@ function updateStyle(tool) {
 				active = hslToHex(h, s, l * 1.2);
 				disabled = hslToHex(h, s, l * 0.9);
 			}
-			style.textContent = `
+			styleStr = `
 				button, input, dialog, dialog details[open] { background: ${newValue}; }
 				button:hover { background: ${hover}; }
 				button:active { background: ${active}; }
 				button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${disabled}; }
 			`;
+			css[2] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "border-color":
-			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newValue}; }`;
+			styleStr = `button, input, dialog, #wander-iframe { border-color: ${newValue}; }`;
+			css[3] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "border-width":
 			const bigBorder = parseInt(newValue) + 3;
@@ -173,16 +187,22 @@ function updateStyle(tool) {
 			if (newValue < 0) {
 				smallBorder = 0;
 			}
-			style.textContent = `
+			styleStr = `
 				button, input { border-width: ${smallBorder}px; }
 				dialog, #wander-iframe { border-width: ${bigBorder}px; }
 			`;
+			css[4] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "border-style":
-			style.textContent = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+			styleStr = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+			css[5] = styleStr;
+			style.textContent = styleStr;
 			break;
 		case "font-family":
-			style.textContent = `body, button, input { font-family: ${newValue}; }`;
+			styleStr = `body, button, input { font-family: ${newValue}; }`;
+			css[6] = styleStr;
+			style.textContent = styleStr;
 			break;
 	}
 	iframe.contentDocument.head.appendChild(style);
@@ -241,10 +261,18 @@ function asCode() {
 	return "const wander = " + JSON.stringify(wander, null, "\t");
 }
 
-function exportJS() {
-	var blob = new Blob([ asCode() ], { type: "text/plain;charset=utf8" });
+function exportBlob(filetype) {
+	let blobtext, filename;
+	if (filetype === "js") {
+		blobtext = asCode();
+		filename = "wander.js";
+	} else {
+		blobtext = css.join("\n").replaceAll("\t", "").replaceAll(/\n\n+/g, "\n").replace(/^\n/, "");
+		filename = "wander-wcb.css";
+	}
+	var blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
 	var a = document.createElement('a');
-	a.download = "wander.js";
+	a.download = filename;
 	a.href = window.URL.createObjectURL(blob);
 	a.click();
 	if (a.remove) a.remove();
