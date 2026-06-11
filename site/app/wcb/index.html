@@ -84,10 +84,7 @@
 				<input class="style-tool" id="border-color" title="Border color" type="color" value="#363">
 
 				<label for="border-width">Border width</label>
-				<input class="style-tool" id="border-width" title="Border width" type="range" min="0" max="5" value="5">
-
-	<!--			<input id="noscript" type="color" value="#600">-->
-	<!--			<input id="backdrop-opacity" type="range" min="0" max="100">-->
+				<input class="style-tool" id="border-width" title="Border width" type="range" min="-3" max="5" value="2">
 
 				<label for="border-style">Border style</label>
 				<select class="style-tool" id="border-style" title="Border style">
@@ -112,6 +109,10 @@
 				</select>
 			</div>
 
+			<div id="iframe-wrap">
+				<iframe id="iframe" loading="lazy" src="demo.html"></iframe>
+			</div>
+
 			<div id="theme-export">
 				<div id="include">
 					<input id="apply-theme" type="checkbox">
@@ -119,9 +120,7 @@
 				</div>
 				<input class="save" id="save-css" type="button" value="Save CSS">
 			</div>
-			<div id="iframe-wrap">
-				<iframe id="iframe" loading="lazy" src="demo.html"></iframe>
-			</div>
+
 		</details>
 		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 

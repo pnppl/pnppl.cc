@@ -143,7 +143,15 @@ function updateStyle(tool) {
 			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newValue}; }`;
 			break;
 		case "border-width":
-			style.textContent = `button, input, dialog, #wander-iframe { border-width: ${newValue}px; }`;
+			const bigBorder = parseInt(newValue) + 3;
+			let smallBorder = newValue;
+			if (newValue < 0) {
+				smallBorder = 0;
+			}
+			style.textContent = `
+				button, input { border-width: ${smallBorder}px; }
+				dialog, #wander-iframe { border-width: ${bigBorder}px; }
+			`;
 			break;
 		case "border-style":
 			style.textContent = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
@@ -151,14 +159,6 @@ function updateStyle(tool) {
 		case "font-family":
 			style.textContent = `body, button, input { font-family: ${newValue}; }`;
 			break;
-//		this is black with an alpha value. the ffx color picker doesn't seem to support alpha... god it's so bad
-//		change it to a range later. or just. leave it alone
-//		case "backdrop":
-//			style.textContent = `dialog::backdrop { background: rgba(from ${newValue} r g b / 0.6); }`;
-//			break;
-//		no idea how to preview this and it probably doesn't matter
-//		case "noscript":
-//			style.textContent = `noscript { color: ${newValue}; border-color: ${newValue}; }`;
 	}
 	iframe.contentDocument.head.appendChild(style);
 }
