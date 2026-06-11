@@ -146,7 +146,7 @@ function updateStyle(tool) {
 			style.textContent = styleStr;
 			break;
 		case "text-color":
-			styleStr = `body, button, input { color: ${newValue}; }`;
+			styleStr = `body, button, dialog, input { color: ${newValue}; }`;
 			css[1] = styleStr;
 			style.textContent = styleStr;
 			break;
