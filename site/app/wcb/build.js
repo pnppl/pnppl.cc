@@ -158,14 +158,19 @@ function updateStyle(tool) {
 			const l = newHSL.l;
 			let hover, active, disabled;
 			if (newHSL.l >= 50) {
+				// these attempt to mimic default style
 				hover = hslToHex(h, s, l * 0.88);
 				active = hslToHex(h, s, l * 0.8);
 				disabled = hslToHex(h, s, l * 1.1);
 			} else {
 				// "dark mode"
-				hover = hslToHex(h, s, l * 1.12);
-				active = hslToHex(h, s, l * 1.2);
-				disabled = hslToHex(h, s, l * 0.9);
+//				hover = hslToHex(h, s, l * 1.12);
+//				active = hslToHex(h, s, l * 1.2);
+//				disabled = hslToHex(h, s, l * 0.9);
+				// adjusted to be more pronounced
+				hover = hslToHex(h, s, l * 1.15);
+				active = hslToHex(h, s, l * 1.25);
+				disabled = hslToHex(h, s, l * 0.75);
 			}
 			styleStr = `
 				button, input, dialog, dialog details[open] { background: ${newValue}; }
@@ -195,7 +200,19 @@ function updateStyle(tool) {
 			style.textContent = styleStr;
 			break;
 		case "border-style":
-			styleStr = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+			if (newValue === "outset") {
+				styleStr = `
+					button, dialog { border-style: outset; }
+					input, #wander-iframe { border-style: inset; }
+				`;
+			} else if (newValue === "inset") {
+				styleStr = `
+					button, dialog { border-style: inset; }
+					input, #wander-iframe { border-style: outset; }
+				`;
+			} else {
+				styleStr = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+			}
 			css[5] = styleStr;
 			style.textContent = styleStr;
 			break;
@@ -229,10 +246,10 @@ function handleFileSelection(event) {
 	messageDisplay.textContent = ""; // Clear previous messages
 
 	// Validate file existence and type
-	if (!file) {
-		showMessage("No file selected. Please choose a file.", "error");
-		return;
-	}
+//	if (!file) {
+//		showMessage("No file selected. Please choose a file.", "error");
+//		return;
+//	}
 	// should we really bother with this? what if the mime is fucked and it looks like plaintext?
 	if (!file.type.match("application/x-javascript")) {
 		showMessage("Unsupported file type. Please select your wander.js file.", "error");

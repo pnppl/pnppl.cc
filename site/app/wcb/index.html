@@ -68,8 +68,8 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<details>
-			<summary>Custom style builder</summary>
+		<details open>
+			<summary>Custom theme builder</summary>
 			<div id="toolbox">
 				<label for="bg-color">Background color</label>
 				<input class="style-tool" id="bg-color" title="Background color" type="color" value="#696">
@@ -88,18 +88,19 @@
 
 				<label for="border-style">Border style</label>
 				<select class="style-tool" id="border-style" title="Border style">
-					<option value="solid">Solid</option>
-					<option value="dotted">Dotted</option>
+					<option value="solid" selected>Solid</option>
 					<option value="dashed">Dashed</option>
+					<option value="dotted">Dotted</option>
 					<option value="double">Double</option>
 					<option value="groove">Groove</option>
 					<option value="ridge">Ridge</option>
-					<option value="inset">Inset</option>
 					<option value="outset">Outset</option>
+					<option value="inset">Inset</option>
 				</select>
 
 				<label for="font-family">Font</label>
-				<select class="style-tool" id="font-family">
+				<select class="style-tool" id="font-family" title="Font">
+					<option value="courier, monospace" selected>Courier</option>
 					<option value="monospace, monospace">Monospace</option>
 					<option value="sans-serif">Sans-Serif</option>
 					<option value="serif">Serif</option>
