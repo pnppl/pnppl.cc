@@ -20,17 +20,17 @@ var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 
 // whole page drag and drop
 document.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    setBG('drag');
+		e.preventDefault();
+		setBG('drag');
 });
 document.addEventListener('drop', (e) => {
 	// without the test it intercepts ALL drops including text
 	if (e.dataTransfer.files.length > 0) {
-    	document.getElementById('file-input').files = e.dataTransfer.files;
-    	e.target.files = e.dataTransfer.files;
-    	e.preventDefault();
-    	handleFileSelection(e);
-    	setBG();
+			document.getElementById('file-input').files = e.dataTransfer.files;
+			e.target.files = e.dataTransfer.files;
+			e.preventDefault();
+			handleFileSelection(e);
+			setBG();
 	}
 });
 document.addEventListener('dragend', (e) => {
@@ -59,38 +59,97 @@ window.onload = function() {
 	);
 };
 
+// https://stackoverflow.com/a/44134328
+function hslToHex(h, s, l) {
+	l /= 100;
+	const a = s * Math.min(l, 1 - l) / 100;
+	const f = n => {
+		const k = (n + h / 30) % 12;
+		const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+		return Math.round(255 * color).toString(16).padStart(2, '0');	 // convert to Hex and prefix "0" if needed
+	};
+	return `#${f(0)}${f(8)}${f(4)}`;
+}
+
+// https://stackoverflow.com/a/62390801
+function hexToHSL(hex) {
+	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+	let r = parseInt(result[1], 16);
+	let g = parseInt(result[2], 16);
+	let b = parseInt(result[3], 16);
+
+	r /= 255, g /= 255, b /= 255;
+	let max = Math.max(r, g, b), min = Math.min(r, g, b);
+	let h, s, l = (max + min) / 2;
+
+	if (max == min){
+		h = s = 0; // achromatic
+	} else {
+		var d = max - min;
+		s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+		switch(max) {
+			case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+			case g: h = (b - r) / d + 2; break;
+			case b: h = (r - g) / d + 4; break;
+		}
+
+		h /= 6;
+	}
+
+	h = Math.round(h*360);
+	s = Math.round(s*100);
+	l = Math.round(l*100);
+
+	return { h, s, l };
+}
+
 function updateColor(color) {
 	let id = color.id;
 	let newColor = color.value;
 	let style = document.createElement('style');
 	switch(id){
-		case "body-bg":
+		case "bg-color":
 			style.textContent = `body { background: ${newColor}; }`;
 			break;
-		case "main-fg":
+		case "text-color":
 			style.textContent = `body, button, input { color: ${newColor}; }`;
 			break;
-		case "input-bg":
-			// automatically calculate hover/active
-			// need to handle "dark mode" later (getting lighter instead of darker)
+		case "input-color":
+			// automatically calculate hover/active/disabled
+			const newHSL = hexToHSL(newColor);
+			const h = newHSL.h;
+			const s = newHSL.s;
+			const l = newHSL.l;
+			let hover, active, disabled;
+			if (newHSL.l >= 50) {
+				hover = hslToHex(h, s, l * 0.88);
+				active = hslToHex(h, s, l * 0.8);
+				disabled = hslToHex(h, s, l * 1.1);
+			} else {
+				// "dark mode"
+				hover = hslToHex(h, s, l * 1.12);
+				active = hslToHex(h, s, l * 1.2);
+				disabled = hslToHex(h, s, l * 0.9);
+			}
 			style.textContent = `
 				button, input, dialog, dialog details[open] { background: ${newColor}; }
-				button:hover { background: hsl(from ${newColor} h s calc(l * 0.88)); }
-				button:active { background: hsl(from ${newColor} h s calc(l * 0.8)); }
+				button:hover { background: ${hover}; }
+				button:active { background: ${active}; }
+				button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${disabled}; }
 			`;
 			break;
-		case "borders":
+		case "border-color":
 			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newColor}; }`;
 			break;
-		case "grey-bg":
-			style.textContent = `button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${newColor}; }`;
-			break;
-//		this is black with an alpha value. the ffx color picker doesn't seem to support alpha... god it's so bad. change it to a range later
+//		this is black with an alpha value. the ffx color picker doesn't seem to support alpha... god it's so bad
+//		change it to a range later. or just. leave it alone
 //		case "backdrop":
 //			style.textContent = `dialog::backdrop { background: rgba(from ${newColor} r g b / 0.6); }`;
 //			break;
-		case "noscript":
-			style.textContent = `noscript { color: ${newColor}; border-color: ${newColor}; }`;
+//		no idea how to preview this and it probably doesn't matter
+//		case "noscript":
+//			style.textContent = `noscript { color: ${newColor}; border-color: ${newColor}; }`;
 	}
 	iframe.contentDocument.head.appendChild(style);
 }
