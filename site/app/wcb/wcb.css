@@ -100,7 +100,7 @@ input#update {
 	font-size: 1.75em;
 	margin-top: 1.5em;
 }
-input#save {
+input.save {
 	background-color: deeppink;
 	color: white;
 	width: fit-content;
@@ -109,22 +109,22 @@ input#save {
 }
 
 /* --- I/O labels --- */
-input#save,
-label,
-.label {
+input.save,
+body > label,
+body > .label {
 	font-size: 1.2em;
 }
 .label {
 	position: relative;
 	top: 1em;
 }
-label:before,
+body > label:before,
 .label:before {
 	content: "🏳️‍🌈";
 	margin-right: 0.25ch;
 	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 35% 50%, 0% 0%);
 }
-label details {
+body > label details {
 	cursor: help;
 	float: right;
 	font-size: 0.75em;
@@ -133,22 +133,22 @@ label details {
 	font-style: italic;
 	margin-top: 0.5em;
 }
-label details:open {
+body > label details:open {
 	pointer-events: none;
 }
-label details:open:after {
+body > label details:open:after {
 	content: attr(title);
 }
-label details:open summary {
+body > label details:open summary {
 	display: none;
 }
-label summary {
+body > label summary {
 	color: blue;
 	font-style: normal;
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
 }
-label summary::marker {
+body > label summary::marker {
 	content: "";
 }
 
@@ -169,6 +169,35 @@ iframe {
 	padding: 0;
 	resize: both;
 	overflow: hidden;
+}
+/* just included for accessibility */
+details label {
+	display: none;
+}
+details label.show {
+	display: inline;
+}
+#toolbox,
+#theme-export {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin: 0.5em 0;
+}
+#toolbox input,
+#toolbox select {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+#border-width {
+	max-width: 30%;
+}
+input#save-css {
+	width: fit-content;
+	margin: 0;
+	font-size: 1em;
+	letter-spacing: 0;
 }
 
 /* --- queries --- */
