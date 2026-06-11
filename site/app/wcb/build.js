@@ -11,6 +11,8 @@ const ignore = document.getElementById("ignore");
 const styles = document.getElementById("styles");
 const scripts = document.getElementById("scripts");
 
+const applyTheme = document.getElementById("apply-theme");
+
 const update = document.getElementById("update");
 const save = document.getElementById("save");
 
@@ -18,6 +20,7 @@ const iframe = document.getElementById('iframe');
 
 var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 
+// --- file input listeners
 // whole page drag and drop
 document.addEventListener('dragover', (e) => {
 		e.preventDefault();
@@ -39,7 +42,7 @@ document.addEventListener('dragend', (e) => {
 document.addEventListener('dragleave', (e) => {
 	setBG();
 });
-
+// actual file input element
 fileInput.addEventListener("change", handleFileSelection);
 update.addEventListener("click", (e) => {
 	readFields();
@@ -49,7 +52,8 @@ save.addEventListener("click", (e) => {
 	exportJS();
 });
 
-// add listeners to all style inputs
+// --- theme builder listeners
+// add listeners to all style controls
 window.onload = function() {
 	const tools = document.querySelectorAll('.style-tool');
 	tools.forEach(
@@ -58,6 +62,27 @@ window.onload = function() {
 		}
 	);
 };
+// apply theme checkbox
+applyTheme.addEventListener("change", function() {
+	applyThemeFn(this.checked);
+});
+
+function applyThemeFn(checked) {
+	const styleName = "wander-wcb.css";
+	let stylesheets = styles.value.split("\n");
+	const index = stylesheets.indexOf(styleName);
+	// missing; add
+	if (checked && index === -1) {
+		stylesheets.push(styleName);
+	}
+	// present; remove
+	else if (!checked && index !== -1) {
+		stylesheets.splice(index, 1);
+	}
+	styles.value = stylesheets.join("\n");
+	readFields();
+	updateFields();
+}
 
 // https://stackoverflow.com/a/44134328
 function hslToHex(h, s, l) {
@@ -163,7 +188,7 @@ function updateStyle(tool) {
 	iframe.contentDocument.head.appendChild(style);
 }
 
-// toggle background color
+// toggle background color for drag and drop
 function setBG(color) {
 	if (color === 'drag') {
 		html.style.backgroundColor = 'lightskyblue';
