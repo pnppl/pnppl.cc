@@ -49,12 +49,12 @@ save.addEventListener("click", (e) => {
 	exportJS();
 });
 
-// add listeners to all color inputs
+// add listeners to all style inputs
 window.onload = function() {
-	const colors = document.querySelectorAll('input[type=color]');
-	colors.forEach(
-		function(color) {
-			color.addEventListener("change", (e) => {updateColor(color)});
+	const tools = document.querySelectorAll('.style-tool');
+	tools.forEach(
+		function(tool) {
+			tool.addEventListener("change", (e) => {updateStyle(tool)});
 		}
 	);
 };
@@ -104,20 +104,20 @@ function hexToHSL(hex) {
 	return { h, s, l };
 }
 
-function updateColor(color) {
-	let id = color.id;
-	let newColor = color.value;
+function updateStyle(tool) {
+	let id = tool.id;
+	let newValue = tool.value;
 	let style = document.createElement('style');
 	switch(id){
 		case "bg-color":
-			style.textContent = `body { background: ${newColor}; }`;
+			style.textContent = `body { background: ${newValue}; }`;
 			break;
 		case "text-color":
-			style.textContent = `body, button, input { color: ${newColor}; }`;
+			style.textContent = `body, button, input { color: ${newValue}; }`;
 			break;
 		case "input-color":
 			// automatically calculate hover/active/disabled
-			const newHSL = hexToHSL(newColor);
+			const newHSL = hexToHSL(newValue);
 			const h = newHSL.h;
 			const s = newHSL.s;
 			const l = newHSL.l;
@@ -133,23 +133,32 @@ function updateColor(color) {
 				disabled = hslToHex(h, s, l * 0.9);
 			}
 			style.textContent = `
-				button, input, dialog, dialog details[open] { background: ${newColor}; }
+				button, input, dialog, dialog details[open] { background: ${newValue}; }
 				button:hover { background: ${hover}; }
 				button:active { background: ${active}; }
 				button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${disabled}; }
 			`;
 			break;
 		case "border-color":
-			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newColor}; }`;
+			style.textContent = `button, input, dialog, #wander-iframe { border-color: ${newValue}; }`;
+			break;
+		case "border-width":
+			style.textContent = `button, input, dialog, #wander-iframe { border-width: ${newValue}px; }`;
+			break;
+		case "border-style":
+			style.textContent = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+			break;
+		case "font-family":
+			style.textContent = `body, button, input { font-family: ${newValue}; }`;
 			break;
 //		this is black with an alpha value. the ffx color picker doesn't seem to support alpha... god it's so bad
 //		change it to a range later. or just. leave it alone
 //		case "backdrop":
-//			style.textContent = `dialog::backdrop { background: rgba(from ${newColor} r g b / 0.6); }`;
+//			style.textContent = `dialog::backdrop { background: rgba(from ${newValue} r g b / 0.6); }`;
 //			break;
 //		no idea how to preview this and it probably doesn't matter
 //		case "noscript":
-//			style.textContent = `noscript { color: ${newColor}; border-color: ${newColor}; }`;
+//			style.textContent = `noscript { color: ${newValue}; border-color: ${newValue}; }`;
 	}
 	iframe.contentDocument.head.appendChild(style);
 }
