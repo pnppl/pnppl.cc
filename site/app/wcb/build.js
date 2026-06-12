@@ -18,8 +18,9 @@ const reset = document.getElementById("reset");
 let wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 let css = Array(7);
 
-// register all listeners
+// instead of an init()
 window.onload = function() {
+	// --- register all listeners ---//
 	// whole page drag and drop file input
 	document.addEventListener('dragover', (e) => {
 			e.preventDefault();
@@ -82,6 +83,9 @@ window.onload = function() {
 	saveCSS.addEventListener("click", () => {
 		exportBlob("css");
 	});
+
+	// check for url fragment to load immediately
+	loadParam();
 };
 
 
@@ -154,6 +158,171 @@ function showMessage(message, type) {
 
 
 // --- meaty functions --- //
+
+// file input
+// mostly copied from MDN
+function handleFileSelection(event) {
+	const file = event.target.files[0];
+	fileContentDisplay.textContent = ""; // Clear previous file content
+	messageDisplay.textContent = ""; // Clear previous messages
+
+	// should we really bother with this? what if the mime is fucked and it looks like plaintext?
+	if (!file.type.match("application/x-javascript")) {
+		showMessage("Unsupported file type. Please select your wander.js file.", "error");
+		return;
+	}
+
+	// Read the file
+	const reader = new FileReader();
+	reader.onload = () => {
+		fileContentDisplay.textContent = reader.result;
+		try {
+			let wanderFile;
+			eval(`${reader.result.replace("const wander", "wanderFile")}`);
+			importConsole(wanderFile);
+			updateFields();
+			urlInput.value = "";
+			showMessage("Loaded console from file.");
+		} catch (err) {
+			showMessage(`Error parsing wander.js. Probably a missing comma or someting. (${err})`, "error");
+		}
+	};
+	reader.onerror = () => {
+		showMessage("Error reading the file. Please try again.", "error");
+	};
+	reader.readAsText(file);
+}
+
+// url input
+function loadRemote(e) {
+	const url = e.srcElement[0].value;
+	console.log(e);
+	let cleanUrl = url;
+	// lazy ass input cleanup should preserve relative paths and console in same directory
+	// only downside i can see is you need a ./ prefix if it's in a subfolder of the current dir
+	if (! (url.startsWith("http") || url.startsWith(".") || url.startsWith("wander.js")) ) {
+		cleanUrl = "https://" + cleanUrl;
+	}
+	const iframe = document.getElementById('loader-iframe')
+	// stolen from susam. i assume the odd quoting is to get around some security shit so I left it
+	iframe.srcdoc = `
+		<script src="${cleanUrl}"></scr` + `ipt>
+		<script>
+			try {
+				parent.postMessage({ wander: wander }, '*');
+			} catch (err) {
+				parent.postMessage({ err: err }, '*');
+			}
+		</scr` + 'ipt>'
+}
+// iframe hack for url input
+function handleRemote(e) {
+	showMessage("");
+	if (typeof e.data.err !== "undefined") {
+		// the error will always be "wander is not defined" afaik, so no point showing it to the user
+		showMessage("Couldn't fetch console from URL.", "error");
+	} else {
+		const ext = e.data.wander;
+		importConsole(ext);
+		updateFields();
+		fileInput.value = "";
+		showMessage("Loaded console from URL.");
+	}
+}
+
+// load consle from url parameter, ie ?http://myurl.com
+function loadParam() {
+	const param = window.location.search;
+	console.log(param);
+	if (param[0] === '?' && param.length > 1) {
+		console.log(param.slice(1));
+		loadRemote({ srcElement: [{ value: param.slice(1) }] });
+	}
+}
+
+// safe(r) imports from both url and file
+function importConsole(c) {
+	if (typeof c.consoles === "undefined") { wander.consoles = []; }
+	else { wander.consoles = c.consoles; }
+
+	if (typeof c.pages === "undefined") { wander.pages = []; }
+	else { wander.pages = c.pages; }
+
+	if (typeof c.ignore === "undefined") { wander.ignore = []; }
+	else { wander.ignore = c.ignore; }
+
+	if (typeof c.styles === "undefined") { wander.styles = []; }
+	else { wander.styles = c.styles; }
+
+	if (typeof c.scripts === "undefined") { wander.scripts = []; }
+	else { wander.scripts = c.scripts; }
+}
+
+function exportBlob(filetype) {
+	let blobtext, filename;
+	if (filetype === "js") {
+		blobtext = asCode();
+		filename = "wander.js";
+	} else {
+		blobtext = css.join("\n").replaceAll("\t", "").replaceAll(/\n\n+/g, "\n").replace(/^\n/, "");
+		filename = styleName;
+	}
+	let blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
+	let a = document.createElement('a');
+	a.download = filename;
+	a.href = window.URL.createObjectURL(blob);
+	a.click();
+	if (a.remove) a.remove();
+}
+
+// update global wander var with <textarea> user input
+function readFields() {
+	// filter removes blank lines (empty string is "falsy" in this accursed language)
+	wander.consoles = consoles.value.split("\n").filter(Boolean);
+	wander.pages = pages.value.split("\n").filter(Boolean);
+	wander.ignore = ignore.value.split("\n").filter(Boolean);
+	wander.styles = styles.value.split("\n").filter(Boolean);
+	wander.scripts = scripts.value.split("\n").filter(Boolean);
+}
+
+// replace page contents with contents of global wander var
+function updateFields() {
+	consoles.value = wander.consoles.join("\n");
+	pages.value = wander.pages.join("\n");
+	ignore.value = wander.ignore.join("\n");
+	styles.value = wander.styles.join("\n");
+	scripts.value = wander.scripts.join("\n");
+	fileContentDisplay.textContent = asCode();
+}
+
+function resetFields() {
+	if (reset.value === "Reset") {
+		reset.value = "Clear everything?";
+	} else if (reset.value === "Clear everything?") {
+		reset.value = "Last chance. Are you sure?";
+	} else {
+		fileInput.value = "";
+		urlInput.value = "";
+		showMessage("");
+		wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+		updateFields();
+		css = Array(7);
+		document.getElementById("bg-color").value = "#696";
+		document.getElementById("text-color").value = "#030";
+		document.getElementById("input-color").value = "#bdb";
+		document.getElementById("border-color").value = "#363";
+		document.getElementById("border-width").value = "2";
+		document.getElementById("border-style").value = "solid";
+		document.getElementById("font-family").value = "courier, monospace";
+		tools.forEach(
+			function(tool) {
+				updateStyle(tool);
+			}
+		);
+		applyTheme.checked = false;
+		reset.value = "Reset";
+	}
+}
 
 // theme builder
 function updateStyle(tool) {
@@ -264,158 +433,3 @@ function applyThemeFn(checked) {
 	readFields();
 	updateFields();
 }
-
-// file input
-// mostly copied from MDN
-function handleFileSelection(event) {
-	const file = event.target.files[0];
-	fileContentDisplay.textContent = ""; // Clear previous file content
-	messageDisplay.textContent = ""; // Clear previous messages
-
-	// should we really bother with this? what if the mime is fucked and it looks like plaintext?
-	if (!file.type.match("application/x-javascript")) {
-		showMessage("Unsupported file type. Please select your wander.js file.", "error");
-		return;
-	}
-
-	// Read the file
-	const reader = new FileReader();
-	reader.onload = () => {
-		fileContentDisplay.textContent = reader.result;
-		try {
-			let wanderFile;
-			eval(`${reader.result.replace("const wander", "wanderFile")}`);
-			importConsole(wanderFile);
-			updateFields();
-			urlInput.value = "";
-			showMessage("Loaded console from file.");
-		} catch (err) {
-			showMessage(`Error parsing wander.js. Probably a missing comma or someting. (${err})`, "error");
-		}
-	};
-	reader.onerror = () => {
-		showMessage("Error reading the file. Please try again.", "error");
-	};
-	reader.readAsText(file);
-}
-
-// url input
-function loadRemote(e) {
-	const url = event.srcElement[0].value;
-	let cleanUrl = url;
-	// lazy ass input cleanup should preserve relative paths and console in same directory
-	// only downside i can see is you need a ./ prefix if it's in a subfolder of the current dir
-	if (! (url.startsWith("http") || url.startsWith(".") || url.startsWith("wander.js")) ) {
-		cleanUrl = "https://" + cleanUrl;
-	}
-	const iframe = document.getElementById('loader-iframe')
-	// stolen from susam. i assume the odd quoting is to get around some security shit so I left it
-	iframe.srcdoc = `
-		<script src="${cleanUrl}"></scr` + `ipt>
-		<script>
-			try {
-				parent.postMessage({ wander: wander }, '*');
-			} catch (err) {
-				parent.postMessage({ err: err }, '*');
-			}
-		</scr` + 'ipt>'
-}
-// iframe hack for url input
-function handleRemote(e) {
-	showMessage("");
-	if (typeof e.data.err !== "undefined") {
-		// the error will always be "wander is not defined" afaik, so no point showing it to the user
-		showMessage("Couldn't fetch console from URL.", "error");
-	} else {
-		const ext = e.data.wander;
-		importConsole(ext);
-		updateFields();
-		fileInput.value = "";
-		showMessage("Loaded console from URL.");
-	}
-}
-
-// safe(r) imports from both url and file
-function importConsole(c) {
-	if (typeof c.consoles === "undefined") { wander.consoles = []; }
-	else { wander.consoles = c.consoles; }
-
-	if (typeof c.pages === "undefined") { wander.pages = []; }
-	else { wander.pages = c.pages; }
-
-	if (typeof c.ignore === "undefined") { wander.ignore = []; }
-	else { wander.ignore = c.ignore; }
-
-	if (typeof c.styles === "undefined") { wander.styles = []; }
-	else { wander.styles = c.styles; }
-
-	if (typeof c.scripts === "undefined") { wander.scripts = []; }
-	else { wander.scripts = c.scripts; }
-}
-
-function exportBlob(filetype) {
-	let blobtext, filename;
-	if (filetype === "js") {
-		blobtext = asCode();
-		filename = "wander.js";
-	} else {
-		blobtext = css.join("\n").replaceAll("\t", "").replaceAll(/\n\n+/g, "\n").replace(/^\n/, "");
-		filename = styleName;
-	}
-	let blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
-	let a = document.createElement('a');
-	a.download = filename;
-	a.href = window.URL.createObjectURL(blob);
-	a.click();
-	if (a.remove) a.remove();
-}
-
-// update global wander var with <textarea> user input
-function readFields() {
-	// filter removes blank lines (empty string is "falsy" in this accursed language)
-	wander.consoles = consoles.value.split("\n").filter(Boolean);
-	wander.pages = pages.value.split("\n").filter(Boolean);
-	wander.ignore = ignore.value.split("\n").filter(Boolean);
-	wander.styles = styles.value.split("\n").filter(Boolean);
-	wander.scripts = scripts.value.split("\n").filter(Boolean);
-}
-
-// replace page contents with contents of global wander var
-function updateFields() {
-	consoles.value = wander.consoles.join("\n");
-	pages.value = wander.pages.join("\n");
-	ignore.value = wander.ignore.join("\n");
-	styles.value = wander.styles.join("\n");
-	scripts.value = wander.scripts.join("\n");
-	fileContentDisplay.textContent = asCode();
-}
-
-function resetFields() {
-	if (reset.value === "Reset") {
-		reset.value = "Clear everything?";
-	} else if (reset.value === "Clear everything?") {
-		reset.value = "Last chance. Are you sure?";
-	} else {
-		fileInput.value = "";
-		urlInput.value = "";
-		showMessage("");
-		wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
-		updateFields();
-		css = Array(7);
-		document.getElementById("bg-color").value = "#696";
-		document.getElementById("text-color").value = "#030";
-		document.getElementById("input-color").value = "#bdb";
-		document.getElementById("border-color").value = "#363";
-		document.getElementById("border-width").value = "2";
-		document.getElementById("border-style").value = "solid";
-		document.getElementById("font-family").value = "courier, monospace";
-		tools.forEach(
-			function(tool) {
-				updateStyle(tool);
-			}
-		);
-		applyTheme.checked = false;
-		reset.value = "Reset";
-	}
-}
-
