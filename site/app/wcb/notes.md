@@ -6,7 +6,5 @@
 		- could add a "check framing" mode that goes through tries to load each one in an iframe and user hits yes or no
 			- reuse color test iframe
 - ? add way to add comments to console entries from within wcb
-- rearrange the js functions more logically
-- reset button
 - figure out accessibility
 - share with susam/wander community

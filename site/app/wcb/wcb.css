@@ -34,12 +34,12 @@ h1:after {
 }
 h1:before {
 	content: "🌈";
-	right: 2ch;
+	right: 2.25ch;
 }
 h1:after {
 	content: "🌈";
 	transform: scaleX(-1);
-	left: 2ch;
+	left: 2.25ch;
 }
 
 /* --- about --- */
