@@ -9,4 +9,5 @@
 - ? add way to add comments to console entries from within wcb
 - figure out accessibility
 - can we load a console from a url instead of just a file?
+- reset file input, message with reset button
 - share with susam/wander community

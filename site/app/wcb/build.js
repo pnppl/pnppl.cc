@@ -1,9 +1,7 @@
-const html = document.getElementsByTagName('html')[0];
+const styleName = "wander-wcb.css";
 
-const fileInput = document.getElementById("file-input");
-const dragDrop = document.getElementById("drag-drop");
-const fileContentDisplay = document.getElementById("file-content");
 const messageDisplay = document.getElementById("message");
+const fileContentDisplay = document.getElementById("file-content");
 
 const consoles = document.getElementById("consoles");
 const pages = document.getElementById("pages");
@@ -13,72 +11,80 @@ const scripts = document.getElementById("scripts");
 
 const tools = document.querySelectorAll('.style-tool');
 const applyTheme = document.getElementById("apply-theme");
-const update = document.getElementById("update");
-const save = document.getElementById("save");
-const saveCSS = document.getElementById("save-css");
 const reset = document.getElementById("reset");
 
-const iframe = document.getElementById('iframe');
+let wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+let css = Array(7);
 
-var wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
-var css = Array(7);
-
-// --- file input listeners
-// whole page drag and drop
-document.addEventListener('dragover', (e) => {
-		e.preventDefault();
-		setBG('drag');
-});
-document.addEventListener('drop', (e) => {
-	// without the test it intercepts ALL drops including text
-	if (e.dataTransfer.files.length > 0) {
-			document.getElementById('file-input').files = e.dataTransfer.files;
-			e.target.files = e.dataTransfer.files;
-			e.preventDefault();
-			handleFileSelection(e);
-			setBG();
-	}
-});
-document.addEventListener('dragend', () => {
-	setBG();
-});
-document.addEventListener('dragleave', () => {
-	setBG();
-});
-// actual file input element
-fileInput.addEventListener("change", handleFileSelection);
-update.addEventListener("click", () => {
-	readFields();
-	updateFields();
-});
-save.addEventListener("click", () => {
-	exportBlob("js");
-});
-
-// reset button
-reset.addEventListener("click", () => {
-	resetFields();
-});
-
-// --- theme builder listeners
-// add listeners to all style controls
+// register all listeners
 window.onload = function() {
+	// whole page drag and drop file input
+	document.addEventListener('dragover', (e) => {
+			e.preventDefault();
+			setBG('drag');
+	});
+	document.addEventListener('drop', (e) => {
+		// without the test it intercepts ALL drops including text
+		if (e.dataTransfer.files.length > 0) {
+				document.getElementById('file-input').files = e.dataTransfer.files;
+				e.target.files = e.dataTransfer.files;
+				e.preventDefault();
+				handleFileSelection(e);
+				setBG();
+		}
+	});
+	// the end
+	document.addEventListener('dragend', setBG);
+	document.addEventListener('dragleave', setBG);
+
+	// actual file input element
+	const fileInput = document.getElementById("file-input");
+	fileInput.addEventListener("change", handleFileSelection);
+
+	// url input
+	const urlForm = document.getElementById("url");
+	urlForm.addEventListener("submit", loadRemote);
+
+	// listener for iframe hack for url input
+	window.addEventListener('message', handleRemote);
+
+	// update button
+	const update = document.getElementById("update");
+	update.addEventListener("click", () => {
+		readFields();
+		updateFields();
+	});
+
+	// save JS button
+	const save = document.getElementById("save");
+	save.addEventListener("click", () => {
+		exportBlob("js");
+	});
+
+	// reset button
+	reset.addEventListener("click", resetFields);
+
+	// add listeners to all style controls
 	tools.forEach(
 		function(tool) {
 			tool.addEventListener("change", () => {updateStyle(tool)});
 		}
 	);
+
+	// apply theme checkbox
+	applyTheme.addEventListener("change", function() {
+		applyThemeFn(this.checked);
+	});
+
+	// save theme button
+	const saveCSS = document.getElementById("save-css");
+	saveCSS.addEventListener("click", () => {
+		exportBlob("css");
+	});
 };
 
-// apply theme checkbox
-applyTheme.addEventListener("change", function() {
-	applyThemeFn(this.checked);
-});
 
-// save theme button
-saveCSS.addEventListener("click", () => {
-	exportBlob("css");
-});
+// --- helper functions --- //
 
 // https://stackoverflow.com/a/44134328
 function hslToHex(h, s, l) {
@@ -125,26 +131,34 @@ function hexToHSL(hex) {
 	return { h, s, l };
 }
 
-function applyThemeFn(checked) {
-	const styleName = "wander-wcb.css";
-	let stylesheets = styles.value.split("\n");
-	const index = stylesheets.indexOf(styleName);
-	// missing; add
-	if (checked && index === -1) {
-		stylesheets.push(styleName);
-	}
-	// present; remove
-	else if (!checked && index !== -1) {
-		stylesheets.splice(index, 1);
-	}
-	styles.value = stylesheets.join("\n");
-	readFields();
-	updateFields();
+function asCode() {
+	return "const wander = " + JSON.stringify(wander, null, "\t");
 }
 
+// toggle background color for drag and drop
+function setBG(color) {
+	const html = document.getElementsByTagName('html')[0];
+	if (color === 'drag') {
+		html.style.backgroundColor = 'lightskyblue';
+	} else {
+		html.style.backgroundColor = '';
+	}
+}
+
+// display file/url import results
+function showMessage(message, type) {
+	messageDisplay.textContent = message;
+	messageDisplay.style.color = type === "error" ? "firebrick" : "green";
+}
+
+
+// --- meaty functions --- //
+
+// theme builder
 function updateStyle(tool) {
-	let id = tool.id;
-	let newValue = tool.value;
+	const iframe = document.getElementById('iframe');
+	const id = tool.id;
+	const newValue = tool.value;
 	let style = document.createElement('style');
 	let styleStr;
 	switch(id){
@@ -233,31 +247,30 @@ function updateStyle(tool) {
 	iframe.contentDocument.head.appendChild(style);
 }
 
-// toggle background color for drag and drop
-function setBG(color) {
-	if (color === 'drag') {
-		html.style.backgroundColor = 'lightskyblue';
-	} else {
-		html.style.backgroundColor = '';
+// include/exclude custom CSS
+function applyThemeFn(checked) {
+	let stylesheets = styles.value.split("\n");
+	const index = stylesheets.indexOf(styleName);
+	// missing; add
+	if (checked && index === -1) {
+		stylesheets.push(styleName);
 	}
+	// present; remove
+	else if (!checked && index !== -1) {
+		stylesheets.splice(index, 1);
+	}
+	styles.value = stylesheets.join("\n");
+	readFields();
+	updateFields();
 }
 
-// file selection results
-function showMessage(message, type) {
-	messageDisplay.textContent = message;
-	messageDisplay.style.color = type === "error" ? "red" : "green";
-}
-
+// file input
+// mostly copied from MDN
 function handleFileSelection(event) {
 	const file = event.target.files[0];
 	fileContentDisplay.textContent = ""; // Clear previous file content
 	messageDisplay.textContent = ""; // Clear previous messages
 
-	// Validate file existence and type
-//	if (!file) {
-//		showMessage("No file selected. Please choose a file.", "error");
-//		return;
-//	}
 	// should we really bother with this? what if the mime is fucked and it looks like plaintext?
 	if (!file.type.match("application/x-javascript")) {
 		showMessage("Unsupported file type. Please select your wander.js file.", "error");
@@ -269,10 +282,12 @@ function handleFileSelection(event) {
 	reader.onload = () => {
 		fileContentDisplay.textContent = reader.result;
 		try {
-			eval(`${reader.result.replace("const ", "")}`);
+			let wanderFile;
+			eval(`${reader.result.replace("const wander", "wanderFile")}`);
+			importConsole(wanderFile);
 			updateFields();
 		} catch (err) {
-			showMessage("Error parsing wander.js. Probably a missing comma or someting.", "error");
+			showMessage(`Error parsing wander.js. Probably a missing comma or someting. (${err})`, "error");
 		}
 //		showMessage("Loaded existing wander.js successfully.");
 	};
@@ -282,8 +297,39 @@ function handleFileSelection(event) {
 	reader.readAsText(file);
 }
 
-function asCode() {
-	return "const wander = " + JSON.stringify(wander, null, "\t");
+// url input
+function loadRemote(e) {
+	const url = event.srcElement[0].value;
+	const iframe = document.getElementById('loader-iframe')
+	iframe.srcdoc = `
+		<script src="${url}"></scr` + `ipt>
+		<script>
+			parent.postMessage({ wander: wander }, '*')
+		</scr` + 'ipt>'
+}
+// iframe hack for url input
+function handleRemote(e) {
+	const ext = e.data.wander;
+	importConsole(ext);
+	updateFields();
+}
+
+// safe(r) imports from both url and file
+function importConsole(c) {
+	if (typeof c.consoles === "undefined") { wander.consoles = []; }
+	else { wander.consoles = c.consoles; }
+
+	if (typeof c.pages === "undefined") { wander.pages = []; }
+	else { wander.pages = c.pages; }
+
+	if (typeof c.ignore === "undefined") { wander.ignore = []; }
+	else { wander.ignore = c.ignore; }
+
+	if (typeof c.styles === "undefined") { wander.styles = []; }
+	else { wander.styles = c.styles; }
+
+	if (typeof c.scripts === "undefined") { wander.scripts = []; }
+	else { wander.scripts = c.scripts; }
 }
 
 function exportBlob(filetype) {
@@ -293,24 +339,14 @@ function exportBlob(filetype) {
 		filename = "wander.js";
 	} else {
 		blobtext = css.join("\n").replaceAll("\t", "").replaceAll(/\n\n+/g, "\n").replace(/^\n/, "");
-		filename = "wander-wcb.css";
+		filename = styleName;
 	}
-	var blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
-	var a = document.createElement('a');
+	let blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
+	let a = document.createElement('a');
 	a.download = filename;
 	a.href = window.URL.createObjectURL(blob);
 	a.click();
 	if (a.remove) a.remove();
-}
-
-// replace page contents with contents of global wander var
-function updateFields() {
-	consoles.value = wander.consoles.join("\n");
-	pages.value = wander.pages.join("\n");
-	ignore.value = wander.ignore.join("\n");
-	styles.value = wander.styles.join("\n");
-	scripts.value = wander.scripts.join("\n");
-	fileContentDisplay.textContent = asCode();
 }
 
 // update global wander var with <textarea> user input
@@ -321,6 +357,16 @@ function readFields() {
 	wander.ignore = ignore.value.split("\n").filter(Boolean);
 	wander.styles = styles.value.split("\n").filter(Boolean);
 	wander.scripts = scripts.value.split("\n").filter(Boolean);
+}
+
+// replace page contents with contents of global wander var
+function updateFields() {
+	consoles.value = wander.consoles.join("\n");
+	pages.value = wander.pages.join("\n");
+	ignore.value = wander.ignore.join("\n");
+	styles.value = wander.styles.join("\n");
+	scripts.value = wander.scripts.join("\n");
+	fileContentDisplay.textContent = asCode();
 }
 
 function resetFields() {
@@ -348,3 +394,4 @@ function resetFields() {
 		applyTheme.checked = false;
 	}
 }
+

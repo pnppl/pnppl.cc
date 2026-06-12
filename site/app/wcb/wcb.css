@@ -81,10 +81,14 @@ textarea#scripts {
 pre {
 	overflow: auto;
 }
-/* file load error message */
-div#message {
+#loaders:has(:invalid) ~ #message:before {
 	display: block;
-	margin: 1em;
+	color: firebrick;
+	content: 'URL should end with "wander.js"';
+}
+/* hidden iframe hack to avoid CORS shamelessly stolen from susam */
+#loader-iframe {
+	display: none;
 }
 
 /* --- main buttons --- */
@@ -144,14 +148,11 @@ body > label:before,
 }
 body > label details {
 	cursor: help;
-/*	float: right; */
 	width: fit-content;
 	margin-left: auto;
 	font-size: 0.75em;
 	text-align: right;
-/*	max-width: 65%; */
 	font-style: italic;
-/*	margin-top: 0.5em; */
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row-reverse;
@@ -164,9 +165,6 @@ body > label details:open {
 body > label details:open:after {
 	content: attr(title);
 }
-/*body > label details:open summary { */
-/*	display: none; */
-/*} */
 body > label summary {
 	color: blue;
 	font-style: normal;
@@ -178,7 +176,7 @@ body > label summary::marker {
 }
 
 /* --- style builder --- */
-iframe {
+#iframe {
 	width: 100%;
 	min-height: 33vh;
 	box-sizing: border-box;

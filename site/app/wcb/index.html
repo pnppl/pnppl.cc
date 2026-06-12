@@ -39,8 +39,14 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<input type="file" id="file-input">
-		<div id="message"></div>
+		<div id="loaders">
+			<input type="file" id="file-input" name="file-input">
+			<form id="url" method="dialog">
+				<input type="text" id="url-input" name="url-input" pattern=".*wander\.js" placeholder="https://susam.net/wander/wander.js">
+				<input id="url-submit" type="submit" value="Load">
+			</form>
+		</div>
+		<p id="message"></p>
 
 		<label for="consoles">Consoles
 			<details title="Other Wander consoles that visitors can reach from your console.">
@@ -75,19 +81,19 @@
 			<summary>Custom theme builder</summary>
 			<div id="toolbox">
 				<label for="bg-color">Background color</label>
-				<input class="style-tool" id="bg-color" title="Background color" type="color" value="#696">
+				<input class="style-tool" id="bg-color" name="bg-color" title="Background color" type="color" value="#696">
 
 				<label for="text-color">Text color</label>
-				<input class="style-tool" id="text-color" title="Text color" type="color" value="#030">
+				<input class="style-tool" id="text-color" name="text-color" title="Text color" type="color" value="#030">
 
 				<label for="input-color">Input color</label>
-				<input class="style-tool" id="input-color" title="Input color" type="color" value="#bdb">
+				<input class="style-tool" id="input-color" name="input-color" title="Input color" type="color" value="#bdb">
 
 				<label for="border-color">Border color</label>
-				<input class="style-tool" id="border-color" title="Border color" type="color" value="#363">
+				<input class="style-tool" id="border-color" name="border-color" title="Border color" type="color" value="#363">
 
 				<label for="border-width">Border width</label>
-				<input class="style-tool" id="border-width" title="Border width" type="range" min="-3" max="5" value="2">
+				<input class="style-tool" id="border-width" name="border-width" title="Border width" type="range" min="-3" max="5" value="2">
 
 				<label for="border-style">Border style</label>
 				<select class="style-tool" id="border-style" title="Border style">
@@ -129,7 +135,7 @@
 					<input id="apply-theme" type="checkbox">
 					<label class="show" for="apply-theme">Include theme in wander.js</label>
 				</div>
-				<input class="save" id="save-css" type="button" value="Save CSS">
+				<input class="save" id="save-css" name="save-css" type="button" value="Save CSS">
 			</div>
 
 		</details>
@@ -143,9 +149,11 @@
 
 		<input id="update" type="button" value="Update">
 
-		<span class="label">Results <input class="save" id="save" type="button" value="Save"></span>
+		<span class="label">Results <input class="save" id="save" name="save" type="button" value="Save"></span>
 		<pre id="file-content"></pre>
 		<br><br><br><br><br>
 		<input id="reset" type="button" value="Reset">
+
+		<iframe id="loader-iframe" sandbox="allow-scripts"></iframe>
 	</body>
 </html>
