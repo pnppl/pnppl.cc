@@ -65,7 +65,8 @@ li::marker {
 input[type=button],
 input[type=file],
 textarea,
-pre {
+pre,
+#loaders {
 	display: block;
 	margin: 0 0 1em;
 	width: 100%;
@@ -81,10 +82,31 @@ textarea#scripts {
 pre {
 	overflow: auto;
 }
+#loaders {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.15em;
+}
 #loaders:has(:invalid) ~ #message:before {
 	display: block;
 	color: firebrick;
 	content: 'URL should end with "wander.js"';
+}
+#file-input,
+#url {
+	display: flex;
+	flex: 1;
+	gap: 0.25em;
+	width: unset;
+	border: 0;
+	margin: 0;
+	padding: 0.15em;
+}
+#file-input {
+	margin-top: 1px;
+}
+#url-input {
+	flex: 1;
 }
 /* hidden iframe hack to avoid CORS shamelessly stolen from susam */
 #loader-iframe {
