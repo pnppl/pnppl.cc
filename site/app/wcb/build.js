@@ -11,10 +11,12 @@ const ignore = document.getElementById("ignore");
 const styles = document.getElementById("styles");
 const scripts = document.getElementById("scripts");
 
+const tools = document.querySelectorAll('.style-tool');
 const applyTheme = document.getElementById("apply-theme");
 const update = document.getElementById("update");
 const save = document.getElementById("save");
 const saveCSS = document.getElementById("save-css");
+const reset = document.getElementById("reset");
 
 const iframe = document.getElementById('iframe');
 
@@ -37,55 +39,44 @@ document.addEventListener('drop', (e) => {
 			setBG();
 	}
 });
-document.addEventListener('dragend', (e) => {
+document.addEventListener('dragend', () => {
 	setBG();
 });
-document.addEventListener('dragleave', (e) => {
+document.addEventListener('dragleave', () => {
 	setBG();
 });
 // actual file input element
 fileInput.addEventListener("change", handleFileSelection);
-update.addEventListener("click", (e) => {
+update.addEventListener("click", () => {
 	readFields();
 	updateFields();
 });
-save.addEventListener("click", (e) => {
+save.addEventListener("click", () => {
 	exportBlob("js");
+});
+
+// reset button
+reset.addEventListener("click", () => {
+	resetFields();
 });
 
 // --- theme builder listeners
 // add listeners to all style controls
 window.onload = function() {
-	const tools = document.querySelectorAll('.style-tool');
 	tools.forEach(
 		function(tool) {
-			tool.addEventListener("change", (e) => {updateStyle(tool)});
+			tool.addEventListener("change", () => {updateStyle(tool)});
 		}
 	);
 };
+
 // apply theme checkbox
 applyTheme.addEventListener("change", function() {
 	applyThemeFn(this.checked);
 });
 
-function applyThemeFn(checked) {
-	const styleName = "wander-wcb.css";
-	let stylesheets = styles.value.split("\n");
-	const index = stylesheets.indexOf(styleName);
-	// missing; add
-	if (checked && index === -1) {
-		stylesheets.push(styleName);
-	}
-	// present; remove
-	else if (!checked && index !== -1) {
-		stylesheets.splice(index, 1);
-	}
-	styles.value = stylesheets.join("\n");
-	readFields();
-	updateFields();
-}
 // save theme button
-saveCSS.addEventListener("click", (e) => {
+saveCSS.addEventListener("click", () => {
 	exportBlob("css");
 });
 
@@ -132,6 +123,23 @@ function hexToHSL(hex) {
 	l = Math.round(l*100);
 
 	return { h, s, l };
+}
+
+function applyThemeFn(checked) {
+	const styleName = "wander-wcb.css";
+	let stylesheets = styles.value.split("\n");
+	const index = stylesheets.indexOf(styleName);
+	// missing; add
+	if (checked && index === -1) {
+		stylesheets.push(styleName);
+	}
+	// present; remove
+	else if (!checked && index !== -1) {
+		stylesheets.splice(index, 1);
+	}
+	styles.value = stylesheets.join("\n");
+	readFields();
+	updateFields();
 }
 
 function updateStyle(tool) {
@@ -315,4 +323,28 @@ function readFields() {
 	wander.scripts = scripts.value.split("\n").filter(Boolean);
 }
 
-
+function resetFields() {
+	if (reset.value === "Reset") {
+		reset.value = "Clear everything?";
+	} else if (reset.value === "Clear everything?") {
+		reset.value = "Last chance. Are you sure?";
+	} else {
+		reset.value = "Reset";
+		wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+		updateFields();
+		css = Array(7);
+		document.getElementById("bg-color").value = "#696";
+		document.getElementById("text-color").value = "#030";
+		document.getElementById("input-color").value = "#bdb";
+		document.getElementById("border-color").value = "#363";
+		document.getElementById("border-width").value = "2";
+		document.getElementById("border-style").value = "solid";
+		document.getElementById("font-family").value = "courier, monospace";
+		tools.forEach(
+			function(tool) {
+				updateStyle(tool);
+			}
+		);
+		applyTheme.checked = false;
+	}
+}

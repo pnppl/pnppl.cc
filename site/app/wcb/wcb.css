@@ -115,6 +115,15 @@ input#save {
 	position: relative;
 	bottom: 0.5em;
 }
+input#reset {
+	width: fit-content;
+	color: red;
+	background-color: white;
+}
+input#reset[value="Last chance. Are you sure?"] {
+	color: white;
+	background-color: red;
+}
 
 /* --- I/O labels --- */
 body > label,
