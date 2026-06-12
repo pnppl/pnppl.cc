@@ -1,10 +1,12 @@
-- do some input fixes like add https:// to bare domain names, remove /wander.js from ignore links, etc
+- do some input fixes like add https:// to bare domain names, remove /wander.js from console links, etc
 - is there some way we can check the headers automatically or make it easier for users to check manually so people don't add links that can't be framed?
 	- this is apparently difficult even for technically competent people, and i want this to be accessible to people who aren't
 	- after beating my head against this before i don't think it can be done without setting up something server side
 		- could try to set a service up on tilde.team
 		- could add a "check framing" mode that goes through tries to load each one in an iframe and user hits yes or no
+			- make links clickable
 			- reuse color test iframe
 - ? add way to add comments to console entries from within wcb
 - figure out accessibility
+- can we load a console from a url instead of just a file?
 - share with susam/wander community
