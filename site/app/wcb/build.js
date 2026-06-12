@@ -1,5 +1,7 @@
 const styleName = "wander-wcb.css";
 
+const fileInput = document.getElementById("file-input");
+const urlInput = document.getElementById("url-input");
 const messageDisplay = document.getElementById("message");
 const fileContentDisplay = document.getElementById("file-content");
 
@@ -26,7 +28,7 @@ window.onload = function() {
 	document.addEventListener('drop', (e) => {
 		// without the test it intercepts ALL drops including text
 		if (e.dataTransfer.files.length > 0) {
-				document.getElementById('file-input').files = e.dataTransfer.files;
+				fileInput.files = e.dataTransfer.files;
 				e.target.files = e.dataTransfer.files;
 				e.preventDefault();
 				handleFileSelection(e);
@@ -38,7 +40,6 @@ window.onload = function() {
 	document.addEventListener('dragleave', setBG);
 
 	// actual file input element
-	const fileInput = document.getElementById("file-input");
 	fileInput.addEventListener("change", handleFileSelection);
 
 	// url input
@@ -161,7 +162,7 @@ function updateStyle(tool) {
 	const newValue = tool.value;
 	let style = document.createElement('style');
 	let styleStr;
-	switch(id){
+	switch (id) {
 		case "bg-color":
 			styleStr = `body { background: ${newValue}; }`;
 			css[0] = styleStr;
@@ -286,10 +287,11 @@ function handleFileSelection(event) {
 			eval(`${reader.result.replace("const wander", "wanderFile")}`);
 			importConsole(wanderFile);
 			updateFields();
+			urlInput.value = "";
+			showMessage("Loaded console from file.");
 		} catch (err) {
 			showMessage(`Error parsing wander.js. Probably a missing comma or someting. (${err})`, "error");
 		}
-//		showMessage("Loaded existing wander.js successfully.");
 	};
 	reader.onerror = () => {
 		showMessage("Error reading the file. Please try again.", "error");
@@ -300,18 +302,37 @@ function handleFileSelection(event) {
 // url input
 function loadRemote(e) {
 	const url = event.srcElement[0].value;
+	let cleanUrl = url;
+	// lazy ass input cleanup should preserve relative paths and console in same directory
+	// only downside i can see is you need a ./ prefix if it's in a subfolder of the current dir
+	if (! (url.startsWith("http") || url.startsWith(".") || url.startsWith("wander.js")) ) {
+		cleanUrl = "https://" + cleanUrl;
+	}
 	const iframe = document.getElementById('loader-iframe')
+	// stolen from susam. i assume the odd quoting is to get around some security shit so I left it
 	iframe.srcdoc = `
-		<script src="${url}"></scr` + `ipt>
+		<script src="${cleanUrl}"></scr` + `ipt>
 		<script>
-			parent.postMessage({ wander: wander }, '*')
+			try {
+				parent.postMessage({ wander: wander }, '*');
+			} catch (err) {
+				parent.postMessage({ err: err }, '*');
+			}
 		</scr` + 'ipt>'
 }
 // iframe hack for url input
 function handleRemote(e) {
-	const ext = e.data.wander;
-	importConsole(ext);
-	updateFields();
+	showMessage("");
+	if (typeof e.data.err !== "undefined") {
+		// the error will always be "wander is not defined" afaik, so no point showing it to the user
+		showMessage("Couldn't fetch console from URL.", "error");
+	} else {
+		const ext = e.data.wander;
+		importConsole(ext);
+		updateFields();
+		fileInput.value = "";
+		showMessage("Loaded console from URL.");
+	}
 }
 
 // safe(r) imports from both url and file
@@ -375,7 +396,9 @@ function resetFields() {
 	} else if (reset.value === "Clear everything?") {
 		reset.value = "Last chance. Are you sure?";
 	} else {
-		reset.value = "Reset";
+		fileInput.value = "";
+		urlInput.value = "";
+		showMessage("");
 		wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 		updateFields();
 		css = Array(7);
@@ -392,6 +415,7 @@ function resetFields() {
 			}
 		);
 		applyTheme.checked = false;
+		reset.value = "Reset";
 	}
 }
 
