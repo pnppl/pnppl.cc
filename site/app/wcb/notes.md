@@ -7,4 +7,6 @@
 			- reuse color test iframe
 - ? add way to add comments to console entries from within wcb
 - rearrange the js functions more logically
+- reset button
+- figure out accessibility
 - share with susam/wander community

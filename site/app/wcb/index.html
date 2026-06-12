@@ -68,7 +68,10 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<details open>
+
+		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
+
+		<details id="theme-builder">
 			<summary>Custom theme builder</summary>
 			<div id="toolbox">
 				<label for="bg-color">Background color</label>
@@ -110,6 +113,13 @@
 				</select>
 			</div>
 
+			<div id="ffx">
+				<i>Mobile Firefox's color picker is unusably awful. Sorry.</i>
+				<br>
+				<input id="ok" type="checkbox">
+				<label class="show" for="ok">It's not your fault!</label>
+			</div>
+
 			<div id="iframe-wrap">
 				<iframe id="iframe" loading="lazy" src="demo.html"></iframe>
 			</div>
@@ -123,7 +133,6 @@
 			</div>
 
 		</details>
-		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 
 		<label for="scripts">Scripts
 			<details title="Custom scripts to include. These are loaded last.">
