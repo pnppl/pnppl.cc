@@ -277,4 +277,42 @@ input#save-css {
 		display: none;
 	}
 }
+@media (prefers-color-scheme: dark) {
+	html,
+	input[type=file],
+	input[type=text],
+	#loaders,
+	pre,
+	textarea {
+		background-color: black;
+		color: lightpink;
+		border-color: hotpink;
+	}
+	input[type=text],
+	textarea,
+	#save,
+	#save-css {
+		color: mistyrose;
+	}
+	h1 {
+		filter: drop-shadow(2px 2px purple);
+	}
+	a,
+	body > label summary {
+		color: aqua;
+	}
+	a:visited {
+		color: mediumorchid;
+	}
+	#message {
+		filter: brightness(125%);
+	}
+	#update {
+		background-color: lightpink;
+		color: black;
+	}
+	input#reset {
+		background-color: mistyrose;
+	}
+}
 /* !end */
