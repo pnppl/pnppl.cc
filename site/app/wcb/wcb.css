@@ -66,7 +66,7 @@ li::marker {
 input[type=button],
 input[type=file],
 textarea,
-pre,
+#file-content,
 #loaders {
 	display: block;
 	margin: 0 0 1em;
@@ -79,8 +79,7 @@ textarea#styles,
 textarea#scripts {
 	height: 1.75em;
 }
-/* code output */
-pre {
+#file-content {
 	overflow: auto;
 }
 #loaders {
@@ -128,19 +127,18 @@ input[type="button"]:active {
 }
 input#update {
 	font-size: 1.75em;
-	margin-top: 1.5em;
+	margin: 1.5em auto;
 }
 input.save {
 	background-color: deeppink;
 	color: white;
 	width: fit-content;
-/*	margin: 0 0 0.25em; */
 	font-size: 1.2em;
 }
 input#save {
-	margin: 0 0 0.5em auto;
+	margin: 0 0 0 auto;
 	position: relative;
-	bottom: 0.5em;
+	bottom: 0.75em;
 }
 input#reset {
 	width: fit-content;
@@ -153,17 +151,11 @@ input#reset[value="Last chance. Are you sure?"] {
 }
 
 /* --- I/O labels --- */
-body > label,
-body > .label {
+body > label {
 	font-size: 1.2em;
 	display: flex;
 }
-.label {
-	position: relative;
-	top: 1em;
-}
-body > label:before,
-.label:before {
+body > label:before {
 	content: "🏳️‍🌈";
 	margin-right: 0.25ch;
 	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 35% 50%, 0% 0%);
@@ -196,6 +188,10 @@ body > label summary {
 }
 body > label summary::marker {
 	content: "";
+}
+label[for=file-content] {
+	position: relative;
+	top: 0.75em;
 }
 
 /* --- style builder --- */
@@ -282,7 +278,7 @@ input#save-css {
 	input[type=file],
 	input[type=text],
 	#loaders,
-	pre,
+	#file-content,
 	textarea {
 		background-color: black;
 		color: mistyrose;
@@ -302,7 +298,7 @@ input#save-css {
 		filter: brightness(125%);
 	}
 	input[type=text],
-	pre,
+	#file-content,
 	textarea {
 		color: lightskyblue;
 	}

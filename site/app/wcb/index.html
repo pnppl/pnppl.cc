@@ -57,21 +57,21 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="consoles" name="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
 
 		<label for="pages">Pages
 			<details title="Websites and pages you recommend to the Wander community.">
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="pages" name="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
 
 		<label for="ignore">Ignore
 			<details title="Websites and consoles to ignore. Your console will *never* load these.">
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="ignore" name="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
 
 		<label for="styles">Styles
 			<details title="Custom stylesheets to include. These are loaded after the default styles.">
@@ -79,7 +79,7 @@
 			</details>
 		</label>
 
-		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
+		<textarea cols="80" rows="1" id="styles" name="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 
 		<details id="theme-builder">
 			<summary>Custom theme builder</summary>
@@ -149,12 +149,12 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
+		<textarea cols="80" rows="1" id="scripts" name="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
 
 		<input id="update" type="button" value="Update">
 
-		<span class="label">Results <input class="save" id="save" name="save" type="button" value="Save"></span>
-		<pre id="file-content"></pre>
+		<label for="file-content">Results <input class="save" id="save" name="save" type="button" value="Save"></label>
+		<pre id="file-content" name="file-content"></pre>
 		<br><br><br><br><br>
 		<input id="reset" type="button" value="Reset">
 

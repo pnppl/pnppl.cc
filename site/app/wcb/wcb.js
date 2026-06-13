@@ -238,7 +238,10 @@ window.onload = function() {
 		if (typeof e.data.err !== "undefined") {
 			// the error will always be "wander is not defined" afaik, so no point showing it to the user
 			showMessage("Couldn't fetch console from URL.", "error");
-		} else {
+		}
+		// for reasons I can't fathom, a message is sometimes being fired on page load
+		// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching
+		else if (e.origin === "null") {
 			const ext = e.data.wander;
 			importConsole(ext);
 			updateFields();

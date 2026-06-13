@@ -6,5 +6,24 @@
 			- make links clickable
 			- reuse color test iframe
 - ? add way to add comments to console entries from within wcb
+	- getting them from imports might be tricky
+		- can we fetch the source text from URLs like with files?
+		- if we only handle line comments parsing should be easy
 - figure out accessibility
-- share with susam/wander community
+	- should we mess with the tab order?
+- we could use the message passing thing to send the current style values to the parent
+	- the theme editor settings would match the preview on load when you've already customized your css
+	- no need to manually define defaults in the script
+	- the editor is so basic though that it's hard to imagine you'd really want to use it if you already altered the css
+		- should we make it more "advanced"? how to do without cluttering UI?
+		- should we have separate border controls for input and frame? eliminatae the width ratio?
+		- how about a few presets?
+			- 9x
+			- rainbows
+			- amoled
+		- dark mode media queries?
+- we could make the URL input accept links that don't end in wander.js, then load the index into the iframe at the same time
+- remove update button and make updates automatic
+	- we could listen and update on any change but it's all synchronous so it would lag like hell
+		- async probably isn't that hard. maybe that's all there is to it
+- figure out the oldest browser wander works with and make sure wcb works with it too

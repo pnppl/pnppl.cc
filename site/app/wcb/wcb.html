@@ -83,7 +83,7 @@
 		input[type=button],
 		input[type=file],
 		textarea,
-		pre,
+		#file-content,
 		#loaders {
 			display: block;
 			margin: 0 0 1em;
@@ -96,8 +96,7 @@
 		textarea#scripts {
 			height: 1.75em;
 		}
-		/* code output */
-		pre {
+		#file-content {
 			overflow: auto;
 		}
 		#loaders {
@@ -145,19 +144,18 @@
 		}
 		input#update {
 			font-size: 1.75em;
-			margin-top: 1.5em;
+			margin: 1.5em auto;
 		}
 		input.save {
 			background-color: deeppink;
 			color: white;
 			width: fit-content;
-		/*	margin: 0 0 0.25em; */
 			font-size: 1.2em;
 		}
 		input#save {
-			margin: 0 0 0.5em auto;
+			margin: 0 0 0 auto;
 			position: relative;
-			bottom: 0.5em;
+			bottom: 0.75em;
 		}
 		input#reset {
 			width: fit-content;
@@ -170,17 +168,11 @@
 		}
 
 		/* --- I/O labels --- */
-		body > label,
-		body > .label {
+		body > label {
 			font-size: 1.2em;
 			display: flex;
 		}
-		.label {
-			position: relative;
-			top: 1em;
-		}
-		body > label:before,
-		.label:before {
+		body > label:before {
 			content: "🏳️‍🌈";
 			margin-right: 0.25ch;
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 35% 50%, 0% 0%);
@@ -213,6 +205,10 @@
 		}
 		body > label summary::marker {
 			content: "";
+		}
+		label[for=file-content] {
+			position: relative;
+			top: 0.75em;
 		}
 
 		/* --- style builder --- */
@@ -299,7 +295,7 @@
 			input[type=file],
 			input[type=text],
 			#loaders,
-			pre,
+			#file-content,
 			textarea {
 				background-color: black;
 				color: mistyrose;
@@ -319,7 +315,7 @@
 				filter: brightness(125%);
 			}
 			input[type=text],
-			pre,
+			#file-content,
 			textarea {
 				color: lightskyblue;
 			}
@@ -575,7 +571,10 @@
 				if (typeof e.data.err !== "undefined") {
 					// the error will always be "wander is not defined" afaik, so no point showing it to the user
 					showMessage("Couldn't fetch console from URL.", "error");
-				} else {
+				}
+				// for reasons I can't fathom, a message is sometimes being fired on page load
+				// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching
+				else if (e.origin === "null") {
 					const ext = e.data.wander;
 					importConsole(ext);
 					updateFields();
@@ -850,21 +849,21 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="consoles" name="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
 
 		<label for="pages">Pages
 			<details title="Websites and pages you recommend to the Wander community.">
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="pages" name="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
 
 		<label for="ignore">Ignore
 			<details title="Websites and consoles to ignore. Your console will *never* load these.">
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
+		<textarea cols="80" rows="8" id="ignore" name="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
 
 		<label for="styles">Styles
 			<details title="Custom stylesheets to include. These are loaded after the default styles.">
@@ -872,7 +871,7 @@
 			</details>
 		</label>
 
-		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
+		<textarea cols="80" rows="1" id="styles" name="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
 
 		<details id="theme-builder">
 			<summary>Custom theme builder</summary>
@@ -942,12 +941,12 @@
 				<summary>(?)</summary>
 			</details>
 		</label>
-		<textarea cols="80" rows="8" id="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
+		<textarea cols="80" rows="1" id="scripts" name="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
 
 		<input id="update" type="button" value="Update">
 
-		<span class="label">Results <input class="save" id="save" name="save" type="button" value="Save"></span>
-		<pre id="file-content"></pre>
+		<label for="file-content">Results <input class="save" id="save" name="save" type="button" value="Save"></label>
+		<pre id="file-content" name="file-content"></pre>
 		<br><br><br><br><br>
 		<input id="reset" type="button" value="Reset">
 
