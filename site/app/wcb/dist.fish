@@ -1,8 +1,8 @@
 # merge files, remove site-specific stuff, and replace 'demo' for easy reuse
 
 # indent
-cat wcb.css | sed 's|^|\t\t|g' | sed 's|^\t\t$||g' > css.tmp &&
-cat wcb.js | sed 's|^|\t\t|g' | sed 's|^\t\t$||g' > js.tmp &&
+cat wcb.css | sed 's|^|\t\t|g' | sed 's|^\t\t$||' > css.tmp &&
+cat wcb.js | sed 's|^|\t\t|g' | sed 's|^\t\t$||' > js.tmp &&
 
 # clean and inline
 cat index.html |

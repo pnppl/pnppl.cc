@@ -253,7 +253,7 @@ window.onload = function() {
 		if (param[0] === '?' && param.length > 1) {
 			loadRemote({ srcElement: [{ value: param.slice(1) }] });
 		}
-		// for "dist" version -- on my version i use demo.html
+		// for "dist" version -- on my version i use dem0.html
 		else if (iframe.src.endsWith("index.html")) {
 			loadRemote({ srcElement: [{ value: "wander.js" }] });
 		}

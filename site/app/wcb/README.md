@@ -12,6 +12,8 @@ You can try it at <https://pnppl.cc/app/wcb/>.
 
 You can easily install WCB on your own site by saving [wcb.html](https://git.gay/pnppl/pnppl.cc/raw/branch/main/site/app/wcb/wcb.html) to your Wander directory. It will automatically load your console for editing by default. (You will still have to save the changes you make manually.)
 
+You can see how this works on my console at <https://pnppl.cc/app/wander/wcb.html>.
+
 
 ## URL Parameters
 

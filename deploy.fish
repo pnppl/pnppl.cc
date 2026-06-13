@@ -57,7 +57,7 @@ end &&
 fish map/sitemap.fish &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
-lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; chmod 666 .gb.txt; exit" -u pnppl,$FTP_PASSWORD w10.host
+lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; chmod 666 .gb.txt; put site/app/wcb/wcb.html -o app/wander/wcb.html; exit" -u pnppl,$FTP_PASSWORD w10.host
 
 if test $status -ne 0
 	echo " !! ~~~~~~~ DEPLOY FAILED! ~~~~~~ !! "
