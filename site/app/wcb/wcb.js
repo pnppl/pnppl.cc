@@ -195,19 +195,35 @@ window.onload = function() {
 		reader.readAsText(file);
 	}
 
+	function cleanURL(url, mode) {
+		if ( url.startsWith("//") ) {
+			url = "https:" + url;
+		}
+		switch (mode) {
+			case "remote":
+				if ( url.startsWith(".") || url.startsWith("wander.js") ) {
+					return url;
+				}
+				break;
+			case "console":
+				if ( url.endsWith("wander.js") ) {
+					url = url.slice(0, -9);
+				}
+				break;
+		}
+		if (! url.startsWith("http") ) {
+			url = "https://" + url;
+		}
+		return url;
+	}
+
 	// url input
 	function loadRemote(e) {
-		const url = e.srcElement[0].value;
-		let cleanUrl = url;
-		// lazy ass input cleanup should preserve relative paths and console in same directory
-		// only downside i can see is you need a ./ prefix if it's in a subfolder of the current dir
-		if (! (url.startsWith("http") || url.startsWith(".") || url.startsWith("wander.js")) ) {
-			cleanUrl = "https://" + cleanUrl;
-		}
+		const remoteURL = cleanURL(e.srcElement[0].value, "remote");
 		const loader = document.getElementById('loader-iframe')
 		// stolen from susam
 		loader.srcdoc = `
-			<script src="${cleanUrl}"></scr` + `ipt>
+			<script src="${remoteURL}"></scr` + `ipt>
 			<script>
 				try {
 					parent.postMessage({ wander: wander }, '*');
@@ -236,13 +252,20 @@ window.onload = function() {
 		const param = window.location.search;
 		if (param[0] === '?' && param.length > 1) {
 			loadRemote({ srcElement: [{ value: param.slice(1) }] });
-		} else if (iframe.src.endsWith("index.html")) {
+		}
+		// for "dist" version -- on my version i use demo.html
+		else if (iframe.src.endsWith("index.html")) {
 			loadRemote({ srcElement: [{ value: "wander.js" }] });
 		}
 	}
 
 	// safe(r) imports from both url and file
 	function importConsole(c) {
+		if (typeof c === "undefined") {
+			wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+			return;
+		}
+
 		if (typeof c.consoles === "undefined") { wander.consoles = []; }
 		else { wander.consoles = c.consoles; }
 
@@ -280,8 +303,23 @@ window.onload = function() {
 	function readFields() {
 		// filter removes blank lines (empty string is "falsy" in this accursed language)
 		wander.consoles = consoles.value.split("\n").filter(Boolean);
+		wander.consoles.forEach(
+			function(c, i, arr) {
+				arr[i] = cleanURL(c, "console");
+			}
+		);
 		wander.pages = pages.value.split("\n").filter(Boolean);
+		wander.pages.forEach(
+			function(c, i, arr) {
+				arr[i] = cleanURL(c, "");
+			}
+		);
 		wander.ignore = ignore.value.split("\n").filter(Boolean);
+		wander.ignore.forEach(
+			function(c, i, arr) {
+				arr[i] = cleanURL(c, "console");
+			}
+		);
 		wander.styles = styles.value.split("\n").filter(Boolean);
 		wander.scripts = scripts.value.split("\n").filter(Boolean);
 	}

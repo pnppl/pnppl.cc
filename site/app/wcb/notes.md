@@ -1,4 +1,3 @@
-- do some input fixes like add https:// to bare domain names, remove /wander.js from console links, etc
 - is there some way we can check the headers automatically or make it easier for users to check manually so people don't add links that can't be framed?
 	- this is apparently difficult even for technically competent people, and i want this to be accessible to people who aren't
 	- after beating my head against this before i don't think it can be done without setting up something server side
