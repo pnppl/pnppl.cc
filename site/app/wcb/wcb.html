@@ -1,0 +1,878 @@
+<!--
+	Wander Console Builder for Wander 0.6.0
+	Source: https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb
+	License: AGPLv3
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="no-referrer">
+		<meta name="theme-color" content="hotpink">
+		<link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBACAAEAAQCwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA////AA8cAAAUzgAAKTcAAFOLAACgygAAxxUAAKxkAABRhAAALioAABDKAAAJkgAAEyQAACpEAABQiAAAYxAAAD3gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+		<link rel="license" href="https://www.gnu.org/licenses/agpl-3.0.en.html">
+		<meta name="description" content="Javscript tool to simplify creating and editing a Wander console.">
+
+		<style><!--
+		/* --- global --- */
+		html {
+			max-width: 80ch;
+			margin: auto;
+			background-color: lightcyan;
+			font-family: sans-serif;
+			overflow-x: clip;
+		}
+		:focus-visible {
+			outline: medium solid hotpink;
+		}
+		::selection {
+			color: white;
+			background-color: mediumorchid;
+		}
+
+		/* --- title --- */
+		h1 {
+			background: linear-gradient(to left, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+			background-clip: text;
+			color: transparent;
+			filter: drop-shadow(2px 2px #000);
+			margin: auto;
+			width: fit-content;
+			text-align: center;
+			font-size: 3em;
+		}
+		h1:before,
+		h1:after {
+			color: black;
+			display: inline-block;
+			position: relative;
+			width: 0;
+		}
+		h1:before {
+			content: "🌈";
+			right: 2.25ch;
+		}
+		h1:after {
+			content: "🌈";
+			transform: scaleX(-1);
+			left: 2.25ch;
+		}
+
+		/* --- about --- */
+		#about {
+			width: fit-content;
+			margin: auto;
+		}
+		#about summary,
+		#theme-builder summary {
+			text-align: center;
+			cursor: pointer;
+			font-size: 1.1em;
+		}
+		summary::marker {
+			color: hotpink;
+		}
+		li::marker {
+			content: "❀ ";
+			color: mediumorchid;
+		}
+
+		/* --- main I/O --- */
+		input[type=button],
+		input[type=file],
+		textarea,
+		pre,
+		#loaders {
+			display: block;
+			margin: 0 0 1em;
+			width: 100%;
+			background-color: mistyrose;
+			border: 1px solid black;
+			box-sizing: border-box;
+		}
+		textarea#styles,
+		textarea#scripts {
+			height: 1.75em;
+		}
+		/* code output */
+		pre {
+			overflow: auto;
+		}
+		#loaders {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0.15em;
+		}
+		#loaders:has(:invalid) ~ #message:before {
+			display: block;
+			color: firebrick;
+			content: 'URL should end with "wander.js"';
+		}
+		#file-input,
+		#url {
+			display: flex;
+			flex: 1;
+			gap: 0.25em;
+			width: unset;
+			border: 0;
+			margin: 0;
+			padding: 0.15em;
+		}
+		#file-input {
+			margin-top: 1px;
+		}
+		#url-input {
+			flex: 1;
+		}
+		/* hidden iframe hack to avoid CORS shamelessly stolen from susam */
+		#loader-iframe {
+			display: none;
+		}
+
+		/* --- main buttons --- */
+		input[type="button"] {
+			background-color: white;
+			border: 2px outset black;
+			cursor: pointer;
+			padding: 0.25em;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+		}
+		input[type="button"]:active {
+			border-style: inset;
+		}
+		input#update {
+			font-size: 1.75em;
+			margin-top: 1.5em;
+		}
+		input.save {
+			background-color: deeppink;
+			color: white;
+			width: fit-content;
+		/*	margin: 0 0 0.25em; */
+			font-size: 1.2em;
+		}
+		input#save {
+			margin: 0 0 0.5em auto;
+			position: relative;
+			bottom: 0.5em;
+		}
+		input#reset {
+			width: fit-content;
+			color: red;
+			background-color: white;
+		}
+		input#reset[value="Last chance. Are you sure?"] {
+			color: white;
+			background-color: red;
+		}
+
+		/* --- I/O labels --- */
+		body > label,
+		body > .label {
+			font-size: 1.2em;
+			display: flex;
+		}
+		.label {
+			position: relative;
+			top: 1em;
+		}
+		body > label:before,
+		.label:before {
+			content: "🏳️‍🌈";
+			margin-right: 0.25ch;
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 35% 50%, 0% 0%);
+			height: 50%;
+		}
+		body > label details {
+			cursor: help;
+			width: fit-content;
+			margin-left: auto;
+			font-size: 0.75em;
+			text-align: right;
+			font-style: italic;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: row-reverse;
+			gap: 2px;
+			padding: 0.4em 0 0;
+		}
+		body > label details:open {
+			padding-left: 2em;
+		}
+		body > label details:open:after {
+			content: attr(title);
+		}
+		body > label summary {
+			color: blue;
+			font-style: normal;
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
+		body > label summary::marker {
+			content: "";
+		}
+
+		/* --- style builder --- */
+		#iframe {
+			width: 100%;
+			min-height: 33vh;
+			box-sizing: border-box;
+			flex-grow: 1;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		/* wrapper and flexbox needed to make iframe user resizable */
+		#iframe-wrap {
+			display: flex;
+			margin: 0.5em 0;
+			padding: 0;
+			resize: both;
+			overflow: hidden;
+		}
+		/* just included for accessibility */
+		details label {
+			display: none;
+		}
+		details label.show {
+			display: inline;
+		}
+		#toolbox,
+		#theme-export {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 0.5em;
+			margin: 0.5em 0;
+		}
+		#toolbox input,
+		#toolbox select {
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+		#border-width {
+			max-width: 30%;
+		}
+		input#save-css {
+			float: right;
+			width: fit-content;
+			margin: 0;
+			font-size: 1em;
+			letter-spacing: 0;
+		}
+		#ffx {
+			display: none;
+		}
+
+		/* --- queries --- */
+		@media screen and (max-width: 700px) {
+			h1 {
+				font-size: 2em;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			h1 {
+				font-size: 1.5em;
+			}
+			body > label details {
+				font-size: 0.65em;
+			}
+			/* hard to tap otherwise */
+			#theme-builder {
+				padding: 1em 0;
+			}
+			/* note about mobile firefox sucking ass */
+			#ffx {
+				display: block;
+				text-align: center;
+				font-size: 0.75em;
+			}
+			#ffx:has(:checked) {
+				display: none;
+			}
+		}
+		--></style>
+		<script><!--
+		// instead of an init()
+		// yes the entire script is wrapped in this. yes it's deranged. yes it works on my machine
+		window.onload = function() {
+			const styleName = "wander-wcb.css";
+
+			const fileInput = document.getElementById("file-input");
+			const urlInput = document.getElementById("url-input");
+			const messageDisplay = document.getElementById("message");
+			const fileContentDisplay = document.getElementById("file-content");
+
+			const consoles = document.getElementById("consoles");
+			const pages = document.getElementById("pages");
+			const ignore = document.getElementById("ignore");
+			const styles = document.getElementById("styles");
+			const scripts = document.getElementById("scripts");
+
+			const tools = document.querySelectorAll('.style-tool');
+			const iframe = document.getElementById('iframe');
+			const applyTheme = document.getElementById("apply-theme");
+			const reset = document.getElementById("reset");
+
+			let wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+			let css = Array(7);
+
+			// --- register all listeners ---//
+			// whole page drag and drop file input
+			document.addEventListener('dragover', (e) => {
+					e.preventDefault();
+					setBG('drag');
+			});
+			document.addEventListener('drop', (e) => {
+				// without the test it intercepts ALL drops including text
+				if (e.dataTransfer.files.length > 0) {
+						fileInput.files = e.dataTransfer.files;
+						e.target.files = e.dataTransfer.files;
+						e.preventDefault();
+						handleFileSelection(e);
+						setBG();
+				}
+			});
+			// the end
+			document.addEventListener('dragend', setBG);
+			document.addEventListener('dragleave', setBG);
+
+			// actual file input element
+			fileInput.addEventListener("change", handleFileSelection);
+
+			// url input
+			const urlForm = document.getElementById("url");
+			urlForm.addEventListener("submit", loadRemote);
+
+			// listener for iframe hack for url input
+			window.addEventListener('message', handleRemote);
+
+			// update button
+			const update = document.getElementById("update");
+			update.addEventListener("click", () => {
+				readFields();
+				updateFields();
+			});
+
+			// save JS button
+			const save = document.getElementById("save");
+			save.addEventListener("click", () => {
+				exportBlob("js");
+			});
+
+			// reset button
+			reset.addEventListener("click", resetFields);
+
+			// add listeners to all style controls
+			tools.forEach(
+				function(tool) {
+					tool.addEventListener("change", () => {updateStyle(tool)});
+				}
+			);
+
+			// apply theme checkbox
+			applyTheme.addEventListener("change", function() {
+				applyThemeFn(this.checked);
+			});
+
+			// save theme button
+			const saveCSS = document.getElementById("save-css");
+			saveCSS.addEventListener("click", () => {
+				exportBlob("css");
+			});
+
+			// check for url fragment to load immediately
+			loadParam();
+
+			// --- end init
+
+			// --- helper functions --- //
+
+			// https://stackoverflow.com/a/44134328
+			function hslToHex(h, s, l) {
+				l /= 100;
+				const a = s * Math.min(l, 1 - l) / 100;
+				const f = n => {
+					const k = (n + h / 30) % 12;
+					const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+					return Math.round(255 * color).toString(16).padStart(2, '0');	 // convert to Hex and prefix "0" if needed
+				};
+				return `#${f(0)}${f(8)}${f(4)}`;
+			}
+
+			// https://stackoverflow.com/a/62390801
+			function hexToHSL(hex) {
+				const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+				let r = parseInt(result[1], 16);
+				let g = parseInt(result[2], 16);
+				let b = parseInt(result[3], 16);
+
+				r /= 255, g /= 255, b /= 255;
+				let max = Math.max(r, g, b), min = Math.min(r, g, b);
+				let h, s, l = (max + min) / 2;
+
+				if (max == min){
+					h = s = 0; // achromatic
+				} else {
+					var d = max - min;
+					s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+					switch(max) {
+						case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+						case g: h = (b - r) / d + 2; break;
+						case b: h = (r - g) / d + 4; break;
+					}
+
+					h /= 6;
+				}
+
+				h = Math.round(h*360);
+				s = Math.round(s*100);
+				l = Math.round(l*100);
+
+				return { h, s, l };
+			}
+
+			function asCode() {
+				return "const wander = " + JSON.stringify(wander, null, "\t");
+			}
+
+			// toggle background color for drag and drop
+			function setBG(color) {
+				const html = document.getElementsByTagName('html')[0];
+				if (color === 'drag') {
+					html.style.backgroundColor = 'lightskyblue';
+				} else {
+					html.style.backgroundColor = '';
+				}
+			}
+
+			// display file/url import results
+			function showMessage(message, type) {
+				messageDisplay.textContent = message;
+				messageDisplay.style.color = type === "error" ? "firebrick" : "green";
+			}
+
+
+			// --- meaty functions --- //
+
+			// file input
+			// mostly copied from MDN
+			function handleFileSelection(event) {
+				const file = event.target.files[0];
+				fileContentDisplay.textContent = ""; // Clear previous file content
+				messageDisplay.textContent = ""; // Clear previous messages
+
+				// should we really bother with this? what if the mime is fucked and it looks like plaintext?
+				if (!file.type.match("application/x-javascript")) {
+					showMessage("Unsupported file type. Please select your wander.js file.", "error");
+					return;
+				}
+
+				// Read the file
+				const reader = new FileReader();
+				reader.onload = () => {
+					fileContentDisplay.textContent = reader.result;
+					try {
+						let wanderFile;
+						eval(`${reader.result.replace("const wander", "wanderFile")}`);
+						importConsole(wanderFile);
+						updateFields();
+						urlInput.value = "";
+						showMessage("Loaded console from file.");
+					} catch (err) {
+						showMessage(`Error parsing wander.js. Probably a missing comma or someting. (${err})`, "error");
+					}
+				};
+				reader.onerror = () => {
+					showMessage("Error reading the file. Please try again.", "error");
+				};
+				reader.readAsText(file);
+			}
+
+			// url input
+			function loadRemote(e) {
+				const url = e.srcElement[0].value;
+				let cleanUrl = url;
+				// lazy ass input cleanup should preserve relative paths and console in same directory
+				// only downside i can see is you need a ./ prefix if it's in a subfolder of the current dir
+				if (! (url.startsWith("http") || url.startsWith(".") || url.startsWith("wander.js")) ) {
+					cleanUrl = "https://" + cleanUrl;
+				}
+				const loader = document.getElementById('loader-iframe')
+				// stolen from susam
+				loader.srcdoc = `
+					<script src="${cleanUrl}"></scr` + `ipt>
+					<script>
+						try {
+							parent.postMessage({ wander: wander }, '*');
+						} catch (err) {
+							parent.postMessage({ err: err }, '*');
+						}
+					</scr` + 'ipt>'
+			}
+			// iframe hack for url input
+			function handleRemote(e) {
+				showMessage("");
+				if (typeof e.data.err !== "undefined") {
+					// the error will always be "wander is not defined" afaik, so no point showing it to the user
+					showMessage("Couldn't fetch console from URL.", "error");
+				} else {
+					const ext = e.data.wander;
+					importConsole(ext);
+					updateFields();
+					fileInput.value = "";
+					showMessage("Loaded console from URL.");
+				}
+			}
+
+			// load consle from url parameter, ie ?http://myurl.com
+			function loadParam() {
+				const param = window.location.search;
+				if (param[0] === '?' && param.length > 1) {
+					loadRemote({ srcElement: [{ value: param.slice(1) }] });
+				} else if (iframe.src.endsWith("index.html")) {
+					loadRemote({ srcElement: [{ value: "wander.js" }] });
+				}
+			}
+
+			// safe(r) imports from both url and file
+			function importConsole(c) {
+				if (typeof c.consoles === "undefined") { wander.consoles = []; }
+				else { wander.consoles = c.consoles; }
+
+				if (typeof c.pages === "undefined") { wander.pages = []; }
+				else { wander.pages = c.pages; }
+
+				if (typeof c.ignore === "undefined") { wander.ignore = []; }
+				else { wander.ignore = c.ignore; }
+
+				if (typeof c.styles === "undefined") { wander.styles = []; }
+				else { wander.styles = c.styles; }
+
+				if (typeof c.scripts === "undefined") { wander.scripts = []; }
+				else { wander.scripts = c.scripts; }
+			}
+
+			function exportBlob(filetype) {
+				let blobtext, filename;
+				if (filetype === "js") {
+					blobtext = asCode();
+					filename = "wander.js";
+				} else {
+					blobtext = css.join("\n").replaceAll("\t", "").replaceAll(/\n\n+/g, "\n").replace(/^\n/, "");
+					filename = styleName;
+				}
+				let blob = new Blob([ blobtext ], { type: "text/plain;charset=utf8" });
+				let a = document.createElement('a');
+				a.download = filename;
+				a.href = window.URL.createObjectURL(blob);
+				a.click();
+				if (a.remove) a.remove();
+			}
+
+			// update global wander var with <textarea> user input
+			function readFields() {
+				// filter removes blank lines (empty string is "falsy" in this accursed language)
+				wander.consoles = consoles.value.split("\n").filter(Boolean);
+				wander.pages = pages.value.split("\n").filter(Boolean);
+				wander.ignore = ignore.value.split("\n").filter(Boolean);
+				wander.styles = styles.value.split("\n").filter(Boolean);
+				wander.scripts = scripts.value.split("\n").filter(Boolean);
+			}
+
+			// replace page contents with contents of global wander var
+			function updateFields() {
+				consoles.value = wander.consoles.join("\n");
+				pages.value = wander.pages.join("\n");
+				ignore.value = wander.ignore.join("\n");
+				styles.value = wander.styles.join("\n");
+				scripts.value = wander.scripts.join("\n");
+				fileContentDisplay.textContent = asCode();
+			}
+
+			function resetFields() {
+				if (reset.value === "Reset") {
+					reset.value = "Clear everything?";
+				} else if (reset.value === "Clear everything?") {
+					reset.value = "Last chance. Are you sure?";
+				} else {
+					fileInput.value = "";
+					urlInput.value = "";
+					showMessage("");
+					wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
+					updateFields();
+					css = Array(7);
+					document.getElementById("bg-color").value = "#696";
+					document.getElementById("text-color").value = "#030";
+					document.getElementById("input-color").value = "#bdb";
+					document.getElementById("border-color").value = "#363";
+					document.getElementById("border-width").value = "2";
+					document.getElementById("border-style").value = "solid";
+					document.getElementById("font-family").value = "courier, monospace";
+					tools.forEach(
+						function(tool) {
+							updateStyle(tool);
+						}
+					);
+					applyTheme.checked = false;
+					reset.value = "Reset";
+				}
+			}
+
+			// theme builder
+			function updateStyle(tool) {
+				const id = tool.id;
+				const newValue = tool.value;
+				let style = document.createElement('style');
+				let styleStr;
+				switch (id) {
+					case "bg-color":
+						styleStr = `body { background: ${newValue}; }`;
+						css[0] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "text-color":
+						styleStr = `body, button, dialog, input { color: ${newValue}; }`;
+						css[1] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "input-color":
+						// automatically calculate hover/active/disabled
+						const newHSL = hexToHSL(newValue);
+						const h = newHSL.h;
+						const s = newHSL.s;
+						const l = newHSL.l;
+						let hover, active, disabled;
+						if (newHSL.l >= 50) {
+							// these attempt to mimic default style
+							hover = hslToHex(h, s, l * 0.88);
+							active = hslToHex(h, s, l * 0.8);
+							disabled = hslToHex(h, s, l * 1.1);
+						} else {
+							// "dark mode"
+			//				hover = hslToHex(h, s, l * 1.12);
+			//				active = hslToHex(h, s, l * 1.2);
+			//				disabled = hslToHex(h, s, l * 0.9);
+							// adjusted to be more pronounced
+							hover = hslToHex(h, s, l * 1.15);
+							active = hslToHex(h, s, l * 1.25);
+							disabled = hslToHex(h, s, l * 0.75);
+						}
+						styleStr = `
+							button, input, dialog, dialog details[open] { background: ${newValue}; }
+							button:hover { background: ${hover}; }
+							button:active { background: ${active}; }
+							button:disabled, button:disabled:hover, button:disabled:active, dialog { background: ${disabled}; }
+						`;
+						css[2] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "border-color":
+						styleStr = `button, input, dialog, #wander-iframe { border-color: ${newValue}; }`;
+						css[3] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "border-width":
+						const bigBorder = parseInt(newValue) + 3;
+						let smallBorder = newValue;
+						if (newValue < 0) {
+							smallBorder = 0;
+						}
+						styleStr = `
+							button, input { border-width: ${smallBorder}px; }
+							dialog, #wander-iframe { border-width: ${bigBorder}px; }
+						`;
+						css[4] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "border-style":
+						if (newValue === "outset") {
+							styleStr = `
+								button, dialog { border-style: outset; }
+								input, #wander-iframe { border-style: inset; }
+							`;
+						} else if (newValue === "inset") {
+							styleStr = `
+								button, dialog { border-style: inset; }
+								input, #wander-iframe { border-style: outset; }
+							`;
+						} else {
+							styleStr = `button, input, dialog, #wander-iframe { border-style: ${newValue}; }`;
+						}
+						css[5] = styleStr;
+						style.textContent = styleStr;
+						break;
+					case "font-family":
+						styleStr = `body, button, input { font-family: ${newValue}; }`;
+						css[6] = styleStr;
+						style.textContent = styleStr;
+						break;
+				}
+				iframe.contentDocument.head.appendChild(style);
+			}
+
+			// include/exclude custom CSS
+			function applyThemeFn(checked) {
+				let stylesheets = styles.value.split("\n");
+				const index = stylesheets.indexOf(styleName);
+				// missing; add
+				if (checked && index === -1) {
+					stylesheets.push(styleName);
+				}
+				// present; remove
+				else if (!checked && index !== -1) {
+					stylesheets.splice(index, 1);
+				}
+				styles.value = stylesheets.join("\n");
+				readFields();
+				updateFields();
+			}
+		};
+		//--></script>
+		<title>Wander Console Builder</title>
+
+	</head>
+	<body>
+		<h1>Wander Console Builder</h1>
+		<noscript>
+			<h2>WCB requires JavaScript. JavaScript is either disabled or not supported by your browser.</h2>
+		</noscript>
+		<details id="about">
+			<summary>About</summary>
+			<ul>
+				<li>Generates wander.js for a <a href="https://codeberg.org/susam/wander">Wander</a> console</li>
+				<li>Import existing wander.js or start from scratch</li>
+				<li>Enter one URL per line</li>
+				<li>Leave blank any sections you don't want to use</li>
+				<li>Save the results to your website alongside the <a href="https://codeberg.org/susam/wander/raw/branch/main/index.html">Wander HTML</a></li>
+				<li>Targets Wander version 0.6.0</li>
+				<li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a> &bull; <a href="https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb/">Source</a></li>
+			</ul>
+		</details>
+
+		<label for="file-input">Open
+			<details title="Load an existing Wander console. You can also drag-and-drop a file.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+		<div id="loaders">
+			<input type="file" id="file-input" name="file-input">
+			<form id="url" method="dialog">
+				<input type="text" id="url-input" name="url-input" pattern=".*wander\.js" placeholder="https://susam.net/wander/wander.js">
+				<input id="url-submit" type="submit" value="Load">
+			</form>
+		</div>
+		<p id="message"></p>
+
+		<label for="consoles">Consoles
+			<details title="Other Wander consoles that visitors can reach from your console.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+		<textarea cols="80" rows="8" id="consoles" placeholder="https://susam.net/wander/" spellcheck="false"></textarea>
+
+		<label for="pages">Pages
+			<details title="Websites and pages you recommend to the Wander community.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+		<textarea cols="80" rows="8" id="pages" placeholder="https://susam.net/jokes.html" spellcheck="false"></textarea>
+
+		<label for="ignore">Ignore
+			<details title="Websites and consoles to ignore. Your console will *never* load these.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+		<textarea cols="80" rows="8" id="ignore" placeholder="https://*.substack.com/" spellcheck="false"></textarea>
+
+		<label for="styles">Styles
+			<details title="Custom stylesheets to include. These are loaded after the default styles.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+
+		<textarea cols="80" rows="8" id="styles" placeholder="myCoolStyle.css" spellcheck="false"></textarea>
+
+		<details id="theme-builder">
+			<summary>Custom theme builder</summary>
+			<div id="toolbox">
+				<label for="bg-color">Background color</label>
+				<input class="style-tool" id="bg-color" name="bg-color" title="Background color" type="color" value="#696">
+
+				<label for="text-color">Text color</label>
+				<input class="style-tool" id="text-color" name="text-color" title="Text color" type="color" value="#030">
+
+				<label for="input-color">Input color</label>
+				<input class="style-tool" id="input-color" name="input-color" title="Input color" type="color" value="#bdb">
+
+				<label for="border-color">Border color</label>
+				<input class="style-tool" id="border-color" name="border-color" title="Border color" type="color" value="#363">
+
+				<label for="border-width">Border width</label>
+				<input class="style-tool" id="border-width" name="border-width" title="Border width" type="range" min="-3" max="5" value="2">
+
+				<label for="border-style">Border style</label>
+				<select class="style-tool" id="border-style" title="Border style">
+					<option value="solid" selected>Solid</option>
+					<option value="dashed">Dashed</option>
+					<option value="dotted">Dotted</option>
+					<option value="double">Double</option>
+					<option value="groove">Groove</option>
+					<option value="ridge">Ridge</option>
+					<option value="outset">Outset</option>
+					<option value="inset">Inset</option>
+				</select>
+
+				<label for="font-family">Font</label>
+				<select class="style-tool" id="font-family" title="Font">
+					<option value="courier, monospace" selected>Courier</option>
+					<option value="monospace, monospace">Monospace</option>
+					<option value="sans-serif">Sans-Serif</option>
+					<option value="serif">Serif</option>
+					<option value="cursive, sans-serif">Cursive</option>
+					<option value="fantasy, sans-serif">Fantasy</option>
+					<option value="system-ui, sans-serif">System UI</option>
+				</select>
+			</div>
+
+			<div id="ffx">
+				<i>Mobile Firefox's color picker is unusably awful. Sorry.</i>
+				<br>
+				<input id="ok" type="checkbox">
+				<label class="show" for="ok">It's not your fault!</label>
+			</div>
+
+			<div id="iframe-wrap">
+				<iframe id="iframe" loading="lazy" sandbox="allow-forms allow-modals allow-scripts" src="index.html"></iframe>
+			</div>
+
+			<div id="theme-export">
+				<div id="include">
+					<input id="apply-theme" type="checkbox">
+					<label class="show" for="apply-theme">Include theme in wander.js</label>
+				</div>
+				<input class="save" id="save-css" name="save-css" type="button" value="Save CSS">
+			</div>
+
+		</details>
+
+		<label for="scripts">Scripts
+			<details title="Custom scripts to include. These are loaded last.">
+				<summary>(?)</summary>
+			</details>
+		</label>
+		<textarea cols="80" rows="8" id="scripts" placeholder="myCoolScript.js" spellcheck="false"></textarea>
+
+		<input id="update" type="button" value="Update">
+
+		<span class="label">Results <input class="save" id="save" name="save" type="button" value="Save"></span>
+		<pre id="file-content"></pre>
+		<br><br><br><br><br>
+		<input id="reset" type="button" value="Reset">
+
+		<iframe id="loader-iframe" sandbox="allow-scripts"></iframe>
+	</body>
+</html>

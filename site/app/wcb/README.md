@@ -1,30 +1,28 @@
 # Wander Console Builder
 
+## About
+Wander Console Builder is a web application that makes it easier to create, customize, and update a [Wander](https://codeberg.org/susam/wander) console.
+
+You can try it at <https://pnppl.cc/app/wcb/>.
+
 **WCB does not attempt to be secure. It's hacky. It will `eval()` any file and `<script src>` any URL you give it. You have been warned.**
 
 
-## Tips
+## Install
 
-I hope WCB is mostly self-explanatory. Here are tips for more advanced, non-obvious aspects.
-
-
-### Parameters
-
-WCB will automatically load any URL or path passed as a parameter. It works identically to loading a URL with the box on the page. You can omit the protocol.
-
-For example, you can load my console by visiting <https://pnppl.cc/app/wcb?../wander/wander.js> or <https://pnppl.cc/app/wcb?pnppl.cc/app/wander/wander.js> or <https://pnppl.cc/app/wcb?https://pnppl.cc/app/wander/wander.js>.
-
-The nice thing about this is you can bookmark the URL for your console to easily update it.
+You can easily install WCB on your own site by saving [wcb.html](https://git.gay/pnppl/pnppl.cc/raw/branch/main/site/app/wcb/wcb.html) to your Wander directory. It will automatically load your console for editing by default. (You will still have to save the changes you make manually.)
 
 
-### Client-side
+## URL Parameters
 
-WCB runs entirely client-side. My host won't see what you're doing unless you pass a parameter, and you can download it or copy it to your website and it should work fine.
+WCB will automatically load any URL or path passed as a parameter using `?`. It works identically to loading a URL with the box on the page. You can omit the protocol.
 
-If you put WCB in the same directory as your Wander console you can use the theme builder on it. I'd like to make this simpler, but for now:
+For example, you can load my console by visiting <https://pnppl.cc/app/wcb?../wander/wander.js> (relative path) or <https://pnppl.cc/app/wcb?pnppl.cc/app/wander/wander.js> (URL without protocol) or <https://pnppl.cc/app/wcb?https://pnppl.cc/app/wander/wander.js> (full URL).
 
-1. Rename `index.html` to `wcb.html` so you don't overwrite Wander.
-2. Open `wcb.html`, search for `demo.html`, and change it to `index.html`. (`demo.html` is just the `index.html` that comes with Wander.)
-3. Copy `wcb.{css,html,js}` to your Wander directory. You can also copy `butterfly.ico` for the favicon.
+The nice thing about this is you can bookmark the URL for your console to easily update it without installing WCB on your site, or bookmark multiple consoles to edit with a single WCB install.
 
-It won't automatically load your console, just display a preview in the theme builder. For now you can attach the parameter `?wander.js` if you want to automatically load it in.
+
+## License
+Wander Console Builder is licensed [AGPLv3](LICENSE.md). It was made by pnppl.
+
+Wander is licensed [MIT](LICENSE_for_demo.html.md). It was made by Susam Pal. It is included in the WCB repo as `demo.html`.

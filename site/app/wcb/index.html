@@ -1,3 +1,8 @@
+<!--
+	Wander Console Builder for Wander 0.6.0
+	Source: https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb
+	License: AGPLv3
+-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,22 +10,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="referrer" content="no-referrer">
 		<meta name="theme-color" content="hotpink">
-		<link rel="alternate" href="/+/feed.rss" title="pnppl.cc RSS" type="application/rss+xml">
-		<link rel="icon" href="butterfly.ico">
-		<link rel="license" href="/app/AGPL-3.0.txt">
+		<link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBACAAEAAQCwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA////AA8cAAAUzgAAKTcAAFOLAACgygAAxxUAAKxkAABRhAAALioAABDKAAAJkgAAEyQAACpEAABQiAAAYxAAAD3gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+		<link rel="license" href="https://www.gnu.org/licenses/agpl-3.0.en.html">
+		<meta name="description" content="Javscript tool to simplify creating and editing a Wander console.">
 		<link rel="stylesheet" href="wcb.css">
-		<meta property="og:site_name" content="pnppl.cc">
-		<meta property="og:title" content="Wander Console Builder">
-		<meta property="og:description" content="Javscript tool to simplify creating a Wander console.">
-		<meta property="og:image" content="https://pnppl.cc/public/logo.gif">
-		<meta property="og:url" content="https://pnppl.cc/app/wcb/">
-		<meta property="og:type" content="website">
-		<meta name="description" content="Javscript tool to simplify creating a Wander console.">
-		<script src="wcb.js" defer></script>
+		<script src="wcb.js" async><!--
+		//--></script>
 		<title>Wander Console Builder | pnppl.cc</title>
+		<!--#include file="meta.ssi"-->
 	</head>
 	<body>
 		<h1>Wander Console Builder</h1>
+		<noscript>
+			<h2>WCB requires JavaScript. JavaScript is either disabled or not supported by your browser.</h2>
+		</noscript>
 		<details id="about">
 			<summary>About</summary>
 			<ul>
@@ -30,7 +33,7 @@
 				<li>Leave blank any sections you don't want to use</li>
 				<li>Save the results to your website alongside the <a href="https://codeberg.org/susam/wander/raw/branch/main/index.html">Wander HTML</a></li>
 				<li>Targets Wander version 0.6.0</li>
-				<li><a href="LICENSE.md">AGPLv3</a> &bull; <a href="https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb/">Source</a></li>
+				<li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a> &bull; <a href="https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/wcb/">Source</a></li>
 			</ul>
 		</details>
 
@@ -127,7 +130,7 @@
 			</div>
 
 			<div id="iframe-wrap">
-				<iframe id="iframe" loading="lazy" src="demo.html"></iframe>
+				<iframe id="iframe" loading="lazy" sandbox="allow-forms allow-modals allow-scripts" src="demo.html"></iframe>
 			</div>
 
 			<div id="theme-export">

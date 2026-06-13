@@ -1,3 +1,4 @@
+/* !start */
 /* --- global --- */
 html {
 	max-width: 80ch;
@@ -276,3 +277,4 @@ input#save-css {
 		display: none;
 	}
 }
+/* !end */
