@@ -237,7 +237,7 @@ window.onload = function() {
 		showMessage("");
 		// for reasons I can't fathom, a message is sometimes being fired on page load
 		// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching. can only reproduce locally
-		if (e.origin === "null") {
+		if (e.origin !== "null") {
 			return;
 		}
 		if (typeof e.data.err !== "undefined") {

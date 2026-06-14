@@ -92,10 +92,6 @@
 			border: 1px solid black;
 			box-sizing: border-box;
 		}
-		textarea#styles,
-		textarea#scripts {
-			height: 1.75em;
-		}
 		#file-content {
 			overflow: auto;
 		}
@@ -161,6 +157,7 @@
 			width: fit-content;
 			color: red;
 			background-color: white;
+			font-size: 0.9em;
 		}
 		input#reset[value="Last chance. Are you sure?"] {
 			color: white;
@@ -179,7 +176,6 @@
 			height: 50%;
 		}
 		body > label details {
-			cursor: help;
 			width: fit-content;
 			margin-left: auto;
 			font-size: 0.75em;
@@ -198,6 +194,7 @@
 			content: attr(title);
 		}
 		body > label summary {
+			cursor: help;
 			color: blue;
 			font-style: normal;
 			text-decoration: underline;
@@ -253,7 +250,6 @@
 			max-width: 30%;
 		}
 		input#save-css {
-			float: right;
 			width: fit-content;
 			margin: 0;
 			font-size: 1em;
@@ -568,13 +564,16 @@
 			// iframe hack for url input
 			function handleRemote(e) {
 				showMessage("");
+				// for reasons I can't fathom, a message is sometimes being fired on page load
+				// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching. can only reproduce locally
+				if (e.origin !== "null") {
+					return;
+				}
 				if (typeof e.data.err !== "undefined") {
 					// the error will always be "wander is not defined" afaik, so no point showing it to the user
 					showMessage("Couldn't fetch console from URL.", "error");
 				}
-				// for reasons I can't fathom, a message is sometimes being fired on page load
-				// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching
-				else if (e.origin === "null") {
+				else {
 					const ext = e.data.wander;
 					importConsole(ext);
 					updateFields();
