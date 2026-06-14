@@ -41,12 +41,12 @@ what they say (what I wish they'd say)
 - charger (AC adapter)
 - the cloud (a server)
 - CPU (computer)
+- download from my phone (copy from my phone)
 - inbox (message)
 - jack (plug or socket)
 - male, female, gender[^mf] (plug, socket, polarity)
 - plug (outlet)
 - power bank (battery)
-- upload (copy)
 - USB (flash drive, USB cable)
 
 
