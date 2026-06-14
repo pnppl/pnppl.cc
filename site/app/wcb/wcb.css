@@ -75,10 +75,6 @@ textarea,
 	border: 1px solid black;
 	box-sizing: border-box;
 }
-textarea#styles,
-textarea#scripts {
-	height: 1.75em;
-}
 #file-content {
 	overflow: auto;
 }
@@ -144,6 +140,7 @@ input#reset {
 	width: fit-content;
 	color: red;
 	background-color: white;
+	font-size: 0.9em;
 }
 input#reset[value="Last chance. Are you sure?"] {
 	color: white;
@@ -162,7 +159,6 @@ body > label:before {
 	height: 50%;
 }
 body > label details {
-	cursor: help;
 	width: fit-content;
 	margin-left: auto;
 	font-size: 0.75em;
@@ -181,6 +177,7 @@ body > label details:open:after {
 	content: attr(title);
 }
 body > label summary {
+	cursor: help;
 	color: blue;
 	font-style: normal;
 	text-decoration: underline;
@@ -236,7 +233,6 @@ details label.show {
 	max-width: 30%;
 }
 input#save-css {
-	float: right;
 	width: fit-content;
 	margin: 0;
 	font-size: 1em;

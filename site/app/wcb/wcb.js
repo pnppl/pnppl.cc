@@ -235,13 +235,16 @@ window.onload = function() {
 	// iframe hack for url input
 	function handleRemote(e) {
 		showMessage("");
+		// for reasons I can't fathom, a message is sometimes being fired on page load
+		// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching. can only reproduce locally
+		if (e.origin === "null") {
+			return;
+		}
 		if (typeof e.data.err !== "undefined") {
 			// the error will always be "wander is not defined" afaik, so no point showing it to the user
 			showMessage("Couldn't fetch console from URL.", "error");
 		}
-		// for reasons I can't fathom, a message is sometimes being fired on page load
-		// perhaps related to why refreshing with a parameter doesn't seem to work, you have to hit enter. something about caching
-		else if (e.origin === "null") {
+		else {
 			const ext = e.data.wander;
 			importConsole(ext);
 			updateFields();
