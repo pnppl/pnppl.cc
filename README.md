@@ -4,3 +4,5 @@ Combined repo for my personal website <https://pnppl.cc>.
 - `xlog/markdown/wikilink/` is from <https://github.com/abhinav/goldmark-wikilink> and is BSD-3 licensed.
 - `xlog/markdown/gemtext/` is from <https://git.sr.ht/~kota/goldmark-gemtext> and is GPLv3 licensed.
 - `site/` is by me. Code is AGPLv3 and the rest is CC BY-SA 4.0 unless otherwise specified.
+
+[![slopscore: 100 (S)](https://pnppl.cc/public/badges/slop.gif)](https://codeberg.org/polyphony/repo-slopscore)

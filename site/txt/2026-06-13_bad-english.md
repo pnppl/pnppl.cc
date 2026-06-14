@@ -9,6 +9,7 @@ what they say (what I wish they'd say)
 - ts (this, this shit, type shit)
 
 ## Confusion
+- 110%, 200%, 1000% (100%)
 - begs the question (raises the question)
 - defiantly, definately (definitely)
 - irregardless (regardless, irrespective)
