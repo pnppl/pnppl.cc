@@ -27,3 +27,16 @@
 	- we could listen and update on any change but it's all synchronous so it would lag like hell
 		- async probably isn't that hard. maybe that's all there is to it
 - figure out the oldest browser wander works with and make sure wcb works with it too
+	- ffx 4 is too old
+	- wander works with ffx 131 (oct. '24. appimage). wcb mostly works but
+		- theme color controls init to black
+			- no idea what this is about but i was gonna overhaul that anyway
+		- (?) can't be expanded (tooltip works though)
+			- think this is because i got cute with css to save some typing
+		- same with 122 (nov '23)
+		- same with 116 (jul '23)
+	- nightly 109 (dec '22). wcb seems to work fine but wander doesn't load anything
+		- same story with 111
+		- same with 115
+		- "URL.canParse not a function" is the problem. mdn says 115 supports it though
+	- so ffx 115 or 116 is our target minimum. see if we can fix the bugs. nbd if not. kind of alarming that we only get 3 years of compat but thems the brakes i guess

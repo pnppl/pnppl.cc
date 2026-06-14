@@ -9,7 +9,9 @@ echo "const wander = {
 		'https://exurd.neocities.org/wander/',
 	],
 	// More info and alternate browsing mode at https://pnppl.cc/app/meander
-	pages: [" > ../wander/wander.js &&
+	pages: [
+		'https://pnppl.cc/app/wcb/',
+" > ../wander/wander.js &&
 for line in (cat "$in" | tail -n +3)
 	if test (string match -r '^\#' "$line")
 		set line (string replace -a '#' '' "$line" | string replace -r ' $' '')
@@ -80,7 +82,7 @@ echo "	],
 	styles: [
 		// win9x style; display 'Open' on mobile
 		'wander.css',
-	]
+	],
 	scripts: [
 		// move 'About' into 'Console' menu
 		'move-about.js',

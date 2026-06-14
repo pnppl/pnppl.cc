@@ -7,6 +7,8 @@ const wander = {
 	],
 	// More info and alternate browsing mode at https://pnppl.cc/app/meander
 	pages: [
+		'https://pnppl.cc/app/wcb/',
+
 		// SSL
 		// Nonfiction
 		'https://100r.co/site/tools_ecosystem.html',
