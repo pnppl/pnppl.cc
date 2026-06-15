@@ -19,6 +19,7 @@ site/deathnote/
 site/fs-ir/
 site/mirrors/
 site/pnppl/
+site/prairieland/index.html
 site/public/
 site/sitemap/
 site/slashpages/

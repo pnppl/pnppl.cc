@@ -54,7 +54,7 @@
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|./war-in-the-streets]]&nbsp;[^war]
 	- [[screen|./war-in-the-streets/war-in-the-streets.pdf]] · [[print|./war-in-the-streets/war-in-the-streets_letter-print.pdf]]
 
-- [[We Don't Need "Safety" — We Need to Escalate! (2024)|we-dont-need-safety]] [^safe]
+- [[We Don't Need "Safety" — We Need to Escalate! (2024)|./we-dont-need-safety]]&nbsp;[^safe]
 	- send me a PDF
 
 - [[Why Riot? (Phillip Neel, 2014)|./why-riot]]&nbsp;[^riot]
