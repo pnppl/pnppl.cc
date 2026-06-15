@@ -14,6 +14,7 @@ https://drewdevault.com/2025/09/24/2025-09-24-Cloudflare-and-fascists.html
 https://ellie.clifford.lol/blog/0023-the-sixth-of-may/
 https://freethoughtblogs.com/nataliereed/2012/04/17/the-null-hypothecis/
 https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/
+https://haters.noblogs.org/zines/
 https://j3s.sh/thought/blogs-rot-wikis-wait.html
 https://kevinboone.me/web-adjacent.html
 https://maia.crimew.gay/posts/the-emails/

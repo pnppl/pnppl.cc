@@ -917,14 +917,16 @@ a.autolink.glossary {
 .view a[href^="http"]:after,
 .view a[href^="//"]:after,
 .view a[href^="mailto:"]:after,
-.view a[href^="magnet:"]:after {
+.view a[href^="magnet:"]:after,
+.view a[href$="pdf"]:after {
 	font-size: 0.6em;
 	margin-left: 0.4em;
 	position: relative;
 	bottom: 0.1em;
 }
 .view a[href^="http"]:after,
-.view a[href^="//"]:after {
+.view a[href^="//"]:after,
+.view a[href$="pdf"]:after {
 	content: "%";
 	font-weight: 900;
 }

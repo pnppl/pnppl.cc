@@ -40,3 +40,4 @@
 		- same with 115
 		- "URL.canParse not a function" is the problem. mdn says 115 supports it though
 	- so ffx 115 or 116 is our target minimum. see if we can fix the bugs. nbd if not. kind of alarming that we only get 3 years of compat but thems the brakes i guess
+- add white-space:nowrap to textareas or do something to make wrapped links more easily distinguished
