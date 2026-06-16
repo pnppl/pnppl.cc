@@ -39,7 +39,7 @@
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
 	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_letter-print.pdf]]
 
-- [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne)|./our-enemies-in-yellow]]&nbsp;[^yel]
+- [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|./our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_letter-print.pdf]]
 
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
