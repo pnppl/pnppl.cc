@@ -120,7 +120,7 @@ ANARCHY MEANS ATTACK**
 
 [^now]:  [[ZLO|https://zinelibrary.org/now.html]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]]
 
-[^yel]:  [[haters|https://haters.noblogs.org/zines/#:~:text=our enemies in yellow]]
+[^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]]
 
 [^666]:  [[haters|https://haters.noblogs.org/zines/#:~:text=the satanic death cult is real]] · [[TAL|https://theanarchistlibrary.org/library/sophie-lewis-the-satanic-death-cult-is-real]] · [[Commune|https://communemag.com/the-satanic-death-cult-is-real/]]
 
