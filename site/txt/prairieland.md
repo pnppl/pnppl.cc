@@ -7,7 +7,7 @@
 	- [[screen|./against-prisons/against-prisons.pdf]] · [[print|./against-prisons/against-prisons_letter-print.pdf]]
 
 - [[Another Critique of Insurrectionalism (2014)|./another-critique-of-insurrectionalism]]&nbsp;[^crit]
-	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism/another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_letter-print.pdf]]
+	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_letter-print.pdf]]
 
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_letter-print.pdf]]
