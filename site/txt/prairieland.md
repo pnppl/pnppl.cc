@@ -132,4 +132,4 @@ ANARCHY MEANS ATTACK**
 
 [^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]]
 
-[^riot]: [[Oplopanax|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/]] · [[Seattle Free Press|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/] · [[ZLO|https://zinelibrary.org/why-riot.html]]
+[^riot]: [[Oplopanax|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/]] · [[Ultra-Com|https://web.archive.org/web/20140515013650/http://www.ultra-com.org/project/why-riot/] · [[ZLO|https://zinelibrary.org/why-riot.html]]
