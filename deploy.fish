@@ -31,6 +31,7 @@ git add *.* \
 	site/img/ \
 	site/app/ \
 	site/vid/ \
+	site/prairieland/ \
 	site/*.txt \
 	site/.gb.txt \
 	site/favicon.ico &&
