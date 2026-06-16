@@ -83,9 +83,9 @@ The defendants' participation in the Emma Goldman Book Club was discussed quite 
 
 ## Process
 
-For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy. HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they cooperate with dark mode.
+For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
-When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage or by converting the PDF with `pdftohtml`. Results from the latter are not great but should be legible.
+HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they cooperate cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage, building it from scratch, or converting the PDF with `pdftohtml`. Results from the latter (currently only _It's Vacant, Take It!_) are not great but should be legible.
 
 I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults were bad and I didn't feel like messing with LaTeX, so that one doesn't have a PDF. If you have one, or know of other zines I should add, email me.
 
