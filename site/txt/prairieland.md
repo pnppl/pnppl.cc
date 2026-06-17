@@ -1,5 +1,5 @@
 # Prairieland Zines
-#forbidden-knowledge
+#forbidden-knowledge #politics #project 2026-06-15
 
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]]**
 

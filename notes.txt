@@ -132,7 +132,7 @@ todo:
 - 'original content please steal' / 'steal this site!' badge
 - sort See Also by number of tags in common
 - refactor the templates. the whole point of them is not having to copy-paste, and yet...
-
+- prairie - add markdown versions
 
 low priority/done:
 - should get rid of all the fontawesome/icon stuff
