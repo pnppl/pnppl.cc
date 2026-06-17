@@ -179,7 +179,7 @@ const wander = {
 		'wander.css',
 	],
 	scripts: [
-		// move 'About' into 'Console' menu
-		'move-about.js',
+		// move 'About' into 'Console' menu, add button advertising Wander Console Builder
+		'modify-menu.js',
 	]
 }
