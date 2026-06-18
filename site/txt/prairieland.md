@@ -45,7 +45,7 @@
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
 	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_letter-print.pdf]]
 
-- [[To Change Everything (CrimethInc)|./to-change-everything]]&nbsp;[^tce]
+- [[To Change Everything (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
 	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_letter-print.pdf]]
 
 - [[Towards the Queerest Insurrection (Mary Nardini gang, 2014)|./towards-the-queerest-insurrection]]&nbsp;[^twrd]
