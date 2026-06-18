@@ -54,7 +54,7 @@
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|./war-in-the-streets]]&nbsp;[^war]
 	- [[screen|./war-in-the-streets/war-in-the-streets.pdf]] · [[print|./war-in-the-streets/war-in-the-streets_letter-print.pdf]]
 
-- [[We Don't Need "Safety" — We Need to Escalate! (2024)|./we-dont-need-safety]]&nbsp;[^safe]
+- [[We Don't Need "Safety" — We Need to Escalate! (Fire Ant Movement Defense, 2024)|./we-dont-need-safety]]&nbsp;[^safe]
 	- send me a PDF
 
 - [[Why Riot? (Phillip Neel, 2014)|./why-riot]]&nbsp;[^riot]
@@ -85,7 +85,7 @@ The defendants' participation in the Emma Goldman Book Club was discussed quite 
 
 For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
-HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and ended up rebuilding them completely (_De-Arrest Primer_, _It's Vacant, Take It!_)
+HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and started rebuilding them completely. I've finished manually re-creating _De-Arrest Primer_ and _It's Vacant, Take It!_; _War in the Streets_ is still pdftohtml output.
 
 I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults were bad and I didn't feel like messing with LaTeX, so that one doesn't have a PDF. If you have one, or know of other zines I should add, email me.
 
