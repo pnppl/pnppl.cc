@@ -330,6 +330,26 @@ window.onload = function() {
 		wander.scripts = scripts.value.split("\n").filter(Boolean);
 	}
 
+	// intercept link clicks and direct them to the theme iframe
+	function linkHandler(e) {
+		e.preventDefault();
+		document.getElementById("theme-builder").setAttribute("open", "");
+		iframe.contentDocument.getElementById("url-input").value = e.originalTarget.href;
+		iframe.contentDocument.getElementById("go-button").click();
+		window.location.href = "#theme-builder";
+	}
+
+	function linkify(key, value) {
+		let newLinks = new Array();
+		if (key !== "pages") {
+			return value;
+		}
+		for (const link in value) {
+			newLinks.push(`<a href=${value[link]}>${value[link]}</a>`);
+		}
+		return newLinks;
+	}
+
 	// replace page contents with contents of global wander var
 	function updateFields() {
 		consoles.value = wander.consoles.join("\n");
@@ -337,7 +357,9 @@ window.onload = function() {
 		ignore.value = wander.ignore.join("\n");
 		styles.value = wander.styles.join("\n");
 		scripts.value = wander.scripts.join("\n");
-		fileContentDisplay.textContent = asCode();
+//		fileContentDisplay.textContent = asCode();
+		fileContentDisplay.innerHTML = "const wander = " + JSON.stringify(wander, linkify, "\t");
+		document.querySelectorAll("#file-content a").forEach((link) => link.addEventListener("click", linkHandler));
 	}
 
 	function resetFields() {

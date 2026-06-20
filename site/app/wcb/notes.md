@@ -1,43 +1,24 @@
-- is there some way we can check the headers automatically or make it easier for users to check manually so people don't add links that can't be framed?
-	- this is apparently difficult even for technically competent people, and i want this to be accessible to people who aren't
-	- after beating my head against this before i don't think it can be done without setting up something server side
-		- could try to set a service up on tilde.team
-		- could add a "check framing" mode that goes through tries to load each one in an iframe and user hits yes or no
-			- make links clickable
-			- reuse color test iframe
+- add a "check framing" mode that goes through tries to load each page and user hits yes or no
 - ? add way to add comments to console entries from within wcb
 	- getting them from imports might be tricky
 		- can we fetch the source text from URLs like with files?
 		- if we only handle line comments parsing should be easy
 - figure out accessibility
-	- should we mess with the tab order?
-- we could use the message passing thing to send the current style values to the parent
-	- the theme editor settings would match the preview on load when you've already customized your css
-	- no need to manually define defaults in the script
-	- the editor is so basic though that it's hard to imagine you'd really want to use it if you already altered the css
-		- should we make it more "advanced"? how to do without cluttering UI?
-		- should we have separate border controls for input and frame? eliminatae the width ratio?
-		- how about a few presets?
-			- 9x
-			- rainbows
-			- amoled
-		- dark mode media queries?
+- match theme editor defaults to loaded console (get from iframe.contentDocument)
+- theme presets
+	- 9x
+	- rainbows
+	- amoled
+	- dark mode media queries?
 - we could make the URL input accept links that don't end in wander.js, then load the index into the iframe at the same time
 - remove update button and make updates automatic
 	- we could listen and update on any change but it's all synchronous so it would lag like hell
 		- async probably isn't that hard. maybe that's all there is to it
-- figure out the oldest browser wander works with and make sure wcb works with it too
-	- ffx 4 is too old
+- ffx 115 is our target minimum
 	- wander works with ffx 131 (oct. '24. appimage). wcb mostly works but
-		- theme color controls init to black
-			- no idea what this is about but i was gonna overhaul that anyway
 		- (?) can't be expanded (tooltip works though)
 			- think this is because i got cute with css to save some typing
-		- same with 122 (nov '23)
-		- same with 116 (jul '23)
-	- nightly 109 (dec '22). wcb seems to work fine but wander doesn't load anything
-		- same story with 111
-		- same with 115
-		- "URL.canParse not a function" is the problem. mdn says 115 supports it though
-	- so ffx 115 or 116 is our target minimum. see if we can fix the bugs. nbd if not. kind of alarming that we only get 3 years of compat but thems the brakes i guess
+		- same back to 115
+	- ffx 114 and prior - wcb works but not wander
+		- "URL.canParse not a function" is the problem for wander
 - add white-space:nowrap to textareas or do something to make wrapped links more easily distinguished
