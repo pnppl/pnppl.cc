@@ -1239,7 +1239,7 @@ body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); 
 .le + .is-hidden,
 .times + .is-hidden {
 	display: inline;
-	font-size: 0;
+	font-size: 0 !important;
 }
 
 
