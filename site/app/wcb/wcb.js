@@ -352,10 +352,10 @@ window.onload = function() {
 			wander = { consoles: [], pages: [], ignore: [], styles: [], scripts: [] };
 			updateFields();
 			css = Array(7);
-			document.getElementById("bg-color").value = "#696";
-			document.getElementById("text-color").value = "#030";
-			document.getElementById("input-color").value = "#bdb";
-			document.getElementById("border-color").value = "#363";
+			document.getElementById("bg-color").value = "#669966";
+			document.getElementById("text-color").value = "#003300";
+			document.getElementById("input-color").value = "#bbddbb";
+			document.getElementById("border-color").value = "#336633";
 			document.getElementById("border-width").value = "2";
 			document.getElementById("border-style").value = "solid";
 			document.getElementById("font-family").value = "courier, monospace";
