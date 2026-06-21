@@ -50,7 +50,7 @@ Still, it's compelling. I didn't get a bunch of horrible chitinous makeouts, but
 >
 > “You’ll have to show me all the places I can hurt you,” I said, and pulled harder.
 
-That part made me kick my feet and make an undignified noise. Tragically it doesn't go on for very long, but their weird chemistry does. He's always nibbling her hand with his horrible insect mouth while they plot their dastardly schemes together, and after they fuck she has to bandage up all her injuries. It's so romantic! If only he weren't such a piece of shit.
+That part made me kick my feet and make an undignified noise. Tragically it doesn't go on for very long, but their weird chemistry does. He's always nibbling her hand with his horrible insect mouth while they plot their dastardly schemes together, and after they fuck he has to bandage up all her injuries. It's so romantic! If only he weren't such a piece of shit.
 
 (Tangential: we know Leviathan walks around naked or nearly naked. Does he have genitals? A prehensile retractable penis, perhaps? It sounds to me like he doesn't, and for some reason I really like that, like it's extra queer.)
 
