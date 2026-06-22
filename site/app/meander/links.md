@@ -9,6 +9,7 @@ https://aria.dog/barks/every-platform-is-hitler/
 https://blog.polly.computer/untuck_NOW_queen/
 https://c4ss.org/content/61050
 https://collapseos.org/why.html
+https://daringfireball.net/2026/05/what_is_a_dickover
 https://dmitry.gr/?r=05.Projects&proj=27.%20rePalm
 https://drewdevault.com/2025/09/24/2025-09-24-Cloudflare-and-fascists.html
 https://ellie.clifford.lol/blog/0023-the-sixth-of-may/

@@ -1,9 +1,9 @@
 const wander = {
+	// Prefer consoles with: links to posts, not site root; non-techy links; few neighbors; up-to-date Wander version
 	consoles: [
 		'https://antonio.is/wander/',
-		'https://douglascuthbertson.com/wander/',
-		'https://heckmeck.de/wander/',
 		'https://exurd.neocities.org/wander/',
+		'https://heckmeck.de/wander/',
 	],
 	// More info and alternate browsing mode at https://pnppl.cc/app/meander
 	pages: [
@@ -18,6 +18,7 @@ const wander = {
 		'https://blog.polly.computer/untuck_NOW_queen/',
 		'https://c4ss.org/content/61050',
 		'https://collapseos.org/why.html',
+		'https://daringfireball.net/2026/05/what_is_a_dickover',
 		'https://dmitry.gr/?r=05.Projects&proj=27.%20rePalm',
 		'https://drewdevault.com/2025/09/24/2025-09-24-Cloudflare-and-fascists.html',
 		'https://ellie.clifford.lol/blog/0023-the-sixth-of-may/',
@@ -121,7 +122,7 @@ const wander = {
 		'https://xn--gckvb8fzb.com/',
 	],
 	ignore: [
-		// rationalists, racists, fascists, transphobes
+		// Rationalists, racists, fascists, transphobes
 		'https://*.astralcodexten.com/',
 		'https://dhh.dk/',
 		'https://gwern.net/',
@@ -132,19 +133,21 @@ const wander = {
 		'https://xahlee.org/',
 		'https://*.yudkowsky.net/',
 
-		// garbage silos
+		// Garbage silos
 		'https://medium.com/',
 		'https://*.substack.com/',
 
-		// blocked by http headers
-		'https://annas-archive.gl/', // the best site in the universe
-		'https://*.bearblog.dev/',
+		// Blocked by HTTP headers, etc.
+		// the best site in the universe
+		'https://annas-archive.gl/',
 		'https://codeberg.org/',
 		'https://danielmiessler.com/',
+		// i love https://dbushell.com/2026/01/09/death-to-scroll-fade/
 		'https://dbushell.com/',
 		'https://*.geek.nz/',
 		'https://hyperdoc.khinsen.net/',
 		'https://maggieappleton.com',
+		// fantastic games
 		'https://neal.fun/',
 		'https://*.otherstrangeness.com',
 		'https://thesweetbits.com/',
@@ -157,22 +160,27 @@ const wander = {
 		'https://stratechery.com/',
 		'https://*.ycombinator.com',
 
-		// webgl
+		// Non-English language
+		'https://www.64er-magazin.de/',
+
+		// No SSL
+		'https://prole.info/',
+
+		// WebGL
 		'https://eightyeightthirty.one/',
 
-		// I'm sure she's great but that banner drives me up the fucking wall
+		// Misc.
+		// i'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',
-
 		// paywalled; zealot
 		'https://www.wheresyoured.at/',
 
 		// Consoles
+		// capitalist/HN shit
+		'https://www.davidtran.me/wander/',
+		'https://www.heyhomepage.com/wander/',
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
-		// capitalist slop
-		'https://www.davidtran.me/wander/',
-		// HN shit
-		'https://www.heyhomepage.com/wander/',
 	],
 	styles: [
 		// win9x style; display 'Open' on mobile
