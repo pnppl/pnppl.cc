@@ -41,9 +41,6 @@ https://*.ycombinator.com
 ## Non-English language
 https://www.64er-magazin.de/
 
-## No SSL
-https://prole.info/
-
 ## WebGL
 https://eightyeightthirty.one/
 

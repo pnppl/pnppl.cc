@@ -42,8 +42,5 @@ http://supercommunity.e-flux.com/texts/the-great-silence/
 http://wol.fm/blog/utopian-scholastic.html
 
 ## No SSL ##
-### Nonfiction
-http://prole.info/
-
 ### Misc. resource
 http://fileformats.archiveteam.org/

@@ -7,7 +7,7 @@ Rewatching Death Note in 2026 — nearly 20 years after it was released — make
 A bit later it got imported and became rather popular, which made me feel cool and ahead of the curve. This was still fairly early days for anime in the West; just knowing how to watch fansubs was 1337. Elitism is the theme that really stands out to me about this show and my personality at the time (and nerd culture in general). I think part of Death Note's appeal was that nerds really believed, like Light, that they were in some way the elect, like knowing how to use IRC made them superior beings who should be in charge of the world. This delusional arrogance is called out by the show right away in Episode 1:
 > **Light:** [*details his plans to execute everyone bad*] ... I would create a new world of earnest, kind humans.
 > **Ryuuk[^sp]:** Then you'd be the only fucked-up person left.
-> **Light:** Huh? What are you saying? Ryuuk, I'm probably the best, most dilligent honors student in Japan.
+> **Light:** Huh? What are you saying? Ryuuk, I'm probably the best, most diligent honors student in Japan.
 > **Ryuuk:** ... O_O ...
 
 Looking at it from this angle is retrospectively chilling. It was nerds who cut their teeth on places like 4chan talking about stuff like Death Note who ended up playing a substantial role in the creation of fascism as we know it. Whenever they could, they seized power for themselves; they now run companies with more money than entire countries. They are no less delusional in their arrogance than Light, and far more ambitious when it comes to mass murder.

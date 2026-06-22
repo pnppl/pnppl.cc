@@ -19,6 +19,7 @@ input {
 }
 body,
 button,
+button:active,
 button:disabled,
 button:focus,
 button:hover,

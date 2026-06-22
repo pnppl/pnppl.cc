@@ -10,7 +10,7 @@ The other people your website benefits are largely unknowable. What they would h
 
 Given all this, you might as well just create according to your own preferences and make your website attractive to people like yourself.
 
-There is an altrustic aspect, though. Being a good Kantian means not spying on or advertising to your visitors. It means making it accessible, since you would still want to use a website even if you developed a new disability, moved to a different part of the world with worse infrastructure, became impoverished and limited to old hardware, or for some other reason began interacting with the internet in an unusual way.
+There is an altruistic aspect, though. Being a good Kantian means not spying on or advertising to your visitors. It means making it accessible, since you would still want to use a website even if you developed a new disability, moved to a different part of the world with worse infrastructure, became impoverished and limited to old hardware, or for some other reason began interacting with the internet in an unusual way.
 
 The internet kind of sucks. A personal website is an opportunity to be the change you want to see in the world.
 
