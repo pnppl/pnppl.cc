@@ -95,7 +95,7 @@ I'd like to extend my heartfelt gratitude to the following people who made pnppl
 - [[Felix Hanau|https://github.com/fhanau]] for creating [[Efficient Compression Tool|https://github.com/fhanau/Efficient-Compression-Tool]]
 - Everyone else who contributed to the above free and open-source projects and their dependencies
 - [[besties collective|https://besties.house/]] for providing gratis source code hosting and version control at [[git.gay|https://git.gay/]]
-- [[Web 1.0 Hosting|//web1.0hosting.net/]] for providing gratis retro-compatible webhosting and email
+- [[Web 1.0 Hosting|http://web1.0hosting.net/]] for providing gratis retro-compatible webhosting and email
 
 I'm also immensely grateful to the people behind the following software instrumental to making this site and maintaining my thin sliver of sanity:
 - [[Debian|https://www.debian.org/]] operating system

@@ -164,7 +164,7 @@ There is no attempt to be exhaustive here, just list favs.
 - "[[Beyond Lies the Wub|https://gutenberg.org/ebooks/28554]]" by Philip K. Dick
 - "[[Offloaders|https://paste.rs/78KrD.md]]" by Leah Cypess
 - "[[The Secret Life of Bots|https://clarkesworldmagazine.com/palmer_09_17/]]" by Suzanne Palmer
-- "[[They're Made Out of Meat|//www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
+- "[[They're Made Out of Meat|http://www.terrybisson.com/theyre-made-out-of-meat-2/]]" by Terry Bisson
 - The Illuminatus! Trilogy by Roberts Shea and Anton Wilson
 	- Canonical Discordian text. Disorienting and delightful.
 - Murderbot series by Martha Wells
