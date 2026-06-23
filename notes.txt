@@ -87,7 +87,7 @@ todo:
 		- this still doesn't really work for eg mosaic, offpunk. i guess it's relatively rare so maybe just find-replace \t -> 4x nbsp
 			- maybe a preprocessor would help. the bare md files will still be fucked though
 	- apparently this also means i can't start a list indented. goddammit
-- hashtag sorting is odd, look into that
+- ! hashtag sorting is odd, look into that
 - ! stop dicking around with the software and post your shit up there
 	- it isn't much of a commonplace right now, need to put more informative/reference stuff and Weird Lists
 	- also put more fiction up
@@ -133,6 +133,8 @@ todo:
 - sort See Also by number of tags in common
 - refactor the templates. the whole point of them is not having to copy-paste, and yet...
 - prairie - add markdown versions
+- fix glossary so I don't have to resort to the ugly hack used in the def for gender-described
+
 
 low priority/done:
 - should get rid of all the fontawesome/icon stuff
