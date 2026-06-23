@@ -30,4 +30,11 @@ Disallow: /
 User-agent: PiplBot
 Disallow: /
 
+# don't index thousands of auto-generated functional pages
+
+User-agent: *
+Disallow: /app/meander/.p/*
+Disallow: /app/nagi/.ssl/*
+Disallow: /app/nagi/.http/*
+
 Sitemap: https://pnppl.cc/sitemap.xml
