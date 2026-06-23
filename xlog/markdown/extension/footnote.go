@@ -316,7 +316,7 @@ func NewFootnoteConfig() FootnoteConfig {
 		BacklinkTitle: []byte("[back to reference]"),
 		LinkClass:     []byte("footnote-ref"),
 		BacklinkClass: []byte("footnote-backref"),
-		BacklinkHTML:  []byte("<-|"),
+		BacklinkHTML:  []byte("&lt;-|"),
 	}
 }
 
