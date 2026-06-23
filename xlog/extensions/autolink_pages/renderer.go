@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"slices"
 	"strings"
+	"regexp"
 	"github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	"github.com/emad-elsaid/xlog/markdown/renderer"
@@ -32,12 +33,19 @@ func render(w util.BufWriter, source []byte, node ast.Node, entering bool) (ast.
 				lines := strings.Split(string(parent.Content()), "\n")
 				for _, line := range lines {
 					if len(line) > 0 {
-						if line[0] != byte('#') {
-							tooltip = tooltip + string(line) + " "
+						// bail out when we hit a hashtag or footnote (or heading)
+						if strings.HasPrefix(line, "#") || strings.HasPrefix(line, `[^`) {
+							break
 						}
+						tooltip = tooltip + string(line) + " "
 					}
 				}
-//				tooltip = []byte(parent.Content())
+				// delete [^...]
+				footnoterefRE := regexp.MustCompile(`\[\^([^]]+)\]`)
+				tooltip = footnoterefRE.ReplaceAllString(tooltip, "")
+				// [[a|...]] -> a
+				linkRE := regexp.MustCompile(`\[\[([^|]+)\|[^]]+\]\]`)
+				tooltip = linkRE.ReplaceAllString(tooltip, "$1")
 			}
 		}
 		if len(tooltip) == 0 {

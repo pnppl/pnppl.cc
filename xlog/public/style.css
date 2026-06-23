@@ -232,9 +232,9 @@ dt {
 	font-weight: bold;
 	font-size: 105%;
 }
-dt:after {
-	content: ":";
-}
+/*dt:after { */
+/*	content: ":"; */
+/*} */
 /* dd { */
 /* 	font-style: italic; */
 /* } */

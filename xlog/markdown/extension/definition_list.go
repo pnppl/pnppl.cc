@@ -230,7 +230,7 @@ func (r *DefinitionListHTMLRenderer) renderDefinitionTerm(
 			_, _ = w.WriteString("<dt>")
 		}
 	} else {
-		_, _ = w.WriteString("</dt>\n")
+		_, _ = w.WriteString(":</dt>\n")
 	}
 	return gast.WalkContinue, nil
 }
