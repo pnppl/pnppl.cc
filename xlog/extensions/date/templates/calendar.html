@@ -149,7 +149,7 @@ table.calendar td a:focus-visible {
 				{{- end -}}
 
 				{{ if .Pages -}}
-				{{ printf "<style><!--</style>" | raw }}
+				{{ printf "<style><!-- /* pre-CSS hide... */ </style>" | raw }}
 				<aside class="menu">
 					<div class="menu-list">
 						{{- $date := printf "%04d-%02d-%02d" .Date.Year .Date.Month .Date.Day }}
@@ -167,7 +167,7 @@ table.calendar td a:focus-visible {
 						{{- end }}
 					</div>
 				</aside>
-				{{ printf "<!---->" | raw }}
+				{{ printf "<!-- ...pre-CSS hide -->" | raw }}
 				{{- end -}}
 				{{- else -}}
 					&nbsp;&nbsp;
