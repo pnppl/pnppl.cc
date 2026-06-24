@@ -39,14 +39,14 @@ git commit -m "$msg" &&
 git push &&
 
 pagefind --site "site/" --output-subdir ".pagefind/" --root-selector "#main" --exclude-selectors "aside, time, .button, .buttons, .menu, .excerpt, #backlinks, #badge, #email, #footnotes, #see-also" --include-characters "#" --glob "*/*.{html}" --force-language "en" &&
-zip -r -FS site/txt/!txt.zip site/txt/ -i \*.md &&
-zip -r -FS site/img/1bitday/!1bitday.zip site/img/1bitday/ -i \*.gif
+zip -rq -FS site/txt/!txt.zip site/txt/ -i \*.md &&
+zip -rq -FS site/img/1bitday/!1bitday.zip site/img/1bitday/ -i \*.gif
 set imagetypes '*.gif' '*.jpg' '*.jpeg' '*.png'
-zip -r -FS -0 site/img/comics/!comics.zip site/img/comics/ -i $imagetypes  &&
-zip -r -FS -0 site/img/photos/!photos.zip site/img/photos/ -i $imagetypes &&
+zip -rq -FS -0 site/img/comics/!comics.zip site/img/comics/ -i $imagetypes  &&
+zip -rq -FS -0 site/img/photos/!photos.zip site/img/photos/ -i $imagetypes &&
 fish html.fish &&
 for zip in site/**/*.zip
-	zip $zip readme.txt
+	zip -q $zip readme.txt
 end &&
 fish epub/epub.fish &&
 # optimize
