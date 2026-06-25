@@ -1,7 +1,7 @@
 # Prairieland Zines
 #forbidden-knowledge #politics #project 2026-06-15
 
-**Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]]**
+**Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
 - [[Against Prisons (Catherine Baker, 1996)|./against-prisons]]&nbsp;[^pris]
 	- [[screen|./against-prisons/against-prisons.pdf]] · [[print|./against-prisons/against-prisons_letter-print.pdf]]
