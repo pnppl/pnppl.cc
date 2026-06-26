@@ -33,12 +33,12 @@ a.excerpt-more {
 	margin-left: 1ch;
 }
 --></style>
-Perpetually under construction. Pardon our dust.
+Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, try [[#meta|/+/tag/meta]].
 
 You might like to...
-- read [[the about page|/about]]
-- add a name to my [[Death Note|/deathnote/]]
-- [[Meander|/app/meander/]] through sites I recommend or explore [[nagi miniweb|/app/nagi/]]
+- add a name to my [[Death Note|/deathnote]]
+- [[Meander|/app/meander]] through sites I recommend
+- visit the [[Prairieland Zine Library|prairieland]]
 
 You can subscribe...
 - to [[the RSS feed|/+/feed.rss]]
@@ -48,6 +48,7 @@ You can subscribe...
 You can read offline with the...
 - [[ebook|/txt/!pnppl.epub]]
 - [[HTML|/txt/!html.zip]]
-- [[plain text|/txt/!txt.zip]]
+- [[Markdown (plain text)|/txt/!txt.zip]]
 
 !newest
+

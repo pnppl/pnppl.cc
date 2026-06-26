@@ -30,6 +30,7 @@ const wander = {
 		'https://maia.crimew.gay/posts/the-emails/',
 		'https://moth.monster/blog/artificial-iconoclasm/',
 		'https://ploum.net/2026-01-05-unteaching_github.html',
+		'https://prairielanddefendants.com/resources/zines-flyers/',
 		'https://sexabolition.blog/fuck-biological-sex-we-have/',
 		'https://site.sebasmonia.com/posts/2026-04-09-the-redirection-of-traffic-from-web-to-ai-doesn-t-happen-in-a-vacuum.html',
 		'https://tagonist.livejournal.com/199563.html',

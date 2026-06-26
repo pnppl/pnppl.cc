@@ -45,9 +45,9 @@
 
 ## About
 
-These zines were presented by the state as evidence in the [[Prairieland trial|https://prairielanddefendants.com/about-the-case/]]. [[Des|https://freedes.net/]] was sentenced to 30 years in prison just because he moved a box of them from one place to another.
+These zines were presented by the state as evidence in the [[Prairieland trial|https://prairielanddefendants.com/about-the-case/]]. (Visit [[Support Prairieland Defendants|https://prairielanddefendants.com/resources/zines-flyers/]] for zines *about* the case.) [[Des|https://freedes.net/]] was [[sentenced to 30 years in prison|https://prairielanddefendants.com/press-release/eight-federal-prairieland-defendants-sentenced-today-to-prison-terms-ranging-from-30-100-years-for-common-protest-activity/]] just because he moved a box of them from one place to another.
 
-While the entire prosecution is clearly a steaming pile of politically motivated fascist bullshit, the charges against people whose only connection to the inciting incident was association with the suspects — and whose only crime was being an anarchist — are particularly galling.
+While the entire prosecution is clearly a steaming pile of politically motivated fascist bullshit, the charges against people whose only connection to the inciting incident was association with the participants — and whose only crime was being an anarchist — are particularly galling.
 
 We're in the midst of another [[red and black scare|https://en.wikipedia.org/wiki/Red_Scare]]. The state calls us "terrorists" because projection is the only trick fascists know. They would like us to be scared to read dissident literature, to share our minds, and to stand up to their campaign of senseless violence and cruelty.
 
@@ -58,9 +58,15 @@ They aren't as powerful as they seem. They're afraid of zines.
 
 You can order a pack of physical zines to support the Prairieland defendants from [[Firestorm Books|https://firestorm.coop/products/25308-the-government-doesnt-wa]]. Their list of fifteen was my starting point (I've only added another four to that total so far). It's difficult to get information about what was presented at the trial since it was held in a secretive kangaroo court.
 
-A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_ (comes with a donation to the Antifascist Defense Fund!), _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
+A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_, _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
 
-The defendants' participation in the Emma Goldman Book Club was discussed quite a bit. There are some photos of their library online, but it would massively expand the size of this project so I decided not to include those (yet).
+The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|	https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
+
+> Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
+
+There are photos of their library online, but it will massively expand the size of this project so I haven't added them yet.
+
+You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
 
 
 ## Process
