@@ -147,7 +147,7 @@ div:has(>input[name=math]):before {
 	content: "Pass the shinigami's test: "
 }
 /* abuse filter - prepend ! to an entry's timestamp to hide */
-#abuse {
+#article #abuse {
 	height: 2.5ch;
 	margin-right: 1ch;
 }
@@ -168,8 +168,7 @@ div:has(>input[name=math]):before {
 **Benjamin Netanyahu** — Israeli missile targeting accident
 **Elon Reeve Musk** — bludgeoned with sink by robot
 **Joanne Rowling** — public bathroom sewage flood
-<!-- ~~~~~~ THE ACTUAL POST CONTENT GOES ABOVE ~~~~~~ -->
-<input id="abuse" name="abuse" type="checkbox"><label for="abuse">Show entries pnppl has marked as offensive</label>
+<!-- ~~~~~~ THE ACTUAL POST CONTENT GOES ABOVE ~~~~~~ --> <!-- this line is deranged to avoid abuse being wrapped in para --> <input id="abuse" name="abuse" type="checkbox"><label for="abuse">Show submissions marked as offensive</label>
 <!--#include virtual="/cgi-bin/gb/?$args" -->
 <script><!--// the dark side...
 if (document.querySelector) {
