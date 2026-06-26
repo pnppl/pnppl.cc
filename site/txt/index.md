@@ -47,8 +47,8 @@ You can subscribe...
 
 You can read offline with the...
 - [[ebook|/txt/!pnppl.epub]]
-- [[HTML|/txt/!html.zip]]
-- [[Markdown (plain text)|/txt/!txt.zip]]
+- [[HTML|/txt/!pnppl-html.zip]]
+- [[Markdown (plain text)|/txt/!pnppl-txt.zip]]
 
 !newest
 

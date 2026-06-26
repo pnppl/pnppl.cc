@@ -1,5 +1,5 @@
 set scratch_dir './.html_tmp'
-set out 'site/txt/!html.zip'
+set out 'site/txt/!pnppl-html.zip'
 rm -rf $scratch_dir
 rm -rf $out
 mkdir $scratch_dir &&
