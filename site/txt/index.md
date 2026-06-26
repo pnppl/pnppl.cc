@@ -46,9 +46,9 @@ You can subscribe...
 - on Mastodon with [[RSS Parrot|https://rss-parrot.net/]]
 
 You can read offline with the...
-- [[ebook|/txt/!pnppl.epub]]
-- [[HTML|/txt/!pnppl-html.zip]]
-- [[Markdown (plain text)|/txt/!pnppl-txt.zip]]
+- [[ebook|/txt/!pnppl.epub]] (EPUB_SIZE)
+- [[HTML|/txt/!pnppl-html.zip]] (HTML_SIZE)
+- [[text|/txt/!pnppl-txt.zip]] (TXT_SIZE)
 
 !newest
 
