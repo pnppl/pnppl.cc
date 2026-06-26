@@ -85,7 +85,7 @@ I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults 
 ## Addendum: Song Did Nothing Wrong
 I see a lot of people who are outraged by this sham trial... except for the charges against Champagne Song.
 
-There is *nothing* wrong with shooting your gun to defend your friends from a maniac threatening to murder them, *especially* when you point it toward the ground so as to miss and frighten them off, deliver only an accidental ricochet to the shoulder, and fail to kill or seriously injure the assailant.
+There is *nothing* wrong with shooting your gun to [[defend your friends|https://prairielanddefendants.com/defendant-writings/statement-by-benjamin-champagne-song/]] from a maniac threatening to murder them, *especially* when you point it toward the ground so as to miss and frighten them off, deliver only an accidental ricochet to the shoulder, and fail to kill or seriously injure the assailant.
 
 As horrific as the outcome of this case has been so far, we should be glad Song was there or people might be dead. It's easy to armchair quarterback after the fact, but we should be clear that the real problem is the concentration camp they were protesting and its bloodthirsty guards.
 
