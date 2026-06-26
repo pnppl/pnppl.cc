@@ -1,3 +1,10 @@
 {{- template "header" . }}
+<center>
+	{{- if .ctime }}
+	<a href="..">Modified</a> | Created
+	{{- else -}}
+	Modified | <a href="created">Created</a>
+	{{ end -}}
+</center>
 {{- template "recent_pages" .pages }}
 {{- template "footer" . }}
