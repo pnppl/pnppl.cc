@@ -16,7 +16,7 @@ sd 'href="\.\./' 'href="' site/*.html &&
 sd 'href="\.\./' 'href="../../' site/*/*/*.html &&
 sd 'href="\.\./' 'href="../../../' site/*/*/*/*.html &&
 
-zip -r ../$out site &&
+zip -rq ../$out site &&
 cd ..
 
 if test $status -ne 0

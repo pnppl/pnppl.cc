@@ -49,9 +49,13 @@ These zines were presented by the state as evidence in the [[Prairieland trial|h
 
 While the entire prosecution is clearly a steaming pile of politically motivated fascist bullshit, the charges against people whose only connection to the inciting incident was association with the participants — and whose only crime was being an anarchist — are particularly galling.
 
+The sentences these political prisoners have received are downright farcical. The fash want to make an example of them; the judge even admitted he sentenced them with the goal of suppressing their political views.
+
 We're in the midst of another [[red and black scare|https://en.wikipedia.org/wiki/Red_Scare]]. The state calls us "terrorists" because projection is the only trick fascists know. They would like us to be scared to read dissident literature, to share our minds, and to stand up to their campaign of senseless violence and cruelty.
 
 They aren't as powerful as they seem. They're afraid of zines.
+
+And if you can spend the rest of your life in prison for reading, you don't have anything to lose by fighting back.
 
 
 ## Sources
@@ -76,6 +80,14 @@ For each zine, I used a pre-existing copy whenever possible. It was easy to find
 HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and started rebuilding them completely. I've finished manually re-creating _De-Arrest Primer_ and _It's Vacant, Take It!_; _War in the Streets_ is still pdftohtml output.
 
 I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults were bad and I didn't feel like messing with LaTeX, so that one doesn't have a PDF. If you have one, or know of other zines I should add, email me.
+
+
+## Addendum: Song Did Nothing Wrong
+I see a lot of people who are outraged by this sham trial... except for the charges against Champagne Song.
+
+There is *nothing* wrong with shooting your gun to defend your friends from a maniac threatening to murder them, *especially* when you point it toward the ground so as to miss and frighten them off, deliver only an accidental richochet to the shoulder, and fail to kill or seriously injure the assailant.
+
+As horrific as the outcome of this case has been so far, we should be glad Song was there or people might be dead. It's easy to armchair quarterback after the fact, but we should be clear that the real problem is the concentration camp they were protesting and its bloodthirsty guards.
 
 
 ## ACAB
