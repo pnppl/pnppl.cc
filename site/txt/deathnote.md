@@ -146,6 +146,20 @@ div:has(>textarea):before {
 div:has(>input[name=math]):before {
 	content: "Pass the shinigami's test: "
 }
+/* abuse filter - prepend ! to an entry's timestamp to hide */
+#abuse {
+	height: 2.5ch;
+	margin-right: 1ch;
+}
+#abuse + label {
+	font-style: normal;
+}
+.guest-item[id^='guest-!'] {
+	display: none;
+}
+#abuse:checked ~ #guestbook .guest-item[id^='guest-!'] {
+	display: inline;
+}
 --></style>
 <!-- ~~~~~~ THE ACTUAL POST CONTENT GOES BELOW  ~~~~~~ -->
 **Donald John Trump** — messy post-McDonalds ibogaine overdose
@@ -155,6 +169,7 @@ div:has(>input[name=math]):before {
 **Elon Reeve Musk** — bludgeoned with sink by robot
 **Joanne Rowling** — public bathroom sewage flood
 <!-- ~~~~~~ THE ACTUAL POST CONTENT GOES ABOVE ~~~~~~ -->
+<input id="abuse" name="abuse" type="checkbox"><label for="abuse">Show entries pnppl has marked as offensive</label>
 <!--#include virtual="/cgi-bin/gb/?$args" -->
 <script><!--// the dark side...
 if (document.querySelector) {
