@@ -3,14 +3,17 @@
 <div class="columns content">
 	<div class="column">
 		{{- if not .page.ModTime.IsZero }}
-		<span class="icon-text"><b>
-			{{- $t := .page.ModTime }}
-			<a href="https://git.gay/pnppl/pnppl.cc/commits/branch/main/site/txt/{{ printf "%s" .page.Name }}.md">
-				<time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)"  $t.Hour $t.Minute $t.Second $t.Weekday }}</time>
-			</a>
-		</b></span>
+		<span class="icon-text">
+			<b>
+				{{- $t := .page.ModTime }}
+				<a href="https://git.gay/pnppl/pnppl.cc/commits/branch/main/site/txt/{{ printf "%s" .page.Name }}.md">
+					<time datetime="{{ datetime $t }}">{{ printf "Modified: %04d-%02d-%02d @" $t.Year $t.Month $t.Day }}&nbsp;{{ printf "%02d:%02d:%02d (%s)"  $t.Hour $t.Minute $t.Second $t.Weekday }}</time>{{- noop -}}
+				</a>
+			</b>
+		</span>
 		{{- end }}
 	</div>
+ 
 	<div class="column is-narrow">
 		<div class="buttons">
 		{{- $page := printf "%s" .page.Name }}
