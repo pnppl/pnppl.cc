@@ -64,7 +64,7 @@ You can order a pack of physical zines to support the Prairieland defendants fro
 
 A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_, _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
 
-The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|	https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
+The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
