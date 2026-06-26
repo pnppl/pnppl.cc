@@ -91,7 +91,19 @@ todo:
 	- need to fix so i can use ```ascii or ```art or something and make a css class to prettify text art
 - sort See Also by number of tags in common
 - refactor the templates. the whole point of them is not having to copy-paste, and yet...
-- prairie - add markdown versions
+- prairie
+	- add markdown versions
+	- redo "war"
+	- add zines from guardian article, anews comment, social media photos
+	- mosaic
+		- some zines crash mosaic. usually this is due to missing resources. find and strip them
+			- actually i think it's just the pngs - see if i missed any that could be gif or jpg
+		- "vacant" --- strange parsing issue causes everything after #establishing to be bold
+		- a bunch of TAL zines have an XML declaration on top that firefox says is invalid and gets printed in mosaic
+		- ! the de-re-emdash-ifier isn't working on links, so the link to "safety" has a broken character in mosaic
+		- "war" is completely broken
+		- "de-arrest" figcaptions need a <br> or something, they show inline with the image
+		- "tce" actually works but we need a pre-css hide for the TOC etc
 
 
 low priority/done:
