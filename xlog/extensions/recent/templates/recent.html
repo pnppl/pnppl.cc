@@ -1,10 +1,10 @@
 {{- template "header" . }}
 <center>
-	{{- if .ctime }}
-	<a href="..">Modified</a> | Created
-	{{- else -}}
-	Modified | <a href="created">Created</a>
-	{{ end -}}
+{{ if .ctime -}}
+[ <a href="..">Modified</a> | <b>Created</b> ]
+{{- else -}}
+[ <b>Modified</b> | <a href="created">Created</a> ]
+{{- end }}
 </center>
 {{- template "recent_pages" .pages }}
 {{- template "footer" . }}

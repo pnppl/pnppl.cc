@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"slices"
 	"strings"
-
+	"regexp"
 	_ "embed"
 
 	. "github.com/emad-elsaid/xlog"
@@ -23,7 +23,9 @@ type All struct{}
 func (All) Name() string { return "all" }
 func (All) Init() {
 	Get(`/+/all`, allHandler)
+	Get(`/+/all/filename`, filesort)
 	RegisterBuildPage("/+/all", true)
+	RegisterBuildPage("/+/all/filename", true)
 	RegisterTemplate(templates, "templates")
 	RegisterLink(func(Page) []Command { return []Command{links{}} })
 }
@@ -67,6 +69,35 @@ func allHandler(r Request) Output {
 		"pages": rp,
 	})
 }
+
+func filesort(r Request) Output {
+	rp := slices.Clone(Pages(r.Context()))
+
+	rp = slices.DeleteFunc(rp, func(a Page) bool {
+		return IsIgnoredPath(a.Name())
+	})
+
+	re := regexp.MustCompile(`^[A-z]`)
+	slices.SortFunc(rp, func(a, b Page) int {
+		a_yr := ! re.Match([]byte(a.Name()))
+		b_yr := ! re.Match([]byte(b.Name()))
+		if (a_yr && b_yr) ||(!a_yr && !b_yr) {
+			return strings.Compare(a.Name(), b.Name())
+		}
+		if a_yr {
+			return 1
+		}
+		return -1
+	})
+
+	return Render("all", Locals{
+		"page":  DynamicPage{NameVal: "All"},
+		"pages": rp,
+		"filesort": true,
+	})
+}
+
+
 
 type links struct{}
 
