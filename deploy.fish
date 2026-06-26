@@ -56,6 +56,7 @@ for file in site/**/*.{zip,epub}
 	ect -9 --strict -zip $file
 end &&
 fish map/sitemap.fish &&
+zip -qr site/txt/!html.zip site/sitemap/ &&
 chmod -R 755 site/ &&
 for file in (fdfind -I -t f . site/); chmod 644 $file; end &&
 lftp -e "set ftp:skey-force; mirror -R --parallel=20 --delete site/ /; chmod 666 .gb.txt; put site/app/wcb/wcb.html -o app/wander/wcb.html; exit" -u pnppl,$FTP_PASSWORD w10.host

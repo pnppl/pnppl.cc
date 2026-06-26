@@ -15,6 +15,8 @@ rm site/error404.html &&
 sd 'href="\.\./' 'href="' site/*.html &&
 sd 'href="\.\./' 'href="../../' site/*/*/*.html &&
 sd 'href="\.\./' 'href="../../../' site/*/*/*/*.html &&
+sd '\.\./slashpages' 'slashpages' site/+/all/index.html &&
+sd '\.\./sitemap' 'sitemap' site/+/all/index.html &&
 
 zip -rq ../$out site &&
 cd ..

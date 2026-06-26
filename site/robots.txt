@@ -36,5 +36,7 @@ User-agent: *
 Disallow: /app/meander/.p/*
 Disallow: /app/nagi/.ssl/*
 Disallow: /app/nagi/.http/*
+Disallow: /.pagefind/*
+Disallow: /+/thumb/*
 
 Sitemap: https://pnppl.cc/sitemap.xml

@@ -150,6 +150,9 @@ div:has(>input[name=math]):before {
 #article #abuse {
 	height: 2.5ch;
 	margin-right: 1ch;
+	/* alignment is fucked up due to a global style that i need to get rid of */
+	position: relative;
+	bottom: 1px;
 }
 #abuse + label {
 	font-style: normal;
