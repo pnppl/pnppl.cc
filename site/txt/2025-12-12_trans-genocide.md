@@ -1,6 +1,8 @@
 # Trans Genocide
 #essay #politics
 
+## Essay (2025)
+
 Are trans people experiencing a genocide? Well, I hope we've learned from Gaza that when people start splitting hairs about whether events *technically* constitute genocide, something has gone terribly wrong. It does not at all reassure me that when I share my perfectly rational concerns,[^1] what seemingly bothers people most is my choice of words.
 
 Still, skepticism is an understandable response to an accusation of genocide.[^2] After all, one motivation for using strong language like "genocide" is to draw attention to the severity of the issue, and that capacity might be compromised if the word is overused. As reasonable as it seems on its face, this line of criticism is ultimately tendentious. What is really at stake is not the capacity for words to stir emotion, but our capacity to speak meaningfully and truthfully. This category error contributed to years of handwringing, scolding, and generally irritating bullshit from the Serious Person Squad over whether we were allowed to call Donald Trump a fascist. It is not particularly important whether calling someone a "Nazi" arouses your feelings, but it is important whether that someone actually is a Nazi. After all, nobody will be stirred into action against said Nazi if they can't even identify him as one.
@@ -24,6 +26,13 @@ Yes, trans people will always exist. But how many of them? What will their lives
 
 You don't have to call it a genocide. It's just a word. You can call it pre-genocide, incitement, red flags, or whatever you want. But you cannot deny that our society has been swept by a powerful campaign to crush trans people like bugs.
 
+## "gendercide" by Xanthra Phillippa from _Gendertrash from Hell_ #1 (1993)
+> gendercide is the name for the deliberate and systematic destruction of gender described people that is currently taking place on this continent.
+> first of all, no statistics are kept on the number of us who even exist, let alone are attacked or killed or who suicide every year. for example, how many of the teenage suicides that are recorded as being lesbian/gay - related (at least 1/3 of all teenage suicides), really are related to gender identity? to continue, how many of the teenage suicides, where the teenager identified her/himself as lesbian/gay were really gender described (and since this society maintains the myth that the gender described are really a subsection of the lesbian and gay communities, it is quite possible that an adolescent, already confused and upset from dealing with her/his own gender identity, might really believe that they are lesbian or gay and identify themselves as such)? if an adolescent, who is identified as both gender described and either lesbian or gay, commits or attempts suicide, how would it (the suicide) be documented statistically? as a lesbian/gay related suicide? how many of the attacks on, deaths or suicides of gender described youths, who live on the streets, are recorded as attacks on, deaths or suicides of gender described youths? the list of unanswered questions in just this area alone, is huge, far too huge.
+> and what about deaths, attempted suicides of gender described adults? where is the necessary statistical documentation regarding our lives, like for instance our average life span, our average incomes, housing, professions (including prostitution)? and what about HIV/AIDS and the gender communities?
+> **the complete lack of information in this area, allows the political/medical/psychiatric/sociological/legal professions to continue to either directly or indirectly participate in the destruction of our lives. this is the gendercide that exists here, that we live under, under whose shadow we somehow have to exist. a gendercide that up until now has been invisible & unacknowledged. and our humyn rights will never be respected unless this gendercide is ended & acknowledged by this genetic society.**
+
+(emphasis mine)
 
 [^1]: We've been told time and again that transmisogynist bigots' completely baseless fears must be pandered to, because they have "reasonable concerns". Reasonableness apparently requires no evidence, just technical plausibility. Trans people's fear of persecution is not only reasonable, it's backed with mountains of actual evidence, so we ought to be in solid epistemic territory. But who gets accused of overreacting?
 [^2]: Skepticism is the correct default posture to *all* claims, as long as you don't mistake willful ignorance for it.
