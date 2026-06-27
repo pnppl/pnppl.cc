@@ -42,6 +42,28 @@
 - [[Why Riot? (Phillip Neel, 2014)|./why-riot]]&nbsp;[^riot]
 	- [[screen|./why-riot/why-riot.pdf]] · [[print|./why-riot/why-riot_letter-print.pdf]]
 
+<details id="gallery">
+	<summary>Cover Gallery</summary>
+	<a href="against-prisons"><img loading="lazy" src="against-prisons/against-prisons.jpg"></a>
+	<a href="another-critique-of-insurrectionalism"><img loading="lazy" src="another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.jpg"></a>
+	<a href="de-arrest-primer"><img loading="lazy" src="de-arrest-primer/de-arrest-primer.jpg"></a>
+	<a href="destroying-white-nationalism"><img loading="lazy" src="destroying-white-nationalism/destroying-white-nationalism.jpg"></a>
+	<a href="for-the-love-of-winning"><img loading="lazy" src="for-the-love-of-winning/for-the-love-of-winning.jpg"></a>
+	<a href="gaza-ghetto-uprising"><img loading="lazy" src="gaza-ghetto-uprising/gaza-ghetto-uprising.jpg"></a>
+	<a href="i-dont-bash-back-i-shoot-first"><img loading="lazy" src="i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.jpg"></a>
+	<a href="if-we-go-we-go-on-fire"><img loading="lazy" src="if-we-go-we-go-on-fire/if-we-go-we-go-on-fire.jpg"></a>
+	<a href="insurrectionary-anarchy-organizing-for-attack"><img loading="lazy" src="insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack.jpg"></a>
+	<a href="its-safer-in-the-front"><img loading="lazy" src="its-safer-in-the-front/its-safer-in-the-front.jpg"></a>
+	<a href="its-vacant-take-it"><img loading="lazy" src="its-vacant-take-it/its-vacant-take-it.jpg"></a>
+	<a href="now-ic"><img loading="lazy" src="now-ic/now-ic.jpg"></a>
+	<a href="our-enemies-in-yellow"><img loading="lazy" src="our-enemies-in-yellow/our-enemies-in-yellow.jpg"></a>
+	<a href="satanic-death-cult"><img loading="lazy" src="satanic-death-cult/satanic-death-cult.jpg"></a>
+	<a href="to-change-everything"><img loading="lazy" src="to-change-everything/to-change-everything.jpg"></a>
+	<a href="towards-the-queerest-insurrection"><img loading="lazy" src="towards-the-queerest-insurrection/towards-the-queerest-insurrection.jpg"></a>
+	<a href="war-in-the-streets"><img loading="lazy" src="war-in-the-streets/war-in-the-streets.jpg"></a>
+	<a href="why-riot"><img loading="lazy" src="why-riot/why-riot.jpg"></a>
+</details>
+
 
 ## About
 
@@ -133,3 +155,25 @@ ANARCHY MEANS ATTACK**
 [^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]]
 
 [^riot]: [[Oplopanax|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/]] · [[Ultra-Com|https://web.archive.org/web/20140515013650/http://www.ultra-com.org/project/why-riot/]] · [[ZLO|https://zinelibrary.org/why-riot.html]]
+
+
+<style><!--
+#gallery {
+	text-align: center;
+}
+#gallery summary {
+	width: fit-content;
+	margin-right: auto;
+}
+#gallery img {
+	display: inline;
+	max-width: 24%;
+	height: auto;
+	text-align: center;
+}
+@media screen and (max-width: 400px) {
+	#gallery img {
+		max-width: 48%;
+	}
+}
+--></style>
