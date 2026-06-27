@@ -164,6 +164,7 @@ ANARCHY MEANS ATTACK**
 #gallery summary {
 	width: fit-content;
 	margin-right: auto;
+	font-size: 110%;
 }
 #gallery img {
 	display: inline;
