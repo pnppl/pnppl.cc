@@ -99,7 +99,7 @@ You are strongly encouraged to start your own Emma Goldman Book Club and/or Prai
 
 For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
-HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and started rebuilding them completely. I've finished manually re-creating _De-Arrest Primer_ and _It's Vacant, Take It!_; _War in the Streets_ is still pdftohtml output.
+HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've finished manually re-creating _De-Arrest Primer_, _It's Vacant, Take It!_, and _War in the Streets_.
 
 I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults were bad and I didn't feel like messing with LaTeX, so that one doesn't have a PDF. If you have one, or know of other zines I should add, email me.
 
