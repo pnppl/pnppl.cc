@@ -177,7 +177,7 @@ low priority/done:
 		- might also make sense to include eg 1-bit.day contents, would need a little extra effort but e-ink <3 1-bit
 	- it's sorted by filename right now (origin date) and the filenames are not in the output anywhere. i like this order but it could be rather mysterious and vexing to strangers
 	- leading * and ~ aren't making it through on TOS note (* -> li). also the shruggie seems to be italicizing lol
-- manpage? mobi/palmdoc?
+- manpage? mobi/palmdoc? 
 
 
 longterm notions
