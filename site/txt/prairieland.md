@@ -4,43 +4,43 @@
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
 - [[Against Prisons (Catherine Baker, 1996)|./against-prisons]]&nbsp;[^pris]
-	- [[screen|./against-prisons/against-prisons.pdf]] · [[print|./against-prisons/against-prisons_letter-print.pdf]]
+	- [[screen|./against-prisons/against-prisons.pdf]] · [[print|./against-prisons/against-prisons_print-letter.pdf]]
 - [[Another Critique of Insurrectionalism (2014)|./another-critique-of-insurrectionalism]]&nbsp;[^crit]
-	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_letter-print.pdf]]
+	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
-	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_letter-print.pdf]]
+	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
-	- [[screen|./destroying-white-nationalism/destroying-white-nationalism.pdf]] · [[print|./destroying-white-nationalism/destroying-white-nationalism_letter-print.pdf]]
+	- [[screen|./destroying-white-nationalism/destroying-white-nationalism.pdf]] · [[print|./destroying-white-nationalism/destroying-white-nationalism_print-letter.pdf]]
 - [[For the love of winning: An open letter to Extinction Rebellion (John Jordan, 2019)|./for-the-love-of-winning]]&nbsp;[^xr]
-	- [[screen|./for-the-love-of-winning/for-the-love-of-winning.pdf]] · [[print|./for-the-love-of-winning/for-the-love-of-winning_letter-print.pdf]]
+	- [[screen|./for-the-love-of-winning/for-the-love-of-winning.pdf]] · [[print|./for-the-love-of-winning/for-the-love-of-winning_print-letter.pdf]]
 - [[The Gaza Ghetto Uprising (Adi Callai, 2024)|./gaza-ghetto-uprising]]&nbsp;[^gaza]
-	- [[screen|./gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|./gaza-ghetto-uprising/gaza-ghetto-uprising_letter-print.pdf]]
+	- [[screen|./gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|./gaza-ghetto-uprising/gaza-ghetto-uprising_print-letter.pdf]]
 - [[I Don't Bash Back, I Shoot First (2012)|./i-dont-bash-back-i-shoot-first]]&nbsp;[^1st]
-	- [[screen|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.pdf]] · [[print|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first_letter-print.pdf]]
+	- [[screen|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.pdf]] · [[print|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first_print-letter.pdf]]
 - [[If We Go, We Go On Fire: On Grief and Social War (Ignatius, 2024)|./if-we-go-we-go-on-fire]]&nbsp;[^if]
-	- [[screen|./if-we-go-we-go-on-fire/if-we-go-we-go-on-fire.pdf]] · [[print|./if-we-go-we-go-on-fire/if-we-go-we-go-on-fire_letter-print.pdf]]
+	- [[screen|./if-we-go-we-go-on-fire/if-we-go-we-go-on-fire.pdf]] · [[print|./if-we-go-we-go-on-fire/if-we-go-we-go-on-fire_print-letter.pdf]]
 - [[Insurrectionary Anarchy: Organizing for Attack! (2003)|./insurrectionary-anarchy-organizing-for-attack]]&nbsp;[^ins]
-	- [[screen|./insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack.pdf]] · [[print|./insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack_letter-print.pdf]]
+	- [[screen|./insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack.pdf]] · [[print|./insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack_print-letter.pdf]]
 - [[It's Safer in the Front: Taking the Offensive against Tyranny (CrimethInc, 2025)|./its-safer-in-the-front]]&nbsp;[^frnt]
-	- [[screen|./its-safer-in-the-front/its-safer-in-the-front.pdf]] · [[print|./its-safer-in-the-front/its-safer-in-the-front_letter-print.pdf]]
+	- [[screen|./its-safer-in-the-front/its-safer-in-the-front.pdf]] · [[print|./its-safer-in-the-front/its-safer-in-the-front_print-letter.pdf]]
 - [[It's Vacant, Take It! (Homes Not Jails, 2013)|./its-vacant-take-it]]&nbsp;[^take]
-	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_letter-print.pdf]]
+	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_print-letter.pdf]]
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
-	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_letter-print.pdf]]
+	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_print-letter.pdf]]
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|./our-enemies-in-yellow]]&nbsp;[^yel]
-	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_letter-print.pdf]]
+	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
-	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_letter-print.pdf]]
+	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_print-letter.pdf]]
 - [[To Change Everything (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
-	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_letter-print.pdf]]
+	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_print-letter.pdf]]
 - [[Towards the Queerest Insurrection (Mary Nardini gang, 2014)|./towards-the-queerest-insurrection]]&nbsp;[^twrd]
-	- [[screen|./towards-the-queerest-insurrection/towards-the-queerest-insurrection.pdf]] · [[print|./towards-the-queerest-insurrection/towards-the-queerest-insurrection_letter-print.pdf]]
+	- [[screen|./towards-the-queerest-insurrection/towards-the-queerest-insurrection.pdf]] · [[print|./towards-the-queerest-insurrection/towards-the-queerest-insurrection_print-letter.pdf]]
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|./war-in-the-streets]]&nbsp;[^war]
-	- [[screen|./war-in-the-streets/war-in-the-streets.pdf]] · [[print|./war-in-the-streets/war-in-the-streets_letter-print.pdf]]
+	- [[screen|./war-in-the-streets/war-in-the-streets.pdf]] · [[print|./war-in-the-streets/war-in-the-streets_print-letter.pdf]]
 - [[We Don't Need "Safety" — We Need to Escalate! (Fire Ant Movement Defense, 2024)|./we-dont-need-safety]]&nbsp;[^safe]
 	- send me a PDF
 - [[Why Riot? (Phillip Neel, 2014)|./why-riot]]&nbsp;[^riot]
-	- [[screen|./why-riot/why-riot.pdf]] · [[print|./why-riot/why-riot_letter-print.pdf]]
+	- [[screen|./why-riot/why-riot.pdf]] · [[print|./why-riot/why-riot_print-letter.pdf]]
 
 <details id="gallery">
 	<summary>Cover Gallery</summary>
@@ -91,8 +91,6 @@ I've got another 20ish zines in the pipeline. If you don't want to wait, here's 
 The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
-
-There are photos of their library online, but it will massively expand the size of this project so I haven't added them yet.
 
 You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
 
