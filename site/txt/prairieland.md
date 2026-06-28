@@ -86,6 +86,8 @@ You can order a pack of physical zines to support the Prairieland defendants fro
 
 A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_, _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
 
+I've got another 20ish zines in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
+
 The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
@@ -102,7 +104,6 @@ You are strongly encouraged to start your own Emma Goldman Book Club and/or Prai
 For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
 HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've finished manually re-creating _De-Arrest Primer_, _It's Vacant, Take It!_, and _War in the Streets_.
-
 
 ## Help Me Out
 
