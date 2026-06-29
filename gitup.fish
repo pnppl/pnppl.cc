@@ -20,6 +20,7 @@ site/fs-ir/
 site/mirrors/
 site/pnppl/
 site/prairieland/index.html
+site/prairieland/tools/in.pdf
 site/public/
 site/sitemap/
 site/slashpages/
