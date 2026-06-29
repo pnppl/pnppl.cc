@@ -165,7 +165,7 @@ ANARCHY MEANS ATTACK**
 
 [^pris]: [[AZL|https://azinelibrary.org/zines/Against-Prisons]] · [[TAL|https://theanarchistlibrary.org/library/catherine-baker-against-prisons]] · [[Wildcat|http://wildcat.international/againstp.html]]
 
-[^crit]: [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]]
+[^crit]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/theory/another-critique-insurrectionalism/]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]] · [[Subversion|https://web.archive.org/web/20151020060007/https://subversionpress.wordpress.com/2015/07/17/another-critique-of-insurrectionalism/]]
 
 [^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
 
