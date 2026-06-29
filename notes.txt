@@ -178,6 +178,7 @@ low priority/done:
 	- it's sorted by filename right now (origin date) and the filenames are not in the output anywhere. i like this order but it could be rather mysterious and vexing to strangers
 	- leading * and ~ aren't making it through on TOS note (* -> li). also the shruggie seems to be italicizing lol
 - manpage? mobi/palmdoc? 
+- it would be nice if i could build files from subfolders of /txt for stuff like the prairieland gallery. i just copied the main page to gallery.html and deleted most of it. all the nav etc will go stale
 
 
 longterm notions
