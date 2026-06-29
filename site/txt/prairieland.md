@@ -3,7 +3,7 @@
 
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
-- [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^8]
+- [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
 	- [[print pamphlet|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
 - [[Acrid Black Smoke (2021)|./acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|./acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|./acrid-black-smoke/acrid-black-smoke_print-letter.pdf]]
@@ -33,7 +33,7 @@
 	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_print-letter.pdf]]
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
 	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_print-letter.pdf]]
-- [[On the Black Leadership and Other White Myths (We Still Outside Collective, 2020)|./on-the-black-leadership]]&nbsp;[^lead]
+- [[On the Black Leadership & Other White Myths (We Still Outside Collective, 2020)|./on-the-black-leadership]]&nbsp;[^lead]
 	- [[screen|./on-the-black-leadership/on-the-black-leadership.pdf]] · [[print|./on-the-black-leadership/on-the-black-leadership_print-letter.pdf]]
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|./our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]]
@@ -136,7 +136,7 @@ CHINGA LA MIGRA
 ANARCHY MEANS ATTACK**
 
 
-[^8]:    [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
+[^ice]:  [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
 
 [^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
