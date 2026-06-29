@@ -4,7 +4,7 @@
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
 - [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
-	- [[print pamphlet|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
+	- [[print (pamphlet)|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
 - [[Acrid Black Smoke (2021)|./acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|./acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|./acrid-black-smoke/acrid-black-smoke_print-letter.pdf]]
 - [[Against Prisons (Catherine Baker, 1996)|./against-prisons]]&nbsp;[^pris]
@@ -13,14 +13,20 @@
 	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]]
 - [[Be Gay Do Crime (Mary Nardini Gang, 2018)|./be-gay-do-crime]]&nbsp;[^gay]
 	- [[screen|./be-gay-do-crime/be-gay-do-crime.pdf]] · [[print|./be-gay-do-crime/be-gay-do-crime_print-letter.pdf]]
+- [[Call (2004)|./call-ic]]&nbsp;[^call]
+	- [[screen|./call-ic/call-ic.pdf]] · [[print|./call-ic/call-ic_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
 	- [[screen|./destroying-white-nationalism/destroying-white-nationalism.pdf]] · [[print|./destroying-white-nationalism/destroying-white-nationalism_print-letter.pdf]]
+- [[Follow the Fires (Harami, 2024)|./follow-the-fires]]&nbsp;[^fire]
+	- [[screen|./follow-the-fires/follow-the-fires.pdf]] · [[print|./follow-the-fires/follow-the-fires_print-letter.pdf]]
 - [[For the love of winning: An open letter to Extinction Rebellion (John Jordan, 2019)|./for-the-love-of-winning]]&nbsp;[^xr]
 	- [[screen|./for-the-love-of-winning/for-the-love-of-winning.pdf]] · [[print|./for-the-love-of-winning/for-the-love-of-winning_print-letter.pdf]]
 - [[The Gaza Ghetto Uprising (Adi Callai, 2024)|./gaza-ghetto-uprising]]&nbsp;[^gaza]
 	- [[screen|./gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|./gaza-ghetto-uprising/gaza-ghetto-uprising_print-letter.pdf]]
+- [[The Harvest of Dead Elephants (2007)|./harvest-of-dead-elephants]]&nbsp;[^harv]
+	- [[screen|./harvest-of-dead-elephants/harvest-of-dead-elephants.pdf]] · [[print|./harvest-of-dead-elephants/harvest-of-dead-elephants_print-letter.pdf]]
 - [[I Don't Bash Back, I Shoot First (2012)|./i-dont-bash-back-i-shoot-first]]&nbsp;[^1st]
 	- [[screen|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.pdf]] · [[print|./i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first_print-letter.pdf]]
 - [[If We Go, We Go On Fire: On Grief and Social War (Ignatius, 2024)|./if-we-go-we-go-on-fire]]&nbsp;[^if]
@@ -31,6 +37,8 @@
 	- [[screen|./its-safer-in-the-front/its-safer-in-the-front.pdf]] · [[print|./its-safer-in-the-front/its-safer-in-the-front_print-letter.pdf]]
 - [[It's Vacant, Take It! (Homes Not Jails, 2013)|./its-vacant-take-it]]&nbsp;[^take]
 	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_print-letter.pdf]]
+- [[No Selves to Abolish: Afropessimism, Anti-Politics, and the End of the World (K. Aarons, 2016)|./no-selves-to-abolish]]&nbsp;[^no]
+	- [[screen|./no-selves-to-abolish/no-selves-to-abolish.pdf]] · [[print|./no-selves-to-abolish/no-selves-to-abolish_print-letter.pdf]]
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
 	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_print-letter.pdf]]
 - [[On the Black Leadership & Other White Myths (We Still Outside Collective, 2020)|./on-the-black-leadership]]&nbsp;[^lead]
@@ -57,15 +65,19 @@
 	<a href="against-prisons"><img loading="lazy" src="against-prisons/against-prisons.jpg"></a>
 	<a href="another-critique-of-insurrectionalism"><img loading="lazy" src="another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.jpg"></a>
 	<a href="be-gay-do-crime"><img loading="lazy" src="be-gay-do-crime/be-gay-do-crime.jpg"></a>
+	<a href="call-ic"><img loading="lazy" src="call-ic/call-ic.jpg"></a>
 	<a href="de-arrest-primer"><img loading="lazy" src="de-arrest-primer/de-arrest-primer.jpg"></a>
 	<a href="destroying-white-nationalism"><img loading="lazy" src="destroying-white-nationalism/destroying-white-nationalism.jpg"></a>
+	<a href="follow-the-fires"><img loading="lazy" src="follow-the-fires/follow-the-fires.jpg"></a>
 	<a href="for-the-love-of-winning"><img loading="lazy" src="for-the-love-of-winning/for-the-love-of-winning.jpg"></a>
 	<a href="gaza-ghetto-uprising"><img loading="lazy" src="gaza-ghetto-uprising/gaza-ghetto-uprising.jpg"></a>
+	<a href="harvest-of-dead-elephants"><img loading="lazy" src="harvest-of-dead-elephants/harvest-of-dead-elephants.jpg"></a>
 	<a href="i-dont-bash-back-i-shoot-first"><img loading="lazy" src="i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.jpg"></a>
 	<a href="if-we-go-we-go-on-fire"><img loading="lazy" src="if-we-go-we-go-on-fire/if-we-go-we-go-on-fire.jpg"></a>
 	<a href="insurrectionary-anarchy-organizing-for-attack"><img loading="lazy" src="insurrectionary-anarchy-organizing-for-attack/insurrectionary-anarchy-organizing-for-attack.jpg"></a>
 	<a href="its-safer-in-the-front"><img loading="lazy" src="its-safer-in-the-front/its-safer-in-the-front.jpg"></a>
 	<a href="its-vacant-take-it"><img loading="lazy" src="its-vacant-take-it/its-vacant-take-it.jpg"></a>
+	<a href="no-selves-to-abolish"><img loading="lazy" src="no-selves-to-abolish/no-selves-to-abolish.jpg"></a>
 	<a href="now-ic"><img loading="lazy" src="now-ic/now-ic.jpg"></a>
 	<a href="on-the-black-leadership"><img loading="lazy" src="on-the-black-leadership/on-the-black-leadership.jpg"></a>
 	<a href="our-enemies-in-yellow"><img loading="lazy" src="our-enemies-in-yellow/our-enemies-in-yellow.jpg"></a>
@@ -73,6 +85,7 @@
 	<a href="to-change-everything"><img loading="lazy" src="to-change-everything/to-change-everything.jpg"></a>
 	<a href="towards-the-queerest-insurrection"><img loading="lazy" src="towards-the-queerest-insurrection/towards-the-queerest-insurrection.jpg"></a>
 	<a href="war-in-the-streets"><img loading="lazy" src="war-in-the-streets/war-in-the-streets.jpg"></a>
+	<a href="we-dont-need-safety"><img loading="lazy" src="we-dont-need-safety/we-dont-need-safety.jpg"></a>
 	<a href="why-riot"><img loading="lazy" src="why-riot/why-riot.jpg"></a>
 </details>
 
@@ -102,7 +115,17 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
-Based on the [[photos of "evidence"|./sources/guardian-motherlode.jpeg]] in that article, I've added _Eight Things You Can Do to Stop Ice_, _Acrid Black Smoke_, _Be Gay Do Crime_, and _On the Black Leadership and Other White Myths_. I've got a bunch more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
+Based on the [[photos of "evidence"|./sources/guardian-motherlode.jpeg]] in that article, I've added:
+- _Eight Things You Can Do to Stop Ice_
+- _Acrid Black Smoke_
+- _Be Gay Do Crime_
+- _Call_
+- _Follow the Fires_
+- _Harvest of Dead Elephants_
+- _No Selves to Abolish_
+- _On the Black Leadership_
+
+I've got a bunch more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
 
 You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
 
@@ -144,17 +167,23 @@ ANARCHY MEANS ATTACK**
 
 [^crit]: [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]]
 
-[^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]]
+[^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
+
+[^call]: [[Ill Will|https://ill-will-editions.tumblr.com/post/152254733939/call-2004-updated-covers-in-english-and]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-call]] · [[ZLO|https://zinelibrary.org/the-call.html]]
 
 [^da]:   [[haters|https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
 
 [^wn]:   [[Antifa International|https://deathtofascism.com/resources/#:~:text=destroying white nationalism]]
 
+[^fire]: [[Ruins of Capital|https://ruinsofcapital.noblogs.org/follow-the-fires/]] · [[TAL|https://theanarchistlibrary.org/library/haraami-follow-the-fires]] · [[ZLO|https://zinelibrary.org/follow-the-fires-insurgency-against-identity.html]] · [[Living & Fighting|https://web.archive.org/web/20240705045730/https://livingandfighting.net/Follow-the-Fires]]
+
 [^xr]:   [[Ill Will|https://illwill.com/print/for-the-love-of-winning]] · [[zad for ever|https://zadforever.blog/2019/05/03/for-the-love-of-winning-an-open-letter-to-extinction-rebellion/]]
 
 [^gaza]: [[haters|https://haters.noblogs.org/zines/#:~:text=the ghetto gaza uprising]] · [[TAL|https://theanarchistlibrary.org/library/adi-callai-the-gaza-ghetto-uprising]] · [[Brooklyn Rail|https://brooklynrail.org/2024/05/field-notes/The-Gaza-Ghetto-Uprising/]]
 
-[^1st]:  [[haters|https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]]
+[^harv]: [[AZL|https://azinelibrary.org/zines/Harvest-of-Dead-Elephants-The-The-False-Opposition-of-Animal-Liberation]] · [[TAL|https://theanarchistlibrary.org/library/various-authors-a-murder-of-crows#toc53]]
+
+[^1st]:  [[haters|https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]] · [[ZLO|https://zinelibrary.org/i-dont-bash-back-i-shoot-first.html]]
 
 [^if]:   [[TAL|https://theanarchistlibrary.org/library/ignatius-if-we-go-we-go-on-fire]]
 
@@ -162,21 +191,23 @@ ANARCHY MEANS ATTACK**
 
 [^frnt]: [[CrimethInc|https://crimethinc.com/zines/its-safer-in-the-front]]
 
-[^take]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/its-vacant-take-it/]]
+[^take]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/its-vacant-take-it/]] · [[ZLO|https://zinelibrary.org/its-vacant-take-it.html]]
 
-[^now]:  [[ZLO|https://zinelibrary.org/now.html]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]]
+[^no]:   [[Ill Will|https://illwilleditions.noblogs.org/post/2015/09/19/catalogue/#:~:text=no selves to abolish]] · [[TAL|https://theanarchistlibrary.org/library/k-aarons-no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world]] · [[Hostis|https://incivility.org/2020/06/03/no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world-by-k-aarons/]] · [[Metamute|https://web.archive.org/web/20160311000846/http://www.metamute.org/editorial/articles/no-selves-to-abolish-afropessimism-anti-politics-and-end-world]]
 
-[^lead]: [[Ill Will|https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]]
+[^now]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]] · [[ZLO|https://zinelibrary.org/now.html]]
 
-[^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]]
+[^lead]: [[Ill Will|https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]] · [[ZLO|https://zinelibrary.org/on-the-black-leadership.html]]
+
+[^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]] · [[ZLO|https://zinelibrary.org/our-enemies-in-yellow.html]]
 
 [^666]:  [[haters|https://haters.noblogs.org/zines/#:~:text=the satanic death cult is real]] · [[TAL|https://theanarchistlibrary.org/library/sophie-lewis-the-satanic-death-cult-is-real]] · [[Commune|https://communemag.com/the-satanic-death-cult-is-real/]]
 
-[^tce]:  [[CrimethInc|https://crimethinc.com/tce]]
+[^tce]:  [[CrimethInc|https://crimethinc.com/tce]] · [[TAL|https://theanarchistlibrary.org/library/crimethinc-to-change-everything]]
 
-[^twrd]: [[ZLO|https://zinelibrary.org/towards-the-queerest-insurrection.html]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-toward-the-queerest-insurrection]]
+[^twrd]: [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-toward-the-queerest-insurrection]] · [[ZLO|https://zinelibrary.org/towards-the-queerest-insurrection.html]]
 
-[^war]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-Streets-revised-READ.pdf]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-streets-print.pdf]]
+[^war]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-Streets-revised-READ.pdf]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-streets-print.pdf]] · [[ZLO|https://zinelibrary.org/war-in-the-streets.html]]
 
 [^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]]
 
@@ -190,7 +221,7 @@ ANARCHY MEANS ATTACK**
 #gallery summary {
 	width: fit-content;
 	margin-right: auto;
-	font-size: 110%;
+	font-size: 150%;
 }
 #gallery img {
 	display: inline;
