@@ -3,10 +3,16 @@
 
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
+- [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^8]
+	- [[print pamphlet|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
+- [[Acrid Black Smoke (2021)|./acrid-black-smoke]]&nbsp;[^abs]
+	- [[screen|./acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|./acrid-black-smoke/acrid-black-smoke_print-letter.pdf]]
 - [[Against Prisons (Catherine Baker, 1996)|./against-prisons]]&nbsp;[^pris]
 	- [[screen|./against-prisons/against-prisons.pdf]] · [[print|./against-prisons/against-prisons_print-letter.pdf]]
 - [[Another Critique of Insurrectionalism (2014)|./another-critique-of-insurrectionalism]]&nbsp;[^crit]
 	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]]
+- [[Be Gay Do Crime (Mary Nardini Gang, 2018)|./be-gay-do-crime]]&nbsp;[^gay]
+	- [[screen|./be-gay-do-crime/be-gay-do-crime.pdf]] · [[print|./be-gay-do-crime/be-gay-do-crime_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
@@ -27,13 +33,15 @@
 	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_print-letter.pdf]]
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
 	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_print-letter.pdf]]
+- [[On the Black Leadership and Other White Myths (We Still Outside Collective, 2020)|./on-the-black-leadership]]&nbsp;[^lead]
+	- [[screen|./on-the-black-leadership/on-the-black-leadership.pdf]] · [[print|./on-the-black-leadership/on-the-black-leadership_print-letter.pdf]]
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|./our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
 	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_print-letter.pdf]]
 - [[To Change Everything (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
 	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_print-letter.pdf]]
-- [[Towards the Queerest Insurrection (Mary Nardini gang, 2014)|./towards-the-queerest-insurrection]]&nbsp;[^twrd]
+- [[Towards the Queerest Insurrection (Mary Nardini Gang, 2014)|./towards-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|./towards-the-queerest-insurrection/towards-the-queerest-insurrection.pdf]] · [[print|./towards-the-queerest-insurrection/towards-the-queerest-insurrection_print-letter.pdf]]
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|./war-in-the-streets]]&nbsp;[^war]
 	- [[screen|./war-in-the-streets/war-in-the-streets.pdf]] · [[print|./war-in-the-streets/war-in-the-streets_print-letter.pdf]]
@@ -44,8 +52,11 @@
 
 <details id="gallery">
 	<summary>Cover Gallery</summary>
+	<a href="8-things-you-can-do-to-stop-ice"><img loading="lazy" src="8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice.jpg"></a>
+	<a href="acrid-black-smoke"><img loading="lazy" src="acrid-black-smoke/acrid-black-smoke.jpg"></a>
 	<a href="against-prisons"><img loading="lazy" src="against-prisons/against-prisons.jpg"></a>
 	<a href="another-critique-of-insurrectionalism"><img loading="lazy" src="another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.jpg"></a>
+	<a href="be-gay-do-crime"><img loading="lazy" src="be-gay-do-crime/be-gay-do-crime.jpg"></a>
 	<a href="de-arrest-primer"><img loading="lazy" src="de-arrest-primer/de-arrest-primer.jpg"></a>
 	<a href="destroying-white-nationalism"><img loading="lazy" src="destroying-white-nationalism/destroying-white-nationalism.jpg"></a>
 	<a href="for-the-love-of-winning"><img loading="lazy" src="for-the-love-of-winning/for-the-love-of-winning.jpg"></a>
@@ -56,6 +67,7 @@
 	<a href="its-safer-in-the-front"><img loading="lazy" src="its-safer-in-the-front/its-safer-in-the-front.jpg"></a>
 	<a href="its-vacant-take-it"><img loading="lazy" src="its-vacant-take-it/its-vacant-take-it.jpg"></a>
 	<a href="now-ic"><img loading="lazy" src="now-ic/now-ic.jpg"></a>
+	<a href="on-the-black-leadership"><img loading="lazy" src="on-the-black-leadership/on-the-black-leadership.jpg"></a>
 	<a href="our-enemies-in-yellow"><img loading="lazy" src="our-enemies-in-yellow/our-enemies-in-yellow.jpg"></a>
 	<a href="satanic-death-cult"><img loading="lazy" src="satanic-death-cult/satanic-death-cult.jpg"></a>
 	<a href="to-change-everything"><img loading="lazy" src="to-change-everything/to-change-everything.jpg"></a>
@@ -86,15 +98,13 @@ You can order a pack of physical zines to support the Prairieland defendants fro
 
 A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_, _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
 
-I've got another 20ish zines in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
-
 The defendants' participation in the Emma Goldman Book Club was [[discussed quite a bit|https://web.archive.org/web/20260626010035/https://www.theguardian.com/us-news/ng-interactive/2026/jun/24/prairieland-texas-ice-protests-zines]].
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
+Based on the [[photos of "evidence"|./sources/guardian-motherlode.jpeg]] in that article, I've added _Eight Things You Can Do to Stop Ice_, _Acrid Black Smoke_, _Be Gay Do Crime_, and _On the Black Leadership and Other White Myths_. I've got a bunch more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
+
 You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
-
-
 
 
 ## Process
@@ -126,9 +136,15 @@ CHINGA LA MIGRA
 ANARCHY MEANS ATTACK**
 
 
+[^8]:    [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
+
+[^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
+
 [^pris]: [[AZL|https://azinelibrary.org/zines/Against-Prisons]] · [[TAL|https://theanarchistlibrary.org/library/catherine-baker-against-prisons]] · [[Wildcat|http://wildcat.international/againstp.html]]
 
 [^crit]: [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]]
+
+[^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]]
 
 [^da]:   [[haters|https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
 
@@ -149,6 +165,8 @@ ANARCHY MEANS ATTACK**
 [^take]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/its-vacant-take-it/]]
 
 [^now]:  [[ZLO|https://zinelibrary.org/now.html]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]]
+
+[^lead]: [[Ill Will|https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]]
 
 [^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]]
 
