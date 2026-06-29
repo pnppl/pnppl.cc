@@ -78,7 +78,7 @@ And if you can spend the rest of your life in prison for reading, you don't have
 
 ## Sources
 
-You can order a pack of physical zines to support the Prairieland defendants from [[Firestorm Books|https://firestorm.coop/products/25308-the-government-doesnt-wa]]. Their list of fifteen was my starting point (I've only added another four to that total so far). It's difficult to get information about what was presented at the trial since it was held in a secretive kangaroo court.
+You can order a pack of physical zines to support the Prairieland defendants from [[Firestorm Books|https://firestorm.coop/products/25308-the-government-doesnt-wa]]. Their list of fifteen was my starting point. It's difficult to get information about what was presented at the trial since it was held in a secretive kangaroo court.
 
 A few zines are visible in a grainy photo in the [[criminal complaint|https://web.archive.org/web/20260615142105/https://storage.courtlistener.com/recap/gov.uscourts.txnd.410501/gov.uscourts.txnd.410501.1.0.pdf]] filed against Des, including one Firestorm didn't list (_Another Critique of Insurrectionalism_). I found a few more by searching [[notes|https://prairielanddefendants.com/category/court-notes/]] taken in court by supporters: _Destroying White Nationalism_, _I Don't Bash Back I Shoot First_ (mentioned *several* times), and _Why Riot?_.
 
@@ -86,7 +86,7 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
-Based on the [[photos of "evidence"|./sources/guardian-motherlode.jpeg]] in that article, I've added:
+Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Eight Things You Can Do to Stop Ice_
 - _Acrid Black Smoke_
 - _Be Gay Do Crime_
