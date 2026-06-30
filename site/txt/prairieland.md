@@ -21,12 +21,14 @@
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
 	- [[screen|./destroying-white-nationalism/destroying-white-nationalism.pdf]] · [[print|./destroying-white-nationalism/destroying-white-nationalism_print-letter.pdf]]
-- [[Follow the Fires (Harami, 2024)|./follow-the-fires]]&nbsp;[^fire]
+- [[Follow the Fires: Insurgency Against Identity (Harami, 2024)|./follow-the-fires]]&nbsp;[^fire]
 	- [[screen|./follow-the-fires/follow-the-fires.pdf]] · [[print|./follow-the-fires/follow-the-fires_print-letter.pdf]]
 - [[For the love of winning: An open letter to Extinction Rebellion (John Jordan, 2019)|./for-the-love-of-winning]]&nbsp;[^xr]
 	- [[screen|./for-the-love-of-winning/for-the-love-of-winning.pdf]] · [[print|./for-the-love-of-winning/for-the-love-of-winning_print-letter.pdf]]
 - [[The Gaza Ghetto Uprising (Adi Callai, 2024)|./gaza-ghetto-uprising]]&nbsp;[^gaza]
 	- [[screen|./gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|./gaza-ghetto-uprising/gaza-ghetto-uprising_print-letter.pdf]]
+- [[Hacking the Suburbs (David Holmgren, 2022)|./hacking-the-suburbs]]&nbsp;[^hack]
+	- send me a PDF
 - [[The Harvest of Dead Elephants (2007)|./harvest-of-dead-elephants]]&nbsp;[^harv]
 	- [[screen|./harvest-of-dead-elephants/harvest-of-dead-elephants.pdf]] · [[print|./harvest-of-dead-elephants/harvest-of-dead-elephants_print-letter.pdf]]
 - [[I Don't Bash Back, I Shoot First (2012)|./i-dont-bash-back-i-shoot-first]]&nbsp;[^1st]
@@ -92,6 +94,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Be Gay Do Crime_
 - _Call_
 - _Follow the Fires_
+- _Hacking the Suburbs_
 - _Harvest of Dead Elephants_
 - _No Selves to Abolish_
 - _On the Black Leadership_
@@ -109,7 +112,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I couldn't find any PDF versions of _We Don't Need "Safety"_. Pandoc's defaults were bad and I didn't feel like messing with LaTeX, so that one doesn't have a PDF. If you have one, or know of other zines I should add, email me.
+I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those doesn't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[./sources/unidentified/]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
 
@@ -151,6 +154,8 @@ ANARCHY MEANS ATTACK**
 [^xr]:   [[Ill Will|https://illwill.com/print/for-the-love-of-winning]] · [[zad for ever|https://zadforever.blog/2019/05/03/for-the-love-of-winning-an-open-letter-to-extinction-rebellion/]]
 
 [^gaza]: [[haters|https://haters.noblogs.org/zines/#:~:text=the ghetto gaza uprising]] · [[TAL|https://theanarchistlibrary.org/library/adi-callai-the-gaza-ghetto-uprising]] · [[Brooklyn Rail|https://brooklynrail.org/2024/05/field-notes/The-Gaza-Ghetto-Uprising/]]
+
+[^hack]: [[Substack|https://territories.substack.com/p/hacking-the-suburbs]]
 
 [^harv]: [[AZL|https://azinelibrary.org/zines/Harvest-of-Dead-Elephants-The-The-False-Opposition-of-Animal-Liberation]] · [[TAL|https://theanarchistlibrary.org/library/various-authors-a-murder-of-crows#toc53]]
 
