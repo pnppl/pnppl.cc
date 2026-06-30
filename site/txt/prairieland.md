@@ -15,6 +15,8 @@
 	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]]
 - [[Be Gay Do Crime (Mary Nardini Gang, 2018)|./be-gay-do-crime]]&nbsp;[^gay]
 	- [[screen|./be-gay-do-crime/be-gay-do-crime.pdf]] · [[print|./be-gay-do-crime/be-gay-do-crime_print-letter.pdf]]
+- [[Butteflies, Polyamory and Ideology: Letter on Inconsequence (Aviv Etrebilal, 2013)|./butterflies-polyamory-and-ideology]]&nbsp;[^poly]
+	- [[screen|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology.pdf]] · [[print|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology_print-letter.pdf]]
 - [[Call (2004)|./call-ic]]&nbsp;[^call]
 	- [[screen|./call-ic/call-ic.pdf]] · [[print|./call-ic/call-ic_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
@@ -145,6 +147,8 @@ ANARCHY MEANS ATTACK**
 [^crit]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/theory/another-critique-insurrectionalism/]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]] · [[Subversion|https://web.archive.org/web/20151020060007/https://subversionpress.wordpress.com/2015/07/17/another-critique-of-insurrectionalism/]]
 
 [^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
+
+[^poly]: [[Untorelli|https://web.archive.org/web/20190817110450/https://untorellipress.noblogs.org/post/2018/07/23/butterflies-polyamory-ideology-letter-on-inconsequence/]] · [[TAL|https://theanarchistlibrary.org/library/aviv-etrebilal-butterflies-polyamory-and-ideology]] · [[ZLO|https://zinelibrary.org/butterflies-polyamory-ideology.html]] · [[Non-Fides|https://web.archive.org/web/20230117110232/http://www.non-fides.fr/?Butterflies-polyamory-and-ideology]]
 
 [^call]: [[Ill Will|https://ill-will-editions.tumblr.com/post/152254733939/call-2004-updated-covers-in-english-and]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-call]] · [[ZLO|https://zinelibrary.org/the-call.html]]
 
