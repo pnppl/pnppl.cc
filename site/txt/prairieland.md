@@ -41,6 +41,8 @@
 	- [[screen|./its-safer-in-the-front/its-safer-in-the-front.pdf]] · [[print|./its-safer-in-the-front/its-safer-in-the-front_print-letter.pdf]]
 - [[It's Vacant, Take It! (Homes Not Jails, 2013)|./its-vacant-take-it]]&nbsp;[^take]
 	- [[screen|./its-vacant-take-it/its-vacant-take-it.pdf]] · [[print|./its-vacant-take-it/its-vacant-take-it_print-letter.pdf]]
+- [[Lies: Letters to L.: Paranoia and Visions (M. Sandovsky, 2012)|./lies-letters-to-l]]&nbsp;[^lies]
+	- [[screen|./lies-letters-to-l/lies-letters-to-l.pdf]] · [[print|./lies-letters-to-l/lies-letters-to-l_print-letter.pdf]]
 - [[No Selves to Abolish: Afropessimism, Anti-Politics, and the End of the World (K. Aarons, 2016)|./no-selves-to-abolish]]&nbsp;[^no]
 	- [[screen|./no-selves-to-abolish/no-selves-to-abolish.pdf]] · [[print|./no-selves-to-abolish/no-selves-to-abolish_print-letter.pdf]]
 - [[Now (The Invisible Committee, 2017)|./now-ic]]&nbsp;[^now]
@@ -51,7 +53,7 @@
 	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
 	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_print-letter.pdf]]
-- [[To Change Everything (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
+- [[To Change Everything: an anarchist appeal (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
 	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_print-letter.pdf]]
 - [[Towards the Queerest Insurrection (Mary Nardini Gang, 2014)|./towards-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|./towards-the-queerest-insurrection/towards-the-queerest-insurrection.pdf]] · [[print|./towards-the-queerest-insurrection/towards-the-queerest-insurrection_print-letter.pdf]]
@@ -96,6 +98,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Follow the Fires_
 - _Hacking the Suburbs_
 - _Harvest of Dead Elephants_
+- _Letters to L._
 - _No Selves to Abolish_
 - _On the Black Leadership_
 
@@ -168,6 +171,8 @@ ANARCHY MEANS ATTACK**
 [^frnt]: [[CrimethInc|https://crimethinc.com/zines/its-safer-in-the-front]]
 
 [^take]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/its-vacant-take-it/]] · [[ZLO|https://zinelibrary.org/its-vacant-take-it.html]]
+
+[^lies]: [[Lies|https://www.liesjournal.net/#:~:text=letters to l: visions and paranoia]] · [[TAL|https://theanarchistlibrary.org/library/m-sandovsky-letters-to-l-paranoia-and-visions]]
 
 [^no]:   [[Ill Will|https://illwilleditions.noblogs.org/post/2015/09/19/catalogue/#:~:text=no selves to abolish]] · [[TAL|https://theanarchistlibrary.org/library/k-aarons-no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world]] · [[Hostis|https://incivility.org/2020/06/03/no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world-by-k-aarons/]] · [[Metamute|https://web.archive.org/web/20160311000846/http://www.metamute.org/editorial/articles/no-selves-to-abolish-afropessimism-anti-politics-and-end-world]]
 
