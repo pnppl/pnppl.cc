@@ -96,6 +96,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Eight Things You Can Do to Stop Ice_
 - _Acrid Black Smoke_
 - _Be Gay Do Crime_
+- _Butteflies, Polyamory and Ideology_
 - _Call_
 - _Follow the Fires_
 - _Hacking the Suburbs_
