@@ -7,6 +7,8 @@
 
 - [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
 	- [[print (pamphlet)|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
+- [[Absolute Sharing Between Friends (The Imaginary Party)|./absolute-sharing]]&nbsp;[^asbf]
+	- [[print (poster)|./absolute-sharing/absolute-sharing_print-tabloid.pdf]]
 - [[Acrid Black Smoke (2021)|./acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|./acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|./acrid-black-smoke/acrid-black-smoke_print-letter.pdf]]
 - [[Against Prisons (Catherine Baker, 1996)|./against-prisons]]&nbsp;[^pris]
@@ -98,6 +100,7 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 
 Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Eight Things You Can Do to Stop ICE_
+- _Absolute Sharing_
 - _Acrid Black Smoke_
 - _Be Gay Do Crime_
 - _Butterflies, Polyamory and Ideology_
@@ -145,6 +148,8 @@ ANARCHY MEANS ATTACK**
 
 
 [^ice]:  [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
+
+[^asbf]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/download#:~:text=absolute sharing between friends]]
 
 [^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
