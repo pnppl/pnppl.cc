@@ -53,6 +53,8 @@
 	- [[screen|./now-ic/now-ic.pdf]] · [[print|./now-ic/now-ic_print-letter.pdf]]
 - [[On the Black Leadership & Other White Myths (We Still Outside Collective, 2020)|./on-the-black-leadership]]&nbsp;[^lead]
 	- [[screen|./on-the-black-leadership/on-the-black-leadership.pdf]] · [[print|./on-the-black-leadership/on-the-black-leadership_print-letter.pdf]]
+- [[Open propositions for a strategic madness (2021)|./open-propositions-for-a-strategic-madness]]&nbsp;[^mad]
+	- send me a PDF
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|./our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|./our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|./our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|./satanic-death-cult]]&nbsp;[^666]
@@ -121,7 +123,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those doesn't have a PDF. If you have one, or know of other zines I should add, email me.
+I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those doesn't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[./sources/unidentified/]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
 
@@ -189,6 +191,8 @@ ANARCHY MEANS ATTACK**
 [^now]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]] · [[ZLO|https://zinelibrary.org/now.html]]
 
 [^lead]: [[Ill Will|https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]] · [[ZLO|https://zinelibrary.org/on-the-black-leadership.html]]
+
+[^mad]:  [[Of Unsound Mind|https://web.archive.org/web/20210624090104/https://www.unsoundmind.org/post/open-propositions-for-a-strategic-madness]] · [[Substack|https://ofunsoundmind.substack.com/p/open-propositions-for-a-strategic]]
 
 [^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]] · [[ZLO|https://zinelibrary.org/our-enemies-in-yellow.html]]
 
