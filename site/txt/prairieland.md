@@ -19,6 +19,8 @@
 	- [[screen|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology.pdf]] · [[print|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology_print-letter.pdf]]
 - [[Call (2004)|./call-ic]]&nbsp;[^call]
 	- [[screen|./call-ic/call-ic.pdf]] · [[print|./call-ic/call-ic_print-letter.pdf]]
+- [[Criminal Intimacy (Mary Nardini Gang, 2009)|./criminal-intimacy]]&nbsp;[^crim]
+	- [[screen|./criminal-intimacy/criminal-intimacy.pdf]] · [[print|./criminal-intimacy/criminal-intimacy_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
@@ -98,6 +100,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Be Gay Do Crime_
 - _Butterflies, Polyamory and Ideology_
 - _Call_
+- _Criminal Intimacy_
 - _Follow the Fires_
 - _Hacking the Suburbs_
 - _Harvest of Dead Elephants_
@@ -152,6 +155,8 @@ ANARCHY MEANS ATTACK**
 [^poly]: [[Untorelli|https://web.archive.org/web/20190817110450/https://untorellipress.noblogs.org/post/2018/07/23/butterflies-polyamory-ideology-letter-on-inconsequence/]] · [[TAL|https://theanarchistlibrary.org/library/aviv-etrebilal-butterflies-polyamory-and-ideology]] · [[ZLO|https://zinelibrary.org/butterflies-polyamory-ideology.html]] · [[Non-Fides|https://web.archive.org/web/20230117110232/http://www.non-fides.fr/?Butterflies-polyamory-and-ideology]]
 
 [^call]: [[Ill Will|https://ill-will-editions.tumblr.com/post/152254733939/call-2004-updated-covers-in-english-and]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-call]] · [[ZLO|https://zinelibrary.org/the-call.html]]
+
+[^crim]: [[Archive.org|https://archive.org/details/criminal-intimacy-print-zine]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-criminal-intimacy]] · [[Vermilion|https://vermilionpress.noblogs.org/post/2024/12/30/the-goods-zine-drive/]] · [[Warzone|https://warzonedistro.noblogs.org/post/2017/09/14/criminal-intimacy/]]
 
 [^da]:   [[haters|https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
 
