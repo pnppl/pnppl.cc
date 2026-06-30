@@ -15,7 +15,7 @@
 	- [[screen|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|./another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]]
 - [[Be Gay Do Crime (Mary Nardini Gang, 2018)|./be-gay-do-crime]]&nbsp;[^gay]
 	- [[screen|./be-gay-do-crime/be-gay-do-crime.pdf]] · [[print|./be-gay-do-crime/be-gay-do-crime_print-letter.pdf]]
-- [[Butteflies, Polyamory and Ideology: Letter on Inconsequence (Aviv Etrebilal, 2013)|./butterflies-polyamory-and-ideology]]&nbsp;[^poly]
+- [[Butterflies, Polyamory and Ideology: Letter on Inconsequence (Aviv Etrebilal, 2013)|./butterflies-polyamory-and-ideology]]&nbsp;[^poly]
 	- [[screen|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology.pdf]] · [[print|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology_print-letter.pdf]]
 - [[Call (2004)|./call-ic]]&nbsp;[^call]
 	- [[screen|./call-ic/call-ic.pdf]] · [[print|./call-ic/call-ic_print-letter.pdf]]
@@ -93,10 +93,10 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
 Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
-- _Eight Things You Can Do to Stop Ice_
+- _Eight Things You Can Do to Stop ICE_
 - _Acrid Black Smoke_
 - _Be Gay Do Crime_
-- _Butteflies, Polyamory and Ideology_
+- _Butterflies, Polyamory and Ideology_
 - _Call_
 - _Follow the Fires_
 - _Hacking the Suburbs_
