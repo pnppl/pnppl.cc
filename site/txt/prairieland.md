@@ -1,7 +1,7 @@
 # Prairieland Zines
 #forbidden-knowledge #politics #project 2026-06-15
 
-<b style="font-size: 125%">~&gt; view as <a href="./map.html">Crime Scene</a> or <a href="./gallery.html">Cover Gallery</a>&lt;~</b>
+**&#126;> view as [[Crime Scene|./map.html]] or [[Cover Gallery|./gallery.html]] <&#126;**
 
 **Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
 
