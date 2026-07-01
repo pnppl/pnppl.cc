@@ -9,7 +9,7 @@
 	- [[print (pamphlet)|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
 - [[Absolute Sharing Between Friends (The Imaginary Party)|./absolute-sharing]]&nbsp;[^asbf]
 	- [[print (tabloid poster)|./absolute-sharing/absolute-sharing_print-tabloid.pdf]]
-- [[Gender Subversion|./crimethinc-gender/crimethinc-gender-classic.html]] & [[Gender Self-Determination|./crimethinc-gender/crimethinc-gender-remix.html]] posters (CrimethInc, 2003/2023)&nbsp;[^cwcg]
+- Gender [[Subversion|./crimethinc-gender/classic.html]]/[[Self-Determination|./crimethinc-gender/remix.html]] posters (CrimethInc, 2003/2023)&nbsp;[^cwcg]
 	- [[classic|./crimethinc-gender/crimethinc-gender-classic_print-letter.pdf]] · [[remix|./crimethinc-gender/crimethinc-gender-remix_print-letter.pdf]]
 - [[Acrid Black Smoke (2021)|./acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|./acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|./acrid-black-smoke/acrid-black-smoke_print-letter.pdf]]
