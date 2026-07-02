@@ -87,7 +87,7 @@
 
 ## About
 
-These zines were presented by the state as evidence in the [[Prairieland trial|https://prairielanddefendants.com/about-the-case/]]. (Visit [[Support Prairieland Defendants|https://prairielanddefendants.com/resources/zines-flyers/]] for zines *about* the case.) [[Des|https://freedes.net/]] was [[sentenced to 30 years in prison|https://prairielanddefendants.com/press-release/eight-federal-prairieland-defendants-sentenced-today-to-prison-terms-ranging-from-30-100-years-for-common-protest-activity/]] just because he moved a box of them from one place to another.
+These zines were presented by the state as evidence in the [[Prairieland trial|https://prairielanddefendants.com/about-the-case/]]. (Visit [[Support the Prairieland Defendants|https://prairielanddefendants.com/resources/zines-flyers/]] for zines *about* the case.) [[Des|https://freedes.net/]] was [[sentenced to 30 years in prison|https://prairielanddefendants.com/press-release/eight-federal-prairieland-defendants-sentenced-today-to-prison-terms-ranging-from-30-100-years-for-common-protest-activity/]] just because he moved a box of them from one place to another.
 
 While the entire prosecution is clearly a steaming pile of politically motivated fascist bullshit, the charges against people whose only connection to the inciting incident was association with the participants — and whose only crime was being an anarchist — are particularly galling.
 

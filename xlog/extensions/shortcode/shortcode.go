@@ -35,6 +35,14 @@ var shortcodes = map[string]ShortCode{
 		excl := `<span class="is-hidden">!!<br><br></span>`
 		return template.HTML(fmt.Sprintf(`<div class="message is-danger"><div class="message-body"><b>%s%s</b></div></div>`, excl, text)) }},
 //	"!!":   {Render: func(c Markdown) template.HTML { return container("is-danger", c) }},
+/* This would be so convenient but it breaks the footnotes and I CBA to figure it out rn
+	"deets":   {Render: func(c Markdown) template.HTML {
+		text := render(c)
+		text = strings.TrimPrefix(text, "<p>")
+		text = strings.TrimSuffix(text, "</p>\n")
+		summary, _, _ := strings.Cut(text, "\n")
+		return template.HTML(fmt.Sprintf(`<details><summary>%s</summary>%s</details>`, summary, text)) }},
+*/
 }
 
 func RegisterShortCode(name string, shortcode ShortCode) {
