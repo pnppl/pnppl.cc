@@ -4,7 +4,7 @@
 !! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
 <br>
-<center><b style="font-size: 125%;">&#126;&gt; view: <a href="./map.html">Crime Scene</a> · <a href="./gallery.html">Cover Gallery</a> &lt;&#126;</b></center>
+<center><b style="font-size: 125%;">&#126;&gt; <a href="./map.html">Crime Scene</a> &#183; <a href="./gallery.html">Cover Gallery</a> &lt;&#126;</b></center>
 <br>
 
 - [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
