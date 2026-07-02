@@ -109,7 +109,6 @@ h4,
 h5,
 h6 {
 	font-style: italic;
-	display: flex; /* for ^ button */
 }
 h1 em,
 h2 em,
@@ -848,6 +847,7 @@ a.navbar-item.active:active {
 .view h6 {
 	border-bottom: 2px solid var(--bg);
 	padding-bottom: 0.5em;
+	display: flex; /* for ^ button */
 }
 /*.content .view h1, */
 /*.content .view h2 { */
