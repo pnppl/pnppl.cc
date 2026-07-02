@@ -109,6 +109,7 @@ h4,
 h5,
 h6 {
 	font-style: italic;
+	display: flex; /* for ^ button */
 }
 h1 em,
 h2 em,
@@ -866,6 +867,9 @@ a.head-sect,
 a.to-toc {
 	font-style: normal;
 	color: lightblue;
+}
+a.to-toc {
+	margin-left: auto;
 }
 a.head-sect:visited,
 a.to-toc:visited {
