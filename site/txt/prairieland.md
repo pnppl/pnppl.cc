@@ -67,6 +67,8 @@
 	- [[screen|./satanic-death-cult/satanic-death-cult.pdf]] · [[print|./satanic-death-cult/satanic-death-cult_print-letter.pdf]]
 - [[Shattering Abolition: Against Reformist Counterinsurgency in the Streets of Oakland (2023)|./shattering-abolition]]&nbsp;[^shat]
 	- [[screen|./shattering-abolition/shattering-abolition.pdf]] · [[print|./shattering-abolition/shattering-abolition_print-letter.pdf]]
+- [[Strange Constellations (2016)|./strange-constellations]]&nbsp;[^stco]
+	- [[screen|./strange-constellations/strange-constellations.pdf]] · [[print|./strange-constellations/strange-constellations_print-letter.pdf]]
 - [[To Change Everything: an anarchist appeal (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
 	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_print-letter.pdf]]
 - [[Toward the Queerest Insurrection (Mary Nardini Gang, 2014)|./toward-the-queerest-insurrection]]&nbsp;[^twrd]
@@ -122,6 +124,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _No Selves to Abolish_
 - _On the Black Leadership_
 - _Shattering Abolition_
+- _Strange Constellations_
 
 I've got more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
 
@@ -138,6 +141,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 - _De-Arrest Primer_
 - _It's Vacant, Take It!_
 - _Shattering Abolition_
+- _Strange Constellations_
 - _War in the Streets_
 
 
@@ -223,6 +227,8 @@ ANARCHY MEANS ATTACK**
 [^666]:  [[haters|https://haters.noblogs.org/zines/#:~:text=the satanic death cult is real]] · [[TAL|https://theanarchistlibrary.org/library/sophie-lewis-the-satanic-death-cult-is-real]] · [[Commune|https://communemag.com/the-satanic-death-cult-is-real/]]
 
 [^shat]: [[haters|https://haters.noblogs.org/zines/#:~:text=shattering abolition]] · [[Black Ink|https://black-ink.info/2023/02/03/shattering-abolition-against-reformist-counterinsurgency-in-the-streets-of-oakland/]]
+
+[^stco]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/post/148861170442/friendship-as-a-form-of-life-ii-continuum-stange]]
 
 [^tce]:  [[CrimethInc|https://crimethinc.com/tce]] · [[TAL|https://theanarchistlibrary.org/library/crimethinc-to-change-everything]]
 
