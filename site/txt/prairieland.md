@@ -1,9 +1,11 @@
 # Prairieland Zines
 #forbidden-knowledge #politics #project 2026-06-15
 
-**&#126;> view as [[Crime Scene|./map.html]] or [[Cover Gallery|./gallery.html]] <&#126;**
+!! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
-**Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
+<br>
+<center><b style="font-size: 125%;">&#126;&gt; view: <a href="./map.html">Crime Scene</a> · <a href="./gallery.html">Cover Gallery</a> &lt;&#126;</b></center>
+<br>
 
 - [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|./8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
 	- [[print (pamphlet)|./8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]]
@@ -76,6 +78,8 @@
 - [[Why Riot? (Phillip Neel, 2014)|./why-riot]]&nbsp;[^riot]
 	- [[screen|./why-riot/why-riot.pdf]] · [[print|./why-riot/why-riot_print-letter.pdf]]
 
+**Download all: [[git.gay|https://git.gay/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Codeberg|https://codeberg.org/pnppl/pnppl.cc/archive/main:site/prairieland.zip]] · [[Github|https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fpnppl%2Fpnppl.cc%2Ftree%2Fmain%2Fsite%2Fprairieland%2F]]**
+
 
 ## About
 
@@ -117,8 +121,9 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Letters to L._
 - _No Selves to Abolish_
 - _On the Black Leadership_
+- _Shattering Abolition_
 
-I've got a bunch more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
+I've got more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
 
 You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
 
@@ -127,7 +132,14 @@ You are strongly encouraged to start your own Emma Goldman Book Club and/or Prai
 
 For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
-HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've finished manually re-creating _De-Arrest Primer_, _It's Vacant, Take It!_, and _War in the Streets_.
+HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've manually re-created:
+- _Absolute Sharing_
+- CrimethInc's gender posters
+- _De-Arrest Primer_
+- _It's Vacant, Take It!_
+- _Shattering Abolition_
+- _War in the Streets_
+
 
 ## Help Me Out
 
