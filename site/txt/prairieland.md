@@ -25,6 +25,8 @@
 	- [[screen|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology.pdf]] · [[print|./butterflies-polyamory-and-ideology/butterflies-polyamory-and-ideology_print-letter.pdf]]
 - [[Call (2004)|./call-ic]]&nbsp;[^call]
 	- [[screen|./call-ic/call-ic.pdf]] · [[print|./call-ic/call-ic_print-letter.pdf]]
+- [[Cop City FAQ (2022)|./cop-city-faq]]&nbsp;[^city]
+	- [[screen|./cop-city-faq/cop-city-faq.pdf]] · [[print|./cop-city-faq/cop-city-faq_print-letter.pdf]]
 - [[Criminal Intimacy (Mary Nardini Gang, 2009)|./criminal-intimacy]]&nbsp;[^crim]
 	- [[screen|./criminal-intimacy/criminal-intimacy.pdf]] · [[print|./criminal-intimacy/criminal-intimacy_print-letter.pdf]]
 - [[De-Arrest Primer (2024)|./de-arrest-primer]]&nbsp;[^da]
@@ -116,6 +118,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Be Gay Do Crime_
 - _Butterflies, Polyamory and Ideology_
 - _Call_
+- Cop City FAQ
 - _Criminal Intimacy_
 - _Follow the Fires_
 - _Hacking the Suburbs_
@@ -137,6 +140,7 @@ For each zine, I used a pre-existing copy whenever possible. It was easy to find
 
 HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've manually re-created:
 - _Absolute Sharing_
+- Cop City FAQ
 - CrimethInc's gender posters
 - _De-Arrest Primer_
 - _It's Vacant, Take It!_
@@ -147,7 +151,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those doesn't have a PDF. If you have one, or know of other zines I should add, email me.
+I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[./sources/unidentified/]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
 
@@ -185,6 +189,8 @@ ANARCHY MEANS ATTACK**
 [^poly]: [[Untorelli|https://web.archive.org/web/20190817110450/https://untorellipress.noblogs.org/post/2018/07/23/butterflies-polyamory-ideology-letter-on-inconsequence/]] · [[TAL|https://theanarchistlibrary.org/library/aviv-etrebilal-butterflies-polyamory-and-ideology]] · [[ZLO|https://zinelibrary.org/butterflies-polyamory-ideology.html]] · [[Non-Fides|https://web.archive.org/web/20230117110232/http://www.non-fides.fr/?Butterflies-polyamory-and-ideology]]
 
 [^call]: [[Ill Will|https://ill-will-editions.tumblr.com/post/152254733939/call-2004-updated-covers-in-english-and]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-call]] · [[ZLO|https://zinelibrary.org/the-call.html]]
+
+[^city]: [[Defend the Atlanta Forest|https://defendtheatlantaforest.org/media-kit/]]
 
 [^crim]: [[Archive.org|https://archive.org/details/criminal-intimacy-print-zine]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-criminal-intimacy]] · [[Vermilion|https://vermilionpress.noblogs.org/post/2024/12/30/the-goods-zine-drive/]] · [[Warzone|https://warzonedistro.noblogs.org/post/2017/09/14/criminal-intimacy/]]
 
