@@ -124,6 +124,7 @@ low priority/done:
 				- kind of hard to troubleshoot because it behaves differently with the local server than the deployed one
 - reduced title to 70 chars, which is max for gopher. filename still doesn't display quite right.
 	- ! floating it to the right on list pages is stupid and should be changed
+		- or at least figure out what to "clear" to make it look right in netscape 7.2
 - Backlinks, See Also added with shell kludge
 - replace branding - logo, name, favicon
 	- fluffy dandelion formed from network graph (nodes and lines)

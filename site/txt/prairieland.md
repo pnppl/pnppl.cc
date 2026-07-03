@@ -75,6 +75,8 @@
 	- [[screen|./strange-constellations/strange-constellations.pdf]] · [[print|./strange-constellations/strange-constellations_print-letter.pdf]]
 - [[To Change Everything: an anarchist appeal (CrimethInc, 2015)|./to-change-everything]]&nbsp;[^tce]
 	- [[screen|./to-change-everything/to-change-everything.pdf]] · [[print|./to-change-everything/to-change-everything_print-letter.pdf]]
+- [[To Them, We Are All Outside Agitators: Encampments & Escalation (Within Our Lifetime, 2024)|./to-them-we-are-all-outside-agitators]]&nbsp;[^wol]
+	- send me a PDF
 - [[Toward the Queerest Insurrection (Mary Nardini Gang, 2014)|./toward-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|./toward-the-queerest-insurrection/toward-the-queerest-insurrection.pdf]] · [[print|./toward-the-queerest-insurrection/toward-the-queerest-insurrection_print-letter.pdf]]
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|./war-in-the-streets]]&nbsp;[^war]
@@ -131,6 +133,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _On the Black Leadership_
 - _Shattering Abolition_
 - _Strange Constellations_
+- _Outside Agitators_
 
 I've got more in the pipeline. If you don't want to wait, here's the in-progress directory: [[./new/]] and here are my notes: [[./notes.md]]
 
@@ -155,7 +158,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
+I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_, _Outside Agitators_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[./sources/unidentified/]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
 
@@ -243,6 +246,8 @@ ANARCHY MEANS ATTACK**
 [^stco]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/post/148861170442/friendship-as-a-form-of-life-ii-continuum-stange]]
 
 [^tce]:  [[CrimethInc|https://crimethinc.com/tce]] · [[TAL|https://theanarchistlibrary.org/library/crimethinc-to-change-everything]]
+
+[^wol]:  [[Within Our Lifetime|https://wolpalestine.com/encampments/]]
 
 [^twrd]: [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-toward-the-queerest-insurrection]] · [[ZLO|https://zinelibrary.org/towards-the-queerest-insurrection.html]]
 
