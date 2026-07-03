@@ -33,6 +33,8 @@
 	- [[screen|./de-arrest-primer/de-arrest-primer.pdf]] · [[print|./de-arrest-primer/de-arrest-primer_print-letter.pdf]]
 - [[Destroying White Nationalism (Antifa International)|./destroying-white-nationalism]]&nbsp;[^wn]
 	- [[screen|./destroying-white-nationalism/destroying-white-nationalism.pdf]] · [[print|./destroying-white-nationalism/destroying-white-nationalism_print-letter.pdf]]
+- [[The Do-It-Yourself Occupation Guide: 2024 Edition (2024)|./diy-occupation-guide-2024]]&nbsp;[^occu]
+	- [[screen|./diy-occupation-guide-2024/diy-occupation-guide-2024.pdf]] · [[print|./diy-occupation-guide-2024/diy-occupation-guide-2024_print-letter.pdf]]
 - [[Follow the Fires: Insurgency Against Identity (Harami, 2024)|./follow-the-fires]]&nbsp;[^fire]
 	- [[screen|./follow-the-fires/follow-the-fires.pdf]] · [[print|./follow-the-fires/follow-the-fires_print-letter.pdf]]
 - [[For the love of winning: An open letter to Extinction Rebellion (John Jordan, 2019)|./for-the-love-of-winning]]&nbsp;[^xr]
@@ -120,6 +122,7 @@ Based on the [[photos of "evidence"|./map.html]] in that article, I've added:
 - _Call_
 - Cop City FAQ
 - _Criminal Intimacy_
+- _DIY Occupation Guide_
 - _Follow the Fires_
 - _Hacking the Suburbs_
 - _Harvest of Dead Elephants_
@@ -143,6 +146,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 - Cop City FAQ
 - CrimethInc's gender posters
 - _De-Arrest Primer_
+- _DIY Occupation Guide_
 - _It's Vacant, Take It!_
 - _Shattering Abolition_
 - _Strange Constellations_
@@ -197,6 +201,8 @@ ANARCHY MEANS ATTACK**
 [^da]:   [[haters|https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
 
 [^wn]:   [[Antifa International|https://deathtofascism.com/resources/#:~:text=destroying white nationalism]]
+
+[^occu]: [[Archive.org|https://archive.org/details/diy-occupation-guide-2024/]] · [[IndyBay|https://www.indybay.org/newsitems/2024/04/29/18865522.php]] · [[Escalate Network|https://web.archive.org/web/20240429101818/https://escalatenetwork.org/post/749031816489484288/the-do-it-yourself-occupation-guide-2024-edition]]
 
 [^fire]: [[Ruins of Capital|https://ruinsofcapital.noblogs.org/follow-the-fires/]] · [[TAL|https://theanarchistlibrary.org/library/haraami-follow-the-fires]] · [[ZLO|https://zinelibrary.org/follow-the-fires-insurgency-against-identity.html]] · [[Living & Fighting|https://web.archive.org/web/20240705045730/https://livingandfighting.net/Follow-the-Fires]]
 
