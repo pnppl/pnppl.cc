@@ -11,6 +11,7 @@
 - [[fs-ir]]
 - [[mirrors]]
 - [[pnppl]]
+- [[prairieland]]
 - [[sitemap]]
 - [[slashpages]]
 
