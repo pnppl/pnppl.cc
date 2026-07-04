@@ -218,3 +218,11 @@ longterm notions
 > But honestly — IE under Wine with working flexbox and one missing background? That's a pretty good day for IE.
 > **Just accept the L.** You're three levels deep into progressive enhancement for a browser from 1993 that probably has single-digit active users. The ✓ works everywhere that matters. The Mosaic checkbox was a fun idea but maybe this is where you draw the line.
 > Mosaic users who encounter a mystery empty box next to some garbled UTF-8 bytes are probably used to it by now.
+
+this is becoming increasingly fragmented...
+- main repo: site/ is deployed to web1.0hosting via script over ftp and accessed as pnppl.cc
+- ../prairieland: deployed to git pages automatically when pushed and accessed as zines.pnppl.cc
+	- would like to host elsewhere but was running out of space on web1.0hosting and would rather not pay money
+- ../hrt: deployed to statichost.eu from codeberg automatically when pushed and accessed as hrt.pnppl.cc
+	- this one does not support http, but there was already a mirror on github pages
+- ../handthing.party: deploy to web1.0hosting via script over ftp and accessed as handthing.party. not really connected to pnppl.cc
