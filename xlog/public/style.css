@@ -958,6 +958,11 @@ a.autolink.glossary {
 	font-family: inherit;
 	letter-spacing: 0.5px;
 }
+/* don't annotate subdomains */
+.view a[href*=".pnppl.cc"]:after {
+	content: "";
+	margin: 0;
+}
 
 /* Checkboxes */
 .view li:has(> input[type="checkbox"]) {
