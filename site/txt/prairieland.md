@@ -4,7 +4,7 @@
 !! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
 <br>
-<center><b style="font-size: 125%;">&#126;&gt; <a href="//zines.pnppl.cc/map.html">Crime Scene</a> &#183; <a href="//zines.pnppl.cc/gallery.html">Cover Gallery</a> &lt;&#126;</b></center>
+<center><b style="font-size: 125%;">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &#183; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
 <br>
 
 - [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
@@ -114,7 +114,7 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
-Based on the [[photos of "evidence"|//zines.pnppl.cc/map.html]] in that article, I've added:
+Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I've added:
 - _Eight Things You Can Do to Stop ICE_
 - _Absolute Sharing_
 - CrimethInc's gender posters
