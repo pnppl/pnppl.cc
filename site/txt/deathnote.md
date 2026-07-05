@@ -40,7 +40,7 @@ html {
 .tag,
 h2,
 aside {
-	display: none;
+	display: none !important;
 }
 
 /* --- notebook paper look --- */

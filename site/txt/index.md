@@ -4,6 +4,9 @@ a.excerpt {
 	text-decoration: underline;
 	font-style: italic;
 }
+h2.excerpt {
+	display: block;
+}
 h2.excerpt::before {
 	content: "";
 }
