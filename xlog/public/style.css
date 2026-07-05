@@ -934,6 +934,11 @@ a.autolink.glossary {
 	content: "%";
 	font-weight: 900;
 }
+/* don't annotate subdomains */
+.view a[href*=".pnppl.cc"]:after {
+	content: "";
+	margin: 0;
+}
 .view a[href^="magnet:"]:after {
 	content: "U";
 	font-family: sans-serif;
@@ -957,11 +962,7 @@ a.autolink.glossary {
 	content: "PDF";
 	font-family: inherit;
 	letter-spacing: 0.5px;
-}
-/* don't annotate subdomains */
-.view a[href*=".pnppl.cc"]:after {
-	content: "";
-	margin: 0;
+	margin-left: 0.4em;
 }
 
 /* Checkboxes */
