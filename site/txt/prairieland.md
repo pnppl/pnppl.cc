@@ -42,7 +42,7 @@
 - [[The Gaza Ghetto Uprising (Adi Callai, 2024)|//zines.pnppl.cc/gaza-ghetto-uprising]]&nbsp;[^gaza]
 	- [[screen|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising_print-letter.pdf]] · [[text|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising.md]]
 - [[Hacking the Suburbs (David Holmgren, 2022)|//zines.pnppl.cc/hacking-the-suburbs]]&nbsp;[^hack]
-	- send me a PDF
+	- send me a PDF · [[text|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs.md]]
 - [[The Harvest of Dead Elephants (2007)|//zines.pnppl.cc/harvest-of-dead-elephants]]&nbsp;[^harv]
 	- [[screen|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.pdf]] · [[print|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants_print-letter.pdf]] · [[text|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.md]]
 - [[I Don't Bash Back, I Shoot First (2012)|//zines.pnppl.cc/i-dont-bash-back-i-shoot-first]]&nbsp;[^1st]
@@ -64,7 +64,7 @@
 - [[On the Black Leadership & Other White Myths (We Still Outside Collective, 2020)|//zines.pnppl.cc/on-the-black-leadership]]&nbsp;[^lead]
 	- [[screen|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership.pdf]] · [[print|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership_print-letter.pdf]] · [[text|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership.md]]
 - [[Open propositions for a strategic madness (2021)|//zines.pnppl.cc/open-propositions-for-a-strategic-madness]]&nbsp;[^mad]
-	- send me a PDF
+	- send me a PDF · [[text|//zines.pnppl.cc/open-propositions-for-a-strategic-madness/open-propositions-for-a-strategic-madness.md]]
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|//zines.pnppl.cc/our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]] · [[text|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow.md]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|//zines.pnppl.cc/satanic-death-cult]]&nbsp;[^666]
@@ -76,13 +76,13 @@
 - [[To Change Everything: an anarchist appeal (CrimethInc, 2015)|//zines.pnppl.cc/to-change-everything]]&nbsp;[^tce]
 	- [[screen|//zines.pnppl.cc/to-change-everything/to-change-everything.pdf]] · [[print|//zines.pnppl.cc/to-change-everything/to-change-everything_print-letter.pdf]] · [[text|//zines.pnppl.cc/to-change-everything/to-change-everything.md]]
 - [[To Them, We Are All Outside Agitators: Encampments & Escalation (Within Our Lifetime, 2024)|//zines.pnppl.cc/to-them-we-are-all-outside-agitators]]&nbsp;[^wol]
-	- send me a PDF
+	- send me a PDF · [[text|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.md]]
 - [[Toward the Queerest Insurrection (Mary Nardini Gang, 2014)|//zines.pnppl.cc/toward-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.pdf]] · [[print|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection_print-letter.pdf]] · [[text|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.md]]
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|//zines.pnppl.cc/war-in-the-streets]]&nbsp;[^war]
 	- [[screen|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.pdf]] · [[print|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets_print-letter.pdf]] · [[text|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.md]]
 - [[We Don't Need "Safety" — We Need to Escalate! (Fire Ant Movement Defense, 2024)|//zines.pnppl.cc/we-dont-need-safety]]&nbsp;[^safe]
-	- send me a PDF
+	- send me a PDF · [[text|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.md]]
 - [[Why Riot? (Phillip Neel, 2014)|//zines.pnppl.cc/why-riot]]&nbsp;[^riot]
 	- [[screen|//zines.pnppl.cc/why-riot/why-riot.pdf]] · [[print|//zines.pnppl.cc/why-riot/why-riot_print-letter.pdf]] · [[text|//zines.pnppl.cc/why-riot/why-riot.md]]
 
