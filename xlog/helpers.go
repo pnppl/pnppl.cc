@@ -10,6 +10,7 @@ import (
 	"time"
 	"strconv"
 	"context"
+	"math/rand"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -48,6 +49,7 @@ var helpers = template.FuncMap{
 	"noop":           noop,
 	"tagId":          tagId,
 	"wday":           wday,
+	"randomBadge":    randomBadge,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -350,4 +352,35 @@ func tagId(tag string) string {
 // Wednesday -> Wed.
 func wday(day string) string {
 	return day[0:3]
+}
+
+func randomBadge() template.HTML {
+	badges := [][]string{
+		{"bgdc-ga-j", "", "BE GAY DO CRIME on rainbow/black flag"},
+		{"bgdc-tr-j", "", "BE GAY DO CRIME on trans/black flag"},
+		{"bgdc-bi-j", "", "BE GAY DO CRIME on bi/black flag"},
+		{"bgdc-gq-j", "", "BE GAY DO CRIME on genderqueer/black flag"},
+		{"invalid-html", "", "W3C validator result: HTML ??? X"},
+		{"invalid-css-red", "", "W3C validator result: CSS level ‽ X"},
+		{"my-anarchy-now", "", "ANARCHY NOW! 1312"},
+		{"online", "", "Cords plugged together show you're ON-LINE"},
+		{"she-her", "", "she/her"},
+		{"copyleft", "/about#copyleft", "Copyleft: all wrongs reversed"},
+		{"steal", "https://git.gay/pnppl/pnppl.cc", "STEAL THIS SITE"},
+		{"fish", "https://fishshell.com/", "<3 fish shell"},
+		{"gravity-wells", "https://blueshifted.net/", "no gods, no masters, no gravity wells"},
+		{"lain", "https://fauux.neocities.org/lovelain", "LET'S ALL LOVE LAIN!"},
+		{"nano-88x31", "https://nano-editor.org/", "made with GNU nano"},
+		{"victor-8831-wide", "https://rubjo.github.io/victor-mono/", "best viewed in Victor Mono"},
+	}
+	badge := badges[rand.Intn(len(badges))]
+	img := badge[0]
+	href := badge[1]
+	alt := badge[2]
+	if len(href) == 0 {
+		href = "/about"
+	}
+	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
+							<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
+					</a>`, href, img, alt))
 }
