@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 	"sync"
-//	"fmt"
+	_ "fmt"
 	_ "embed"
 
 	. "github.com/emad-elsaid/xlog"
@@ -76,13 +76,17 @@ func countTodos(p Page) (total int, done int) {
 }
 
 func backlinksSection(p Page) template.HTML {
-	if p.Name() == Config.Index {
-		return ""
+//	if p.Name() == Config.Index {
+//		return ""
+//	}
+
+	if IsIgnoredPath(p.Name()) {
+			return ""
 	}
 
 	pages := MapPage(context.Background(), func(a Page) Page {
 		_, tree := a.AST()
-		if a.Name() == p.Name() || !containLinkTo(tree, p) {
+		if a.Name() == p.Name() || !containLinkTo(tree, p) || IsIgnoredPath(a.Name()) {
 			return nil
 		}
 
