@@ -76,13 +76,13 @@
 - [[To Change Everything: an anarchist appeal (CrimethInc, 2015)|//zines.pnppl.cc/to-change-everything]]&nbsp;[^tce]
 	- [[screen|//zines.pnppl.cc/to-change-everything/to-change-everything.pdf]] · [[print|//zines.pnppl.cc/to-change-everything/to-change-everything_print-letter.pdf]] · [[text|//zines.pnppl.cc/to-change-everything/to-change-everything.md]]
 - [[To Them, We Are All Outside Agitators: Encampments & Escalation (Within Our Lifetime, 2024)|//zines.pnppl.cc/to-them-we-are-all-outside-agitators]]&nbsp;[^wol]
-	- send me a PDF · [[text|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.md]]
+	- [[screen|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.pdf]] · [[print|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators_print-letter.pdf]] · [[text|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.md]]
 - [[Toward the Queerest Insurrection (Mary Nardini Gang, 2014)|//zines.pnppl.cc/toward-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.pdf]] · [[print|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection_print-letter.pdf]] · [[text|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.md]]
 - [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|//zines.pnppl.cc/war-in-the-streets]]&nbsp;[^war]
 	- [[screen|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.pdf]] · [[print|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets_print-letter.pdf]] · [[text|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.md]]
 - [[We Don't Need "Safety" — We Need to Escalate! (Fire Ant Movement Defense, 2024)|//zines.pnppl.cc/we-dont-need-safety]]&nbsp;[^safe]
-	- send me a PDF · [[text|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.md]]
+	- [[screen|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.pdf]] · [[print|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety_print-letter.pdf]] · [[text|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.md]]
 - [[Why Riot? (Phillip Neel, 2014)|//zines.pnppl.cc/why-riot]]&nbsp;[^riot]
 	- [[screen|//zines.pnppl.cc/why-riot/why-riot.pdf]] · [[print|//zines.pnppl.cc/why-riot/why-riot_print-letter.pdf]] · [[text|//zines.pnppl.cc/why-riot/why-riot.md]]
 
@@ -156,11 +156,13 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I couldn't find any PDF versions of _We Don't Need "Safety"_. Ditto _Hacking the Suburbs_, _Open propositions_, _Outside Agitators_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
+I can't find any PDF versions of _Hacking the Suburbs_ or _Outside Agitators_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
 
-There are photos of zines and books I can't identify in [[//zines.pnppl.cc/sources/unidentified/]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
+There are photos of zines and books I can't identify in [[https://git.gay/pnppl/prairieland/src/branch/main/sources/unidentified]]. Filenames starting with "guardian-" are the priority because I know they were presented as evidence.
 
-email: zines@pnppl.cc
+**email: zines@pnppl.cc**
+
+*Massive thanks to [[Firestorm|https://firestorm.coop/]] for hooking me up with two PDFs I was missing: _Outside Agitators_ and _We Don't Need Safety_.*
 
 
 ## Addendum: Song Did Nothing Wrong
@@ -245,7 +247,7 @@ ANARCHY MEANS ATTACK**
 
 [^tce]:  [[CrimethInc|https://crimethinc.com/tce]] · [[TAL|https://theanarchistlibrary.org/library/crimethinc-to-change-everything]]
 
-[^wol]:  [[Within Our Lifetime|https://wolpalestine.com/encampments/]]
+[^wol]:  [[haters|https://haters.noblogs.org/zines/#:~:text=To Them, We Are All Outside Agitators: Encampments %26 Escalation]] · [[Within Our Lifetime|https://wolpalestine.com/encampments/]]
 
 [^twrd]: [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-toward-the-queerest-insurrection]] · [[ZLO|https://zinelibrary.org/towards-the-queerest-insurrection.html]]
 
