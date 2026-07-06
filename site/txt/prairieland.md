@@ -13,6 +13,8 @@
 	- [[print (tabloid poster)|//zines.pnppl.cc/absolute-sharing/absolute-sharing_print-tabloid.pdf]] · [[text|//zines.pnppl.cc/absolute-sharing/absolute-sharing.md]]
 - Gender [[Subversion|//zines.pnppl.cc/crimethinc-gender/classic.html]]/[[Self-Determination|//zines.pnppl.cc/crimethinc-gender/remix.html]] posters (CrimethInc, 2003/2023)&nbsp;[^cwcg]
 	- [[classic|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic.md]] · [[remix|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix.md]]
+- [[A Guide to IFAKs (Socialist Rifle Association, 2020)|//zines.pnppl.cc/guide-to-ifaks]]&nbsp;[^ifak]
+	- [[print (pamphlet)|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks_print-letter.pdf]] · [[text|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks.md]]
 - [[Acrid Black Smoke (2021)|//zines.pnppl.cc/acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke_print-letter.pdf]] · [[text|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.md]]
 - [[Against Prisons (Catherine Baker, 1996)|//zines.pnppl.cc/against-prisons]]&nbsp;[^pris]
@@ -118,6 +120,7 @@ Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I'v
 - _Eight Things You Can Do to Stop ICE_
 - _Absolute Sharing_
 - CrimethInc's gender posters
+- _IFAKs_
 - _Acrid Black Smoke_
 - _Be Gay Do Crime_
 - _Butterflies, Polyamory and Ideology_
@@ -146,6 +149,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 - _Absolute Sharing_
 - Cop City FAQ
 - CrimethInc's gender posters
+- _IFAKs_
 - _De-Arrest Primer_
 - _DIY Occupation Guide_
 - _It's Vacant, Take It!_
@@ -184,6 +188,8 @@ ANARCHY MEANS ATTACK**
 [^asbf]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/download#:~:text=absolute sharing between friends]]
 
 [^cwcg]: [[CrimethInc|https://crimethinc.com/posters/gender-subversion-kit]] · [[CrimethInc|https://crimethinc.com/posters/gender-self-determination-poster]]
+
+[^ifak]: [[Massachusetts SRA|https://wiki.ma-sra.org/wiki/Medical#The_%22IFAK%22]]
 
 [^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
