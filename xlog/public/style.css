@@ -92,6 +92,12 @@ body {
 		Victor Mono Medium,
 		serif;
 }
+em > em,
+em > i,
+i > i,
+i > em {
+	font-style: normal;
+}
 code,
 code *,
 pre.chroma,
