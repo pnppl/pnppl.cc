@@ -1,5 +1,28 @@
 # pnppl's commonplace
 <style><!--
+/* --- title cycle --- */
+#name-cycle {
+	display: none;
+}
+/* cycling requires a browser with :read-only so we don't spill entire contents as text in pre-details browsers (both baseline 2020) */
+#name-cycle:read-only,
+details,
+summary {
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+#name-base:open {
+	cursor: auto;
+}
+details,
+details > span {
+	font-size: 30px;
+}
+details:open {
+	font-size: 0;
+}
+/* --- newest post --- */
 a.excerpt {
 	text-decoration: underline;
 	font-style: italic;
