@@ -180,7 +180,7 @@ low priority/done:
 	- leading * and ~ aren't making it through on TOS note (* -> li). also the shruggie seems to be italicizing lol
 - manpage? mobi/palmdoc? 
 - it would be nice if i could build files from subfolders of /txt for stuff like the prairieland gallery. i just copied the main page to gallery.html and deleted most of it. all the nav etc will go stale
-
+- title cycling still spills contents in a browser that is both pre-details and has CSS disabled. maybe i should revert it
 
 longterm notions
 - other protocols like gopher

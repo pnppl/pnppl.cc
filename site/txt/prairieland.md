@@ -19,6 +19,8 @@
 	- [[screen|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke_print-letter.pdf]] · [[text|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.md]]
 - [[Against Prisons (Catherine Baker, 1996)|//zines.pnppl.cc/against-prisons]]&nbsp;[^pris]
 	- [[screen|//zines.pnppl.cc/against-prisons/against-prisons.pdf]] · [[print|//zines.pnppl.cc/against-prisons/against-prisons_print-letter.pdf]] · [[text|//zines.pnppl.cc/against-prisons/against-prisons.md]]
+- [[The Anarchist Tension (Alfredo Bonanno, 1996)|//zines.pnppl.cc/anarchist-tension]]&nbsp;[^tens]
+	- [[screen|//zines.pnppl.cc/anarchist-tension/anarchist-tension.pdf]] · [[print|//zines.pnppl.cc/anarchist-tension/anarchist-tension_print-letter.pdf]] · [[text|//zines.pnppl.cc/anarchist-tension/anarchist-tension.md]]
 - [[Another Critique of Insurrectionalism (2014)|//zines.pnppl.cc/another-critique-of-insurrectionalism]]&nbsp;[^crit]
 	- [[screen|//zines.pnppl.cc/another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.pdf]] · [[print|//zines.pnppl.cc/another-critique-of-insurrectionalism/another-critique-of-insurrectionalism_print-letter.pdf]] · [[text|//zines.pnppl.cc/another-critique-of-insurrectionalism/another-critique-of-insurrectionalism.md]]
 - [[Be Gay Do Crime (Mary Nardini Gang, 2018)|//zines.pnppl.cc/be-gay-do-crime]]&nbsp;[^gay]
@@ -195,6 +197,8 @@ ANARCHY MEANS ATTACK**
 
 [^pris]: [[AZL|https://azinelibrary.org/zines/Against-Prisons]] · [[TAL|https://theanarchistlibrary.org/library/catherine-baker-against-prisons]] · [[Wildcat|http://wildcat.international/againstp.html]]
 
+[^tens]: [[Quiver Distro|https://www.anti-politics.org/distro/2006.html#:~:text=the anarchist tension]] · [[TAL|https://theanarchistlibrary.org/library/alfredo-m-bonanno-the-anarchist-tension]] · [[Elephant Editions|https://www.elephanteditions.net/library/alfredo-bonanno-the-anarchist-tension]] · [[Libcom|https://libcom.org/article/anarchist-tension-alfredo-m-bonanno]]
+
 [^crit]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/theory/another-critique-insurrectionalism/]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]] · [[Subversion|https://web.archive.org/web/20151020060007/https://subversionpress.wordpress.com/2015/07/17/another-critique-of-insurrectionalism/]]
 
 [^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
@@ -259,6 +263,6 @@ ANARCHY MEANS ATTACK**
 
 [^war]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-Streets-revised-READ.pdf]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-streets-print.pdf]] · [[ZLO|https://zinelibrary.org/war-in-the-streets.html]]
 
-[^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]]
+[^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]] · [[Archive.org|https://archive.org/details/no-safety/]]
 
 [^riot]: [[Oplopanax|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/]] · [[Ultra-Com|https://web.archive.org/web/20140515013650/http://www.ultra-com.org/project/why-riot/]] · [[ZLO|https://zinelibrary.org/why-riot.html]]
