@@ -124,6 +124,7 @@ Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I'v
 - CrimethInc's gender posters
 - _IFAKs_
 - _Acrid Black Smoke_
+- _Anarchist Tension_
 - _Be Gay Do Crime_
 - _Butterflies, Polyamory and Ideology_
 - _Call_
@@ -168,7 +169,7 @@ There are photos of zines and books I can't identify in [[https://git.gay/pnppl/
 
 **email: zines@pnppl.cc**
 
-*Massive thanks to [[Firestorm|https://firestorm.coop/]] for hooking me up with two PDFs I was missing: _Outside Agitators_ and _We Don't Need Safety_.*
+*Massive thanks to [[Firestorm|https://firestorm.coop/]] for hooking me up with two PDFs I was missing (_Outside Agitators_ and _We Don't Need Safety_) and to two other email correspondents who identified _The Anarchist Tension_ and several books (not yet added).*
 
 
 ## Addendum: Song Did Nothing Wrong
