@@ -15,6 +15,8 @@
 	- [[classic|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic.md]] · [[remix|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix.md]]
 - [[A Guide to IFAKs (Socialist Rifle Association, 2020)|//zines.pnppl.cc/guide-to-ifaks]]&nbsp;[^ifak]
 	- [[print (pamphlet)|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks_print-letter.pdf]] · [[text|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks.md]]
+- [[Plant Propagation for the People pamphlets (Erin Despard, 2021)|//zines.pnppl.cc/plant-propagation-for-the-people]]&nbsp;[^prop]
+	- [[print (Vol. 1)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-1_print-letter.pdf]] · [[print (Vol. 2)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-2_print-letter.pdf]]
 - [[Acrid Black Smoke (2021)|//zines.pnppl.cc/acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke_print-letter.pdf]] · [[text|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.md]]
 - [[Against Prisons (Catherine Baker, 1996)|//zines.pnppl.cc/against-prisons]]&nbsp;[^pris]
@@ -123,6 +125,7 @@ Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I'v
 - _Absolute Sharing_
 - CrimethInc's gender posters
 - _IFAKs_
+- _Plant Propagation_
 - _Acrid Black Smoke_
 - _Anarchist Tension_
 - _Be Gay Do Crime_
@@ -148,17 +151,7 @@ You are strongly encouraged to start your own Emma Goldman Book Club and/or Prai
 
 For each zine, I used a pre-existing copy whenever possible. It was easy to find print-ready PDFs, but for some I couldn't find a PDF appropriate for reading onscreen; for these I used [[ZineLibrary.org's zine de-imposer|https://zinelibrary.org/theme/scripts/zine-deimp.js]] to generate a reading copy.
 
-HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely. I've manually re-created:
-- _Absolute Sharing_
-- Cop City FAQ
-- CrimethInc's gender posters
-- _IFAKs_
-- _De-Arrest Primer_
-- _DIY Occupation Guide_
-- _It's Vacant, Take It!_
-- _Shattering Abolition_
-- _Strange Constellations_
-- _War in the Streets_
+HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely.
 
 
 ## Help Me Out
@@ -193,6 +186,8 @@ ANARCHY MEANS ATTACK**
 [^cwcg]: [[CrimethInc|https://crimethinc.com/posters/gender-subversion-kit]] · [[CrimethInc|https://crimethinc.com/posters/gender-self-determination-poster]]
 
 [^ifak]: [[Massachusetts SRA|https://wiki.ma-sra.org/wiki/Medical#The_%22IFAK%22]]
+
+[^prop]: [[UBC Botanical Garden|https://botanicalgarden.ubc.ca/news-events/two-new-propagation-zines-by-dr-erin-despard/]]
 
 [^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
