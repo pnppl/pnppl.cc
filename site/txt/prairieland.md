@@ -92,7 +92,7 @@
 - [[Why Riot? (Phillip Neel, 2014)|//zines.pnppl.cc/why-riot]]&nbsp;[^riot]
 	- [[screen|//zines.pnppl.cc/why-riot/why-riot.pdf]] · [[print|//zines.pnppl.cc/why-riot/why-riot_print-letter.pdf]] · [[text|//zines.pnppl.cc/why-riot/why-riot.md]]
 
-**Download all: [[git.gay|https://git.gay/pnppl/prairieland/archive/main.zip]] · [[Codeberg|https://codeberg.org/pnppl/prairieland/archive/main.zip]] · [[Github|https://github.com/pnppl/prairieland/archive/refs/heads/main.zip]]**
+**Download all: [[HTML|http://handthing.party/prairieland-zines_html.zip]] · [[screen PDF|http://handthing.party/prairieland-zines_screen-pdf.zip]] · [[print PDF|http://handthing.party/prairieland-zines_print-pdf.zip]] · [[text (md)|http://handthing.party/prairieland-zines_text-md.zip]]**
 
 
 ## About
