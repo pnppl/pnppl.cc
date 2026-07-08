@@ -944,7 +944,8 @@ a.autolink.glossary {
 	content: "%";
 	font-weight: 900;
 }
-/* don't annotate subdomains */
+/* don't annotate subdomains, or apex from subdomain */
+.view a[href*="//pnppl.cc"]:after,
 .view a[href*=".pnppl.cc"]:after {
 	content: "";
 	margin: 0;
