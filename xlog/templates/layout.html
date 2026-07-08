@@ -33,59 +33,10 @@
 		<center>
 		{{- with .page -}}
 			{{- $name := base .Name -}}
-			{{- if eq $name "index" -}}
-				<h1>pnppl's
-				<details>
-					<summary>commonplace</summary>
-					{{- printf "<style><!-- /* pre-CSS hide... */</style>" | raw -}}
-					<div id="name-cycle">
-						<details>
-							<summary>correspondences</summary>
-							<details>
-								<summary>collected codices</summary>
-								<details>
-									<summary>copyleft cove</summary>
-									<details>
-										<summary>classic computing</summary>
-										<details>
-											<summary>cursed content</summary>
-											<details>
-												<summary>confident claptrap</summary>
-												<details>
-													<summary>crazy cack</summary>
-													<details>
-														<summary>cantankerous criticsm</summary>
-														<details>
-															<summary>cornball capers</summary>
-															<details>
-																<summary>complete chaos</summary>
-																<details>
-																	<summary>criminal conduct</summary>
-																	<details id="name-base">
-																		<summary>command &amp; control</summary>
-																		<span>commonplace</span>
-																	</details>
-																</details>
-															</details>
-														</details>
-													</details>
-												</details>
-											</details>
-										</details>
-									</details>
-								</details>
-							</details>
-						</details>
-					</div>{{- noop -}}
-				</details>
-				{{- printf "<!-- ...pre-CSS hide -->" | raw -}}
-				<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
+			{{- with $props.title }}
+				<h1>{{ .Value }}<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
 			{{- else -}}
-				{{- with $props.title }}
-					<h1>{{ .Value }}<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
-				{{- else -}}
-					<h1 class="subtitle">{{ $name }}</h1>
-				{{- end -}}
+				<h1 class="subtitle">{{ $name }}</h1>
 			{{- end -}}
 		{{- end }}
 		</center>
