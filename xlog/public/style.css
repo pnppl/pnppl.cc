@@ -1588,7 +1588,7 @@ pre.chroma {
 	}
 }
 
-/* mobile or just 	skinny */
+/* mobile or just skinny */
 @media (max-width: 767px) {
 	#table-of-contents-list {
 		float: none;
@@ -1613,6 +1613,9 @@ pre.chroma {
 		float: none;
 		display: inline;
 		word-break: break-all;
+	}
+	.content ul {
+		margin-left: 1em;
 	}
 }
 

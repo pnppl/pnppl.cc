@@ -76,6 +76,7 @@ const wander = {
 		'https://adelfaure.net/',
 		'https://fourthievesvinegar.org/',
 		'https://fuckup.solutions/index3.html',
+		'https://june11.noblogs.org/',
 		'https://kvibber.com/',
 		'https://solar.lowtechmagazine.com',
 		'https://wiki.archiveteam.org/',
