@@ -85,7 +85,7 @@
 	- [[screen|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.pdf]] · [[print|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators_print-letter.pdf]] · [[text|//zines.pnppl.cc/to-them-we-are-all-outside-agitators/to-them-we-are-all-outside-agitators.md]]
 - [[Toward the Queerest Insurrection (Mary Nardini Gang, 2014)|//zines.pnppl.cc/toward-the-queerest-insurrection]]&nbsp;[^twrd]
 	- [[screen|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.pdf]] · [[print|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection_print-letter.pdf]] · [[text|//zines.pnppl.cc/toward-the-queerest-insurrection/toward-the-queerest-insurrection.md]]
-- [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1|//zines.pnppl.cc/war-in-the-streets]]&nbsp;[^war]
+- [[War in the Streets: Tactical Lessons from the Global Civil War, Vol. 1 (2016)|//zines.pnppl.cc/war-in-the-streets]]&nbsp;[^war]
 	- [[screen|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.pdf]] · [[print|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets_print-letter.pdf]] · [[text|//zines.pnppl.cc/war-in-the-streets/war-in-the-streets.md]]
 - [[We Don't Need "Safety" — We Need to Escalate! (Fire Ant Movement Defense, 2024)|//zines.pnppl.cc/we-dont-need-safety]]&nbsp;[^safe]
 	- [[screen|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.pdf]] · [[print|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety_print-letter.pdf]] · [[text|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.md]]
