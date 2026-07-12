@@ -226,4 +226,4 @@ this is becoming increasingly fragmented...
 	- would like to host elsewhere but was running out of space on web1.0hosting and would rather not pay money
 - ../hrt: deployed to statichost.eu from codeberg automatically when pushed and accessed as hrt.pnppl.cc
 	- this one does not support http, but there was already a mirror on github pages
-- ../handthing.party: deploy to web1.0hosting via script over ftp and accessed as handthing.party. not really connected to pnppl.cc
+- ../handthing.party: deploy to web1.0hosting via script over ftp and accessed as handthing.party. not really connected to pnppl.cc. stuck the zine zips up there tho
