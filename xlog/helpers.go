@@ -367,6 +367,7 @@ func randomBadge() template.HTML {
 		{"she-her", "", "she/her"},
 		{"copyleft", "/about#copyleft", "Copyleft: all wrongs reversed"},
 		{"steal", "https://git.gay/pnppl/pnppl.cc", "STEAL THIS SITE"},
+		{"civ", "https://hrt.pnppl.cc", "INDUSTRIAL CIVILIZATION IS MY ENDOCRINE SYSTEM"},
 		{"fish", "https://fishshell.com/", "<3 fish shell"},
 		{"gravity-wells", "https://blueshifted.net/", "no gods, no masters, no gravity wells"},
 		{"lain", "https://fauux.neocities.org/lovelain", "LET'S ALL LOVE LAIN!"},
