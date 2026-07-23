@@ -39,7 +39,7 @@ func (s *headingRenderer) render(w util.BufWriter, source []byte, node ast.Node,
 		}
 		_ = w.WriteByte('>')
 		if id, ok := node.AttributeString("id"); ok {
-			w.WriteString(fmt.Sprintf(`<a name="%s" class="head-sect" href="#%s">&sect;</a>&nbsp;`, id, id))
+			w.WriteString(fmt.Sprintf(`<a name="%s" class="head-sect" href="#%s">&sect;</a>&nbsp;<span>`, id, id))
 		}
 	} else {
 
@@ -47,7 +47,7 @@ func (s *headingRenderer) render(w util.BufWriter, source []byte, node ast.Node,
 //			w.WriteString(fmt.Sprintf(` <a class="hover-button is-hidden" href="#TOC">&not;</a> <a name="%s" class="hover-button is-hidden" href="#%s">&sect;</a>`, id, id))
 //		}
 
-		w.WriteString(fmt.Sprintf(`&nbsp;<a class="to-toc" href="#TOC">^</a>`))
+		w.WriteString(fmt.Sprintf(`</span>&nbsp;<a class="to-toc" href="#TOC">^</a>`))
 
 		_, _ = w.WriteString("</h")
 		_ = w.WriteByte("0123456"[n.Level])
