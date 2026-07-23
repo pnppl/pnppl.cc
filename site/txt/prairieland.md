@@ -41,6 +41,8 @@
 	- send me a PDF · [[text|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs.md]]
 - [[The Harvest of Dead Elephants (2007)|//zines.pnppl.cc/harvest-of-dead-elephants]]&nbsp;[^harv]
 	- [[screen|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.pdf]] · [[print|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants_print-letter.pdf]] · [[text|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.md]]
+- [[How to Give Yourself an Abortion (Arielle Swernoff, 2020)|//zines.pnppl.cc/how-to-give-yourself-an-abortion]]&nbsp;[^abrt]
+	- [[screen|//zines.pnppl.cc/how-to-give-yourself-an-abortion/how-to-give-yourself-an-abortion.pdf]] · [[print|//zines.pnppl.cc/how-to-give-yourself-an-abortion/how-to-give-yourself-an-abortion_print-letter.pdf]] · [[text|//zines.pnppl.cc/how-to-give-yourself-an-abortion/how-to-give-yourself-an-abortion.md]]
 - [[I Don't Bash Back, I Shoot First (2012)|//zines.pnppl.cc/i-dont-bash-back-i-shoot-first]]&nbsp;[^1st]
 	- [[screen|//zines.pnppl.cc/i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.pdf]] · [[print|//zines.pnppl.cc/i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first_print-letter.pdf]] · [[text|//zines.pnppl.cc/i-dont-bash-back-i-shoot-first/i-dont-bash-back-i-shoot-first.md]]
 - [[If We Go, We Go On Fire: On Grief and Social War (Ignatius, 2024)|//zines.pnppl.cc/if-we-go-we-go-on-fire]]&nbsp;[^if]
@@ -132,6 +134,7 @@ Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I'v
 - _Follow the Fires_
 - _Hacking the Suburbs_
 - _Harvest of Dead Elephants_
+- _How to Give Yourself an Abortion_
 - _Letters to L._
 - _No Selves to Abolish_
 - _On the Black Leadership_
@@ -212,6 +215,8 @@ ANARCHY MEANS ATTACK**
 [^hack]: [[Substack|https://territories.substack.com/p/hacking-the-suburbs]]
 
 [^harv]: [[AZL|https://azinelibrary.org/zines/Harvest-of-Dead-Elephants-The-The-False-Opposition-of-Animal-Liberation]] · [[TAL|https://theanarchistlibrary.org/library/various-authors-a-murder-of-crows#toc53]]
+
+[^abrt]: [[Jewish Currents|https://jewishcurrents.org/how-to-give-yourself-an-abortion/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=how to give yourself an abortion]]
 
 [^1st]:  [[haters|https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]] · [[ZLO|https://zinelibrary.org/i-dont-bash-back-i-shoot-first.html]]
 
