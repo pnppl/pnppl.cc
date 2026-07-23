@@ -4,7 +4,7 @@
 !! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
 <br>
-<center><b id="graphical-links">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &#183; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
+<center><b style="font-size: 125%;">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &lt;&#126;<br>&#126;&gt; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
 <br>
 
 - [[Acrid Black Smoke (2021)|//zines.pnppl.cc/acrid-black-smoke]]&nbsp;[^abs]
@@ -262,15 +262,3 @@ ANARCHY MEANS ATTACK**
 [^ifak]: [[Massachusetts SRA|https://wiki.ma-sra.org/wiki/Medical#The_%22IFAK%22]]
 
 [^prop]: [[UBC Botanical Garden|https://botanicalgarden.ubc.ca/news-events/two-new-propagation-zines-by-dr-erin-despard/]]
-
-
-<style><!--
-#graphical-links {
-	font-size: 125%;
-}
-@media screen and (max-width: 400px) {
-	#graphical-links {
-		font-size: 110%;
-	}
-}
---></style>
