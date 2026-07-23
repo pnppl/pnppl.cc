@@ -216,7 +216,7 @@ ANARCHY MEANS ATTACK**
 
 [^harv]: [[AZL|https://azinelibrary.org/zines/Harvest-of-Dead-Elephants-The-The-False-Opposition-of-Animal-Liberation]] · [[TAL|https://theanarchistlibrary.org/library/various-authors-a-murder-of-crows#toc53]]
 
-[^abrt]: [[Jewish Currents|https://jewishcurrents.org/how-to-give-yourself-an-abortion/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=how to give yourself an abortion]]
+[^abrt]: [[Jewish Currents|https://jewishcurrents.org/how-to-give-yourself-an-abortion/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=how to give yourself an abortion]] · [[ZLO|https://zinelibrary.org/how-to-give-yourself-an-abortion.html]] · [[Archive.org|https://archive.org/details/abortion-zines/JC-Abortion]]
 
 [^1st]:  [[haters|https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]] · [[ZLO|https://zinelibrary.org/i-dont-bash-back-i-shoot-first.html]]
 
