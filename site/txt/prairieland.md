@@ -156,7 +156,7 @@ HTML versions were usually not available anywhere except The Anarchist Library, 
 
 ## Help Me Out
 
-I can't find any PDF versions of _Hacking the Suburbs_ or _Outside Agitators_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
+I can't find any PDF versions of _Hacking the Suburbs_ or _Open Propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[https://git.gay/pnppl/prairieland/src/branch/main/sources/unidentified]]. Filenames starting with "guardian-" and "filing-" are the priority because I know they were presented as evidence.
 
