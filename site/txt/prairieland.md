@@ -4,19 +4,9 @@
 !! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
 <br>
-<center><b style="font-size: 125%;">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &#183; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
+<center><b id="graphical-links">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &#183; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
 <br>
 
-- [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
-	- [[print (pamphlet)|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]] · [[text|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice.md]]
-- [[Absolute Sharing Between Friends (The Imaginary Party)|//zines.pnppl.cc/absolute-sharing]]&nbsp;[^asbf]
-	- [[print (tabloid poster)|//zines.pnppl.cc/absolute-sharing/absolute-sharing_print-tabloid.pdf]] · [[text|//zines.pnppl.cc/absolute-sharing/absolute-sharing.md]]
-- Gender [[Subversion|//zines.pnppl.cc/crimethinc-gender/classic.html]]/[[Self-Determination|//zines.pnppl.cc/crimethinc-gender/remix.html]] posters (CrimethInc, 2003/2023)&nbsp;[^cwcg]
-	- [[classic|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic.md]] · [[remix|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix.md]]
-- [[A Guide to IFAKs (Socialist Rifle Association, 2020)|//zines.pnppl.cc/guide-to-ifaks]]&nbsp;[^ifak]
-	- [[print (pamphlet)|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks_print-letter.pdf]] · [[text|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks.md]]
-- [[Plant Propagation for the People pamphlets (Erin Despard, 2021)|//zines.pnppl.cc/plant-propagation-for-the-people]]&nbsp;[^prop]
-	- [[print (Vol. 1)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-1_print-letter.pdf]] · [[print (Vol. 2)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-2_print-letter.pdf]]
 - [[Acrid Black Smoke (2021)|//zines.pnppl.cc/acrid-black-smoke]]&nbsp;[^abs]
 	- [[screen|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.pdf]] · [[print|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke_print-letter.pdf]] · [[text|//zines.pnppl.cc/acrid-black-smoke/acrid-black-smoke.md]]
 - [[Against Prisons (Catherine Baker, 1996)|//zines.pnppl.cc/against-prisons]]&nbsp;[^pris]
@@ -91,6 +81,16 @@
 	- [[screen|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.pdf]] · [[print|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety_print-letter.pdf]] · [[text|//zines.pnppl.cc/we-dont-need-safety/we-dont-need-safety.md]]
 - [[Why Riot? (Phillip Neel, 2014)|//zines.pnppl.cc/why-riot]]&nbsp;[^riot]
 	- [[screen|//zines.pnppl.cc/why-riot/why-riot.pdf]] · [[print|//zines.pnppl.cc/why-riot/why-riot_print-letter.pdf]] · [[text|//zines.pnppl.cc/why-riot/why-riot.md]]
+- [[Eight Things You Can Do to Stop ICE (CrimethInc, 2025)|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice]]&nbsp;[^ice]
+	- [[print (pamphlet)|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice_print-letter.pdf]] · [[text|//zines.pnppl.cc/8-things-you-can-do-to-stop-ice/8-things-you-can-do-to-stop-ice.md]]
+- [[Absolute Sharing Between Friends (The Imaginary Party)|//zines.pnppl.cc/absolute-sharing]]&nbsp;[^asbf]
+	- [[print (tabloid poster)|//zines.pnppl.cc/absolute-sharing/absolute-sharing_print-tabloid.pdf]] · [[text|//zines.pnppl.cc/absolute-sharing/absolute-sharing.md]]
+- Gender [[Subversion|//zines.pnppl.cc/crimethinc-gender/classic.html]]/[[Self-Determination|//zines.pnppl.cc/crimethinc-gender/remix.html]] posters (CrimethInc, 2003/2023)&nbsp;[^cwcg]
+	- [[classic|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-classic.md]] · [[remix|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix_print-letter.pdf]] [[(text)|//zines.pnppl.cc/crimethinc-gender/crimethinc-gender-remix.md]]
+- [[A Guide to IFAKs (Socialist Rifle Association, 2020)|//zines.pnppl.cc/guide-to-ifaks]]&nbsp;[^ifak]
+	- [[print (pamphlet)|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks_print-letter.pdf]] · [[text|//zines.pnppl.cc/guide-to-ifaks/guide-to-ifaks.md]]
+- [[Plant Propagation for the People pamphlets (Erin Despard, 2021)|//zines.pnppl.cc/plant-propagation-for-the-people]]&nbsp;[^prop]
+	- [[print (Vol. 1)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-1_print-letter.pdf]] · [[print (Vol. 2)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-2_print-letter.pdf]]
 
 **Download all: [[HTML|http://handthing.party/prairieland-zines_html.zip]] · [[screen PDF|http://handthing.party/prairieland-zines_screen-pdf.zip]] · [[print PDF|http://handthing.party/prairieland-zines_print-pdf.zip]] · [[text (md)|http://handthing.party/prairieland-zines_text-md.zip]] · [[source|https://git.gay/pnppl/prairieland/archive/main.zip]]**
 
@@ -121,11 +121,6 @@ The defendants' participation in the Emma Goldman Book Club was [[discussed quit
 > Elizabeth was sentenced to 50 years in federal prison … all because, as she put it: “They didn’t like my book club.” Her laugh doesn’t quite reach her eyes.
 
 Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I've added:
-- _Eight Things You Can Do to Stop ICE_
-- _Absolute Sharing_
-- CrimethInc's gender posters
-- _IFAKs_
-- _Plant Propagation_
 - _Acrid Black Smoke_
 - _Anarchist Tension_
 - _Be Gay Do Crime_
@@ -143,6 +138,11 @@ Based on the [[photos of "evidence"|//zines.pnppl.cc/map/]] in that article, I'v
 - _Shattering Abolition_
 - _Strange Constellations_
 - _Outside Agitators_
+- _Eight Things You Can Do to Stop ICE_
+- _Absolute Sharing_
+- CrimethInc's gender posters
+- _IFAKs_
+- _Plant Propagation_
 
 You are strongly encouraged to start your own Emma Goldman Book Club and/or Prairieland Zine Library.
 
@@ -178,16 +178,6 @@ As horrific as the outcome of this case has been so far, we should be glad Song 
 CHINGA LA MIGRA
 ANARCHY MEANS ATTACK**
 
-
-[^ice]:  [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
-
-[^asbf]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/download#:~:text=absolute sharing between friends]]
-
-[^cwcg]: [[CrimethInc|https://crimethinc.com/posters/gender-subversion-kit]] · [[CrimethInc|https://crimethinc.com/posters/gender-self-determination-poster]]
-
-[^ifak]: [[Massachusetts SRA|https://wiki.ma-sra.org/wiki/Medical#The_%22IFAK%22]]
-
-[^prop]: [[UBC Botanical Garden|https://botanicalgarden.ubc.ca/news-events/two-new-propagation-zines-by-dr-erin-despard/]]
 
 [^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
@@ -262,3 +252,25 @@ ANARCHY MEANS ATTACK**
 [^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]] · [[Archive.org|https://archive.org/details/no-safety/]]
 
 [^riot]: [[Oplopanax|https://oplopanaxpublishing.wordpress.com/2014/05/01/why-riot/]] · [[Ultra-Com|https://web.archive.org/web/20140515013650/http://www.ultra-com.org/project/why-riot/]] · [[ZLO|https://zinelibrary.org/why-riot.html]]
+
+[^ice]:  [[CrimethInc|https://crimethinc.com/zines/8-things-you-can-do-to-stop-ice]]
+
+[^asbf]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/download#:~:text=absolute sharing between friends]]
+
+[^cwcg]: [[CrimethInc|https://crimethinc.com/posters/gender-subversion-kit]] · [[CrimethInc|https://crimethinc.com/posters/gender-self-determination-poster]]
+
+[^ifak]: [[Massachusetts SRA|https://wiki.ma-sra.org/wiki/Medical#The_%22IFAK%22]]
+
+[^prop]: [[UBC Botanical Garden|https://botanicalgarden.ubc.ca/news-events/two-new-propagation-zines-by-dr-erin-despard/]]
+
+
+<style><!--
+#graphical-links {
+	font-size: 125%;
+}
+@media screen and (max-width: 400px) {
+	#graphical-links {
+		font-size: 110%;
+	}
+}
+--></style>
