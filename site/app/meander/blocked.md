@@ -22,7 +22,7 @@ https://reactormag.com/a-guide-for-working-breeds-vina-jie-min-prasad/
 https://www.lightspeedmagazine.com/fiction/exhalation/
 https://www.uncannymagazine.com/article/fandom-for-robots/
 
-### Game/interaction
+### Game/interactive
 https://destroyed4com4t.itch.io/stealth-redux
 https://neal.fun/
 
