@@ -156,6 +156,8 @@ For each zine, I used a pre-existing copy whenever possible. It was easy to find
 
 HTML versions were usually not available anywhere except The Anarchist Library, but the quality was acceptable, so these I just tweaked a little so they'll cooperate with cell phones and dark mode. When I couldn't get the HTML from TAL, I made it by hacking up the HTML from a webpage. When all I had was a PDF, I first used `pdftohtml`, but I was unhappy with the results and rebuilt them completely.
 
+Text versions are generated from the HTML with Pandoc and `sed`. The text zip does not include images. This could be better, but it's readable and very small — about 600K for the combined zip. (The HTML zip includes assets and is about 50M. The PDF zips are around 100M each.)
+
 
 ## Help Me Out
 
