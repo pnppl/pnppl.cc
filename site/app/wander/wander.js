@@ -95,6 +95,7 @@ const wander = {
 		'https://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html',
 		'https://humaniterations.net/2020/09/06/bad-people/',
 		'https://juliaserano.blogspot.com/2019/02/origins-of-social-contagion-and-rapid.html',
+		'https://maurycyz.com/projects/bad_jpeg/',
 		'https://mycophobia.org/dcs/index.html',
 		'https://notes.highlysuspect.agency/are-we-doing-anything.html',
 		'https://trekkiefeminist.com/star-trek-bechdel-wallace-test-results-graphed/',
