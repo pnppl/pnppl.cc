@@ -38,7 +38,7 @@
 - [[The Gaza Ghetto Uprising (Adi Callai, 2024)|//zines.pnppl.cc/gaza-ghetto-uprising]]&nbsp;[^gaza]
 	- [[screen|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising.pdf]] · [[print|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising_print-letter.pdf]] · [[text|//zines.pnppl.cc/gaza-ghetto-uprising/gaza-ghetto-uprising.md]]
 - [[Hacking the Suburbs (David Holmgren, 2022)|//zines.pnppl.cc/hacking-the-suburbs]]&nbsp;[^hack]
-	- send me a PDF · [[text|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs.md]]
+	- [[screen|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs.pdf]] · [[print|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs_print-letter.pdf]] · [[text|//zines.pnppl.cc/hacking-the-suburbs/hacking-the-suburbs.md]]
 - [[The Harvest of Dead Elephants (2007)|//zines.pnppl.cc/harvest-of-dead-elephants]]&nbsp;[^harv]
 	- [[screen|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.pdf]] · [[print|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants_print-letter.pdf]] · [[text|//zines.pnppl.cc/harvest-of-dead-elephants/harvest-of-dead-elephants.md]]
 - [[How to Give Yourself an Abortion (Arielle Swernoff, 2020)|//zines.pnppl.cc/how-to-give-yourself-an-abortion]]&nbsp;[^abrt]
@@ -62,7 +62,7 @@
 - [[On the Black Leadership & Other White Myths (We Still Outside Collective, 2020)|//zines.pnppl.cc/on-the-black-leadership]]&nbsp;[^lead]
 	- [[screen|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership.pdf]] · [[print|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership_print-letter.pdf]] · [[text|//zines.pnppl.cc/on-the-black-leadership/on-the-black-leadership.md]]
 - [[Open propositions for a strategic madness (2021)|//zines.pnppl.cc/open-propositions-for-a-strategic-madness]]&nbsp;[^mad]
-	- send me a PDF · [[text|//zines.pnppl.cc/open-propositions-for-a-strategic-madness/open-propositions-for-a-strategic-madness.md]]
+	- [[screen|//zines.pnppl.cc/open-propositions-for-a-strategic-madness/open-propositions-for-a-strategic-madness.pdf]] · [[print|//zines.pnppl.cc/open-propositions-for-a-strategic-madness/open-propositions-for-a-strategic-madness_print-letter.pdf]] · [[text|//zines.pnppl.cc/open-propositions-for-a-strategic-madness/open-propositions-for-a-strategic-madness.md]]
 - [[Our Enemies in Yellow: A Reportback from Dallas (Ramon Byrne, 2025)|//zines.pnppl.cc/our-enemies-in-yellow]]&nbsp;[^yel]
 	- [[screen|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow.pdf]] · [[print|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow_print-letter.pdf]] · [[text|//zines.pnppl.cc/our-enemies-in-yellow/our-enemies-in-yellow.md]]
 - [[The Satanic Death-Cult is Real (Sophie Lewis, 2019)|//zines.pnppl.cc/satanic-death-cult]]&nbsp;[^666]
@@ -103,7 +103,7 @@ These zines were presented by the state as evidence in the [[Prairieland trial|h
 
 While the entire prosecution is clearly a steaming pile of politically motivated fascist bullshit, the charges against people whose only connection to the inciting incident was association with the participants — and whose only crime was being an anarchist — are particularly galling.
 
-The sentences these political prisoners have received are downright farcical. The fash want to make an example of them; the judge even admitted he sentenced them with the goal of suppressing their political views.
+The sentences these political prisoners have received are downright farcical. The government wants to make an example of them; [[the judge even admitted|https://bsky.app/profile/did:plc:ldud3jl2cjeu3emegtymto5p/post/3moxrjjmjxs2d]] he sentenced them with the goal of suppressing their political views.
 
 We're in the midst of another [[red and black scare|https://en.wikipedia.org/wiki/Red_Scare]]. The state calls us "terrorists" because projection is the only trick fascists know. They would like us to be scared to read dissident literature, to share our minds, and to stand up to their campaign of senseless violence and cruelty.
 
@@ -160,8 +160,6 @@ Text versions are generated from the HTML with Pandoc and `sed`. The text zip do
 
 
 ## Help Me Out
-
-I can't find any PDF versions of _Hacking the Suburbs_ or _Open Propositions_. Pandoc's defaults are bad and I don't feel like messing with LaTeX, so those don't have a PDF. If you have one, or know of other zines I should add, email me.
 
 There are photos of zines and books I can't identify in [[https://git.gay/pnppl/prairieland/src/branch/main/sources/unidentified]]. Filenames starting with "guardian-" and "filing-" are the priority because I know they were presented as evidence.
 
