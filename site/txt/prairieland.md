@@ -168,7 +168,7 @@ There are photos of zines and books I can't identify in [[https://git.gay/pnppl/
 *Massive thanks to:*
 - *[[Firestorm|https://firestorm.coop/]] for hooking me up with two PDFs I was missing: _Outside Agitators_ and _We Don't Need Safety_*
 - *Two anonymous email correspondents who identified _The Anarchist Tension_ and several books (not yet added)*
-- *Jess at [[Monkeywrench Books|https://www.monkeywrenchbooks.org/]] who provided PDFs for _Hacking the Suburbs_ and _Open Propositions_ and created [[a display|../img/prairieland/monkeywrench.jpg]] to support the defendants.*
+- *Jess at [[Monkeywrench Books|https://www.monkeywrenchbooks.org/]] who provided PDFs for _Hacking the Suburbs_ and _Open Propositions_ and created [[a display|../img/prairieland/monkeywrench.jpg]] to support the defendants*
 
 
 ## Addendum: Song Did Nothing Wrong
