@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- source: https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/sophie -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -8,7 +9,7 @@
 		<meta property="og:site_name" content="pnppl.cc">
 		<meta property="og:title" content="Build-A-Sophie">
 		<meta property="og:description" content="Fan-made character creator for Puzzle Castle (1996)">
-		<meta property="og:image" content="https://pnppl.cc/app/sophie/img/!2base/!2base-!lowered-light.gif">
+		<meta property="og:image" content="https://pnppl.cc/app/sophie/sophie-preview.gif">
 		<meta property="og:url" content="https://pnppl.cc/app/sophie">
 		<meta property="og:type" content="website">
 		<meta name="description" content="Fan-made character creator for Puzzle Castle (1996). Listen to MIDIs and dress up Sophie.">
@@ -25,7 +26,9 @@
 			margin: 0;
 		}
 		input {
-			display: none;
+			position: absolute;
+			left: -99999px;
+			top: -99999px;
 		}
 		input:checked + label {
 			display: inline;
@@ -33,17 +36,17 @@
 		a {
 			position: absolute;
 			right: 1px;
-			top: 1px;
+			top: 0px;
 			opacity: 33%;
 		}
 		#character {
 			position: relative;
 			width: 300px;
 			height: 300px;
-			margin: auto;
-		    border-image:  url("border.gif") 7 /  7px / 0 round;
-    		border-width:  7px;
-    		border-style:  solid;
+			margin: 33px auto 0;
+			border-image: url("border.gif") 7 / 7px / 0 round;
+			border-width: 7px;
+			border-style: solid;
 		}
 		label {
 			display: none;
@@ -352,9 +355,6 @@
 		<label for="skirt-4" class="skirt" title="skirt"><img src="img/skirt/skirt-skirt-red.gif" alt="skirt" width="53" height="30"></label>
 		<input type="radio" name="skirt" class="skirt" id="skirt-4" checked>
 		<label for="skirt-0" class="skirt" title="skirt"><img src="img/skirt/skirt-!skirt-yellow.gif" alt="skirt" width="53" height="30"></label>
-
-		<input type="radio" name="unused" class="unused" id="unused-0">
-		<label for="unused-0" class="unused" title="unused"><img src="" alt="unused" width="" height=""></label>
 
 		</div>
 		<input type="checkbox" name="music" id="music">

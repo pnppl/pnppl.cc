@@ -91,6 +91,7 @@ end
 
 # main
 echo '<!DOCTYPE html>
+<!-- source: https://git.gay/pnppl/pnppl.cc/src/branch/main/site/app/sophie -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -100,7 +101,7 @@ echo '<!DOCTYPE html>
 		<meta property="og:site_name" content="pnppl.cc">
 		<meta property="og:title" content="Build-A-Sophie">
 		<meta property="og:description" content="Fan-made character creator for Puzzle Castle (1996)">
-		<meta property="og:image" content="https://pnppl.cc/app/sophie/img/!2base/!2base-!lowered-light.gif">
+		<meta property="og:image" content="https://pnppl.cc/app/sophie/sophie-preview.gif">
 		<meta property="og:url" content="https://pnppl.cc/app/sophie">
 		<meta property="og:type" content="website">
 		<meta name="description" content="Fan-made character creator for Puzzle Castle (1996). Listen to MIDIs and dress up Sophie.">
@@ -127,17 +128,17 @@ echo '<!DOCTYPE html>
 		a {
 			position: absolute;
 			right: 1px;
-			top: 1px;
+			top: 0px;
 			opacity: 33%;
 		}
 		#character {
 			position: relative;
 			width: 300px;
 			height: 300px;
-			margin: auto;
-		    border-image:  url("border.gif") 7 /  7px / 0 round;
-    		border-width:  7px;
-    		border-style:  solid;
+			margin: 33px auto 0;
+			border-image: url("border.gif") 7 / 7px / 0 round;
+			border-width: 7px;
+			border-style: solid;
 		}
 		label {
 			display: none;

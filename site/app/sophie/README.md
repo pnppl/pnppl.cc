@@ -1,3 +1,5 @@
+![Screenshot of Build-A-Sophie](sophie-preview.gif)
+
 # Generate a simple retro character creator/paper doll in Netscape 7.2-compatible HTML+CSS using GIMP and position: absolute
 
 ## Build layers in GIMP
