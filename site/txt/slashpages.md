@@ -10,6 +10,7 @@
 - [[deathnote]]
 - [[fs-ir]]
 - [[mirrors]]
+- [[pdf]]
 - [[pnppl]]
 - [[prairieland]]
 - [[sitemap]]
