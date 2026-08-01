@@ -32,6 +32,7 @@ All assets are from Puzzle Castle, a children's video game based on the picture 
 
 Code, such as it is, is AGPLv3.
 
+[![Dollmaker Listing](dollmaker88x31.gif)](https://ophanimkei.com/you/dollmaker/members.php)
 
 [^b]: https://maxbittker.github.io/broider/
 [^m]: https://github.com/npjg/MediaStation/
