@@ -32,10 +32,8 @@ what they say (what I wish they'd say)
 ## Gender
 - actress, waitress (actor, waiter)
 - females (women, women and girls)
-- LGBTs (LGBT people)
-- trans (trans people)
-- transactivist (trans activist)
-- transwomen (trans women)
+- LGBTs, trans (LGBT people, trans people)
+- transactivist, transwomen (trans activist, trans women)
 - we're pregnant (we're having a baby)
 
 ## Technology
