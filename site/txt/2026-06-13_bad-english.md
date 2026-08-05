@@ -30,6 +30,7 @@ what they say (what I wish they'd say)
 - unalive (kill)
 
 ## Gender
+- actress, waitress (actor, waiter)
 - females (women, women and girls)
 - LGBTs (LGBT people)
 - trans (trans people)
