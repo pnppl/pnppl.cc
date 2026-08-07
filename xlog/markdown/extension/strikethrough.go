@@ -90,14 +90,14 @@ func (r *StrikethroughHTMLRenderer) renderStrikethrough(
 	w util.BufWriter, source []byte, n gast.Node, entering bool) (gast.WalkStatus, error) {
 	if entering {
 		if n.Attributes() != nil {
-			_, _ = w.WriteString("<del")
+			_, _ = w.WriteString("<strike><del")
 			html.RenderAttributes(w, n, StrikethroughAttributeFilter)
 			_ = w.WriteByte('>')
 		} else {
-			_, _ = w.WriteString("<del>")
+			_, _ = w.WriteString("<strike><del>")
 		}
 	} else {
-		_, _ = w.WriteString("</del>")
+		_, _ = w.WriteString("</del></strike>")
 	}
 	return gast.WalkContinue, nil
 }
