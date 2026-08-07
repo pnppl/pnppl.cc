@@ -10,9 +10,9 @@
 - [[deathnote]]
 - [[fs-ir]]
 - [[mirrors]]
-- [[pdf]]
 - [[pnppl]]
 - [[prairieland]]
+- [[privacy]]
 - [[sitemap]]
 - [[slashpages]]
 
@@ -22,3 +22,4 @@
 - [[public]]
 - [[txt]]
 - [[vid]]
+- [[pdf]]

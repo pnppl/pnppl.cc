@@ -5,12 +5,12 @@ set slashpages (fdfind --no-ignore --type dir --exact-depth 1 --color never --pa
 echo -e '# Slashpages\n#meta\n' > "$out" &&
 
 echo '## Special Pages' >> "$out" &&
-for file in (echo "$slashpages" | grep -vE '\+|img|public|txt|vid' | grep -vE '^20.+' | grep -vE '^$')
+for file in (echo "$slashpages" | grep -vE '\+|img|public|txt|vid|pdf' | grep -vE '^20.+' | grep -vE '^$')
 	echo "- [[$file]]" >> "$out"
 end &&
 
 echo -e '\n## Site Resources' >> "$out" &&
-for file in + img public txt vid
+for file in + img public txt vid pdf
 	echo "- [[$file]]" >> "$out"
 end
 

@@ -21,6 +21,7 @@ site/mirrors/
 site/pnppl/
 site/prairieland/index.html
 site/prairieland/tools/in.pdf
+site/privacy/
 site/public/
 site/sitemap/
 site/slashpages/
