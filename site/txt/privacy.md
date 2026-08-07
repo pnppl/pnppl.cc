@@ -2,11 +2,11 @@
 #meta
 
 ## Me
-I do not collect any information from you unless you submit a name to the Death Note. Submissions will be saved in my git repo the next time I update the site.
+I do not collect any information from you unless you submit a name to the Digital Death Note. Submissions will be stored and displayed immediately. They will also be saved in my git repo the next time I update the site.
 
 pnppl.cc does not use any cookies, although sites you visit in [[Meander|../app/meander/]] and [[nagi|../app/nagi/]] might set some which show as coming from here. I can't sandbox them as far as I can tell. I don't think [[Wander|../app/wander]] has this issue.
 
-Your views are entirely mysterious to me. There isn't even a hit counter. I also put some stuff in the HTML so your browser shouldn't send a referer header when you follow a link, and I don't embed any third-party content.
+Your views are entirely mysterious to me. There isn't even a hit counter. I also put some stuff in the HTML so your browser shouldn't send a referer header when you follow a link, and I don't embed any third-party content except for the framed sites in Meander, Wander, and nagi.
 
 I do make a point to support insecure HTTP, which could have privacy implications.
 

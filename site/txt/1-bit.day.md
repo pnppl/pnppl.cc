@@ -7,7 +7,7 @@ You can grab these all at once here: [[../img/1bitday/!1bitday.zip]]
 
 ~~I make them on [[1-bit.day|https://1-bit.day/pnppl]].~~ 1-bit.day got abandoned shortly after I took up using it; it's now been totally killed off. I still make B&W 16x16 pixel art and add it here.
 
-Here's the Python script I wrote to do the conversion:
+Here's the Python script I wrote to convert the files spit out by 1-bit.day:
 ```python
 #!/usr/bin/env python3
 # turns 1024x1024 pixel art from 1-bit.day into actual size
@@ -35,7 +35,7 @@ if len(argv) > 3:
 image.resize((size, size), Image.Resampling.NEAREST, (256, 256, 768, 768)).save(stdout.buffer, format=output)
 ```
 
-Use it like this:
+I used it like this:
 ```sh
 1bitday.py pixel-art-16x16-1_1.png > out.gif
 ```
