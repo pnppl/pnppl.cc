@@ -1,5 +1,5 @@
 # TRANSGENDER FOR EVERYBODY #
-#politics
+#politics #fav
 
 Donald Trump's crude yet apt coinage echoes a key theme in the struggle for trans rights, encapsulated less misleadingly by the slogan "trans rights are human rights". The policy platform of the "trans agenda" is actually most beneficial to cisgender (non-trans) people, by virtue of how many more cis people there are than trans people. Transgender rights are often framed as a special privilege for a special interest group, but the rights we demand are actually fundamental to all people regardless of gender. Here are some examples.
 

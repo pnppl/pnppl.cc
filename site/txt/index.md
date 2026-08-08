@@ -36,7 +36,7 @@ a.excerpt-more {
 	margin-left: 1ch;
 }
 --></style>
-Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, try [[#meta|/+/tag/meta]].
+Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, see [[#meta|/+/tag/meta]]. For highlights, see [[#fav|/+/tag/fav]].
 
 You might like to...
 - add a name to my [[Death Note|/deathnote]]

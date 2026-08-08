@@ -1,5 +1,5 @@
 # 1-bit.day
-#pixel-art #visual-art #code
+#pixel-art #visual-art #code #fav
 
 !1bitday ../img/1bitday
 
