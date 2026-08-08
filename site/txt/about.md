@@ -40,15 +40,16 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 <center id="club">
 <a href="https://250kb.club/"><img src="../img/clubs/250.gif" alt="proud member of the 250kB Club" width="88" height="31"></a>
 <a href="https://512kb.club/"><img src="../img/clubs/512.gif" alt="512KB Club: Green Team" width="88" height="31"></a>
-<a href="//1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31"></a>
+<a href="http://1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31"></a>
 <a href="https://darktheme.club/"><img src="../img/clubs/dark.gif" alt="Darktheme Club" width="88" height="31"></a>
 <a href="https://git.gay/pnppl/pnppl.cc"><img src="../img/clubs/gitgay.gif" alt="git.gay" width="88" height="31"></a>
+<a href="http://insecure.club/"><img src="../img/clubs/insecure.gif" alt="this site is a little insecure" width="88" height="31"></a>
 <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31"></a>
 <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31"></a>
 <a href="https://zacharykai.net/lists/queer"><img src="../img/clubs/zk-queer.gif" alt="Queer Web Directory" width="88" height="31"></a>
 <a href="https://smallweb.cc/"><img src="../img/clubs/smallweb.gif" alt="smallweb.cc" width="88" height="31"></a>
-<a href="//web1.0hosting.net/activity/"><img src="../img/clubs/web10.gif" alt="Web 1.0 Hosting" width="88" height="31"></a>
-<a href="//wiby.me/"><img src="../img/clubs/wiby.gif" alt="Wiby" width="88" height="31"></a>
+<a href="http://web1.0hosting.net/activity/"><img src="../img/clubs/web10.gif" alt="Web 1.0 Hosting" width="88" height="31"></a>
+<a href="http://wiby.me/"><img src="../img/clubs/wiby.gif" alt="Wiby" width="88" height="31"></a>
 </center>
 
 <style><!--
