@@ -150,6 +150,8 @@ const wander = {
 		'https://dbushell.com/',
 		'https://*.geek.nz/',
 		'https://hyperdoc.khinsen.net/',
+		'https://*.johndcook.com/',
+		'https://lowendmac.com',
 		'https://maggieappleton.com',
 		// fantastic games
 		'https://neal.fun/',
@@ -165,21 +167,24 @@ const wander = {
 		'https://*.ycombinator.com',
 
 		// Non-English language
-		'https://www.64er-magazin.de/',
+		'https://*.64er-magazin.de/',
+		'https://sannalund.se/',
 
 		// WebGL
 		'https://eightyeightthirty.one/',
 
 		// Misc.
+		// filter pointless "intentionally left blank" pages
+		'https://*/blank/',
 		// i'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',
 		// paywalled; zealot
-		'https://www.wheresyoured.at/',
+		'https://*.wheresyoured.at/',
 
 		// Consoles
 		// capitalist/HN shit
-		'https://www.davidtran.me/wander/',
-		'https://www.heyhomepage.com/wander/',
+		'https://*.davidtran.me/wander/',
+		'https://*.heyhomepage.com/wander/',
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
 	],
