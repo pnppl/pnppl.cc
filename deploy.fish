@@ -32,6 +32,7 @@ git add *.* \
 	site/app/ \
 	site/vid/ \
 	site/prairieland/ \
+	site/shrine/ \
 	site/*.txt \
 	site/.gb.txt \
 	site/favicon.ico &&
