@@ -13,6 +13,7 @@
 - [[pnppl]]
 - [[prairieland]]
 - [[privacy]]
+- [[shrine]]
 - [[sitemap]]
 - [[slashpages]]
 

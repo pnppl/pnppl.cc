@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="no-referrer">
+		<meta name="theme-color" content="#ff6935">
+		<link rel="icon" href="../../img/1bitday/carrot-flower.gif">
+		<title>CARROT JUICE</title>
+		<style><!--
+			body {
+				background: #ff6935;
+				padding: 0 0 1em;
+				margin: 0 auto;
+				overflow-x: hidden;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+			a {
+				color: darkgreen;
+			}
+			a:visited {
+				color: purple;
+			}
+			#sky {
+				background-color: #003;
+				background-image: url("../../img/cj/stars2.gif");
+				background-size: contain;
+				background-position: center;
+				max-width: 100%;
+				padding: 2em 1em 0;
+				margin: 0 auto 3em;
+				border-bottom: 2px solid black;
+			}
+			#sky img {
+				margin-bottom: -3.5em;
+			}
+			#nut-wrap {
+				width: 450px;
+				font-family: Helvetica, sans-serif;
+				color: black;
+				border-color: black;
+				margin: auto;
+			}
+			#announce {
+				text-align: center;
+				font-size: 1.25em;
+				font-weight: bold;
+			}
+			#nut {
+				width: 100%;
+				margin: auto;
+				border-style: solid;
+				border-spacing: 0;
+				background-color: white;
+			}
+			#heading {
+				line-height: 1;
+				text-align: center;
+			}
+			#heading,
+			#nut td {
+				border-width: 0 0 1px;
+				border-style: solid;
+				padding: 2px 0.25em 2px 0.5em;
+			}
+			#percent,
+			#nut td + td {
+				text-align: right;
+				font-weight: bold;
+			}
+			#nut .small {
+				font-size: 0.8em;
+			}
+			#nut .last {
+				border-bottom-width: 1em;
+			}
+			#nut .borderless {
+				border: 0;
+			}
+			#nut .med {
+				font-size: 2em;
+				font-weight: bold;
+				vertical-align: bottom;
+				padding-left: 0.25em;
+			}
+			#nut .big {
+				letter-spacing: -0.1ch;
+				font-size: 2.5em;
+				padding: 2px;
+			}
+			#nut span,
+			#nut b {
+				display: inline-block;
+				transform: scaleX(1.1) translateX(2%);
+				margin-right: 1ch;
+			}
+			#nut td + td b {
+				margin-right: 0.5ch;
+			}
+			#nut .calories-row {
+				border-bottom-width: 8px;
+				padding-bottom: 0;
+				padding-right: 0.2ch;
+			}
+			#calories {
+				line-height: 1;
+			}
+			#nut #amount {
+				line-height: 0;
+				padding-top: 1em;
+			}
+			.size {
+				font-size: 1.25em;
+			}
+			#nut .foot {
+				line-height: 1;
+				border-top: 8px solid black;
+				padding: 4px;
+			}
+			#per {
+				display: inline-block;
+				margin-bottom: -0.5em;
+			}
+			#vitamins tr:last-of-type td {
+				border: 0;
+			}
+			#nut #vitamins td {
+				font-weight: normal;
+				text-align: left;
+				padding: 0;
+			}
+			#nut #vitamins td:nth-of-type(2n) {
+				font-weight: bold;
+				text-align: right;
+			}
+			#nut #vitamins td:nth-of-type(2) {
+				padding-right: 1em;
+				min-width: 5ch;
+			}
+			#nut #vitamins td:nth-of-type(3) {
+				text-wrap: nowrap;
+			}
+			#juice {
+				font-size: 1.5em;
+			}
+			.hr {
+				background-image: url("../../img/cj/jazz-carrot-wave.gif");
+				background-repeat: repeat-x;
+				background-position: center;
+				height: 34px;
+			}
+			.hr img {
+				display: none;
+			}
+			.spin {
+				background: orangered;
+				border-radius: 100%;
+			}
+			#mega-carrot {
+				overflow: auto;
+				text-wrap: nowrap;
+			}
+			.sticker {
+				width: 450px;
+				margin: auto;
+				background: white;
+				border: 2px solid black;
+				border-radius: 1em;
+				font-family: monospace, monospace;
+			}
+			h2 {
+				text-align: center;
+				text-decoration: underline;
+				text-decoration-thickness: 3px;
+				text-decoration-skip-ink: none;
+			}
+			ol {
+				padding: 0 1em 0 4em;
+				list-style-image: url("../../img/cj/jazz-carrot-li.gif");
+			}
+			li > span {
+				position: relative;
+				bottom: 9px;
+			}
+			.orange {
+				/*color: #ff6935;*/
+				color: orangered;
+				font-weight: bold;
+			}
+			#man {
+				width: fit-content;
+				margin: auto;
+				border: 1em orangered ridge;
+				padding: 1em;
+				padding-left: 0;
+			}
+			#float h3 {
+				text-align: center;
+			}
+			#carotene {
+				background: url("../../img/cj/beta-carotene.gif");
+				background-position: center top;
+			}
+			#carotene h2 {
+				text-wrap: balance;
+				word-break: break-all;
+				padding: 0.5em 0;
+				margin: 0 auto;
+				font-size: 8em;
+				text-decoration: none;
+				font-family: sans-serif;
+				font-style: italic;
+				font-weight: normal;
+				text-shadow:
+					2px -2px 0 white,
+					4px -4px 0 orangered,
+					6px -6px 0 white,
+					8px -8px 0 orangered,
+					10px -10px 0 white,
+					12px -12px 0 orangered,
+					14px -14px 0 white,
+					16px -16px 0 orangered,
+					18px -18px 0 white,
+					20px -20px 0 orangered,
+					22px -22px 0 white,
+					24px -24px 0 orangered,
+					26px -26px 0 white,
+					28px -28px 0 orangered,
+					30px -30px 0 white,
+					32px -32px 0 orangered,
+					34px -34px 0 white,
+					36px -36px 0 orangered,
+					38px -38px 0 white,
+					40px -40px 0 orangered,
+					42px -42px 0 white,
+					44px -44px 0 orangered,
+					46px -46px 0 white,
+					48px -48px 0 orangered;
+			}
+			/* disable dark mode. there's gotta be a better way */
+			/*
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--main-l: 100%;
+					--bg-l: 94%;
+					--border-l: 86%;
+					--text-l: 20%;
+					--text-strong-l: 10%;
+					--link-l: 58%;
+					--loud-l: 40%;
+					--hover-bg-l-delta: -6%;
+					--active-bg-l-delta: -10%;
+				}
+				a:visited {
+					color: purple
+				}
+			}
+			*/
+			@media screen and (max-width: 450px) {
+				#nut-wrap,
+				.sticker {
+					width: 95%;
+				}
+				.spin {
+					width: 10px;
+				}
+			}
+		--></style>
+	</head>
+	<body bgcolor="#ff6935" link="darkgreen">
+		<center id="sky">
+			<img alt="Saint Carota blesses this page with a bounty of endlessly poured carrot juice" src="../../img/cj/the-star.gif" width="438" height="409">
+		</center>
+		<br>
+		<div id="nut-wrap">
+			<div id="announce"><b>
+				<span id="juice">100% JUICE</span>
+				<br>PERISHABLE-KEEP REFRIGERATED
+			</b></div>
+			<table id="nut" border="2" cellspacing="0" cellpadding="2" width="33%">
+				<tr>
+					<th colspan="2" class="big" id="heading"><span>Nutrition Facts</span></th>
+				</tr>
+				<tr>
+					<td colspan="2" class="borderless" id="per"><span>About 6 servings per container</span></td>
+				</tr>
+				<tr>
+					<td class="last"><b class="size">Serving size</b></td>
+					<td class="last"><b class="size">8 fl. oz. (240mL)&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="small borderless" id="amount"><b>Amount per serving</b></td>
+				</tr>
+				<tr>
+					<td class="med calories-row"><span>Calories<span></td>
+					<td class="big calories-row" id="calories">70</td>
+				</tr>
+				<tr id="percent">
+					<td colspan="2" class="small"><b><span>% Daily Value*</span></b></td>
+				</tr>
+				<tr>
+					<td><b>Total Fat</b> <span>0g</span></td>
+					<td><b>0%</b></td>
+				</tr>
+				<tr>
+					<td><span>&nbsp;&nbsp;&nbsp;&nbsp;Saturated Fat 0g</span></td>
+					<td><b>0%</b></td>
+				</tr>
+				<tr>
+					<td><span>&nbsp;&nbsp;&nbsp;&nbsp;<i>Trans</i> Fat 0g</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Cholesterol</b> <span>0mg</span></td>
+					<td><b>0%</b></td>
+				</tr>
+				<tr>
+					<td><b>Sodium</b> <span>150mg</span></td>
+					<td><b>7%</b></td>
+				</tr>
+				<tr>
+					<td><b>Total Carbohydrate</b> <span>15g</span></td>
+					<td><b>5%</b></td>
+				</tr>
+				<tr>
+					<td><span>&nbsp;&nbsp;&nbsp;&nbsp;Dietary Fiber 1g</span></td>
+					<td><b>4%</b></td>
+				</tr>
+				<tr>
+					<td><span>&nbsp;&nbsp;&nbsp;&nbsp;Total Sugars 13g</span></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Includes 0g Added Sugars</span></td>
+					<td><b>0%</b></td>
+				</tr>
+				<tr>
+					<td class="last"><b>Protein</b> <span>2g<span></td>
+					<td class="last"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<table id="vitamins" cellspacing="0" cellpadding="0" width="100%">
+							<tr>
+								<td>Vitamin D 0mcg</td>
+								<td>0%&nbsp;</td>
+								<td><li>Calcium 42mg</li></td>
+								<td>4%</td>
+							</tr>
+							<tr>
+								<td>Iron 0mcg</td>
+								<td>0%&nbsp;</td>
+								<td><li>Potas. 547mg</li></td>
+								<td>10%</td>
+							</tr>
+							<tr>
+								<td>Vit. A 1027mcg</td>
+								<td>110%&nbsp;</td>
+								<td><li>Magnesium 20mg</li></td>
+								<td>4%</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="small foot">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</td>
+				</tr>
+			</table>
+			<div>INGREDIENTS: CARROT JUICE.</div>
+		</div>
+		<br>
+		<br>
+		<center class="hr">
+			<img alt="Friendly carrot waves itself hello" src="../../img/cj/jazz-carrot-wave.gif" width="50" height="34">
+		</center>
+		<br>
+		<br>
+		<center id="mega-carrot">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+
+			<a href="https://github.com/deathkiller/jazz2-native"><img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30"></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<a href="https://en.wikipedia.org/wiki/cj_juice"><img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30"></a>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<a href="https://deat.tk/jazz2/wasm/"><img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30"></a>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<a href="https://www.jazz2online.com/"><img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30"></a>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<a href="https://www.aldi.us/store/aldi/products/1912-bolthouse-farms-100-carrot-juice-52-fl-oz"><img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30"></a>
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+
+			<br>
+
+			<img alt="Helicopter carrot levitating" class="spin" src="../../img/cj/jazz-carrot-spin.gif" width="21" height="30">
+		</center>
+		<br>
+		<br>
+		<center class="hr">
+			<img alt="Friendly carrot waves itself hello" src="../../img/cj/jazz-carrot-wave.gif" width="50" height="34">
+		</center>
+		<br>
+		<br>
+		<div class="sticker">
+			<h2><u>FUN CARROT JUICE FACTS</u></h2>
+			<ol>
+				<li><span>carrot juice is sweet and delicious. does not taste like vegetable</span></li>
+				<li><span>vitamin a</span></li>
+				<li><span>if you drink too much carrots your skin turns <span class="orange"><b>orange</b></span></span></li>
+			</ol>
+		</div>
+		<br>
+		<br>
+		<center class="hr">
+			<img alt="Friendly carrot waves itself hello" src="../../img/cj/jazz-carrot-wave.gif" width="50" height="34">
+		</center>
+		<br>
+		<br>
+		<center id="man">
+			<img alt="Powerful girlboss drinks carrot juice straight from firehose" src="../../img/cj/carrot-man.gif" width="575" height="432">
+		</center>
+		<br>
+		<br>
+		<center class="hr">
+			<img alt="Friendly carrot waves itself hello" src="../../img/cj/jazz-carrot-wave.gif" width="50" height="34">
+		</center>
+		<br>
+		<br>
+		<div class="sticker" id="float">
+			<h2><a href="https://pnppl.cc/2026-06-24_carrot-float/">DESSERT IN A GLASS</a></h2>
+			<h3>Carrot Float</h3>
+			<ol>
+				<li><span>Scoop vanilla ice cream into cup.</span></li>
+				<li><span>Fill the rest of the cup with carrot juice.</span></li>
+			</ol>
+		</div>
+		<br>
+		<br>
+		<center class="hr">
+			<img alt="Friendly carrot waves itself hello" src="../../img/cj/jazz-carrot-wave.gif" width="50" height="34">
+		</center>
+		<br>
+		<br>
+		<div id="carotene">
+			<h2>VITAMIN <a href="https://en.wikipedia.org/wiki/Beta_carotene#:~:text=carrot juice">BAE</a></h2>
+		</div>
+	</body>
+</html>
