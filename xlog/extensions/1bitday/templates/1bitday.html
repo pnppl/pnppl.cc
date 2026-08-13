@@ -12,7 +12,7 @@ img.onebitday {
 }
 --></style>
 {{ range .photos }}
-<a href="/img/1bitday/{{ .Name }}.gif" class="onebitday">
-  <img src="/img/1bitday/{{ .Name }}.gif" class="onebitday" alt="{{ .Name }}" title="{{ .Name }}" width="72" height="72">
+<a href="{{ .Original }}" class="onebitday">
+  <img src="{{ .Original }}" class="onebitday" alt="{{ .Name }}" title="{{ .Name }}" width="72" height="72">
 </a>
 {{ end }}
