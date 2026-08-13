@@ -3,10 +3,6 @@ package photos
 import (
 	"embed"
 	"html/template"
-//	_ "image/gif"
-	_ "image/jpeg"
-	_ "image/png"
-	"io/fs"
 	"os"
 	"path"
 	"path/filepath"
@@ -83,10 +79,22 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 
 		photos := []*Photo{}
 
-		err := filepath.WalkDir(p, func(file string, d fs.DirEntry, err error) error {
+		pics, err := filepath.Glob(p + "/*.gif")
+		if err != nil {
+			return template.HTML(err.Error())
+		}
+		for _, file := range pics {
+			photo, err := NewPhoto(file)
 			if err != nil {
-				return err
+				return template.HTML(err.Error())
 			}
+
+			photos = append(photos, photo)
+		}
+
+		// original version. recurses and does some checks
+		/*
+		err := filepath.WalkDir(p, func(file string, d fs.DirEntry, err error) error {
 
 			if d.Type().IsRegular() && supportedExt.Include(strings.ToLower(path.Ext(file))) {
 				photo, err := NewPhoto(file)
@@ -99,6 +107,7 @@ func photosShortcode(tpl string) func(xlog.Markdown) template.HTML {
 
 			return nil
 		})
+		*/
 
 		if err != nil {
 			return template.HTML(err.Error())

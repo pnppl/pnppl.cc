@@ -7,6 +7,12 @@ You can grab these all at once here: [[../img/1bitday/!1bitday.zip]]
 
 ~~I make them on [[1-bit.day|https://1-bit.day/pnppl]].~~ 1-bit.day got abandoned shortly after I took up using it; it's now been totally killed off. I still make B&W 16x16 pixel art and add it here.
 
+I've started experimenting with color versions. I suppose these would be 3-bit.day since they use up to eight colors.
+
+!1bitday ../img/1bitday/color
+
+---
+
 Here's the Python script I wrote to convert the files spit out by 1-bit.day:
 ```python
 #!/usr/bin/env python3
