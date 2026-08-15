@@ -1159,6 +1159,8 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 	#badge-img[src$="gravity-wells.gif"] { --badge: url(/public/badges/gravity-wells-static.gif); }
 	#badge-img[src$="online.gif"] { --badge: url(/public/badges/online-static.gif); }
 	#badge-img[src$="civ.gif"] { --badge: url(/public/badges/civ-static.gif); }
+	#badge-img[src$="insecure-crt.gif"] { --badge: url(/public/badges/insecure-crt-static.gif); }
+	#badge-img[src$="handthing.gif"] { --badge: url(/public/badges/handthing-static.gif); }
 }
 #badge-img {
 	content: var(--badge) / "about";
