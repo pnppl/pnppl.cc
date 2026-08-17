@@ -73,6 +73,7 @@ https://kvibber.com/
 https://solar.lowtechmagazine.com
 https://wiki.archiveteam.org/
 https://www.gothic-charm-school.com/
+https://www.halfbakery.com/
 https://www.vhemt.org/
 https://www.wendycarlos.com/
 
