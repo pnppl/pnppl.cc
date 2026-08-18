@@ -89,7 +89,13 @@ todo:
 - language of codeblocks specified like ```lang affects highlighting but fails to make it to html
 	- started debugging and didn't get far. n.Language(source) in the md highlight module is always nil
 	- need to fix so i can use ```ascii or ```art or something and make a css class to prettify text art
-- sort See Also by number of tags in common
+- x sort See Also by number of tags in common
+	- got this done and truncated related to 5 entries
+	- sort: (tags in common -> alpha) -> modtime -> alpha
+		- ie: most relevant is first, least relevant are sorted by modtime, and any ties are broken by title sort
+	- i was just removing all of the least relevant and alpha sorting but this meant that:
+		- single tag posts always surfaced posts starting with A
+		- a post with two tags had fewer matches than one with a single tag
 - refactor the templates. the whole point of them is not having to copy-paste, and yet...
 
 low priority/done:

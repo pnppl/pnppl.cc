@@ -199,7 +199,7 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 	// sort by tags in common
 	slices.SortFunc(pages, func(a, b Page) int {
 		if pages_with_counts[a] == pages_with_counts[b] {
-			return strings.Compare(strings.ToLower(GetTitle(a)), strings.ToLower(GetTitle(b)))
+			return PageTitleCompare(a, b)
 		}
 		if pages_with_counts[a] > pages_with_counts[b] {
 			return -1
@@ -209,6 +209,7 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 
 	// shrink
 	limit := 5
+	/*
 	max_shared := pages_with_counts[pages[0]]
 	min_shared := pages_with_counts[pages[len(pages)-1]]
 	// remove most irrelevant pages
@@ -218,7 +219,25 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 			return pages_with_counts[a] == min_shared
 		})
 	}
+	*/
+	// truncate
 	if len(pages) > limit {
+		// subsort least relevant subset by modtime instead of alpha
+		if pages_with_counts[pages[limit-1]] == pages_with_counts[pages[limit]]	{
+			irrelevant_subset_start := limit - 1
+			for i := limit - 1; i >= 0 ; i -- {
+				if pages_with_counts[pages[i]] == pages_with_counts[pages[limit-1]] {
+					irrelevant_subset_start = i
+				}
+			}
+			slices.SortFunc(pages[irrelevant_subset_start:len(pages)-1], func(a, b Page) int {
+				if modtime := b.ModTime().Compare(a.ModTime()); modtime != 0 {
+					return modtime
+				}
+				// alpha still wins eventually
+				return PageTitleCompare(a, b)
+			})
+		}
 		pages = pages[:limit]
 	}
 

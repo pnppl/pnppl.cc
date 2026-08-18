@@ -3,6 +3,7 @@ import (
 	"strings"
 	"slices"
 )
+
 func GetTitle(page Page) string {
 	content := page.Content()
 	lines := strings.Split(string(content), "\n")
@@ -14,15 +15,17 @@ func GetTitle(page Page) string {
 	return normalizedName
 }
 
+func PageTitleCompare(a, b Page) int {
+	return strings.Compare(strings.ToLower(GetTitle(a)), strings.ToLower(GetTitle(b)))
+}
+
 func PageTitleSort(pages []Page) []Page {
 	pages = slices.DeleteFunc(pages, func(a Page) bool {
 		return IsIgnoredPath(a.Name())
 	})
 
 	slices.SortFunc(pages, func(a, b Page) int {
-		nameA := GetTitle(a)
-		nameB := GetTitle(b)
-		return strings.Compare(strings.ToLower(nameA), strings.ToLower(nameB))
+		return PageTitleCompare(a, b)
 	})
 	return pages
 }
