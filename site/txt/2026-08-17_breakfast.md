@@ -1,13 +1,17 @@
 # 100% Legal Autozombification Elixir
 #recipe #drugs #personal #fav
 
+*The different bad flavors in this original cocktail cancel each other out if you get the ratios right. Recommended for consumption immediately before work starts at midnight.*
+
+## Ingredients
+
 - cup of coffee
 - ~1/8 shot Everclear
 - ? weed oil
 - 1-2 Tbsp kratom powder
 - dash maple syrup
 
-*The different bad flavors in this cocktail cancel each other out if you get the ratios right. Recommended for consumption immediately before work starts at midnight.*
+## Instructions
 
 1. Dissolve an indeterminate amount of weed oil into a small amount of Everclear.
 
