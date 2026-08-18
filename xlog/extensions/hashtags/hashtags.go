@@ -170,6 +170,9 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 		hashtags[v.unique] = true
 	}
 
+	// this stuff runs concurrently so we need this to prevent a crash from multiple simultaneous writes to pages_with_counts. there's probably a better way to do it
+	var mu sync.Mutex
+	pages_with_counts := map[Page]int{}
 	pages := MapPage(context.Background(), func(rp Page) Page {
 		if rp.Name() == p.Name() {
 			return nil
@@ -177,14 +180,47 @@ func (h *Hashtags) relatedPages(p Page) template.HTML {
 
 		_, tree := rp.AST()
 		page_hashtags := FindAllInAST[*Hashtag](tree)
+		page_shared_count := 0
 		for _, h := range page_hashtags {
 			if _, ok := hashtags[h.unique]; ok {
-				return rp
+				page_shared_count++
 			}
+		}
+		if page_shared_count > 0 {
+			mu.Lock()
+			pages_with_counts[rp] = page_shared_count
+			mu.Unlock()
+			return rp
 		}
 
 		return nil
 	})
+
+	// sort by tags in common
+	slices.SortFunc(pages, func(a, b Page) int {
+		if pages_with_counts[a] == pages_with_counts[b] {
+			return strings.Compare(strings.ToLower(GetTitle(a)), strings.ToLower(GetTitle(b)))
+		}
+		if pages_with_counts[a] > pages_with_counts[b] {
+			return -1
+		}
+		return 1
+	})
+
+	// shrink
+	limit := 5
+	max_shared := pages_with_counts[pages[0]]
+	min_shared := pages_with_counts[pages[len(pages)-1]]
+	// remove most irrelevant pages
+	// check max != min because we don't want to delete the whole list (eg we still want relateds for single-tag posts)
+	if len(pages) > limit && max_shared != min_shared {
+		pages = slices.DeleteFunc(pages, func(a Page) bool {
+			return pages_with_counts[a] == min_shared
+		})
+	}
+	if len(pages) > limit {
+		pages = pages[:limit]
+	}
 
 	return Partial("related-hashtags-pages", Locals{
 		"pages": pages,
