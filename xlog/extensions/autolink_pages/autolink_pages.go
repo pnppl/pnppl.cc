@@ -93,7 +93,7 @@ func backlinksSection(p Page) template.HTML {
 		return a
 	})
 
-	return Partial("backlinks", Locals{"pages": pages})
+	return Partial("backlinks", Locals{"pages": PageTitleSort(pages)})
 }
 
 func containLinkTo(n ast.Node, p Page) bool {
