@@ -27,9 +27,9 @@
 
 7. Get your assignments. The weed creeps up on you and imparts a giggly energy that helps you start off on the right foot with your coworkers instead of scaring them away with RBF. If you overdid it, you're paranoid as fuck, but at least you aren't wondering how your life came to this point.
 
-8. Settle into the plateau. Stack boxes like a motherfucker. You are an expert in your field of stacking boxes. You are the universe experiencing itself as a retail worker. In between the itchy opiate buzz and stony brain fuzz, it's lunchtime before you know it.
+8. Settle into the plateau. Stack boxes like a motherfucker. You are an expert in your field of stacking boxes. You are the universe experiencing itself as a retail worker. Between the itchy opiate buzz and stony brain fuzz, it's lunchtime before you know it.
 
-9. Eat. The munchies should have kicked in enough and the kratom worn off enough that food is *very* enjoyable. You've been doing this daily for long enough that now is a good time to redose on the kratom. *Resist at all cost the temptation to take anything else.*
+9. Eat. The munchies should have kicked in enough and the kratom worn off enough that food is *amazing*. You've been doing this daily for long enough that now is a good time to redose on the kratom. *Resist at all cost the temptation to take anything else.*
 
 10. Float through the rest of the day like a robot in the clouds. Is that mean old lady staring at you? No, definitely not, and even if she was, fuck her, your teammates like you and either can't tell or don't mind that you're both trans and very high. Are they all high too? You're pretty sure they aren't stealth trannies. Wow, you're so fucked up you're humming the horrible songs that loop every 90 minutes, yet you're completely functional. Maybe this is what work is like for normal people. Hang on, did that customer have a nazi tattoo? They never stay very long and the boss doesn't watch you much so you always get to shit-talk them. Would you look at that, the day's over!
 
