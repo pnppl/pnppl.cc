@@ -11,6 +11,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 	"unique"
+	_ "log/slog"
 
 	. "github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/extensions/shortcode"
@@ -118,6 +119,9 @@ func (h *Hashtags) tagsHandler(r Request) Output {
 			lck.Unlock()
 		}
 	})
+	for tag, _ := range tags {
+		tags[tag] = PageTitleSort(tags[tag])
+	}
 
 	return Render("tags", Locals{
 		"page": DynamicPage{NameVal: "Hashtags"},
@@ -127,10 +131,11 @@ func (h *Hashtags) tagsHandler(r Request) Output {
 
 func (h *Hashtags) tagHandler(r Request) Output {
 	tag := r.PathValue("tag")
-
+	pages := h.tagPages(r.Context(), tag)
+	pages = PageTitleSort(pages)
 	return Render("tag", Locals{
 		"page":  DynamicPage{NameVal: "#" + tag},
-		"pages": h.tagPages(r.Context(), tag),
+		"pages": pages,
 	})
 }
 

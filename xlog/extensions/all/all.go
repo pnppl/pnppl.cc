@@ -31,42 +31,13 @@ func (All) Init() {
 }
 
 func allHandler(r Request) Output {
-	rp := slices.Clone(Pages(r.Context()))
+	pages := slices.Clone(Pages(r.Context()))
 
-	rp = slices.DeleteFunc(rp, func(a Page) bool {
-		return IsIgnoredPath(a.Name())
-	})
-
-	slices.SortFunc(rp, func(a, b Page) int {
-//		if modtime := b.ModTime().Compare(a.ModTime()); modtime != 0 {
-//			return modtime
-//		}
-		nameA := a.Name()
-		nameB := b.Name()
-
-		content := a.Content()
-		lines := strings.Split(string(content), "\n")
-		firstLine := strings.TrimSpace(lines[0])
-		normalizedNameA := strings.Replace(strings.Replace(firstLine, "# ", "", 1), " #", "", 1)
-
-		content = b.Content()
-		lines = strings.Split(string(content), "\n")
-		firstLine = strings.TrimSpace(lines[0])
-		normalizedNameB := strings.Replace(strings.Replace(firstLine, "# ", "", 1), " #", "", 1)
-
-		if len([]byte(normalizedNameA)) > 0 {
-			nameA = normalizedNameA
-		}
-		if len([]byte(normalizedNameB)) > 0 {
-			nameB = normalizedNameB
-		}
-		return strings.Compare(strings.ToLower(nameA), strings.ToLower(nameB))
-//		return strings.Compare(a.Name(), b.Name())
-	})
+	pages = PageTitleSort(pages)
 
 	return Render("all", Locals{
 		"page":  DynamicPage{NameVal: "All"},
-		"pages": rp,
+		"pages": pages,
 	})
 }
 
@@ -81,7 +52,7 @@ func filesort(r Request) Output {
 	slices.SortFunc(rp, func(a, b Page) int {
 		a_yr := ! re.Match([]byte(a.Name()))
 		b_yr := ! re.Match([]byte(b.Name()))
-		if (a_yr && b_yr) ||(!a_yr && !b_yr) {
+		if (a_yr && b_yr) || (!a_yr && !b_yr) {
 			return strings.Compare(a.Name(), b.Name())
 		}
 		if a_yr {
