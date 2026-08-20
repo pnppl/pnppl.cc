@@ -977,6 +977,7 @@ a.autolink.glossary {
 }
 
 /* Checkboxes */
+/*
 .view li:has(> input[type="checkbox"]) {
 	list-style: none;
 }
@@ -1012,7 +1013,7 @@ a.autolink.glossary {
 	outline: medium solid currentColor;
 	outline-offset: 2px;
 }
-
+*/
 /* Fragment target highlighting */
 p:has(a:target),
 h1:target,
@@ -1283,8 +1284,10 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 }
 pre.chroma {
 	display: inline-block;
+	vertical-align: top;
 	max-width: 100%;
-	margin-right: inherit;
+/*	margin-right: inherit; */
+	margin-right: 1em;
 	border-radius: 0;
 	border-style: dotted solid;
 	border-width: 2px 1px;
