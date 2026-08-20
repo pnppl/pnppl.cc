@@ -49,6 +49,11 @@ I tried both 2.7.1 from the repo and the latest git version as of 2026-02. They 
 Seems to pretty much work perfectly.
 
 
+## Netscape 3.04, 1997-10 (Linux)
+https://github.com/ostrich/netscape304-modern
+
+Just like Mosaic, but better, because it supports `<center>` and animated gifs. Remarkably easy to get up and running. Also, the interface is lovely, it runs super smooth, and pages load quickly; this might have been peak web browsing.
+
 ## Netscape 4.03, 1997-06 (Wine)
 https://winworldpc.com/product/netscape-navigator/40x
 
@@ -56,12 +61,19 @@ Absolute clusterfuck until you disable CSS globally in the preferences ("Advance
 
 My curiosity got the better of me and I started poking at this, thinking it might be tractable now that Netscape 7.2 looks ok. Nope. It looks slightly better, but it's still a lost cause.
 
-There are some very odd alignment and spacing issues, but the most offensive problem is the garish colors. It interprets "inherit" as neon green. I discovered you can defeat this with var(), eg: `color: var(--ns, inherit)`. But then I would still have to set it to plain `inherit` first for browsers that don't understand variables, so this is not satisfactory. There is no way I would ever get this to look even as good as the bare HTML. This is the definition of unsupportable.
+There are some very odd alignment and spacing issues, but the most offensive problem is the garish colors. It interprets "inherit" as neon green? I discovered you can defeat this with var(), eg: `color: var(--ns, inherit)`. But then I would still have to set it to plain `inherit` first for browsers that don't understand variables, so this is not satisfactory. There is no way I would ever get this to look even as good as the bare HTML. This is the definition of unsupportable.
+
+## Netscape 4.8, 2002-08 (Wine)
+https://winworldpc.com/product/netscape-navigator/45x
+
+Indistinguishable from 4.03.
 
 ## Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
-Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
+Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. There are a couple of glaring issues I intend to eventually fix: the badge doesn't show and filenames cascade leftward weirdly. I just realized the filename issue is present in 4.03 and 4.8, too.
+
+Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
 
 
 ## Internet Explorer

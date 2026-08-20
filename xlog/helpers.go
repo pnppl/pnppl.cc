@@ -384,6 +384,6 @@ func randomBadge() template.HTML {
 		href = "/about"
 	}
 	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
-							<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
+						<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
 					</a>`, href, img, alt))
 }
