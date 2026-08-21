@@ -71,7 +71,7 @@ Indistinguishable from 4.03.
 ## Netscape 7.2, 2004-08 (Wine)
 https://winworldpc.com/product/netscape-navigator/7x
 
-Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. There are a couple of glaring issues I intend to eventually fix: the badge doesn't show and filenames cascade leftward weirdly. I just realized the filename issue is present in 4.03 and 4.8, too.
+Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Also the font is weird.
 
 Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
 

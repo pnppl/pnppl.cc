@@ -575,6 +575,10 @@ a.tag:active {
 .menu-list a:active {
 	--menu-item-bg-l-delta:var(--active-bg-l-delta)
 }
+/* fixes left-cascading filenames issue in Netscape */
+.menu-list li {
+	clear: both;
+}
 .menu-list li ul {
 	border-left: 1px solid var(--border);
 	margin: 0.75em;
@@ -1173,8 +1177,10 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 #badge {
 	float: right;
 	position: relative;
-	line-height: 0;
+/*	line-height: 0; */
 	outline-offset: 0;
+	/* explicit width for netscape */
+	width: 88px;
 }
 #badge:active:after {
 	content: var(--badge-press, "");
