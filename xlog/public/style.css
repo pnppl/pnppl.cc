@@ -1177,7 +1177,7 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 #badge {
 	float: right;
 	position: relative;
-/*	line-height: 0; */
+	line-height: 0;
 	outline-offset: 0;
 	/* explicit width for netscape */
 	width: 88px;
