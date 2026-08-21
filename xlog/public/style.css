@@ -1071,6 +1071,8 @@ a.navbar-item:visited {
 	background-color: purple;
 	padding: 2px 2em;
 	text-align: center;
+	/* make the link unclickable on CSS-enabled browsers so you can collapse the TOC */
+	pointer-events: none;
 }
 .menu-label i {
 	color: white;
