@@ -34,6 +34,7 @@ a.excerpt-more {
 	font-weight: bold;
 	border-bottom: 1px solid;
 	margin-left: 1ch;
+	vertical-align: bottom;
 }
 --></style>
 Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, see [[#meta|/+/tag/meta]]. For highlights, see [[#fav|/+/tag/fav]].
