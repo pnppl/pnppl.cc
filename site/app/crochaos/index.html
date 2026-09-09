@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<!--link rel="icon" href=""-->
+		<title>crochaos</title>
+		<meta property="og:site_name" content="pnppl.cc">
+		<meta property="og:title" content="crochaos">
+		<meta property="og:description" content="crochet blanket randomizer">
+		<meta property="og:image" content="https://pnppl.cc/public/logo.gif">
+		<meta property="og:url" content="https://pnppl.cc/app/crochaos/">
+		<meta property="og:type" content="website">
+		<meta name="description" content="crochet blanket randomizer">
+		<style><!--
+		:root {
+			color-scheme: light dark;
+		}
+		body {
+			background-color: light-dark(thistle, black);
+			text-align: center;
+			max-width: 100%;
+			margin: 1em auto;
+			padding: 0 1em;
+			font-family: sans-serif;
+		}
+		.big {
+			font-size: 1em;
+		}
+		#colors {
+			max-width: 5ch;
+			width: fit-content;
+			text-align: right;
+		}
+		#go {
+			margin-left: 1ch;
+		}
+		#results {
+			text-align: left;
+			width: fit-content;
+			margin: 1em auto;
+		}
+		.result-check {
+			display: none;
+		}
+		:checked + label {
+			text-decoration: line-through;
+		}
+		--></style>
+	</head>
+<body>
+	<h1>crochaos</h1>
+	<label class="big"><input class="big" type="number" id="colors" value="2" min="1"> colors</label>
+	<input class="big" type="button" id="go" value="Go">
+	<div id="results"></div>
+	<script><!--
+	stitches = [
+		"Alpine Stitch",
+		"Basketweave",
+		"Braided Extended Half Double Crochet",
+		"Crochet Loop",
+		"Crossed Double Crochet",
+		"Feather Stitch",
+		"Floret Stitch",
+		"Half Double Crochet",
+		"Lemon Peel",
+		"Moss Stitch",
+		"Puff Stitch",
+		"Sedge Stitch",
+		"Suzette Stitch",
+		"V Stitch",
+		"Waffle Stitch"
+	];
+
+	last_stitch = '';
+	last_color = '';
+	count = 0;
+	function main() {
+		stitch = stitches[Math.floor(Math.random() * stitches.length)];
+		while (stitch == last_stitch) {
+			stitch = stitches[Math.floor(Math.random() * stitches.length)];
+		}
+		last_stitch = stitch;
+
+		total_colors = document.getElementById("colors").value;
+		color = Math.floor(Math.random() * total_colors) + 1;
+		while (color == last_color && total_colors > 1) {
+			color = Math.floor(Math.random() * total_colors) + 1;
+		}
+		last_color = color;
+
+		rows = Math.floor(Math.random() * 6) + 1;
+		new_entry = document.getElementById("results").appendChild(document.createElement("div"));
+		new_entry.innerHTML = `<input class="result-check" type="checkbox" id="result-${count}"><label for="result-${count}"><b>${rows}&#215;</b> ${stitch} in <b>Color #${color}</b></label>`;
+		count += 1;
+	}
+
+	document.getElementById("go").addEventListener("click", main);
+	--></script>
+</body>
+</html>
