@@ -135,7 +135,7 @@ li.pagefind-ui__result-tag {
 <!-- need comment to make it through template for mosaic compat, and need it to not be JS-escaped -->
 {{ printf "<script> <!--" | raw }}
 	window.addEventListener('DOMContentLoaded', (event) => {
-		new PagefindUI({
+		let search = new PagefindUI({
 			element: "#search",
 			pageSize: 25,
 			showSubResults: true,
@@ -163,6 +163,11 @@ li.pagefind-ui__result-tag {
 				return result;
 		    }
 		});
+		const urlParams = new URLSearchParams(window.location.search);
+		const urlSearch = urlParams.get('q');
+		if (urlSearch.length > 0) {
+			search.triggerSearch(urlSearch);
+		}
 	});
 {{ printf "//-->" | raw }}
 </script>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>pnppl.cc</ShortName>
+  <Description>Search pnppl.cc with Pagefind</Description>
+  <Url type="text/html"
+       template="http://pnppl.cc/+/search/?q={searchTerms?}"/>
+  <Image height="64" width="64" type="image/gif">http://pnppl.cc/public/logo.gif</Image>
+  <Image height="16" width="16" type="image/vnd.microsoft.icon">http://pnppl.cc/favicon.ico</Image>
+  <Language>en-us</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
+
