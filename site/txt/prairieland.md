@@ -4,7 +4,7 @@
 !! *WARNING*: independent thought ahead. Thinking for yourself can lead to dissatisfaction, arrest, and prosecution.
 
 <br>
-<center><b style="font-size: 125%;">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &lt;&#126;<br>&#126;&gt; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
+<center><b style="font-size: 115%;">&#126;&gt; <a href="//zines.pnppl.cc/map/">Crime Scene</a> &lt;&#126;<br>&#126;&gt; <a href="//zines.pnppl.cc/gallery/">Cover Gallery</a> &lt;&#126;</b></center>
 <br>
 
 - [[Acrid Black Smoke (2021)|//zines.pnppl.cc/acrid-black-smoke]]&nbsp;[^abs]
@@ -168,7 +168,7 @@ There are photos of zines and books I can't identify in [[https://git.gay/pnppl/
 *Massive thanks to:*
 - *[[Firestorm|https://firestorm.coop/]] for hooking me up with two PDFs I was missing: _Outside Agitators_ and _We Don't Need Safety_*
 - *Two anonymous email correspondents who identified _The Anarchist Tension_ and several books (not yet added)*
-- *Jess at [[Monkeywrench Books|https://www.monkeywrenchbooks.org/]] who provided PDFs for _Hacking the Suburbs_ and _Open Propositions_ and created [[a display|../img/prairieland/monkeywrench.jpg]] to support the defendants*
+- *[[Monkeywrench Books|https://www.monkeywrenchbooks.org/]] for providing PDFs for _Hacking the Suburbs_ and _Open Propositions_ and creating [[a display|../img/prairieland/monkeywrench.jpg]] to support the defendants*
 
 
 ## Addendum: Song Did Nothing Wrong
@@ -179,13 +179,7 @@ There is *nothing* wrong with shooting your gun to [[defend your friends|https:/
 As horrific as the outcome of this case has been so far, we should be glad Song was there or people might be dead. It's easy to armchair quarterback after the fact, but we should be clear that the real problem is the concentration camp they were protesting and its bloodthirsty guards.
 
 
-## ACAB
-**BE GAY DO CRIME
-CHINGA LA MIGRA
-ANARCHY MEANS ATTACK**
-
-
-[^abs]:  [[Philly Anti-Capitalist|https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
+[^abs]:  [[Philly Anti-Capitalist|https://web.archive.org/web/20260426040409/https://phlanticap.noblogs.org/new-zine-acrid-black-smoke/]] · [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=acrid black smoke]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-acrid-black-smoke]]
 
 [^pris]: [[AZL|https://azinelibrary.org/zines/Against-Prisons]] · [[TAL|https://theanarchistlibrary.org/library/catherine-baker-against-prisons]] · [[Wildcat|http://wildcat.international/againstp.html]]
 
@@ -193,7 +187,7 @@ ANARCHY MEANS ATTACK**
 
 [^crit]: [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/theory/another-critique-insurrectionalism/]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-another-critique-of-insurrectionalism]] · [[Subversion|https://web.archive.org/web/20151020060007/https://subversionpress.wordpress.com/2015/07/17/another-critique-of-insurrectionalism/]]
 
-[^gay]:  [[haters|https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
+[^gay]:  [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=be gay do crime]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-be-gay-do-crime]] · [[ZLO|https://zinelibrary.org/be-gay-do-crime.html]]
 
 [^poly]: [[Untorelli|https://web.archive.org/web/20190817110450/https://untorellipress.noblogs.org/post/2018/07/23/butterflies-polyamory-ideology-letter-on-inconsequence/]] · [[TAL|https://theanarchistlibrary.org/library/aviv-etrebilal-butterflies-polyamory-and-ideology]] · [[ZLO|https://zinelibrary.org/butterflies-polyamory-ideology.html]] · [[Non-Fides|https://web.archive.org/web/20230117110232/http://www.non-fides.fr/?Butterflies-polyamory-and-ideology]]
 
@@ -201,27 +195,27 @@ ANARCHY MEANS ATTACK**
 
 [^city]: [[Defend the Atlanta Forest|https://defendtheatlantaforest.org/media-kit/]]
 
-[^crim]: [[Archive.org|https://archive.org/details/criminal-intimacy-print-zine]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-criminal-intimacy]] · [[Vermilion|https://vermilionpress.noblogs.org/post/2024/12/30/the-goods-zine-drive/]] · [[Warzone|https://warzonedistro.noblogs.org/post/2017/09/14/criminal-intimacy/]]
+[^crim]: [[Archive.org|https://archive.org/details/criminal-intimacy-print-zine]] · [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-criminal-intimacy]] · [[Vermilion|https://web.archive.org/web/20260910100009/https://vermilionpress.noblogs.org/post/2024/12/30/the-goods-zine-drive/]] · [[Warzone|https://web.archive.org/web/20260304003031/https://warzonedistro.noblogs.org/post/2017/09/14/criminal-intimacy/]]
 
-[^da]:   [[haters|https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
+[^da]:   [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=de-arrest primer]] · [[Sprout Distro|https://www.sproutdistro.com/catalog/zines/direct-action/de-arrest-primer/]]
 
 [^wn]:   [[Antifa International|https://deathtofascism.com/resources/#:~:text=destroying white nationalism]]
 
 [^occu]: [[Archive.org|https://archive.org/details/diy-occupation-guide-2024/]] · [[IndyBay|https://www.indybay.org/newsitems/2024/04/29/18865522.php]] · [[Escalate Network|https://web.archive.org/web/20240429101818/https://escalatenetwork.org/post/749031816489484288/the-do-it-yourself-occupation-guide-2024-edition]]
 
-[^fire]: [[Ruins of Capital|https://ruinsofcapital.noblogs.org/follow-the-fires/]] · [[TAL|https://theanarchistlibrary.org/library/haraami-follow-the-fires]] · [[ZLO|https://zinelibrary.org/follow-the-fires-insurgency-against-identity.html]] · [[Living & Fighting|https://web.archive.org/web/20240705045730/https://livingandfighting.net/Follow-the-Fires]]
+[^fire]: [[Ruins of Capital|https://web.archive.org/web/20260912104355/https://ruinsofcapital.noblogs.org/follow-the-fires/]] · [[TAL|https://theanarchistlibrary.org/library/haraami-follow-the-fires]] · [[ZLO|https://zinelibrary.org/follow-the-fires-insurgency-against-identity.html]] · [[Living & Fighting|https://web.archive.org/web/20240705045730/https://livingandfighting.net/Follow-the-Fires]]
 
-[^xr]:   [[Ill Will|https://illwill.com/print/for-the-love-of-winning]] · [[zad for ever|https://zadforever.blog/2019/05/03/for-the-love-of-winning-an-open-letter-to-extinction-rebellion/]]
+[^xr]:   [[Ill Will|https://web.archive.org/web/20260906154512/https://illwill.com/print/for-the-love-of-winning]] · [[zad for ever|https://zadforever.blog/2019/05/03/for-the-love-of-winning-an-open-letter-to-extinction-rebellion/]]
 
-[^gaza]: [[haters|https://haters.noblogs.org/zines/#:~:text=the ghetto gaza uprising]] · [[TAL|https://theanarchistlibrary.org/library/adi-callai-the-gaza-ghetto-uprising]] · [[Brooklyn Rail|https://brooklynrail.org/2024/05/field-notes/The-Gaza-Ghetto-Uprising/]]
+[^gaza]: [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=the ghetto gaza uprising]] · [[TAL|https://theanarchistlibrary.org/library/adi-callai-the-gaza-ghetto-uprising]] · [[Brooklyn Rail|https://brooklynrail.org/2024/05/field-notes/The-Gaza-Ghetto-Uprising/]]
 
 [^hack]: [[Substack|https://territories.substack.com/p/hacking-the-suburbs]]
 
 [^harv]: [[AZL|https://azinelibrary.org/zines/Harvest-of-Dead-Elephants-The-The-False-Opposition-of-Animal-Liberation]] · [[TAL|https://theanarchistlibrary.org/library/various-authors-a-murder-of-crows#toc53]]
 
-[^abrt]: [[Jewish Currents|https://jewishcurrents.org/how-to-give-yourself-an-abortion/]] · [[haters|https://haters.noblogs.org/zines/#:~:text=how to give yourself an abortion]] · [[ZLO|https://zinelibrary.org/how-to-give-yourself-an-abortion.html]] · [[Archive.org|https://archive.org/details/abortion-zines/JC-Abortion]]
+[^abrt]: [[Jewish Currents|https://jewishcurrents.org/how-to-give-yourself-an-abortion/]] · [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=how to give yourself an abortion]] · [[ZLO|https://zinelibrary.org/how-to-give-yourself-an-abortion.html]] · [[Archive.org|https://archive.org/details/abortion-zines/JC-Abortion]]
 
-[^1st]:  [[haters|https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]] · [[ZLO|https://zinelibrary.org/i-dont-bash-back-i-shoot-first.html]]
+[^1st]:  [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=i don't bash back, i shoot first]] · [[TAL|https://theanarchistlibrary.org/library/anonymous-i-don-t-bash-back-i-shoot-first]] · [[ZLO|https://zinelibrary.org/i-dont-bash-back-i-shoot-first.html]]
 
 [^if]:   [[TAL|https://theanarchistlibrary.org/library/ignatius-if-we-go-we-go-on-fire]]
 
@@ -233,29 +227,29 @@ ANARCHY MEANS ATTACK**
 
 [^lies]: [[Lies|https://www.liesjournal.net/#:~:text=letters to l: visions and paranoia]] · [[TAL|https://theanarchistlibrary.org/library/m-sandovsky-letters-to-l-paranoia-and-visions]]
 
-[^no]:   [[Ill Will|https://illwilleditions.noblogs.org/post/2015/09/19/catalogue/#:~:text=no selves to abolish]] · [[TAL|https://theanarchistlibrary.org/library/k-aarons-no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world]] · [[Hostis|https://incivility.org/2020/06/03/no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world-by-k-aarons/]] · [[Metamute|https://web.archive.org/web/20160311000846/http://www.metamute.org/editorial/articles/no-selves-to-abolish-afropessimism-anti-politics-and-end-world]]
+[^no]:   [[Ill Will|https://web.archive.org/web/20251108102300/https://illwilleditions.noblogs.org/post/2015/09/19/catalogue/#:~:text=no selves to abolish]] · [[TAL|https://theanarchistlibrary.org/library/k-aarons-no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world]] · [[Hostis|https://incivility.org/2020/06/03/no-selves-to-abolish-afropessimism-anti-politics-and-the-end-of-the-world-by-k-aarons/]] · [[Metamute|https://web.archive.org/web/20160311000846/http://www.metamute.org/editorial/articles/no-selves-to-abolish-afropessimism-anti-politics-and-end-world]]
 
-[^now]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]] · [[ZLO|https://zinelibrary.org/now.html]]
+[^now]:  [[Ill Will|https://web.archive.org/web/20260709182722/https://illwilleditions.noblogs.org/files/2018/02/Invisible-Committee-NOW-READ.pdf]] · [[TAL|https://zinelibrary.org/now.html]] · [[ZLO|https://zinelibrary.org/now.html]]
 
-[^lead]: [[Ill Will|https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]] · [[ZLO|https://zinelibrary.org/on-the-black-leadership.html]]
+[^lead]: [[Ill Will|https://web.archive.org/web/20251205220738/https://illwill.com/print/on-the-black-leadership-and-other-white-myths]] · [[TAL|https://theanarchistlibrary.org/library/we-still-outside-collective-on-the-black-leadership-and-other-white-myths]] · [[ZLO|https://zinelibrary.org/on-the-black-leadership.html]]
 
 [^mad]:  [[Of Unsound Mind|https://web.archive.org/web/20210624090104/https://www.unsoundmind.org/post/open-propositions-for-a-strategic-madness]] · [[Substack|https://ofunsoundmind.substack.com/p/open-propositions-for-a-strategic]]
 
-[^yel]:  [[haters|https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]] · [[ZLO|https://zinelibrary.org/our-enemies-in-yellow.html]]
+[^yel]:  [[haters|https://web.archive.org/web/20260911124611/https://haters.noblogs.org/post/2025/06/20/reportback-our-enemies-in-yellow/]] · [[ZLO|https://zinelibrary.org/our-enemies-in-yellow.html]]
 
-[^666]:  [[haters|https://haters.noblogs.org/zines/#:~:text=the satanic death cult is real]] · [[TAL|https://theanarchistlibrary.org/library/sophie-lewis-the-satanic-death-cult-is-real]] · [[Commune|https://communemag.com/the-satanic-death-cult-is-real/]]
+[^666]:  [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=the satanic death cult is real]] · [[TAL|https://theanarchistlibrary.org/library/sophie-lewis-the-satanic-death-cult-is-real]] · [[Commune|https://communemag.com/the-satanic-death-cult-is-real/]]
 
-[^shat]: [[haters|https://haters.noblogs.org/zines/#:~:text=shattering abolition]] · [[Black Ink|https://black-ink.info/2023/02/03/shattering-abolition-against-reformist-counterinsurgency-in-the-streets-of-oakland/]]
+[^shat]: [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=shattering abolition]] · [[Black Ink|https://black-ink.info/2023/02/03/shattering-abolition-against-reformist-counterinsurgency-in-the-streets-of-oakland/]]
 
 [^stco]: [[Friendship as a Form of Life|https://friendship-as-a-form-of-life.tumblr.com/post/148861170442/friendship-as-a-form-of-life-ii-continuum-stange]]
 
 [^tce]:  [[CrimethInc|https://crimethinc.com/tce]] · [[TAL|https://theanarchistlibrary.org/library/crimethinc-to-change-everything]]
 
-[^wol]:  [[haters|https://haters.noblogs.org/zines/#:~:text=To Them, We Are All Outside Agitators: Encampments %26 Escalation]] · [[Within Our Lifetime|https://wolpalestine.com/encampments/]]
+[^wol]:  [[haters|https://web.archive.org/web/20260911053149/https://haters.noblogs.org/zines/#:~:text=To Them, We Are All Outside Agitators: Encampments %26 Escalation]] · [[Within Our Lifetime|https://wolpalestine.com/encampments/]]
 
 [^twrd]: [[TAL|https://theanarchistlibrary.org/library/mary-nardini-gang-toward-the-queerest-insurrection]] · [[ZLO|https://zinelibrary.org/towards-the-queerest-insurrection.html]]
 
-[^war]:  [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-Streets-revised-READ.pdf]] · [[Ill Will|https://illwilleditions.noblogs.org/files/2016/12/War-in-the-streets-print.pdf]] · [[ZLO|https://zinelibrary.org/war-in-the-streets.html]]
+[^war]:  [[Ill Will|https://web.archive.org/web/20260731002821/https://illwilleditions.noblogs.org/files/2016/12/War-in-the-Streets-revised-READ.pdf]] · [[Ill Will|https://web.archive.org/web/20260624225706/https://illwilleditions.noblogs.org/files/2016/12/War-in-the-streets-print.pdf]] · [[ZLO|https://zinelibrary.org/war-in-the-streets.html]]
 
 [^safe]: [[IGD|https://itsgoingdown.org/we-dont-need-safety-we-need-to-escalate/]] · [[Archive.org|https://archive.org/details/no-safety/]]
 
