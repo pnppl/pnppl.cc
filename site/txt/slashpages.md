@@ -6,6 +6,7 @@
 - [[about]]
 - [[ai]]
 - [[app]]
+- [[audio]]
 - [[compat]]
 - [[deathnote]]
 - [[fs-ir]]
