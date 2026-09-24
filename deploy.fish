@@ -31,6 +31,7 @@ git add *.* \
 	site/img/ \
 	site/app/ \
 	site/vid/ \
+	site/audio/ \
 	site/prairieland/ \
 	site/shrine/ \
 	site/*.txt \

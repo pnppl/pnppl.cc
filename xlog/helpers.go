@@ -366,6 +366,7 @@ func randomBadge() template.HTML {
 		{"online", "", "Cords plugged together show you're ON-LINE"},
 		{"she-her", "", "she/her"},
 		{"copyleft", "/about#copyleft", "Copyleft: all wrongs reversed"},
+		{"cj", "/shrine/cj", "I FUCKING LOVE CARROT JUICE"},
 		{"steal", "https://git.gay/pnppl/pnppl.cc", "STEAL THIS SITE"},
 		{"civ", "https://hrt.pnppl.cc", "INDUSTRIAL CIVILIZATION IS MY ENDOCRINE SYSTEM"},
 		{"insecure-crt", "http://insecure.club/", "HTTP (anxious CRT face) this website is a litle insecure"},
