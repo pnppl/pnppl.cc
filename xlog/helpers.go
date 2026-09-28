@@ -367,6 +367,7 @@ func randomBadge() template.HTML {
 		{"she-her", "", "she/her"},
 		{"copyleft", "/about#copyleft", "Copyleft: all wrongs reversed"},
 		{"cj", "/shrine/cj", "I FUCKING LOVE CARROT JUICE"},
+		{"btmi", "/shrine/jeff", "BOMB THE MUSIC INDUSTRY!"}, // should make it fit with the other badges better and/or make an animated version
 		{"steal", "https://git.gay/pnppl/pnppl.cc", "STEAL THIS SITE"},
 		{"civ", "https://hrt.pnppl.cc", "INDUSTRIAL CIVILIZATION IS MY ENDOCRINE SYSTEM"},
 		{"insecure-crt", "http://insecure.club/", "HTTP (anxious CRT face) this website is a litle insecure"},

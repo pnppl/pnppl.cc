@@ -1156,6 +1156,7 @@ body:has(h2:nth-of-type(13)) { --badge: url(/public/badges/gravity-wells.gif); }
 body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 /* static */
 /*body:has(h2:nth-of-type(15)) { --badge: url(/public/badges/my-anarchy-now.gif); }*/
+#badge:has(img[src$="btmi.gif"]),
 #badge:has(img[src$="invalid-css-red.gif"]),
 #badge:has(img[src$="invalid-html.gif"]) {
 	--badge-press: none;

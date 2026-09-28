@@ -16,7 +16,7 @@ https://ellie.clifford.lol/blog/0023-the-sixth-of-may/
 https://freethoughtblogs.com/nataliereed/2012/04/17/the-null-hypothecis/
 https://genderanalysis.net/2017/06/depersonalization-in-gender-dysphoria-widespread-and-widely-unrecognized/
 https://gillianbrockell.com/tracking-all-of-trumps-third-country-removals-that-we-know-of/
-https://haters.noblogs.org/zines/
+https://haters.nublogs.org/zines/
 https://j3s.sh/thought/blogs-rot-wikis-wait.html
 https://kevinboone.me/web-adjacent.html
 https://maia.crimew.gay/posts/the-emails/
@@ -46,7 +46,7 @@ https://www.qwantz.com/
 ### Audio/video
 https://archive.org/details/MindWebs_201410
 https://kevincraig.us/audio/gogulski/
-https://thefinalstrawradio.noblogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
+https://thefinalstrawradio.nublogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
 https://www.churchofeuthanasia.org/catalog/video.html
 https://www.fuckyoutube.lol/youtube_abyss
 https://www.juliaserano.com/music.html
@@ -68,7 +68,7 @@ https://rubjo.github.io/victor-mono/
 https://adelfaure.net/
 https://fourthievesvinegar.org/
 https://fuckup.solutions/index3.html
-https://june11.noblogs.org/
+https://june11.nublogs.org/
 https://kvibber.com/
 https://solar.lowtechmagazine.com
 https://wiki.archiveteam.org/
