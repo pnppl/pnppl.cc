@@ -43,6 +43,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 <a href="http://1mb.club/"><img src="../img/clubs/1mb.gif" alt="1MB Club" width="88" height="31"></a>
 <a href="https://darktheme.club/"><img src="../img/clubs/dark.gif" alt="Darktheme Club" width="88" height="31"></a>
 <a href="https://git.gay/pnppl/pnppl.cc"><img src="../img/clubs/gitgay.gif" alt="git.gay" width="88" height="31"></a>
+<a href="https://petrapixel.neocities.org/indiewebdb/"><img src="../img/clubs/indiewebdb.gif" alt="Indie Web Database" width="88" height="31"></a>
 <a href="http://insecure.club/"><img src="../img/clubs/insecure.gif" alt="this site is a little insecure" width="88" height="31"></a>
 <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31"></a>
 <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31"></a>

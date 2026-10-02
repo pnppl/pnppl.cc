@@ -53,6 +53,7 @@ https://www.juliaserano.com/music.html
 https://www.rifters.com/blindsight/vampires.htm
 
 ### Game/interactive
+https://corru.observer/
 https://freegames.org/dys4ia/
 https://xrafstar.monster/games/twine/tails/
 
