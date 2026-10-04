@@ -14,7 +14,7 @@ for file in + img public txt vid pdf
 	echo "- [[$file]]" >> "$out"
 end &&
 
-echo -e '\n# Subdomains' >> "$out" &&
+echo -e '\n## Subdomains' >> "$out" &&
 for sub in hrt qur zine
 	switch $sub
 		case hrt
