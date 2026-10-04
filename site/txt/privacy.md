@@ -24,7 +24,12 @@ They are based in Finland. They in turn use Hetzner as their host AFAIK, whose [
 ### Github Pages
 The Prairieland Zines are hosted on Github Pages, which is owned by Microsoft, based in the US. They have a [[bunch of legalese|https://docs.github.com/en/site-policy/privacy-policies]] you can look at if you want.
 
-This provider is not ideal and I'd like to move to another option eventually; it was occasioned by the need to split this part of the site into its own project/subdomain. You can download it from [[git.gay|https://git.gay/pnppl/prairieland]] or [[Codeberg|https://codeberg.org/pnppl/prairieland]] or the prepared zips if you're leery of Microsoft. The [[index page|prairieland]] is on Web 1.0 Hosting; only the `zine` subdomain is on Github.
+This provider is not ideal and I'd like to move to another option eventually; it was occasioned by the need to split this part of the site into its own project/subdomain. You can download it from [[git.gay|https://git.gay/pnppl/prairieland]] or [[Codeberg|https://codeberg.org/pnppl/prairieland]] or the prepared zips if you're leery of Microsoft. The [[index page|prairieland]] is on Web 1.0 Hosting; only the `zines` subdomain is on Github.
+
+### Oracle
+[[Quote Unquote Radio|http://qur.pnppl.cc/]] is hosted by Oracle Cloud Infrastructure. Here's [[Oracle's privacy policy|https://www.oracle.com/legal/privacy/privacy-policy/]].
+
+They're a horrible company and you should not trust them, but they'll give you a free VPS with plenty of room for music.
 
 ### statichost.eu
 [[hrt.pnppl.cc|https://hrt.pnppl.cc/]] is hosted by statichost.eu, which is based in Sweden. Their [[privacy policy|https://www.statichost.eu/privacy/]] has a summary at the top that sounds solid to me:

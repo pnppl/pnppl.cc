@@ -15,7 +15,7 @@ for file in + img public txt vid pdf audio
 end &&
 
 echo -e '\n## Subdomains' >> "$out" &&
-for sub in hrt qur zine
+for sub in hrt qur zines
 	switch $sub
 		case hrt
 			set desc 'mirror of [[hrt.soap.systems|https://hrt.soap.systems]], an archive of diyhrt.cafe, diyhrt.wiki, diyhrt.market, hrt.coffee, transfemscience.org and a few other DIY HRT resources'
