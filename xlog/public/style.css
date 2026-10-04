@@ -1173,8 +1173,8 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 #badge-img {
 	content: var(--badge) / "about";
 	/* fallback: pixelated is standard, crisp-edges for Safari */
-	image-rendering: pixelated;
 	image-rendering: crisp-edges;
+	image-rendering: pixelated;
 }
 /* Wrapper lets us draw "indented" border over the image */
 #badge {
