@@ -67,7 +67,8 @@ width="88" height="31"&gt;
 #club a:after {
 	content: '';
 }
-#club img {
+#club img,
+#my-badge img {
 	image-rendering: crisp-edges;
 	image-rendering: pixelated;
 }
@@ -79,6 +80,7 @@ width="88" height="31"&gt;
 #mybadge code {
 	display: block;
 	width: fit-content;
+	max-width: 100%;
 	margin: auto;
 	text-align: left;
 }
