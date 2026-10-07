@@ -53,6 +53,16 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 <a href="http://wiby.me/"><img src="../img/clubs/wiby.gif" alt="Wiby" width="88" height="31"></a>
 </center>
 
+## 88x31
+<center id="mybadge">
+<img alt="Stark image of fluffy dandelion and the words 'pnppl.cc' being blown in the wind" src="../../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
+<code><pre>&lt;a href="//pnppl.cc/"&gt;
+&lt;img src="<b title="Replace with link to your own copy">http://pnppl.cc/public/badges/pnppl.cc-dandelion.gif</b>"
+alt="Stark pixel art of a fluffy dandelion and the words 'pnppl.cc' being blown in the wind"
+width="88" height="31"&gt;
+&lt;/a&gt;</pre></code>
+</center>
+
 <style><!--
 #club a:after {
 	content: '';
@@ -64,6 +74,13 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 #club a:active img {
 	filter: brightness(98%);
 	transform: translate(1px, 1px) scaleX(0.98) scaleY(0.94);
+}
+#mybadge pre,
+#mybadge code {
+	display: block;
+	width: fit-content;
+	margin: auto;
+	text-align: left;
 }
 --></style>
 

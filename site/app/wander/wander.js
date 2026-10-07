@@ -80,6 +80,7 @@ const wander = {
 		'https://fuckup.solutions/index3.html',
 		'https://june11.nublogs.org/',
 		'https://kvibber.com/',
+		'https://penfield.ily.rs/',
 		'https://solar.lowtechmagazine.com',
 		'https://wiki.archiveteam.org/',
 		'https://www.gothic-charm-school.com/',
@@ -109,6 +110,7 @@ const wander = {
 		'https://baccyflap.com/mus/ti/',
 
 		// Audio/video
+		'https://defianceohio.terrorware.com/audio/',
 		'https://echoesofbluemars.org/',
 		'https://handthing.party/',
 		'https://smokepowered.com/',

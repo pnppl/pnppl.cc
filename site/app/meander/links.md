@@ -71,6 +71,7 @@ https://fourthievesvinegar.org/
 https://fuckup.solutions/index3.html
 https://june11.nublogs.org/
 https://kvibber.com/
+https://penfield.ily.rs/
 https://solar.lowtechmagazine.com
 https://wiki.archiveteam.org/
 https://www.gothic-charm-school.com/
@@ -100,6 +101,7 @@ http://www.terrybisson.com/theyre-made-out-of-meat-2/
 https://baccyflap.com/mus/ti/
 
 ### Audio/video
+http://defianceohio.terrorware.com/audio/
 http://echoesofbluemars.org/
 http://handthing.party/
 http://smokepowered.com/
