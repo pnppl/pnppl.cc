@@ -55,7 +55,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 
 ## 88x31
 <center id="mybadge">
-<img alt="Stark image of fluffy dandelion and the words 'pnppl.cc' being blown in the wind" src="../../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
+<img alt="Stark image of fluffy dandelion and the words 'pnppl.cc' being blown in the wind" src="../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
 <code><pre>&lt;a href="//pnppl.cc/"&gt;
 &lt;img src="<b title="Replace with link to your own copy">http://pnppl.cc/public/badges/pnppl.cc-dandelion.gif</b>"
 alt="Stark pixel art of a fluffy dandelion and the words 'pnppl.cc' being blown in the wind"
