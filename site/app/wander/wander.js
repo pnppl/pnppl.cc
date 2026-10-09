@@ -115,6 +115,7 @@ const wander = {
 		'https://echoesofbluemars.org/',
 		'https://handthing.party/',
 		'https://smokepowered.com/',
+		'https://wonthelp.info/',
 		'https://www.quoteunquoterecords.com/qur022.htm',
 
 		// Game/interactive
@@ -128,6 +129,7 @@ const wander = {
 		'https://wiby.me',
 
 		// Site root
+		'https://maple.pet/',
 		'https://petermolnar.net/',
 		'https://velveteen.one/',
 		'https://www.floodgap.com/',

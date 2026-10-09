@@ -106,6 +106,7 @@ http://defianceohio.terrorware.com/audio/
 http://echoesofbluemars.org/
 http://handthing.party/
 http://smokepowered.com/
+http://wonthelp.info/
 http://www.quoteunquoterecords.com/qur022.htm
 
 ## Game/interactive
@@ -119,6 +120,7 @@ http://web1.0hosting.net/
 http://wiby.me
 
 ### Site root
+http://maple.pet/
 http://petermolnar.net/
 http://velveteen.one/
 http://www.floodgap.com/

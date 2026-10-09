@@ -31,6 +31,8 @@ This provider is not ideal and I'd like to move to another option eventually; it
 
 They're a [[horrible|https://www.reuters.com/business/oracle-awarded-us-government-contract-provide-government-wide-hr-software-2026-06-10/]] [[company|https://www.oracle.com/news/announcement/oracles-commitment-to-saudi-arabia-and-president-trumps-vision-for-global-prosperity-2025-05-13/]] but they'll give you a free VPS with plenty of room for music.
 
+**The Soulseek server *does* collect information, so if you don't want me/Oracle/feds/intruders to see what you download, take some precautions.**
+
 ### statichost.eu
 [[hrt.pnppl.cc|https://hrt.pnppl.cc/]] is hosted by statichost.eu, which is based in Sweden. Their [[privacy policy|https://www.statichost.eu/privacy/]] has a summary at the top that sounds solid to me:
 
