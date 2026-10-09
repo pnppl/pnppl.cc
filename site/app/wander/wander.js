@@ -73,6 +73,7 @@ const wander = {
 		'https://littlebitspace.com/resources/',
 		'https://marginalia-search.com/',
 		'https://rubjo.github.io/victor-mono/',
+		'https://www.firefund.net/',
 
 		// Site root
 		'https://adelfaure.net/',
@@ -82,6 +83,7 @@ const wander = {
 		'https://kvibber.com/',
 		'https://penfield.ily.rs/',
 		'https://solar.lowtechmagazine.com',
+		'https://stopomarchy.org/accessible',
 		'https://wiki.archiveteam.org/',
 		'https://www.gothic-charm-school.com/',
 		'https://www.halfbakery.com/',
@@ -116,8 +118,12 @@ const wander = {
 		'https://smokepowered.com/',
 		'https://www.quoteunquoterecords.com/qur022.htm',
 
+		// Game/interactive
+		'https://trek.epicrandomness.com',
+
 		// Misc. resource
 		'https://temblast.com/android.htm',
+		'https://triapul.cz/automa/gimp_dither',
 		'https://vivivi.leprd.space/webmastery/pre-css-attributes/',
 		'https://web1.0hosting.net/',
 		'https://wiby.me',

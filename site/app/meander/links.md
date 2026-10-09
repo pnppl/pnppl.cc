@@ -64,6 +64,7 @@ https://gridbeam.xyz/guide
 https://littlebitspace.com/resources/
 https://marginalia-search.com/
 https://rubjo.github.io/victor-mono/
+https://www.firefund.net/
 
 ### Site root
 https://adelfaure.net/
@@ -73,6 +74,7 @@ https://june11.nublogs.org/
 https://kvibber.com/
 https://penfield.ily.rs/
 https://solar.lowtechmagazine.com
+https://stopomarchy.org/accessible
 https://wiki.archiveteam.org/
 https://www.gothic-charm-school.com/
 https://www.halfbakery.com/
@@ -107,8 +109,12 @@ http://handthing.party/
 http://smokepowered.com/
 http://www.quoteunquoterecords.com/qur022.htm
 
+## Game/interactive
+http://trek.epicrandomness.com
+
 ### Misc. resource
 http://temblast.com/android.htm
+http://triapul.cz/automa/gimp_dither
 http://vivivi.leprd.space/webmastery/pre-css-attributes/
 http://web1.0hosting.net/
 http://wiby.me

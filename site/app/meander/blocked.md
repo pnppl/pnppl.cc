@@ -7,6 +7,7 @@ https://datagubbe.se/decusab/
 https://dbushell.com/2026/01/09/death-to-scroll-fade/
 https://emma.best/2025/10/29/self-described-founder-of-anonymous-announces-return-to-jail-for-violating-bail-with-anon/
 https://katymontgomerie.com/blog/no-one-actually-believes-that-cis-is-a-slur-heres-why-they-pretend-to
+https://nspm7union.com/
 https://transnews.network/
 https://www.assignedmedia.org/
 https://www.jwz.org/
