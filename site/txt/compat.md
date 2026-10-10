@@ -8,7 +8,7 @@ I'd also appreciate reports of the site working okay in older browsers with CSS 
 If you visit my site on something really cool, please send me a picture!
 
 
-## LibreWolf 147, Firefox ESR 140 (Linux) & IronFox 147, Fennec 147 (Android)
+## LibreWolf, Firefox ESR (Linux) & IronFox, Fennec (Android)
 These are the baseline modern (CSS-enabled) browsers I use. They should be fully supported.
 
 
@@ -18,21 +18,99 @@ https://github.com/AppImageCommunity/NCSA-Mosaic-AppImage
 This is the HTML-only browser I regularly test with. It originally came out in 1996, but this version has some more recent patches.
 
 
-## Firefox 4.0, 2011-03 (Linux)
+## Firefox
+### 4.0, 2011-03 (Linux)
 https://ftp.mozilla.org/pub/firefox/releases/4.0/linux-x86_64/en-US/
 
 Supporting this is not a priority, but it actually renders pretty well thanks to a few compatibility hacks in the CSS.
 
-## Firefox 12.0, 2012-04 (Windows XP)
+### 12.0, 2012-04 (Windows XP)
 Better than Firefox 4.0. Not perfect, but perfectly adequate.
 
-## Mypal 74.1.1, 2025-07 (Windows XP)
+### Mypal 74.1.1, 2025-07 (Windows XP)
 Based on Firefox 74 from 2020-03.
 
 As far as I can tell everything renders perfectly, and the search even works. And no performance issues (on period-correct hardware).
 
 
-## Offpunk
+## Netscape
+### 3.04, 1997-10 (Linux)
+https://github.com/ostrich/netscape304-modern
+
+Just like Mosaic, but better, because it supports `<center>` and animated gifs. Remarkably easy to get up and running. Also, the interface is lovely, it runs super smooth, and pages load quickly; this might have been peak web browsing.
+
+### 4.03, 1997-06 (Wine)
+https://winworldpc.com/product/netscape-navigator/40x
+
+Absolute clusterfuck until you disable CSS globally in the preferences ("Advanced" section), then it works fine.
+
+My curiosity got the better of me and I started poking at this, thinking it might be tractable now that Netscape 7.2 looks ok. Nope. It looks slightly better, but it's still a lost cause.
+
+There are some very odd alignment and spacing issues, but the most offensive problem is the garish colors. It interprets "inherit" as neon green?
+
+There is no way I would ever get this to look even as good as the bare HTML. This is the definition of unsupportable.
+
+### 4.8, 2002-08 (Wine)
+https://winworldpc.com/product/netscape-navigator/45x
+
+Indistinguishable from 4.03.
+
+### 7.2, 2004-08 (Wine)
+https://winworldpc.com/product/netscape-navigator/7x
+
+Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Also the font is weird.
+
+Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
+
+
+## Chawan 0.3.3 (Linux)
+https://chawan.net/
+
+Not too shabby. Buttons are kinda large and imposing, list markers aren't quite aligned, some z-index issues.
+
+Very intuitive for a TUI browser. Good mouse support.
+
+
+## Dillo, Dillo+ (Linux)
+https://dillo-browser.org/
+https://github.com/crossbowerbt/dillo-plus
+
+Pretty good rendering, but TOC gets messed up at small window sizes, and it doesn't seem to want to display anything in bold.
+
+Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`. The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.)
+
+
+## Kristall v0.4 (Linux)
+https://kristall.random-projects.net/
+
+Seems to work fine. Text only. Nice browser.
+
+
+## Litebrowser (Linux)
+https://github.com/litehtml/litebrowser-linux
+
+Mostly there but definitely janky. Navbar is offset to the right, annotations render but float way above text, button text off-center. Still, an impressive showing, and I'd be tempted to try to improve compat if it didn't use that horrid new UI thing where there's no titlebar (gtk4?).
+
+
+## Links2, Lynx, ELinks, w3m (Linux)
+Seems to pretty much work perfectly.
+
+
+## MicroWeb (86Box)
+https://github.com/jhhoward/MicroWeb
+
+Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`) when encoded as an HTML entity. I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
+
+
+## Netsurf 3.11 (Flatpak)
+https://flathub.org/en/apps/org.netsurf_browser.NetSurf
+
+Technically it works well; all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
+
+This is tangential, but this version of the browser has a goddamn hamburger menu instead of a menu bar. I am irrationally annoyed by this. I think 3.09 might have a proper interface. Building from source seems like a pain in the ass though.
+
+
+## Offpunk (Linux)
 https://offpunk.net/
 
 Many pages don't render at all without forcing 'view full', which also has some issues:
@@ -45,35 +123,46 @@ Your best bet is probably to type 'feed' and use that for navigation.
 I tried both 2.7.1 from the repo and the latest git version as of 2026-02. They behave quite differently. Installed depends also make a big difference (see these with 'version').
 
 
-## Links2, Lynx, ELinks, w3m
-Seems to pretty much work perfectly.
+## Palm OS
+### DanaWeb (AlphaSmart Dana - Palm OS 4)
+https://palmdb.net/app/danaweb
 
+Images mostly load and take up visual space but are all black or white. 1-bit.day works and gifs on other sites work, including insecure.club, handthing.party, qur.pnppl.cc... Maybe gifsicle/flexigif broke them? You can turn them off from the menu which you would probably want to do anyway.
 
-## Netscape 3.04, 1997-10 (Linux)
-https://github.com/ostrich/netscape304-modern
+It doesn't understand protocol-relative links, which I keep going back and forth on, but I guess I should get rid of.
 
-Just like Mosaic, but better, because it supports `<center>` and animated gifs. Remarkably easy to get up and running. Also, the interface is lovely, it runs super smooth, and pages load quickly; this might have been peak web browsing.
+Like MicroWeb, it's unable to navigate to a character entity.
 
-## Netscape 4.03, 1997-06 (Wine)
-https://winworldpc.com/product/netscape-navigator/40x
+Lists are all fucked up. It acts like a tag didn't close and they endlessly cascade rightward.
 
-Absolute clusterfuck until you disable CSS globally in the preferences ("Advanced" section), then it works fine.
+DanaWeb crashes the TX.
 
-My curiosity got the better of me and I started poking at this, thinking it might be tractable now that Netscape 7.2 looks ok. Nope. It looks slightly better, but it's still a lost cause.
+### KBrowser (Dana, TX)
+https://palmdb.net/app/kbrowser
+This is a WAP browser, which is way less exciting than it sounds. Wireless Application Protocol was a shitty stripped down version of the web with its own special HTML called WML that phone carriers used to try to enclose the web/their customers. It relies on a proxy server called a WAP Gateway that basically chews your phone's food for it, not unlike Retro Proxy, Web Rendering Proxy, etc.
 
-There are some very odd alignment and spacing issues, but the most offensive problem is the garish colors. It interprets "inherit" as neon green? I discovered you can defeat this with var(), eg: `color: var(--ns, inherit)`. But then I would still have to set it to plain `inherit` first for browsers that don't understand variables, so this is not satisfactory. There is no way I would ever get this to look even as good as the bare HTML. This is the definition of unsupportable.
+Anyway I can't get any of them to work. Web 1.0 Hosting has one and there are some listed here:
+- https://15pmm01.com/wap/en/
+- https://nbpfan.bs0dd.net/index.php?lang=eng&page=wap%2Fmain (haven't tried all of these yet, found them after I already got bored)
 
-## Netscape 4.8, 2002-08 (Wine)
-https://winworldpc.com/product/netscape-navigator/45x
+Do I need to install some certificates or something? It always either times out then gives the same ambiguous error, or appears to finish loading but doesn't display anything. Same behavior on the TX.
 
-Indistinguishable from 4.03.
+### WebPro (Dana, TX)
+https://palmdb.net/app/webpro
 
-## Netscape 7.2, 2004-08 (Wine)
-https://winworldpc.com/product/netscape-navigator/7x
+Incompatible with Dana — needs Palm OS 5. Version 3.5 works at first then crashes the Palm TX. Version 3.0 Patched works very well on the TX — I was even able to load and use the map at https://zines.pnppl.cc/map/ and see my comics — but it doesn't support CSS.
 
-Pretty janky and I couldn't find a way to disable CSS, but a surprising amount of stuff renders right. The whole site kinda just looks stretched out. Also the font is weird.
+### Blazer, aka Web (Palm TX - Palm OS 5)
+With CSS and images off, all is well. Otherwise, the nav buttons get all squished together.
 
-Firefox 4 rendering is nice enough now that I've switched to this as my main unnecessary-CSS-devolution target.
+Some images refuse to load. Definitely need to investigate this issue, no point using gif if it isn't actually compatible.
+
+### NetFront 3.1 (TX)
+https://palmdb.net/app/netfront
+
+With CSS on, none of the nav elements are visible. ???
+
+Works fine without, although it quickly runs out of memory and throws an error if you try to load, like, a picture.
 
 
 ## Internet Explorer
@@ -111,83 +200,6 @@ On the plus side, the built-in feed reader works great.
 
 #### 8.0.6001.18702 (2009)
 Pretty... damn bad. Issues with positioning and button sizing/text alignment. Stuff floats off the screen and over text. Not sure if you'd want to use CSS. Works fine without.
-
-
-## Dillo, Dillo+
-Pretty good rendering, but TOC gets messed up at small window sizes, and it doesn't seem to want to display anything in bold.
-
-Unlike both historical and modern Firefox, it renders the UTF-8 sequences in .md files correctly without being told. (Modern Firefox has `View -> Repair Text Encoding`; Firefox 4 has `View -> Character Encoding -> Unicode`. The Netscapes need to be coerced like Firefox and then fail to render correctly. Of the text-only browsers, only Links2 fails. Mosaic, of course, also fails.)
-
-
-## Netsurf 3.11 (Flatpak)
-Technically it works well; all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
-
-This is tangential, but this version of the browser has a goddamn hamburger menu instead of a menu bar. I am irrationally annoyed by this. I think 3.09 might have a proper interface. Building from source seems like a pain in the ass though.
-
-
-## Kristall v0.4 (Linux)
-https://kristall.random-projects.net/
-
-Seems to work fine. Text only. Nice browser.
-
-
-## Chawan 0.3.3 (Linux)
-https://chawan.net/
-
-Not too shabby. Buttons are kinda large and imposing, list markers aren't quite aligned, some z-index issues.
-
-Very intuitive for a TUI browser. Good mouse support.
-
-
-## Litebrowser (Linux)
-https://github.com/litehtml/litebrowser-linux
-
-Mostly there but definitely janky. Navbar is offset to the right, annotations render but float way above text, button text off-center. Still, an impressive showing, and I'd be tempted to try to improve compat if it didn't use that horrid new UI thing where there's no titlebar (gtk4?).
-
-
-## MicroWeb (86Box)
-https://github.com/jhhoward/MicroWeb
-
-Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`) when encoded as an HTML entity. I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
-
-## Palm OS
-### DanaWeb (AlphaSmart Dana - Palm OS 4)
-https://palmdb.net/app/danaweb
-
-Images mostly load and take up visual space but are all black or white. 1-bit.day works and gifs on other sites work, including insecure.club, handthing.party, qur.pnppl.cc... Maybe gifsicle/flexigif broke them? You can turn them off from the menu which you would probably want to do anyway.
-
-It doesn't understand protocol-relative links, which I keep going back and forth on, but I guess I should get rid of.
-
-Like MicroWeb, it's unable to navigate to a character entity.
-
-Lists are all fucked up. It acts like a tag didn't close and they endlessly cascade rightward.
-
-DanaWeb crashes the TX.
-
-### KBrowser
-https://palmdb.net/app/kbrowser
-This is a WAP browser, which is way less exciting than it sounds. Wireless Application Protocol was a shitty stripped down version of the web with its own special HTML called WML that phone carriers used to try to enclose the web/their customers. It relies on a proxy server called a WAP Gateway that basically chews your phone's food for it, not unlike Retro Proxy, Web Rendering Proxy, etc.
-
-Anyway I can't get any of them to work. Web 1.0 Hosting has one and there are some listed here:
-- https://15pmm01.com/wap/en/
-- https://nbpfan.bs0dd.net/index.php?lang=eng&page=wap%2Fmain (haven't tried all of these yet, found them after I already got bored)
-
-Do I need to install some certificates or something? It always either times out then gives the same ambiguous error, or appears to finish loading but doesn't display anything. Same behavior on the TX.
-
-### WebPro
-https://palmdb.net/app/webpro
-
-Incompatible with Dana — needs Palm OS 5. Version 3.5 works at first then crashes the Palm TX. Version 3.0 Patched works very well on the TX — I was even able to load and use the map at https://zines.pnppl.cc/map/ and see my comics — but it doesn't support CSS.
-
-## Blazer (Palm TX - Palm OS 5)
-With CSS and images off, all is well. Otherwise, the nav buttons get all squished together.
-
-Some images refuse to load. Definitely need to investigate this issue, no point using gif if it isn't actually compatible.
-
-## NetFront 3.1 (Palm TX - Palm OS 5)
-With CSS on, none of the nav elements are visible. ???
-
-Works fine without, although it quickly runs out of memory and throws an error if you try to load, like, a picture.
 
 
 ## Modern Chromium browsers
