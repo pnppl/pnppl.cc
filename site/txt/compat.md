@@ -150,9 +150,53 @@ https://github.com/jhhoward/MicroWeb
 
 Works remarkably well, but has a pretty severe problem: it doesn't understand how to navigate to `/+/` (eg, `/+/recent`) when encoded as an HTML entity. I've been wondering if this would become an issue. It seems to struggle with character entities in general. Maybe I'd have better luck with /!/, or maybe I should do /0/ or something. It really shouldn't matter, but it's nice to have all that stuff in one place and have it sort to the top. In any case, this browser seems like a great way to test the super low end; looking forward to trying it on old hardware.
 
+## Palm OS
+### DanaWeb (AlphaSmart Dana - Palm OS 4)
+https://palmdb.net/app/danaweb
+
+Images mostly load and take up visual space but are all black or white. 1-bit.day works and gifs on other sites work, including insecure.club, handthing.party, qur.pnppl.cc... Maybe gifsicle/flexigif broke them? You can turn them off from the menu which you would probably want to do anyway.
+
+It doesn't understand protocol-relative links, which I keep going back and forth on, but I guess I should get rid of.
+
+Like MicroWeb, it's unable to navigate to a character entity.
+
+Lists are all fucked up. It acts like a tag didn't close and they endlessly cascade rightward.
+
+DanaWeb crashes the TX.
+
+### KBrowser
+https://palmdb.net/app/kbrowser
+This is a WAP browser, which is way less exciting than it sounds. Wireless Application Protocol was a shitty stripped down version of the web with its own special HTML called WML that phone carriers used to try to enclose the web/their customers. It relies on a proxy server called a WAP Gateway that basically chews your phone's food for it, not unlike Retro Proxy, Web Rendering Proxy, etc.
+
+Anyway I can't get any of them to work. Web 1.0 Hosting has one and there are some listed here:
+- https://15pmm01.com/wap/en/
+- https://nbpfan.bs0dd.net/index.php?lang=eng&page=wap%2Fmain (haven't tried all of these yet, found them after I already got bored)
+
+Do I need to install some certificates or something? It always either times out then gives the same ambiguous error, or appears to finish loading but doesn't display anything. Same behavior on the TX.
+
+### WebPro
+https://palmdb.net/app/webpro
+
+Incompatible with Dana — needs Palm OS 5. Version 3.5 works at first then crashes the Palm TX. Version 3.0 Patched works very well on the TX — I was even able to load and use the map at https://zines.pnppl.cc/map/ and see my comics — but it doesn't support CSS.
+
+## Blazer (Palm TX - Palm OS 5)
+With CSS and images off, all is well. Otherwise, the nav buttons get all squished together.
+
+Some images refuse to load. Definitely need to investigate this issue, no point using gif if it isn't actually compatible.
+
+## NetFront 3.1 (Palm TX - Palm OS 5)
+With CSS on, none of the nav elements are visible. ???
+
+Works fine without, although it quickly runs out of memory and throws an error if you try to load, like, a picture.
+
 
 ## Modern Chromium browsers
 Ought to work fine but I don't check very often.
 
 ## Modern MacOS, iOS, and Windows browsers
 Ought to work fine but I have no idea.
+
+## Todo
+- Nail down gif compat issues
+- Get rid of /+/ and protocol-relative links
+- Gemini and gopher when?
