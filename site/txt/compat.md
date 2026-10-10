@@ -85,14 +85,14 @@ https://kristall.random-projects.net/
 Seems to work fine. Text only. Nice browser.
 
 
+## Links2, Lynx, ELinks, w3m (Linux)
+Seems to pretty much work perfectly.
+
+
 ## Litebrowser (Linux)
 https://github.com/litehtml/litebrowser-linux
 
 Mostly there but definitely janky. Navbar is offset to the right, annotations render but float way above text, button text off-center. Still, an impressive showing, and I'd be tempted to try to improve compat if it didn't use that horrid new UI thing where there's no titlebar (gtk4?).
-
-
-## Links2, Lynx, ELinks, w3m (Linux)
-Seems to pretty much work perfectly.
 
 
 ## MicroWeb (86Box)
@@ -104,7 +104,7 @@ Works remarkably well, but has a pretty severe problem: it doesn't understand ho
 ## Netsurf 3.11 (Flatpak)
 https://flathub.org/en/apps/org.netsurf_browser.NetSurf
 
-Technically it works well; all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
+Technically it works well: all the buttons look like buttons, the TOC looks right (but won't collapse), the txt button isn't floating over text... but it feels quite janky because stuff isn't aligned properly. Also, I noticed the 1-bit.day gifs render blurry, so it must not support the rendering mode option. (Don't think I checked this on other browsers, aside from Mosaic which just displays them at crisp actual size.) I don't see any way to disable stylesheets. It supports JS through a config option; with this enbled, search still does not work and generates errors.
 
 This is tangential, but this version of the browser has a goddamn hamburger menu instead of a menu bar. I am irrationally annoyed by this. I think 3.09 might have a proper interface. Building from source seems like a pain in the ass though.
 
@@ -138,7 +138,8 @@ DanaWeb crashes the TX.
 
 ### KBrowser (Dana, TX)
 https://palmdb.net/app/kbrowser
-This is a WAP browser, which is way less exciting than it sounds. Wireless Application Protocol was a shitty stripped down version of the web with its own special HTML called WML that phone carriers used to try to enclose the web/their customers. It relies on a proxy server called a WAP Gateway that basically chews your phone's food for it, not unlike Retro Proxy, Web Rendering Proxy, etc.
+
+This is a WAP browser, which is way less exciting than it sounds. Wireless Application Protocol was a shitty stripped down version of the web with its own special HTML called WML that phone carriers used to try to enclose the web/their customers. It relies on a proxy server called a WAP Gateway that basically chews your phone's food for it, not unlike Retro Proxy, Web Rendering Proxy, etc. A Wet-Ass Proxy, if you will.
 
 Anyway I can't get any of them to work. Web 1.0 Hosting has one and there are some listed here:
 - https://15pmm01.com/wap/en/
@@ -206,6 +207,12 @@ Ought to work fine but I don't check very often.
 
 ## Modern MacOS, iOS, and Windows browsers
 Ought to work fine but I have no idea.
+
+## Nazi browsers
+I will not test compat with these unless it's to make my site less compatible. Do not report issues. Use a different browser.
+- Brave
+- Ladybird
+- surf
 
 ## Todo
 - Nail down gif compat issues
