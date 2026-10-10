@@ -8,10 +8,6 @@ I'd also appreciate reports of the site working okay in older browsers with CSS 
 If you visit my site on something really cool, please send me a picture!
 
 
-## LibreWolf, Firefox ESR (Linux) & IronFox, Fennec (Android)
-These are the baseline modern (CSS-enabled) browsers I use. They should be fully supported.
-
-
 ## NCSA Mosaic 2.7b6, ~1996 (AppImage)
 https://github.com/AppImageCommunity/NCSA-Mosaic-AppImage
 
@@ -19,6 +15,9 @@ This is the HTML-only browser I regularly test with. It originally came out in 1
 
 
 ## Firefox
+## LibreWolf, Firefox ESR (Linux) & IronFox, Fennec (Android)
+These are the baseline modern (CSS-enabled) browsers I use. They should be fully supported.
+
 ### 4.0, 2011-03 (Linux)
 https://ftp.mozilla.org/pub/firefox/releases/4.0/linux-x86_64/en-US/
 
