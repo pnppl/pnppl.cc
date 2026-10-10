@@ -15,7 +15,7 @@ This is the HTML-only browser I regularly test with. It originally came out in 1
 
 
 ## Firefox
-## LibreWolf, Firefox ESR (Linux) & IronFox, Fennec (Android)
+### LibreWolf, Firefox ESR (Linux) & IronFox, Fennec (Android)
 These are the baseline modern (CSS-enabled) browsers I use. They should be fully supported.
 
 ### 4.0, 2011-03 (Linux)
