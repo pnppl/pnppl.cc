@@ -1,5 +1,5 @@
 # Portable Computers
-#collection #hw #tech
+#collection #hw #tech #list
 
 This is just an inventory right now. Excludes modern phones, tablets, and laptops (~2010+) as well as game consoles and e-readers.
 
@@ -80,17 +80,17 @@ This is just an inventory right now. Excludes modern phones, tablets, and laptop
 	- In box with all the crap including remote and carrying case
 	- Don't remember if I've tried this
 - Palm Portable Keyboard P10802U
-	- Metal, red highlights
-	- Has the Palm V connector IIRC
+	- Metal
+	- I think this is the Palm Universal Connector which the m125 has
 - Palm Wireless Keyboard 3245WW (Bluetooth)
 	- Plastic
 	- Have definitely used this on non-Palm devices
 - Universal Wireless Keyboard by Palm 3169WWZ
 	- Plastic
 	- Unfolds super weird
-	- Not sure if it's Bluetooth, doesn't mention it
 	- CD with drivers for Palm OS, Windows Mobile
-	- Don't remember if I've ever used this
+	- Connects via IR on an arm that swings out
+	- Does not offer any indication that it is on, you just type and hope for the best
 
 ## PC
 - Compaq LTE Elite 4/75CX - laptop (1994)
@@ -142,6 +142,8 @@ This is just an inventory right now. Excludes modern phones, tablets, and laptop
 - LinkSys Wireless CompactFlash Card WCF12
 	- I think I bought this for the Jornada or MobilePro? Slightly different model number than the one in the MobilePro and says CF not PC Card
 	- In box with ridiculous custom carrying case
+- Cisco Aironet 350 Wireless Adapter
+	- ???
 
 ## Calculators & Organizers
 ### Programmable
