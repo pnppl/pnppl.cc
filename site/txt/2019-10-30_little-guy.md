@@ -66,7 +66,7 @@ These questions, famously spoken off-the-cuff by an amazed Dr. Amoline Hart duri
 ### Part A: Is That a Little Guy?
 Surprisingly, it took nearly a decade for a consensus to be reached on this question: yes, He seems to be a tiny human male, albeit an unusual and not particularly bright one. Extended observations have shown that aside from faint smiles and enthusiastic waves, He mostly just sits around. His anatomy is identical to ours, from what we can observe; no one has yet managed to get him undressed below the waist, and in fact we only know his chest looks normal because one researcher took an MMG out to Death Valley one summer and caught Him with His shirt off. But there is broad agreement that, if not precisely homo sapiens, The Little Guy is a small man. The various petty heresies of the early days, such as degendering The Little Guy or claiming He is female, denying His humanity on the basis of His size, and accusing the megamicrograph’s algorithms of anthropomorphizing physics have largely fallen by the wayside; such positions are now shunned by all serious scholars.
 
-A more intractable issue is whether He is one tiny man who is everywhere at once or many identical men, or some other solution entirely. We will discuss this in greater detail in chapter 6.
+A more intractable issue is whether He is one tiny man who is everywhere at once or many identical men, or some other solution entirely. We will discuss this in greater detail in chapter 7.
 
 ### Part B: What is He Doing Down There?
 When Dr. Hart uttered these words, she was really expressing surprise at His existence. But literally — what does He do all day?
