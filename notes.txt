@@ -156,7 +156,7 @@ low priority/done:
 		2) you can't hide an element and keep its ::after visible without even worse hacks
 	- i'd like to make this better and support more things i actually use. lets me keep writing in utf8 while improving compatibility
 		- improved this and made it a little more programmatic but still a lot of manual bullshit involved. current list:
-			- — – … ‘’“” ≈ ≠ ≥ ≤
+			- — – … ‘’“” ≈ ≠ ≥ ≤ × fractions
 	- this does mean our RSS rendering will have ~=, !=, etc
 - x we now output all non-ascii characters as decimal html entities
 	- probably won't substantially improve legacy rendering, especially since they probably use a win codepage/iso-whatever, but...

@@ -1250,6 +1250,7 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 /* ==========================================================================
 	 Typographic Entities
 	 ========================================================================== */
+/* ugly hack on an ugly hack. this way the text is selectable */
 .mdash:after	{ content: "\2014"; }
 .ndash:after	{ content: "\2013"; }
 .hellip:after	{ content: "\2026"; }
@@ -1262,20 +1263,19 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 .ge:after	{ content: "\2265"; }
 .le:after	{ content: "\2264"; }
 .times:after	{ content: "\00D7"; }
+.frac13:after	{ content: "\2153"; }
+.frac23:after	{ content: "\2154"; }
+.frac18:after	{ content: "\215B"; }
+.frac14:after	{ content: "\00BC"; }
+.frac38:after	{ content: "\215C"; }
+.frac12:after	{ content: "\00BD"; }
+.frac58:after	{ content: "\215D"; }
+.frac34:after	{ content: "\00BE"; }
+.frac78:after	{ content: "\215E"; }
 
-/* ugly hack on an ugly hack. this way the text is selectable. should change to a class. or rethink the CSS typography stuff */
-.mdash + .is-hidden,
-.ndash + .is-hidden,
-.hellip + .is-hidden,
-.lsquo + .is-hidden,
-.rsquo + .is-hidden,
-.ldquo + .is-hidden,
-.rdquo + .is-hidden,
-.ne + .is-hidden,
-.asymp + .is-hidden,
-.ge + .is-hidden,
-.le + .is-hidden,
-.times + .is-hidden {
+
+
+.typog + .is-hidden {
 	display: inline;
 	font-size: 0 !important;
 }

@@ -54,6 +54,15 @@ func subMap() map[string]string {
 //		"ntilde": "n",
 //		"Ntilde": "N",
 		"times": "x",
+		"frac13": "1/3",
+		"frac23": "2/3",
+		"frac18": "1/8",
+		"frac14": "1/4",
+		"frac38": "3/8",
+		"frac12": "1/2",
+		"frac58": "5/8",
+		"frac34": "3/4",
+		"frac78": "7/8",
 	}
 }
 
@@ -99,7 +108,7 @@ func (s *typographerParser) Trigger() []byte {
 }
 
 func spanner(name string, sub string) string {
-	return fmt.Sprintf("%s%s%s%s%s", `<span class="`, name, `"></span><span class="is-hidden">`, sub, `</span>`)
+	return fmt.Sprintf("%s%s%s%s%s", `<span class="`, name, ` typog"></span><span class="is-hidden">`, sub, `</span>`)
 }
 
 func (s *typographerParser) Parse(parent gast.Node, block text.Reader, pc parser.Context) gast.Node {
