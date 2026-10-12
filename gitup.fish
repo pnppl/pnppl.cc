@@ -25,6 +25,7 @@ site/privacy/
 site/public/
 site/sitemap/
 site/slashpages/
+site/201*/
 site/202*/
 site/app/index.html
 site/app/meander/blocked.html

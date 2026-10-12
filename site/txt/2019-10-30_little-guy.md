@@ -4,6 +4,8 @@
 <h1 style="display:block; font-size: 1.5em;">The Tiny Gospel<br>
 <span style="font-size: 0.9em">Cosmic Truths from The Little Guy</span></h1>
 
+<!-- The Tiny Gospel: Cosmic Truths from The Little Guy -->
+
 1. Introduction
 2. Spatiometaphorical Illusions and Achieving Fractal Awareness
 3. Megamicrography, or The Holy Science
