@@ -1,7 +1,7 @@
 # Portable Computers
 #collection #hw #tech #list
 
-This is just an inventory right now. Excludes modern phones, tablets, and laptops (~2010+) as well as game consoles and e-readers.
+This is just an inventory right now. Excludes modern phones, tablets, and laptops (~2010+) as well as game consoles, e-readers, mp3 players, synthesizers...
 
 ## Linux
 - Sharp Zaurus SL5500 (2002)
