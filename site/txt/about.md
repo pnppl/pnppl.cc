@@ -135,4 +135,4 @@ I'm also immensely grateful to the people behind the following software instrume
 Special thanks also to the people who cultivate, harvest, process, and distribute coffee, tea, cannabis, and carrot juice.
 
 
-[^js]: JavaScript is also used on a few other "special" pages: Digital Death Note and some Web Applications. These are generally small, optional snippets; anything non-optional will be specifically marked as such.
+[^js]: JavaScript is also used on a few other "special" pages: Digital Death Note, Quote Unquote Radio, and some Web Applications. These are generally small, optional snippets; anything non-optional will be specifically marked as such.
