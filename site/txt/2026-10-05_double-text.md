@@ -1,5 +1,5 @@
 # Double-Text
-#tech #social
+#social
 
 You text someone.
 
