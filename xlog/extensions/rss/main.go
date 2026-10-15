@@ -76,6 +76,7 @@ type Channel struct {
 	Description string `xml:"description"`
 	Copyright	string `xml:"copyright"`
 	WebMaster	string `xml:"webMaster"`
+	ManagingEditor	string `xml:"managingEditor"`
 	AtomLink	AtomLink `xml:"atom:link"`
 	Items       []Item `xml:"item"`
 }
@@ -108,6 +109,7 @@ func feed(r Request) Output {
 			Description: description,
 			Copyright:	"Copyleft: All Wrongs Reversed (CC BY-SA 4.0)",
 			WebMaster:	"webmaster@pnppl.cc (pnppl)",
+			ManagingEditor:	"webmaster@pnppl.cc (pnppl)",
 			Language:    "en-US",
 			AtomLink: AtomLink{
 				Href:	(&url.URL{

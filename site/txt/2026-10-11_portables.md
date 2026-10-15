@@ -38,7 +38,8 @@ This is just an inventory right now. Excludes modern phones, tablets, and laptop
 - Palm m125 (2001)
 	- Flipcover
 	- Removable batteries and an SD slot
-	- IIRC it doesn't like NiMHs
+	- NiMHs don't quite fit even though it looks like they do, need a shim
+		- Also https://palmdb.net/app/battery-panel
 - Palm Zire m150 (2002)
 	- Silver hard case
 	- Was mom's
@@ -94,8 +95,17 @@ This is just an inventory right now. Excludes modern phones, tablets, and laptop
 
 ## PC
 - Compaq LTE Elite 4/75CX - laptop (1994)
-	- Pretty awful condition, I was too ambitious, don't think I ever booted it
 	- Same model grandma had
+	- I think I fucked up the floppy drive with the cleaning disk
+		- Uses one of those flat flex cables so I'm not sure if I can replace it with a Gotek
+		- There is this but the store is closed: https://silvestron.com/openflops-w1d/
+			- There's one on eBay for too much but it doesn't have the cable; doesn't seem to be unpluggable from drive, would have to desolder
+	- HDD works and ought to be compatible with the SD adapter, but haven't gotten it to boot from SD yet
+	- I reseated the keyboard bezel wrong somehow
+	- Latches that hold the lid closed are broken
+	- Battery was 12V NiMH so we could replace it with 10× AA
+	- CMOS battery is NiCd and still holds a charge
+	- https://revspace.nl/Compaq_LTE_Elite_4/50E
 - Datavue 25 - lunchbox luggable
 	- Branded blue soft case
 	- Modem

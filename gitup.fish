@@ -23,6 +23,7 @@ site/prairieland/index.html
 site/prairieland/tools/in.pdf
 site/privacy/
 site/public/
+site/shrine/index.html
 site/sitemap/
 site/slashpages/
 site/201*/

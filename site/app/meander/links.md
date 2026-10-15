@@ -54,6 +54,7 @@ https://www.rifters.com/blindsight/vampires.htm
 
 ### Game/interactive
 https://freegames.org/dys4ia/
+https://aidn.jp/mikutap/
 https://xrafstar.monster/games/twine/tails/
 
 ### Misc. resource

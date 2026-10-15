@@ -63,6 +63,7 @@ const wander = {
 
 		// Game/interactive
 		'https://freegames.org/dys4ia/',
+		'https://aidn.jp/mikutap/',
 		'https://xrafstar.monster/games/twine/tails/',
 
 		// Misc. resource
