@@ -2,6 +2,7 @@
 <style><!--
 .hot {
 	font-variant: all-small-caps;
+	font-weight: bold;
 	color: deeppink;
 }
 @media (prefers-color-scheme: dark) {
