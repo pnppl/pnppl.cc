@@ -128,11 +128,12 @@ This is just an inventory right now. Excludes modern phones, tablets, and laptop
 	- "CYGNUS INSTRUMENTS LTD CYGPAK SOFTWARE" pak - some kind of data logging software
 	- Mysterious "SES DATA SYSTEMS" rugged case which plugs into the cartridge slot and provides a metal 7-pin connector - I believe this goes with the Cygpak and is for truckers
 	- 32k rampak
+- Comms Link - I forgot the LZ came with it, I don't remember if I used it
 - Arduino OrgII pak flasher on a breadboard - think I copied this from Menadue
 - Started writing OrgII RTTTL player/creator but dropped off when I moved
 	- Must disable interrupts or playback is choppy from the interruptions
 	- Need to write utilities to make it easier to call assembly from OPL
-	- None of the existing emulators supported sound so the dev loop is really annoying — might be able to replace pak flashing/on-device editing with a DIY link cable
+	- None of the existing emulators supported sound so the dev loop is really annoying — might be able to replace pak flashing/on-device editing with Comms Link or similar DIY project
 - Oregon Scientific Osaris - EPOC (1999)
 	- Psion 5 clone
 

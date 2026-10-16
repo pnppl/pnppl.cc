@@ -53,7 +53,7 @@ a.excerpt-more {
 Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, see [[#meta|/+/tag/meta]]. For highlights, see [[#fav|/+/tag/fav]].
 
 You might like to...
-- sign my <span class="hot">hot</span> [[Guestbook|http://gb.pnppl.cc/]] or add a name to my [[Death Note|/deathnote]]
+- [[materialize your thoughts in my home|http://gb.pnppl.cc/]] or [[try to dematerialize someone with your thoughts|/deathnote]]
 - [[Meander|/app/meander]] through sites I recommend
 - visit the [[Prairieland Zine Library|prairieland]]
 
