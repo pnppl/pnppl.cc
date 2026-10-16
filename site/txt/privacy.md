@@ -2,7 +2,7 @@
 #meta
 
 ## Me
-I do not collect any information from you unless you submit a name to the Digital Death Note. Submissions will be stored and displayed immediately. They will also be saved in my git repo the next time I update the site.
+I do not collect any information from you unless you submit a name to the Digital Death Note or [[Guestbook|http://gb.pnppl.cc/]]. Submissions will be stored and displayed immediately. They will also be saved in my git repo the next time I update the site.
 
 pnppl.cc does not use any cookies, although sites you visit in [[Meander|../app/meander/]] and [[nagi|../app/nagi/]] might set some which show as coming from here. I can't sandbox them as far as I can tell. I don't think [[Wander|../app/wander]] has this issue.
 
@@ -26,6 +26,9 @@ The Prairieland Zines are hosted on Github Pages, which is owned by Microsoft, b
 
 This provider is not ideal and I'd like to move to another option eventually; it was occasioned by the need to split this part of the site into its own project/subdomain. You can download it from [[git.gay|https://git.gay/pnppl/prairieland]] or [[Codeberg|https://codeberg.org/pnppl/prairieland]] or the prepared zips if you're leery of Microsoft. The [[index page|prairieland]] is on Web 1.0 Hosting; only the `zines` subdomain is on Github.
 
+### HelioHost
+The [[Guestbook|http://gb.pnppl.cc]] is hosted by HelioHost, a US nonprofit with a long [[privacy policy|https://heliohost.org/privacy/]]. They have an analytics option which I've disabled.
+
 ### Oracle
 [[Quote Unquote Radio|http://qur.pnppl.cc/]] is hosted by Oracle Cloud Infrastructure, which is based in the US. Here's [[Oracle's privacy policy|https://www.oracle.com/legal/privacy/privacy-policy/]].
 
@@ -43,4 +46,4 @@ This is the only part of the site that requires HTTPS. It's just a backup mirror
 
 ## Other Projects
 - [[handthing.party|http://handthing.party]] is on Web 1.0 Hosting.
-- [[insecure.club|http://insecure.club]] is on [[HelioHost|https://heliohost.org/]], a US nonprofit with a long [[privacy policy|https://heliohost.org/privacy/]]. They have an analytics option which I've disabled. There is a form you can submit data to voluntarily.
+- [[insecure.club|http://insecure.club]] is on [[HelioHost|https://heliohost.org/]]. There is a form you can submit data to voluntarily.

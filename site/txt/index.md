@@ -1,5 +1,17 @@
 # pnppl's commonplace
 <style><!--
+.hot {
+	font-variant: all-small-caps;
+	color: deeppink;
+}
+@media (prefers-color-scheme: dark) {
+	.hot {
+		color: hotpink;
+	}
+}
+.hot:after {
+	content: '!';
+}
 a.excerpt {
 	text-decoration: underline;
 	font-style: italic;
@@ -40,7 +52,7 @@ a.excerpt-more {
 Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, see [[#meta|/+/tag/meta]]. For highlights, see [[#fav|/+/tag/fav]].
 
 You might like to...
-- add a name to my [[Death Note|/deathnote]]
+- sign my <span class="hot">hot</span> [[Guestbook|http://gb.pnppl.cc/]] or add a name to my [[Death Note|/deathnote]]
 - [[Meander|/app/meander]] through sites I recommend
 - visit the [[Prairieland Zine Library|prairieland]]
 

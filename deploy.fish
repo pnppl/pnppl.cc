@@ -15,6 +15,7 @@ rm -rf site/sitemap/index.html &&
 #	site/img/comics/!comics.zip \
 #	site/img/photos/!photos.zip &&
 curl https://pnppl.cc/.gb.txt > site/.gb.txt &&
+curl https://gb.pnppl.cc/gb.tsv > gb.tsv.bak &&
 fish build.fish &&
 git stash -u &&
 git pull &&
