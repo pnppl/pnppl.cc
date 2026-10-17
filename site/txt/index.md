@@ -1,4 +1,5 @@
 # pnppl's commonplace
+<link rel="authorization_endpoint" href="https://pnppl.helioho.st/auth/">
 <style><!--
 .hot {
 	font-variant: all-small-caps;
@@ -53,8 +54,8 @@ a.excerpt-more {
 Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, see [[#meta|/+/tag/meta]]. For highlights, see [[#fav|/+/tag/fav]].
 
 You might like to...
-- [[materialize your thoughts in my home|http://gb.pnppl.cc/]] or [[try to dematerialize someone with your thoughts|/deathnote]]
-- [[Meander|/app/meander]] through sites I recommend
+- [[materialize your thoughts in my home|http://gb.pnppl.cc/]] or [[dematerialize someone with your thoughts|/deathnote]]
+- [[Meander|/app/meander]] through sites I like
 - visit the [[Prairieland Zine Library|prairieland]]
 
 You can subscribe...
