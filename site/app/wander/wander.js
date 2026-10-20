@@ -63,8 +63,9 @@ const wander = {
 		'https://www.rifters.com/blindsight/vampires.htm',
 
 		// Game/interactive
-		'https://freegames.org/dys4ia/',
 		'https://aidn.jp/mikutap/',
+		'https://freegames.org/dys4ia/',
+		'https://nmsceefax.co.uk/',
 		'https://xrafstar.monster/games/twine/tails/',
 
 		// Misc. resource

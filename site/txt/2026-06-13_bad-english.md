@@ -14,6 +14,7 @@ what they say (what I wish they'd say)
 - defiantly, definately (definitely)
 - irregardless (regardless, irrespective)
 - narcotic (drug, psychoactive)
+- phenomena (phenomenon)
 - weary of (wary of, tired of)
 - whence (when)
 

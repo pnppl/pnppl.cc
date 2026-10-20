@@ -28,7 +28,6 @@ https://site.sebasmonia.com/posts/2026-04-09-the-redirection-of-traffic-from-web
 https://tagonist.livejournal.com/199563.html
 https://theanarchistlibrary.org/library/peter-gelderloos-how-nonviolence-protects-the-state
 https://thomaswebb.net/2024/11/16/the-normal-people-understanders/
-https://web.archive.org/web/20230524201754/https://destroyedforcomfort.com/2018/09/04/4-weird-things-that-happen-to-you-when-a-loved-one-kills-themselves/
 https://www.filfre.net/2011/05/will-crowthers-adventure-part-1/
 https://www.fsf.org/blogs/licensing/2026-anthropic-settlement
 https://www.thedissident.news/every-trans-suicide-is-a-murder/
@@ -45,7 +44,6 @@ https://www.qwantz.com/
 
 ### Audio/video
 https://afterthebeep.tel/
-https://archive.org/details/MindWebs_201410
 https://kevincraig.us/audio/gogulski/
 https://thefinalstrawradio.nublogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/
 https://www.churchofeuthanasia.org/catalog/video.html
@@ -54,8 +52,9 @@ https://www.juliaserano.com/music.html
 https://www.rifters.com/blindsight/vampires.htm
 
 ### Game/interactive
-https://freegames.org/dys4ia/
 https://aidn.jp/mikutap/
+https://freegames.org/dys4ia/
+https://nmsceefax.co.uk/
 https://xrafstar.monster/games/twine/tails/
 
 ### Misc. resource
@@ -88,6 +87,7 @@ https://www.techdirt.com/
 
 ## HTTP ##
 ### Nonfiction
+http://web.archive.org/web/20230524201754/https://destroyedforcomfort.com/2018/09/04/4-weird-things-that-happen-to-you-when-a-loved-one-kills-themselves/
 http://friendo.monster/posts/emojis-are-shit.html
 http://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html
 http://humaniterations.net/2020/09/06/bad-people/
@@ -104,6 +104,7 @@ http://www.terrybisson.com/theyre-made-out-of-meat-2/
 https://baccyflap.com/mus/ti/
 
 ### Audio/video
+http://archive.org/details/MindWebs_201410
 http://defianceohio.terrorware.com/audio/
 http://echoesofbluemars.org/
 http://handthing.party/
@@ -112,6 +113,7 @@ http://wonthelp.info/
 http://www.quoteunquoterecords.com/qur022.htm
 
 ## Game/interactive
+http://archive.org/details/flyguy_flash
 http://trek.epicrandomness.com
 
 ### Misc. resource
