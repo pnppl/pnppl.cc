@@ -1,5 +1,5 @@
 # Creative ideas to defeat antifascists
-#poltics #snark #list
+#politics #snark #list
 
 1. Say they're the *real* fascists.
 2. Accuse them of being Stalinists.
