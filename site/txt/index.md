@@ -56,8 +56,8 @@ Perpetually under construction. Pardon our dust. To learn more about pnppl.cc, s
 
 You might like to...
 - [[materialize your thoughts in my home|http://gb.pnppl.cc/]] or [[dematerialize someone with your thoughts|/deathnote]]
-- [[Meander|/app/meander]] through sites I like
-- visit the [[Prairieland Zine Library|prairieland]]
+- [[meander the web|/app/meander]]
+- [[read forbidden zines|prairieland]]
 
 You can subscribe...
 - to [[the RSS feed|/+/feed.rss]]
