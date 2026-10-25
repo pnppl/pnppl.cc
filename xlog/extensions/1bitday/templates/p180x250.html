@@ -1,3 +1,13 @@
+<center>
+{{ range .photos }}
+<a href="{{ .Original }}" class="tarot">
+  <img src="{{ .Original }}" class="tarot" alt="{{ .Name }}" title="{{ .Name }}" width="180" height="250">
+</a>
+{{ end }}
+</center>
+
+
+
 <style><!-- /* compat comment */
 a.tarot {
 	text-decoration: none;
@@ -16,11 +26,5 @@ img.tarot {
 #table-of-contents-list {
 	margin-bottom: 0;
 }
---></style>
-<center>
-{{ range .photos }}
-<a href="{{ .Original }}" class="tarot">
-  <img src="{{ .Original }}" class="tarot" alt="{{ .Name }}" title="{{ .Name }}" width="180" height="250">
-</a>
-{{ end }}
-</center>
+-->
+</style>
