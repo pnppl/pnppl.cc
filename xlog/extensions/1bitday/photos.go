@@ -32,6 +32,7 @@ type Photos struct{}
 func (Photos) Name() string { return "photos" }
 func (Photos) Init() {
 	shortcode.RegisterShortCode("1bitday", shortcode.ShortCode{Render: photosShortcode("1bitday")})
+	shortcode.RegisterShortCode("p180x250", shortcode.ShortCode{Render: photosShortcode("p180x250")})
 	xlog.RegisterTemplate(templates, "templates")
 }
 

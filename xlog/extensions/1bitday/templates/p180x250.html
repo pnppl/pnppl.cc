@@ -1,0 +1,26 @@
+<style><!-- /* compat comment */
+a.tarot {
+	text-decoration: none;
+	display: inline-block;
+	line-height: 0;
+}
+img.tarot {
+	image-rendering: smooth; /* it's dithered, this is less bad, and it should be 100% unless you zoom */
+	border: 1px solid #555;
+	border-radius: 1em;
+	background: #ffffea;
+	padding: 1em;
+	box-sizing: content-box;
+	margin-bottom: 0.2em;
+}
+#table-of-contents-list {
+	margin-bottom: 0;
+}
+--></style>
+<center>
+{{ range .photos }}
+<a href="{{ .Original }}" class="tarot">
+  <img src="{{ .Original }}" class="tarot" alt="{{ .Name }}" title="{{ .Name }}" width="180" height="250">
+</a>
+{{ end }}
+</center>
