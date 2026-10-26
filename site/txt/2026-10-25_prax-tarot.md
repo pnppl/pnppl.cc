@@ -12,6 +12,6 @@ I came across [[this collection of early animations by Émile Reynaud|https://ma
 1. They're very pretty and whimsical and resemble fortune-telling cards.
 2. There are 23 of them... and you only need 22 for the tarot trumps ("Major Arcana").
 
-So, yeah. I assigned one animation to each card and added some text and stuff. I also added a card backing taken from the same video.
+So, yeah. I assigned one animation to each card and added some text and stuff. I also added a card backing taken from the same source.
 
 Anyway, go check out [[Margot McEwen's awesome website|https://magot.neocities.org/]].
