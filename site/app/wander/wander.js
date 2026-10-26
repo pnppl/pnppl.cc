@@ -37,7 +37,6 @@ const wander = {
 		'https://tagonist.livejournal.com/199563.html',
 		'https://theanarchistlibrary.org/library/peter-gelderloos-how-nonviolence-protects-the-state',
 		'https://thomaswebb.net/2024/11/16/the-normal-people-understanders/',
-		'https://web.archive.org/web/20230524201754/https://destroyedforcomfort.com/2018/09/04/4-weird-things-that-happen-to-you-when-a-loved-one-kills-themselves/',
 		'https://www.filfre.net/2011/05/will-crowthers-adventure-part-1/',
 		'https://www.fsf.org/blogs/licensing/2026-anthropic-settlement',
 		'https://www.thedissident.news/every-trans-suicide-is-a-murder/',
@@ -47,14 +46,15 @@ const wander = {
 
 		// Comic/still image
 		'https://anhvn.com/noir/',
+		'https://errorc1301.wordpress.com/',
 		'https://hillhouse.neocities.org/cliques/library/',
 		'https://kalebhorton.ghost.io/the-d-lbert-project/',
 		'https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/',
+		'https://www.mavicazine.com/',
 		'https://www.qwantz.com/',
 
 		// Audio/video
 		'https://afterthebeep.tel/',
-		'https://archive.org/details/MindWebs_201410',
 		'https://kevincraig.us/audio/gogulski/',
 		'https://thefinalstrawradio.nublogs.org/post/2026/04/12/the-life-and-ideas-of-johann-most-with-tom-goyens/',
 		'https://www.churchofeuthanasia.org/catalog/video.html',
@@ -98,6 +98,7 @@ const wander = {
 
 		// HTTP
 		// Nonfiction
+		'https://web.archive.org/web/20230524201754/https://destroyedforcomfort.com/2018/09/04/4-weird-things-that-happen-to-you-when-a-loved-one-kills-themselves/',
 		'https://friendo.monster/posts/emojis-are-shit.html',
 		'https://houseofselfindulgence.blogspot.com/2008/08/dr-caligari-stephen-sayadian-1989.html',
 		'https://humaniterations.net/2020/09/06/bad-people/',
@@ -114,6 +115,7 @@ const wander = {
 		'https://baccyflap.com/mus/ti/',
 
 		// Audio/video
+		'https://archive.org/details/MindWebs_201410',
 		'https://defianceohio.terrorware.com/audio/',
 		'https://echoesofbluemars.org/',
 		'https://handthing.party/',
@@ -122,6 +124,7 @@ const wander = {
 		'https://www.quoteunquoterecords.com/qur022.htm',
 
 		// Game/interactive
+		'https://archive.org/details/flyguy_flash',
 		'https://trek.epicrandomness.com',
 
 		// Misc. resource

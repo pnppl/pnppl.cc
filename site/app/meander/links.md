@@ -37,9 +37,11 @@ https://www.galactanet.com/oneoff/theegg_mod.html
 
 ### Comic/still image
 https://anhvn.com/noir/
+https://errorc1301.wordpress.com/
 https://hillhouse.neocities.org/cliques/library/
 https://kalebhorton.ghost.io/the-d-lbert-project/
 https://killsixbilliondemons.com/comic/kill-six-billion-demons-chapter-1/
+https://www.mavicazine.com/
 https://www.qwantz.com/
 
 ### Audio/video
