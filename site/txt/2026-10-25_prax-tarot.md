@@ -15,3 +15,66 @@ I came across [[this collection of early animations by Émile Reynaud|https://ma
 So, yeah. I assigned one animation to each card and added some text and stuff. I also added a card backing taken from the same source.
 
 Anyway, go check out [[Margot McEwen's awesome website|https://magot.neocities.org/]].
+
+## Draw (js)
+<div id="random" style="cursor:pointer"><i id="del">This part of the page lets you draw random cards. It requires JavaScript, which your browser does not support or has disabled.</i></div>
+<script><!--
+cards = ['00_fool.gif',
+	'01_magician.gif',
+	'02_high-priestess.gif',
+	'03_empress.gif',
+	'04_emperor.gif',
+	'05_hierophant.gif',
+	'06_lovers.gif',
+	'07_chariot.gif',
+	'08_strength.gif',
+	'09_hermit.gif',
+	'10_wheel-of-fortune.gif',
+	'11_justice.gif',
+	'12_hanged-man.gif',
+	'13_death.gif',
+	'14_temperance.gif',
+	'15_devil.gif',
+	'16_tower.gif',
+	'17_star.gif',
+	'18_moon.gif',
+	'19_sun.gif',
+	'20_judgement.gif',
+	'21_world.gif'];
+function prep() {
+	i = cards.length;
+	deck = Array(i);
+	while(i--) deck[i] = cards[i];
+	deck.sort(() => Math.random() - 0.5);
+	drawn = document.getElementsByClassName('drawn');
+	while (drawn.length > 0) {
+		drawn[0].remove();
+	}
+}
+function draw() {
+	console.log(deck);
+	if (deck.length == 0) {
+		prep();
+	}
+	i = Math.floor(Math.random()*deck.length);
+	card_src = deck[i];
+	deck.splice(i, 1);
+	card = document.createElement('img');
+	card.src = '../img/tarot/emile-reynaud-praxinoscope/' + card_src;
+	card.width = 180;
+	card.height = 250;
+	card.className = 'tarot drawn';
+	container.innerHTML += '\n\n';
+	container.appendChild(card);
+}
+prep();
+document.getElementById('del').remove();
+container = document.getElementById('random');
+back = document.createElement('img');
+back.src = '../img/tarot/emile-reynaud-praxinoscope/' + '00_back.gif';
+back.width = 180;
+back.height = 250;
+back.className = 'tarot back';
+container.appendChild(back);
+container.addEventListener('click', draw, false);
+//--></script>
