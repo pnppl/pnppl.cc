@@ -56,6 +56,7 @@ function draw() {
 		prep();
 		container.title = 'draw a card';
 		document.getElementById('last').remove();
+		return;
 	}
 	i = Math.floor(Math.random()*deck.length);
 	card_src = deck[i];
