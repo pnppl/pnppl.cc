@@ -1,7 +1,7 @@
 # Émile Reynaud's Praxinoscope Tarot
 #project #visual-art #tarot
 
-## [[Émile Reynaud's Praxinoscope Tarot|http://pnppl.cc/img/tarot/emile-reynaud-praxinoscope/!erp-tarot.zip]] (3.6M)
+## [[Émile Reynaud's Praxinoscope Tarot|http://pnppl.cc/img/tarot/emile-reynaud-praxinoscope/!erp-tarot.zip]] (3.5M)
 
 !p180x250 ../img/tarot/emile-reynaud-praxinoscope/
 
