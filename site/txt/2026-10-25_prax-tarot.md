@@ -17,7 +17,7 @@ So, yeah. I assigned one animation to each card and added some text and stuff. I
 Anyway, go check out [[Margot McEwen's awesome website|https://magot.neocities.org/]].
 
 ## Draw (js)
-<div id="random" style="cursor:pointer"><i id="del">This part of the page lets you draw random cards. It requires JavaScript, which your browser does not support or has disabled.</i></div>
+<div id="random" title="draw a card"><i id="del">This part of the page lets you draw random cards. It requires JavaScript, which your browser does not support or has disabled.</i></div>
 <script><!--
 cards = ['00_fool.gif',
 	'01_magician.gif',
@@ -52,9 +52,10 @@ function prep() {
 	}
 }
 function draw() {
-	console.log(deck);
 	if (deck.length == 0) {
 		prep();
+		container.title = 'draw a card';
+		document.getElementById('last').remove();
 	}
 	i = Math.floor(Math.random()*deck.length);
 	card_src = deck[i];
@@ -66,6 +67,10 @@ function draw() {
 	card.className = 'tarot drawn';
 	container.innerHTML += '\n\n';
 	container.appendChild(card);
+	if (deck.length == 0) {
+		container.innerHTML += ' <i id="last">all cards have been drawn</i>';
+		container.title = 'shuffle cards';
+	}
 }
 prep();
 document.getElementById('del').remove();
