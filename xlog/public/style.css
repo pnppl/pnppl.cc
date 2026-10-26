@@ -1849,7 +1849,11 @@ pre.chroma {
 	p {
 		hyphens: auto;
 	}
-	a:after {
+	a.to-toc,
+	a.footnote-backref {
+		display: none !important;
+	}
+	a:not(.head-sect, .footnote-ref, .tag):after {
 		content: "\00a0[URL: " attr(href) "]" !important;
 		font-size: 75% !important;
 		font-weight: normal !important;
