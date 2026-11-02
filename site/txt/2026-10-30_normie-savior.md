@@ -16,7 +16,7 @@ It's reminiscent of the "anti-trafficking" industry/grift: identify a social ill
 - Toxicity: people *say* they hate the perceived toxicity of social media, but it's actually a *plus*. It keeps people engaged because it's *fun*. Drama is interesting and it naturally emerges when enough humans gather in one place, so it's actually more of an indicator of a healthy community than an unhealthy one. Of course, outright hate content severely degrades the experience for targeted users, but again: they are in the minority. They're not the ones you need to convince if you want to save the world.
 - Proprietary code: lol.
 
-As a budding cult recruiter, what are can you offer people in exchange for giving up the things they have no desire to give up?
+As a budding cult recruiter, what can you offer people in exchange for giving up the things they have no desire to give up?
 
 - Education: they ~~have~~ get to learn ~~boring~~ esoteric new things that they have ~~no interest in~~ not yet learned to enjoy.
 - Labor: they ~~have~~ get to put in a bunch of ~~utterly pointless~~ immensely rewarding effort to make a website and find people to ~~stalk~~ talk to.
