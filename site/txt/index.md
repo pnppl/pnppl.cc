@@ -1,19 +1,6 @@
 # pnppl's commonplace
 <link rel="authorization_endpoint" href="https://pnppl.helioho.st/auth/">
 <style><!--
-.hot {
-	font-variant: all-small-caps;
-	font-weight: bold;
-	color: deeppink;
-}
-@media (prefers-color-scheme: dark) {
-	.hot {
-		color: hotpink;
-	}
-}
-.hot:after {
-	content: '!';
-}
 a.excerpt {
 	text-decoration: underline;
 	font-style: italic;

@@ -2,6 +2,7 @@
 
 ## SSL ##
 ### Nonfiction
+https://blog.avas.space/damn-phone/
 https://celeste.lgbt/en/
 https://datagubbe.se/decusab/
 https://dbushell.com/2026/01/09/death-to-scroll-fade/
