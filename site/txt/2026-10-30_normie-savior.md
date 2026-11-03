@@ -19,7 +19,7 @@ It's reminiscent of the "anti-trafficking" industry/grift: identify a social ill
 As a budding cult recruiter, what can you offer people in exchange for giving up the things they have no desire to give up?
 
 - Education: they ~~have~~ get to learn ~~boring~~ esoteric new things that they have ~~no interest in~~ not yet learned to enjoy.
-- Labor: they ~~have~~ get to put in a bunch of ~~utterly pointless~~ immensely rewarding effort to make a website and find people to ~~stalk~~ talk to.
+- Labor: they ~~have~~ get to put in a bunch of ~~utterly pointless~~ immensely rewarding effort to make a website/profile and find people to ~~stalk~~ talk to.
 - Interaction: they ~~have~~ get to talk to only a ~~small and weird~~ rarefied subset of the population and it's super ~~boring~~ chill.
 - Purity: their souls will be cleansed and reborn.
 
