@@ -49,7 +49,7 @@ func (h *Hashtags) Init() {
 	RegisterLink(links)
 	RegisterTemplate(templates, "templates")
 	shortcode.RegisterShortCode("hashtag-pages", shortcode.ShortCode{Render: h.hashtagPages})
-	shortcode.RegisterShortCode("hashtag-pages-grid", shortcode.ShortCode{Render: h.hashtagPagesGrid})
+//	shortcode.RegisterShortCode("hashtag-pages-grid", shortcode.ShortCode{Render: h.hashtagPagesGrid})
 
 	Listen(PageChanged, h.PageChanged)
 	Listen(PageDeleted, h.PageDeleted)
@@ -261,7 +261,7 @@ func (h *Hashtags) hashtagPages(hashtag Markdown) template.HTML {
 	output := Partial("hashtag-pages", Locals{"pages": pages})
 	return template.HTML(output)
 }
-
+/*
 func (h *Hashtags) hashtagPagesGrid(hashtag Markdown) template.HTML {
 	hashtag_value := strings.Trim(string(hashtag), "# \n")
 	pages := h.tagPages(context.Background(), hashtag_value)
@@ -277,7 +277,7 @@ func (h *Hashtags) hashtagPagesGrid(hashtag Markdown) template.HTML {
 	output := Partial("hashtag-pages-grid", Locals{"pages": pages})
 	return template.HTML(output)
 }
-
+*/
 func links(Page) []Command {
 	return []Command{link{}}
 }
