@@ -23,6 +23,7 @@ todo:
 			- light: black text
 			- dark: white text
 	- i have rules that start with both .content and .view, probably can eliminate one
+	- most (xlog) pages are too wide in Dillo and cause horizontal scroll
 - make tags by links to posts prettier. maybe swap tags and filename?
 - get rid of shell postprocessing
 	- just finish_toc left
