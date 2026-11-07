@@ -79,6 +79,7 @@ const wander = {
 
 		// Site root
 		'https://adelfaure.net/',
+		'https://animalfreedom.is/',
 		'https://fourthievesvinegar.org/',
 		'https://fuckup.solutions/index3.html',
 		'https://june11.nublogs.org/',
