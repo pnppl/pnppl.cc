@@ -6,11 +6,6 @@ The premise is really, really, really dumb; it's clearly a flimsy excuse to have
 
 At first I thought it was a send-up of nationalism. Child soldiers who extrajudicially assassinate bad guys for the state? But actually I think we're just supposed to accept that part. The *bad guy* is trying to expose them... and also doing terrorism.
 
-## Pedos welcome!
-Did we really need an episode about their panties? Why did they have to be high schoolers? Why does every anime series treat pedophiles like a key audience demographic?
-
-It doesn't really sexualize them, at least, even in the panty episode. It's actually quite good by anime standards, but the bar is on the floor. I'm so fucking tired of anime's obsession with high school.
-
 ## MAKE IT GAYER
 The fanbase seems to be bifurcated on the question of whether it's queerbait and how overt the subtext is. I don't have a strong opinion either way, but the lack of explicit romance feels like such a missed opportunity. The emotional core of the series is hollowed out by the refusal to make it gayer. The conclusion feels so needlessly empty.
 
