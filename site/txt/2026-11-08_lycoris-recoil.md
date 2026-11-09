@@ -23,7 +23,7 @@ Why not just turn off the webcam?
 ## Girl Vash
 The best part of the series is Chisato, a bubbly gun-toting pacifist. She shoots some kind of paintball bullets instead of real ones. (And is somehow still on the secret police payroll in spite of this?)
 
-It's very dumb, but in a fun and wholesome way. She reminded me a lot of Vash the Stampede from _Trigun_. Her story arc is pretty much the same, too, but with a weird abusive quasi-adoptive quasi-parent playing the role of Knives.
+It's very dumb, but in a fun and wholesome way. She reminded me a lot of Vash the Stampede from _Trigun_. Like Vash, she has a superhuman ability to dodge bullets. Her story arc is pretty much the same, too, but with a weird abusive quasi-adoptive quasi-parent playing the role of Knives.
 
 ## Verdict
 It starts out bad, gets better, then fades back into meh. If you're looking for silly _John Wick_/_Equilibrium_-style action you'll probably enjoy it, but if you're looking for characters and drama you'll be disappointed.
