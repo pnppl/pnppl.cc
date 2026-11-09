@@ -877,6 +877,7 @@ a.head-sect,
 a.to-toc {
 	font-style: normal;
 	color: lightblue;
+	display: inline;
 }
 a.to-toc {
 	margin-left: auto;
