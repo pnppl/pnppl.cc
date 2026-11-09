@@ -28,4 +28,4 @@ It's very dumb, but in a fun and wholesome way. She reminded me a lot of Vash th
 ## Verdict
 It starts out bad, gets better, then fades back into meh. If you're looking for silly _John Wick_/_Equilibrium_-style action you'll probably enjoy it, but if you're looking for characters and drama you'll be disappointed.
 
-**3/5**
+**3/5** (rounded up because [[the music slaps|https://www.youtube.com/watch?v=Od3ifGNDnwY]])

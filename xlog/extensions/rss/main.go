@@ -175,7 +175,7 @@ func timeFromName(name string, mtime time.Time) string {
 	parsedTime, err := time.ParseInLocation("2006-01-02_15-04-05", name, location)
 	if err != nil {
 		if len(name) >= 10 {
-			parsedTime, err = time.Parse("2006-01-02", name[:10])
+			parsedTime, err = time.Parse("2006-01-02_15-04-05", name[:10] + "_23-23-23")
 				if err != nil {
 					parsedTime = mtime
 				}
