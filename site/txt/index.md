@@ -28,9 +28,12 @@ blockquote.excerpt img {
 	max-height: 30vh;
 }
 /* last item could actually be less than 5... */
+/* wait... why did I need this? fucked up the <p> spacing. really should just redo this whole excerpt thing */
+/*
 blockquote.excerpt :nth-child(5):not(.tag) {
 	display: inline;
 }
+*/
 a.excerpt-more {
 	font-weight: bold;
 	border-bottom: 1px solid;
