@@ -3,6 +3,7 @@ package opengraph
 import (
 	"flag"
 	"fmt"
+	"html"
 	"html/template"
 	"net/url"
 	"strings"
@@ -32,7 +33,7 @@ func (Opengraph) Init() {
 }
 
 func opengraphTags(p Page) template.HTML {
-	escape := template.JSEscapeString
+	escape := html.EscapeString
 
 	name := p.Name()
 
@@ -64,19 +65,22 @@ func opengraphTags(p Page) template.HTML {
 	if imageAST, ok := FindInAST[*ast.Image](tree); ok && imageAST != nil {
 		image = "https://" + domain + string(imageAST.Destination)
 	} else {
-		image = "https://" + domain + "/public/logo.gif"
+		image = "https://" + domain + "/public/og.webp"
 	}
 
 	firstParagraph := escape(rawText(src, tree, descriptionLength))
-//	The escape fails miserably
-	firstParagraph = strings.ReplaceAll(firstParagraph, "\\\"", "&quot;")
-	firstParagraph = strings.ReplaceAll(firstParagraph, "\\'", "&apos;")
+//	The escape fails miserably <-- that's because you were escaping for json for some fucking reason
+//	firstParagraph = strings.ReplaceAll(firstParagraph, "\\\"", "&quot;")
+//	firstParagraph = strings.ReplaceAll(firstParagraph, "\\'", "&apos;")
 
 	ogTags := fmt.Sprintf(`
 		<meta property="og:site_name" content="%s">
 		<meta property="og:title" content="%s">
 		<meta property="og:description" content="%s">
 		<meta property="og:image" content="%s">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Black and white dandelion and 'pnppl.cc' being blown by the wind">
 		<meta property="og:url" content="%s">
 		<meta property="og:type" content="website">
 `,
