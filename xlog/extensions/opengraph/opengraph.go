@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"net/url"
 	"strings"
+	"regexp"
 
 	. "github.com/emad-elsaid/xlog"
 
@@ -68,10 +69,16 @@ func opengraphTags(p Page) template.HTML {
 		image = "https://" + domain + "/public/og.webp"
 	}
 
-	firstParagraph := escape(rawText(src, tree, descriptionLength))
-//	The escape fails miserably <-- that's because you were escaping for json for some fucking reason
-//	firstParagraph = strings.ReplaceAll(firstParagraph, "\\\"", "&quot;")
-//	firstParagraph = strings.ReplaceAll(firstParagraph, "\\'", "&apos;")
+	// nbsp literal because it isn't included in \s apparently
+	spaces := regexp.MustCompile(`[\s ]{2,}`)
+
+	// unescape it first so that entities like nbsp don't make it through
+	firstParagraph := html.UnescapeString(rawText(src, tree, descriptionLength))
+	firstParagraph = strings.TrimSpace(firstParagraph)
+	firstParagraph = spaces.ReplaceAllString(firstParagraph, " ")
+	firstParagraph = strings.ReplaceAll(firstParagraph, " ,", ",")
+	firstParagraph = strings.ReplaceAll(firstParagraph, " .", ".")
+	firstParagraph = escape(firstParagraph)
 
 	ogTags := fmt.Sprintf(`
 		<meta property="og:site_name" content="%s">
@@ -81,6 +88,7 @@ func opengraphTags(p Page) template.HTML {
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
 		<meta property="og:image:alt" content="Black and white dandelion and 'pnppl.cc' being blown by the wind">
+		<meta property="og:image:type" content="image/webp">
 		<meta property="og:url" content="%s">
 		<meta property="og:type" content="website">
 `,
