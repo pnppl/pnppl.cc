@@ -71,13 +71,13 @@ func opengraphTags(p Page) template.HTML {
 
 	// nbsp literal because it isn't included in \s apparently
 	spaces := regexp.MustCompile(`[\s ]{2,}`)
+	spacePunct := regexp.MustCompile(`[\s ]([,.:;?!])`)
 
 	// unescape it first so that entities like nbsp don't make it through
 	firstParagraph := html.UnescapeString(rawText(src, tree, descriptionLength))
 	firstParagraph = strings.TrimSpace(firstParagraph)
 	firstParagraph = spaces.ReplaceAllString(firstParagraph, " ")
-	firstParagraph = strings.ReplaceAll(firstParagraph, " ,", ",")
-	firstParagraph = strings.ReplaceAll(firstParagraph, " .", ".")
+	firstParagraph = spacePunct.ReplaceAllString(firstParagraph, "$1")
 	firstParagraph = escape(firstParagraph)
 
 	ogTags := fmt.Sprintf(`
