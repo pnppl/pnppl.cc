@@ -59,7 +59,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 <img alt="Stark image of fluffy dandelion and the words 'pnppl.cc' being blown in the wind" src="../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
 <code><pre>&lt;a href="//pnppl.cc/"&gt;
 &lt;img src="<b title="Replace with link to your own copy">http://pnppl.cc/public/badges/pnppl.cc-dandelion.gif</b>"
-alt="Stark pixel art of a fluffy dandelion and the words 'pnppl.cc' being blown in the wind"
+alt="Dandelion and 'pnppl.cc' blowing in the wind"
 width="88" height="31"&gt;
 &lt;/a&gt;</pre></code>
 </center>
@@ -88,7 +88,7 @@ width="88" height="31"&gt;
 --></style>
 
 
-## We have to go deeper: technical details, etc.
+## Technical details, etc.
 My goal is to have to change as little as possible about my existing approach to writing: plaintext, formatted in whatever way feels right, written in my notes app or shell. I'd like for the software to adapt to me, not the other way around. My one concession is Markdown. I don't really like it, but it's cornered the market, and it's close enough that I'm willing to bend a little. Extensions make it much less painful — particularly Wikilink syntax support. The text files that pnppl.cc is built from are the One True Commonplace, with the website providing some extra features that are nice to have but not required. You can access the original text file for a post with the _txt_ button in the top right corner.
 
 You can also access them through [[the|https://git.gay/pnppl/pnppl.cc/]] [[git|https://codeberg.org/pnppl/pnppl.cc]] [[repo|https://github.com/pnppl/pnppl.cc]], which handily doubles as a version history and complete source of the site. If you just want to grab all the posts in plaintext, that's at [[../txt/!pnppl-txt.zip]].
