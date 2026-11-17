@@ -45,5 +45,5 @@ This is the only part of the site that requires HTTPS. It's just a backup mirror
 
 
 ## Other Projects
-- [[handthing.party|http://handthing.party]] is on Web 1.0 Hosting.
+- [[handthing.party|http://handthing.party]] is on Github Pages.
 - [[insecure.club|http://insecure.club]] is on [[HelioHost|https://heliohost.org/]]. There is a form you can submit data to voluntarily.

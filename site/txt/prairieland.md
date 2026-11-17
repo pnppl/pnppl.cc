@@ -94,7 +94,7 @@
 - [[Plant Propagation for the People pamphlets (Erin Despard, 2021)|//zines.pnppl.cc/plant-propagation-for-the-people]]&nbsp;[^prop]
 	- [[print (Vol. 1)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-1_print-letter.pdf]] · [[print (Vol. 2)|//zines.pnppl.cc/plant-propagation-for-the-people/plant-propagation-for-the-people-vol-2_print-letter.pdf]]
 
-**Download all: [[HTML|http://handthing.party/prairieland-zines_html.zip]] · [[screen PDF|http://handthing.party/prairieland-zines_screen-pdf.zip]] · [[print PDF|http://handthing.party/prairieland-zines_print-pdf.zip]] · [[text (md)|http://handthing.party/prairieland-zines_text-md.zip]] · [[source|https://git.gay/pnppl/prairieland/archive/main.zip]]**
+**Download all: [[HTML|http://handthing.w10.site/prairieland-zines_html.zip]] · [[screen PDF|http://handthing.w10.site/prairieland-zines_screen-pdf.zip]] · [[print PDF|http://handthing.w10.site/prairieland-zines_print-pdf.zip]] · [[text (md)|http://handthing.w10.site/prairieland-zines_text-md.zip]] · [[source|https://git.gay/pnppl/prairieland/archive/main.zip]]**
 
 
 ## About

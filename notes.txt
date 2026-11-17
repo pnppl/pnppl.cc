@@ -235,4 +235,5 @@ this is becoming increasingly fragmented...
 	- this one does not support http, but there was already a mirror on github pages
 - ../gb: gb.pnppl.cc, deployed to heliohost over sftp manually
 - ../handthing.party: deploy to web1.0hosting via script over ftp and accessed as handthing.party. not really connected to pnppl.cc. stuck the zine zips up there tho
+	- they never renewed my cert so now it deploys automatically to gh pages and i just use the w10 url for the zips. not a good long term solution
 - pnppl.helioho.st is used for indieauth out of laziness, might not ever use it. also it's so slow it times out when i try to log in sometimes. just some php deposited in /auth/
