@@ -19,12 +19,12 @@
 
 ## Site Resources
 - [[+]]
+- [[audio]]
 - [[img]]
+- [[pdf]]
 - [[public]]
 - [[txt]]
 - [[vid]]
-- [[pdf]]
-- [[audio]]
 
 ## Subdomains
 - [[gb|http://gb.pnppl.cc/]]: Hot Pixels Guestbook

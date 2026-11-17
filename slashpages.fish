@@ -10,7 +10,7 @@ for file in (echo "$slashpages" | grep -vE '\+|img|public|txt|vid|pdf|audio' | g
 end &&
 
 echo -e '\n## Site Resources' >> "$out" &&
-for file in + img public txt vid pdf audio
+for file in + audio img pdf public txt vid
 	echo "- [[$file]]" >> "$out"
 end &&
 
