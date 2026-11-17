@@ -1,1 +1,2 @@
 i made: 1mb, insecure, personalsites, smallweb, zk-queer, library/bus
+adjusted: 512, responsive

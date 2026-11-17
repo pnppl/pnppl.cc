@@ -49,6 +49,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 <a href="https://kagi.com/smallweb/"><img src="../img/clubs/kagi.gif" alt="Kagi Small Web" width="88" height="31"></a>
 <a href="https://personalsit.es/"><img src="../img/clubs/personalsites.gif" alt="PersonalSit.es" width="88" height="31"></a>
 <a href="https://zacharykai.net/lists/queer"><img src="../img/clubs/zk-queer.gif" alt="Queer Web Directory" width="88" height="31"></a>
+<a href="http://kalechips.net/responsive/"><img src="../img/clubs/responsive.gif" alt="Responsive Web Directory" width="88" height="31"></a>
 <a href="https://smallweb.cc/"><img src="../img/clubs/smallweb.gif" alt="smallweb.cc" width="88" height="31"></a>
 <a href="http://web1.0hosting.net/activity/"><img src="../img/clubs/web10.gif" alt="Web 1.0 Hosting" width="88" height="31"></a>
 <a href="http://wiby.me/"><img src="../img/clubs/wiby.gif" alt="Wiby" width="88" height="31"></a>
@@ -56,7 +57,7 @@ Buttons with underlined letters can be activated using that letter as the hotkey
 
 ## 88x31
 <center id="mybadge">
-<img alt="Stark image of fluffy dandelion and the words 'pnppl.cc' being blown in the wind" src="../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
+<img alt="Dandelion and 'pnppl.cc' blowing in the wind" src="../public/badges/pnppl.cc-dandelion.gif" width="88" height="31">
 <code><pre>&lt;a href="http://pnppl.cc/"&gt;
 	&lt;img src="<b title="Replace with link to your own copy">http://pnppl.cc/public/badges/pnppl.cc-dandelion.gif</b>"
 	alt="Dandelion and 'pnppl.cc' blowing in the wind"
