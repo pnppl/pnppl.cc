@@ -15,8 +15,8 @@
 
 	/* Computed colors (depend on lightness values above) */
 	--main: hsl(221, 14%, var(--main-l));
-	--bg: hsl(221, 14%, var(--bg-l));
-	--border: hsl(221, 14%, var(--border-l));
+/*	--bg: hsl(221, 14%, var(--bg-l)); */
+/*	--border: hsl(221, 14%, var(--border-l)); */
 	--text: hsl(221, 14%, var(--text-l));
 	--text-strong: hsl(221, 14%, var(--text-strong-l));
 	--code: hsl(348, 100%, var(--loud-l));
@@ -226,7 +226,7 @@ a strong {
 /* } */
 
 code {
-	background-color: var(--bg);
+/*	background-color: var(--bg); */
 	color: var(--code);
 	counter-reset: lineNo;
 	font-size: 0.875em;
@@ -245,7 +245,7 @@ dt {
 /* 	font-style: italic; */
 /* } */
 pre {
-	background-color: var(--bg);
+/*	background-color: var(--bg); */
 	color: var(--text);
 	font-size: 0.875em;
 	overflow-x: auto;
@@ -263,7 +263,7 @@ pre.indented {
 	all: inherit;
 }
 hr {
-	border-color: var(--bg);
+/*	border-color: var(--bg); */
 	margin: 1.5em auto;
 	width: 90%;
 }
@@ -412,11 +412,16 @@ h2#Footnotes, /* omg fix this */
 	line-height: 1.125;
 	margin-bottom: 0.5em;
 }
-.content blockquote {
-	background-color: var(--bg);
-	border-left: 5px solid var(--border);
+.content blockquote,
+.quote-attr {
+/*	background-color: var(--bg); */
+	border-left: 5px solid #D6D9E0;
 	padding: 0.75em 1.5em;
 	margin: 1em 0.5em;
+}
+.quote-attr {
+	margin-top: -1em;
+	text-align: right;
 }
 .content ol,
 .content ul {
@@ -456,7 +461,7 @@ h2#Footnotes, /* omg fix this */
 }
 .content table td,
 .content table th {
-	border: 1px solid var(--border);
+	border: 1px solid #D6D9E0;
 	border-width: 1px;
 	padding: 0.5em 0.75em;
 	vertical-align: top;
@@ -580,7 +585,7 @@ a.tag:active {
 	clear: both;
 }
 .menu-list li ul {
-	border-left: 1px solid var(--border);
+	border-left: 1px solid #D6D9E0;
 	margin: 0.75em;
 	padding-left: 0.75em;
 }
@@ -855,7 +860,8 @@ a.navbar-item.active:active {
 .view h4,
 .view h5,
 .view h6 {
-	border-bottom: 2px solid var(--bg);
+/*	border-bottom: 2px solid var(--bg); */
+	border-bottom: 2px solid;
 	padding-bottom: 0.5em;
 	display: flex; /* for ^ button */
 }
@@ -1029,7 +1035,8 @@ h5:target,
 h6:target,
 li:target {
 /*	background-color: hsl(221, 14%, calc(var(--bg-l) + var(--hover-bg-l-delta))); */
-	background-color: var(--bg);
+/*	background-color: var(--bg); */
+	background-color: #EEEFF2;
 	background-clip: content-box;
 }
 a.footnote-ref:target {
@@ -1242,6 +1249,30 @@ body:has(h2:nth-of-type(14)) { --badge: url(/public/badges/online.gif); }*/
 /* 	view-transition-name: page-title; */
 /* } */
 
+/* === getting rid of variables === */
+/* --bg */
+code,
+pre,
+.content blockquote,
+.quote-attr,
+h1:target,
+h2:target,
+h3:target,
+h4:target,
+h5:target,
+h6:target,
+li:target {
+	background-color: #EEEFF2;
+}
+hr,
+.view h1,
+.view h2,
+.view h3,
+.view h4,
+.view h5,
+.view h6 {
+	border-color: #EEEFF2;
+}
 
 /* ==========================================================================
 	 Page-Specific (sitemap, calendar, search, onebitday, 404, index) all moved inline
@@ -1665,6 +1696,40 @@ pre.chroma {
 	}
 	a.autolink:visited {
 		color: thistle;
+	}
+
+	/* --bg */
+	code,
+	pre,
+	.content blockquote,
+	.quote-attr,
+	p:has(a:target),
+	h1:target,
+	h2:target,
+	h3:target,
+	h4:target,
+	h5:target,
+	h6:target,
+	li:target {
+		background-color: #1F2229;
+	}
+	hr,
+	.view h1,
+	.view h2,
+	.view h3,
+	.view h4,
+	.view h5,
+	.view h6 {
+		border-color: #1F2229;
+	}
+
+	/* --border */
+	.content blockquote,
+	.quote-attr,
+	.content table td,
+	.content table th,
+	.menu-list li ul {
+		border-color: #353A46;
 	}
 
 	/* Dracula syntax theme */
