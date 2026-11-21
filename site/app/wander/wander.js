@@ -158,6 +158,7 @@ const wander = {
 		// Garbage silos
 		'https://medium.com/',
 		'https://*.substack.com/',
+		'https://twitch.tv/',
 
 		// Blocked by HTTP headers, etc.
 		// the best site in the universe
@@ -197,7 +198,7 @@ const wander = {
 		// i'm sure she's great but that banner drives me up the fucking wall
 		'https://sachachua.com',
 		// paywalled; zealot
-		'https://*.wheresyoured.at/',
+		'https://*wheresyoured.at/',
 
 		// Consoles
 		// capitalist/HN shit
@@ -205,6 +206,10 @@ const wander = {
 		'https://*.heyhomepage.com/wander/',
 		// sorry Joshes but my name is not Josh
 		'https://joshing.you/wander/',
+		// AI
+		'https://draug.dev/wander/',
+		// non-English
+		'https://eliojaillet.ch/wander/',
 	],
 	styles: [
 		// win9x style; display 'Open' on mobile
