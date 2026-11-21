@@ -15,4 +15,6 @@ Anubis and co. sometimes take several minutes to complete. When this happens on 
 
 I get *why* it's like this. There's a lot of abusive traffic that's hard to deal with. A lot of it looks like legitimate traffic, so you have to ration your pageviews and seize on anything that stands out. But it sucks. It feels like being punished for something you didn't do.
 
-(Then, of course, there are the login walls. These are as often cashgrabs to exploit the data sites are hoarding as they are a protective measure. Reddit put one in place recently, so I just don't go on Reddit. I never liked it much anyway.)
+Then there are the login walls. These are as often cashgrabs to exploit the data sites are hoarding as they are a protective measure. Reddit put one in place recently, so I just don't go on Reddit. I never liked it much anyway.
+
+Of course, all of the above pale in comparison to "papers please" walls, whose ageist justifications render them no less dystopian.
