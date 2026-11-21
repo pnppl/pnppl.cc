@@ -11,10 +11,10 @@ In some cases I'm not being singled out — they treat *all* visitors like this.
 
 Cloudflare CAPTCHA works like this: they provide a button that rolls a die to decide whether to a) let you in b) throw an error, refresh the page, and then let you in c) endlessly refresh the page, pretending it will one day let you in, but it's a lie and you should give up after the second refresh. It is a cruel and capricious digital god.
 
-Anubis and co. sometimes take several minutes to complete. When this happens on my phone, I close the page instead of wasting the battery. (There's a good chance Android will decide to kill the process anyway if I leave it running.) On slow devices, like the old tablet I use for reading comics, these challenges can be an infinite sentence.
+Anubis and co. sometimes take several minutes to complete. When this happens on my phone, I close the page instead of wasting the battery. (There's a good chance Android will decide to kill the process anyway if I leave it running.) On slow devices, like the old tablet I use for reading comics, these challenges are an infinite sentence.
 
 I get *why* it's like this. There's a lot of abusive traffic that's hard to deal with. A lot of it looks like legitimate traffic, so you have to ration your pageviews and seize on anything that stands out. But it sucks. It feels like being punished for something you didn't do.
 
-Then there are the login walls. These are as often cashgrabs to exploit the data sites are hoarding as they are a protective measure. Reddit put one in place recently, so I just don't go on Reddit. I never liked it much anyway.
+Then there are the login walls. These are as often a cashgrab to exploit the data sites are hoarding as they are a protective measure. Reddit put one in place recently, so I just don't go on Reddit. I never liked it much anyway.
 
 Of course, all of the above pale in comparison to "papers please" walls, whose ageist justifications render them no less dystopian.
