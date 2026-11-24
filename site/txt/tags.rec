@@ -1,0 +1,99 @@
+%rec: tag
+%doc: Hashtag for posts on pnppl.cc.
+%allowed: tag desc parent child
+%mandatory: tag
+%unique: tag desc
+%singular: tag desc
+%key: tag
+%sort: tag
+%type: tag,desc,parent,child line
+#%typedef: link size 400
+#%type: url,gopher,gemini,feed link
+#%type: cat enum
+#+ misc
+#+ personal
+#%constraint: !(url ~ '^http')
+
+tag: anime
+desc: Japanese-style cartoons; means "manga" when combined with <a class="link-text" href="/+/tag/comics">#comics</a>.
+
+tag: club
+desc: Website clubs.
+
+tag: code
+desc: Contains computer code.
+
+tag: collection
+desc: Real-life piles of junk.
+
+tag: comic
+desc: Comics I drew.
+
+tag: comics
+desc: About comics other people drew.
+
+tag: essay
+desc: Long and/or self-serious and/or persuasive.
+
+tag: fav
+desc: My best stuff, according to me.
+
+tag: fiction
+desc: Fiction I wrote.
+
+tag: fish
+desc: The command shell, not the animal.
+
+tag: hw
+desc: Hardware.
+
+tag: lit
+desc: About literature other people wrote.
+
+tag: meta
+desc: Site navigation and posts about the site.
+
+tag: music
+desc: About music other people made.
+
+tag: palm
+desc: Palm Pilots and Palm OS.
+
+tag: phil
+desc: Philosophy.
+
+tag: photo
+desc: Photos I took.
+
+tag: pixel-art
+desc: Pixel art I made.
+
+tag: poem
+desc: Poems I wrote.
+
+tag: recipe
+desc: All <a class="link-text" href="/+/tag/vegan">vegan</a>.
+
+tag: review
+desc: Not necessarily actual reviews so much as collected notes and thoughts and reflection on my personal experience, but I try to reserve it for when I make some assessment of the quality.
+
+tag: sf
+desc: Science fiction.
+
+tag: shrine
+desc: Digital monuments to things I love.
+
+tag: soop
+desc: Infrequent meta posts about what's oop with the site.
+
+tag: text-art
+desc: Contains text art.
+
+tag: tv
+desc: Television.
+
+tag: vegan
+desc: This tag excludes most <a class="link-text" href="/+/tag/recipe">recipes</a> because they're all vegan anyway.
+
+tag: visual-art
+desc: <a class="link-text" href="/+/tag/comic">Comics</a>, <a class="link-text" href="/+/tag/photo">photos</a>, and <a class="link-text" href="/+/tag/pixel-art">pixel art</a> that I made.

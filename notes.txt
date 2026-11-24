@@ -10,27 +10,20 @@ todo:
 	- i think i wanna re-boldify the headings, and i'd like to indent the H2s or something so they are more visually childen of h1s
 		- can also indent the following text with eg h2 ~ p: margin-left
 		- should we try to wrap sections in <details>?
-	- switch to a preprocessor so we can eliminate variables easily
-		- tried this quickly and they didn't behave as expected, scoping issue
-	- ask support to turn on gzip for css...
+	- switch to a preprocessor to eliminate variables?
 	- had gotten rid of negative margins but they're back in the death note <_< >_>
+		- put one back for quote-attr...
+	- most (xlog) pages are too wide in Dillo and cause horizontal scroll
 	- width media queries are based on my shitty laptop resolution of 768 pixels... but that's the height, not width... wtf
 		- seems like it works ok but uh. should be changed to something more normal. 640, 800, 1024...
-	- add prefers-contrast media queries
-		- low
-			- light: gray background
-			- dark: dark gray background
-		- high
-			- light: black text
-			- dark: white text
+	- too wide on tablet, it acts like a big phone (TOC not on side)
 	- i have rules that start with both .content and .view, probably can eliminate one
-	- most (xlog) pages are too wide in Dillo and cause horizontal scroll
 - make tags by links to posts prettier. maybe swap tags and filename?
 - get rid of shell postprocessing
-	- just finish_toc left
-		- we get no toc if the document has no headings, even if we have backlinks/see also
-			- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but annoying
+	- finish_toc: we get no toc if the document has no headings, even if we have backlinks/see also
+		- this isn't *that* big of a deal - stuff without a single heading is probably short anyway - but annoying
 	- sitemap, epub, and html.fish do not count as postprocessing v_v
+	- orrrr i could add more in an ugly blockquotes kludge
 - pages always show the trailing /
 	- i can live with this since it is technically a directory. i wish it were just .html. maybe change that
 		- contemplating this. it has many upsides and the only real downside is the extra 4 characters. 3 if i do .htm
@@ -107,11 +100,14 @@ todo:
 		- single tag posts always surfaced posts starting with A
 		- a post with two tags had fewer matches than one with a single tag
 - refactor the templates. the whole point of them is not having to copy-paste, and yet...
+- should we merge All with Recent?
+- we should have an HTTP version of meander, there's a decent number now. and that can be my place for unilateral directory-ing, can link on insecure.club
 
 low priority/done:
 - mosaic compat
 	- in html 2.0 you can't navigate to an element by id, you have to have <a name="id">
 	- why did <center> stop working?
+		- i guess i dreamed that it supported it, it apparently never did
 - setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
 - ! aliasing for mentions?
@@ -168,19 +164,19 @@ low priority/done:
 		- improved this and made it a little more programmatic but still a lot of manual bullshit involved. current list:
 			- — – … ‘’“” ≈ ≠ ≥ ≤ × fractions
 	- this does mean our RSS rendering will have ~=, !=, etc
+	- this is causing issues for certain clients. offpunk inserts a bunch of spaces
 - x we now output all non-ascii characters as decimal html entities
 	- probably won't substantially improve legacy rendering, especially since they probably use a win codepage/iso-whatever, but...
-		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as §
+		- it was the least invasive, most sensible way to fix the problem where I type &sect; and it gets output as literal §
 		- it's a little ridiculous to write &#128556; but it's not like there are a lot of these
 			- the one downside (?) is now unicode will wrap to some random ascii instead of being obviously garbled. the problem is less visible, for good and ill
 - maybe we should put everything through a linter when we build
 - i would like to test the site on a legacy mobile device. many of them, really. the tungsten would be a convenient first.
 - ! we should distinguish between types of calendar entry (text mention, filename)
-- rss is a little wonky
 - have autolink_pages refer to title metadata - we should not be generating the firstline-title more than once
 - chokes on unicode with preceding space or at beginning of line. seems to be the same problem as tab
 - blank titles cause issues
-- git history is fucking massive. should try to clean it up or just replace the repo with a shallow clone
+- x git history is fucking massive. should try to clean it up or just replace the repo with a shallow clone
 - add IDs and fragments so that backlinks point to the actual link
 - deploy/build script needs a complete overhaul
 	- mtimes and mobile sync are totally fucked
@@ -242,7 +238,9 @@ this is becoming increasingly fragmented...
 	- would like to host elsewhere but was running out of space on web1.0hosting and would rather not pay money
 - ../hrt: deployed to statichost.eu from codeberg automatically when pushed and accessed as hrt.pnppl.cc
 	- this one does not support http, but there was already a mirror on github pages
+	- updates ain't working now, codeberg rejects the push. too big? wonder if I can erase the history to shrink it and still do pulls
 - ../gb: gb.pnppl.cc, deployed to heliohost over sftp manually
-- ../handthing.party: deploy to web1.0hosting via script over ftp and accessed as handthing.party. not really connected to pnppl.cc. stuck the zine zips up there tho
+- ../handthing.party: ~deploy to web1.0hosting via script over ftp~ and accessed as handthing.party. not really connected to pnppl.cc. stuck the zine zips up there tho
 	- they never renewed my cert so now it deploys automatically to gh pages and i just use the w10 url for the zips. not a good long term solution
 - pnppl.helioho.st is used for indieauth out of laziness, might not ever use it. also it's so slow it times out when i try to log in sometimes. just some php deposited in /auth/
+	- heliohost performance has been quite bad in general lately. inching closer and closer to the doom of paying for hosting

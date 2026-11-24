@@ -11,6 +11,7 @@ import (
 	"strconv"
 	"context"
 	"math/rand"
+	"os/exec"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -48,6 +49,7 @@ var helpers = template.FuncMap{
 //	"tagParent":      tagParent,
 	"noop":           noop,
 	"tagId":          tagId,
+	"tagDesc":        tagDesc,
 	"wday":           wday,
 	"randomBadge":    randomBadge,
 }
@@ -347,6 +349,17 @@ func tagId(tag string) string {
 	}
 	nohash := tag[1:len(tag)]
 	return "#tag-" + nohash
+}
+
+func tagDesc(tag string) string {
+	tagClean := strings.Replace(tag, "#", "", 1);
+	cmd := exec.Command("recsel", "-e", "tag = '" + tagClean + "'", "-P", "desc", "/home/pnppl/pnppl.cc/site/txt/tags.rec")
+	stdout, err := cmd.Output()
+	if err == nil && len(stdout) > 0 {
+		return string(stdout);
+	}
+
+	return ""
 }
 
 // Wednesday -> Wed.
