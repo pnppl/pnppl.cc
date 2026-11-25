@@ -21,13 +21,11 @@ func (*pageLinkParser) Trigger() []byte {
 // getCurrentPageTitle extracts the normalized title from the document source
 func getCurrentPageTitle(source []byte) string {
 	lines := strings.SplitN(string(source), "\n", 2)
-	if len(lines) == 0 {
+	name, err := NormalizeName(lines[0])
+	if err != nil {
 		return ""
 	}
-	firstLine := strings.TrimSpace(lines[0])
-	firstLine = strings.TrimPrefix(firstLine, "# ")
-	firstLine = strings.TrimSuffix(firstLine, " #")
-	return strings.ToLower(firstLine)
+	return strings.ToLower(name)
 }
 
 

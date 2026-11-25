@@ -55,6 +55,7 @@ var helpers = template.FuncMap{
 	"lilTag":         lilTag,
 	"wday":           wday,
 	"randomBadge":    randomBadge,
+	"decimal":        decimal,
 }
 
 var ErrHelperRegistered = errors.New("Helper already registered")
@@ -463,4 +464,9 @@ func randomBadge() template.HTML {
 	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
 						<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
 					</a>`, href, img, alt))
+}
+
+// decimal-encoded character entities
+func decimal(in string) template.HTML {
+	return template.HTML(DecimalEscape(in))
 }

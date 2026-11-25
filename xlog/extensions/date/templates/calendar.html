@@ -161,7 +161,7 @@ table.calendar td a:focus-visible {
 						{{- end }}
 							<span class="page">
 								{{- $props := properties . -}}
-								{{ with $props.title -}} {{ .Value }} {{- else -}} {{ .Name }} {{- end -}}
+								{{ with $props.title -}} {{ .Value | decimal }} {{- else -}} {{ .Name | decimal }} {{- end -}}
 							</span>{{- noop -}}
 						</a>
 						{{- end }}

@@ -21,9 +21,9 @@
 		{{- $props := properties .page -}}
 		{{- with .page -}}
 			{{- with $props.title -}}
-				{{ .Value }}
+				{{ .Value | decimal }}
 			{{- else -}}
-				{{ .Name }}
+				{{ .Name | decimal }}
 			{{- end }} | {{ end -}}
 		{{- .config.Sitename -}}
 		</title>
@@ -36,9 +36,9 @@
 		{{- with .page -}}
 			{{- $name := base .Name -}}
 			{{- with $props.title }}
-				<h1>{{ .Value }}<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
+				<h1>{{ .Value | decimal }}<br><span class="subtitle"><span class="is-hidden">{{ printf "[" | raw }}</span>{{ $name }}<span class="is-hidden">{{ printf "]" | raw }}</span></span></h1>
 			{{- else -}}
-				<h1 class="subtitle">{{ $name }}</h1>
+				<h1 class="subtitle">{{ $name | decimal }}</h1>
 			{{- end -}}
 		{{- end }}
 		</center>

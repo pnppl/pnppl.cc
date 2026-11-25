@@ -19,9 +19,9 @@
 					<span class="is-block">
 						{{ $props := properties . -}}
 						{{ with $props.title -}}
-							{{ .Value -}}
+							{{ .Value | decimal -}}
 						{{ else -}}
-							{{ base .Name -}}
+							{{ base .Name | decimal -}}
 						{{ end -}}
 						<span class="filename-right">&nbsp;[{{ .Name }}]</span>
 						<br>

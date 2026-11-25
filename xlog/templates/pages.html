@@ -12,9 +12,9 @@
 				{{ emoji . }}
 				{{ $props := properties . }}
 				{{ with $props.title }}
-					{{ .Value }}
+					{{ .Value | decimal }}
 				{{ else }}
-					{{ base .Name }}
+					{{ base .Name | decimal }}
 				{{ end }}
 			</span>
 			<time class="stamp">{{ ago .ModTime }}</time>

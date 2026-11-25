@@ -5,7 +5,6 @@
 package frontmatter_hash
 
 import (
-	"strings"
 	"fmt"
 
 	"github.com/emad-elsaid/xlog"
@@ -114,9 +113,16 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
 	}
 
 	line, _ := reader.PeekLine()
+	/*
 	title := strings.TrimSpace(string(line))
 	title = strings.TrimPrefix(title, "# ")
 	title = strings.TrimSuffix(title, " #")
+	*/
+	title, err := xlog.NormalizeName(string(line))
+	if err != nil {
+		// fall back to un-normalized name i guess
+		title = string(line)
+    }
 	if len(title) > 70 {
 		title = title[:67] + "..."
 	}

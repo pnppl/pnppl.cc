@@ -1,6 +1,6 @@
 {{ define "toc-item" }}
 <li>
-	<a href="#{{ printf "%s" .ID}}" accesskey="{{ accesskey }}">{{ printf "%s" .Title | raw }}</a>
+	<a href="#{{ printf "%s" .ID}}" accesskey="{{ accesskey }}">{{ printf "%s" .Title | decimal }}</a>
 	{{- with .Items }}
 	<ol class="menu-list">
 		{{- range . }}
