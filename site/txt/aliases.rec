@@ -12,10 +12,32 @@
 %type: nodefault bool
 # no spaces in page filename
 %constraint: !(page ~ ' ')
-# no extension in page filename
-%constraint: !(page ~ '\.[a-z]{1,4}$')
+# no md extension in page filename - to stop accidents - rendered md pagename lacks extension
+%constraint: !(page ~ '\.md$')
 # no capitals in alias
 %constraint: !(alias ~ '[A-Z]')
+
+page: +/all
+alias: all
+
+page: +/calendar
+alias: date
+alias: cal
+
+page: +/feed.rss
+alias: feed
+alias: rss
+
+page: +/recent
+alias: new
+alias: recent
+
+page: +/search
+alias: search
+alias: find
+
+page: +/tags
+alias: tags
 
 page: 2026-01-01_possessor
 alias: possessor
@@ -55,6 +77,9 @@ alias: amazing digital circus
 
 page: 2026-06-12_edc
 alias: edc
+
+page: 2026-08-08_AGPL
+alias: agpl
 
 page: 2026-08-20_utena
 alias: utena

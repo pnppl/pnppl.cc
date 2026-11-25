@@ -5,6 +5,7 @@ git remote set-url --add --push origin ssh://git@codeberg.org/pnppl/pnppl.cc.git
 fish set_mtimes.fish &&
 echo '
 .*
+*.shtml
 w10hosting_default/
 \!*.*
 !site/app/*/!*.htm

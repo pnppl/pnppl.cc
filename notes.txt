@@ -115,7 +115,7 @@ low priority/done:
 	- added via recfile, including ability to disable the default
 	- several of the ones i entered are the same as the friendly filename, but i don't think we want to automate those
 	- i think this is actually better than the automatic subtitles via ':' splits idea, since i'd have a few entries name 'fish' rn for example
-	- i'm thinking we can also use this to auto generate redirects for shorter urls, for arbitrary files
+	- also using this to auto generate redirects for shorter urls, for arbitrary files
 - x a lot of stuff is going to be really useless if i can't get it to print the first line insted of filename
 	- if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
 		- solved with some ugly hacks:
@@ -183,12 +183,13 @@ low priority/done:
 - blank titles cause issues
 - x git history is fucking massive. should try to clean it up or just replace the repo with a shallow clone
 - add IDs and fragments so that backlinks point to the actual link
-- deploy/build script needs a complete overhaul
+- ! deploy/build script needs a complete overhaul
 	- mtimes and mobile sync are totally fucked
 	- now that i stopped committing xlog build artifacts the order of operations is nonsensical
 	- spaghetti
-	- improve performance
+	- ! improve performance
 		- look into photo thumbnailing and the ridiculous next/prev helper functions (we should just find these once and store them as values in the page struct)
+		- using recutils has slowed everything down substantially, like order of magnitude or two. need native golang version
 - the excerpt stuff could be more generalized to make !embed more useful
 - ! rather large epub due to inclusion of images (possessor screenshots). should at least make them b&w or something
 	- long term if i end up making more comics or illustrated posts i should just put posts with pics in a separate epub
