@@ -1,0 +1,89 @@
+%rec: Badge
+%doc: 88x31 badge for rotating display on pnppl.cc.
+# img: filename minus .gif and /public/badges/
+# alt: alt text
+# href: target to link to, defaults to about
+%allowed: img href alt
+%mandatory: img alt
+%unique: img href alt
+%singular: img
+%singular: alt
+%key: img
+%sort: img
+%type: img,href,alt line
+
+img: bgdc-ga-j
+alt: BE GAY DO CRIME on rainbow/black flag
+
+img: bgdc-tr-j
+alt: BE GAY DO CRIME on trans/black flag
+
+img: bgdc-bi-j
+alt: BE GAY DO CRIME on bi/black flag
+
+img: bgdc-gq-j
+alt: BE GAY DO CRIME on genderqueer/black flag
+
+img: invalid-html
+alt: W3C validator result: HTML ??? X
+
+img: invalid-css-red
+alt: W3C validator result: CSS level ‽ X
+
+img: my-anarchy-now
+alt: ANARCHY NOW! 1312
+
+img: online
+alt: Cords plugged together show you're ON-LINE
+
+img: she-her
+alt: she/her
+
+img: copyleft
+alt: Copyleft: all wrongs reversed
+href: /about#copyleft
+
+img: cj
+alt: I FUCKING LOVE CARROT JUICE
+href: /shrine/cj
+
+img: btmi
+alt: BOMB THE MUSIC INDUSTRY!
+href: http://qur.pnppl.cc/
+
+# should make it fit with the other badges better and/or make an animated version
+img: steal
+alt: STEAL THIS SITE
+href: https://git.gay/pnppl/pnppl.cc
+
+img: civ
+alt: INDUSTRIAL CIVILIZATION IS MY ENDOCRINE SYSTEM
+href: https://hrt.pnppl.cc
+
+img: insecure-crt
+alt: HTTP (anxious CRT face) this website is a litle insecure
+href: http://insecure.club/
+
+img: fish
+alt: <3 fish shell
+href: https://fishshell.com/
+
+img: gravity-wells
+alt: no gods, no masters, no gravity wells
+href: https://blueshifted.net/
+
+img: handthing
+alt: you still doing that hand thing?
+href: http://handthing.party/
+
+img: lain
+alt: LET'S ALL LOVE LAIN!
+href: https://fauux.neocities.org/lovelain
+
+img: nano-88x31
+alt: made with GNU nano
+href: https://nano-editor.org/
+
+img: victor-8831-wide
+alt: best viewed in Victor Mono
+href: https://rubjo.github.io/victor-mono/

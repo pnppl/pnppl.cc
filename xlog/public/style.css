@@ -528,7 +528,7 @@ div.icon-text {
 	color: var(--text);
 	display: inline;
 	display: inline-flex;
-	font-size: 0.75em;
+	font-size: 0.85em;
 	height: 2em;
 	justify-content: center;
 /*	line-height: 1.5; */
@@ -539,6 +539,7 @@ div.icon-text {
 	top: -1px;
 	cursor: pointer;
 }
+/* i keep wanting to get rid of these but i feel like they make it easier to see what you're clicking and distinguish different kinds of links */
 a.tag:hover {
 	--tag-bg-l-delta: var(--hover-bg-l-delta);
 }

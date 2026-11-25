@@ -1,5 +1,5 @@
 # Lycoris Recoil
-#anime #tv #watched-2026 #review
+#anime #tv #media-2026 #review
 
 ## The fuck?
 The premise is really, really, really dumb; it's clearly a flimsy excuse to have gun-toting high school girls plus slice-of-life chill.

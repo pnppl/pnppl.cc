@@ -19,7 +19,7 @@ site/txt/2026-02-04_perfume.md 1773498383
 site/txt/2026-02-08_handbook.md 1773408634
 site/txt/2026-02-08_midnight-toker.md 1773408634
 site/txt/2026-02-08_voyager.md 1773408634
-site/txt/2026-02-11_picard.md 1780738604
+site/txt/2026-02-11_picard.md 1795565531
 site/txt/2026-02-12_little-bug.md 1773408634
 site/txt/2026-03-11_cat-names.md 1779474376
 site/txt/2026-03-11_diy-vegenaise.md 1780756801
@@ -57,7 +57,7 @@ site/txt/2026-05-15_chickpea-salad.md 1778905491
 site/txt/2026-05-15_sandwich.md 1780855052
 site/txt/2026-05-18_pirate-utopia.md 1779208214
 site/txt/2026-05-19_pip-gandhi.md 1779237921
-site/txt/2026-05-21_hench-villain.md 1782062083
+site/txt/2026-05-21_hench-villain.md 1795565531
 site/txt/2026-05-22_semicolon.md 1779462030
 site/txt/2026-05-22_woman.md 1779482777
 site/txt/2026-05-25_party.md 1779805373
@@ -65,7 +65,7 @@ site/txt/2026-05-26_library.md 1779935255
 site/txt/2026-05-26_mini-e.md 1779979583
 site/txt/2026-05-29_scamming.md 1780115803
 site/txt/2026-05-30_def-the-state.md 1782198601
-site/txt/2026-06-02_tadc.md 1782113649
+site/txt/2026-06-02_tadc.md 1795565531
 site/txt/2026-06-05_def-nooch.md 1780738604
 site/txt/2026-06-05_food-tips.md 1782113649
 site/txt/2026-06-05_mac.md 1780756801
@@ -84,7 +84,7 @@ site/txt/2026-07-05_vegan.md 1783339335
 site/txt/2026-07-06_semantic-html.md 1783374662
 site/txt/2026-07-08_trek-one-offs.md 1786962386
 site/txt/2026-07-11_president.md 1783833632
-site/txt/2026-07-21_hannibal.md 1794221993
+site/txt/2026-07-21_hannibal.md 1795565531
 site/txt/2026-07-21_purity.md 1784709001
 site/txt/2026-07-23_sports.md 1784860449
 site/txt/2026-07-24_nano-wikilink.md 1785042811
@@ -99,7 +99,7 @@ site/txt/2026-08-09_good-people.md 1794050956
 site/txt/2026-08-10_cj.md 1786378755
 site/txt/2026-08-17_breakfast.md 1787066819
 site/txt/2026-08-20_css-gif.md 1787309710
-site/txt/2026-08-20_utena.md 1795107895
+site/txt/2026-08-20_utena.md 1795565531
 site/txt/2026-09-03_fish-slop.md 1788466851
 site/txt/2026-09-28_anti-antifa.md 1792512492
 site/txt/2026-10-05_double-text.md 1792069007
@@ -114,16 +114,17 @@ site/txt/2026-10-25_prax-tarot.md 1792995490
 site/txt/2026-10-27_def-rbf.md 1793654115
 site/txt/2026-10-30_bad-90s.md 1793670104
 site/txt/2026-10-30_normie-savior.md 1793670104
-site/txt/2026-11-02_iltv.md 1795107895
+site/txt/2026-11-02_iltv.md 1795565531
 site/txt/2026-11-03_def-happily-sometimes-later.md 1793773016
-site/txt/2026-11-08_lycoris-recoil.md 1794219504
-site/txt/2026-11-09_mononoke.md 1794359768
+site/txt/2026-11-08_lycoris-recoil.md 1795565531
+site/txt/2026-11-09_mononoke.md 1795565531
 site/txt/2026-11-16_ants.md 1794890751
 site/txt/2026-11-21_walled-web.md 1795249574
 site/txt/404.md 1776897621
 site/txt/about.md 1794876537
 site/txt/ai.md 1773814962
 site/txt/app.md 1791851884
+site/txt/badges.rec 1795565531
 site/txt/compat.md 1791628309
 site/txt/deathnote.md 1783291208
 site/txt/fs-ir.md 1782489782
@@ -134,6 +135,7 @@ site/txt/prairieland.md 1794890751
 site/txt/privacy.md 1794890751
 site/txt/shrine.md 1792276432
 site/txt/slashpages.md 1794877247
+site/txt/tags.rec 1795565531
 site/img/1bitday/ICE.gif 1774505561
 site/img/1bitday/acorn.gif 1774505561
 site/img/1bitday/anticipation.gif 1774505561

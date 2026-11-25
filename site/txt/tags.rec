@@ -1,33 +1,33 @@
-%rec: tag
+%rec: Hashtag
 %doc: Hashtag for posts on pnppl.cc.
 %allowed: tag desc parent child
 %mandatory: tag
 %unique: tag desc
-%singular: tag desc
+%singular: tag
+%singular: desc
 %key: tag
 %sort: tag
 %type: tag,desc,parent,child line
-#%typedef: link size 400
-#%type: url,gopher,gemini,feed link
-#%type: cat enum
-#+ misc
-#+ personal
-#%constraint: !(url ~ '^http')
 
-tag: anime
-desc: Japanese-style cartoons; means "manga" when combined with <a class="link-text" href="/+/tag/comics">#comics</a>.
+#tag: anime
+#desc: About Japanese-style cartoons.
+#parent: film-tv
 
 tag: club
 desc: Website clubs.
+parent: meta
 
 tag: code
 desc: Contains computer code.
+parent: tech
 
 tag: collection
 desc: Real-life piles of junk.
+parent: personal
 
 tag: comic
 desc: Comics I drew.
+parent: visual-art
 
 tag: comics
 desc: About comics other people drew.
@@ -41,41 +41,60 @@ desc: My best stuff, according to me.
 tag: fiction
 desc: Fiction I wrote.
 
+tag: film
+parent: film-tv
+
 tag: fish
-desc: The command shell, not the animal.
+desc: The shell, not the animal.
+parent: tech
 
 tag: hw
 desc: Hardware.
+parent: tech
+
+tag: journal
+parent: personal
 
 tag: lit
 desc: About literature other people wrote.
 
+tag: manga
+desc: About Japanese-style comic books.
+parent: comics
+
 tag: meta
 desc: Site navigation and posts about the site.
 
+tag: film-tv
+desc: About film & TV.
+
 tag: music
-desc: About music other people made.
+desc: About music other people recorded.
 
 tag: palm
-desc: Palm Pilots and Palm OS.
+desc: Palm OS.
+parent: tech
 
 tag: phil
 desc: Philosophy.
 
 tag: photo
 desc: Photos I took.
+parent: visual-art
 
 tag: pixel-art
 desc: Pixel art I made.
+parent: visual-art
 
 tag: poem
 desc: Poems I wrote.
 
 tag: recipe
-desc: All <a class="link-text" href="/+/tag/vegan">vegan</a>.
+desc: All [[vegan|##vegan]].
+parent: vegan
 
 tag: review
-desc: Not necessarily actual reviews so much as collected notes and thoughts and reflection on my personal experience, but I try to reserve it for when I make some assessment of the quality.
+desc: Not necessarily actual reviews so much as collected notes and thoughts and reflection on my personal experience, but I try to reserve it for when I make some assessment of quality.
 
 tag: sf
 desc: Science fiction.
@@ -85,15 +104,18 @@ desc: Digital monuments to things I love.
 
 tag: soop
 desc: Infrequent meta posts about what's oop with the site.
+parent: meta
 
 tag: text-art
 desc: Contains text art.
+parent: visual-art
 
 tag: tv
 desc: Television.
+parent: film-tv
 
 tag: vegan
-desc: This tag excludes most <a class="link-text" href="/+/tag/recipe">recipes</a> because they're all vegan anyway.
+desc: This tag excludes most [[recipe|##recipe]]s because they're all vegan anyway.
 
 tag: visual-art
-desc: <a class="link-text" href="/+/tag/comic">Comics</a>, <a class="link-text" href="/+/tag/photo">photos</a>, and <a class="link-text" href="/+/tag/pixel-art">pixel art</a> that I made.
+desc: [[Comic|##comic]]s, [[photo|##photo]]s, [[pixel art|##pixel-art]], and [[text art|##text-art]] that I made.

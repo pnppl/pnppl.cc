@@ -1,16 +1,16 @@
 {{ template "header" . }}
-
+{{ printf "<style><!-- p { font-size: 0.9em } --></style>" | raw }}
 <div class="view content">
 
 	{{ range $tag, $pages := .tags }}
 
-		<h2 class="hashtag-name-noinc">
+		<h2>
 			<a href="/+/tag/{{$tag}}"> #{{$tag}} </a>
 		</h2>
 
 		{{ $tagDesc := tagDesc $tag }}
 		{{ with $tagDesc }}
-		<p style="font-size:0.9em">{{ printf $tagDesc | raw}}</p>
+		<p>{{ printf $tagDesc | raw}}</p>
 		{{ end }}
 		<aside class="menu"><div class="menu-list"><ul>
 		{{- range $pages -}}

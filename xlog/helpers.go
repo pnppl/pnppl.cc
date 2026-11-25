@@ -10,8 +10,9 @@ import (
 	"time"
 	"strconv"
 	"context"
-	"math/rand"
+//	"math/rand"
 	"os/exec"
+	"regexp"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -50,6 +51,8 @@ var helpers = template.FuncMap{
 	"noop":           noop,
 	"tagId":          tagId,
 	"tagDesc":        tagDesc,
+	"lilWl":          lilWl,
+	"lilTag":         lilTag,
 	"wday":           wday,
 	"randomBadge":    randomBadge,
 }
@@ -270,7 +273,7 @@ func buildSiblingIndex() {
 	if len(pageNames) > 0 {
 		return
 	}
-	allPages := Pages(context.Background());
+	allPages := Pages(context.Background())
 	for p, _ := range allPages {
 		if !IsIgnoredPath(allPages[p].Name()) {
 			pageNames = append(pageNames, allPages[p].Name())
@@ -352,14 +355,34 @@ func tagId(tag string) string {
 }
 
 func tagDesc(tag string) string {
-	tagClean := strings.Replace(tag, "#", "", 1);
+	tagClean := strings.Replace(tag, "#", "", 1)
 	cmd := exec.Command("recsel", "-e", "tag = '" + tagClean + "'", "-P", "desc", "/home/pnppl/pnppl.cc/site/txt/tags.rec")
 	stdout, err := cmd.Output()
 	if err == nil && len(stdout) > 0 {
-		return string(stdout);
+		return lilWl(lilTag(string(stdout)))
 	}
-
 	return ""
+}
+
+// lil wikilink parser/renderer
+func lilWl(text string) string {
+	// [[$1]]
+	re1 := regexp.MustCompile(`\[\[([^]|]+)\]\]`)
+	// [[$1|$2]]
+	re2 := regexp.MustCompile(`\[\[([^]|]+)\|([^]|]+)\]\]`)
+	out := re1.ReplaceAllString(text, "<a href=\"$1\">$1</a>")
+	return re2.ReplaceAllString(out, "<a href=\"$2\">$1</a>")
+}
+
+func lilTag(text string) string {
+	// [[$1|##$2]] - new syntax, links to hashtag (ie /+/tag/) instead of anchor on current page, but displays custom link text
+	// has no third party support obviously, not that you could count on them for wikilinks or hashtags in the first place
+	re2 := regexp.MustCompile(`\[\[([^]|]+)\|##([^]|]+)\]\]`)
+	// $1#$2 - bare hashtags ($1 is whitespace)
+	// accepts hashtags that should be banned (eg all numbers)
+	reb := regexp.MustCompile(`(^|\s)#([A-z0-9-]+)`)
+	out := re2.ReplaceAllString(text, "<a class=\"tag\" href=\"/+/tag/$2\">$1</a>")
+	return reb.ReplaceAllString(out, "$1<a class=\"tag\" href=\"/+/tag/$2\">#$2</a>")
 }
 
 // Wednesday -> Wed.
@@ -368,6 +391,42 @@ func wday(day string) string {
 }
 
 func randomBadge() template.HTML {
+	cmd := exec.Command("recsel", "--random=1", "/home/pnppl/pnppl.cc/site/txt/badges.rec")
+	rec, err := cmd.Output()
+	if err != nil || len(rec) == 0 {
+		fmt.Printf("missing badges.rec?")
+		return ""
+	}
+
+	cmd = exec.Command("recsel", "-P", "img")
+	cmd.Stdin = strings.NewReader(string(rec))
+	stdout, err := cmd.Output()
+	if err != nil || len(stdout) == 0 {
+		fmt.Printf("corrupted document?")
+		return ""
+	}
+	img := strings.TrimSpace(string(stdout))
+
+	cmd = exec.Command("recsel", "-P", "alt")
+	cmd.Stdin = strings.NewReader(string(rec))
+	stdout, err = cmd.Output()
+	if err != nil || len(stdout) == 0 {
+		fmt.Printf("missing alt text?")
+		return ""
+	}
+	alt := strings.TrimSpace(string(stdout))
+
+	cmd = exec.Command("recsel", "-P", "href")
+	cmd.Stdin = strings.NewReader(string(rec))
+	stdout, err = cmd.Output()
+	href := "/about"
+	if err == nil && len(stdout) > 0 {
+		href = strings.TrimSpace(string(stdout))
+	}
+
+	/* return lilWl(lilTag(string(stdout))) */
+
+/*
 	badges := [][]string{
 		{"bgdc-ga-j", "", "BE GAY DO CRIME on rainbow/black flag"},
 		{"bgdc-tr-j", "", "BE GAY DO CRIME on trans/black flag"},
@@ -398,6 +457,8 @@ func randomBadge() template.HTML {
 	if len(href) == 0 {
 		href = "/about"
 	}
+	*/
+
 	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
 						<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
 					</a>`, href, img, alt))
