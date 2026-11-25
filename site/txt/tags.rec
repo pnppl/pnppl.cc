@@ -90,7 +90,7 @@ tag: poem
 desc: Poems I wrote.
 
 tag: recipe
-desc: All [[vegan|##vegan]].
+desc: All #vegan.
 parent: vegan
 
 tag: review
@@ -118,4 +118,4 @@ tag: vegan
 desc: This tag excludes most [[recipe|##recipe]]s because they're all vegan anyway.
 
 tag: visual-art
-desc: [[Comic|##comic]]s, [[photo|##photo]]s, [[pixel art|##pixel-art]], and [[text art|##text-art]] that I made.
+desc: [[Comic|##comic]]s, [[photo|##photo]]s, #pixel-art, and #text-art that I made.

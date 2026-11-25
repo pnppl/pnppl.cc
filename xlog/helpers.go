@@ -374,6 +374,7 @@ func lilWl(text string) string {
 	return re2.ReplaceAllString(out, "<a href=\"$2\">$1</a>")
 }
 
+// this made more sense before I decided to style them like the other tags
 func lilTag(text string) string {
 	// [[$1|##$2]] - new syntax, links to hashtag (ie /+/tag/) instead of anchor on current page, but displays custom link text
 	// has no third party support obviously, not that you could count on them for wikilinks or hashtags in the first place
@@ -381,7 +382,7 @@ func lilTag(text string) string {
 	// $1#$2 - bare hashtags ($1 is whitespace)
 	// accepts hashtags that should be banned (eg all numbers)
 	reb := regexp.MustCompile(`(^|\s)#([A-z0-9-]+)`)
-	out := re2.ReplaceAllString(text, "<a class=\"tag\" href=\"/+/tag/$2\">$1</a>")
+	out := re2.ReplaceAllString(text, "<a class=\"tag\" href=\"/+/tag/$2\">#$1</a>")
 	return reb.ReplaceAllString(out, "$1<a class=\"tag\" href=\"/+/tag/$2\">#$2</a>")
 }
 
