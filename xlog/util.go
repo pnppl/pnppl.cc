@@ -32,8 +32,7 @@ func DecimalEscape(input string) string {
 
 func NormalizeName(name string) (string, error) {
 	firstLine := strings.TrimSpace(name)
-	normalizedName := strings.Replace(strings.Replace(firstLine, "# ", "", 1), " #", "", 1)
-//	normalizedName = DecimalEscape(normalizedName)
+	normalizedName := strings.TrimSuffix(strings.TrimPrefix(firstLine, "# "), " #")
 	if len([]byte(normalizedName)) <= 0 {
 		return name, errors.New("Couldn't normalize name")
 	}

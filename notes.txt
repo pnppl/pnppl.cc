@@ -3,6 +3,7 @@ https://vivivi.leprd.space/webmastery/pre-css-attributes/
 
 todo: 
 - css
+	- ! search box needs borders
 	- ! making the headings flexbox or whatever i did to unfuck it before totally broke it in firefox 4, looks like shit
 	- nicer ul styling
 	- couldn't get the home icon to behave so I just hide it on mobile
@@ -110,7 +111,11 @@ low priority/done:
 		- i guess i dreamed that it supported it, it apparently never did
 - setext (underlined) headings don't seem to work. did i turn them off somehow? anyway, they suck
 - can't put a tab in the middle of the line or it hangs
-- ! aliasing for mentions?
+- x aliasing for mentions
+	- added via recfile, including ability to disable the default
+	- several of the ones i entered are the same as the friendly filename, but i don't think we want to automate those
+	- i think this is actually better than the automatic subtitles via ':' splits idea, since i'd have a few entries name 'fish' rn for example
+	- i'm thinking we can also use this to auto generate redirects for shorter urls, for arbitrary files
 - x a lot of stuff is going to be really useless if i can't get it to print the first line insted of filename
 	- if the line starts with # it fails. we get an empty title ("#title") or the filename ("# title").
 		- solved with some ugly hacks:

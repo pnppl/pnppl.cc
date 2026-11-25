@@ -1,0 +1,73 @@
+%rec: Alias
+%doc: Alias(es) for a page on pnppl.cc.
+%allowed: page alias nodefault
+%mandatory: page
+%unique: page nodefault
+%singular: page
+%singular: alias
+%key: page
+%sort: page
+%type: page,alias line
+# don't mention title
+%type: nodefault bool
+# no spaces in page filename
+%constraint: !(page ~ ' ')
+# no extension in page filename
+%constraint: !(page ~ '\.[a-z]{1,4}$')
+# no capitals in alias
+%constraint: !(alias ~ '[A-Z]')
+
+page: 2026-01-01_possessor
+alias: possessor
+
+page: 2026-02-03_TOS
+alias: tos
+
+page: 2026-02-08_voyager
+alias: voyager
+alias: voy
+
+page: 2026-03-11_diy-vegenaise
+alias: vegenaise
+alias: mayo
+alias: mayonnaise
+
+page: 2026-04-08_nagi
+alias: nagi
+
+page: 2026-04-18_HAND-THING
+alias: handthing
+alias: handthing.party
+
+page: 2026-04-26_sophie
+alias: sophie
+
+page: 2026-04-28_futa
+alias: futa
+alias: futas
+
+page: 2026-05-21_hench-villain
+alias: hench
+
+page: 2026-06-02_tadc
+alias: tadc
+alias: amazing digital circus
+
+page: 2026-06-12_edc
+alias: edc
+
+page: 2026-08-20_utena
+alias: utena
+alias: rgu
+
+page: 2026-11-02_iltv
+alias: iltv
+
+page: 2026-11-09_mononoke
+alias: mononoke
+
+page: 2026-11-16_ants
+alias: ants
+
+page: prairieland
+alias: prairieland zine library

@@ -8,8 +8,10 @@ import (
 	"sort"
 	"strings"
 	"sync"
-	_ "fmt"
+//	"fmt"
 	_ "embed"
+	"log/slog"
+	"os/exec"
 
 	. "github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown/ast"
@@ -23,7 +25,8 @@ var templates embed.FS
 type NormalizedPage struct {
 	page           Page
 	normalizedName string
-//	normalizedFileName string
+	aliases        []string
+	nodefault      bool
 }
 
 type fileInfoByNameLength []*NormalizedPage
@@ -45,16 +48,41 @@ func UpdatePagesList(Page) (err error) {
 		if IsIgnoredPath(p.Name()) {
 			return nil
 		}
+
+		// get title
 		content := p.Content()
 		lines := strings.SplitN(string(content), "\n", 2)
-		firstLine := strings.TrimSpace(lines[0])
-		firstLine = strings.TrimPrefix(firstLine, "# ")
-		firstLine = strings.TrimSuffix(firstLine, " #")
+		firstLine, err := NormalizeName(lines[0])
+		if err != nil {
+			slog.Error(err.Error() + " - falling back to firstline (mentions)")
+			firstLine = lines[0]
+		}
+
+		// get aliases
+		var aliases []string
+		cmd := exec.Command("recsel", "-e", "page = '" + p.Name() + "'", "-P", "alias", "/home/pnppl/pnppl.cc/site/txt/aliases.rec")
+		stdout, err := cmd.Output()
+		if err == nil && len(stdout) > 0 {
+			lines := strings.Split(string(stdout), "\n")
+			// we get some garbage empty string at the end
+			aliases = lines[:len(lines)-1]
+		}
+
+		// check if we disabling title mentions
+		nodefault := false
+		cmd = exec.Command("recsel", "-e", "page = '" + p.Name() + "'", "-P", "nodefault", "/home/pnppl/pnppl.cc/site/txt/aliases.rec")
+		stdout, err = cmd.Output()
+		if err == nil && len(stdout) > 0 && stdout[0] == '1' {
+			nodefault = true
+		}
+
 		return &NormalizedPage{
 			page:           p,
 //			normalizedFileName: path.Base(strings.ToLower(p.Name())),
 //			we might want to write a regex to strip out more than just h1
 			normalizedName: strings.ToLower(firstLine),
+			aliases:        aliases,
+			nodefault:      nodefault,
 		}
 	})
 	sort.Sort(fileInfoByNameLength(ps))

@@ -55,14 +55,15 @@ func (s *pageLinkParser) Parse(parent ast.Node, block text.Reader, pc parser.Con
 	}
 
 	var found Page
-	var m int
+	var consumedChars int
 	normalizedLine := strings.ToLower(string(line))
 
 	// Get current page title to avoid self-linking
 	currentPageTitle := getCurrentPageTitle(block.Source())
 
+	outer:
 	for _, p := range autolinkPages {
-		if len(line) < len(p.normalizedName) {
+		if len(line) < len(p.normalizedName) && len(p.aliases) == 0 {
 			continue
 		}
 
@@ -72,15 +73,31 @@ func (s *pageLinkParser) Parse(parent ast.Node, block text.Reader, pc parser.Con
 		}
 
 		// Found a page
-		if strings.HasPrefix(normalizedLine, p.normalizedName) {
+		if strings.HasPrefix(normalizedLine, p.normalizedName) && !p.nodefault {
 			found = p.page
-			m = len(p.normalizedName)
+			consumedChars = len(p.normalizedName)
 			break
+		}
+
+		// page minus 'the'
+		if strings.HasPrefix(normalizedLine, strings.TrimPrefix(p.normalizedName, "the ")) && !p.nodefault {
+			found = p.page
+			consumedChars = len(p.normalizedName) - 4
+			break
+		}
+
+		// aliases
+		for _, alias := range p.aliases {
+			if strings.HasPrefix(normalizedLine, alias) {
+				found = p.page
+				consumedChars = len(alias)
+				break outer
+			}
 		}
 	}
 
 	if found == nil ||
-		(len(line) > m && util.IsAlphaNumeric(line[m])) { // next character is word character
+		(len(line) > consumedChars && util.IsAlphaNumeric(line[consumedChars])) { // next character is word character
 		block.Advance(consumes)
 		return nil
 	}
@@ -89,10 +106,10 @@ func (s *pageLinkParser) Parse(parent ast.Node, block text.Reader, pc parser.Con
 		s := segment.WithStop(segment.Start + 1)
 		ast.MergeOrAppendTextSegment(parent, s)
 	}
-	consumes += m
+	consumes += consumedChars
 	block.Advance(consumes)
 
-	n := ast.NewTextSegment(text.NewSegment(start, start+m))
+	n := ast.NewTextSegment(text.NewSegment(start, start+consumedChars))
 	link := &PageLink{
 		page: found,
 	}

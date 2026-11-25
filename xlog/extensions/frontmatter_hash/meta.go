@@ -6,6 +6,7 @@ package frontmatter_hash
 
 import (
 	"fmt"
+	"log/slog"
 
 	"github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown"
@@ -120,7 +121,7 @@ func (b *metaParser) Open(parent gast.Node, reader text.Reader, pc parser.Contex
 	*/
 	title, err := xlog.NormalizeName(string(line))
 	if err != nil {
-		// fall back to un-normalized name i guess
+		slog.Error(err.Error() + " - falling back to firstline (frontmatter)")
 		title = string(line)
     }
 	if len(title) > 70 {
