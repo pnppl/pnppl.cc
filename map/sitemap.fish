@@ -6,6 +6,7 @@
 set in site
 set out site/sitemap/index.html
 set html map/index.html
+mkdir site/sitemap
 
 cat $html.1 > $out &&
 # pre AND tt seems to guarantee we get preserved whitespace and monospace text
