@@ -13,6 +13,7 @@ import (
 	"math/rand"
 //	"os/exec"
 	"regexp"
+	"log/slog"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
@@ -358,8 +359,10 @@ func tagId(tag string) string {
 
 func tagDesc(tag string) string {
 	tagClean := strings.Replace(tag, "#", "", 1)
-	// we should handle this
-	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/tags.rec")
+	rec, err := recfile.Load("../../site/txt/tags.rec")
+	if err != nil {
+		slog.Error(err.Error() + " - couldn't open tags.rec")
+	}
 	desc, err := GetFromRec("Hashtag", "tag", tagClean, "desc", rec)
 	if err == nil && len(desc) > 0 {
 		return lilWl(lilTag(desc[0]))
@@ -395,7 +398,10 @@ func wday(day string) string {
 }
 
 func randomBadge() template.HTML {
-	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/badges.rec")
+	rec, err := recfile.Load("../../site/txt/badges.rec")
+	if err != nil {
+		slog.Error(err.Error() + " - couldn't open badges.rec")
+	}
 	var img, alt string
 	href := "/about"
 	num := rand.Intn(len(rec.RecordSets[0].Records))

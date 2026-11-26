@@ -45,9 +45,9 @@ func UpdatePagesList(Page) (err error) {
 	autolinkPage_lck.Lock()
 	defer autolinkPage_lck.Unlock()
 
-	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/aliases.rec")
+	rec, err := recfile.Load("../../site/txt/aliases.rec")
 	if err != nil {
-		slog.Error(err.Error() + " couldn't open aliases.rec")
+		slog.Error(err.Error() + " - couldn't open aliases.rec")
 	}
 
 	ps := MapPage(context.Background(), func(p Page) *NormalizedPage {
