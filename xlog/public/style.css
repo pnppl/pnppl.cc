@@ -528,7 +528,7 @@ div.icon-text {
 	color: var(--text);
 	display: inline;
 	display: inline-flex;
-	font-size: 0.85em;
+	font-size: 0.75em;
 	height: 2em;
 	justify-content: center;
 /*	line-height: 1.5; */

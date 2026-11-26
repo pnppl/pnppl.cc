@@ -1,3 +1,6 @@
+for rec in site/txt/*.rec
+	recfix --check "$rec" || return 5
+end &&
 # clean up auto redirects before generating slashpage
 find site -type f -name '*.shtml' -delete &&
 find site -type d -empty -delete &&
