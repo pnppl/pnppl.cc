@@ -395,25 +395,24 @@ func wday(day string) string {
 }
 
 func randomBadge() template.HTML {
-	// attempts to use golang recfile impl - currently fails because parser gets confused by ':'
-	/*
 	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/badges.rec")
-	for _, set := range rec.RecordSets {
-		for i, _ := range set.Records {
-			if slices.Contains(record.Fields, recfile.Field{Name: recfile.Name(keyname), Value: recfile.Value(keyval)}) {
-				for _, field := range record.Fields {
-					if string(field.Name) == fieldname {
-						results = append(results, string(field.Value))
-					}
-				}
-			}
+	var img, alt string
+	href := "/about"
+	num := rand.Intn(len(rec.RecordSets[0].Records))
+	badge := rec.RecordSets[0].Records[num]
+	for _, field := range badge.Fields {
+		switch field.Name {
+			case "img":
+				img = string(field.Value)
+			case "alt":
+				alt = string(field.Value)
+			case "href":
+				href = string(field.Value)
 		}
-		break
 	}
-	*/
 
 	// using recutils through shell - works but very slow
-	/*
+/*
 	cmd := exec.Command("recsel", "--random=1", "/home/pnppl/pnppl.cc/site/txt/badges.rec")
 	rec, err := cmd.Output()
 	if err != nil || len(rec) == 0 {
@@ -446,8 +445,8 @@ func randomBadge() template.HTML {
 	if err == nil && len(stdout) > 0 {
 		href = strings.TrimSpace(string(stdout))
 	}
-	*/
-
+*/
+/*
 	badges := [][]string{
 		{"bgdc-ga-j", "", "BE GAY DO CRIME on rainbow/black flag"},
 		{"bgdc-tr-j", "", "BE GAY DO CRIME on trans/black flag"},
@@ -475,9 +474,11 @@ func randomBadge() template.HTML {
 	img := badge[0]
 	href := badge[1]
 	alt := badge[2]
+
 	if len(href) == 0 {
 		href = "/about"
 	}
+*/
 
 	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
 						<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">

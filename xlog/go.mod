@@ -53,3 +53,4 @@ require (
 )
 
 replace github.com/pnppl/wikilink => ./markdown/wikilink
+replace git.sr.ht/~timetoplatypus/recfile => ../recfile/
