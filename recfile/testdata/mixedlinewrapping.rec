@@ -1,0 +1,12 @@
+# -*- mode: rec -*-
+
+%mandatory: Title
+%rec: Magazine
+%type: Location enum loaned home unknown
+%doc: Another book in my personal collection.
+
+Title: Mio Cid
+Author: Anonymous
++ (or am I?) \
+(or are you?)
+Location: home
