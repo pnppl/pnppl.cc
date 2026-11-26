@@ -5,7 +5,7 @@
 	border-radius: 0;
 	color: inherit;
 	background-color: inherit;
-	--pagefind-ui-border: var(--border);
+	--pagefind-ui-border: #eee;
 }
 #search mark {
 	background-color: pink;
@@ -15,7 +15,9 @@
 .pagefind-ui__search-input {
 	outline-offset: -1px;
 }
-
+.pagefind-ui__search-input::placeholder {
+	opacity: 1 !important;
+}
 /* --- hides: --- */
 /* clear button. annoying, gets in the way of tabbing */
 .pagefind-ui__search-clear,
@@ -86,7 +88,7 @@ li.pagefind-ui__result-tag {
 	margin: 0.3em 0 0 0 !important;
 	background-color: white;
 	padding: 0.5em;
-	border: 2px solid var(--border);
+	border: 2px solid #eee;
 }
 .pagefind-ui__filter-panel:has(.pagefind-ui__filter-block:open) {
 	position: static;
@@ -102,13 +104,12 @@ li.pagefind-ui__result-tag {
 	padding-top: 1em !important;
 	padding-bottom: 0.25em !important;
 	margin-top: 0.5em !important;
-	border-top: 1px solid var(--border) !important;
+	border-top: 1px solid #eee !important;
 }
 .pagefind-ui__filter-value::before {
 	border-color: var(--text-strong) !important;
 	z-index: 10;
 }
-
 /* --- media queries --- */
 /* mobile or just skinny */
 @media (max-width: 767px) {
