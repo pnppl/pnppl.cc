@@ -14,7 +14,6 @@
 - [[prairieland]]
 - [[privacy]]
 - [[shrine]]
-- [[slashpages]]
 
 ## Site Resources
 - [[+]]

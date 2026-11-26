@@ -190,6 +190,8 @@ low priority/done:
 	- ! improve performance
 		- look into photo thumbnailing and the ridiculous next/prev helper functions (we should just find these once and store them as values in the page struct)
 		- using recutils has slowed everything down substantially, like order of magnitude or two. need native golang version
+			- switched to golang version for most stuff but the really resource intensive one (badges) fails so I'm just going back to my original impl
+			- really need to be able to parse stuff with a colon, like LINKS
 - the excerpt stuff could be more generalized to make !embed more useful
 - ! rather large epub due to inclusion of images (possessor screenshots). should at least make them b&w or something
 	- long term if i end up making more comics or illustrated posts i should just put posts with pics in a separate epub

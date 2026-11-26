@@ -7,6 +7,7 @@ import (
 	"fmt"
 
 	"github.com/emad-elsaid/xlog/markdown/util"
+	"git.sr.ht/~timetoplatypus/recfile"
 )
 
 func DecimalEscape(input string) string {
@@ -64,3 +65,27 @@ func PageTitleSort(pages []Page) []Page {
 	return pages
 }
 
+// rectype == "0" for unspecified
+func GetFromRec(rectype string, keyname string, keyval string, fieldname string, rec recfile.Database) ([]string, error) {
+	var results []string
+	for _, set := range rec.RecordSets {
+		if string(set.Descriptor.Type) == rectype || rectype == "0" {
+			for _, record := range set.Records {
+				if slices.Contains(record.Fields, recfile.Field{Name: recfile.Name(keyname), Value: recfile.Value(keyval)}) {
+					for _, field := range record.Fields {
+						if string(field.Name) == fieldname {
+							results = append(results, string(field.Value))
+						}
+					}
+				}
+			}
+		}
+		if rectype == "0" {
+			break
+		}
+	}
+	if len(results) > 0 {
+		return results, nil
+	}
+	return nil, errors.New("No matches")
+}

@@ -1,5 +1,7 @@
 git.sr.ht/~kota/fuckery v0.2.0 h1:0JfnSMiQWFVFdGplolb2ZuRqDQLG5uAzDmH/oSaRj9Y=
 git.sr.ht/~kota/fuckery v0.2.0/go.mod h1:UuYM/CTzL6F/FYB/uulUV1ceymM5NSJv2Qif3VVj/s8=
+git.sr.ht/~timetoplatypus/recfile v0.0.0-20260526000827-7529083f0aa0 h1:7hAMO1vvVOHJQ1zyYPABeF5RK+okspvl+6I/63viLZE=
+git.sr.ht/~timetoplatypus/recfile v0.0.0-20260526000827-7529083f0aa0/go.mod h1:BoTu32QJaxfb/aJQ3JogiIqc/NRzC4p2AE3vHQlYRls=
 github.com/ProtonMail/go-crypto v1.0.0 h1:LRuvITjQWX+WIfr930YHG2HNfjR1uOfyf5vE0kC2U78=
 github.com/ProtonMail/go-crypto v1.0.0/go.mod h1:EjAoLdwvbIOoOQr3ihjnSoLZRtE8azugULFRteWMNc0=
 github.com/alecthomas/assert/v2 v2.6.0 h1:o3WJwILtexrEUk3cUVal3oiQY2tfgr/FHWiz/v2n4FU=

@@ -11,12 +11,13 @@ import (
 //	"fmt"
 	_ "embed"
 	"log/slog"
-	"os/exec"
+//	"os/exec"
 
 	. "github.com/emad-elsaid/xlog"
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	east "github.com/emad-elsaid/xlog/markdown/extension/ast"
 	"github.com/pnppl/wikilink"
+	"git.sr.ht/~timetoplatypus/recfile"
 )
 
 //go:embed templates
@@ -44,6 +45,11 @@ func UpdatePagesList(Page) (err error) {
 	autolinkPage_lck.Lock()
 	defer autolinkPage_lck.Unlock()
 
+	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/aliases.rec")
+	if err != nil {
+		slog.Error(err.Error() + " couldn't open aliases.rec")
+	}
+
 	ps := MapPage(context.Background(), func(p Page) *NormalizedPage {
 		if IsIgnoredPath(p.Name()) {
 			return nil
@@ -60,19 +66,12 @@ func UpdatePagesList(Page) (err error) {
 
 		// get aliases
 		var aliases []string
-		cmd := exec.Command("recsel", "-e", "page = '" + p.Name() + "'", "-P", "alias", "/home/pnppl/pnppl.cc/site/txt/aliases.rec")
-		stdout, err := cmd.Output()
-		if err == nil && len(stdout) > 0 {
-			lines := strings.Split(string(stdout), "\n")
-			// we get some garbage empty string at the end
-			aliases = lines[:len(lines)-1]
-		}
+		aliases, _ = GetFromRec("0", "page", p.Name(), "alias", rec)
 
 		// check if we disabling title mentions
 		nodefault := false
-		cmd = exec.Command("recsel", "-e", "page = '" + p.Name() + "'", "-P", "nodefault", "/home/pnppl/pnppl.cc/site/txt/aliases.rec")
-		stdout, err = cmd.Output()
-		if err == nil && len(stdout) > 0 && stdout[0] == '1' {
+		def, err := GetFromRec("0", "page", p.Name(), "nodefault", rec)
+		if err == nil && def[0] == "1" {
 			nodefault = true
 		}
 

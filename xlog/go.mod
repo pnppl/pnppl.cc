@@ -1,6 +1,8 @@
 module github.com/emad-elsaid/xlog
 
-go 1.24
+go 1.24.0
+
+toolchain go1.24.4
 
 require (
 	github.com/alecthomas/chroma/v2 v2.13.0
@@ -45,6 +47,7 @@ require (
 
 require (
 	git.sr.ht/~kota/fuckery v0.2.0 // indirect
+	git.sr.ht/~timetoplatypus/recfile v0.0.0-20260526000827-7529083f0aa0 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
 )

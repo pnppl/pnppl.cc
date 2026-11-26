@@ -10,13 +10,14 @@ import (
 	"time"
 	"strconv"
 	"context"
-//	"math/rand"
-	"os/exec"
+	"math/rand"
+//	"os/exec"
 	"regexp"
 
 	"github.com/emad-elsaid/xlog/markdown/ast"
 	gast "github.com/emad-elsaid/xlog/markdown/ast"
 	emojiAst "github.com/emad-elsaid/xlog/markdown/emoji/ast"
+	"git.sr.ht/~timetoplatypus/recfile"
 )
 
 var helpers = template.FuncMap{
@@ -357,10 +358,11 @@ func tagId(tag string) string {
 
 func tagDesc(tag string) string {
 	tagClean := strings.Replace(tag, "#", "", 1)
-	cmd := exec.Command("recsel", "-e", "tag = '" + tagClean + "'", "-P", "desc", "/home/pnppl/pnppl.cc/site/txt/tags.rec")
-	stdout, err := cmd.Output()
-	if err == nil && len(stdout) > 0 {
-		return lilWl(lilTag(string(stdout)))
+	// we should handle this
+	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/tags.rec")
+	desc, err := GetFromRec("Hashtag", "tag", tagClean, "desc", rec)
+	if err == nil && len(desc) > 0 {
+		return lilWl(lilTag(desc[0]))
 	}
 	return ""
 }
@@ -393,6 +395,25 @@ func wday(day string) string {
 }
 
 func randomBadge() template.HTML {
+	// attempts to use golang recfile impl - currently fails because parser gets confused by ':'
+	/*
+	rec, _ := recfile.Load("/home/pnppl/pnppl.cc/site/txt/badges.rec")
+	for _, set := range rec.RecordSets {
+		for i, _ := range set.Records {
+			if slices.Contains(record.Fields, recfile.Field{Name: recfile.Name(keyname), Value: recfile.Value(keyval)}) {
+				for _, field := range record.Fields {
+					if string(field.Name) == fieldname {
+						results = append(results, string(field.Value))
+					}
+				}
+			}
+		}
+		break
+	}
+	*/
+
+	// using recutils through shell - works but very slow
+	/*
 	cmd := exec.Command("recsel", "--random=1", "/home/pnppl/pnppl.cc/site/txt/badges.rec")
 	rec, err := cmd.Output()
 	if err != nil || len(rec) == 0 {
@@ -425,10 +446,8 @@ func randomBadge() template.HTML {
 	if err == nil && len(stdout) > 0 {
 		href = strings.TrimSpace(string(stdout))
 	}
+	*/
 
-	/* return lilWl(lilTag(string(stdout))) */
-
-/*
 	badges := [][]string{
 		{"bgdc-ga-j", "", "BE GAY DO CRIME on rainbow/black flag"},
 		{"bgdc-tr-j", "", "BE GAY DO CRIME on trans/black flag"},
@@ -459,7 +478,6 @@ func randomBadge() template.HTML {
 	if len(href) == 0 {
 		href = "/about"
 	}
-	*/
 
 	return template.HTML(fmt.Sprintf(`<a id="badge" href="%s">
 						<img id="badge-img" src="/public/badges/%s.gif" alt="%s" width="88" height="31">
